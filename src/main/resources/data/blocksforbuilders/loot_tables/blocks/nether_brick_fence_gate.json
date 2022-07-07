@@ -1,0 +1,19 @@
+{
+    "type": "blocksforbuilders:nether_brick_fence_gate",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "blocksforbuilders:nether_brick_fence_gate"
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:survives_explosion"
+          }
+        ]
+      }
+    ]
+}

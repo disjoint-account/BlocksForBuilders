@@ -1,0 +1,19 @@
+{
+  "type": "blocksforbuilders:cracked_black_nether_bricks",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "blocksforbuilders:cracked_black_nether_bricks"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}
