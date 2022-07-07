@@ -8,13 +8,23 @@ import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
 
 public class BlocksForBuildersConfiguredFeatures {
+
+    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> GOLD_ACACIA_TREE =
+            ConfiguredFeatures.register("gold_acacia_tree", Feature.TREE, new TreeFeatureConfig.Builder(
+                    BlockStateProvider.of(Blocks.ACACIA_LOG),
+                    new ForkingTrunkPlacer(4, 5, 2),
+                    BlockStateProvider.of(BlocksForBuilders.GOLD_ACACIA_LEAVES),
+                    new AcaciaFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0)),
+                    new TwoLayersFeatureSize(1, 0, 1)).build());
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> RED_OAK_TREE =
             ConfiguredFeatures.register("red_oak_tree", Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(Blocks.OAK_LOG),
@@ -30,6 +40,15 @@ public class BlocksForBuildersConfiguredFeatures {
                     new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                     new TwoLayersFeatureSize(1, 0, 1)).build());
 
+
+    public static final RegistryEntry<PlacedFeature> GOLD_ACACIA_CHECKED =
+            PlacedFeatures.register("gold_acacia_checked", GOLD_ACACIA_TREE,
+                    PlacedFeatures.wouldSurvive(BlocksForBuilders.GOLD_ACACIA_SAPLING));
+
+    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> GOLD_ACACIA_SPAWN =
+            ConfiguredFeatures.register("gold_acacia_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfig(List.of(new RandomFeatureEntry(GOLD_ACACIA_CHECKED, 0.5f)),
+                            GOLD_ACACIA_CHECKED));
 
     public static final RegistryEntry<PlacedFeature> RED_OAK_CHECKED =
             PlacedFeatures.register("red_oak_checked", RED_OAK_TREE,

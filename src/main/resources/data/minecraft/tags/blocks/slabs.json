@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-      "blocksforbuilders:ghostwood_slab"
+      "blocksforbuilders:ghostwood_slab",
+      "blocksforbuilders:black_nether_brick_slab"
     ]
   }

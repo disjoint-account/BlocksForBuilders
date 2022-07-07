@@ -10,5 +10,7 @@ public class BlocksForBuildersPlacedFeatures {
             BlocksForBuildersConfiguredFeatures.RED_OAK_SPAWN, VegetationPlacedFeatures.modifiers(
                     PlacedFeatures.createCountExtraModifier(0, 0.05f, 1)));
 
-
+    public static final RegistryEntry<PlacedFeature> GOLD_ACACIA_PLACED = PlacedFeatures.register("gold_acacia_placed",
+            BlocksForBuildersConfiguredFeatures.GOLD_ACACIA_SPAWN, VegetationPlacedFeatures.modifiers(
+                    PlacedFeatures.createCountExtraModifier(0, 0.05f, 1)));
 }

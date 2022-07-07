@@ -3,21 +3,20 @@ package net.disjoint.blocksforbuilders;
 import net.disjoint.blocksforbuilders.util.BlocksForBuildersLootTableModifiers;
 import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersConfiguredFeatures;
 import net.disjoint.blocksforbuilders.world.feature.tree.GhostwoodSaplingGenerator;
+import net.disjoint.blocksforbuilders.world.feature.tree.GoldAcaciaSaplingGenerator;
 import net.disjoint.blocksforbuilders.world.feature.tree.RedOakSaplingGenerator;
 import net.disjoint.blocksforbuilders.world.gen.BlocksForBuildersWorldGen;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
-import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.block.*;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static net.minecraft.block.Blocks.*;
 
 public class BlocksForBuilders implements ModInitializer {
 	public static final ItemGroup BLOCKSFORBUILDERS = FabricItemGroupBuilder.create(
@@ -34,10 +33,10 @@ public class BlocksForBuilders implements ModInitializer {
 	public static final LeavesBlock GHOSTWOOD_LEAVES = new LilacLeafBlock();
 	public static final Block GHOSTWOOD_SAPLING = new BFBSaplingBlock(new GhostwoodSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING));
 	public static final Block GHOSTWOOD_PLANKS = new WoodBlock();
-	public static final StairsBlock GHOSTWOOD_STAIRS = new WoodStairs(GHOSTWOOD_PLANKS);
-	public static final SlabBlock GHOSTWOOD_SLAB = new WoodSlab();
-	public static final WoodFence GHOSTWOOD_FENCE = new WoodFence();
-	public static final WoodFenceGate GHOSTWOOD_FENCE_GATE = new WoodFenceGate();
+	public static final StairsBlock GHOSTWOOD_STAIRS = new BFBStairs(GHOSTWOOD_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).mapColor(MapColor.WHITE_GRAY));
+	public static final SlabBlock GHOSTWOOD_SLAB = new BFBSlab(GHOSTWOOD_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.OAK_SLAB).mapColor(MapColor.WHITE_GRAY));
+	public static final FenceBlock GHOSTWOOD_FENCE = new BFBFence(GHOSTWOOD_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.OAK_FENCE).mapColor(MapColor.WHITE_GRAY));
+	public static final FenceGateBlock GHOSTWOOD_FENCE_GATE = new BFBFenceGate(GHOSTWOOD_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE).mapColor(MapColor.WHITE_GRAY));
 	public static final WoodenButtonBlock GHOSTWOOD_BUTTON = new WoodButton();
 	public static final PressurePlateBlock GHOSTWOOD_PRESSURE_PLATE = new WoodPressurePlate();
 	public static final DoorBlock GHOSTWOOD_DOOR = new WoodDoor();
@@ -48,6 +47,21 @@ public class BlocksForBuilders implements ModInitializer {
 	public static final Item GHOSTWOOD_SIGN_ITEM = new SignItem(new Item.Settings().maxCount(16).group(BlocksForBuilders.BLOCKSFORBUILDERS), GHOSTWOOD_SIGN, GHOSTWOOD_WALL_SIGN);
 	public static final LeavesBlock RED_OAK_LEAVES = new RedLeafBlock();
 	public static final Block RED_OAK_SAPLING = new BFBSaplingBlock(new RedOakSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING));
+	public static final LeavesBlock GOLD_ACACIA_LEAVES = new GoldLeafBlock();
+	public static final Block GOLD_ACACIA_SAPLING = new BFBSaplingBlock(new GoldAcaciaSaplingGenerator(), FabricBlockSettings.copy(Blocks.ACACIA_SAPLING));
+	public static final Block BLACK_NETHER_BRICKS = new Block(FabricBlockSettings.copyOf(NETHER_BRICKS).mapColor(MapColor.BLACK));
+	public static final Block CHISELED_BLACK_NETHER_BRICKS = new Block(FabricBlockSettings.copyOf(CHISELED_NETHER_BRICKS).mapColor(MapColor.BLACK));
+	public static final Block CRACKED_BLACK_NETHER_BRICKS = new Block(FabricBlockSettings.copyOf(CRACKED_NETHER_BRICKS).mapColor(MapColor.BLACK));
+	public static final StairsBlock BLACK_NETHER_BRICK_STAIRS = new BFBStairs(BLACK_NETHER_BRICKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_STAIRS).mapColor(MapColor.BLACK));
+	public static final SlabBlock BLACK_NETHER_BRICK_SLAB = new BFBSlab(BLACK_NETHER_BRICKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_SLAB).mapColor(MapColor.BLACK));
+	public static final WallBlock BLACK_NETHER_BRICK_WALL = new WallBlock(FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_WALL).mapColor(MapColor.BLACK));
+	public static final FenceBlock BLACK_NETHER_BRICK_FENCE = new BFBFence(BLACK_NETHER_BRICKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.BLACK));
+	public static final FenceGateBlock BLACK_NETHER_BRICK_FENCE_GATE = new BFBFenceGate(BLACK_NETHER_BRICKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.BLACK));
+	public static final Block CHISELED_RED_NETHER_BRICKS = new Block(FabricBlockSettings.copyOf(CHISELED_NETHER_BRICKS).mapColor(MapColor.RED));
+	public static final Block CRACKED_RED_NETHER_BRICKS = new Block(FabricBlockSettings.copyOf(CRACKED_NETHER_BRICKS).mapColor(MapColor.RED));
+	public static final FenceBlock RED_NETHER_BRICK_FENCE = new BFBFence(NETHER_BRICK_FENCE.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.RED));
+	public static final FenceGateBlock RED_NETHER_BRICK_FENCE_GATE = new BFBFenceGate(NETHER_BRICK_FENCE.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.RED));
+	public static final FenceGateBlock NETHER_BRICK_FENCE_GATE = new BFBFenceGate(NETHER_BRICK_FENCE.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.DARK_RED));
 	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 
 	@Override
@@ -55,7 +69,6 @@ public class BlocksForBuilders implements ModInitializer {
 		BlocksForBuildersConfiguredFeatures.registerConfiguredFeatures();
 		BlocksForBuildersWorldGen.generateBlocksForBuildersWorldGen();
 		BlocksForBuildersLootTableModifiers.modifyLootTables();
-		Instance.init();
 
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "ghostwood_log"), GHOSTWOOD_LOG);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "ghostwood_log"), new BlockItem(GHOSTWOOD_LOG, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
@@ -94,7 +107,38 @@ public class BlocksForBuilders implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "red_oak_leaves"), new BlockItem(RED_OAK_LEAVES, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "red_oak_sapling"), RED_OAK_SAPLING);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "red_oak_sapling"), new BlockItem(RED_OAK_SAPLING, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "gold_acacia_leaves"), GOLD_ACACIA_LEAVES);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "gold_acacia_leaves"), new BlockItem(GOLD_ACACIA_LEAVES, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "gold_acacia_sapling"), GOLD_ACACIA_SAPLING);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "gold_acacia_sapling"), new BlockItem(GOLD_ACACIA_SAPLING, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "black_nether_bricks"), BLACK_NETHER_BRICKS);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "black_nether_bricks"), new BlockItem(BLACK_NETHER_BRICKS, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "chiseled_black_nether_bricks"), CHISELED_BLACK_NETHER_BRICKS);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "chiseled_black_nether_bricks"), new BlockItem(CHISELED_BLACK_NETHER_BRICKS, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "cracked_black_nether_bricks"), CRACKED_BLACK_NETHER_BRICKS);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "cracked_black_nether_bricks"), new BlockItem(CRACKED_BLACK_NETHER_BRICKS, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "black_nether_brick_stairs"), BLACK_NETHER_BRICK_STAIRS);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "black_nether_brick_stairs"), new BlockItem(BLACK_NETHER_BRICK_STAIRS, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "black_nether_brick_slab"), BLACK_NETHER_BRICK_SLAB);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "black_nether_brick_slab"), new BlockItem(BLACK_NETHER_BRICK_SLAB, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "black_nether_brick_wall"), BLACK_NETHER_BRICK_WALL);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "black_nether_brick_wall"), new BlockItem(BLACK_NETHER_BRICK_WALL, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "black_nether_brick_fence"), BLACK_NETHER_BRICK_FENCE);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "black_nether_brick_fence"), new BlockItem(BLACK_NETHER_BRICK_FENCE, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "black_nether_brick_fence_gate"), BLACK_NETHER_BRICK_FENCE_GATE);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "black_nether_brick_fence_gate"), new BlockItem(BLACK_NETHER_BRICK_FENCE_GATE, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "chiseled_red_nether_bricks"), CHISELED_RED_NETHER_BRICKS);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "chiseled_red_nether_bricks"), new BlockItem(CHISELED_RED_NETHER_BRICKS, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "cracked_red_nether_bricks"), CRACKED_RED_NETHER_BRICKS);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "cracked_red_nether_bricks"), new BlockItem(CRACKED_RED_NETHER_BRICKS, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "red_nether_brick_fence"), RED_NETHER_BRICK_FENCE);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "red_nether_brick_fence"), new BlockItem(RED_NETHER_BRICK_FENCE, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "red_nether_brick_fence_gate"), RED_NETHER_BRICK_FENCE_GATE);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "red_nether_brick_fence_gate"), new BlockItem(RED_NETHER_BRICK_FENCE_GATE, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "nether_brick_fence_gate"), NETHER_BRICK_FENCE_GATE);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "nether_brick_fence_gate"), new BlockItem(NETHER_BRICK_FENCE_GATE, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 
+		Instance.init();
 	}
 
 	public static Identifier id(String name) {
