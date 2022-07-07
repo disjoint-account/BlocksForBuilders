@@ -1,0 +1,45 @@
+package net.disjoint.blocksforbuilders.world.feature;
+
+import net.disjoint.blocksforbuilders.BlocksForBuilders;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SoulSandBlock;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.registry.BuiltinRegistries;
+import net.minecraft.util.registry.RegistryEntry;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+
+import java.util.List;
+
+public class BlocksForBuildersConfiguredFeatures {
+    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> RED_OAK_TREE =
+            ConfiguredFeatures.register("red_oak_tree", Feature.TREE, new TreeFeatureConfig.Builder(
+                    BlockStateProvider.of(Blocks.OAK_LOG),
+                    new StraightTrunkPlacer(4, 2, 2),
+                    BlockStateProvider.of(BlocksForBuilders.RED_OAK_LEAVES),
+                    new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                    new TwoLayersFeatureSize(1, 0, 1)).build());
+    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> GHOSTWOOD_TREE =
+            ConfiguredFeatures.register("ghostwood_tree", Feature.TREE, new TreeFeatureConfig.Builder(
+                    BlockStateProvider.of(BlocksForBuilders.GHOSTWOOD_LOG),
+                    new StraightTrunkPlacer(4, 2, 2),
+                    BlockStateProvider.of(BlocksForBuilders.GHOSTWOOD_LEAVES),
+                    new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                    new TwoLayersFeatureSize(1, 0, 1)).build());
+
+
+    public static final RegistryEntry<PlacedFeature> RED_OAK_CHECKED =
+            PlacedFeatures.register("red_oak_checked", RED_OAK_TREE,
+                    PlacedFeatures.wouldSurvive(BlocksForBuilders.RED_OAK_SAPLING));
+
+    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> RED_OAK_SPAWN =
+            ConfiguredFeatures.register("red_oak_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfig(List.of(new RandomFeatureEntry(RED_OAK_CHECKED, 0.5f)),
+                            RED_OAK_CHECKED));
+    public static void registerConfiguredFeatures() {
+        System.out.println("Registering ModConfiguredFeatures for " + BlocksForBuilders.MOD_ID);
+    }
+}

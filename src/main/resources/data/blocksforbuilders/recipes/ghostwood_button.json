@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "blocksforbuilders:ghostwood_planks"
+        }
+    ],
+    "result": {
+        "item": "blocksforbuilders:ghostwood_button",
+        "count": 1
+    }
+}

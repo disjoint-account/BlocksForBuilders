@@ -1,0 +1,19 @@
+{
+    "type": "blocksforbuilders:ghostwood_trapdoor",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "blocksforbuilders:ghostwood_trapdoor"
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:survives_explosion"
+          }
+        ]
+      }
+    ]
+}

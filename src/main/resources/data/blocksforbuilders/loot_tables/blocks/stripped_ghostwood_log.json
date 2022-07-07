@@ -1,0 +1,19 @@
+{
+    "type": "blocksforbuilders:stripped_ghostwood_log",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "blocksforbuilders:stripped_ghostwood_log"
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:survives_explosion"
+          }
+        ]
+      }
+    ]
+}

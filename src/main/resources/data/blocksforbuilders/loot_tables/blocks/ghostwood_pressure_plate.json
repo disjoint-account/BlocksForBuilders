@@ -1,0 +1,19 @@
+{
+    "type": "blocksforbuilders:ghostwood_pressure_plate",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "blocksforbuilders:ghostwood_pressure_plate"
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:survives_explosion"
+          }
+        ]
+      }
+    ]
+}
