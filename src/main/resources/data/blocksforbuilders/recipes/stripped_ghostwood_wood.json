@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "blocksforbuilders:stripped_ghostwood_log"
+        }
+    },
+    "result": {
+        "item": "blocksforbuilders:stripped_ghostwood_wood",
+        "count": 3
+    }
+}

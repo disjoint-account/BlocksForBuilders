@@ -8,6 +8,10 @@ import net.minecraft.world.gen.GenerationStep;
 
 public class BlocksForBuildersTreeGeneration {
     public static void generateTrees() {
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SAKURA_PLACED.getKey().get());
+
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.RED_OAK_PLACED.getKey().get());
 

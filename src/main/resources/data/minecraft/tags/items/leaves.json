@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "blocksforbuilders:sakura_leaves",
+    "blocksforbuilders:green_jungle_leaves",
     "blocksforbuilders:ghostwood_leaves",
     "blocksforbuilders:red_oak_leaves",
     "blocksforbuilders:gold_acacia_leaves"

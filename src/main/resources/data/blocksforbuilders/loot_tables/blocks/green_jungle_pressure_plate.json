@@ -1,0 +1,19 @@
+{
+    "type": "blocksforbuilders:green_jungle_pressure_plate",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "blocksforbuilders:green_jungle_pressure_plate"
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:survives_explosion"
+          }
+        ]
+      }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "blocksforbuilders:stripped_green_jungle_log",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "blocksforbuilders:stripped_green_jungle_log"
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:survives_explosion"
+          }
+        ]
+      }
+    ]
+}

@@ -1,6 +1,14 @@
 {
     "replace": false,
     "values": [
+      "blocksforbuilders:sakura_log",
+      "blocksforbuilders:sakura_wood",
+      "blocksforbuilders:stripped_sakura_log",
+      "blocksforbuilders:stripped_sakura_wood",
+      "blocksforbuilders:green_jungle_log",
+      "blocksforbuilders:green_jungle_wood",
+      "blocksforbuilders:stripped_green_jungle_log",
+      "blocksforbuilders:stripped_green_jungle_wood",
       "blocksforbuilders:ghostwood_log",
       "blocksforbuilders:ghostwood_wood",
       "blocksforbuilders:stripped_ghostwood_log",

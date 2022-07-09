@@ -6,6 +6,9 @@ import net.minecraft.world.gen.feature.PlacedFeatures;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 
 public class BlocksForBuildersPlacedFeatures {
+    public static final RegistryEntry<PlacedFeature> SAKURA_PLACED = PlacedFeatures.register("sakura_placed",
+            BlocksForBuildersConfiguredFeatures.SAKURA_SPAWN, VegetationPlacedFeatures.modifiers(
+                    PlacedFeatures.createCountExtraModifier(0, 0.01f, 1)));
     public static final RegistryEntry<PlacedFeature> RED_OAK_PLACED = PlacedFeatures.register("red_oak_placed",
             BlocksForBuildersConfiguredFeatures.RED_OAK_SPAWN, VegetationPlacedFeatures.modifiers(
                     PlacedFeatures.createCountExtraModifier(0, 0.05f, 1)));

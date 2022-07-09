@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "xxx",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "blocksforbuilders:sakura_planks"
+        },
+        "x": {
+            "item": "minecraft:book"
+        }
+    },
+    "result": {
+        "item": "blocksforbuilders:sakura_bookshelf",
+        "count": 1
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "blocksforbuilders:sakura_planks"
+        }
+    },
+    "result": {
+        "item": "blocksforbuilders:sakura_slab",
+        "count": 6
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "blocksforbuilders:green_jungle_log"
+        }
+    ],
+    "result": {
+        "item": "blocksforbuilders:green_jungle_planks",
+        "count": 4
+    }
+}

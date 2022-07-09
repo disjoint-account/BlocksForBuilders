@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "x#x",
+        "x#x"
+    ],
+    "key": {
+        "#": {
+            "item": "blocksforbuilders:green_jungle_planks"
+        },
+        "x": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "blocksforbuilders:green_jungle_fence_gate",
+        "count": 1
+    }
+}

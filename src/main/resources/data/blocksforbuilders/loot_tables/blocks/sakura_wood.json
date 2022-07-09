@@ -1,0 +1,19 @@
+{
+    "type": "blocksforbuilders:sakura_wood",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "blocksforbuilders:sakura_wood"
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:survives_explosion"
+          }
+        ]
+      }
+    ]
+}

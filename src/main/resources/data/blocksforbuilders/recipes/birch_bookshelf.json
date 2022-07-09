@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "xxx",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:birch_planks"
+        },
+        "x": {
+            "item": "minecraft:book"
+        }
+    },
+    "result": {
+        "item": "blocksforbuilders:birch_bookshelf",
+        "count": 1
+    }
+}

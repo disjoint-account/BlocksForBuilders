@@ -1,6 +1,8 @@
 {
     "replace": false,
     "values": [
+      "blocksforbuilders:sakura_fence",
+      "blocksforbuilders:green_jungle_fence",
       "blocksforbuilders:ghostwood_fence"
     ]
   }
