@@ -4,6 +4,7 @@
   "package": "net.disjoint.blocksforbuilders.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+  "EnchantingTableBlockMixin"
   ],
   "client": [
     "ExampleMixin"
