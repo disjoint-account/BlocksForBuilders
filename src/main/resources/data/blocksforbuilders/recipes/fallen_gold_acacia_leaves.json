@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "blocksforbuilders:gold_acacia_leaves"
+        }
+    },
+    "result": {
+        "item": "blocksforbuilders:fallen_gold_acacia_leaves",
+        "count": 3
+    }
+}
