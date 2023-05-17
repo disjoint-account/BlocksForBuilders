@@ -2,6 +2,9 @@ package net.disjoint.blocksforbuilders;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.util.SpriteIdentifier;
@@ -12,7 +15,18 @@ public class BlocksForBuildersClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        ColourProviders.registerClient();
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                if (world == null || pos == null) {
+                    return FoliageColors.getDefaultColor();
+                }
+                return BiomeColors.getFoliageColor(world, pos);
+            }, BlocksForBuilders.FALLEN_OAK_LEAVES);
+
+            ColorProviderRegistry.ITEM.register((stack, layer) -> {
+                return FoliageColors.getDefaultColor();
+            }, BlocksForBuilders.FALLEN_OAK_LEAVES);
+        }
 
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_SAKURA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.SAKURA_SAPLING, RenderLayer.getCutout());
