@@ -9,26 +9,11 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.util.SpriteIdentifier;
 import net.minecraft.util.Identifier;
-import static net.disjoint.blocksforbuilders.BlocksForBuilders.FALLEN_OAK_LEAVES;
-import static net.disjoint.blocksforbuilders.BlocksForBuilders.FALLEN_SPRUCE_LEAVES;
 
 public class BlocksForBuildersClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
-        {
-            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
-                if (world == null || pos == null) {
-                    return FoliageColors.getSpruceColor();
-                }
-                return BiomeColors.getFoliageColor(world, pos);
-            }, FALLEN_SPRUCE_LEAVES);
-
-            ColorProviderRegistry.ITEM.register((stack, layer) -> {
-                return FoliageColors.getSpruceColor();
-            }, FALLEN_SPRUCE_LEAVES);
-        }
 
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_SAKURA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.SAKURA_SAPLING, RenderLayer.getCutout());
@@ -44,9 +29,9 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.RED_OAK_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_GOLD_ACACIA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.GOLD_ACACIA_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FALLEN_OAK_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_OAK_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_BIRCH_LEAVES, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FALLEN_SPRUCE_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_SPRUCE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_JUNGLE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_DARK_OAK_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_ACACIA_LEAVES, RenderLayer.getCutout());
@@ -55,6 +40,76 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_MANGROVE_LEAVES, RenderLayer.getCutout());
 
         registerTextures();
+    }
+    {
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return FoliageColors.getDefaultColor();
+            }
+            return BiomeColors.getFoliageColor(world, pos);
+        }, BlocksForBuilders.FALLEN_OAK_LEAVES);
+
+        ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getDefaultColor(), BlocksForBuilders.FALLEN_OAK_LEAVES);
+    }
+    {
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return FoliageColors.getBirchColor();
+            }
+            return FoliageColors.getBirchColor();
+        }, BlocksForBuilders.FALLEN_BIRCH_LEAVES);
+
+        ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getBirchColor(), BlocksForBuilders.FALLEN_BIRCH_LEAVES);
+    }
+    {
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return FoliageColors.getSpruceColor();
+            }
+            return FoliageColors.getSpruceColor();
+        }, BlocksForBuilders.FALLEN_SPRUCE_LEAVES);
+
+        ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getSpruceColor(), BlocksForBuilders.FALLEN_SPRUCE_LEAVES);
+    }
+    {
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return FoliageColors.getDefaultColor();
+            }
+            return BiomeColors.getFoliageColor(world, pos);
+        }, BlocksForBuilders.FALLEN_JUNGLE_LEAVES);
+
+        ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getDefaultColor(), BlocksForBuilders.FALLEN_JUNGLE_LEAVES);
+    }
+    {
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return FoliageColors.getDefaultColor();
+            }
+            return BiomeColors.getFoliageColor(world, pos);
+        }, BlocksForBuilders.FALLEN_DARK_OAK_LEAVES);
+
+        ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getDefaultColor(), BlocksForBuilders.FALLEN_DARK_OAK_LEAVES);
+    }
+    {
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return FoliageColors.getDefaultColor();
+            }
+            return BiomeColors.getFoliageColor(world, pos);
+        }, BlocksForBuilders.FALLEN_ACACIA_LEAVES);
+
+        ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getDefaultColor(), BlocksForBuilders.FALLEN_ACACIA_LEAVES);
+    }
+    {
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+            if (world == null || pos == null) {
+                return FoliageColors.getDefaultColor();
+            }
+            return BiomeColors.getFoliageColor(world, pos);
+        }, BlocksForBuilders.FALLEN_MANGROVE_LEAVES);
+
+        ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getDefaultColor(), BlocksForBuilders.FALLEN_MANGROVE_LEAVES);
     }
 
     private static void registerTextures() {
