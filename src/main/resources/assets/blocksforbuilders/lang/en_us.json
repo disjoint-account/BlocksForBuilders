@@ -179,5 +179,7 @@
   "block.blocksforbuilders.red_nether_brick_fence_gate": "Red Nether Brick Fence Gate",
   "item.blocksforbuilders.nether_brick_fence_gate": "Nether Brick Fence Gate",
   "block.blocksforbuilders.nether_brick_fence_gate": "Nether Brick Fence Gate",
+  "item.blocksforbuilders.paper_lantern": "Paper Lantern",
+  "block.blocksforbuilders.paper_lantern": "Paper Lantern",
   "itemGroup.blocksforbuilders.general": "Blocks For Builders"
 }

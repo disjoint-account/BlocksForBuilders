@@ -7,10 +7,9 @@ import net.disjoint.blocksforbuilders.world.gen.BlocksForBuildersWorldGen;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.renderer.v1.model.FabricBakedModel;
 import net.minecraft.block.*;
 import net.minecraft.item.*;
-import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
@@ -125,6 +124,7 @@ public class BlocksForBuilders implements ModInitializer {
 	public static final FenceBlock RED_NETHER_BRICK_FENCE = new BFBFence(NETHER_BRICK_FENCE.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.RED));
 	public static final FenceGateBlock RED_NETHER_BRICK_FENCE_GATE = new BFBFenceGate(NETHER_BRICK_FENCE.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.RED));
 	public static final FenceGateBlock NETHER_BRICK_FENCE_GATE = new BFBFenceGate(NETHER_BRICK_FENCE.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.DARK_RED));
+	public static final HangingRootsBlock PAPER_LANTERN = new HangingLanternBlock();
 	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 
 	@Override
@@ -316,6 +316,8 @@ public class BlocksForBuilders implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "red_nether_brick_fence_gate"), new BlockItem(RED_NETHER_BRICK_FENCE_GATE, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "nether_brick_fence_gate"), NETHER_BRICK_FENCE_GATE);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "nether_brick_fence_gate"), new BlockItem(NETHER_BRICK_FENCE_GATE, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "paper_lantern"), PAPER_LANTERN);
+		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "paper_lantern"), new BlockItem(PAPER_LANTERN, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 
 		Instance.init();
 	}
