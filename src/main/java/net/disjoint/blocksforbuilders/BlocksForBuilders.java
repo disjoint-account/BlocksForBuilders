@@ -30,8 +30,9 @@ public class BlocksForBuilders implements ModInitializer {
 	public static final PillarBlock SAKURA_WOOD = new PillarBlock(FabricBlockSettings.copyOf(OAK_LOG).mapColor(MapColor.TERRACOTTA_PINK));
 	public static final PillarBlock STRIPPED_SAKURA_WOOD = new PillarBlock(FabricBlockSettings.copyOf(OAK_LOG).mapColor(MapColor.TERRACOTTA_PINK));
 	public static final LeavesBlock SAKURA_LEAVES = new PinkLeafBlock();
-	public static final CarpetBlock FALLEN_SAKURA_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(SAKURA_LEAVES).mapColor(MapColor.PINK).nonOpaque());
+	public static final CarpetBlock FALLEN_SAKURA_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(SAKURA_LEAVES).mapColor(MapColor.PINK).nonOpaque());
 	public static final Block SAKURA_SAPLING = new BFBSaplingBlock(new SakuraSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING));
+	public static final Block POTTED_SAKURA_SAPLING = new FlowerPotBlock(SAKURA_SAPLING, FabricBlockSettings.copyOf(POTTED_OAK_SAPLING));
 	public static final Block SAKURA_PLANKS = new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).mapColor(MapColor.TERRACOTTA_PINK));
 	public static final StairsBlock SAKURA_STAIRS = new BFBStairs(SAKURA_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).mapColor(MapColor.TERRACOTTA_PINK));
 	public static final SlabBlock SAKURA_SLAB = new BFBSlab(SAKURA_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.OAK_SLAB).mapColor(MapColor.TERRACOTTA_PINK));
@@ -50,8 +51,9 @@ public class BlocksForBuilders implements ModInitializer {
 	public static final PillarBlock GREEN_JUNGLE_WOOD = new PillarBlock(FabricBlockSettings.copyOf(JUNGLE_LOG).mapColor(MapColor.DARK_GREEN));
 	public static final PillarBlock STRIPPED_GREEN_JUNGLE_WOOD = new PillarBlock(FabricBlockSettings.copyOf(JUNGLE_LOG).mapColor(MapColor.DARK_GREEN));
 	public static final LeavesBlock GREEN_JUNGLE_LEAVES = new GreenLeafBlock();
-	public static final CarpetBlock FALLEN_GREEN_JUNGLE_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(GREEN_JUNGLE_LEAVES).mapColor(MapColor.LIME).nonOpaque());
+	public static final CarpetBlock FALLEN_GREEN_JUNGLE_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(GREEN_JUNGLE_LEAVES).mapColor(MapColor.LIME).nonOpaque());
 	public static final Block GREEN_JUNGLE_SAPLING = new BFBSaplingBlock(new GreenJungleSaplingGenerator(), FabricBlockSettings.copy(Blocks.JUNGLE_SAPLING));
+	public static final Block POTTED_GREEN_JUNGLE_SAPLING = new FlowerPotBlock(GREEN_JUNGLE_SAPLING, FabricBlockSettings.copyOf(POTTED_OAK_SAPLING));
 	public static final Block GREEN_JUNGLE_PLANKS = new Block(FabricBlockSettings.copyOf(Blocks.JUNGLE_PLANKS).mapColor(MapColor.DARK_GREEN));
 	public static final StairsBlock GREEN_JUNGLE_STAIRS = new BFBStairs(GREEN_JUNGLE_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.JUNGLE_STAIRS).mapColor(MapColor.DARK_GREEN));
 	public static final SlabBlock GREEN_JUNGLE_SLAB = new BFBSlab(GREEN_JUNGLE_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.JUNGLE_SLAB).mapColor(MapColor.DARK_GREEN));
@@ -70,8 +72,9 @@ public class BlocksForBuilders implements ModInitializer {
 	public static final PillarBlock GHOSTWOOD_WOOD = new PillarBlock(FabricBlockSettings.copyOf(OAK_LOG).mapColor(MapColor.WHITE_GRAY));
 	public static final PillarBlock STRIPPED_GHOSTWOOD_WOOD = new PillarBlock(FabricBlockSettings.copyOf(OAK_LOG).mapColor(MapColor.WHITE_GRAY));
 	public static final LeavesBlock GHOSTWOOD_LEAVES = new LilacLeafBlock();
-	public static final CarpetBlock FALLEN_GHOSTWOOD_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(GHOSTWOOD_LEAVES).mapColor(MapColor.DULL_PINK).nonOpaque());
+	public static final CarpetBlock FALLEN_GHOSTWOOD_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(GHOSTWOOD_LEAVES).mapColor(MapColor.DULL_PINK).nonOpaque());
 	public static final Block GHOSTWOOD_SAPLING = new BFBSaplingBlock(new GhostwoodSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING));
+	public static final Block POTTED_GHOSTWOOD_SAPLING = new FlowerPotBlock(GHOSTWOOD_SAPLING, FabricBlockSettings.copyOf(POTTED_OAK_SAPLING));
 	public static final Block GHOSTWOOD_PLANKS = new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).mapColor(MapColor.WHITE_GRAY));
 	public static final StairsBlock GHOSTWOOD_STAIRS = new BFBStairs(GHOSTWOOD_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).mapColor(MapColor.WHITE_GRAY));
 	public static final SlabBlock GHOSTWOOD_SLAB = new BFBSlab(GHOSTWOOD_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.OAK_SLAB).mapColor(MapColor.WHITE_GRAY));
@@ -86,20 +89,22 @@ public class BlocksForBuilders implements ModInitializer {
 	public static final WoodSignWall GHOSTWOOD_WALL_SIGN = new WoodSignWall(GHOSTWOOD_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN));
 	public static final Item GHOSTWOOD_SIGN_ITEM = new SignItem(new Item.Settings().maxCount(16).group(BlocksForBuilders.BLOCKSFORBUILDERS), GHOSTWOOD_SIGN, GHOSTWOOD_WALL_SIGN);
 	public static final LeavesBlock RED_OAK_LEAVES = new RedLeafBlock();
-	public static final CarpetBlock FALLEN_RED_OAK_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(RED_OAK_LEAVES).mapColor(MapColor.DARK_RED).nonOpaque());
+	public static final CarpetBlock FALLEN_RED_OAK_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(RED_OAK_LEAVES).mapColor(MapColor.DARK_RED).nonOpaque());
 	public static final Block RED_OAK_SAPLING = new BFBSaplingBlock(new RedOakSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING));
+	public static final Block POTTED_RED_OAK_SAPLING = new FlowerPotBlock(RED_OAK_SAPLING, FabricBlockSettings.copyOf(POTTED_OAK_SAPLING));
 	public static final LeavesBlock GOLD_ACACIA_LEAVES = new GoldLeafBlock();
-	public static final CarpetBlock FALLEN_GOLD_ACACIA_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(GOLD_ACACIA_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW).nonOpaque());
+	public static final CarpetBlock FALLEN_GOLD_ACACIA_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(GOLD_ACACIA_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW).nonOpaque());
 	public static final Block GOLD_ACACIA_SAPLING = new BFBSaplingBlock(new GoldAcaciaSaplingGenerator(), FabricBlockSettings.copy(Blocks.ACACIA_SAPLING));
-	public static final CarpetBlock FALLEN_OAK_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(OAK_LEAVES).nonOpaque());
-	public static final CarpetBlock FALLEN_BIRCH_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(BIRCH_LEAVES).nonOpaque());
-	public static final CarpetBlock FALLEN_SPRUCE_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(SPRUCE_LEAVES).nonOpaque());
-	public static final CarpetBlock FALLEN_JUNGLE_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(JUNGLE_LEAVES).nonOpaque());
-	public static final CarpetBlock FALLEN_DARK_OAK_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(DARK_OAK_LEAVES).nonOpaque());
-	public static final CarpetBlock FALLEN_ACACIA_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(ACACIA_LEAVES).nonOpaque());
-	public static final CarpetBlock FALLEN_AZALEA_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(AZALEA_LEAVES).nonOpaque());
-	public static final CarpetBlock FALLEN_FLOWERING_AZALEA_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(FLOWERING_AZALEA_LEAVES).nonOpaque());
-	public static final CarpetBlock FALLEN_MANGROVE_LEAVES = new CarpetBlock(FabricBlockSettings.copyOf(MANGROVE_LEAVES).nonOpaque());
+	public static final Block POTTED_GOLD_ACACIA_SAPLING = new FlowerPotBlock(GOLD_ACACIA_SAPLING, FabricBlockSettings.copyOf(POTTED_OAK_SAPLING));
+	public static final CarpetBlock FALLEN_OAK_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(OAK_LEAVES).nonOpaque());
+	public static final CarpetBlock FALLEN_BIRCH_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(BIRCH_LEAVES).nonOpaque());
+	public static final CarpetBlock FALLEN_SPRUCE_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(SPRUCE_LEAVES).nonOpaque());
+	public static final CarpetBlock FALLEN_JUNGLE_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(JUNGLE_LEAVES).nonOpaque());
+	public static final CarpetBlock FALLEN_DARK_OAK_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(DARK_OAK_LEAVES).nonOpaque());
+	public static final CarpetBlock FALLEN_ACACIA_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(ACACIA_LEAVES).nonOpaque());
+	public static final CarpetBlock FALLEN_AZALEA_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(AZALEA_LEAVES).nonOpaque());
+	public static final CarpetBlock FALLEN_FLOWERING_AZALEA_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(FLOWERING_AZALEA_LEAVES).nonOpaque());
+	public static final CarpetBlock FALLEN_MANGROVE_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(MANGROVE_LEAVES).nonOpaque());
 	public static final Block BIRCH_BOOKSHELF = new BFBBookshelf(FabricBlockSettings.copyOf(BOOKSHELF).mapColor(MapColor.PALE_YELLOW));
 	public static final Block SPRUCE_BOOKSHELF = new BFBBookshelf(FabricBlockSettings.copyOf(BOOKSHELF).mapColor(MapColor.SPRUCE_BROWN));
 	public static final Block JUNGLE_BOOKSHELF = new BFBBookshelf(FabricBlockSettings.copyOf(BOOKSHELF).mapColor(MapColor.DULL_PINK));
@@ -124,7 +129,7 @@ public class BlocksForBuilders implements ModInitializer {
 	public static final FenceBlock RED_NETHER_BRICK_FENCE = new BFBFence(NETHER_BRICK_FENCE.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.RED));
 	public static final FenceGateBlock RED_NETHER_BRICK_FENCE_GATE = new BFBFenceGate(NETHER_BRICK_FENCE.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.RED));
 	public static final FenceGateBlock NETHER_BRICK_FENCE_GATE = new BFBFenceGate(NETHER_BRICK_FENCE.getDefaultState(),FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.DARK_RED));
-	public static final HangingRootsBlock PAPER_LANTERN = new HangingLanternBlock();
+	public static final LanternBlock PAPER_LANTERN = new HangingLanternBlock();
 	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 
 	@Override
@@ -147,6 +152,7 @@ public class BlocksForBuilders implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "fallen_sakura_leaves"), new BlockItem(FALLEN_SAKURA_LEAVES, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "sakura_sapling"), SAKURA_SAPLING);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "sakura_sapling"), new BlockItem(SAKURA_SAPLING, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "potted_sakura_sapling"), POTTED_SAKURA_SAPLING);
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "sakura_planks"), SAKURA_PLANKS);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "sakura_planks"), new BlockItem(SAKURA_PLANKS, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "sakura_slab"), SAKURA_SLAB);
@@ -182,6 +188,7 @@ public class BlocksForBuilders implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "fallen_green_jungle_leaves"), new BlockItem(FALLEN_GREEN_JUNGLE_LEAVES, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "green_jungle_sapling"), GREEN_JUNGLE_SAPLING);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "green_jungle_sapling"), new BlockItem(GREEN_JUNGLE_SAPLING, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "potted_green_jungle_sapling"), POTTED_GREEN_JUNGLE_SAPLING);
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "green_jungle_planks"), GREEN_JUNGLE_PLANKS);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "green_jungle_planks"), new BlockItem(GREEN_JUNGLE_PLANKS, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "green_jungle_slab"), GREEN_JUNGLE_SLAB);
@@ -217,6 +224,7 @@ public class BlocksForBuilders implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "fallen_ghostwood_leaves"), new BlockItem(FALLEN_GHOSTWOOD_LEAVES, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "ghostwood_sapling"), GHOSTWOOD_SAPLING);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "ghostwood_sapling"), new BlockItem(GHOSTWOOD_SAPLING, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "potted_ghostwood_sapling"), POTTED_GHOSTWOOD_SAPLING);
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "ghostwood_planks"), GHOSTWOOD_PLANKS);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "ghostwood_planks"), new BlockItem(GHOSTWOOD_PLANKS, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "ghostwood_slab"), GHOSTWOOD_SLAB);
@@ -244,12 +252,14 @@ public class BlocksForBuilders implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "fallen_red_oak_leaves"), new BlockItem(FALLEN_RED_OAK_LEAVES, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "red_oak_sapling"), RED_OAK_SAPLING);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "red_oak_sapling"), new BlockItem(RED_OAK_SAPLING, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "potted_red_oak_sapling"), POTTED_RED_OAK_SAPLING);
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "gold_acacia_leaves"), GOLD_ACACIA_LEAVES);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "gold_acacia_leaves"), new BlockItem(GOLD_ACACIA_LEAVES, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "fallen_gold_acacia_leaves"), FALLEN_GOLD_ACACIA_LEAVES);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "fallen_gold_acacia_leaves"), new BlockItem(FALLEN_GOLD_ACACIA_LEAVES, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "gold_acacia_sapling"), GOLD_ACACIA_SAPLING);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "gold_acacia_sapling"), new BlockItem(GOLD_ACACIA_SAPLING, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
+		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "potted_gold_acacia_sapling"), POTTED_GOLD_ACACIA_SAPLING);
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "fallen_oak_leaves"), FALLEN_OAK_LEAVES);
 		Registry.register(Registry.ITEM, new Identifier("blocksforbuilders", "fallen_oak_leaves"), new BlockItem(FALLEN_OAK_LEAVES, new Item.Settings().group(BlocksForBuilders.BLOCKSFORBUILDERS)));
 		Registry.register(Registry.BLOCK, new Identifier("blocksforbuilders", "fallen_birch_leaves"), FALLEN_BIRCH_LEAVES);

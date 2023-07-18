@@ -17,18 +17,23 @@ public class BlocksForBuildersClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_SAKURA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.SAKURA_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.POTTED_SAKURA_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.SAKURA_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.SAKURA_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_GREEN_JUNGLE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.GREEN_JUNGLE_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.POTTED_GREEN_JUNGLE_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.GREEN_JUNGLE_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.GREEN_JUNGLE_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_GHOSTWOOD_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.GHOSTWOOD_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.POTTED_GHOSTWOOD_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_RED_OAK_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.RED_OAK_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.POTTED_RED_OAK_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_GOLD_ACACIA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.GOLD_ACACIA_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.POTTED_GOLD_ACACIA_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_OAK_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_BIRCH_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_SPRUCE_LEAVES, RenderLayer.getCutout());
