@@ -10,8 +10,13 @@
     "steelpandas"
   ],
   "contact": {
-    "sources": "https://github.com/disjoint-account/BlocksForBuilders"
+    "sources": "https://github.com/disjoint-account/BlocksForBuilders",
+    "issues": "https://github.com/disjoint-account/BlocksForBuilders/issues"
   },
+  "contributors": [
+    "Boat API - TerraformersMC",
+    "Green Jungle Wood Textures - Vanilla Tweaks (Stridey)"
+  ],
 
   "license": "MIT",
   "icon": "assets/blocksforbuilders/icon.png",
