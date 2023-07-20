@@ -1,14 +1,13 @@
 package net.disjoint.blocksforbuilders;
 
+import net.minecraft.block.BlockSetType;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.WoodenButtonBlock;
-import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.block.ButtonBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Material;
 
-public class WoodButton extends WoodenButtonBlock {
+public class WoodButton extends ButtonBlock {
 
     public WoodButton() {
-        super(FabricBlockSettings.copy(Blocks.OAK_BUTTON).noCollision());
+        super(FabricBlockSettings.copy(Blocks.OAK_BUTTON), BlockSetType.OAK,15, true);
     }
 }

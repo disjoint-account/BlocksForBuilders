@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "x"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:chest"
+        },
+        "x": {
+            "item": "blocksforbuilders:ghostwood_boat"
+        }
+    },
+    "result": {
+        "item": "blocksforbuilders:ghostwood_chest_boat",
+        "count": 1
+    }
+}

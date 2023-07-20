@@ -1,7 +1,6 @@
 {
     "replace": false,
     "values": [
-      "blocksforbuilders:sakura_button",
       "blocksforbuilders:green_jungle_button",
       "blocksforbuilders:ghostwood_button"
     ]

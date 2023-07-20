@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "xxx",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:bamboo_planks"
+        },
+        "x": {
+            "item": "minecraft:book"
+        }
+    },
+    "result": {
+        "item": "blocksforbuilders:bamboo_bookshelf",
+        "count": 1
+    }
+}

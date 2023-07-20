@@ -1,7 +1,6 @@
 {
     "replace": false,
     "values": [
-      "blocksforbuilders:sakura_pressure_plate",
       "blocksforbuilders:green_jungle_pressure_plate",
       "blocksforbuilders:ghostwood_pressure_plate"
     ]

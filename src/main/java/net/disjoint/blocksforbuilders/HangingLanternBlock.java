@@ -31,6 +31,6 @@ public class HangingLanternBlock extends LanternBlock {
         return state;
     }
     public HangingLanternBlock() {
-        super(FabricBlockSettings.of(Material.METAL).nonOpaque().collidable(true).sounds(BlockSoundGroup.LANTERN).luminance(15).hardness(3.5f).requiresTool());
+        super(FabricBlockSettings.copyOf(Blocks.LANTERN));
     }
 }

@@ -1,5 +1,7 @@
 package net.disjoint.blocksforbuilders;
 
+import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
+import net.disjoint.blocksforbuilders.signstuff.SpriteIdentifierRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
@@ -15,11 +17,6 @@ public class BlocksForBuildersClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_SAKURA_LEAVES, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.SAKURA_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.POTTED_SAKURA_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.SAKURA_DOOR, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.SAKURA_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_GREEN_JUNGLE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.GREEN_JUNGLE_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.POTTED_GREEN_JUNGLE_SAPLING, RenderLayer.getCutout());
@@ -46,6 +43,9 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.PAPER_LANTERN, RenderLayer.getCutout());
 
         registerTextures();
+
+        TerraformBoatClientHelper.registerModelLayers(BlocksForBuilders.id("green_jungle"), false);
+        TerraformBoatClientHelper.registerModelLayers(BlocksForBuilders.id("ghostwood"), false);
     }
     {
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
@@ -119,10 +119,8 @@ public class BlocksForBuildersClient implements ClientModInitializer {
     }
 
     private static void registerTextures() {
-        {
-            Identifier texture = BlocksForBuilders.SAKURA_SIGN.getTexture();
-            SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, texture));
         }
+
         {
             Identifier texture = BlocksForBuilders.GREEN_JUNGLE_SIGN.getTexture();
             SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, texture));
@@ -131,5 +129,21 @@ public class BlocksForBuildersClient implements ClientModInitializer {
             Identifier texture = BlocksForBuilders.GHOSTWOOD_SIGN.getTexture();
             SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, texture));
         }
+        {
+            Identifier texture = BlocksForBuilders.GREEN_JUNGLE_HANGING_SIGN.getTexture();
+            SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, texture));
+        }
+        {
+            Identifier texture = BlocksForBuilders.GHOSTWOOD_HANGING_SIGN.getTexture();
+            SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, texture));
+        }
+        {
+            Identifier texture = BlocksForBuilders.GREEN_JUNGLE_HANGING_SIGN.getTexture();
+            SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, texture));
+        }
+        {
+            Identifier texture = BlocksForBuilders.GHOSTWOOD_HANGING_SIGN.getTexture();
+            SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, texture));
+        }
     }
-}
+

@@ -1,7 +1,6 @@
 {
     "replace": false,
     "values": [
-      "blocksforbuilders:sakura_trapdoor",
       "blocksforbuilders:green_jungle_trapdoor",
       "blocksforbuilders:ghostwood_trapdoor"
     ]

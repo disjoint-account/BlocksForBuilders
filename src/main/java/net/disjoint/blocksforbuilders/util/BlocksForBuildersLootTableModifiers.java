@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class BlocksForBuildersLootTableModifiers {
     private static final Identifier SHIPWRECK_TREASURE_CHEST_ID
-            = new Identifier("minecraft", "chests/shipwreck_treasure");
+            = new Identifier("minecraft", "chests/shipwreck_supply");
     private static final Identifier JUNGLE_TEMPLE_BASEMENT_CHEST_ID
             = new Identifier("minecraft", "chests/jungle_temple");
     public static void modifyLootTables() {

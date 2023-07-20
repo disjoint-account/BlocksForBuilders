@@ -1,7 +1,6 @@
 {
     "replace": false,
     "values": [
-      "blocksforbuilders:sakura_sign",
       "blocksforbuilders:green_jungle_sign",
       "blocksforbuilders:ghostwood_sign"
     ]

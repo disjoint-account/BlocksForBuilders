@@ -1,7 +1,6 @@
 {
     "replace": false,
     "values": [
-      "blocksforbuilders:sakura_planks",
       "blocksforbuilders:green_jungle_planks",
       "blocksforbuilders:ghostwood_planks"
     ]

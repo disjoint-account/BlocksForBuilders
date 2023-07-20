@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "blocksforbuilders",
-  "version": "1.0.0",
+  "version": "2.0.1",
 
   "name": "Blocks For Builders",
   "description": "A simple mod adding a handful of extra blocks to benefit builders.",
@@ -10,8 +10,7 @@
     "steelpandas"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/disjoint-account/BlocksForBuilders"
   },
 
   "license": "MIT",
@@ -19,6 +18,9 @@
 
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "net.disjoint.blocksforbuilders.datagen.BFBDataGenerator"
+    ],
     "main": [
       "net.disjoint.blocksforbuilders.BlocksForBuilders"
     ],
@@ -27,14 +29,13 @@
       ]
   },
   "mixins": [
-    "blocksforbuilders.mixins.json",
-    "mixins.wood-signs.json"
+    "mixins.bfb-signs.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "minecraft": "~1.19",
+    "minecraft": ">=1.20",
     "java": ">=17"
   },
   "suggests": {

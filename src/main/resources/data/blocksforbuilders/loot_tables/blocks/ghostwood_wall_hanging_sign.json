@@ -1,0 +1,19 @@
+{
+  "type": "blocksforbuilders:ghostwood_wall_hanging_sign",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "blocksforbuilders:ghostwood_hanging_sign"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}
