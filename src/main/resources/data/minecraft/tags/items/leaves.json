@@ -2,8 +2,22 @@
   "replace": false,
   "values": [
     "blocksforbuilders:green_jungle_leaves",
+    "blocksforbuilders:fallen_green_jungle_leaves",
     "blocksforbuilders:ghostwood_leaves",
+    "blocksforbuilders:fallen_ghostwood_leaves",
     "blocksforbuilders:red_oak_leaves",
-    "blocksforbuilders:gold_acacia_leaves"
+    "blocksforbuilders:fallen_red_oak_leaves",
+    "blocksforbuilders:gold_acacia_leaves",
+    "blocksforbuilders:fallen_gold_acacia_leaves",
+    "blocksforbuilders:fallen_oak_leaves",
+    "blocksforbuilders:fallen_birch_leaves",
+    "blocksforbuilders:fallen_spruce_leaves",
+    "blocksforbuilders:fallen_jungle_leaves",
+    "blocksforbuilders:fallen_dark_oak_leaves",
+    "blocksforbuilders:fallen_acacia_leaves",
+    "blocksforbuilders:fallen_azalea_leaves",
+    "blocksforbuilders:fallen_flowering_azalea_leaves",
+    "blocksforbuilders:fallen_mangrove_leaves",
+    "blocksforbuilders:fallen_cherry_leaves"
   ]
 }

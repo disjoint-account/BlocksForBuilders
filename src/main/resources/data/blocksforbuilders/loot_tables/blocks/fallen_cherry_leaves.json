@@ -37,7 +37,7 @@
                   ]
                 }
               ],
-              "name": "blocksforbuilders:fallen_azalea_leaves"
+              "name": "blocksforbuilders:fallen_cherry_leaves"
             }
           ]
         }
@@ -113,5 +113,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "blocksforbuilders:blocks/fallen_azalea_leaves"
+  "random_sequence": "blocksforbuilders:blocks/fallen_cherry_leaves"
 }

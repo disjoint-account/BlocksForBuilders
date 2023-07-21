@@ -40,6 +40,7 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_AZALEA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_FLOWERING_AZALEA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_MANGROVE_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.FALLEN_CHERRY_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuilders.PAPER_LANTERN, RenderLayer.getCutout());
 
         registerTextures();
@@ -127,14 +128,6 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         }
         {
             Identifier texture = BlocksForBuilders.GHOSTWOOD_SIGN.getTexture();
-            SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, texture));
-        }
-        {
-            Identifier texture = BlocksForBuilders.GREEN_JUNGLE_HANGING_SIGN.getTexture();
-            SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, texture));
-        }
-        {
-            Identifier texture = BlocksForBuilders.GHOSTWOOD_HANGING_SIGN.getTexture();
             SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, texture));
         }
         {

@@ -92,6 +92,7 @@ public class BlocksForBuilders implements ModInitializer {
 	public static final FallenLeavesBlock FALLEN_AZALEA_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(AZALEA_LEAVES).nonOpaque());
 	public static final FallenLeavesBlock FALLEN_FLOWERING_AZALEA_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(FLOWERING_AZALEA_LEAVES).nonOpaque());
 	public static final FallenLeavesBlock FALLEN_MANGROVE_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(MANGROVE_LEAVES).nonOpaque());
+	public static final FallenLeavesBlock FALLEN_CHERRY_LEAVES = new FallenLeavesBlock(FabricBlockSettings.copyOf(CHERRY_LEAVES).nonOpaque());
 	public static final Block BIRCH_BOOKSHELF = new BFBBookshelf(FabricBlockSettings.copyOf(BOOKSHELF).mapColor(MapColor.PALE_YELLOW));
 	public static final Block SPRUCE_BOOKSHELF = new BFBBookshelf(FabricBlockSettings.copyOf(BOOKSHELF).mapColor(MapColor.SPRUCE_BROWN));
 	public static final Block JUNGLE_BOOKSHELF = new BFBBookshelf(FabricBlockSettings.copyOf(BOOKSHELF).mapColor(MapColor.DULL_PINK));
@@ -238,6 +239,8 @@ public class BlocksForBuilders implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("blocksforbuilders", "fallen_flowering_azalea_leaves"), new BlockItem(FALLEN_FLOWERING_AZALEA_LEAVES, new Item.Settings()));
 		Registry.register(Registries.BLOCK, new Identifier("blocksforbuilders", "fallen_mangrove_leaves"), FALLEN_MANGROVE_LEAVES);
 		Registry.register(Registries.ITEM, new Identifier("blocksforbuilders", "fallen_mangrove_leaves"), new BlockItem(FALLEN_MANGROVE_LEAVES, new Item.Settings()));
+		Registry.register(Registries.BLOCK, new Identifier("blocksforbuilders", "fallen_cherry_leaves"), FALLEN_CHERRY_LEAVES);
+		Registry.register(Registries.ITEM, new Identifier("blocksforbuilders", "fallen_cherry_leaves"), new BlockItem(FALLEN_CHERRY_LEAVES, new Item.Settings()));
 		Registry.register(Registries.BLOCK, new Identifier("blocksforbuilders", "birch_bookshelf"), BIRCH_BOOKSHELF);
 		Registry.register(Registries.ITEM, new Identifier("blocksforbuilders", "birch_bookshelf"), new BlockItem(BIRCH_BOOKSHELF, new Item.Settings()));
 		Registry.register(Registries.BLOCK, new Identifier("blocksforbuilders", "spruce_bookshelf"), SPRUCE_BOOKSHELF);
