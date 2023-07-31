@@ -6,8 +6,7 @@
   "name": "Blocks For Builders",
   "description": "A simple mod adding a handful of extra blocks to benefit builders.",
   "authors": [
-    "disjoint",
-    "steelpandas"
+    "disjoint"
   ],
   "contact": {
     "sources": "https://github.com/disjoint-account/BlocksForBuilders",
@@ -15,7 +14,7 @@
   },
   "contributors": [
     "Boat API - TerraformersMC",
-    "Green Jungle Wood Textures - Vanilla Tweaks (Stridey)"
+    "Initial Green Jungle Wood and Black Nether Brick Textures - Vanilla Tweaks (https://vanillatweaks.net/)"
   ],
 
   "license": "MIT",
