@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "blocksforbuilders:smooth_stone_stairs",
     "blocksforbuilders:black_nether_bricks",
     "blocksforbuilders:chiseled_black_nether_bricks",
     "blocksforbuilders:cracked_black_nether_bricks",

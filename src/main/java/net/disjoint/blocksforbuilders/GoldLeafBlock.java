@@ -8,6 +8,6 @@ import net.minecraft.block.MapColor;
 public class GoldLeafBlock extends LeavesBlock {
 
     public GoldLeafBlock() {
-        super(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW));
+        super(FabricBlockSettings.copyOf(Blocks.ACACIA_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW));
     }
 }

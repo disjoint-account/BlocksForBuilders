@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "blocksforbuilders:fallen_sakura_leaves",
     "blocksforbuilders:fallen_green_jungle_leaves",
     "blocksforbuilders:fallen_ghostwood_leaves",
     "blocksforbuilders:fallen_red_oak_leaves",
@@ -13,7 +12,7 @@
     "blocksforbuilders:fallen_dark_oak_leaves",
     "blocksforbuilders:fallen_acacia_leaves",
     "blocksforbuilders:fallen_azalea_leaves",
-    "blocksforbuilders:fallen_flowering_leaves",
+    "blocksforbuilders:fallen_flowering_azalea_leaves",
     "blocksforbuilders:fallen_mangrove_leaves"
   ]
 }

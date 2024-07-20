@@ -105,6 +105,7 @@ public class BlocksForBuilders implements ModInitializer {
 	public static final Block BAMBOO_BOOKSHELF = new BFBBookshelf(FabricBlockSettings.copyOf(BOOKSHELF).mapColor(MapColor.PALE_YELLOW));
 	public static final Block GREEN_JUNGLE_BOOKSHELF = new BFBBookshelf(FabricBlockSettings.copyOf(BOOKSHELF).mapColor(MapColor.DARK_GREEN));
 	public static final Block GHOSTWOOD_BOOKSHELF = new BFBBookshelf(FabricBlockSettings.copyOf(BOOKSHELF).mapColor(MapColor.WHITE_GRAY));
+	public static final StairsBlock SMOOTH_STONE_STAIRS = new BFBStairs(SMOOTH_STONE.getDefaultState(),FabricBlockSettings.copyOf(STONE_STAIRS).mapColor(MapColor.LIGHT_GRAY));
 	public static final Block BLACK_NETHER_BRICKS = new Block(FabricBlockSettings.copyOf(NETHER_BRICKS).mapColor(MapColor.BLACK));
 	public static final Block CHISELED_BLACK_NETHER_BRICKS = new Block(FabricBlockSettings.copyOf(CHISELED_NETHER_BRICKS).mapColor(MapColor.BLACK));
 	public static final Block CRACKED_BLACK_NETHER_BRICKS = new Block(FabricBlockSettings.copyOf(CRACKED_NETHER_BRICKS).mapColor(MapColor.BLACK));
@@ -265,6 +266,8 @@ public class BlocksForBuilders implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier("blocksforbuilders", "green_jungle_bookshelf"), new BlockItem(GREEN_JUNGLE_BOOKSHELF, new Item.Settings()));
 		Registry.register(Registries.BLOCK, new Identifier("blocksforbuilders", "ghostwood_bookshelf"), GHOSTWOOD_BOOKSHELF);
 		Registry.register(Registries.ITEM, new Identifier("blocksforbuilders", "ghostwood_bookshelf"), new BlockItem(GHOSTWOOD_BOOKSHELF, new Item.Settings()));
+		Registry.register(Registries.BLOCK, new Identifier("blocksforbuilders", "smooth_stone_stairs"), SMOOTH_STONE_STAIRS);
+		Registry.register(Registries.ITEM, new Identifier("blocksforbuilders", "smooth_stone_stairs"), new BlockItem(SMOOTH_STONE_STAIRS, new Item.Settings()));
 		Registry.register(Registries.BLOCK, new Identifier("blocksforbuilders", "black_nether_bricks"), BLACK_NETHER_BRICKS);
 		Registry.register(Registries.ITEM, new Identifier("blocksforbuilders", "black_nether_bricks"), new BlockItem(BLACK_NETHER_BRICKS, new Item.Settings()));
 		Registry.register(Registries.BLOCK, new Identifier("blocksforbuilders", "chiseled_black_nether_bricks"), CHISELED_BLACK_NETHER_BRICKS);

@@ -80,6 +80,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuilders.BAMBOO_BOOKSHELF);
                         entries.add(BlocksForBuilders.GHOSTWOOD_BOOKSHELF);
                         entries.add(BlocksForBuilders.GREEN_JUNGLE_BOOKSHELF);
+                        entries.add(BlocksForBuilders.SMOOTH_STONE_STAIRS);
                         entries.add(BlocksForBuilders.BLACK_NETHER_BRICKS);
                         entries.add(BlocksForBuilders.CHISELED_BLACK_NETHER_BRICKS);
                         entries.add(BlocksForBuilders.CRACKED_BLACK_NETHER_BRICKS);
