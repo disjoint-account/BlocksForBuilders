@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/leaves",
-  "textures": {
-    "all": "blocksforbuilders:block/green_jungle_leaves"
-  }
-}

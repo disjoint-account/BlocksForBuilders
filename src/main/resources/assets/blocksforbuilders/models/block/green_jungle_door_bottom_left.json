@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom_left",
-  "textures": {
-    "bottom": "blocksforbuilders:block/green_jungle_door_bottom",
-    "top": "blocksforbuilders:block/green_jungle_door_top"
-  }
-}

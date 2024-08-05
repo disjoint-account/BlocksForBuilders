@@ -1,6 +1,7 @@
 package net.disjoint.blocksforbuilders.world.feature;
 
 import net.disjoint.blocksforbuilders.BlocksForBuilders;
+import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -20,7 +21,6 @@ import java.util.List;
 
 public class BlocksForBuildersConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> GREEN_JUNGLE_KEY = registerKey("green_jungle");
-    public static final RegistryKey<ConfiguredFeature<?,?>> GREEN_JUNGLE_SPAWN_KEY = registerKey("green_jungle_spawn");
     public static final RegistryKey<ConfiguredFeature<?,?>> RED_OAK_KEY = registerKey("red_oak");
     public static final RegistryKey<ConfiguredFeature<?,?>> RED_OAK_SPAWN_KEY = registerKey("red_oak_spawn");
     public static final RegistryKey<ConfiguredFeature<?,?>> GOLD_ACACIA_KEY = registerKey("gold_acacia");
@@ -30,16 +30,16 @@ public class BlocksForBuildersConfiguredFeatures {
         var placedFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
 
         register(context, GREEN_JUNGLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(BlocksForBuilders.GREEN_JUNGLE_LOG),
+                BlockStateProvider.of(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG),
                 new StraightTrunkPlacer(5, 6, 3),
-                BlockStateProvider.of(BlocksForBuilders.GREEN_JUNGLE_LEAVES),
+                BlockStateProvider.of(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
         register(context, RED_OAK_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(Blocks.OAK_LOG),
                 new StraightTrunkPlacer(4, 2, 2),
-                BlockStateProvider.of(BlocksForBuilders.RED_OAK_LEAVES),
+                BlockStateProvider.of(BlocksForBuildersBlocks.RED_OAK_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
@@ -50,7 +50,7 @@ public class BlocksForBuildersConfiguredFeatures {
         register(context, GOLD_ACACIA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(Blocks.ACACIA_LOG),
                 new ForkingTrunkPlacer(4, 5, 2),
-                BlockStateProvider.of(BlocksForBuilders.GOLD_ACACIA_LEAVES),
+                BlockStateProvider.of(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES),
                 new AcaciaFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0)),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
@@ -59,14 +59,14 @@ public class BlocksForBuildersConfiguredFeatures {
                         0.05f)), placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.GOLD_ACACIA_PLACED_KEY)));
 
         register(context, GHOSTWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(BlocksForBuilders.GHOSTWOOD_LOG),
+                BlockStateProvider.of(BlocksForBuildersBlocks.GHOSTWOOD_LOG),
                 new StraightTrunkPlacer(4, 2, 2),
-                BlockStateProvider.of(BlocksForBuilders.GHOSTWOOD_LEAVES),
+                BlockStateProvider.of(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
     }
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(BlocksForBuilders.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(BlocksForBuilders.MOD_ID, name));
     }
 
     private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,

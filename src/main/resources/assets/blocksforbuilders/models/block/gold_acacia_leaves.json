@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/leaves",
-  "textures": {
-    "all": "blocksforbuilders:block/gold_acacia_leaves"
-  }
-}

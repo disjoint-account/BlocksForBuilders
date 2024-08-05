@@ -1,6 +1,7 @@
 package net.disjoint.blocksforbuilders.world.feature;
 
 import net.disjoint.blocksforbuilders.BlocksForBuilders;
+import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -12,7 +13,6 @@ import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import java.util.List;
 
 public class BlocksForBuildersPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> GREEN_JUNGLE_PLACED_KEY = registerKey("green_jungle_placed");
     public static final RegistryKey<PlacedFeature> RED_OAK_PLACED_KEY = registerKey("red_oak_placed");
     public static final RegistryKey<PlacedFeature> GOLD_ACACIA_PLACED_KEY = registerKey("gold_acacia_placed");
 
@@ -20,13 +20,13 @@ public class BlocksForBuildersPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, RED_OAK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.RED_OAK_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.05f, 1), BlocksForBuilders.RED_OAK_SAPLING));
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.05f, 1), BlocksForBuildersBlocks.RED_OAK_SAPLING));
 
         register(context, GOLD_ACACIA_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.GOLD_ACACIA_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.01f, 1), BlocksForBuilders.GOLD_ACACIA_SAPLING));
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.01f, 1), BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING));
     }
         public static RegistryKey<PlacedFeature> registerKey(String name) {
-            return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(BlocksForBuilders.MOD_ID, name));
+            return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(BlocksForBuilders.MOD_ID, name));
         }
 
     private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,

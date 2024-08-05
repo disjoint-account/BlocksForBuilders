@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "blocksforbuilders:block/black_nether_bricks",
-    "top": "blocksforbuilders:block/black_nether_bricks",
-    "side": "blocksforbuilders:block/black_nether_bricks"
-  }
-}

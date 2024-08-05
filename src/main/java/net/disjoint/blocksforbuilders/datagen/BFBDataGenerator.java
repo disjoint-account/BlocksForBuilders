@@ -1,5 +1,6 @@
 package net.disjoint.blocksforbuilders.datagen;
 
+import net.disjoint.blocksforbuilders.model.BFBSignBlockStateModelGenerator;
 import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersConfiguredFeatures;
 import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -13,6 +14,10 @@ public class BFBDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
        pack.addProvider(BFBWorldGenerator::new);
+       pack.addProvider(BFBRecipeGenerator::new);
+       pack.addProvider(BFBBlockTagProvider::new);
+       pack.addProvider(BFBItemTagProvider::new);
+       pack.addProvider(BFBLootTableGenerator::new);
     }
 
     @Override

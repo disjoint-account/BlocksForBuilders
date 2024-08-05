@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "net.disjoint.blocksforbuilders.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MixinHangingSignBlockEntityRenderer",
+    "MixinHangingSignEditScreen",
+    "MixinSignBlockEntityRenderer",
+    "MixinSignEditScreen",
+    "MixinBoatEntityRenderer"
+  ],
+  "mixins": [
+    "MixinAbstractBlockSettings",
+    "MixinBlockEntityType",
+    "MixinBoatEntity",
+    "MixinEntityPredicate"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
