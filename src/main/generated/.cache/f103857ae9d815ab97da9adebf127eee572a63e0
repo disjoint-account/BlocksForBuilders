@@ -1,0 +1,27 @@
+// 1.21	2024-08-04T20:45:52.7974883	Blocks For Builders/Tags for minecraft:block
+afab0c12c7438591b7c8e57655fb26740b20de2c data\minecraft\tags\block\wooden_doors.json
+c9f7679c4f036cb18ca75d3fadcec8fd7ac8400b data\minecraft\tags\block\wooden_slabs.json
+8654dc81157374e2a22089b5cc51afd5939dcc73 data\minecraft\tags\block\planks.json
+c08cbc36f5021d6d2e58c7bf17c47c0c95ce9bf3 data\minecraft\tags\block\wooden_buttons.json
+ec1637206e79f024cdae70ac357c16afae779e0e data\minecraft\tags\block\logs_that_burn.json
+1cad44c07848c9ebdb6f4fd793aedde14f974453 data\minecraft\tags\block\standing_signs.json
+852882263448eaa7feb2e73b25cfd803f28cf852 data\minecraft\tags\block\wooden_stairs.json
+a732b0bda08ce7d089b4bf8a913f44271b0404a7 data\minecraft\tags\block\leaves.json
+4625c3d7f73c64b7070188f2740544086bfd300d data\minecraft\tags\block\trapdoors.json
+09fe105cbabd1ab78f53f5fe1add09810fbc6b8e data\minecraft\tags\block\stairs.json
+fe415059e5417b61546530a7688d367a19815086 data\minecraft\tags\block\walls.json
+806b7485055a1284a2fb53037fe0017affd1342a data\minecraft\tags\block\fence_gates.json
+4625c3d7f73c64b7070188f2740544086bfd300d data\minecraft\tags\block\wooden_trapdoors.json
+0c32a422944a068f53ff69e9a52547785c356bcf data\minecraft\tags\block\wall_signs.json
+ff64a9c83a8d4247846d1278391cfd6de656687e data\minecraft\tags\block\slabs.json
+5e0c192f8bb1a969e1b7f6a6c256e6e80d348f50 data\minecraft\tags\block\mineable\pickaxe.json
+cf69e120fe2ac027f26109677c7e09b4a88b7bd7 data\minecraft\tags\block\mineable\axe.json
+ed7cccac8c706a9de85b2aa6d2afbfe01fe40139 data\minecraft\tags\block\fences.json
+951eb0735f75f656ac71cbde16a8c2b4c0fba8f7 data\minecraft\tags\block\wall_hanging_signs.json
+afab0c12c7438591b7c8e57655fb26740b20de2c data\minecraft\tags\block\doors.json
+cf69e120fe2ac027f26109677c7e09b4a88b7bd7 data\minecraft\tags\block\enchantment_power_provider.json
+c1e4d37d2e2d07f66bf046d4e017be9ac0408009 data\minecraft\tags\block\wooden_fences.json
+93820b3a9b5cbd9d1c05580360a41a375097583a data\minecraft\tags\block\ceiling_hanging_signs.json
+5e666276d4b84b8c29faa478b65df4fcdecfa7ad data\minecraft\tags\block\saplings.json
+3b750183807b2964d6089214aba47d1268c35daf data\minecraft\tags\block\mineable\hoe.json
+e28380951c09012293d8bd24fe3a2a7e1815b935 data\minecraft\tags\block\wooden_pressure_plates.json

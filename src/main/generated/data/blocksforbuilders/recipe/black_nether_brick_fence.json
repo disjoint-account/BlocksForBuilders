@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "blocksforbuilders:black_nether_bricks"
+    },
+    "N": {
+      "item": "minecraft:nether_brick"
+    }
+  },
+  "pattern": [
+    "BNB",
+    "BNB"
+  ],
+  "result": {
+    "count": 3,
+    "id": "blocksforbuilders:black_nether_brick_fence"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:nether_brick"
+    },
+    "W": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "pattern": [
+    "BW",
+    "WB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocksforbuilders:black_nether_bricks"
+  }
+}

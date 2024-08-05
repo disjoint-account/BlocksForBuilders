@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "item": "blocksforbuilders:green_jungle_planks"
+    }
+  },
+  "pattern": [
+    "WW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocksforbuilders:green_jungle_pressure_plate"
+  }
+}

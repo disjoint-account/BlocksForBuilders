@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "charcoal",
+  "ingredient": {
+    "item": "blocksforbuilders:green_jungle_wood"
+  },
+  "result": {
+    "id": "minecraft:charcoal"
+  }
+}

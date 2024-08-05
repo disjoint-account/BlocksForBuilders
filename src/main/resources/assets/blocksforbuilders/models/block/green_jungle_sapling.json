@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "blocksforbuilders:block/green_jungle_sapling"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocksforbuilders:block/green_jungle_slab"
+    },
+    "type=double": {
+      "model": "blocksforbuilders:block/green_jungle_planks"
+    },
+    "type=top": {
+      "model": "blocksforbuilders:block/green_jungle_slab_top"
+    }
+  }
+}
