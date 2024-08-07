@@ -107,15 +107,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .pattern("BBB")
                 .input('B', BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
                 .criterion(hasItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS), conditionsFromItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "black_nether_brick_stairs_1"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS, 4)
-                .pattern("B  ")
-                .pattern("BB ")
-                .pattern("BBB")
-                .input('B', BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS), conditionsFromItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "black_nether_brick_stairs_2"));
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "black_nether_brick_stairs"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL, 6)
                 .pattern("BBB")
@@ -376,15 +368,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .pattern("WWW")
                 .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
                 .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_stairs_1"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_STAIRS, 4)
-                .pattern("W  ")
-                .pattern("WW ")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_stairs_2"));
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_stairs"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR, 2)
                 .pattern("WWW")
@@ -515,15 +499,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .pattern("WWW")
                 .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
                 .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_stairs_1"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS, 4)
-                .pattern("W  ")
-                .pattern("WW ")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_stairs_2"));
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_stairs"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR, 2)
                 .pattern("WWW")
@@ -578,21 +554,13 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "nether_brick_fence_gate"));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, 4)
                 .pattern("  S")
                 .pattern(" SS")
                 .pattern("SSS")
                 .input('S', Blocks.SMOOTH_STONE)
                 .criterion(hasItem(Blocks.SMOOTH_STONE), conditionsFromItem(Blocks.SMOOTH_STONE))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "smooth_stone_stairs_1"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS)
-                .pattern("S  ")
-                .pattern("SS ")
-                .pattern("SSS")
-                .input('S', Blocks.SMOOTH_STONE)
-                .criterion(hasItem(Blocks.SMOOTH_STONE), conditionsFromItem(Blocks.SMOOTH_STONE))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "smooth_stone_stairs_2"));
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "smooth_stone_stairs"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.SPRUCE_BOOKSHELF)
                 .pattern("WWW")
