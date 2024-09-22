@@ -16,5 +16,8 @@ public class BlocksForBuildersTreeGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SAVANNA, BiomeKeys.SAVANNA_PLATEAU, BiomeKeys.WINDSWEPT_SAVANNA),
                 GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.GOLD_ACACIA_PLACED_KEY);
 
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
+                GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.WILLOW_PLACED_KEY);
+
     }
 }

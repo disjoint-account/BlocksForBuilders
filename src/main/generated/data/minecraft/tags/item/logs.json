@@ -6,7 +6,11 @@
     "blocksforbuilders:stripped_green_jungle_wood",
     "blocksforbuilders:ghostwood_log",
     "blocksforbuilders:ghostwood_wood",
-    "blocksforbuilders:ghostwood_log",
-    "blocksforbuilders:ghostwood_wood"
+    "blocksforbuilders:stripped_ghostwood_log",
+    "blocksforbuilders:stripped_ghostwood_wood",
+    "blocksforbuilders:willow_log",
+    "blocksforbuilders:willow_wood",
+    "blocksforbuilders:stripped_willow_log",
+    "blocksforbuilders:stripped_willow_wood"
   ]
 }

@@ -32,7 +32,19 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
 
-        List<ItemConvertible> CHARCOAL_SMELTABLES = List.of(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG, BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD, BlocksForBuildersBlocks.GHOSTWOOD_LOG, BlocksForBuildersBlocks.GHOSTWOOD_WOOD);
+        List<ItemConvertible> CHARCOAL_SMELTABLES = List.of(BlocksForBuildersBlocks.GHOSTWOOD_LOG,
+                BlocksForBuildersBlocks.GHOSTWOOD_WOOD,
+                BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG,
+                BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD,
+                BlocksForBuildersBlocks.GREEN_JUNGLE_LOG,
+                BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD,
+                BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG,
+                BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD,
+                BlocksForBuildersBlocks.WILLOW_LOG,
+                BlocksForBuildersBlocks.WILLOW_WOOD,
+                BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG,
+                BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD);
+
         List<ItemConvertible> BLACKNB = List.of(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
         List<ItemConvertible> REDNB = List.of(Blocks.RED_NETHER_BRICKS);
 
@@ -252,6 +264,12 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .input('L', Blocks.SPRUCE_LEAVES)
                 .criterion(hasItem(Blocks.SPRUCE_LEAVES), conditionsFromItem(Blocks.SPRUCE_LEAVES))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_spruce_leaves"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, 3)
+                .pattern("LL")
+                .input('L', BlocksForBuildersBlocks.WILLOW_LEAVES)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_LEAVES), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_LEAVES))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_willow_leaves"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GHOSTWOOD_BOAT)
                 .pattern("P P")
@@ -586,6 +604,13 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "stripped_green_jungle_wood"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD)
+                .pattern("WW")
+                .pattern("WW")
+                .input('W', BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG)
+                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "stripped_willow_wood"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WARPED_BOOKSHELF)
                 .pattern("WWW")
                 .pattern("BBB")
@@ -595,6 +620,137 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.WARPED_PLANKS), conditionsFromItem(Blocks.WARPED_PLANKS))
                 .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "warped_bookshelf"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.WILLOW_BOAT)
+                .pattern("P P")
+                .pattern("PPP")
+                .input('P', BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_boat"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_BOOKSHELF)
+                .pattern("WWW")
+                .pattern("BBB")
+                .pattern("WWW")
+                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .input('B', Items.BOOK)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_bookshelf"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_BUTTON)
+                .input(BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_button"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.WILLOW_CHEST_BOAT)
+                .pattern("C")
+                .pattern("B")
+                .input('C', Blocks.CHEST)
+                .input('B', BlocksForBuildersItems.WILLOW_BOAT)
+                .criterion(hasItem(Blocks.CHEST), conditionsFromItem(Blocks.CHEST))
+                .criterion(hasItem(BlocksForBuildersItems.WILLOW_BOAT), conditionsFromItem(BlocksForBuildersItems.WILLOW_BOAT))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_chest_boat"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_DOOR, 3)
+                .pattern("WW")
+                .pattern("WW")
+                .pattern("WW")
+                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_door"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_FENCE, 3)
+                .pattern("WSW")
+                .pattern("WSW")
+                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .input('S', Items.STICK)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_fence"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_FENCE_GATE)
+                .pattern("SWS")
+                .pattern("SWS")
+                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .input('S', Items.STICK)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_fence_gate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM, 6)
+                .pattern("C C")
+                .pattern("WWW")
+                .pattern("WWW")
+                .input('W', BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG)
+                .input('C', Blocks.CHAIN)
+                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG))
+                .criterion(hasItem(Blocks.CHAIN), conditionsFromItem(Blocks.CHAIN))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_hanging_sign"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
+                .input(BlocksForBuildersBlocks.WILLOW_LOG)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_LOG))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_planks_1"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
+                .input(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG)
+                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_planks_2"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
+                .input(BlocksForBuildersBlocks.WILLOW_WOOD)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_WOOD), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_WOOD))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_planks_3"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
+                .input(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD)
+                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_planks_4"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_PRESSURE_PLATE)
+                .pattern("WW")
+                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_pressure_plate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.WILLOW_SIGN_ITEM, 3)
+                .pattern("WWW")
+                .pattern("WWW")
+                .pattern(" S ")
+                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .input('S', Items.STICK)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_sign"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_SLAB, 6)
+                .pattern("WWW")
+                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_slab"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_STAIRS, 4)
+                .pattern("  W")
+                .pattern(" WW")
+                .pattern("WWW")
+                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_stairs"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_TRAPDOOR, 2)
+                .pattern("WWW")
+                .pattern("WWW")
+                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_trapdoor"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_WOOD, 3)
+                .pattern("WW")
+                .pattern("WW")
+                .input('W', BlocksForBuildersBlocks.WILLOW_LOG)
+                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_LOG))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_wood"));
 
     }
 }

@@ -33,6 +33,26 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.GHOSTWOOD_BOAT);
                         entries.add(BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_LOG);
+                        entries.add(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_WOOD);
+                        entries.add(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_SAPLING);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_PLANKS);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_SLAB);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_FENCE);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_FENCE_GATE);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_BUTTON);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_PRESSURE_PLATE);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_DOOR);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_TRAPDOOR);
+                        entries.add(BlocksForBuildersItems.WILLOW_SIGN_ITEM);
+                        entries.add(BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM);
+                        entries.add(BlocksForBuildersItems.WILLOW_BOAT);
+                        entries.add(BlocksForBuildersItems.WILLOW_CHEST_BOAT);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG);
                         entries.add(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD);
@@ -80,6 +100,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.CHERRY_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
                         entries.add(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
@@ -95,7 +116,6 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE);
                         entries.add(BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE_GATE);
                         entries.add(BlocksForBuildersBlocks.NETHER_BRICK_FENCE_GATE);
-                        entries.add(BlocksForBuildersBlocks.PAPER_LANTERN);
 
                     }).build());
     public static void registerItemGroups() {

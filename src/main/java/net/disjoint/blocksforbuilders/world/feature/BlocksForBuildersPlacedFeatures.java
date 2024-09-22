@@ -15,6 +15,7 @@ import java.util.List;
 public class BlocksForBuildersPlacedFeatures {
     public static final RegistryKey<PlacedFeature> RED_OAK_PLACED_KEY = registerKey("red_oak_placed");
     public static final RegistryKey<PlacedFeature> GOLD_ACACIA_PLACED_KEY = registerKey("gold_acacia_placed");
+    public static final RegistryKey<PlacedFeature> WILLOW_PLACED_KEY = registerKey("willow_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -24,6 +25,9 @@ public class BlocksForBuildersPlacedFeatures {
 
         register(context, GOLD_ACACIA_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.GOLD_ACACIA_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.01f, 1), BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING));
+
+        register(context, WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.WILLOW_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.005f, 1), BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING));
     }
         public static RegistryKey<PlacedFeature> registerKey(String name) {
             return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(BlocksForBuilders.MOD_ID, name));

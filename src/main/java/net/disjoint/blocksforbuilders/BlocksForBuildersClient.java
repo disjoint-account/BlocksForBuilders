@@ -23,6 +23,11 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.POTTED_GHOSTWOOD_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.WILLOW_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.POTTED_WILLOW_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.WILLOW_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.WILLOW_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.RED_OAK_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.POTTED_RED_OAK_SAPLING, RenderLayer.getCutout());
@@ -39,7 +44,6 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.PAPER_LANTERN, RenderLayer.getCutout());
 
         EntityRendererRegistry.register(BlocksForBuilders.BOAT, context -> new BFBBoatEntityRenderer(context, false));
         EntityRendererRegistry.register(BlocksForBuilders.CHEST_BOAT, context -> new BFBBoatEntityRenderer(context, true));

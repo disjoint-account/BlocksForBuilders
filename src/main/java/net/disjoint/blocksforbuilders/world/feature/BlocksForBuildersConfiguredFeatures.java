@@ -13,6 +13,8 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.BushFoliagePlacer;
+import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
@@ -26,6 +28,8 @@ public class BlocksForBuildersConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> GOLD_ACACIA_KEY = registerKey("gold_acacia");
     public static final RegistryKey<ConfiguredFeature<?,?>> GOLD_ACACIA_SPAWN_KEY = registerKey("gold_acacia_spawn");
     public static final RegistryKey<ConfiguredFeature<?,?>> GHOSTWOOD_KEY = registerKey("ghostwood");
+    public static final RegistryKey<ConfiguredFeature<?,?>> WILLOW_KEY = registerKey("willow");
+    public static final RegistryKey<ConfiguredFeature<?,?>> WILLOW_SPAWN_KEY = registerKey("willow_spawn");
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         var placedFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
 
@@ -57,6 +61,17 @@ public class BlocksForBuildersConfiguredFeatures {
         register(context, GOLD_ACACIA_SPAWN_KEY, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.GOLD_ACACIA_PLACED_KEY),
                         0.05f)), placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.GOLD_ACACIA_PLACED_KEY)));
+
+        register(context, WILLOW_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.WILLOW_LOG),
+                new ForkingTrunkPlacer(3, 3, 1),
+                BlockStateProvider.of(BlocksForBuildersBlocks.WILLOW_LEAVES),
+                new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), ConstantIntProvider.create(4), 0.0f, 0.0f, 1.0f, 0.75f),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, WILLOW_SPAWN_KEY, Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.WILLOW_PLACED_KEY),
+                        0.05f)), placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.WILLOW_PLACED_KEY)));
 
         register(context, GHOSTWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(BlocksForBuildersBlocks.GHOSTWOOD_LOG),

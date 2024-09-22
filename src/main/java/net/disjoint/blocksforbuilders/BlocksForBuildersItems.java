@@ -21,12 +21,21 @@ public class BlocksForBuildersItems {
             new SignItem(new Item.Settings().maxCount(16), GREEN_JUNGLE_HANGING_SIGN, GREEN_JUNGLE_WALL_HANGING_SIGN));
     public static final Item GREEN_JUNGLE_BOAT = registerBoatItem("green_jungle_boat", BoatTypes.GREEN_JUNGLE, false, new Item.Settings().maxCount(1));
     public static final Item GREEN_JUNGLE_CHEST_BOAT = registerBoatItem("green_jungle_chest_boat", BoatTypes.GREEN_JUNGLE, true, new Item.Settings().maxCount(1));
+
     public static final Item GHOSTWOOD_SIGN_ITEM = registerItem("ghostwood_sign_item",
             new SignItem(new Item.Settings().maxCount(16), GHOSTWOOD_SIGN, GHOSTWOOD_WALL_SIGN));
     public static final Item GHOSTWOOD_HANGING_SIGN_ITEM = registerItem("ghostwood_hanging_sign_item",
             new SignItem(new Item.Settings().maxCount(16), GHOSTWOOD_HANGING_SIGN, GHOSTWOOD_WALL_HANGING_SIGN));
     public static final Item GHOSTWOOD_BOAT = registerBoatItem("ghostwood_boat", BoatTypes.GHOSTWOOD, false, new Item.Settings().maxCount(1));
     public static final Item GHOSTWOOD_CHEST_BOAT = registerBoatItem("ghostwood_chest_boat", BoatTypes.GHOSTWOOD, true, new Item.Settings().maxCount(1));
+
+    public static final Item WILLOW_SIGN_ITEM = registerItem("willow_sign_item",
+            new SignItem(new Item.Settings().maxCount(16), WILLOW_SIGN, WILLOW_WALL_SIGN));
+    public static final Item WILLOW_HANGING_SIGN_ITEM = registerItem("willow_hanging_sign_item",
+            new SignItem(new Item.Settings().maxCount(16), WILLOW_HANGING_SIGN, WILLOW_WALL_HANGING_SIGN));
+    public static final Item WILLOW_BOAT = registerBoatItem("willow_boat", BoatTypes.WILLOW, false, new Item.Settings().maxCount(1));
+    public static final Item WILLOW_CHEST_BOAT = registerBoatItem("willow_chest_boat", BoatTypes.WILLOW, true, new Item.Settings().maxCount(1));
+
     private static Item registerBoatItem(String name, RegistryKey<BFBBoatType> boatType, boolean chest, Item.Settings settings) {
         Item item = new BFBBoatItem(chest, boatType, settings);
         Registry.register(Registries.ITEM, Identifier.of(BlocksForBuilders.MOD_ID, name), item);

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "blocksforbuilders",
-  "version": "3.0.0",
+  "version": "3.0.1",
 
   "name": "Blocks For Builders",
   "description": "A simple mod adding a handful of extra blocks to benefit builders.",

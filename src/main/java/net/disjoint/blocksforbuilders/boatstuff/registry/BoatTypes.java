@@ -5,7 +5,6 @@ import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.BlocksForBuildersItems;
 import net.disjoint.blocksforbuilders.boatstuff.client.BFBBoatClient;
 import net.disjoint.blocksforbuilders.boatstuff.util.BFBBoatType;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -19,16 +18,20 @@ public class BoatTypes {
     public static final Identifier GHOSTWOOD_ID = createBoatIdentifier("ghostwood");
     public static final RegistryKey<BFBBoatType> GHOSTWOOD = registerBoatRegistryKey(GHOSTWOOD_ID);
 
+    public static final Identifier WILLOW_ID = createBoatIdentifier("willow");
+    public static final RegistryKey<BFBBoatType> WILLOW = registerBoatRegistryKey(WILLOW_ID);
 
     public static void registerBoatTypes() {
         registerBoatType(GREEN_JUNGLE_ID, BlocksForBuildersItems.GREEN_JUNGLE_BOAT, BlocksForBuildersItems.GREEN_JUNGLE_CHEST_BOAT, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS.asItem());
         registerBoatType(GHOSTWOOD_ID, BlocksForBuildersItems.GHOSTWOOD_BOAT, BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS.asItem());
+        registerBoatType(WILLOW_ID, BlocksForBuildersItems.WILLOW_BOAT, BlocksForBuildersItems.WILLOW_CHEST_BOAT, BlocksForBuildersBlocks.WILLOW_PLANKS.asItem());
     }
 
 
     public static void registerBFBModelLayers() {
         BFBBoatClient.registerModelLayers(BoatTypes.GREEN_JUNGLE_ID, false);
         BFBBoatClient.registerModelLayers(BoatTypes.GHOSTWOOD_ID, false);
+        BFBBoatClient.registerModelLayers(BoatTypes.WILLOW_ID, false);
     }
 
 

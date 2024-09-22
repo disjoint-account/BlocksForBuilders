@@ -4,10 +4,7 @@ import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBHangingSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallHangingSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallSignBlock;
-import net.disjoint.blocksforbuilders.world.feature.tree.GhostwoodSaplingGenerator;
-import net.disjoint.blocksforbuilders.world.feature.tree.GoldAcaciaSaplingGenerator;
-import net.disjoint.blocksforbuilders.world.feature.tree.GreenJungleSaplingGenerator;
-import net.disjoint.blocksforbuilders.world.feature.tree.RedOakSaplingGenerator;
+import net.disjoint.blocksforbuilders.world.feature.tree.*;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -110,6 +107,52 @@ public class BlocksForBuildersBlocks {
             new BFBHangingSignBlock(GHOSTWOOD_HANGING_SIGN_TEXTURE, GHOSTWOOD_HANGING_SIGN_GUI_TEXTURE, AbstractBlock.Settings.copy(OAK_HANGING_SIGN)));
     public static final Block GHOSTWOOD_WALL_HANGING_SIGN = registerBlock("ghostwood_wall_hanging_sign",
             new BFBWallHangingSignBlock(GHOSTWOOD_HANGING_SIGN_TEXTURE, GHOSTWOOD_HANGING_SIGN_GUI_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
+    public static final Block WILLOW_LOG = registerBlock("willow_log",
+            new PillarBlock(AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.DIRT_BROWN)));
+    public static final Block STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log",
+            new PillarBlock(AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.LICHEN_GREEN)));
+    public static final Block WILLOW_WOOD = registerBlock("willow_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.DIRT_BROWN)));
+    public static final Block STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.LICHEN_GREEN)));
+    public static final Block WILLOW_LEAVES = registerBlock("willow_leaves",
+            new WillowLeafBlock());
+    public static final Block FALLEN_WILLOW_LEAVES = registerBlock("fallen_willow_leaves",
+            new FallenLeavesBlock(AbstractBlock.Settings.copy(WILLOW_LEAVES).mapColor(MapColor.PALE_GREEN).nonOpaque()));
+    //change colour for all of these!!!!!!!!
+    public static final Block WILLOW_SAPLING = registerBlock("willow_sapling",
+            new BFBSaplingBlock(WillowSaplingGenerator.WILLOW, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+    public static final Block POTTED_WILLOW_SAPLING = registerBlock("potted_willow_sapling",
+            new FlowerPotBlock(WILLOW_SAPLING, AbstractBlock.Settings.copy(POTTED_OAK_SAPLING)));
+    public static final Block WILLOW_PLANKS = registerBlock("willow_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.LICHEN_GREEN)));
+    public static final Block WILLOW_STAIRS = registerBlock("willow_stairs",
+            new BFBStairs(WILLOW_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_STAIRS).mapColor(MapColor.LICHEN_GREEN)));
+    public static final Block WILLOW_SLAB = registerBlock("willow_slab",
+            new BFBSlab(WILLOW_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_SLAB).mapColor(MapColor.LICHEN_GREEN)));
+    public static final Block WILLOW_FENCE = registerBlock("willow_fence",
+            new BFBFence(WILLOW_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_FENCE).mapColor(MapColor.LICHEN_GREEN)));
+    public static final Block WILLOW_FENCE_GATE = registerBlock("willow_fence_gate",
+            new BFBFenceGate(WILLOW_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE).mapColor(MapColor.LICHEN_GREEN)));
+    public static final Block WILLOW_BUTTON = registerBlock("willow_button",
+            new WoodButton());
+    public static final Block WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate",
+            new WoodPressurePlate());
+    public static final Block WILLOW_DOOR = registerBlock("willow_door",
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(OAK_DOOR).mapColor(MapColor.LICHEN_GREEN)));
+    public static final Block WILLOW_TRAPDOOR = registerBlock("willow_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(OAK_TRAPDOOR).mapColor(MapColor.LICHEN_GREEN)));
+    private static final Identifier WILLOW_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/willow");
+    public static final Block WILLOW_SIGN = registerBlock("willow_sign",
+            new BFBSignBlock(WILLOW_SIGN_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
+    public static final Block WILLOW_WALL_SIGN = registerBlock("willow_wall_sign",
+            new BFBWallSignBlock(WILLOW_SIGN_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
+    private static final Identifier WILLOW_HANGING_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/hanging/willow");
+    private static final Identifier WILLOW_HANGING_SIGN_GUI_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "textures/gui/hanging_signs/willow");
+    public static final Block WILLOW_HANGING_SIGN = registerBlock("willow_hanging_sign",
+            new BFBHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_SIGN_GUI_TEXTURE, AbstractBlock.Settings.copy(OAK_HANGING_SIGN)));
+    public static final Block WILLOW_WALL_HANGING_SIGN = registerBlock("willow_wall_hanging_sign",
+            new BFBWallHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_SIGN_GUI_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
     public static final Block RED_OAK_LEAVES = registerBlock("red_oak_leaves",
             new RedLeafBlock());
     public static final Block FALLEN_RED_OAK_LEAVES = registerBlock("fallen_red_oak_leaves",
@@ -170,6 +213,8 @@ public class BlocksForBuildersBlocks {
             new BFBBookshelf(AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.DARK_GREEN)));
     public static final Block GHOSTWOOD_BOOKSHELF = registerBlock("ghostwood_bookshelf",
             new BFBBookshelf(AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.WHITE_GRAY)));
+    public static final Block WILLOW_BOOKSHELF = registerBlock("willow_bookshelf",
+            new BFBBookshelf(AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_GREEN)));
     public static final Block SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs",
             new BFBStairs(SMOOTH_STONE.getDefaultState(), AbstractBlock.Settings.copy(STONE_STAIRS).mapColor(MapColor.LIGHT_GRAY)));
     public static final Block BLACK_NETHER_BRICKS = registerBlock("black_nether_bricks",
@@ -198,8 +243,7 @@ public class BlocksForBuildersBlocks {
             new BFBFenceGate(NETHER_BRICK_FENCE.getDefaultState(), AbstractBlock.Settings.copy(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.RED)));
     public static final Block NETHER_BRICK_FENCE_GATE = registerBlock("nether_brick_fence_gate",
             new BFBFenceGate(NETHER_BRICK_FENCE.getDefaultState(), AbstractBlock.Settings.copy(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.DARK_RED)));
-    public static final Block PAPER_LANTERN = registerBlock("paper_lantern",
-            new HangingLanternBlock());
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(BlocksForBuilders.MOD_ID, name), block);

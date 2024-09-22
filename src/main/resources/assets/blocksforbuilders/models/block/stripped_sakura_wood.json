@@ -1,7 +1,0 @@
-{
-    "parent": "minecraft:block/cube_column",
-    "textures": {
-      "end": "blocksforbuilders:block/stripped_sakura_log",
-      "side": "blocksforbuilders:block/stripped_sakura_log"
-    }
-  }
