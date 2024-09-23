@@ -114,29 +114,12 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES,
                         BlocksForBuildersBlocks.GHOSTWOOD_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES,
                         BlocksForBuildersBlocks.WILLOW_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES,
                         BlocksForBuildersBlocks.RED_OAK_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES,
                         BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES,
-                        BlocksForBuildersBlocks.ORANGE_OAK_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_OAK_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_AZALEA_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES);
+                        BlocksForBuildersBlocks.ORANGE_OAK_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG,
