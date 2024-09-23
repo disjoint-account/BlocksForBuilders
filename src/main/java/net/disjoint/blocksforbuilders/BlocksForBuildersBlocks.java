@@ -119,7 +119,6 @@ public class BlocksForBuildersBlocks {
             new WillowLeafBlock());
     public static final Block FALLEN_WILLOW_LEAVES = registerBlock("fallen_willow_leaves",
             new FallenLeavesBlock(AbstractBlock.Settings.copy(WILLOW_LEAVES).mapColor(MapColor.PALE_GREEN).nonOpaque()));
-    //change colour for all of these!!!!!!!!
     public static final Block WILLOW_SAPLING = registerBlock("willow_sapling",
             new BFBSaplingBlock(WillowSaplingGenerator.WILLOW, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
     public static final Block POTTED_WILLOW_SAPLING = registerBlock("potted_willow_sapling",
@@ -169,6 +168,22 @@ public class BlocksForBuildersBlocks {
             new BFBSaplingBlock(GoldAcaciaSaplingGenerator.GOLD_ACACIA, AbstractBlock.Settings.copy(ACACIA_SAPLING)));
     public static final Block POTTED_GOLD_ACACIA_SAPLING = registerBlock("potted_gold_acacia_sapling",
             new FlowerPotBlock(GOLD_ACACIA_SAPLING, AbstractBlock.Settings.copy(POTTED_OAK_SAPLING)));
+    public static final Block ORANGE_OAK_LEAVES = registerBlock("orange_oak_leaves",
+            new OrangeLeafBlock());
+    public static final Block FALLEN_ORANGE_OAK_LEAVES = registerBlock("fallen_orange_oak_leaves",
+            new FallenLeavesBlock(AbstractBlock.Settings.copy(ORANGE_OAK_LEAVES).mapColor(MapColor.ORANGE).nonOpaque()));
+    public static final Block ORANGE_OAK_SAPLING = registerBlock("orange_oak_sapling",
+            new BFBSaplingBlock(OrangeOakSaplingGenerator.ORANGE_OAK, AbstractBlock.Settings.copy(OAK_SAPLING)));
+    public static final Block POTTED_ORANGE_OAK_SAPLING = registerBlock("potted_orange_oak_sapling",
+            new FlowerPotBlock(ORANGE_OAK_SAPLING, AbstractBlock.Settings.copy(POTTED_OAK_SAPLING)));
+    public static final Block YELLOW_BIRCH_LEAVES = registerBlock("yellow_birch_leaves",
+            new YellowLeafBlock());
+    public static final Block FALLEN_YELLOW_BIRCH_LEAVES = registerBlock("fallen_yellow_birch_leaves",
+            new FallenLeavesBlock(AbstractBlock.Settings.copy(YELLOW_BIRCH_LEAVES).mapColor(MapColor.YELLOW).nonOpaque()));
+    public static final Block YELLOW_BIRCH_SAPLING = registerBlock("yellow_birch_sapling",
+            new BFBSaplingBlock(YellowBirchSaplingGenerator.YELLOW_BIRCH, AbstractBlock.Settings.copy(BIRCH_SAPLING)));
+    public static final Block POTTED_YELLOW_BIRCH_SAPLING = registerBlock("potted_yellow_birch_sapling",
+            new FlowerPotBlock(YELLOW_BIRCH_SAPLING, AbstractBlock.Settings.copy(POTTED_BIRCH_SAPLING)));
     public static final Block FALLEN_OAK_LEAVES = registerBlock("fallen_oak_leaves",
             new FallenLeavesBlock(AbstractBlock.Settings.copy(OAK_LEAVES).nonOpaque()));
     public static final Block FALLEN_BIRCH_LEAVES = registerBlock("fallen_birch_leaves",

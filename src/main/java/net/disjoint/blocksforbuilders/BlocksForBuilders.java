@@ -23,12 +23,12 @@ public class BlocksForBuilders implements ModInitializer {
 	private static final Identifier BOAT_ID = Identifier.of(BlocksForBuilders.MOD_ID, "boat");
 	public static final EntityType<BFBBoatEntity> BOAT = EntityType.Builder.<BFBBoatEntity>create(BFBBoatEntity::new, SpawnGroup.MISC)
 			.dimensions(1.375f, 0.5625f)
-			.build();
+			.build("boat");
 
 	private static final Identifier CHEST_BOAT_ID = Identifier.of(BlocksForBuilders.MOD_ID, "chest_boat");
 	public static final EntityType<BFBChestBoatEntity> CHEST_BOAT = EntityType.Builder.<BFBChestBoatEntity>create(BFBChestBoatEntity::new, SpawnGroup.MISC)
 			.dimensions(1.375f, 0.5625f)
-			.build();
+			.build("chest_boat");
 
 	@Override
 	public void onInitialize() {

@@ -5,6 +5,8 @@
     "blocksforbuilders:willow_leaves",
     "blocksforbuilders:gold_acacia_leaves",
     "blocksforbuilders:red_oak_leaves",
+    "blocksforbuilders:orange_oak_leaves",
+    "blocksforbuilders:yellow_birch_leaves",
     "blocksforbuilders:fallen_oak_leaves",
     "blocksforbuilders:fallen_birch_leaves",
     "blocksforbuilders:fallen_spruce_leaves",
@@ -19,6 +21,8 @@
     "blocksforbuilders:fallen_green_jungle_leaves",
     "blocksforbuilders:fallen_willow_leaves",
     "blocksforbuilders:fallen_red_oak_leaves",
-    "blocksforbuilders:fallen_gold_acacia_leaves"
+    "blocksforbuilders:fallen_gold_acacia_leaves",
+    "blocksforbuilders:fallen_orange_oak_leaves",
+    "blocksforbuilders:fallen_yellow_birch_leaves"
   ]
 }

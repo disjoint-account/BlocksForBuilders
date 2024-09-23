@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/flower_pot_cross",
   "textures": {
-    "plant": "blocksforbuilders:block/sakura_sapling"
+    "plant": "blocksforbuilders:block/orange_oak_sapling"
   }
 }

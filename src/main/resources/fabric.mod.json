@@ -30,6 +30,9 @@
     ],
       "client": [
         "net.disjoint.blocksforbuilders.BlocksForBuildersClient"
+      ],
+    "terrablender": [
+      "net.disjoint.blocksforbuilders.world.biome.BFBTerrablenderAPI"
       ]
   },
   "mixins": [

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "blocksforbuilders:block/yellow_birch_leaves"
+  }
+}

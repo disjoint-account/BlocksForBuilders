@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "blocksforbuilders:block/yellow_birch_leaves"
+  }
+}

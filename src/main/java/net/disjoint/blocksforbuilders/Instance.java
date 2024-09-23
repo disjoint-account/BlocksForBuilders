@@ -27,6 +27,8 @@ public class Instance {
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD, 5, 5);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.WILLOW_LEAVES, 30, 60);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.RED_OAK_LEAVES, 30, 60);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES, 30, 60);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, 30, 60);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, 30, 60);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF, 30, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.SPRUCE_BOOKSHELF, 30, 20);
@@ -49,6 +51,10 @@ public class Instance {
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.WILLOW_SAPLING, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.RED_OAK_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.RED_OAK_SAPLING, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.ORANGE_OAK_SAPLING, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES, 0.30f);
@@ -63,9 +69,11 @@ public class Instance {
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, 0.30f);
         }
         {
             FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF, 300);

@@ -37,6 +37,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_LEAVES,
                         BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES,
                         BlocksForBuildersBlocks.RED_OAK_LEAVES,
+                        BlocksForBuildersBlocks.ORANGE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_OAK_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES,
@@ -51,7 +53,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES);
+                        BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS,
@@ -117,8 +121,12 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES,
                         BlocksForBuildersBlocks.RED_OAK_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES,
+                        BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES,
+                        BlocksForBuildersBlocks.ORANGE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_OAK_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES,
@@ -154,7 +162,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_SAPLING,
                         BlocksForBuildersBlocks.WILLOW_SAPLING,
                         BlocksForBuildersBlocks.RED_OAK_SAPLING,
-                        BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING);
+                        BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING,
+                        BlocksForBuildersBlocks.ORANGE_OAK_SAPLING,
+                        BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
 
         getOrCreateTagBuilder(BlockTags.SLABS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB,

@@ -1,6 +1,7 @@
 package net.disjoint.blocksforbuilders.datagen;
 
 import net.disjoint.blocksforbuilders.model.BFBSignBlockStateModelGenerator;
+import net.disjoint.blocksforbuilders.world.biome.BFBBiomes;
 import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersConfiguredFeatures;
 import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -24,5 +25,6 @@ public class BFBDataGenerator implements DataGeneratorEntrypoint {
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, BlocksForBuildersConfiguredFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, BlocksForBuildersPlacedFeatures::bootstrap);
+        registryBuilder.addRegistry(RegistryKeys.BIOME, BFBBiomes::bootstrap);
     }
 }

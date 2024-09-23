@@ -250,8 +250,14 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, 3)
                 .pattern("LL")
                 .input('L', Blocks.OAK_LEAVES)
-                .criterion(hasItem(Blocks.OAK_LEAVES), conditionsFromItem(Blocks.JUNGLE_LEAVES))
+                .criterion(hasItem(Blocks.OAK_LEAVES), conditionsFromItem(Blocks.OAK_LEAVES))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_oak_leaves"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES, 3)
+                .pattern("LL")
+                .input('L', BlocksForBuildersBlocks.ORANGE_OAK_LEAVES)
+                .criterion(hasItem(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES), conditionsFromItem(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_orange_oak_leaves"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES, 3)
                 .pattern("LL")
@@ -751,6 +757,12 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .input('W', BlocksForBuildersBlocks.WILLOW_LOG)
                 .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_LOG))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_wood"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, 3)
+                .pattern("LL")
+                .input('L', BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES)
+                .criterion(hasItem(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES), conditionsFromItem(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_yellow_birch_leaves"));
 
     }
 }

@@ -70,6 +70,8 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, BlocksForBuildersBlocks.WILLOW_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES, BlocksForBuildersBlocks.RED_OAK_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 0.0f));
+        addDrop(BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES, BlocksForBuildersBlocks.ORANGE_OAK_SAPLING, 0.0f));
+        addDrop(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.0f));
 
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_BUTTON);
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_DOOR, doorDrops(BlocksForBuildersBlocks.GHOSTWOOD_DOOR));
@@ -135,12 +137,18 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.RED_OAK_SAPLING);
         addDrop(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, leavesDrops(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 0.05f));
         addDrop(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING);
+        addDrop(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES, oakLeavesDrops(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES, BlocksForBuildersBlocks.ORANGE_OAK_SAPLING, 0.05f));
+        addDrop(BlocksForBuildersBlocks.ORANGE_OAK_SAPLING);
+        addDrop(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, leavesDrops(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.05f));
+        addDrop(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
 
         addDrop(BlocksForBuildersBlocks.POTTED_GHOSTWOOD_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING));
         addDrop(BlocksForBuildersBlocks.POTTED_GREEN_JUNGLE_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING));
         addDrop(BlocksForBuildersBlocks.POTTED_WILLOW_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.WILLOW_SAPLING));
         addDrop(BlocksForBuildersBlocks.POTTED_RED_OAK_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.RED_OAK_SAPLING));
         addDrop(BlocksForBuildersBlocks.POTTED_GOLD_ACACIA_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING));
+        addDrop(BlocksForBuildersBlocks.POTTED_ORANGE_OAK_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.ORANGE_OAK_SAPLING));
+        addDrop(BlocksForBuildersBlocks.POTTED_YELLOW_BIRCH_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING));
 
         addDrop(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
 

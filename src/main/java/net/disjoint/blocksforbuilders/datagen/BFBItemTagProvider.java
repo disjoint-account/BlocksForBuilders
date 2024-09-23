@@ -66,7 +66,9 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.RED_OAK_LEAVES.asItem())
-                .add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES.asItem());
+                .add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES.asItem())
+                .add(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES.asItem())
+                .add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES.asItem());
 
         getOrCreateTagBuilder(ItemTags.LOGS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG.asItem())
@@ -87,12 +89,14 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_PLANKS.asItem());
 
-        getOrCreateTagBuilder(ItemTags.LEAVES)
+        getOrCreateTagBuilder(ItemTags.SAPLINGS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.RED_OAK_SAPLING.asItem())
-                .add(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING.asItem());
+                .add(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING.asItem())
+                .add(BlocksForBuildersBlocks.ORANGE_OAK_SAPLING.asItem())
+                .add(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING.asItem());
 
         getOrCreateTagBuilder(ItemTags.SIGNS)
                 .add(BlocksForBuildersItems.GREEN_JUNGLE_SIGN_ITEM)
