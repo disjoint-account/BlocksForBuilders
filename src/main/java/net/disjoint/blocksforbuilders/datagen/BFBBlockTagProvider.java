@@ -28,7 +28,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.BAMBOO_BOOKSHELF,
                         BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF,
                         BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF,
-                        BlocksForBuildersBlocks.WILLOW_BOOKSHELF);
+                        BlocksForBuildersBlocks.WILLOW_BOOKSHELF,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF);
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES,
@@ -85,7 +86,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.DOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR,
                         BlocksForBuildersBlocks.GHOSTWOOD_DOOR,
-                        BlocksForBuildersBlocks.WILLOW_DOOR);
+                        BlocksForBuildersBlocks.WILLOW_DOOR,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR);
 
         getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
                 .add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF,
@@ -100,12 +102,14 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.BAMBOO_BOOKSHELF,
                         BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF,
                         BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF,
-                        BlocksForBuildersBlocks.WILLOW_BOOKSHELF);
+                        BlocksForBuildersBlocks.WILLOW_BOOKSHELF,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF);
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE_GATE,
                         BlocksForBuildersBlocks.GHOSTWOOD_FENCE_GATE,
                         BlocksForBuildersBlocks.WILLOW_FENCE_GATE,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE_GATE,
                         BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE_GATE);
 
@@ -113,6 +117,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_FENCE,
                         BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE,
                         BlocksForBuildersBlocks.WILLOW_FENCE,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE,
                         BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE);
 
@@ -123,7 +128,24 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.RED_OAK_LEAVES,
                         BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES,
-                        BlocksForBuildersBlocks.ORANGE_OAK_LEAVES);
+                        BlocksForBuildersBlocks.ORANGE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_AZALEA_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG,
@@ -142,7 +164,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS,
                         BlocksForBuildersBlocks.GHOSTWOOD_PLANKS,
-                        BlocksForBuildersBlocks.WILLOW_PLANKS);
+                        BlocksForBuildersBlocks.WILLOW_PLANKS,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
 
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING,
@@ -157,6 +180,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB,
                         BlocksForBuildersBlocks.GHOSTWOOD_SLAB,
                         BlocksForBuildersBlocks.WILLOW_SLAB,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
 
@@ -164,18 +188,22 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS,
                         BlocksForBuildersBlocks.GHOSTWOOD_STAIRS,
                         BlocksForBuildersBlocks.WILLOW_STAIRS,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS,
                         BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);
 
         getOrCreateTagBuilder(BlockTags.STANDING_SIGNS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SIGN,
-                        BlocksForBuildersBlocks.GHOSTWOOD_SIGN);
+                        BlocksForBuildersBlocks.GHOSTWOOD_SIGN,
+                        BlocksForBuildersBlocks.WILLOW_SIGN,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_SIGN);
 
         getOrCreateTagBuilder(BlockTags.TRAPDOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR,
                         BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR,
-                        BlocksForBuildersBlocks.WILLOW_TRAPDOOR);
+                        BlocksForBuildersBlocks.WILLOW_TRAPDOOR,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
 
         getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_HANGING_SIGN,
@@ -185,7 +213,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_SIGN,
                         BlocksForBuildersBlocks.GHOSTWOOD_WALL_SIGN,
-                        BlocksForBuildersBlocks.WILLOW_WALL_SIGN);
+                        BlocksForBuildersBlocks.WILLOW_WALL_SIGN,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_SIGN);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL,
@@ -196,37 +225,44 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_BUTTON,
                         BlocksForBuildersBlocks.GHOSTWOOD_BUTTON,
-                        BlocksForBuildersBlocks.WILLOW_BUTTON);
+                        BlocksForBuildersBlocks.WILLOW_BUTTON,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR,
                         BlocksForBuildersBlocks.GHOSTWOOD_DOOR,
-                        BlocksForBuildersBlocks.WILLOW_DOOR);
+                        BlocksForBuildersBlocks.WILLOW_DOOR,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE,
                         BlocksForBuildersBlocks.GHOSTWOOD_FENCE,
-                        BlocksForBuildersBlocks.WILLOW_FENCE);
+                        BlocksForBuildersBlocks.WILLOW_FENCE,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_PRESSURE_PLATE,
                         BlocksForBuildersBlocks.GHOSTWOOD_PRESSURE_PLATE,
-                        BlocksForBuildersBlocks.WILLOW_PRESSURE_PLATE);
+                        BlocksForBuildersBlocks.WILLOW_PRESSURE_PLATE,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB,
                         BlocksForBuildersBlocks.GHOSTWOOD_SLAB,
-                        BlocksForBuildersBlocks.WILLOW_SLAB);
+                        BlocksForBuildersBlocks.WILLOW_SLAB,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS,
                         BlocksForBuildersBlocks.GHOSTWOOD_STAIRS,
-                        BlocksForBuildersBlocks.WILLOW_STAIRS);
+                        BlocksForBuildersBlocks.WILLOW_STAIRS,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR,
                         BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR,
-                        BlocksForBuildersBlocks.WILLOW_TRAPDOOR);
+                        BlocksForBuildersBlocks.WILLOW_TRAPDOOR,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
 
     }
 }

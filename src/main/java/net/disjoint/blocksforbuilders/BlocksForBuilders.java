@@ -37,6 +37,7 @@ public class BlocksForBuilders implements ModInitializer {
 		BlocksForBuildersBlocks.registerModBlocks();
 		BlocksForBuildersItems.registerModItems();
 		BoatTypes.registerBoatTypes();
+		BoatTypes.registerRaftTypes();
 		BFBBoatTrackedData.register();
 		Registry.register(Registries.ENTITY_TYPE, BOAT_ID, BOAT);
 		Registry.register(Registries.ENTITY_TYPE, CHEST_BOAT_ID, CHEST_BOAT);

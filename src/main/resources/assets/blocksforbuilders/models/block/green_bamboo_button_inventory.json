@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "blocksforbuilders:block/green_bamboo_planks"
+  }
+}

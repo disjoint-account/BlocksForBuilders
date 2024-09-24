@@ -39,6 +39,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, Items.BOOK, 3, 3));
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, Items.BOOK, 3, 3));
         addDrop(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, Items.BOOK, 3, 3));
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, Items.BOOK, 3, 3));
 
         addDrop(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE);
         addDrop(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE_GATE);
@@ -138,6 +139,18 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.WILLOW_WOOD);
         addDrop(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
         addDrop(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD);
+
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON);
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR, doorDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR));
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE);
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE);
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE);
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_SIGN, drops(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB, slabDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB));
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS);
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_SIGN, drops(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM));
 
         addDrop(BlocksForBuildersBlocks.RED_OAK_LEAVES, oakLeavesDrops(BlocksForBuildersBlocks.RED_OAK_LEAVES, BlocksForBuildersBlocks.RED_OAK_SAPLING, 0.05f));
         addDrop(BlocksForBuildersBlocks.RED_OAK_SAPLING);

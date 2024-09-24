@@ -6,7 +6,7 @@
       "x": 180
     },
     "face=ceiling,facing=east,powered=true": {
-      "model": "blocksforbuilders:block/green_jungle_pressed",
+      "model": "blocksforbuilders:block/green_jungle_button_pressed",
       "y": 270,
       "x": 180
     },

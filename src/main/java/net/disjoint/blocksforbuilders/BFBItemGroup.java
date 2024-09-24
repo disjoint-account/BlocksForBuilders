@@ -73,6 +73,18 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersItems.GREEN_JUNGLE_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.GREEN_JUNGLE_BOAT);
                         entries.add(BlocksForBuildersItems.GREEN_JUNGLE_CHEST_BOAT);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
+                        entries.add(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM);
+                        entries.add(BlocksForBuildersItems.GREEN_BAMBOO_RAFT);
+                        entries.add(BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT);
                         entries.add(BlocksForBuildersBlocks.RED_OAK_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES);
                         entries.add(BlocksForBuildersBlocks.RED_OAK_SAPLING);
@@ -108,6 +120,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.WILLOW_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
                         entries.add(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
                         entries.add(BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS);

@@ -21,17 +21,24 @@ public class BoatTypes {
     public static final Identifier WILLOW_ID = createBoatIdentifier("willow");
     public static final RegistryKey<BFBBoatType> WILLOW = registerBoatRegistryKey(WILLOW_ID);
 
+    public static final Identifier GREEN_BAMBOO_ID = createBoatIdentifier("green_bamboo");
+    public static final RegistryKey<BFBBoatType> GREEN_BAMBOO = registerBoatRegistryKey(GREEN_BAMBOO_ID);
+
     public static void registerBoatTypes() {
         registerBoatType(GREEN_JUNGLE_ID, BlocksForBuildersItems.GREEN_JUNGLE_BOAT, BlocksForBuildersItems.GREEN_JUNGLE_CHEST_BOAT, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS.asItem());
         registerBoatType(GHOSTWOOD_ID, BlocksForBuildersItems.GHOSTWOOD_BOAT, BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS.asItem());
         registerBoatType(WILLOW_ID, BlocksForBuildersItems.WILLOW_BOAT, BlocksForBuildersItems.WILLOW_CHEST_BOAT, BlocksForBuildersBlocks.WILLOW_PLANKS.asItem());
     }
 
+    public static void registerRaftTypes() {
+        registerRaftType(GREEN_BAMBOO_ID, BlocksForBuildersItems.GREEN_BAMBOO_RAFT, BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS.asItem());
+    }
 
     public static void registerBFBModelLayers() {
         BFBBoatClient.registerModelLayers(BoatTypes.GREEN_JUNGLE_ID, false);
         BFBBoatClient.registerModelLayers(BoatTypes.GHOSTWOOD_ID, false);
         BFBBoatClient.registerModelLayers(BoatTypes.WILLOW_ID, false);
+        BFBBoatClient.registerModelLayers(BoatTypes.GREEN_BAMBOO_ID, true);
     }
 
 
@@ -47,6 +54,11 @@ public class BoatTypes {
     private static void registerBoatType(Identifier identifier, Item boatItem, Item chestBoatItem, Item baseBlock) {
         BFBBoatType bfbBoatType = new BFBBoatType.Builder().item(boatItem).chestItem(chestBoatItem).block(baseBlock).build();
         Registry.register(BFBBoatTypeRegistry.INSTANCE, identifier, bfbBoatType);
+    }
+
+    private static void registerRaftType(Identifier identifier, Item boatItem, Item chestBoatItem, Item baseBlock) {
+        BFBBoatType bfbRaftType = new BFBBoatType.Builder().raft().item(boatItem).chestItem(chestBoatItem).block(baseBlock).build();
+        Registry.register(BFBBoatTypeRegistry.INSTANCE, identifier, bfbRaftType);
     }
 
 

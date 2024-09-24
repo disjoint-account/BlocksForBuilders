@@ -544,6 +544,107 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_wood"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_BAMBOO_RAFT)
+                .pattern("P P")
+                .pattern("PPP")
+                .input('P', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_boat"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF)
+                .pattern("WWW")
+                .pattern("BBB")
+                .pattern("WWW")
+                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .input('B', Items.BOOK)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_bookshelf"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON)
+                .input(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_button"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT)
+                .pattern("C")
+                .pattern("B")
+                .input('C', Blocks.CHEST)
+                .input('B', BlocksForBuildersItems.GREEN_BAMBOO_RAFT)
+                .criterion(hasItem(Blocks.CHEST), conditionsFromItem(Blocks.CHEST))
+                .criterion(hasItem(BlocksForBuildersItems.GREEN_BAMBOO_RAFT), conditionsFromItem(BlocksForBuildersItems.GREEN_BAMBOO_RAFT))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_chest_boat"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR, 3)
+                .pattern("WW")
+                .pattern("WW")
+                .pattern("WW")
+                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_door"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE, 3)
+                .pattern("WSW")
+                .pattern("WSW")
+                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .input('S', Items.STICK)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_fence"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE)
+                .pattern("SWS")
+                .pattern("SWS")
+                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .input('S', Items.STICK)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_fence_gate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, 4)
+                .pattern("SS")
+                .pattern("SS")
+                .input('S', Blocks.BAMBOO_BLOCK)
+                .criterion(hasItem(Blocks.BAMBOO_BLOCK), conditionsFromItem(Blocks.BAMBOO_BLOCK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE)
+                .pattern("WW")
+                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_pressure_plate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM, 3)
+                .pattern("WWW")
+                .pattern("WWW")
+                .pattern(" S ")
+                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .input('S', Items.STICK)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_sign"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB, 6)
+                .pattern("WWW")
+                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_slab"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS, 4)
+                .pattern("  W")
+                .pattern(" WW")
+                .pattern("WWW")
+                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_stairs"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR, 2)
+                .pattern("WWW")
+                .pattern("WWW")
+                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_trapdoor"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.JUNGLE_BOOKSHELF)
                 .pattern("WWW")
                 .pattern("BBB")

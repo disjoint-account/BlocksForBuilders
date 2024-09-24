@@ -26,6 +26,7 @@ public class Instance {
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.WILLOW_WOOD, 5, 5);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD, 5, 5);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.WILLOW_LEAVES, 30, 60);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, 5, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.RED_OAK_LEAVES, 30, 60);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES, 30, 60);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, 30, 60);
@@ -41,6 +42,7 @@ public class Instance {
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, 30, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, 30, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, 30, 20);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, 30, 20);
         }
         {
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES, 0.30f);
@@ -87,6 +89,7 @@ public class Instance {
             FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, 300);
             FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, 300);
             FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, 300);
+            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, 300);
         }
         addStrippables();
 

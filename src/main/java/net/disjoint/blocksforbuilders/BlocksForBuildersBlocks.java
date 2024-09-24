@@ -12,6 +12,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import static net.minecraft.block.AbstractBlock.Settings.copy;
 import static net.minecraft.block.Blocks.*;
 import static net.minecraft.block.Blocks.NETHER_BRICK_FENCE;
 
@@ -152,6 +153,29 @@ public class BlocksForBuildersBlocks {
             new BFBHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_SIGN_GUI_TEXTURE, AbstractBlock.Settings.copy(OAK_HANGING_SIGN)));
     public static final Block WILLOW_WALL_HANGING_SIGN = registerBlock("willow_wall_hanging_sign",
             new BFBWallHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_SIGN_GUI_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
+    public static final Block GREEN_BAMBOO_PLANKS = registerBlock("green_bamboo_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).mapColor(MapColor.DARK_GREEN)));
+    public static final Block GREEN_BAMBOO_STAIRS = registerBlock("green_bamboo_stairs",
+            new BFBStairs(GREEN_BAMBOO_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.BAMBOO_STAIRS).mapColor(MapColor.DARK_GREEN)));
+    public static final Block GREEN_BAMBOO_SLAB = registerBlock("green_bamboo_slab",
+            new BFBSlab(GREEN_BAMBOO_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.BAMBOO_SLAB).mapColor(MapColor.DARK_GREEN)));
+    public static final Block GREEN_BAMBOO_FENCE = registerBlock("green_bamboo_fence",
+            new BFBFence(GREEN_BAMBOO_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.BAMBOO_FENCE).mapColor(MapColor.DARK_GREEN)));
+    public static final Block GREEN_BAMBOO_FENCE_GATE = registerBlock("green_bamboo_fence_gate",
+            new BFBFenceGate(GREEN_BAMBOO_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.BAMBOO_FENCE_GATE).mapColor(MapColor.DARK_GREEN)));
+    public static final Block GREEN_BAMBOO_BUTTON = registerBlock("green_bamboo_button",
+            new ButtonBlock(BlockSetType.BAMBOO, 15, copy(BAMBOO_BUTTON)));
+    public static final Block GREEN_BAMBOO_PRESSURE_PLATE = registerBlock("green_bamboo_pressure_plate",
+            new PressurePlateBlock(BlockSetType.BAMBOO, copy(BAMBOO_PRESSURE_PLATE)));
+    public static final Block GREEN_BAMBOO_DOOR = registerBlock("green_bamboo_door",
+            new DoorBlock( BlockSetType.BAMBOO, AbstractBlock.Settings.copy(BAMBOO_DOOR).mapColor(MapColor.DARK_GREEN)));
+    public static final Block GREEN_BAMBOO_TRAPDOOR = registerBlock("green_bamboo_trapdoor",
+            new TrapdoorBlock(BlockSetType.BAMBOO, AbstractBlock.Settings.copy(BAMBOO_TRAPDOOR).mapColor(MapColor.DARK_GREEN)));
+    private static final Identifier GREEN_BAMBOO_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/green_bamboo");
+    public static final Block GREEN_BAMBOO_SIGN = registerBlock("green_bamboo_sign",
+            new BFBSignBlock(GREEN_BAMBOO_SIGN_TEXTURE, WoodType.BAMBOO, AbstractBlock.Settings.copy(Blocks.BAMBOO_SIGN)));
+    public static final Block GREEN_BAMBOO_WALL_SIGN = registerBlock("green_bamboo_wall_sign",
+            new BFBWallSignBlock(GREEN_BAMBOO_SIGN_TEXTURE, WoodType.BAMBOO, AbstractBlock.Settings.copy(Blocks.BAMBOO_SIGN)));
     public static final Block RED_OAK_LEAVES = registerBlock("red_oak_leaves",
             new RedLeafBlock());
     public static final Block FALLEN_RED_OAK_LEAVES = registerBlock("fallen_red_oak_leaves",
@@ -230,6 +254,8 @@ public class BlocksForBuildersBlocks {
             new BFBBookshelf(AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.WHITE_GRAY)));
     public static final Block WILLOW_BOOKSHELF = registerBlock("willow_bookshelf",
             new BFBBookshelf(AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_GREEN)));
+    public static final Block GREEN_BAMBOO_BOOKSHELF = registerBlock("green_bamboo_bookshelf",
+            new BFBBookshelf(AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.DARK_GREEN)));
     public static final Block SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs",
             new BFBStairs(SMOOTH_STONE.getDefaultState(), AbstractBlock.Settings.copy(STONE_STAIRS).mapColor(MapColor.LIGHT_GRAY)));
     public static final Block BLACK_NETHER_BRICKS = registerBlock("black_nether_bricks",

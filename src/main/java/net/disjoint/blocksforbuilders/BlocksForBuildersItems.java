@@ -36,6 +36,11 @@ public class BlocksForBuildersItems {
     public static final Item WILLOW_BOAT = registerBoatItem("willow_boat", BoatTypes.WILLOW, false, new Item.Settings().maxCount(1));
     public static final Item WILLOW_CHEST_BOAT = registerBoatItem("willow_chest_boat", BoatTypes.WILLOW, true, new Item.Settings().maxCount(1));
 
+    public static final Item GREEN_BAMBOO_SIGN_ITEM = registerItem("green_bamboo_sign_item",
+            new SignItem(new Item.Settings().maxCount(16), GREEN_BAMBOO_SIGN, GREEN_BAMBOO_WALL_SIGN));
+    public static final Item GREEN_BAMBOO_RAFT = registerBoatItem("green_bamboo_raft", BoatTypes.GREEN_BAMBOO, false, new Item.Settings().maxCount(1));
+    public static final Item GREEN_BAMBOO_CHEST_RAFT = registerBoatItem("green_bamboo_chest_raft", BoatTypes.GREEN_BAMBOO, true, new Item.Settings().maxCount(1));
+
     private static Item registerBoatItem(String name, RegistryKey<BFBBoatType> boatType, boolean chest, Item.Settings settings) {
         Item item = new BFBBoatItem(chest, boatType, settings);
         Registry.register(Registries.ITEM, Identifier.of(BlocksForBuilders.MOD_ID, name), item);
