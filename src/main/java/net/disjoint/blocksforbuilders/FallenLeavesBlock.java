@@ -14,7 +14,7 @@ import net.minecraft.world.WorldView;
 
 import static net.minecraft.block.LeavesBlock.WATERLOGGED;
 
-public class FallenLeavesBlock extends LeavesBlock {
+public class FallenLeavesBlock extends Block {
 
     private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 1, 16);
     public FallenLeavesBlock(Settings settings) {

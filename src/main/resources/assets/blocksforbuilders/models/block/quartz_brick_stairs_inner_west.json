@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "blocksforbuilders:block/quartz_brick_stairs_west",
+    "top": "blocksforbuilders:block/quartz_brick_stairs_west",
+    "side": "minecraft:block/quartz_bricks"
+  }
+}
