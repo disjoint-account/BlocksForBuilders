@@ -219,5 +219,15 @@
   "block.blocksforbuilders.red_nether_brick_fence_gate": "Red Nether Brick Fence Gate",
   "item.blocksforbuilders.nether_brick_fence_gate": "Nether Brick Fence Gate",
   "block.blocksforbuilders.nether_brick_fence_gate": "Nether Brick Fence Gate",
+  "item.blocksforbuilders.quartz_wall": "Quartz Wall",
+  "block.blocksforbuilders.quartz_wall": "Quartz Wall",
+  "item.blocksforbuilders.quartz_brick_wall": "Quartz Brick Wall",
+  "block.blocksforbuilders.quartz_brick_wall": "Quartz Brick Wall",
+  "item.blocksforbuilders.quartz_brick_stairs": "Quartz Brick Stairs",
+  "block.blocksforbuilders.quartz_brick_stairs": "Quartz Brick Stairs",
+  "item.blocksforbuilders.quartz_brick_slab": "Quartz Brick Slab",
+  "block.blocksforbuilders.quartz_brick_slab": "Quartz Brick Slab",
+  "item.blocksforbuilders.smooth_quartz_wall": "Smooth Quartz Wall",
+  "block.blocksforbuilders.smooth_quartz_wall": "Smooth Quartz Wall",
   "itemgroup.blocksforbuilders": "Blocks For Builders"
 }

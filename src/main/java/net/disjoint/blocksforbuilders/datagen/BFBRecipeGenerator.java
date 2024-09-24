@@ -57,6 +57,11 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_WALL, Blocks.QUARTZ_BLOCK, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL, Blocks.SMOOTH_QUARTZ, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE, 1);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.ACACIA_BOOKSHELF)
@@ -578,6 +583,34 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "nether_brick_fence_gate"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_WALL, 6)
+                .pattern("BBB")
+                .pattern("BBB")
+                .input('B', Blocks.QUARTZ_BRICKS)
+                .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "quartz_brick_wall"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS, 4)
+                .pattern("  B")
+                .pattern(" BB")
+                .pattern("BBB")
+                .input('B', Blocks.QUARTZ_BRICKS)
+                .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "quartz_brick_stairs"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB, 6)
+                .pattern("BBB")
+                .input('B', Blocks.QUARTZ_BRICKS)
+                .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "quartz_brick_slab"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_WALL, 6)
+                .pattern("BBB")
+                .pattern("BBB")
+                .input('B', Blocks.QUARTZ_BLOCK)
+                .criterion(hasItem(Blocks.QUARTZ_BLOCK), conditionsFromItem(Blocks.QUARTZ_BLOCK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "quartz_wall"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, 4)
                 .pattern("  S")
                 .pattern(" SS")
@@ -585,6 +618,13 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .input('S', Blocks.SMOOTH_STONE)
                 .criterion(hasItem(Blocks.SMOOTH_STONE), conditionsFromItem(Blocks.SMOOTH_STONE))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "smooth_stone_stairs"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL, 6)
+                .pattern("BBB")
+                .pattern("BBB")
+                .input('B', Blocks.SMOOTH_QUARTZ)
+                .criterion(hasItem(Blocks.SMOOTH_QUARTZ), conditionsFromItem(Blocks.SMOOTH_QUARTZ))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "smooth_quartz_wall"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.SPRUCE_BOOKSHELF)
                 .pattern("WWW")

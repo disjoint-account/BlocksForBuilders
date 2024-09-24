@@ -88,7 +88,7 @@ public class BlocksForBuildersConfiguredFeatures {
 
         register(context, WILLOW_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(BlocksForBuildersBlocks.WILLOW_LOG),
-                new ForkingTrunkPlacer(3, 4, 1),
+                new ForkingTrunkPlacer(3, 3, 1),
                 BlockStateProvider.of(BlocksForBuildersBlocks.WILLOW_LEAVES),
                 new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), ConstantIntProvider.create(4), 0.0f, 0.0f, 1.0f, 0.75f),
                 new TwoLayersFeatureSize(1, 0, 1)).build());

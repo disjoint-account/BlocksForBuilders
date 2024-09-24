@@ -122,6 +122,11 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE);
                         entries.add(BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE_GATE);
                         entries.add(BlocksForBuildersBlocks.NETHER_BRICK_FENCE_GATE);
+                        entries.add(BlocksForBuildersBlocks.QUARTZ_WALL);
+                        entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL);
+                        entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
+                        entries.add(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
 
                     }).build());
     public static void registerItemGroups() {

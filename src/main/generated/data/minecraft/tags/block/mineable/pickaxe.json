@@ -13,6 +13,11 @@
     "blocksforbuilders:cracked_red_nether_bricks",
     "blocksforbuilders:red_nether_brick_fence",
     "blocksforbuilders:red_nether_brick_fence_gate",
-    "blocksforbuilders:nether_brick_fence_gate"
+    "blocksforbuilders:nether_brick_fence_gate",
+    "blocksforbuilders:quartz_wall",
+    "blocksforbuilders:quartz_brick_wall",
+    "blocksforbuilders:quartz_brick_stairs",
+    "blocksforbuilders:quartz_brick_slab",
+    "blocksforbuilders:smooth_quartz_wall"
   ]
 }

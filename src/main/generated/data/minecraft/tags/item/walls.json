@@ -1,5 +1,8 @@
 {
   "values": [
-    "blocksforbuilders:black_nether_brick_wall"
+    "blocksforbuilders:black_nether_brick_wall",
+    "blocksforbuilders:quartz_wall",
+    "blocksforbuilders:quartz_brick_wall",
+    "blocksforbuilders:smooth_quartz_wall"
   ]
 }

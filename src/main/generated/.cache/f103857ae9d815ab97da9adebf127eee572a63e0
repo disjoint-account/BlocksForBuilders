@@ -1,6 +1,6 @@
-// 1.21	2024-09-23T17:27:29.4586269	Blocks For Builders/Tags for minecraft:block
-d868a03606136a8bd13f96cde3aa9c69de344987 data\minecraft\tags\block\wooden_doors.json
+// 1.21	2024-09-24T12:16:23.115018	Blocks For Builders/Tags for minecraft:block
 b2851b93afa43f7141b9aedc3ada42824bd6c24c data\minecraft\tags\block\wooden_slabs.json
+d868a03606136a8bd13f96cde3aa9c69de344987 data\minecraft\tags\block\wooden_doors.json
 0822d23377dfd40b55dd16b821cf3210505311ee data\minecraft\tags\block\planks.json
 2240fa10d6e11ca02425a11c3311a2f630b82346 data\minecraft\tags\block\wooden_buttons.json
 b0a7643656d5c5d2a888a29c66a60f652bb2ec4d data\minecraft\tags\block\logs_that_burn.json
@@ -8,13 +8,13 @@ b0a7643656d5c5d2a888a29c66a60f652bb2ec4d data\minecraft\tags\block\logs_that_bur
 06d9d3ffd4c967821ad8bee051478e7659113378 data\minecraft\tags\block\wooden_stairs.json
 01a001ee18eeb4fcfcd3c4ff3902631477e77bfe data\minecraft\tags\block\leaves.json
 0dcf583e67772f3955f832752767f383869fa490 data\minecraft\tags\block\trapdoors.json
-ad8833e823471e602a2665e7eaa33fb6d7a42ef7 data\minecraft\tags\block\stairs.json
-fe415059e5417b61546530a7688d367a19815086 data\minecraft\tags\block\walls.json
+4f1ac42ca6d24f8e9e3e13cb19ee64b983add88f data\minecraft\tags\block\stairs.json
+c19d5951de433574778668779c7d29f3825bd6a4 data\minecraft\tags\block\walls.json
 fa3078ecbebb3ae23c4fa2836b4f159c415353a6 data\minecraft\tags\block\fence_gates.json
 0dcf583e67772f3955f832752767f383869fa490 data\minecraft\tags\block\wooden_trapdoors.json
 694620945fe0411f9b7b37ced3ae7c50caaf8413 data\minecraft\tags\block\wall_signs.json
-9c3b505d04bd8c176e84ba3c93880efbc33f2608 data\minecraft\tags\block\slabs.json
-c3ce97d0ca46a4620a3d5b753e6dfef4fb255a8d data\minecraft\tags\block\mineable\pickaxe.json
+8a65696be414750397310b8685f99b7e882c404e data\minecraft\tags\block\slabs.json
+389d5d7b96acf0d4c9d70b7402d1f5807e6be425 data\minecraft\tags\block\mineable\pickaxe.json
 5684fbec11ecc99e05dc87d4623d2ddb3b34cbf9 data\minecraft\tags\block\mineable\axe.json
 cd5990f440a31b25b951af3572473872f398e24a data\minecraft\tags\block\fences.json
 3fbff96cc8e0f4ec08f6126ab720c9197cc9e5aa data\minecraft\tags\block\wall_hanging_signs.json

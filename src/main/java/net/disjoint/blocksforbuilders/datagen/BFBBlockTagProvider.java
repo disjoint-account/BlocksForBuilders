@@ -1,7 +1,6 @@
 package net.disjoint.blocksforbuilders.datagen;
 
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
-import net.disjoint.blocksforbuilders.BlocksForBuildersItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -71,7 +70,12 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.CRACKED_RED_NETHER_BRICKS,
                         BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE,
                         BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE_GATE,
-                        BlocksForBuildersBlocks.NETHER_BRICK_FENCE_GATE);
+                        BlocksForBuildersBlocks.NETHER_BRICK_FENCE_GATE,
+                        BlocksForBuildersBlocks.QUARTZ_WALL,
+                        BlocksForBuildersBlocks.QUARTZ_BRICK_WALL,
+                        BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS,
+                        BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB,
+                        BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
 
         getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_HANGING_SIGN,
@@ -153,14 +157,16 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB,
                         BlocksForBuildersBlocks.GHOSTWOOD_SLAB,
                         BlocksForBuildersBlocks.WILLOW_SLAB,
-                        BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB);
+                        BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB,
+                        BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
 
         getOrCreateTagBuilder(BlockTags.STAIRS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS,
                         BlocksForBuildersBlocks.GHOSTWOOD_STAIRS,
                         BlocksForBuildersBlocks.WILLOW_STAIRS,
                         BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS,
-                        BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS);
+                        BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS,
+                        BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);
 
         getOrCreateTagBuilder(BlockTags.STANDING_SIGNS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SIGN,
@@ -182,7 +188,10 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_WALL_SIGN);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL);
+                .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL,
+                    BlocksForBuildersBlocks.QUARTZ_WALL,
+                    BlocksForBuildersBlocks.QUARTZ_BRICK_WALL,
+                    BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_BUTTON,

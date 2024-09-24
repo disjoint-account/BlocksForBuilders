@@ -258,6 +258,16 @@ public class BlocksForBuildersBlocks {
             new BFBFenceGate(NETHER_BRICK_FENCE.getDefaultState(), AbstractBlock.Settings.copy(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.RED)));
     public static final Block NETHER_BRICK_FENCE_GATE = registerBlock("nether_brick_fence_gate",
             new BFBFenceGate(NETHER_BRICK_FENCE.getDefaultState(), AbstractBlock.Settings.copy(Blocks.NETHER_BRICK_FENCE).mapColor(MapColor.DARK_RED)));
+    public static final Block QUARTZ_WALL = registerBlock("quartz_wall",
+            new WallBlock(AbstractBlock.Settings.copy(QUARTZ_BLOCK).mapColor(MapColor.OFF_WHITE)));
+    public static final Block QUARTZ_BRICK_WALL = registerBlock("quartz_brick_wall",
+            new WallBlock(AbstractBlock.Settings.copy(QUARTZ_BRICKS).mapColor(MapColor.OFF_WHITE)));
+    public static final Block QUARTZ_BRICK_STAIRS = registerBlock("quartz_brick_stairs",
+            new StairsBlock(QUARTZ_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(QUARTZ_STAIRS).mapColor(MapColor.OFF_WHITE)));
+    public static final Block QUARTZ_BRICK_SLAB = registerBlock("quartz_brick_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(QUARTZ_SLAB).mapColor(MapColor.OFF_WHITE)));
+    public static final Block SMOOTH_QUARTZ_WALL = registerBlock("smooth_quartz_wall",
+            new WallBlock(AbstractBlock.Settings.copy(SMOOTH_QUARTZ).mapColor(MapColor.OFF_WHITE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

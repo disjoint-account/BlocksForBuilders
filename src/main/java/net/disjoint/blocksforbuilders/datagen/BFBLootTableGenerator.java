@@ -55,6 +55,12 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE);
         addDrop(BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE_GATE);
 
+        addDrop(BlocksForBuildersBlocks.QUARTZ_WALL);
+        addDrop(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL);
+        addDrop(BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);
+        addDrop(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB));
+        addDrop(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
+
         addDrop(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, Blocks.OAK_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES, Blocks.BIRCH_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES, Blocks.SPRUCE_SAPLING, 0.0f));
