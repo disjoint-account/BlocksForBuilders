@@ -601,6 +601,16 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_fence_gate"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM)
+                .pattern("S S")
+                .pattern("WWW")
+                .pattern("WWW")
+                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
+                .input('S', Items.CHAIN)
+                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+                .criterion(hasItem(Items.CHAIN), conditionsFromItem(Items.CHAIN))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_hanging_sign"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, 4)
                 .pattern("SS")
                 .pattern("SS")

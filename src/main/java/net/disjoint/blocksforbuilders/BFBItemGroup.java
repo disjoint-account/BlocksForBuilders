@@ -83,6 +83,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR);
                         entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
                         entries.add(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM);
+                        entries.add(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.GREEN_BAMBOO_RAFT);
                         entries.add(BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT);
                         entries.add(BlocksForBuildersBlocks.RED_OAK_LEAVES);

@@ -144,12 +144,14 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR, doorDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE);
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE);
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_HANGING_SIGN, drops(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE);
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_SIGN, drops(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB, slabDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS);
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_SIGN, drops(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM));
 
         addDrop(BlocksForBuildersBlocks.RED_OAK_LEAVES, oakLeavesDrops(BlocksForBuildersBlocks.RED_OAK_LEAVES, BlocksForBuildersBlocks.RED_OAK_SAPLING, 0.05f));

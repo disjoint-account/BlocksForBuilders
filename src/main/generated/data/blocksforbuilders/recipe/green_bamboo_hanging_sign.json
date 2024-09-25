@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:chain"
+    },
+    "W": {
+      "item": "blocksforbuilders:green_bamboo_planks"
+    }
+  },
+  "pattern": [
+    "S S",
+    "WWW",
+    "WWW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocksforbuilders:green_bamboo_hanging_sign_item"
+  }
+}

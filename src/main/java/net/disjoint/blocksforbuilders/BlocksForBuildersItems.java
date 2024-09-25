@@ -38,6 +38,8 @@ public class BlocksForBuildersItems {
 
     public static final Item GREEN_BAMBOO_SIGN_ITEM = registerItem("green_bamboo_sign_item",
             new SignItem(new Item.Settings().maxCount(16), GREEN_BAMBOO_SIGN, GREEN_BAMBOO_WALL_SIGN));
+    public static final Item GREEN_BAMBOO_HANGING_SIGN_ITEM = registerItem("green_bamboo_hanging_sign_item",
+            new SignItem(new Item.Settings().maxCount(16), GREEN_BAMBOO_HANGING_SIGN, GREEN_BAMBOO_WALL_HANGING_SIGN));
     public static final Item GREEN_BAMBOO_RAFT = registerBoatItem("green_bamboo_raft", BoatTypes.GREEN_BAMBOO, false, new Item.Settings().maxCount(1));
     public static final Item GREEN_BAMBOO_CHEST_RAFT = registerBoatItem("green_bamboo_chest_raft", BoatTypes.GREEN_BAMBOO, true, new Item.Settings().maxCount(1));
 

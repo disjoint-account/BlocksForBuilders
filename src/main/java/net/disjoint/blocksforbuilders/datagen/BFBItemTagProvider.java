@@ -63,6 +63,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.HANGING_SIGNS)
                 .add(BlocksForBuildersItems.GREEN_JUNGLE_HANGING_SIGN_ITEM)
+                .add(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM)
                 .add(BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM)
                 .add(BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM);
 

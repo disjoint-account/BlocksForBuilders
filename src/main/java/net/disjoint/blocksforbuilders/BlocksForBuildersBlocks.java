@@ -176,6 +176,12 @@ public class BlocksForBuildersBlocks {
             new BFBSignBlock(GREEN_BAMBOO_SIGN_TEXTURE, WoodType.BAMBOO, AbstractBlock.Settings.copy(Blocks.BAMBOO_SIGN)));
     public static final Block GREEN_BAMBOO_WALL_SIGN = registerBlock("green_bamboo_wall_sign",
             new BFBWallSignBlock(GREEN_BAMBOO_SIGN_TEXTURE, WoodType.BAMBOO, AbstractBlock.Settings.copy(Blocks.BAMBOO_SIGN)));
+    private static final Identifier GREEN_BAMBOO_HANGING_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/hanging/green_bamboo");
+    private static final Identifier GREEN_BAMBOO_HANGING_SIGN_GUI_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "textures/gui/hanging_signs/green_bamboo");
+    public static final Block GREEN_BAMBOO_HANGING_SIGN = registerBlock("green_bamboo_hanging_sign",
+            new BFBHangingSignBlock(GREEN_BAMBOO_HANGING_SIGN_TEXTURE, GREEN_BAMBOO_HANGING_SIGN_GUI_TEXTURE, AbstractBlock.Settings.copy(BAMBOO_HANGING_SIGN)));
+    public static final Block GREEN_BAMBOO_WALL_HANGING_SIGN = registerBlock("green_bamboo_wall_hanging_sign",
+            new BFBWallHangingSignBlock(GREEN_BAMBOO_HANGING_SIGN_TEXTURE, GREEN_BAMBOO_HANGING_SIGN_GUI_TEXTURE, WoodType.BAMBOO, AbstractBlock.Settings.copy(Blocks.BAMBOO_HANGING_SIGN)));
     public static final Block RED_OAK_LEAVES = registerBlock("red_oak_leaves",
             new RedLeafBlock());
     public static final Block FALLEN_RED_OAK_LEAVES = registerBlock("fallen_red_oak_leaves",
