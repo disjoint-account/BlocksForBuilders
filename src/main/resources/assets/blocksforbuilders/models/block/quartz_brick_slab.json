@@ -1,8 +1,10 @@
 {
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "minecraft:block/quartz_bricks",
-    "top": "minecraft:block/quartz_bricks",
-    "side": "minecraft:block/quartz_bricks"
-  }
+    "parent": "blocksforbuilders:block/pillar_slab",
+    "textures": {
+        "bottom": "minecraft:block/quartz_bricks",
+        "top": "minecraft:block/quartz_bricks",
+        "side": "minecraft:block/quartz_bricks",
+        "left": "minecraft:block/quartz_bricks",
+        "right": "minecraft:block/quartz_bricks"
+    }
 }

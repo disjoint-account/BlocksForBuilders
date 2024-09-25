@@ -1,8 +1,8 @@
 {
     "parent": "blocksforbuilders:block/pillar_slab",
     "textures": {
-        "bottom": "minecraft:block/hay_block_side",
-        "top": "blocksforbuilders:block/hay_block_side_bottom",
+        "bottom": "blocksforbuilders:block/hay_block_side_left",
+        "top": "blocksforbuilders:block/hay_block_side_left",
         "side": "minecraft:block/hay_block_top",
         "left": "blocksforbuilders:block/hay_block_side_right",
         "right": "blocksforbuilders:block/hay_block_side_left"

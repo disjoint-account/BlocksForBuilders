@@ -295,7 +295,7 @@ public class BlocksForBuildersBlocks {
     public static final Block QUARTZ_BRICK_STAIRS = registerBlock("quartz_brick_stairs",
             new StairsBlock(QUARTZ_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(QUARTZ_STAIRS).mapColor(MapColor.OFF_WHITE)));
     public static final Block QUARTZ_BRICK_SLAB = registerBlock("quartz_brick_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(QUARTZ_SLAB).mapColor(MapColor.OFF_WHITE)));
+            new BFBDirectionalSlab(AbstractBlock.Settings.copy(QUARTZ_SLAB).mapColor(MapColor.OFF_WHITE)));
     public static final Block SMOOTH_QUARTZ_WALL = registerBlock("smooth_quartz_wall",
             new WallBlock(AbstractBlock.Settings.copy(SMOOTH_QUARTZ).mapColor(MapColor.OFF_WHITE)));
 
