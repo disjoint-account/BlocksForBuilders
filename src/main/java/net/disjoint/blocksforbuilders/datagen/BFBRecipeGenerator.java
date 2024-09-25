@@ -645,6 +645,20 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
                 .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_trapdoor"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.HAY_STAIRS, 4)
+                .pattern("  W")
+                .pattern(" WW")
+                .pattern("WWW")
+                .input('W', Blocks.HAY_BLOCK)
+                .criterion(hasItem(Blocks.HAY_BLOCK), conditionsFromItem(Blocks.HAY_BLOCK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "hay_stairs"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.HAY_SLAB, 6)
+                .pattern("WWW")
+                .input('W', Blocks.HAY_BLOCK)
+                .criterion(hasItem(Blocks.HAY_BLOCK), conditionsFromItem(Blocks.HAY_BLOCK))
+                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "hay_slab"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.JUNGLE_BOOKSHELF)
                 .pattern("WWW")
                 .pattern("BBB")

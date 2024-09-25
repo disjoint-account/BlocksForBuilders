@@ -55,7 +55,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES);
+                        BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES,
+                        BlocksForBuildersBlocks.HAY_STAIRS,
+                        BlocksForBuildersBlocks.HAY_SLAB);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS,
@@ -181,6 +183,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_SLAB,
                         BlocksForBuildersBlocks.WILLOW_SLAB,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB,
+                        BlocksForBuildersBlocks.HAY_SLAB,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
 
@@ -189,6 +192,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_STAIRS,
                         BlocksForBuildersBlocks.WILLOW_STAIRS,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS,
+                        BlocksForBuildersBlocks.HAY_STAIRS,
                         BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);

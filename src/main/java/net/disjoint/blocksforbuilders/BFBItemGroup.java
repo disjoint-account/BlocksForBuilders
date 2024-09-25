@@ -121,6 +121,8 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.WILLOW_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF);
+                        entries.add(BlocksForBuildersBlocks.HAY_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.HAY_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
                         entries.add(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
                         entries.add(BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS);

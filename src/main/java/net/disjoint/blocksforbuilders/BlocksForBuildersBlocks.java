@@ -160,9 +160,9 @@ public class BlocksForBuildersBlocks {
     public static final Block GREEN_BAMBOO_SLAB = registerBlock("green_bamboo_slab",
             new BFBSlab(GREEN_BAMBOO_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.BAMBOO_SLAB).mapColor(MapColor.DARK_GREEN)));
     public static final Block GREEN_BAMBOO_FENCE = registerBlock("green_bamboo_fence",
-            new BFBFence(GREEN_BAMBOO_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.BAMBOO_FENCE).mapColor(MapColor.DARK_GREEN)));
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.BAMBOO_FENCE).mapColor(MapColor.DARK_GREEN)));
     public static final Block GREEN_BAMBOO_FENCE_GATE = registerBlock("green_bamboo_fence_gate",
-            new BFBFenceGate(GREEN_BAMBOO_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.BAMBOO_FENCE_GATE).mapColor(MapColor.DARK_GREEN)));
+            new FenceGateBlock(WoodType.BAMBOO, AbstractBlock.Settings.copy(Blocks.BAMBOO_FENCE_GATE).mapColor(MapColor.DARK_GREEN)));
     public static final Block GREEN_BAMBOO_BUTTON = registerBlock("green_bamboo_button",
             new ButtonBlock(BlockSetType.BAMBOO, 15, copy(BAMBOO_BUTTON)));
     public static final Block GREEN_BAMBOO_PRESSURE_PLATE = registerBlock("green_bamboo_pressure_plate",
@@ -256,6 +256,10 @@ public class BlocksForBuildersBlocks {
             new BFBBookshelf(AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_GREEN)));
     public static final Block GREEN_BAMBOO_BOOKSHELF = registerBlock("green_bamboo_bookshelf",
             new BFBBookshelf(AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.DARK_GREEN)));
+    public static final Block HAY_STAIRS = registerBlock("hay_stairs",
+            new StairsBlock(HAY_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(HAY_BLOCK).mapColor(MapColor.YELLOW)));
+    public static final Block HAY_SLAB = registerBlock("hay_slab",
+            new BFBDirectionalSlab(AbstractBlock.Settings.copy(HAY_BLOCK).mapColor(MapColor.YELLOW)));
     public static final Block SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs",
             new BFBStairs(SMOOTH_STONE.getDefaultState(), AbstractBlock.Settings.copy(STONE_STAIRS).mapColor(MapColor.LIGHT_GRAY)));
     public static final Block BLACK_NETHER_BRICKS = registerBlock("black_nether_bricks",

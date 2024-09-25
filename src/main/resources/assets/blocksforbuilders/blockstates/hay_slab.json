@@ -1,0 +1,63 @@
+{
+  "variants": {
+    "facing=east,type=bottom": {
+      "model": "blocksforbuilders:block/hay_slab_east",
+      "uvlock": true
+    },
+    "facing=east,type=double": {
+      "model": "minecraft:block/hay_block_horizontal",
+      "x": 90,
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=east,type=top": {
+      "model": "blocksforbuilders:block/hay_slab_top_east",
+      "uvlock": true
+    },
+    "facing=north,type=bottom": {
+      "model": "blocksforbuilders:block/hay_slab",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,type=double": {
+      "model": "minecraft:block/hay_block_horizontal",
+      "x": 90,
+      "uvlock": false
+    },
+    "facing=north,type=top": {
+      "model": "blocksforbuilders:block/hay_slab_top",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,type=bottom": {
+      "model": "blocksforbuilders:block/hay_slab_south",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,type=double": {
+      "model": "minecraft:block/hay_block_horizontal",
+      "x": 90,
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=south,type=top": {
+      "model": "blocksforbuilders:block/hay_slab_top_south",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,type=bottom": {
+      "model": "blocksforbuilders:block/hay_slab_west",
+      "uvlock": true
+    },
+    "facing=west,type=double": {
+      "model": "minecraft:block/hay_block_horizontal",
+      "x": 90,
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=west,type=top": {
+      "model": "blocksforbuilders:block/hay_slab_top_west",
+      "uvlock": true
+    }
+  }
+}
