@@ -259,5 +259,7 @@
   "block.blocksforbuilders.quartz_brick_slab": "Quartz Brick Slab",
   "item.blocksforbuilders.smooth_quartz_wall": "Smooth Quartz Wall",
   "block.blocksforbuilders.smooth_quartz_wall": "Smooth Quartz Wall",
+  "advancements.blocksforbuilders.strip_the_willow.title": "Strip the Willow",
+  "advancements.blocksforbuilders.strip_the_willow.description": "Now swing for eight!",
   "itemgroup.blocksforbuilders": "Blocks For Builders"
 }
