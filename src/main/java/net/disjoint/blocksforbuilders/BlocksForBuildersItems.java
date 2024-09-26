@@ -3,7 +3,6 @@ package net.disjoint.blocksforbuilders;
 import net.disjoint.blocksforbuilders.boatstuff.item.BFBBoatItem;
 import net.disjoint.blocksforbuilders.boatstuff.registry.BoatTypes;
 import net.disjoint.blocksforbuilders.boatstuff.util.BFBBoatType;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
 import net.minecraft.registry.Registries;
@@ -15,30 +14,30 @@ import static net.disjoint.blocksforbuilders.BlocksForBuildersBlocks.*;
 import static net.disjoint.blocksforbuilders.boatstuff.item.BFBBoatItem.registerBoatDispenserBehavior;
 
 public class BlocksForBuildersItems {
-    public static final Item GREEN_JUNGLE_SIGN_ITEM = registerItem("green_jungle_sign_item",
+    public static final Item GREEN_JUNGLE_SIGN_ITEM = registerItem("green_jungle_sign",
             new SignItem(new Item.Settings().maxCount(16), GREEN_JUNGLE_SIGN, GREEN_JUNGLE_WALL_SIGN));
-    public static final Item GREEN_JUNGLE_HANGING_SIGN_ITEM = registerItem("green_jungle_hanging_sign_item",
+    public static final Item GREEN_JUNGLE_HANGING_SIGN_ITEM = registerItem("green_jungle_hanging_sign",
             new SignItem(new Item.Settings().maxCount(16), GREEN_JUNGLE_HANGING_SIGN, GREEN_JUNGLE_WALL_HANGING_SIGN));
     public static final Item GREEN_JUNGLE_BOAT = registerBoatItem("green_jungle_boat", BoatTypes.GREEN_JUNGLE, false, new Item.Settings().maxCount(1));
     public static final Item GREEN_JUNGLE_CHEST_BOAT = registerBoatItem("green_jungle_chest_boat", BoatTypes.GREEN_JUNGLE, true, new Item.Settings().maxCount(1));
 
-    public static final Item GHOSTWOOD_SIGN_ITEM = registerItem("ghostwood_sign_item",
+    public static final Item GHOSTWOOD_SIGN_ITEM = registerItem("ghostwood_sign",
             new SignItem(new Item.Settings().maxCount(16), GHOSTWOOD_SIGN, GHOSTWOOD_WALL_SIGN));
-    public static final Item GHOSTWOOD_HANGING_SIGN_ITEM = registerItem("ghostwood_hanging_sign_item",
+    public static final Item GHOSTWOOD_HANGING_SIGN_ITEM = registerItem("ghostwood_hanging_sign",
             new SignItem(new Item.Settings().maxCount(16), GHOSTWOOD_HANGING_SIGN, GHOSTWOOD_WALL_HANGING_SIGN));
     public static final Item GHOSTWOOD_BOAT = registerBoatItem("ghostwood_boat", BoatTypes.GHOSTWOOD, false, new Item.Settings().maxCount(1));
     public static final Item GHOSTWOOD_CHEST_BOAT = registerBoatItem("ghostwood_chest_boat", BoatTypes.GHOSTWOOD, true, new Item.Settings().maxCount(1));
 
-    public static final Item WILLOW_SIGN_ITEM = registerItem("willow_sign_item",
+    public static final Item WILLOW_SIGN_ITEM = registerItem("willow_sign",
             new SignItem(new Item.Settings().maxCount(16), WILLOW_SIGN, WILLOW_WALL_SIGN));
-    public static final Item WILLOW_HANGING_SIGN_ITEM = registerItem("willow_hanging_sign_item",
+    public static final Item WILLOW_HANGING_SIGN_ITEM = registerItem("willow_hanging_sign",
             new SignItem(new Item.Settings().maxCount(16), WILLOW_HANGING_SIGN, WILLOW_WALL_HANGING_SIGN));
     public static final Item WILLOW_BOAT = registerBoatItem("willow_boat", BoatTypes.WILLOW, false, new Item.Settings().maxCount(1));
     public static final Item WILLOW_CHEST_BOAT = registerBoatItem("willow_chest_boat", BoatTypes.WILLOW, true, new Item.Settings().maxCount(1));
 
-    public static final Item GREEN_BAMBOO_SIGN_ITEM = registerItem("green_bamboo_sign_item",
+    public static final Item GREEN_BAMBOO_SIGN_ITEM = registerItem("green_bamboo_sign",
             new SignItem(new Item.Settings().maxCount(16), GREEN_BAMBOO_SIGN, GREEN_BAMBOO_WALL_SIGN));
-    public static final Item GREEN_BAMBOO_HANGING_SIGN_ITEM = registerItem("green_bamboo_hanging_sign_item",
+    public static final Item GREEN_BAMBOO_HANGING_SIGN_ITEM = registerItem("green_bamboo_hanging_sign",
             new SignItem(new Item.Settings().maxCount(16), GREEN_BAMBOO_HANGING_SIGN, GREEN_BAMBOO_WALL_HANGING_SIGN));
     public static final Item GREEN_BAMBOO_RAFT = registerBoatItem("green_bamboo_raft", BoatTypes.GREEN_BAMBOO, false, new Item.Settings().maxCount(1));
     public static final Item GREEN_BAMBOO_CHEST_RAFT = registerBoatItem("green_bamboo_chest_raft", BoatTypes.GREEN_BAMBOO, true, new Item.Settings().maxCount(1));
