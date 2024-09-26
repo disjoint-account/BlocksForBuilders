@@ -1,17 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
+  "group": "bark",
   "key": {
-    "W": {
+    "#": {
       "item": "blocksforbuilders:stripped_green_jungle_log"
     }
   },
   "pattern": [
-    "WW",
-    "WW"
+    "##",
+    "##"
   ],
   "result": {
-    "count": 1,
+    "count": 3,
     "id": "blocksforbuilders:stripped_green_jungle_wood"
   }
 }

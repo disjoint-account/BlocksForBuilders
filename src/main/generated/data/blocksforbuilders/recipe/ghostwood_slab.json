@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
+  "group": "wooden_slab",
   "key": {
-    "W": {
+    "#": {
       "item": "blocksforbuilders:ghostwood_planks"
     }
   },
   "pattern": [
-    "WWW"
+    "###"
   ],
   "result": {
     "count": 6,

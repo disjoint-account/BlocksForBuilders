@@ -92,12 +92,12 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES);
                         entries.add(BlocksForBuildersBlocks.ORANGE_OAK_SAPLING);
-                        entries.add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
-                        entries.add(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES);
-                        entries.add(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
                         entries.add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES);
                         entries.add(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING);
+                        entries.add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
                         entries.add(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES);

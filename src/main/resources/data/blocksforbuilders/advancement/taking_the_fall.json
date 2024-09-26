@@ -1,0 +1,56 @@
+{
+  "parent": "blocksforbuilders:sweater_weather",
+  "criteria": {
+    "fall_fifty_blocks_in_forest": {
+      "conditions": {
+        "distance": {
+          "y": {
+            "min": 50.0
+          }
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "blocksforbuilders:autumnal_forest",
+                "position": {
+                  "y": {
+                    "max": 319.0
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "start_position": {
+          "position": {
+            "y": {
+              "min": -59.0
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:fall_from_height"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.blocksforbuilders.taking_the_fall.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "blocksforbuilders:red_oak_leaves"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.taking_the_fall.title"
+    }
+  },
+  "requirements": [
+    [
+      "fall_fifty_blocks_in_forest"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

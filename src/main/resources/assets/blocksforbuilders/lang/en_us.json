@@ -259,7 +259,15 @@
   "block.blocksforbuilders.quartz_brick_slab": "Quartz Brick Slab",
   "item.blocksforbuilders.smooth_quartz_wall": "Smooth Quartz Wall",
   "block.blocksforbuilders.smooth_quartz_wall": "Smooth Quartz Wall",
+  "advancements.blocksforbuilders.root.title": "Blocks for Builders",
+  "advancements.blocksforbuilders.root.description": "Enjoy the mod! :)",
   "advancements.blocksforbuilders.strip_the_willow.title": "Strip the Willow",
   "advancements.blocksforbuilders.strip_the_willow.description": "Strip a willow log or wood. Now swing for eight!",
+  "advancements.blocksforbuilders.where_had_they_been.title": "Where Were They Coming From?",
+  "advancements.blocksforbuilders.where_had_they_been.description": "Obtain a Ghostwood Sapling from a Shipwreck's treasure chest",
+  "advancements.blocksforbuilders.sweater_weather.title": "Sweater Weather",
+  "advancements.blocksforbuilders.sweater_weather.description": "Enter the Autumnal Forest biome",
+  "advancements.blocksforbuilders.taking_the_fall.title": "Taking the Fall",
+  "advancements.blocksforbuilders.taking_the_fall.description": "Fall 50 blocks or more in the Autumnal Forest biome",
   "itemgroup.blocksforbuilders": "Blocks For Builders"
 }

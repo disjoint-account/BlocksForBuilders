@@ -1,0 +1,39 @@
+{
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "in_autumnal_forest": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "blocksforbuilders:autumnal_forest"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.blocksforbuilders.sweater_weather.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "blocksforbuilders:orange_oak_leaves"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.sweater_weather.title"
+    }
+  },
+  "requirements": [
+    [
+      "in_autumnal_forest"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,17 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "nether_fence",
   "key": {
-    "B": {
+    "#": {
       "item": "blocksforbuilders:black_nether_bricks"
     },
-    "N": {
+    "X": {
       "item": "minecraft:nether_brick"
     }
   },
   "pattern": [
-    "BNB",
-    "BNB"
+    "#X#",
+    "#X#"
   ],
   "result": {
     "count": 3,

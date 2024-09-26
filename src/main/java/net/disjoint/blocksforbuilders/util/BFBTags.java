@@ -16,6 +16,10 @@ public class BFBTags {
 
     public static class Items {
         public static final TagKey<Item> BOOKSHELVES = createTag("bookshelves");
+        public static final TagKey<Item> GHOSTWOOD_LOGS = createTag("ghostwood_wood");
+        public static final TagKey<Item> GREEN_JUNGLE_LOGS = createTag("green_jungle_wood");
+        public static final TagKey<Item> WILLOW_LOGS = createTag("willow_wood");
+        public static final TagKey<Item> BFB_TAG = createTag("bfb_tag");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(BlocksForBuilders.MOD_ID, name));

@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "has_bfb_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#blocksforbuilders:bfb_tag"
+          }
+        ]
+      }
+    }
+  },
+    "display": {
+      "announce_to_chat": false,
+      "background": "blocksforbuilders:textures/block/willow_planks.png",
+      "description": {
+        "translate": "advancements.blocksforbuilders.root.description"
+      },
+      "icon": {
+        "count": 1,
+        "id": "blocksforbuilders:ghostwood_planks"
+      },
+      "show_toast": false,
+      "title": {
+        "translate": "advancements.blocksforbuilders.root.title"
+      }
+    },
+    "requirements": [
+      [
+        "has_bfb_item"
+      ]
+    ],
+    "sends_telemetry_event": true
+  }

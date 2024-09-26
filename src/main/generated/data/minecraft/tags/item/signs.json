@@ -1,8 +1,8 @@
 {
   "values": [
-    "blocksforbuilders:green_jungle_sign_item",
-    "blocksforbuilders:ghostwood_sign_item",
-    "blocksforbuilders:willow_sign_item",
-    "blocksforbuilders:green_bamboo_sign_item"
+    "blocksforbuilders:green_jungle_sign",
+    "blocksforbuilders:ghostwood_sign",
+    "blocksforbuilders:willow_sign",
+    "blocksforbuilders:green_bamboo_sign"
   ]
 }

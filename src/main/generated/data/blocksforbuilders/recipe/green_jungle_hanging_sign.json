@@ -1,21 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "hanging_sign",
   "key": {
-    "C": {
-      "item": "minecraft:chain"
-    },
-    "W": {
+    "#": {
       "item": "blocksforbuilders:stripped_green_jungle_log"
+    },
+    "X": {
+      "item": "minecraft:chain"
     }
   },
   "pattern": [
-    "C C",
-    "WWW",
-    "WWW"
+    "X X",
+    "###",
+    "###"
   ],
   "result": {
     "count": 6,
-    "id": "blocksforbuilders:green_jungle_hanging_sign_item"
+    "id": "blocksforbuilders:green_jungle_hanging_sign"
   }
 }

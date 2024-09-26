@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "fallen_leaves",
   "key": {
-    "L": {
+    "#": {
       "item": "blocksforbuilders:ghostwood_leaves"
     }
   },
   "pattern": [
-    "LL"
+    "##"
   ],
   "result": {
-    "count": 3,
+    "count": 2,
     "id": "blocksforbuilders:fallen_ghostwood_leaves"
   }
 }

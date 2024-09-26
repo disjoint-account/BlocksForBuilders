@@ -1,17 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "wooden_fence",
   "key": {
-    "S": {
-      "item": "minecraft:stick"
-    },
-    "W": {
+    "#": {
       "item": "blocksforbuilders:green_jungle_planks"
+    },
+    "X": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "WSW",
-    "WSW"
+    "#X#",
+    "#X#"
   ],
   "result": {
     "count": 3,

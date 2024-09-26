@@ -1,14 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "nether_brick_wall",
   "key": {
-    "B": {
+    "#": {
       "item": "blocksforbuilders:black_nether_bricks"
     }
   },
   "pattern": [
-    "BBB",
-    "BBB"
+    "###",
+    "###"
   ],
   "result": {
     "count": 6,

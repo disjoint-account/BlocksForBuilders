@@ -1,21 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "wooden_sign",
   "key": {
-    "S": {
-      "item": "minecraft:stick"
+    "#": {
+      "item": "blocksforbuilders:willow_sign"
     },
-    "W": {
-      "item": "blocksforbuilders:willow_planks"
+    "X": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "WWW",
-    "WWW",
-    " S "
+    "###",
+    "###",
+    " X "
   ],
   "result": {
     "count": 3,
-    "id": "blocksforbuilders:willow_sign_item"
+    "id": "blocksforbuilders:willow_sign"
   }
 }

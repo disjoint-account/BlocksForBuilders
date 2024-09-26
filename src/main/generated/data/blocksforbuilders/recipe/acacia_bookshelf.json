@@ -1,18 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
+  "group": "bookshelf",
   "key": {
-    "B": {
-      "item": "minecraft:book"
-    },
-    "W": {
+    "#": {
       "item": "minecraft:acacia_planks"
+    },
+    "X": {
+      "item": "minecraft:book"
     }
   },
   "pattern": [
-    "WWW",
-    "BBB",
-    "WWW"
+    "###",
+    "XXX",
+    "###"
   ],
   "result": {
     "count": 1,

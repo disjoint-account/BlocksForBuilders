@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
+  "group": "nether_brick_slab",
   "key": {
-    "B": {
+    "#": {
       "item": "blocksforbuilders:black_nether_bricks"
     }
   },
   "pattern": [
-    "BBB"
+    "###"
   ],
   "result": {
     "count": 6,

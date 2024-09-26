@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
+  "group": "wooden_pressure_plate",
   "key": {
-    "W": {
+    "#": {
       "item": "blocksforbuilders:willow_planks"
     }
   },
   "pattern": [
-    "WW"
+    "##"
   ],
   "result": {
     "count": 1,

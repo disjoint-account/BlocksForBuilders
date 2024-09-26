@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_green_jungle_planks": {
+    "has_green_jungle_sign": {
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:green_jungle_planks"
+            "items": "blocksforbuilders:green_jungle_sign"
           }
         ]
       },
@@ -31,7 +31,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_green_jungle_planks",
+      "has_green_jungle_sign",
       "has_stick"
     ]
   ],

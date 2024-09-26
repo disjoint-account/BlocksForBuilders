@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "blocksforbuilders:green_jungle_sign_item"
+          "name": "blocksforbuilders:green_jungle_sign"
         }
       ],
       "rolls": 1.0

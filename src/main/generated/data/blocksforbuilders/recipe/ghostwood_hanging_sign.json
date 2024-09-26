@@ -1,21 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "hanging_sign",
   "key": {
-    "C": {
-      "item": "minecraft:chain"
-    },
-    "W": {
+    "#": {
       "item": "blocksforbuilders:stripped_ghostwood_log"
+    },
+    "X": {
+      "item": "minecraft:chain"
     }
   },
   "pattern": [
-    "C C",
-    "WWW",
-    "WWW"
+    "X X",
+    "###",
+    "###"
   ],
   "result": {
     "count": 6,
-    "id": "blocksforbuilders:ghostwood_hanging_sign_item"
+    "id": "blocksforbuilders:ghostwood_hanging_sign"
   }
 }

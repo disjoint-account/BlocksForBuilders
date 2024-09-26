@@ -1,17 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
+  "group": "nether_fence_gate",
   "key": {
-    "B": {
-      "item": "minecraft:nether_brick"
-    },
-    "N": {
+    "#": {
       "item": "minecraft:nether_bricks"
+    },
+    "X": {
+      "item": "minecraft:nether_brick"
     }
   },
   "pattern": [
-    "BNB",
-    "BNB"
+    "X#X",
+    "X#X"
   ],
   "result": {
     "count": 1,

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "blocksforbuilders:willow_wood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "blocksforbuilders:willow_planks"
+  }
+}

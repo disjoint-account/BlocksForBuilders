@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "blocksforbuilders:ghostwood_hanging_sign_item"
+          "name": "blocksforbuilders:ghostwood_hanging_sign"
         }
       ],
       "rolls": 1.0

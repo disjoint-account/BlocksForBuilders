@@ -1,0 +1,33 @@
+{
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "has_ghostwood_sapling": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:ghostwood_sapling"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.blocksforbuilders.where_had_they_been.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "blocksforbuilders:ghostwood_sapling"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.where_had_they_been.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_ghostwood_sapling"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

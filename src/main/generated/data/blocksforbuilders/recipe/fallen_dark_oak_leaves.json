@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "fallen_leaves",
   "key": {
-    "L": {
+    "#": {
       "item": "minecraft:dark_oak_leaves"
     }
   },
   "pattern": [
-    "LL"
+    "##"
   ],
   "result": {
-    "count": 3,
+    "count": 2,
     "id": "blocksforbuilders:fallen_dark_oak_leaves"
   }
 }

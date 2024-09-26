@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
-    "B": {
+    "#": {
       "item": "minecraft:quartz_bricks"
     }
   },
   "pattern": [
-    "BBB"
+    "###"
   ],
   "result": {
     "count": 6,

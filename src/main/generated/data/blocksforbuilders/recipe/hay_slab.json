@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
-    "W": {
+    "#": {
       "item": "minecraft:hay_block"
     }
   },
   "pattern": [
-    "WWW"
+    "###"
   ],
   "result": {
     "count": 6,

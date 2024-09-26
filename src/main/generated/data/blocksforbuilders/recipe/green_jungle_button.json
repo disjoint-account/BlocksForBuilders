@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "category": "redstone",
+  "group": "wooden_button",
   "ingredients": [
     {
       "item": "blocksforbuilders:green_jungle_planks"

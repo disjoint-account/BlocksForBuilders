@@ -1,15 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
+  "group": "wooden_door",
   "key": {
-    "W": {
+    "#": {
       "item": "blocksforbuilders:ghostwood_planks"
     }
   },
   "pattern": [
-    "WW",
-    "WW",
-    "WW"
+    " ##",
+    " ##",
+    " ##"
   ],
   "result": {
     "count": 3,

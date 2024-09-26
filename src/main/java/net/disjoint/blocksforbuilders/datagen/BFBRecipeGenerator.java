@@ -1,25 +1,18 @@
 package net.disjoint.blocksforbuilders.datagen;
 
-import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.BlocksForBuildersItems;
 import net.disjoint.blocksforbuilders.util.BFBTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -64,870 +57,331 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL, Blocks.SMOOTH_QUARTZ, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE, 1);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.ACACIA_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', Blocks.ACACIA_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(Blocks.ACACIA_PLANKS), conditionsFromItem(Blocks.ACACIA_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "acacia_bookshelf"));
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.JUNGLE_BOOKSHELF, Blocks.JUNGLE_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.ACACIA_BOOKSHELF, Blocks.ACACIA_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.DARK_OAK_BOOKSHELF, Blocks.DARK_OAK_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.CRIMSON_BOOKSHELF, Blocks.CRIMSON_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.WARPED_BOOKSHELF, Blocks.WARPED_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.MANGROVE_BOOKSHELF, Blocks.MANGROVE_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.CHERRY_BOOKSHELF, Blocks.CHERRY_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.BAMBOO_BOOKSHELF, Blocks.BAMBOO_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.WILLOW_BOOKSHELF, BlocksForBuildersBlocks.WILLOW_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+        offerBookshelfRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.BAMBOO_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', Blocks.BAMBOO_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(Blocks.BAMBOO_PLANKS), conditionsFromItem(Blocks.BAMBOO_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "bamboo_bookshelf"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.BIRCH_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', Blocks.BIRCH_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(Blocks.BIRCH_PLANKS), conditionsFromItem(Blocks.BIRCH_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "birch_bookshelf"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE, 3)
-                .pattern("BNB")
-                .pattern("BNB")
-                .input('B', BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
-                .input('N', Items.NETHER_BRICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS), conditionsFromItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS))
-                .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "black_nether_brick_fence"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE_GATE)
-                .pattern("BNB")
-                .pattern("BNB")
-                .input('B', Items.NETHER_BRICK)
-                .input('N', BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS), conditionsFromItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS))
-                .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "black_nether_brick_fence_gate"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB, 6)
-                .pattern("BBB")
-                .input('B', BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS), conditionsFromItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "black_nether_brick_slab"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS, 4)
-                .pattern("  B")
-                .pattern(" BB")
-                .pattern("BBB")
-                .input('B', BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS), conditionsFromItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "black_nether_brick_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL, 6)
-                .pattern("BBB")
-                .pattern("BBB")
-                .input('B', BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS), conditionsFromItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "black_nether_brick_wall"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
+        offerNetherFenceRecipe(exporter, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
+        offerNetherFenceGateRecipe(exporter, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE_GATE, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
+        offerNetherSlabRecipe(exporter, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
+        offerNetherStairsRecipe(exporter, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
+        offerNetherWallRecipe(exporter, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
+                .group("nether_bricks")
                 .pattern("BW")
                 .pattern("WB")
                 .input('B', Items.NETHER_BRICK)
                 .input('W', Items.BLACK_DYE)
                 .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
                 .criterion(hasItem(Items.BLACK_DYE), conditionsFromItem(Items.BLACK_DYE))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "black_nether_bricks"));
+                .offerTo(exporter);
+        offerChiseledRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB);
+        offerChiseledRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CHISELED_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICK_SLAB);
+        offerNetherFenceRecipe(exporter, BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE, Blocks.RED_NETHER_BRICKS);
+        offerNetherFenceGateRecipe(exporter, BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE_GATE, Blocks.RED_NETHER_BRICKS);
+        offerNetherFenceGateRecipe(exporter, BlocksForBuildersBlocks.NETHER_BRICK_FENCE_GATE, Blocks.NETHER_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_WALL, Blocks.QUARTZ_BLOCK);
+        offerWallRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS);
+        offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL, Blocks.SMOOTH_QUARTZ);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS)
-                .pattern("B")
-                .pattern("B")
-                .input('B', BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB)
-                .criterion(hasItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB), conditionsFromItem(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "chiseled_black_nether_bricks"));
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, Blocks.OAK_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES, Blocks.BIRCH_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES, Blocks.SPRUCE_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES, Blocks.JUNGLE_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES, Blocks.ACACIA_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES, Blocks.DARK_OAK_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_AZALEA_LEAVES, Blocks.AZALEA_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES, Blocks.FLOWERING_AZALEA_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, Blocks.MANGROVE_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES, Blocks.CHERRY_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, BlocksForBuildersBlocks.GHOSTWOOD_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, BlocksForBuildersBlocks.WILLOW_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES, BlocksForBuildersBlocks.RED_OAK_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES, BlocksForBuildersBlocks.ORANGE_OAK_LEAVES);
+        offerFallenLeavesRecipe(exporter, BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_RED_NETHER_BRICKS)
-                .pattern("B")
-                .pattern("B")
-                .input('B', Blocks.RED_NETHER_BRICK_SLAB)
-                .criterion(hasItem(Blocks.RED_NETHER_BRICK_SLAB), conditionsFromItem(Blocks.RED_NETHER_BRICK_SLAB))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "chiseled_red_nether_bricks"));
+        offerBoatRecipe(exporter, BlocksForBuildersItems.GHOSTWOOD_BOAT, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+        offerButtonRecipe(exporter, BlocksForBuildersBlocks.GHOSTWOOD_BUTTON, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+        offerChestBoatRecipe(exporter, BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT, BlocksForBuildersItems.GHOSTWOOD_BOAT);
+        offerDoorRecipe(exporter, BlocksForBuildersBlocks.GHOSTWOOD_DOOR, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+        offerFenceRecipe(exporter, BlocksForBuildersBlocks.GHOSTWOOD_FENCE, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+        offerFenceGateRecipe(exporter, BlocksForBuildersBlocks.GHOSTWOOD_FENCE_GATE, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+        offerHangingSignRecipe(exporter, BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS, 4)
+                .group("planks")
+                .input(BFBTags.Items.GHOSTWOOD_LOGS)
+                .criterion("has_ghostwood_tag", conditionsFromTag(BFBTags.Items.GHOSTWOOD_LOGS))
+                .offerTo(exporter);
+        offerWoodenPressurePlateRecipe(exporter, BlocksForBuildersBlocks.GHOSTWOOD_PRESSURE_PLATE, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+        offerSignRecipe(exporter, BlocksForBuildersItems.GHOSTWOOD_SIGN_ITEM, BlocksForBuildersBlocks.GHOSTWOOD_SIGN);
+        offerWoodenSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GHOSTWOOD_SLAB, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+        offerWoodenStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GHOSTWOOD_STAIRS, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+        offerTrapdoorRecipe(exporter, BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+        offerWoodRecipe(exporter, BlocksForBuildersBlocks.GHOSTWOOD_WOOD, BlocksForBuildersBlocks.GHOSTWOOD_LOG);
+        offerWoodRecipe(exporter, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.CHERRY_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', Blocks.CHERRY_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(Blocks.CHERRY_PLANKS), conditionsFromItem(Blocks.CHERRY_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "cherry_bookshelf"));
+        offerBoatRecipe(exporter, BlocksForBuildersItems.WILLOW_BOAT, BlocksForBuildersBlocks.WILLOW_PLANKS);
+        offerButtonRecipe(exporter, BlocksForBuildersBlocks.WILLOW_BUTTON, BlocksForBuildersBlocks.WILLOW_PLANKS);
+        offerChestBoatRecipe(exporter, BlocksForBuildersItems.WILLOW_CHEST_BOAT, BlocksForBuildersItems.WILLOW_BOAT);
+        offerDoorRecipe(exporter, BlocksForBuildersBlocks.WILLOW_DOOR, BlocksForBuildersBlocks.WILLOW_PLANKS);
+        offerFenceRecipe(exporter, BlocksForBuildersBlocks.WILLOW_FENCE, BlocksForBuildersBlocks.WILLOW_PLANKS);
+        offerFenceGateRecipe(exporter, BlocksForBuildersBlocks.WILLOW_FENCE_GATE, BlocksForBuildersBlocks.WILLOW_PLANKS);
+        offerHangingSignRecipe(exporter, BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
+                .group("planks")
+                .input(BFBTags.Items.WILLOW_LOGS)
+                .criterion("has_willow_tag", conditionsFromTag(BFBTags.Items.WILLOW_LOGS))
+                .offerTo(exporter);
+        offerWoodenPressurePlateRecipe(exporter, BlocksForBuildersBlocks.WILLOW_PRESSURE_PLATE, BlocksForBuildersBlocks.WILLOW_PLANKS);
+        offerSignRecipe(exporter, BlocksForBuildersItems.WILLOW_SIGN_ITEM, BlocksForBuildersBlocks.WILLOW_SIGN);
+        offerWoodenSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.WILLOW_SLAB, BlocksForBuildersBlocks.WILLOW_PLANKS);
+        offerWoodenStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.WILLOW_STAIRS, BlocksForBuildersBlocks.WILLOW_PLANKS);
+        offerTrapdoorRecipe(exporter, BlocksForBuildersBlocks.WILLOW_TRAPDOOR, BlocksForBuildersBlocks.WILLOW_PLANKS);
+        offerWoodRecipe(exporter, BlocksForBuildersBlocks.WILLOW_WOOD, BlocksForBuildersBlocks.WILLOW_LOG);
+        offerWoodRecipe(exporter, BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD, BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.CRIMSON_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', Blocks.CRIMSON_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(Blocks.CRIMSON_PLANKS), conditionsFromItem(Blocks.CRIMSON_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "crimson_bookshelf"));
+        offerBoatRecipe(exporter, BlocksForBuildersItems.GREEN_JUNGLE_BOAT, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+        offerButtonRecipe(exporter, BlocksForBuildersBlocks.GREEN_JUNGLE_BUTTON, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+        offerChestBoatRecipe(exporter, BlocksForBuildersItems.GREEN_JUNGLE_CHEST_BOAT, BlocksForBuildersItems.GREEN_JUNGLE_BOAT);
+        offerDoorRecipe(exporter, BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+        offerFenceRecipe(exporter, BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+        offerFenceGateRecipe(exporter, BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE_GATE, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+        offerHangingSignRecipe(exporter, BlocksForBuildersItems.GREEN_JUNGLE_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS, 4)
+                .group("planks")
+                .input(BFBTags.Items.GREEN_JUNGLE_LOGS)
+                .criterion("has_green_jungle_tag", conditionsFromTag(BFBTags.Items.GREEN_JUNGLE_LOGS))
+                .offerTo(exporter);
+        offerWoodenPressurePlateRecipe(exporter, BlocksForBuildersBlocks.GREEN_JUNGLE_PRESSURE_PLATE, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+        offerSignRecipe(exporter, BlocksForBuildersItems.GREEN_JUNGLE_SIGN_ITEM, BlocksForBuildersBlocks.GREEN_JUNGLE_SIGN);
+        offerWoodenSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+        offerWoodenStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+        offerTrapdoorRecipe(exporter, BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+        offerWoodRecipe(exporter, BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD, BlocksForBuildersBlocks.GREEN_JUNGLE_LOG);
+        offerWoodRecipe(exporter, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.DARK_OAK_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', Blocks.DARK_OAK_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(Blocks.DARK_OAK_PLANKS), conditionsFromItem(Blocks.DARK_OAK_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "dark_oak_bookshelf"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES, 3)
-                .pattern("LL")
-                .input('L', Blocks.ACACIA_LEAVES)
-                .criterion(hasItem(Blocks.ACACIA_LEAVES), conditionsFromItem(Blocks.ACACIA_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_acacia_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_AZALEA_LEAVES, 3)
-                .pattern("LL")
-                .input('L', Blocks.AZALEA_LEAVES)
-                .criterion(hasItem(Blocks.AZALEA_LEAVES), conditionsFromItem(Blocks.AZALEA_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_azalea_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES, 3)
-                .pattern("LL")
-                .input('L', Blocks.BIRCH_LEAVES)
-                .criterion(hasItem(Blocks.BIRCH_LEAVES), conditionsFromItem(Blocks.BIRCH_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_birch_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES, 3)
-                .pattern("LL")
-                .input('L', Blocks.CHERRY_LEAVES)
-                .criterion(hasItem(Blocks.CHERRY_LEAVES), conditionsFromItem(Blocks.CHERRY_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_cherry_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES, 3)
-                .pattern("LL")
-                .input('L', Blocks.DARK_OAK_LEAVES)
-                .criterion(hasItem(Blocks.DARK_OAK_LEAVES), conditionsFromItem(Blocks.DARK_OAK_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_dark_oak_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES, 3)
-                .pattern("LL")
-                .input('L', Blocks.FLOWERING_AZALEA_LEAVES)
-                .criterion(hasItem(Blocks.FLOWERING_AZALEA_LEAVES), conditionsFromItem(Blocks.FLOWERING_AZALEA_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_flowering_azalea_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, 3)
-                .pattern("LL")
-                .input('L', BlocksForBuildersBlocks.GHOSTWOOD_LEAVES)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_ghostwood_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, 3)
-                .pattern("LL")
-                .input('L', BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES)
-                .criterion(hasItem(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES), conditionsFromItem(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_gold_acacia_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, 3)
-                .pattern("LL")
-                .input('L', BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_green_jungle_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES, 3)
-                .pattern("LL")
-                .input('L', Blocks.JUNGLE_LEAVES)
-                .criterion(hasItem(Blocks.JUNGLE_LEAVES), conditionsFromItem(Blocks.JUNGLE_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_jungle_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, 3)
-                .pattern("LL")
-                .input('L', Blocks.MANGROVE_LEAVES)
-                .criterion(hasItem(Blocks.MANGROVE_LEAVES), conditionsFromItem(Blocks.MANGROVE_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_mangrove_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, 3)
-                .pattern("LL")
-                .input('L', Blocks.OAK_LEAVES)
-                .criterion(hasItem(Blocks.OAK_LEAVES), conditionsFromItem(Blocks.OAK_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_oak_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES, 3)
-                .pattern("LL")
-                .input('L', BlocksForBuildersBlocks.ORANGE_OAK_LEAVES)
-                .criterion(hasItem(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES), conditionsFromItem(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_orange_oak_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES, 3)
-                .pattern("LL")
-                .input('L', BlocksForBuildersBlocks.RED_OAK_LEAVES)
-                .criterion(hasItem(BlocksForBuildersBlocks.RED_OAK_LEAVES), conditionsFromItem(BlocksForBuildersBlocks.RED_OAK_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_red_oak_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES, 3)
-                .pattern("LL")
-                .input('L', Blocks.SPRUCE_LEAVES)
-                .criterion(hasItem(Blocks.SPRUCE_LEAVES), conditionsFromItem(Blocks.SPRUCE_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_spruce_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, 3)
-                .pattern("LL")
-                .input('L', BlocksForBuildersBlocks.WILLOW_LEAVES)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_LEAVES), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_willow_leaves"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GHOSTWOOD_BOAT)
-                .pattern("P P")
-                .pattern("PPP")
-                .input('P', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_boat"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_bookshelf"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_BUTTON)
-                .input(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_button"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT)
-                .pattern("C")
-                .pattern("B")
-                .input('C', Blocks.CHEST)
-                .input('B', BlocksForBuildersItems.GHOSTWOOD_BOAT)
-                .criterion(hasItem(Blocks.CHEST), conditionsFromItem(Blocks.CHEST))
-                .criterion(hasItem(BlocksForBuildersItems.GHOSTWOOD_BOAT), conditionsFromItem(BlocksForBuildersItems.GHOSTWOOD_BOAT))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_chest_boat"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_DOOR, 3)
+        offerBoatRecipe(exporter, BlocksForBuildersItems.GREEN_BAMBOO_RAFT, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        offerButtonRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        offerChestBoatRecipe(exporter, BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT, BlocksForBuildersItems.GREEN_BAMBOO_RAFT);
+        offerDoorRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        offerFenceRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        offerFenceGateRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        offerHangingSignRecipe(exporter, BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, 4)
+                .group("planks")
                 .pattern("WW")
                 .pattern("WW")
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_door"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_FENCE, 3)
-                .pattern("WSW")
-                .pattern("WSW")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_fence"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_FENCE_GATE)
-                .pattern("SWS")
-                .pattern("SWS")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_fence_gate"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM, 6)
-                .pattern("C C")
-                .pattern("WWW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG)
-                .input('C', Blocks.CHAIN)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG))
-                .criterion(hasItem(Blocks.CHAIN), conditionsFromItem(Blocks.CHAIN))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_hanging_sign"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.GHOSTWOOD_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_LOG), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_planks_1"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_planks_2"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.GHOSTWOOD_WOOD)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_WOOD), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_WOOD))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_planks_3"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_planks_4"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_PRESSURE_PLATE)
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_pressure_plate"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GHOSTWOOD_SIGN_ITEM, 3)
-                .pattern("WWW")
-                .pattern("WWW")
-                .pattern(" S ")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_sign"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_SLAB, 6)
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_slab"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_STAIRS, 4)
-                .pattern("  W")
-                .pattern(" WW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR, 2)
-                .pattern("WWW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GHOSTWOOD_WOOD, 3)
-                .pattern("WW")
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.GHOSTWOOD_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.GHOSTWOOD_LOG), conditionsFromItem(BlocksForBuildersBlocks.GHOSTWOOD_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_wood"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_JUNGLE_BOAT)
-                .pattern("P P")
-                .pattern("PPP")
-                .input('P', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_boat"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_bookshelf"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_BUTTON)
-                .input(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_button"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_JUNGLE_CHEST_BOAT)
-                .pattern("C")
-                .pattern("B")
-                .input('C', Blocks.CHEST)
-                .input('B', BlocksForBuildersItems.GREEN_JUNGLE_BOAT)
-                .criterion(hasItem(Blocks.CHEST), conditionsFromItem(Blocks.CHEST))
-                .criterion(hasItem(BlocksForBuildersItems.GREEN_JUNGLE_BOAT), conditionsFromItem(BlocksForBuildersItems.GREEN_JUNGLE_BOAT))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_chest_boat"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR, 3)
-                .pattern("WW")
-                .pattern("WW")
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_door"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE, 3)
-                .pattern("WSW")
-                .pattern("WSW")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_fence"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE_GATE)
-                .pattern("SWS")
-                .pattern("SWS")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_fence_gate"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_JUNGLE_HANGING_SIGN_ITEM, 6)
-                .pattern("C C")
-                .pattern("WWW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG)
-                .input('C', Blocks.CHAIN)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG))
-                .criterion(hasItem(Blocks.CHAIN), conditionsFromItem(Blocks.CHAIN))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_hanging_sign"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_planks_1"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_planks_2"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_planks_3"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_planks_4"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_PRESSURE_PLATE)
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_pressure_plate"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_JUNGLE_SIGN_ITEM, 3)
-                .pattern("WWW")
-                .pattern("WWW")
-                .pattern(" S ")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_sign"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB, 6)
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_slab"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS, 4)
-                .pattern("  W")
-                .pattern(" WW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR, 2)
-                .pattern("WWW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD, 3)
-                .pattern("WW")
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.GREEN_JUNGLE_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG), conditionsFromItem(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_wood"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_BAMBOO_RAFT)
-                .pattern("P P")
-                .pattern("PPP")
-                .input('P', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_boat"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_bookshelf"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON)
-                .input(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_button"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT)
-                .pattern("C")
-                .pattern("B")
-                .input('C', Blocks.CHEST)
-                .input('B', BlocksForBuildersItems.GREEN_BAMBOO_RAFT)
-                .criterion(hasItem(Blocks.CHEST), conditionsFromItem(Blocks.CHEST))
-                .criterion(hasItem(BlocksForBuildersItems.GREEN_BAMBOO_RAFT), conditionsFromItem(BlocksForBuildersItems.GREEN_BAMBOO_RAFT))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_chest_boat"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR, 3)
-                .pattern("WW")
-                .pattern("WW")
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_door"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE, 3)
-                .pattern("WSW")
-                .pattern("WSW")
-                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_fence"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE)
-                .pattern("SWS")
-                .pattern("SWS")
-                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_fence_gate"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM)
-                .pattern("S S")
-                .pattern("WWW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .input('S', Items.CHAIN)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .criterion(hasItem(Items.CHAIN), conditionsFromItem(Items.CHAIN))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_hanging_sign"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, 4)
-                .pattern("SS")
-                .pattern("SS")
-                .input('S', Blocks.BAMBOO_BLOCK)
+                .input('W', Blocks.BAMBOO_BLOCK)
                 .criterion(hasItem(Blocks.BAMBOO_BLOCK), conditionsFromItem(Blocks.BAMBOO_BLOCK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_planks"));
+                .offerTo(exporter);
+        offerWoodenPressurePlateRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        offerSignRecipe(exporter, BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM, BlocksForBuildersBlocks.GREEN_BAMBOO_SIGN);
+        offerWoodenSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        offerWoodenStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        offerTrapdoorRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE)
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_pressure_plate"));
+        offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM, 3)
-                .pattern("WWW")
-                .pattern("WWW")
-                .pattern(" S ")
-                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
+        offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.HAY_STAIRS, Blocks.HAY_BLOCK);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.HAY_SLAB, Blocks.HAY_BLOCK);
+    }
+
+    public static void offerSignRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output, 3)
+                .group("wooden_sign")
+                .input('#', input)
+                .input('X', Items.STICK)
+                .pattern("###")
+                .pattern("###")
+                .pattern(" X ")
+                .criterion(hasItem(input), conditionsFromItem(input))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_sign"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB, 6)
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_slab"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS, 4)
-                .pattern("  W")
-                .pattern(" WW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR, 2)
-                .pattern("WWW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.HAY_STAIRS, 4)
-                .pattern("  W")
-                .pattern(" WW")
-                .pattern("WWW")
-                .input('W', Blocks.HAY_BLOCK)
-                .criterion(hasItem(Blocks.HAY_BLOCK), conditionsFromItem(Blocks.HAY_BLOCK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "hay_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.HAY_SLAB, 6)
-                .pattern("WWW")
-                .input('W', Blocks.HAY_BLOCK)
-                .criterion(hasItem(Blocks.HAY_BLOCK), conditionsFromItem(Blocks.HAY_BLOCK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "hay_slab"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.JUNGLE_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', Blocks.JUNGLE_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(Blocks.JUNGLE_PLANKS), conditionsFromItem(Blocks.JUNGLE_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "jungle_bookshelf"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.LECTERN)
-                .pattern("SSS")
-                .pattern(" B ")
-                .pattern(" S ")
-                .input('S', ItemTags.WOODEN_SLABS)
-                .input('B', BFBTags.Items.BOOKSHELVES)
-                .criterion("has_my_tag", conditionsFromTag(ItemTags.WOODEN_SLABS))
-                .criterion("has_my_tag", conditionsFromTag(BFBTags.Items.BOOKSHELVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "lectern"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.MANGROVE_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', Blocks.MANGROVE_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(Blocks.MANGROVE_PLANKS), conditionsFromItem(Blocks.MANGROVE_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "mangrove_bookshelf"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.NETHER_BRICK_FENCE_GATE)
-                .pattern("BNB")
-                .pattern("BNB")
-                .input('N', Blocks.NETHER_BRICKS)
-                .input('B', Items.NETHER_BRICK)
-                .criterion(hasItem(Blocks.NETHER_BRICKS), conditionsFromItem(Blocks.NETHER_BRICKS))
+                .offerTo(exporter);
+    }
+    public static void offerFenceRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output, 3)
+                .group("wooden_fence")
+                .input('#', input)
+                .input('X', Items.STICK)
+                .pattern("#X#")
+                .pattern("#X#")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter);
+    }
+    public static void offerFenceGateRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
+                .group("wooden_fence_gate")
+                .input('#', input)
+                .input('X', Items.STICK)
+                .pattern("X#X")
+                .pattern("X#X")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter);
+    }
+    public static void offerNetherFenceGateRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
+                .group("nether_fence_gate")
+                .input('#', input)
+                .input('X', Items.NETHER_BRICK)
+                .pattern("X#X")
+                .pattern("X#X")
+                .criterion(hasItem(input), conditionsFromItem(input))
                 .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "nether_brick_fence_gate"));
+                .offerTo(exporter);
+    }
+    public static void offerNetherFenceRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output, 3)
+                .group("nether_fence")
+                .input('#', input)
+                .input('X', Items.NETHER_BRICK)
+                .pattern("#X#")
+                .pattern("#X#")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
+                .offerTo(exporter);
+    }
+    public static void offerNetherSlabRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 6)
+                .group("nether_brick_slab")
+                .input('#', input)
+                .pattern("###")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerNetherStairsRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 4)
+                .group("nether_brick_stairs")
+                .input('#', input)
+                .pattern("  #")
+                .pattern(" ##")
+                .pattern("###")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerNetherWallRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output, 6)
+                .group("nether_brick_wall")
+                .input('#', input)
+                .pattern("###")
+                .pattern("###")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerStairsRecipe(RecipeExporter exporter, RecipeCategory Category, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(Category, output, 4)
+                .input('#', input)
+                .pattern("  #")
+                .pattern(" ##")
+                .pattern("###")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerWoodenStairsRecipe(RecipeExporter exporter, RecipeCategory Category, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(Category, output, 4)
+                .group("wooden_stairs")
+                .input('#', input)
+                .pattern("  #")
+                .pattern(" ##")
+                .pattern("###")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerWoodenSlabRecipe(RecipeExporter exporter, RecipeCategory Category, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(Category, output, 6)
+                .group("wooden_slab")
+                .input('#', input)
+                .pattern("###")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerDoorRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 3)
+                .group("wooden_door")
+                .input('#', input)
+                .pattern(" ##")
+                .pattern(" ##")
+                .pattern(" ##")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerTrapdoorRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 2)
+                .group("wooden_trapdoor")
+                .input('#', input)
+                .pattern("###")
+                .pattern("###")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerWoodenPressurePlateRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
+                .group("wooden_pressure_plate")
+                .input('#', input)
+                .pattern("##")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerButtonRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
+                .input(input)
+                .group("wooden_button")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_WALL, 6)
-                .pattern("BBB")
-                .pattern("BBB")
-                .input('B', Blocks.QUARTZ_BRICKS)
-                .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "quartz_brick_wall"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS, 4)
-                .pattern("  B")
-                .pattern(" BB")
-                .pattern("BBB")
-                .input('B', Blocks.QUARTZ_BRICKS)
-                .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "quartz_brick_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB, 6)
-                .pattern("BBB")
-                .input('B', Blocks.QUARTZ_BRICKS)
-                .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "quartz_brick_slab"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_WALL, 6)
-                .pattern("BBB")
-                .pattern("BBB")
-                .input('B', Blocks.QUARTZ_BLOCK)
-                .criterion(hasItem(Blocks.QUARTZ_BLOCK), conditionsFromItem(Blocks.QUARTZ_BLOCK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "quartz_wall"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, 4)
-                .pattern("  S")
-                .pattern(" SS")
-                .pattern("SSS")
-                .input('S', Blocks.SMOOTH_STONE)
-                .criterion(hasItem(Blocks.SMOOTH_STONE), conditionsFromItem(Blocks.SMOOTH_STONE))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "smooth_stone_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL, 6)
-                .pattern("BBB")
-                .pattern("BBB")
-                .input('B', Blocks.SMOOTH_QUARTZ)
-                .criterion(hasItem(Blocks.SMOOTH_QUARTZ), conditionsFromItem(Blocks.SMOOTH_QUARTZ))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "smooth_quartz_wall"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.SPRUCE_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', Blocks.SPRUCE_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(Blocks.SPRUCE_PLANKS), conditionsFromItem(Blocks.SPRUCE_PLANKS))
+    public static void offerWoodRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 3)
+                .group("bark")
+                .input('#', input)
+                .pattern("##")
+                .pattern("##")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerChiseledRecipe(RecipeExporter exporter, RecipeCategory Category, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(Category, output, 1)
+                .group("chiseled_nether_bricks")
+                .input('#', input)
+                .pattern("#")
+                .pattern("#")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerBookshelfRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1)
+                .group("bookshelf")
+                .input('#', input)
+                .input('X', Items.BOOK)
+                .pattern("###")
+                .pattern("XXX")
+                .pattern("###")
+                .criterion(hasItem(input), conditionsFromItem(input))
                 .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "spruce_bookshelf"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD)
-                .pattern("WW")
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "stripped_ghostwood_wood"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD)
-                .pattern("WW")
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "stripped_green_jungle_wood"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD)
-                .pattern("WW")
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "stripped_willow_wood"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WARPED_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', Blocks.WARPED_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(Blocks.WARPED_PLANKS), conditionsFromItem(Blocks.WARPED_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "warped_bookshelf"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.WILLOW_BOAT)
-                .pattern("P P")
-                .pattern("PPP")
-                .input('P', BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_boat"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_BOOKSHELF)
-                .pattern("WWW")
-                .pattern("BBB")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .input('B', Items.BOOK)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_bookshelf"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_BUTTON)
-                .input(BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_button"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.WILLOW_CHEST_BOAT)
-                .pattern("C")
-                .pattern("B")
-                .input('C', Blocks.CHEST)
-                .input('B', BlocksForBuildersItems.WILLOW_BOAT)
-                .criterion(hasItem(Blocks.CHEST), conditionsFromItem(Blocks.CHEST))
-                .criterion(hasItem(BlocksForBuildersItems.WILLOW_BOAT), conditionsFromItem(BlocksForBuildersItems.WILLOW_BOAT))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_chest_boat"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_DOOR, 3)
-                .pattern("WW")
-                .pattern("WW")
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_door"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_FENCE, 3)
-                .pattern("WSW")
-                .pattern("WSW")
-                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_fence"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_FENCE_GATE)
-                .pattern("SWS")
-                .pattern("SWS")
-                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_fence_gate"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM, 6)
-                .pattern("C C")
-                .pattern("WWW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG)
-                .input('C', Blocks.CHAIN)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG))
-                .criterion(hasItem(Blocks.CHAIN), conditionsFromItem(Blocks.CHAIN))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_hanging_sign"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.WILLOW_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_planks_1"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_planks_2"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.WILLOW_WOOD)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_WOOD), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_WOOD))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_planks_3"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
-                .input(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD)
-                .criterion(hasItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD), conditionsFromItem(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_planks_4"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_PRESSURE_PLATE)
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_pressure_plate"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersItems.WILLOW_SIGN_ITEM, 3)
-                .pattern("WWW")
-                .pattern("WWW")
-                .pattern(" S ")
-                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .input('S', Items.STICK)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_sign"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_SLAB, 6)
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_slab"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_STAIRS, 4)
-                .pattern("  W")
-                .pattern(" WW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_stairs"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_TRAPDOOR, 2)
-                .pattern("WWW")
-                .pattern("WWW")
-                .input('W', BlocksForBuildersBlocks.WILLOW_PLANKS)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_PLANKS), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_PLANKS))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_trapdoor"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.WILLOW_WOOD, 3)
-                .pattern("WW")
-                .pattern("WW")
-                .input('W', BlocksForBuildersBlocks.WILLOW_LOG)
-                .criterion(hasItem(BlocksForBuildersBlocks.WILLOW_LOG), conditionsFromItem(BlocksForBuildersBlocks.WILLOW_LOG))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "willow_wood"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, 3)
-                .pattern("LL")
-                .input('L', BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES)
-                .criterion(hasItem(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES), conditionsFromItem(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES))
-                .offerTo(exporter, Identifier.of(BlocksForBuilders.MOD_ID, "fallen_yellow_birch_leaves"));
-
+                .offerTo(exporter);
+    }
+    public static void offerFallenLeavesRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 2)
+                .group("fallen_leaves")
+                .input('#', input)
+                .pattern("##")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
     }
 }

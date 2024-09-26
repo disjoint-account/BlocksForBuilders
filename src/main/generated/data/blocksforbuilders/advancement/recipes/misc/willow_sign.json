@@ -17,11 +17,11 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_willow_planks": {
+    "has_willow_sign": {
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:willow_planks"
+            "items": "blocksforbuilders:willow_sign"
           }
         ]
       },
@@ -31,7 +31,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_willow_planks",
+      "has_willow_sign",
       "has_stick"
     ]
   ],

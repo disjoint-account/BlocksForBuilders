@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_green_bamboo_planks": {
+    "has_green_bamboo_sign": {
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:green_bamboo_planks"
+            "items": "blocksforbuilders:green_bamboo_sign"
           }
         ]
       },
@@ -31,7 +31,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_green_bamboo_planks",
+      "has_green_bamboo_sign",
       "has_stick"
     ]
   ],

@@ -1,17 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "B": {
-      "item": "blocksforbuilders:willow_boat"
-    },
-    "C": {
+  "group": "chest_boat",
+  "ingredients": [
+    {
       "item": "minecraft:chest"
+    },
+    {
+      "item": "blocksforbuilders:willow_boat"
     }
-  },
-  "pattern": [
-    "C",
-    "B"
   ],
   "result": {
     "count": 1,

@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "fallen_leaves",
   "key": {
-    "L": {
+    "#": {
       "item": "blocksforbuilders:gold_acacia_leaves"
     }
   },
   "pattern": [
-    "LL"
+    "##"
   ],
   "result": {
-    "count": 3,
+    "count": 2,
     "id": "blocksforbuilders:fallen_gold_acacia_leaves"
   }
 }

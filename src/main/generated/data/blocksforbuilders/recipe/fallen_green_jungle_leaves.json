@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "fallen_leaves",
   "key": {
-    "L": {
+    "#": {
       "item": "blocksforbuilders:green_jungle_leaves"
     }
   },
   "pattern": [
-    "LL"
+    "##"
   ],
   "result": {
-    "count": 3,
+    "count": 2,
     "id": "blocksforbuilders:fallen_green_jungle_leaves"
   }
 }

@@ -1,17 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
+  "group": "wooden_fence_gate",
   "key": {
-    "S": {
-      "item": "minecraft:stick"
-    },
-    "W": {
+    "#": {
       "item": "blocksforbuilders:green_jungle_planks"
+    },
+    "X": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "SWS",
-    "SWS"
+    "X#X",
+    "X#X"
   ],
   "result": {
     "count": 1,
