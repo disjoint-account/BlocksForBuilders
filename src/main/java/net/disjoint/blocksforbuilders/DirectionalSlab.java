@@ -11,9 +11,9 @@ import net.minecraft.util.math.Direction;
 
 import static net.minecraft.state.property.Properties.FACING;
 
-public class BFBDirectionalSlab extends SlabBlock {
+public class DirectionalSlab extends SlabBlock {
 
-    public BFBDirectionalSlab(Settings settings) {
+    public DirectionalSlab(Settings settings) {
         super(settings);
         setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, Boolean.valueOf(false)));
     }
