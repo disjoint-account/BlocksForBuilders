@@ -31,7 +31,7 @@ public class BlocksForBuildersBlocks {
             new FallenLeavesBlock(AbstractBlock.Settings.copy(GREEN_JUNGLE_LEAVES).mapColor(MapColor.LIME).nonOpaque()));
     public static final Block GREEN_JUNGLE_SAPLING = registerBlock("green_jungle_sapling",
             new SaplingBlock(GreenJungleSaplingGenerator.GREEN_JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_SAPLING)));
-    public static final Block POTTED_GREEN_JUNGLE_SAPLING = registerBlock("potted_green_jungle_sapling",
+    public static final Block POTTED_GREEN_JUNGLE_SAPLING = registerBlock("potted_green_jungle_sapling", false,
             new FlowerPotBlock(GREEN_JUNGLE_SAPLING, AbstractBlock.Settings.copy(POTTED_OAK_SAPLING)));
     public static final Block GREEN_JUNGLE_PLANKS = registerBlock("green_jungle_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).mapColor(MapColor.DARK_GREEN)));
@@ -52,15 +52,15 @@ public class BlocksForBuildersBlocks {
     public static final Block GREEN_JUNGLE_TRAPDOOR = registerBlock("green_jungle_trapdoor",
             new TrapdoorBlock(BlockSetType.JUNGLE, AbstractBlock.Settings.copy(JUNGLE_TRAPDOOR).mapColor(MapColor.DARK_GREEN)));
     private static final Identifier GREEN_JUNGLE_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/green_jungle");
-    public static final Block GREEN_JUNGLE_SIGN = registerBlock("green_jungle_sign",
-            new BFBSignBlock(GREEN_JUNGLE_SIGN_TEXTURE, WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
-    public static final Block GREEN_JUNGLE_WALL_SIGN = registerBlock("green_jungle_wall_sign",
-            new BFBWallSignBlock(GREEN_JUNGLE_SIGN_TEXTURE, WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
+    public static final Block GREEN_JUNGLE_SIGN = registerBlock("green_jungle_sign", false,
+            new BFBSignBlock(GREEN_JUNGLE_SIGN_TEXTURE, WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_SIGN)));
+    public static final Block GREEN_JUNGLE_WALL_SIGN = registerBlock("green_jungle_wall_sign", false,
+            new BFBWallSignBlock(GREEN_JUNGLE_SIGN_TEXTURE, WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.JUNGLE_SIGN)));
     private static final Identifier GREEN_JUNGLE_HANGING_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/hanging/green_jungle");
     private static final Identifier GREEN_JUNGLE_HANGING_SIGN_GUI_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "textures/gui/hanging_signs/green_jungle");
-    public static final Block GREEN_JUNGLE_HANGING_SIGN = registerBlock("green_jungle_hanging_sign",
+    public static final Block GREEN_JUNGLE_HANGING_SIGN = registerBlock("green_jungle_hanging_sign", false,
             new BFBHangingSignBlock(GREEN_JUNGLE_HANGING_SIGN_TEXTURE, GREEN_JUNGLE_HANGING_SIGN_GUI_TEXTURE, AbstractBlock.Settings.copy(OAK_HANGING_SIGN)));
-    public static final Block GREEN_JUNGLE_WALL_HANGING_SIGN = registerBlock("green_jungle_wall_hanging_sign",
+    public static final Block GREEN_JUNGLE_WALL_HANGING_SIGN = registerBlock("green_jungle_wall_hanging_sign", false,
             new BFBWallHangingSignBlock(GREEN_JUNGLE_HANGING_SIGN_TEXTURE, GREEN_JUNGLE_HANGING_SIGN_GUI_TEXTURE, WoodType.JUNGLE, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
    
     public static final Block GHOSTWOOD_LOG = registerBlock("ghostwood_log",
@@ -77,7 +77,7 @@ public class BlocksForBuildersBlocks {
             new FallenLeavesBlock(AbstractBlock.Settings.copy(GHOSTWOOD_LEAVES).mapColor(MapColor.DULL_PINK).nonOpaque()));
     public static final Block GHOSTWOOD_SAPLING = registerBlock("ghostwood_sapling",
             new SaplingBlock(GhostwoodSaplingGenerator.GHOSTWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
-    public static final Block POTTED_GHOSTWOOD_SAPLING = registerBlock("potted_ghostwood_sapling",
+    public static final Block POTTED_GHOSTWOOD_SAPLING = registerBlock("potted_ghostwood_sapling", false,
             new FlowerPotBlock(GHOSTWOOD_SAPLING, AbstractBlock.Settings.copy(POTTED_OAK_SAPLING)));
     public static final Block GHOSTWOOD_PLANKS = registerBlock("ghostwood_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.WHITE_GRAY)));
@@ -98,15 +98,15 @@ public class BlocksForBuildersBlocks {
     public static final Block GHOSTWOOD_TRAPDOOR = registerBlock("ghostwood_trapdoor",
             new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(OAK_TRAPDOOR).mapColor(MapColor.WHITE_GRAY)));
     private static final Identifier GHOSTWOOD_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/ghostwood");
-    public static final Block GHOSTWOOD_SIGN = registerBlock("ghostwood_sign",
+    public static final Block GHOSTWOOD_SIGN = registerBlock("ghostwood_sign", false,
             new BFBSignBlock(GHOSTWOOD_SIGN_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
-    public static final Block GHOSTWOOD_WALL_SIGN = registerBlock("ghostwood_wall_sign",
+    public static final Block GHOSTWOOD_WALL_SIGN = registerBlock("ghostwood_wall_sign", false,
             new BFBWallSignBlock(GHOSTWOOD_SIGN_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
     private static final Identifier GHOSTWOOD_HANGING_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/hanging/ghostwood");
     private static final Identifier GHOSTWOOD_HANGING_SIGN_GUI_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "textures/gui/hanging_signs/ghostwood");
-    public static final Block GHOSTWOOD_HANGING_SIGN = registerBlock("ghostwood_hanging_sign",
+    public static final Block GHOSTWOOD_HANGING_SIGN = registerBlock("ghostwood_hanging_sign", false,
             new BFBHangingSignBlock(GHOSTWOOD_HANGING_SIGN_TEXTURE, GHOSTWOOD_HANGING_SIGN_GUI_TEXTURE, AbstractBlock.Settings.copy(OAK_HANGING_SIGN)));
-    public static final Block GHOSTWOOD_WALL_HANGING_SIGN = registerBlock("ghostwood_wall_hanging_sign",
+    public static final Block GHOSTWOOD_WALL_HANGING_SIGN = registerBlock("ghostwood_wall_hanging_sign", false,
             new BFBWallHangingSignBlock(GHOSTWOOD_HANGING_SIGN_TEXTURE, GHOSTWOOD_HANGING_SIGN_GUI_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
   
     public static final Block WILLOW_LOG = registerBlock("willow_log",
@@ -123,7 +123,7 @@ public class BlocksForBuildersBlocks {
             new FallenLeavesBlock(AbstractBlock.Settings.copy(WILLOW_LEAVES).mapColor(MapColor.PALE_GREEN).nonOpaque()));
     public static final Block WILLOW_SAPLING = registerBlock("willow_sapling",
             new SaplingBlock(WillowSaplingGenerator.WILLOW, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
-    public static final Block POTTED_WILLOW_SAPLING = registerBlock("potted_willow_sapling",
+    public static final Block POTTED_WILLOW_SAPLING = registerBlock("potted_willow_sapling", false,
             new FlowerPotBlock(WILLOW_SAPLING, AbstractBlock.Settings.copy(POTTED_OAK_SAPLING)));
     public static final Block WILLOW_PLANKS = registerBlock("willow_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.LICHEN_GREEN)));
@@ -144,15 +144,15 @@ public class BlocksForBuildersBlocks {
     public static final Block WILLOW_TRAPDOOR = registerBlock("willow_trapdoor",
             new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(OAK_TRAPDOOR).mapColor(MapColor.LICHEN_GREEN)));
     private static final Identifier WILLOW_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/willow");
-    public static final Block WILLOW_SIGN = registerBlock("willow_sign",
+    public static final Block WILLOW_SIGN = registerBlock("willow_sign", false,
             new BFBSignBlock(WILLOW_SIGN_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
-    public static final Block WILLOW_WALL_SIGN = registerBlock("willow_wall_sign",
+    public static final Block WILLOW_WALL_SIGN = registerBlock("willow_wall_sign", false,
             new BFBWallSignBlock(WILLOW_SIGN_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
     private static final Identifier WILLOW_HANGING_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/hanging/willow");
     private static final Identifier WILLOW_HANGING_SIGN_GUI_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "textures/gui/hanging_signs/willow");
-    public static final Block WILLOW_HANGING_SIGN = registerBlock("willow_hanging_sign",
+    public static final Block WILLOW_HANGING_SIGN = registerBlock("willow_hanging_sign", false,
             new BFBHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_SIGN_GUI_TEXTURE, AbstractBlock.Settings.copy(OAK_HANGING_SIGN)));
-    public static final Block WILLOW_WALL_HANGING_SIGN = registerBlock("willow_wall_hanging_sign",
+    public static final Block WILLOW_WALL_HANGING_SIGN = registerBlock("willow_wall_hanging_sign", false,
             new BFBWallHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_SIGN_GUI_TEXTURE, WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
     
     public static final Block GREEN_BAMBOO_PLANKS = registerBlock("green_bamboo_planks",
@@ -174,15 +174,15 @@ public class BlocksForBuildersBlocks {
     public static final Block GREEN_BAMBOO_TRAPDOOR = registerBlock("green_bamboo_trapdoor",
             new TrapdoorBlock(BlockSetType.BAMBOO, AbstractBlock.Settings.copy(BAMBOO_TRAPDOOR).mapColor(MapColor.DARK_GREEN)));
     private static final Identifier GREEN_BAMBOO_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/green_bamboo");
-    public static final Block GREEN_BAMBOO_SIGN = registerBlock("green_bamboo_sign",
+    public static final Block GREEN_BAMBOO_SIGN = registerBlock("green_bamboo_sign", false,
             new BFBSignBlock(GREEN_BAMBOO_SIGN_TEXTURE, WoodType.BAMBOO, AbstractBlock.Settings.copy(Blocks.BAMBOO_SIGN)));
-    public static final Block GREEN_BAMBOO_WALL_SIGN = registerBlock("green_bamboo_wall_sign",
+    public static final Block GREEN_BAMBOO_WALL_SIGN = registerBlock("green_bamboo_wall_sign", false,
             new BFBWallSignBlock(GREEN_BAMBOO_SIGN_TEXTURE, WoodType.BAMBOO, AbstractBlock.Settings.copy(Blocks.BAMBOO_SIGN)));
     private static final Identifier GREEN_BAMBOO_HANGING_SIGN_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/hanging/green_bamboo");
     private static final Identifier GREEN_BAMBOO_HANGING_SIGN_GUI_TEXTURE = Identifier.of(BlocksForBuilders.MOD_ID, "textures/gui/hanging_signs/green_bamboo");
-    public static final Block GREEN_BAMBOO_HANGING_SIGN = registerBlock("green_bamboo_hanging_sign",
+    public static final Block GREEN_BAMBOO_HANGING_SIGN = registerBlock("green_bamboo_hanging_sign", false,
             new BFBHangingSignBlock(GREEN_BAMBOO_HANGING_SIGN_TEXTURE, GREEN_BAMBOO_HANGING_SIGN_GUI_TEXTURE, AbstractBlock.Settings.copy(BAMBOO_HANGING_SIGN)));
-    public static final Block GREEN_BAMBOO_WALL_HANGING_SIGN = registerBlock("green_bamboo_wall_hanging_sign",
+    public static final Block GREEN_BAMBOO_WALL_HANGING_SIGN = registerBlock("green_bamboo_wall_hanging_sign", false,
             new BFBWallHangingSignBlock(GREEN_BAMBOO_HANGING_SIGN_TEXTURE, GREEN_BAMBOO_HANGING_SIGN_GUI_TEXTURE, WoodType.BAMBOO, AbstractBlock.Settings.copy(Blocks.BAMBOO_HANGING_SIGN)));
   
     public static final Block RED_OAK_LEAVES = registerBlock("red_oak_leaves",
@@ -191,7 +191,7 @@ public class BlocksForBuildersBlocks {
             new FallenLeavesBlock(AbstractBlock.Settings.copy(RED_OAK_LEAVES).mapColor(MapColor.DARK_RED).nonOpaque()));
     public static final Block RED_OAK_SAPLING = registerBlock("red_oak_sapling",
             new SaplingBlock(RedOakSaplingGenerator.RED_OAK, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
-    public static final Block POTTED_RED_OAK_SAPLING = registerBlock("potted_red_oak_sapling",
+    public static final Block POTTED_RED_OAK_SAPLING = registerBlock("potted_red_oak_sapling", false,
             new FlowerPotBlock(RED_OAK_SAPLING, AbstractBlock.Settings.copy(POTTED_OAK_SAPLING)));
     public static final Block GOLD_ACACIA_LEAVES = registerBlock("gold_acacia_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW)));
@@ -199,7 +199,7 @@ public class BlocksForBuildersBlocks {
             new FallenLeavesBlock(AbstractBlock.Settings.copy(GOLD_ACACIA_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW).nonOpaque()));
     public static final Block GOLD_ACACIA_SAPLING = registerBlock("gold_acacia_sapling",
             new SaplingBlock(GoldAcaciaSaplingGenerator.GOLD_ACACIA, AbstractBlock.Settings.copy(ACACIA_SAPLING)));
-    public static final Block POTTED_GOLD_ACACIA_SAPLING = registerBlock("potted_gold_acacia_sapling",
+    public static final Block POTTED_GOLD_ACACIA_SAPLING = registerBlock("potted_gold_acacia_sapling", false,
             new FlowerPotBlock(GOLD_ACACIA_SAPLING, AbstractBlock.Settings.copy(POTTED_OAK_SAPLING)));
     public static final Block ORANGE_OAK_LEAVES = registerBlock("orange_oak_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.ORANGE)));
@@ -207,7 +207,7 @@ public class BlocksForBuildersBlocks {
             new FallenLeavesBlock(AbstractBlock.Settings.copy(ORANGE_OAK_LEAVES).mapColor(MapColor.ORANGE).nonOpaque()));
     public static final Block ORANGE_OAK_SAPLING = registerBlock("orange_oak_sapling",
             new SaplingBlock(OrangeOakSaplingGenerator.ORANGE_OAK, AbstractBlock.Settings.copy(OAK_SAPLING)));
-    public static final Block POTTED_ORANGE_OAK_SAPLING = registerBlock("potted_orange_oak_sapling",
+    public static final Block POTTED_ORANGE_OAK_SAPLING = registerBlock("potted_orange_oak_sapling", false,
             new FlowerPotBlock(ORANGE_OAK_SAPLING, AbstractBlock.Settings.copy(POTTED_OAK_SAPLING)));
     public static final Block YELLOW_BIRCH_LEAVES = registerBlock("yellow_birch_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(BIRCH_LEAVES).mapColor(MapColor.YELLOW)));
@@ -215,7 +215,7 @@ public class BlocksForBuildersBlocks {
             new FallenLeavesBlock(AbstractBlock.Settings.copy(YELLOW_BIRCH_LEAVES).mapColor(MapColor.YELLOW).nonOpaque()));
     public static final Block YELLOW_BIRCH_SAPLING = registerBlock("yellow_birch_sapling",
             new SaplingBlock(YellowBirchSaplingGenerator.YELLOW_BIRCH, AbstractBlock.Settings.copy(BIRCH_SAPLING)));
-    public static final Block POTTED_YELLOW_BIRCH_SAPLING = registerBlock("potted_yellow_birch_sapling",
+    public static final Block POTTED_YELLOW_BIRCH_SAPLING = registerBlock("potted_yellow_birch_sapling", false,
             new FlowerPotBlock(YELLOW_BIRCH_SAPLING, AbstractBlock.Settings.copy(POTTED_BIRCH_SAPLING)));
    
     public static final Block FALLEN_OAK_LEAVES = registerBlock("fallen_oak_leaves",
@@ -315,7 +315,10 @@ public class BlocksForBuildersBlocks {
             new WallBlock(AbstractBlock.Settings.copy(SMOOTH_QUARTZ).mapColor(MapColor.OFF_WHITE)));
 
     private static Block registerBlock(String name, Block block) {
-        registerBlockItem(name, block);
+        return registerBlock(name, true, block);
+    }
+    private static Block registerBlock(String name, boolean createItem, Block block) {
+        if (createItem) { registerBlockItem(name, block); }
         return Registry.register(Registries.BLOCK, Identifier.of(BlocksForBuilders.MOD_ID, name), block);
     }
     private static void registerBlockItem(String name, Block block) {
