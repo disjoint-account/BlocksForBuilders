@@ -1,8 +1,0 @@
-{
-    "parent": "block/slab",
-    "textures": {
-        "bottom": "blocksforbuilders:block/ghostwood_planks",
-        "top": "blocksforbuilders:block/ghostwood_planks",
-        "side": "blocksforbuilders:block/ghostwood_planks"
-    }
-}

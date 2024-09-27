@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/outer_stairs",
-    "textures": {
-      "bottom": "blocksforbuilders:block/green_bamboo_planks",
-      "top": "blocksforbuilders:block/green_bamboo_planks",
-      "side": "blocksforbuilders:block/green_bamboo_planks"
-    }
-  }

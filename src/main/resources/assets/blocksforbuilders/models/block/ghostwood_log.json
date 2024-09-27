@@ -1,7 +1,0 @@
-{
-    "parent": "minecraft:block/cube_column",
-    "textures": {
-      "end": "blocksforbuilders:block/ghostwood_log_top",
-      "side": "blocksforbuilders:block/ghostwood_log"
-    }
-  }

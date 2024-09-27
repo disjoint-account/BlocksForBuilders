@@ -1,7 +1,0 @@
-{
-    "parent": "minecraft:block/cube_column_horizontal",
-    "textures": {
-      "end": "blocksforbuilders:block/stripped_willow_log_top",
-      "side": "blocksforbuilders:block/stripped_willow_log"
-    }
-  }

@@ -1,0 +1,50 @@
+{
+  "parent": "blocksforbuilders:sweater_weather",
+  "criteria": {
+    "happy_halloween": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "blocksforbuilders:autumnal_forest",
+              "block": {
+                "block": {
+                  "blocks": "minecraft:pumpkin"
+                }
+
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:shears"
+              ]
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.blocksforbuilders.happy_halloween.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:carved_pumpkin"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.happy_halloween.title"
+    }
+  },
+  "requirements": [
+    [
+      "happy_halloween"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

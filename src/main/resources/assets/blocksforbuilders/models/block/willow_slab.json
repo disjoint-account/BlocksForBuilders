@@ -1,8 +1,0 @@
-{
-    "parent": "block/slab",
-    "textures": {
-        "bottom": "blocksforbuilders:block/willow_planks",
-        "top": "blocksforbuilders:block/willow_planks",
-        "side": "blocksforbuilders:block/willow_planks"
-    }
-}

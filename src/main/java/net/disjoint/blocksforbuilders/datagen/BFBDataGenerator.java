@@ -1,6 +1,5 @@
 package net.disjoint.blocksforbuilders.datagen;
 
-import net.disjoint.blocksforbuilders.model.BFBSignBlockStateModelGenerator;
 import net.disjoint.blocksforbuilders.world.biome.BFBBiomes;
 import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersConfiguredFeatures;
 import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersPlacedFeatures;
@@ -19,6 +18,7 @@ public class BFBDataGenerator implements DataGeneratorEntrypoint {
        pack.addProvider(BFBBlockTagProvider::new);
        pack.addProvider(BFBItemTagProvider::new);
        pack.addProvider(BFBLootTableGenerator::new);
+       pack.addProvider(BFBModelProvider::new);
     }
 
     @Override

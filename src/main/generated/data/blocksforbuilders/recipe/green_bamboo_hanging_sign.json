@@ -4,7 +4,7 @@
   "group": "hanging_sign",
   "key": {
     "#": {
-      "item": "blocksforbuilders:green_bamboo_planks"
+      "item": "minecraft:bamboo_block"
     },
     "X": {
       "item": "minecraft:chain"
