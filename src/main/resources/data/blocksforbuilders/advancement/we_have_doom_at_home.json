@@ -1,0 +1,89 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:netherite_sword"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.we_have_doom_at_home.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.we_have_doom_at_home.description"
+    },
+    "frame": "challenge"
+  },
+  "parent": "blocksforbuilders:pave_the_road_to_hell",
+  "criteria": {
+    "kill_wither_skeleton": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:wither_skeleton",
+              "stepping_on": {
+                "block": {
+                  "blocks": "minecraft:chiseled_nether_bricks"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "kill_ghast": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:ghast",
+              "stepping_on": {
+                "block": {
+                  "blocks": "blocksforbuilders:chiseled_black_nether_bricks"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "kill_magma_cube": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:magma_cube",
+              "stepping_on": {
+                "block": {
+                  "blocks": "blocksforbuilders:chiseled_red_nether_bricks"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill_wither_skeleton"
+    ],
+    [
+      "kill_ghast"
+    ],
+    [
+      "kill_magma_cube"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

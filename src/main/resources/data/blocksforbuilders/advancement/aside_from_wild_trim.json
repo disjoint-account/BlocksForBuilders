@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:green_jungle_log"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.aside_from_wild_trim.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.aside_from_wild_trim.description"
+    }
+  },
+  "parent": "blocksforbuilders:a_purpose_at_last",
+  "criteria": {
+    "plant_cocoa": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                  "blocks": [
+                    "blocksforbuilders:green_jungle_log",
+                    "blocksforbuilders:green_jungle_wood",
+                    "blocksforbuilders:stripped_green_jungle_log",
+                    "blocksforbuilders:stripped_green_jungle_wood"
+                    ]
+                }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:cocoa_beans"
+              ]
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "requirements": [
+    [
+      "plant_cocoa"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

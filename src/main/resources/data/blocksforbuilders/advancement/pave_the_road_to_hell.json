@@ -1,0 +1,58 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:chiseled_red_nether_bricks"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.pave_the_road_to_hell.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.pave_the_road_to_hell.description"
+    }
+  },
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "craft_chiseled_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:chiseled_nether_bricks"
+          }
+        ]
+      }
+    },
+    "craft_chiseled_red_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:chiseled_red_nether_bricks"
+          }
+        ]
+      }
+    },
+    "craft_chiseled_black_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:chiseled_black_nether_bricks"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_chiseled_bricks"
+    ],
+    [
+      "craft_chiseled_red_bricks"
+    ],
+    [
+      "craft_chiseled_black_bricks"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

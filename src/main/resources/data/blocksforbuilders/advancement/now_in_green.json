@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:green_bamboo_raft"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.now_in_green.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.now_in_green.description"
+    }
+  },
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "get_bamboo_raft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:green_bamboo_raft"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_bamboo_raft"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

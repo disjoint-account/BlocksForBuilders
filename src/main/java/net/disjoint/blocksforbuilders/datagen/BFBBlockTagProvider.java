@@ -270,5 +270,11 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_TRAPDOOR,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
 
+        getOrCreateTagBuilder(BlockTags.JUNGLE_LOGS)
+                .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG,
+                        BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD,
+                        BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD);
+
     }
 }

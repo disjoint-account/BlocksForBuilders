@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.blocksforbuilders.where_had_they_been.description"
+      "translate": "advancements.blocksforbuilders.where_were_they_coming_from.description"
     },
     "icon": {
       "count": 1,
       "id": "blocksforbuilders:ghostwood_sapling"
     },
     "title": {
-      "translate": "advancements.blocksforbuilders.where_had_they_been.title"
+      "translate": "advancements.blocksforbuilders.where_were_they_coming_from.title"
     }
   },
   "requirements": [

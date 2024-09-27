@@ -37,14 +37,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.blocksforbuilders.taking_the_fall.description"
+      "translate": "advancements.blocksforbuilders.fall_guy.description"
     },
     "icon": {
       "count": 1,
       "id": "blocksforbuilders:red_oak_leaves"
     },
     "title": {
-      "translate": "advancements.blocksforbuilders.taking_the_fall.title"
+      "translate": "advancements.blocksforbuilders.fall_guy.title"
     }
   },
   "requirements": [
