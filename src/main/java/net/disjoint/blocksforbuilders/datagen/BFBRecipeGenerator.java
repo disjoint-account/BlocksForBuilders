@@ -181,7 +181,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
         offerDoorRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
         offerFenceRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
         offerFenceGateRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
-        offerHangingSignRecipe(exporter, BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+        offerHangingSignRecipe(exporter, BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM, Blocks.BAMBOO_BLOCK);
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, 4)
                 .group("planks")
                 .pattern("WW")

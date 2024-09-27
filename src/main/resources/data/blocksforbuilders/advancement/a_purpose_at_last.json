@@ -1,12 +1,12 @@
 {
   "parent": "blocksforbuilders:root",
   "criteria": {
-    "has_ghostwood_sapling": {
+    "has_green_jungle_sapling": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:ghostwood_sapling"
+            "items": "blocksforbuilders:green_jungle_sapling"
           }
         ]
       }
@@ -14,19 +14,19 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.blocksforbuilders.where_had_they_been.description"
+      "translate": "advancements.blocksforbuilders.a_purpose_at_last.description"
     },
     "icon": {
       "count": 1,
-      "id": "blocksforbuilders:ghostwood_sapling"
+      "id": "blocksforbuilders:green_jungle_sapling"
     },
     "title": {
-      "translate": "advancements.blocksforbuilders.where_had_they_been.title"
+      "translate": "advancements.blocksforbuilders.a_purpose_at_last.title"
     }
   },
   "requirements": [
     [
-      "has_ghostwood_sapling"
+      "has_green_jungle_sapling"
     ]
   ],
   "sends_telemetry_event": true

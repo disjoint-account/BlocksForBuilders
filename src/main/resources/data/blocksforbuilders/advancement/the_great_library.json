@@ -1,0 +1,260 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:bookshelf",
+      "count": 1
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.the_great_library.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.the_great_library.description"
+    }
+  },
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "place_oak_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "minecraft:bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_birch_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:birch_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_spruce_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:spruce_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_jungle_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:jungle_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_acacia_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:acacia_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_dark_oak_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:dark_oak_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_crimson_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:crimson_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_warped_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:warped_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_mangrove_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:mangrove_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_cherry_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:cherry_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_bamboo_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:bamboo_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_ghostwood_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:ghostwood_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_willow_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:willow_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_green_jungle_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:green_jungle_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_green_bamboo_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:green_bamboo_bookshelf"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_oak_bookshelf"
+    ],
+    [
+      "place_birch_bookshelf"
+    ],
+    [
+      "place_spruce_bookshelf"
+    ],
+    [
+      "place_jungle_bookshelf"
+    ],
+    [
+      "place_acacia_bookshelf"
+    ],
+    [
+      "place_dark_oak_bookshelf"
+    ],
+    [
+      "place_crimson_bookshelf"
+    ],
+    [
+      "place_warped_bookshelf"
+    ],
+    [
+      "place_mangrove_bookshelf"
+    ],
+    [
+      "place_cherry_bookshelf"
+    ],
+    [
+      "place_bamboo_bookshelf"
+    ],
+    [
+      "place_ghostwood_bookshelf"
+    ],
+    [
+      "place_willow_bookshelf"
+    ],
+    [
+      "place_green_jungle_bookshelf"
+    ],
+    [
+      "place_green_bamboo_bookshelf"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

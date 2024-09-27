@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:hay_slab",
+      "count": 1
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.not_as_effective.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.not_as_effective.description"
+    }
+  },
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "fall_onto_hay_slab": {
+      "trigger": "minecraft:used_totem",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "block": {
+                  "blocks": [
+                    "blocksforbuilders:hay_stairs",
+                    "blocksforbuilders:hay_slab"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "fall_onto_hay_slab"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
