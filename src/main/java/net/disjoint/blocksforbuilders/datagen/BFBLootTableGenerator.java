@@ -90,6 +90,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_PRESSURE_PLATE);
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING);
+        addDrop(BlocksForBuildersBlocks.POTTED_GHOSTWOOD_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING));
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_SIGN, drops(BlocksForBuildersItems.GHOSTWOOD_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_SLAB, slabDrops(BlocksForBuildersBlocks.GHOSTWOOD_SLAB));
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS);
@@ -110,6 +111,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_PRESSURE_PLATE);
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING);
+        addDrop(BlocksForBuildersBlocks.POTTED_GREEN_JUNGLE_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING));
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_SIGN, drops(BlocksForBuildersItems.GREEN_JUNGLE_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB, slabDrops(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB));
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS);
@@ -130,6 +132,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.WILLOW_PLANKS);
         addDrop(BlocksForBuildersBlocks.WILLOW_PRESSURE_PLATE);
         addDrop(BlocksForBuildersBlocks.WILLOW_SAPLING);
+        addDrop(BlocksForBuildersBlocks.POTTED_WILLOW_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.WILLOW_SAPLING));
         addDrop(BlocksForBuildersBlocks.WILLOW_SIGN, drops(BlocksForBuildersItems.WILLOW_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.WILLOW_SLAB, slabDrops(BlocksForBuildersBlocks.WILLOW_SLAB));
         addDrop(BlocksForBuildersBlocks.WILLOW_STAIRS);
@@ -156,19 +159,15 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(BlocksForBuildersBlocks.RED_OAK_LEAVES, oakLeavesDrops(BlocksForBuildersBlocks.RED_OAK_LEAVES, BlocksForBuildersBlocks.RED_OAK_SAPLING, 0.05f));
         addDrop(BlocksForBuildersBlocks.RED_OAK_SAPLING);
+        addDrop(BlocksForBuildersBlocks.POTTED_RED_OAK_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.RED_OAK_SAPLING));
         addDrop(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, leavesDrops(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 0.05f));
         addDrop(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING);
+        addDrop(BlocksForBuildersBlocks.POTTED_GOLD_ACACIA_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING));
         addDrop(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES, oakLeavesDrops(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES, BlocksForBuildersBlocks.ORANGE_OAK_SAPLING, 0.05f));
         addDrop(BlocksForBuildersBlocks.ORANGE_OAK_SAPLING);
+        addDrop(BlocksForBuildersBlocks.POTTED_ORANGE_OAK_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.ORANGE_OAK_SAPLING));
         addDrop(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, leavesDrops(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.05f));
         addDrop(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
-
-        addDrop(BlocksForBuildersBlocks.POTTED_GHOSTWOOD_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING));
-        addDrop(BlocksForBuildersBlocks.POTTED_GREEN_JUNGLE_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING));
-        addDrop(BlocksForBuildersBlocks.POTTED_WILLOW_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.WILLOW_SAPLING));
-        addDrop(BlocksForBuildersBlocks.POTTED_RED_OAK_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.RED_OAK_SAPLING));
-        addDrop(BlocksForBuildersBlocks.POTTED_GOLD_ACACIA_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING));
-        addDrop(BlocksForBuildersBlocks.POTTED_ORANGE_OAK_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.ORANGE_OAK_SAPLING));
         addDrop(BlocksForBuildersBlocks.POTTED_YELLOW_BIRCH_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING));
 
         addDrop(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
