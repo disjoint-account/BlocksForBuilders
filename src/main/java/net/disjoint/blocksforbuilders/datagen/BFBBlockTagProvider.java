@@ -276,5 +276,23 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG,
                         BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD);
 
+        getOrCreateTagBuilder(BlockTags.INSIDE_STEP_SOUND_BLOCKS)
+                .add(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_AZALEA_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES);
     }
 }

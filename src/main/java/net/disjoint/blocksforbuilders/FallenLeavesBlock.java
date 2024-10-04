@@ -18,7 +18,7 @@ public class FallenLeavesBlock extends Block {
 
     private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 1, 16);
     public FallenLeavesBlock(Settings settings) {
-        super(settings);
+        super(settings.noCollision());
     }
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

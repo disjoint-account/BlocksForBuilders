@@ -11,16 +11,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stick": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:stick"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "blocksforbuilders:green_bamboo_sign"
@@ -31,8 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_green_bamboo_sign",
-      "has_stick"
+      "has_green_bamboo_sign"
     ]
   ],
   "rewards": {

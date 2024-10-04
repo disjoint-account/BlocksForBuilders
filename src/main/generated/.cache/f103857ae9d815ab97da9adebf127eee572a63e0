@@ -1,4 +1,4 @@
-// 1.21	2024-09-30T21:48:28.9153389	Blocks For Builders/Tags for minecraft:block
+// 1.21	2024-10-04T22:02:54.6478356	Blocks For Builders/Tags for minecraft:block
 f5828ebfb85f9578d8ef7875129aaca4c5d31d2e data\minecraft\tags\block\wooden_doors.json
 65b678894b73a8d43b38ede8a1ae3975ce3839c5 data\minecraft\tags\block\wooden_slabs.json
 22e7f916cbeab17ccd0d93ad3547d8f4a5d571a7 data\minecraft\tags\block\planks.json
@@ -11,6 +11,7 @@ f1b9aed8b8a8c36ab246bb1dba21aaab86f015a9 data\minecraft\tags\block\trapdoors.jso
 867cfc0ae388d81970024b16f3bd837741cd998e data\minecraft\tags\block\stairs.json
 c19d5951de433574778668779c7d29f3825bd6a4 data\minecraft\tags\block\walls.json
 e6c8f12b0f04c94c88366c3a7ab8dac84e53dc0c data\minecraft\tags\block\fence_gates.json
+edaaf91cea19b1bf9e3a79d17ebb9a5f2ce56a81 data\minecraft\tags\block\inside_step_sound_blocks.json
 f1b9aed8b8a8c36ab246bb1dba21aaab86f015a9 data\minecraft\tags\block\wooden_trapdoors.json
 d859a6ffad4f8225a59104199c8921802f4bdead data\minecraft\tags\block\wall_signs.json
 6e4eec14db7a2ef80f6a24820354fccccf43d0af data\minecraft\tags\block\slabs.json

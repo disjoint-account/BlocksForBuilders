@@ -210,7 +210,6 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .pattern("###")
                 .pattern(" X ")
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                 .offerTo(exporter);
     }
     public static void offerFenceRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -221,7 +220,6 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .pattern("#X#")
                 .pattern("#X#")
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                 .offerTo(exporter);
     }
     public static void offerFenceGateRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -232,7 +230,6 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .pattern("X#X")
                 .pattern("X#X")
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                 .offerTo(exporter);
     }
     public static void offerNetherFenceGateRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -372,12 +369,11 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .pattern("###")
                 .pattern("XXX")
                 .pattern("###")
-                .criterion(hasItem(input), conditionsFromItem(input))
                 .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
                 .offerTo(exporter);
     }
     public static void offerFallenLeavesRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 3)
                 .group("fallen_leaves")
                 .input('#', input)
                 .pattern("##")
