@@ -12,27 +12,7 @@ public class BFBItemGroup {
     public static ItemGroup BLOCKSFORBUILDERS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(BlocksForBuilders.MOD_ID, "blocksforbuilders"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.blocksforbuilders"))
-                    .icon(() -> new ItemStack(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS)).entries((displayContext, entries) -> {
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_LOG);
-                        entries.add(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_WOOD);
-                        entries.add(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES);
-                        entries.add(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_SLAB);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_FENCE);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_FENCE_GATE);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_BUTTON);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_PRESSURE_PLATE);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_DOOR);
-                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR);
-                        entries.add(BlocksForBuildersItems.GHOSTWOOD_SIGN_ITEM);
-                        entries.add(BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM);
-                        entries.add(BlocksForBuildersItems.GHOSTWOOD_BOAT);
-                        entries.add(BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT);
+                    .icon(() -> new ItemStack(BlocksForBuildersBlocks.WILLOW_PLANKS)).entries((displayContext, entries) -> {
                         entries.add(BlocksForBuildersBlocks.WILLOW_LOG);
                         entries.add(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
                         entries.add(BlocksForBuildersBlocks.WILLOW_WOOD);
@@ -53,6 +33,26 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.WILLOW_BOAT);
                         entries.add(BlocksForBuildersItems.WILLOW_CHEST_BOAT);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_LOG);
+                        entries.add(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_WOOD);
+                        entries.add(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_SLAB);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_FENCE);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_FENCE_GATE);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_BUTTON);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_PRESSURE_PLATE);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_DOOR);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR);
+                        entries.add(BlocksForBuildersItems.GHOSTWOOD_SIGN_ITEM);
+                        entries.add(BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM);
+                        entries.add(BlocksForBuildersItems.GHOSTWOOD_BOAT);
+                        entries.add(BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG);
                         entries.add(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD);
@@ -122,6 +122,11 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.WILLOW_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL);
                         entries.add(BlocksForBuildersBlocks.HAY_STAIRS);
                         entries.add(BlocksForBuildersBlocks.HAY_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);

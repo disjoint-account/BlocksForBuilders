@@ -134,6 +134,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.HAY_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB.asItem());
@@ -143,6 +144,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.HAY_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS.asItem())
@@ -155,6 +157,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR.asItem());
 
         getOrCreateTagBuilder(ItemTags.WALLS)
+                .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_WALL.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL.asItem())

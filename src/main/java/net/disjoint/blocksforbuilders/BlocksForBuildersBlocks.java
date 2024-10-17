@@ -314,6 +314,12 @@ public class BlocksForBuildersBlocks {
     public static final Block SMOOTH_QUARTZ_WALL = registerBlock("smooth_quartz_wall",
             new WallBlock(AbstractBlock.Settings.copy(SMOOTH_QUARTZ).mapColor(MapColor.OFF_WHITE)));
 
+    public static final Block GRIMSTONE = registerBlock("grimstone", new Block(AbstractBlock.Settings.copy(DEEPSLATE)));
+    public static final Block GRIMSTONE_BRICKS = registerBlock("grimstone_bricks", new Block(AbstractBlock.Settings.copy(DEEPSLATE_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block GRIMSTONE_BRICK_STAIRS = registerBlock("grimstone_brick_stairs", new StairsBlock(GRIMSTONE_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(DEEPSLATE_BRICK_STAIRS).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block GRIMSTONE_BRICK_SLAB = registerBlock("grimstone_brick_slab", new SlabBlock(AbstractBlock.Settings.copy(DEEPSLATE_BRICK_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE)));
+    public static final Block GRIMSTONE_BRICK_WALL = registerBlock("grimstone_brick_wall", new WallBlock(AbstractBlock.Settings.copy(DEEPSLATE_BRICK_WALL).mapColor(MapColor.TERRACOTTA_PURPLE)));
+
     private static Block registerBlock(String name, Block block) {
         return registerBlock(name, true, block);
     }

@@ -1,5 +1,10 @@
 {
   "values": [
+    "blocksforbuilders:grimstone",
+    "blocksforbuilders:grimstone_bricks",
+    "blocksforbuilders:grimstone_brick_stairs",
+    "blocksforbuilders:grimstone_brick_slab",
+    "blocksforbuilders:grimstone_brick_wall",
     "blocksforbuilders:smooth_stone_stairs",
     "blocksforbuilders:black_nether_bricks",
     "blocksforbuilders:chiseled_black_nether_bricks",
