@@ -1,10 +1,18 @@
 {
   "values": [
     "blocksforbuilders:grimstone",
+    "blocksforbuilders:polished_grimstone",
+    "blocksforbuilders:polished_grimstone_stairs",
+    "blocksforbuilders:polished_grimstone_slab",
+    "blocksforbuilders:polished_grimstone_wall",
     "blocksforbuilders:grimstone_bricks",
     "blocksforbuilders:grimstone_brick_stairs",
     "blocksforbuilders:grimstone_brick_slab",
     "blocksforbuilders:grimstone_brick_wall",
+    "blocksforbuilders:grimstone_tiles",
+    "blocksforbuilders:grimstone_tile_stairs",
+    "blocksforbuilders:grimstone_tile_slab",
+    "blocksforbuilders:grimstone_tile_wall",
     "blocksforbuilders:smooth_stone_stairs",
     "blocksforbuilders:black_nether_bricks",
     "blocksforbuilders:chiseled_black_nether_bricks",

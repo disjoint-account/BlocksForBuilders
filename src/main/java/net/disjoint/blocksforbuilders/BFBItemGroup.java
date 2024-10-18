@@ -123,10 +123,18 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL);
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS);
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB);
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_TILES);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL);
                         entries.add(BlocksForBuildersBlocks.HAY_STAIRS);
                         entries.add(BlocksForBuildersBlocks.HAY_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
@@ -148,7 +156,6 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);
                         entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
-
                     }).build());
     public static void registerItemGroups() {
         BlocksForBuilders.LOGGER.info("Registering Item Groups for " + BlocksForBuilders.MOD_ID);

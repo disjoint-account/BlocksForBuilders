@@ -2,8 +2,6 @@ package net.disjoint.blocksforbuilders;
 
 import net.fabricmc.fabric.api.registry.*;
 
-import static net.disjoint.blocksforbuilders.BlocksForBuilders.*;
-
 public class Instance {
 
     public static void init() {
@@ -94,7 +92,6 @@ public class Instance {
             FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, 300);
         }
         addStrippables();
-
     }
 
     public static void addStrippables() {

@@ -1,13 +1,13 @@
-// 1.21	2024-10-17T22:15:58.1147094	Blocks For Builders/Tags for minecraft:item
-56e530198deac94223bcd3c0f070bcd937746cc8 data\minecraft\tags\item\walls.json
+// 1.21	2024-10-18T20:44:18.5374345	Blocks For Builders/Tags for minecraft:item
+0c4e7f992933bc89f8d9cd560fbcaa26d281abab data\minecraft\tags\item\walls.json
 7ded2637c74d872cb5ecc6ce7007ddbe381456fe data\minecraft\tags\item\hanging_signs.json
 14b69d4f99260e35933a2d110cc082d1122e8163 data\minecraft\tags\item\boats.json
 8379a78a9eadb798902cd093435ddc8de73825f0 data\minecraft\tags\item\trapdoors.json
 93035ae1f1a5db68c433715a4eff0c6bc7425c5b data\minecraft\tags\item\wooden_fences.json
 351a1e0d3ba1793aa00f31b962181956e059635c data\minecraft\tags\item\wooden_trapdoors.json
 8ccaa510b80f50fd0ed58863ca06c9226f56e46d data\minecraft\tags\item\signs.json
+02e05c0eb4504308ad5c9c1b76f9147795f7f913 data\minecraft\tags\item\slabs.json
 dfe08b7f0f97309480177c9456bc02863d387115 data\minecraft\tags\item\wooden_buttons.json
-4c25f289d62550553fa73d8bdc931d5f568e430b data\minecraft\tags\item\slabs.json
 9eb0ca24f061de821967104d78b158ffd92a79a1 data\blocksforbuilders\tags\item\bookshelves.json
 b0a7643656d5c5d2a888a29c66a60f652bb2ec4d data\minecraft\tags\item\logs.json
 3ed21ebb72505c3f3801880862aa8067df4e63b3 data\blocksforbuilders\tags\item\ghostwood_wood.json
@@ -19,7 +19,7 @@ a9e2fd3262b9aa8f198d31664a33c78652b4db18 data\minecraft\tags\item\wooden_doors.j
 3a7bc121da84f2f9934d89a1fd0dd68bb6cdb3df data\minecraft\tags\item\wooden_stairs.json
 32112605e4cae9b6d15f898e11c3b949368b49a3 data\minecraft\tags\item\leaves.json
 2dc11e5250802e29a49d07d2d9ef1b84d0d8a2e6 data\minecraft\tags\item\fences.json
-ae68345ff8219e9cc354ce2b35a8826dd07705b2 data\minecraft\tags\item\stairs.json
+3e9fdba1c27ea905f7c2e345329e99c93ea80713 data\minecraft\tags\item\stairs.json
 bbf83cd12416cbdde349de1dc063f29d45d90f73 data\minecraft\tags\item\wooden_pressure_plates.json
 05196b2edeabe7eb85951379ec2ba08adb410134 data\minecraft\tags\item\saplings.json
 f5828ebfb85f9578d8ef7875129aaca4c5d31d2e data\minecraft\tags\item\doors.json

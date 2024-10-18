@@ -61,10 +61,18 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(BlocksForBuildersBlocks.GRIMSTONE,
+                        BlocksForBuildersBlocks.POLISHED_GRIMSTONE,
+                        BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS,
+                        BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB,
+                        BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICKS,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL,
+                        BlocksForBuildersBlocks.GRIMSTONE_TILES,
+                        BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS,
+                        BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB,
+                        BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL,
                         BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICKS,
                         BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS,
@@ -189,7 +197,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_SLAB,
                         BlocksForBuildersBlocks.WILLOW_SLAB,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB,
+                        BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB,
+                        BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB,
                         BlocksForBuildersBlocks.HAY_SLAB,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
@@ -199,7 +209,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_STAIRS,
                         BlocksForBuildersBlocks.WILLOW_STAIRS,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS,
+                        BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS,
+                        BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS,
                         BlocksForBuildersBlocks.HAY_STAIRS,
                         BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS,
@@ -230,7 +242,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_SIGN);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL,
+                .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL,
+                    BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL,
+                    BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL,
                     BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL,
                     BlocksForBuildersBlocks.QUARTZ_WALL,
                     BlocksForBuildersBlocks.QUARTZ_BRICK_WALL,

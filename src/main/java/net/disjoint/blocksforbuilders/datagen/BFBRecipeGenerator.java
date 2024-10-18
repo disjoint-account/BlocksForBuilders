@@ -45,9 +45,39 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
         offerSmelting(exporter, BLACKNB, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_BLACK_NETHER_BRICKS, 0.1f, 200, "cracked_black_nether_bricks");
         offerSmelting(exporter, REDNB, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_RED_NETHER_BRICKS, 0.1f, 200, "cracked_red_nether_bricks");
 
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB, BlocksForBuildersBlocks.GRIMSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICKS, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB, BlocksForBuildersBlocks.GRIMSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILES, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, BlocksForBuildersBlocks.GRIMSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICKS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILES, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS, BlocksForBuildersBlocks.GRIMSTONE_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB, BlocksForBuildersBlocks.GRIMSTONE_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL, BlocksForBuildersBlocks.GRIMSTONE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILES, BlocksForBuildersBlocks.GRIMSTONE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, BlocksForBuildersBlocks.GRIMSTONE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.GRIMSTONE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE_TILES, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, BlocksForBuildersBlocks.GRIMSTONE_TILES, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.GRIMSTONE_TILES, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS, 1);
@@ -87,7 +117,6 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .input('B', Items.NETHER_BRICK)
                 .input('W', Items.BLACK_DYE)
                 .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
-                .criterion(hasItem(Items.BLACK_DYE), conditionsFromItem(Items.BLACK_DYE))
                 .offerTo(exporter);
         offerChiseledRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB);
         offerChiseledRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CHISELED_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICK_SLAB);
@@ -198,9 +227,25 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
         offerWoodenStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
         offerTrapdoorRecipe(exporter, BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE, 3)
+                .pattern("BW")
+                .pattern("WB")
+                .input('B', Items.GUNPOWDER)
+                .input('W', Items.COBBLED_DEEPSLATE)
+                .criterion(hasItem(Items.COBBLED_DEEPSLATE), conditionsFromItem(Items.COBBLED_DEEPSLATE))
+                .offerTo(exporter);
+        offerStoneRecipe(exporter, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, BlocksForBuildersBlocks.GRIMSTONE);
+        offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB, BlocksForBuildersBlocks.POLISHED_GRIMSTONE);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL, BlocksForBuildersBlocks.POLISHED_GRIMSTONE);
+        offerStoneRecipe(exporter, BlocksForBuildersBlocks.GRIMSTONE_BRICKS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE);
         offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS, BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB, BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
         offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL, BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
+        offerStoneRecipe(exporter, BlocksForBuildersBlocks.GRIMSTONE_TILES, BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
+        offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE_TILES);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, BlocksForBuildersBlocks.GRIMSTONE_TILES);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.GRIMSTONE_TILES);
 
         offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
 
@@ -383,6 +428,14 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 3)
                 .group("fallen_leaves")
                 .input('#', input)
+                .pattern("##")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerStoneRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 4)
+                .input('#', input)
+                .pattern("##")
                 .pattern("##")
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);

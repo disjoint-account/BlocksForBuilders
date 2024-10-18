@@ -1,4 +1,4 @@
-// 1.21	2024-10-17T22:15:58.1157108	Blocks For Builders/Tags for minecraft:block
+// 1.21	2024-10-18T20:44:18.5384337	Blocks For Builders/Tags for minecraft:block
 f5828ebfb85f9578d8ef7875129aaca4c5d31d2e data\minecraft\tags\block\wooden_doors.json
 65b678894b73a8d43b38ede8a1ae3975ce3839c5 data\minecraft\tags\block\wooden_slabs.json
 22e7f916cbeab17ccd0d93ad3547d8f4a5d571a7 data\minecraft\tags\block\planks.json
@@ -8,14 +8,14 @@ b0a7643656d5c5d2a888a29c66a60f652bb2ec4d data\minecraft\tags\block\logs_that_bur
 206eb8dc9d5cecc343226896076ae430aa13a5b9 data\minecraft\tags\block\wooden_stairs.json
 6fd08f47413095be8e07cdc8eaadda9017e07adf data\minecraft\tags\block\leaves.json
 f1b9aed8b8a8c36ab246bb1dba21aaab86f015a9 data\minecraft\tags\block\trapdoors.json
-ae68345ff8219e9cc354ce2b35a8826dd07705b2 data\minecraft\tags\block\stairs.json
-56e530198deac94223bcd3c0f070bcd937746cc8 data\minecraft\tags\block\walls.json
+3e9fdba1c27ea905f7c2e345329e99c93ea80713 data\minecraft\tags\block\stairs.json
+0c4e7f992933bc89f8d9cd560fbcaa26d281abab data\minecraft\tags\block\walls.json
 e6c8f12b0f04c94c88366c3a7ab8dac84e53dc0c data\minecraft\tags\block\fence_gates.json
 edaaf91cea19b1bf9e3a79d17ebb9a5f2ce56a81 data\minecraft\tags\block\inside_step_sound_blocks.json
 f1b9aed8b8a8c36ab246bb1dba21aaab86f015a9 data\minecraft\tags\block\wooden_trapdoors.json
 d859a6ffad4f8225a59104199c8921802f4bdead data\minecraft\tags\block\wall_signs.json
-4c25f289d62550553fa73d8bdc931d5f568e430b data\minecraft\tags\block\slabs.json
-18db9dfce1cda5a278e2d75d980d187e284869ec data\minecraft\tags\block\mineable\pickaxe.json
+02e05c0eb4504308ad5c9c1b76f9147795f7f913 data\minecraft\tags\block\slabs.json
+4b7ad7b7758240556d4467eff52b93147f663e07 data\minecraft\tags\block\mineable\pickaxe.json
 737bec799431817ba05bfd452ba876938561f22c data\minecraft\tags\block\mineable\axe.json
 aac909db4eca0ca3a04fb42c4907e3341c82b05b data\minecraft\tags\block\fences.json
 a195fd5e2394ec455179b4558772b0384db89e28 data\minecraft\tags\block\wall_hanging_signs.json

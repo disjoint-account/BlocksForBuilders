@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "minecraft:gunpowder"
+    },
+    "W": {
+      "item": "minecraft:cobbled_deepslate"
+    }
+  },
+  "pattern": [
+    "BW",
+    "WB"
+  ],
+  "result": {
+    "count": 3,
+    "id": "blocksforbuilders:grimstone"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocksforbuilders:block/polished_grimstone_slab"
+    },
+    "type=double": {
+      "model": "blocksforbuilders:block/polished_grimstone"
+    },
+    "type=top": {
+      "model": "blocksforbuilders:block/polished_grimstone_slab_top"
+    }
+  }
+}

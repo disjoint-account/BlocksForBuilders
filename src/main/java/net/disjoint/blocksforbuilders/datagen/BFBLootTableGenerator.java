@@ -171,10 +171,18 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.POTTED_YELLOW_BIRCH_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING));
 
         addDrop(BlocksForBuildersBlocks.GRIMSTONE);
+        addDrop(BlocksForBuildersBlocks.POLISHED_GRIMSTONE);
+        addDrop(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB, slabDrops(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB));
+        addDrop(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL);
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS);
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB));
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL);
+        addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILES);
+        addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, slabDrops(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB));
+        addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL);
 
         addDrop(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
 

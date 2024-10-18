@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "blocksforbuilders:polished_grimstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "blocksforbuilders:grimstone_tiles"
+  }
+}
