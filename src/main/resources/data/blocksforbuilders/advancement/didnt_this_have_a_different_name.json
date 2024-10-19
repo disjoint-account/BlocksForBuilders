@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:grimstone"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.didnt_this_have_a_different_name.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.didnt_this_have_a_different_name.description"
+    }
+  },
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "has_grimstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:grimstone"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_grimstone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
