@@ -123,6 +123,10 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_SLAB);
+                        entries.add(BlocksForBuildersBlocks.GRIMSTONE_WALL);
+                        entries.add(BlocksForBuildersBlocks.CHISELED_GRIMSTONE);
                         entries.add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE);
                         entries.add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS);
                         entries.add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB);

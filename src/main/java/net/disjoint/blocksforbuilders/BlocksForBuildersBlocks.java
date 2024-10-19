@@ -316,31 +316,39 @@ public class BlocksForBuildersBlocks {
             new WallBlock(AbstractBlock.Settings.copy(SMOOTH_QUARTZ).mapColor(MapColor.OFF_WHITE)));
 
     public static final Block GRIMSTONE = registerBlock("grimstone",
-            new Block(AbstractBlock.Settings.copy(DEEPSLATE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new Block(AbstractBlock.Settings.copy(DEEPSLATE).sounds(BlockSoundGroup.DEEPSLATE)));
+    public static final Block GRIMSTONE_STAIRS = registerBlock("grimstone_stairs",
+            new StairsBlock(GRIMSTONE.getDefaultState(), AbstractBlock.Settings.copy(COBBLED_DEEPSLATE_STAIRS).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
+    public static final Block GRIMSTONE_SLAB = registerBlock("grimstone_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(COBBLED_DEEPSLATE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
+    public static final Block GRIMSTONE_WALL = registerBlock("grimstone_wall",
+            new WallBlock(AbstractBlock.Settings.copy(COBBLED_DEEPSLATE_WALL).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
+    public static final Block CHISELED_GRIMSTONE = registerBlock("chiseled_grimstone",
+            new Block(AbstractBlock.Settings.copy(CHISELED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block POLISHED_GRIMSTONE = registerBlock("polished_grimstone",
-            new Block(AbstractBlock.Settings.copy(POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new Block(AbstractBlock.Settings.copy(POLISHED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block POLISHED_GRIMSTONE_STAIRS = registerBlock("polished_grimstone_stairs",
-            new StairsBlock(POLISHED_GRIMSTONE.getDefaultState(), AbstractBlock.Settings.copy(POLISHED_DEEPSLATE_STAIRS).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new StairsBlock(POLISHED_GRIMSTONE.getDefaultState(), AbstractBlock.Settings.copy(POLISHED_DEEPSLATE_STAIRS).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block POLISHED_GRIMSTONE_SLAB = registerBlock("polished_grimstone_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(POLISHED_DEEPSLATE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new SlabBlock(AbstractBlock.Settings.copy(POLISHED_DEEPSLATE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block POLISHED_GRIMSTONE_WALL = registerBlock("polished_grimstone_wall",
-            new WallBlock(AbstractBlock.Settings.copy(POLISHED_DEEPSLATE_WALL).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new WallBlock(AbstractBlock.Settings.copy(POLISHED_DEEPSLATE_WALL).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block GRIMSTONE_BRICKS = registerBlock("grimstone_bricks",
-            new Block(AbstractBlock.Settings.copy(DEEPSLATE_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new Block(AbstractBlock.Settings.copy(DEEPSLATE_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block GRIMSTONE_BRICK_STAIRS = registerBlock("grimstone_brick_stairs",
-            new StairsBlock(GRIMSTONE_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(DEEPSLATE_BRICK_STAIRS).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new StairsBlock(GRIMSTONE_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(DEEPSLATE_BRICK_STAIRS).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block GRIMSTONE_BRICK_SLAB = registerBlock("grimstone_brick_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(DEEPSLATE_BRICK_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new SlabBlock(AbstractBlock.Settings.copy(DEEPSLATE_BRICK_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block GRIMSTONE_BRICK_WALL = registerBlock("grimstone_brick_wall",
-            new WallBlock(AbstractBlock.Settings.copy(DEEPSLATE_BRICK_WALL).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new WallBlock(AbstractBlock.Settings.copy(DEEPSLATE_BRICK_WALL).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block GRIMSTONE_TILES = registerBlock("grimstone_tiles",
-            new DirectionalBlock(AbstractBlock.Settings.copy(DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new DirectionalBlock(AbstractBlock.Settings.copy(DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block GRIMSTONE_TILE_STAIRS = registerBlock("grimstone_tile_stairs",
-            new StairsBlock(GRIMSTONE_TILES.getDefaultState(), AbstractBlock.Settings.copy(DEEPSLATE_TILE_STAIRS).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new StairsBlock(GRIMSTONE_TILES.getDefaultState(), AbstractBlock.Settings.copy(DEEPSLATE_TILE_STAIRS).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block GRIMSTONE_TILE_SLAB = registerBlock("grimstone_tile_slab",
-            new DirectionalSlab(AbstractBlock.Settings.copy(DEEPSLATE_TILE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new DirectionalSlab(AbstractBlock.Settings.copy(DEEPSLATE_TILE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block GRIMSTONE_TILE_WALL = registerBlock("grimstone_tile_wall",
-            new WallBlock(AbstractBlock.Settings.copy(DEEPSLATE_TILE_WALL).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.NETHER_BRICKS)));
+            new WallBlock(AbstractBlock.Settings.copy(DEEPSLATE_TILE_WALL).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
 
     private static Block registerBlock(String name, Block block) {
         return registerBlock(name, true, block);

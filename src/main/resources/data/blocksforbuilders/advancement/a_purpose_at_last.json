@@ -1,12 +1,18 @@
 {
   "parent": "blocksforbuilders:root",
   "criteria": {
-    "has_green_jungle_sapling": {
-      "trigger": "minecraft:inventory_changed",
+    "enters_temple": {
+      "trigger": "minecraft:location",
       "conditions": {
-        "items": [
+        "player": [
           {
-            "items": "blocksforbuilders:green_jungle_sapling"
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "minecraft:jungle_pyramid"
+              }
+            }
           }
         ]
       }
@@ -26,7 +32,7 @@
   },
   "requirements": [
     [
-      "has_green_jungle_sapling"
+      "enters_temple"
     ]
   ],
   "sends_telemetry_event": true

@@ -13,24 +13,12 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "location": {
-                "biomes": "blocksforbuilders:autumnal_forest",
-                "position": {
-                  "y": {
-                    "max": 319.0
-                  }
-                }
+              "stepping_on": {
+              "biomes": "blocksforbuilders:autumnal_forest"
               }
             }
           }
-        ],
-        "start_position": {
-          "position": {
-            "y": {
-              "min": -59.0
-            }
-          }
-        }
+        ]
       },
       "trigger": "minecraft:fall_from_height"
     }

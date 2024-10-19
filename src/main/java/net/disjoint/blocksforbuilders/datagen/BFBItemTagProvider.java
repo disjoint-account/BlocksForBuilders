@@ -134,6 +134,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB.asItem())
@@ -146,6 +147,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS.asItem())
@@ -161,6 +163,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR.asItem());
 
         getOrCreateTagBuilder(ItemTags.WALLS)
+                .add(BlocksForBuildersBlocks.GRIMSTONE_WALL.asItem())
                 .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL.asItem())
@@ -341,6 +344,23 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB.asItem())
-                .add(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL.asItem());
+                .add(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_WALL.asItem())
+                .add(BlocksForBuildersBlocks.CHISELED_GRIMSTONE.asItem())
+                .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE.asItem())
+                .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_BRICKS.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_TILES.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL.asItem());
     }
 }

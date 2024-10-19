@@ -1,6 +1,10 @@
 {
   "values": [
     "blocksforbuilders:grimstone",
+    "blocksforbuilders:grimstone_stairs",
+    "blocksforbuilders:grimstone_slab",
+    "blocksforbuilders:grimstone_wall",
+    "blocksforbuilders:chiseled_grimstone",
     "blocksforbuilders:polished_grimstone",
     "blocksforbuilders:polished_grimstone_stairs",
     "blocksforbuilders:polished_grimstone_slab",

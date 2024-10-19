@@ -61,6 +61,10 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(BlocksForBuildersBlocks.GRIMSTONE,
+                        BlocksForBuildersBlocks.GRIMSTONE_STAIRS,
+                        BlocksForBuildersBlocks.GRIMSTONE_SLAB,
+                        BlocksForBuildersBlocks.GRIMSTONE_WALL,
+                        BlocksForBuildersBlocks.CHISELED_GRIMSTONE,
                         BlocksForBuildersBlocks.POLISHED_GRIMSTONE,
                         BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS,
                         BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB,
@@ -197,6 +201,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_SLAB,
                         BlocksForBuildersBlocks.WILLOW_SLAB,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB,
+                        BlocksForBuildersBlocks.GRIMSTONE_SLAB,
                         BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB,
@@ -209,6 +214,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_STAIRS,
                         BlocksForBuildersBlocks.WILLOW_STAIRS,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS,
+                        BlocksForBuildersBlocks.GRIMSTONE_STAIRS,
                         BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS,
                         BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS,
@@ -242,7 +248,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_SIGN);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL,
+                .add(BlocksForBuildersBlocks.GRIMSTONE_WALL,
+                    BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL,
                     BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL,
                     BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL,
                     BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL,

@@ -12,38 +12,20 @@
   },
   "parent": "blocksforbuilders:a_purpose_at_last",
   "criteria": {
-    "plant_cocoa": {
+    "has_green_jungle_sapling": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "location": [
+        "items": [
           {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                  "blocks": [
-                    "blocksforbuilders:green_jungle_log",
-                    "blocksforbuilders:green_jungle_wood",
-                    "blocksforbuilders:stripped_green_jungle_log",
-                    "blocksforbuilders:stripped_green_jungle_wood"
-                    ]
-                }
-            }
-          },
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": [
-                "minecraft:cocoa_beans"
-              ]
-            }
+            "items": "blocksforbuilders:green_jungle_sapling"
           }
         ]
-      },
-      "trigger": "minecraft:item_used_on_block"
+      }
     }
   },
   "requirements": [
     [
-      "plant_cocoa"
+      "has_green_jungle_sapling"
     ]
   ],
   "sends_telemetry_event": true

@@ -45,6 +45,10 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
         offerSmelting(exporter, BLACKNB, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_BLACK_NETHER_BRICKS, 0.1f, 200, "cracked_black_nether_bricks");
         offerSmelting(exporter, REDNB, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_RED_NETHER_BRICKS, 0.1f, 200, "cracked_red_nether_bricks");
 
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_SLAB, BlocksForBuildersBlocks.GRIMSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_WALL, BlocksForBuildersBlocks.GRIMSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_GRIMSTONE, BlocksForBuildersBlocks.GRIMSTONE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, BlocksForBuildersBlocks.GRIMSTONE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB, BlocksForBuildersBlocks.GRIMSTONE, 2);
@@ -234,6 +238,10 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 .input('W', Items.COBBLED_DEEPSLATE)
                 .criterion(hasItem(Items.COBBLED_DEEPSLATE), conditionsFromItem(Items.COBBLED_DEEPSLATE))
                 .offerTo(exporter);
+        offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_SLAB, BlocksForBuildersBlocks.GRIMSTONE);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_WALL, BlocksForBuildersBlocks.GRIMSTONE);
+        offerChiseledRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CHISELED_GRIMSTONE, BlocksForBuildersBlocks.GRIMSTONE_SLAB);
         offerStoneRecipe(exporter, BlocksForBuildersBlocks.POLISHED_GRIMSTONE, BlocksForBuildersBlocks.GRIMSTONE);
         offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB, BlocksForBuildersBlocks.POLISHED_GRIMSTONE);

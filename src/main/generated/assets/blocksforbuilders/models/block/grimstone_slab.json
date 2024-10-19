@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "blocksforbuilders:block/grimstone",
+    "side": "blocksforbuilders:block/grimstone",
+    "top": "blocksforbuilders:block/grimstone"
+  }
+}
