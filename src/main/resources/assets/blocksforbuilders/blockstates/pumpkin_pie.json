@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "chomps=0": {
+      "model": "blocksforbuilders:block/pumpkin_pie"
+    },
+    "chomps=1": {
+      "model": "blocksforbuilders:block/pumpkin_pie_slice1"
+    },
+    "chomps=2": {
+      "model": "blocksforbuilders:block/pumpkin_pie_slice2"
+    },
+    "chomps=3": {
+      "model": "blocksforbuilders:block/pumpkin_pie_slice3"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "blocksforbuilders:block/pie_template_slice1",
+  "textures": {
+    "side": "blocksforbuilders:block/pumpkin_pie_side",
+    "inside": "blocksforbuilders:block/pumpkin_pie_inside",
+    "top": "blocksforbuilders:block/pumpkin_pie_top",
+    "bottom": "blocksforbuilders:block/pumpkin_pie_bottom"
+  }
+}

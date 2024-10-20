@@ -353,6 +353,7 @@ public class BlocksForBuildersBlocks {
     private static Block registerBlock(String name, Block block) {
         return registerBlock(name, true, block);
     }
+
     private static Block registerBlock(String name, boolean createItem, Block block) {
         if (createItem) { registerBlockItem(name, block); }
         return Registry.register(Registries.BLOCK, Identifier.of(BlocksForBuilders.MOD_ID, name), block);

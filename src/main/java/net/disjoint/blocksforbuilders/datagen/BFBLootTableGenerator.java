@@ -192,7 +192,6 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(BlocksForBuildersBlocks.HAY_STAIRS);
         addDrop(BlocksForBuildersBlocks.HAY_SLAB, slabDrops(BlocksForBuildersBlocks.HAY_SLAB));
-
     }
     public LootTable.Builder bookshelfDrops(Block drop, Item item, float minDrops, float maxDrops) {
         RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);

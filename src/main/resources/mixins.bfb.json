@@ -13,7 +13,8 @@
     "MixinAbstractBlockSettings",
     "MixinBlockEntityType",
     "MixinBoatEntity",
-    "MixinEntityPredicate"
+    "MixinEntityPredicate",
+    "MixinPumpkinPie"
   ],
   "injectors": {
     "defaultRequire": 1
