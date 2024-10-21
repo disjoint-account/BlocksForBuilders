@@ -29,7 +29,10 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF,
                         BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF,
                         BlocksForBuildersBlocks.WILLOW_BOOKSHELF,
-                        BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF);
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF,
+                        BlocksForBuildersBlocks.BAMBOO_THATCH,
+                        BlocksForBuildersBlocks.BAMBOO_THATCH_RUG,
+                        BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG);
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES,
@@ -201,6 +204,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_SLAB,
                         BlocksForBuildersBlocks.WILLOW_SLAB,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB,
+                        BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_SLAB,
                         BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB,
@@ -214,6 +218,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_STAIRS,
                         BlocksForBuildersBlocks.WILLOW_STAIRS,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS,
+                        BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS,
                         BlocksForBuildersBlocks.GRIMSTONE_STAIRS,
                         BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS,
@@ -285,13 +290,15 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB,
                         BlocksForBuildersBlocks.GHOSTWOOD_SLAB,
                         BlocksForBuildersBlocks.WILLOW_SLAB,
-                        BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB);
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB,
+                        BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS,
                         BlocksForBuildersBlocks.GHOSTWOOD_STAIRS,
                         BlocksForBuildersBlocks.WILLOW_STAIRS,
-                        BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS);
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS,
+                        BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR,
@@ -322,6 +329,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_AZALEA_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES);
+                        BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES,
+                        BlocksForBuildersBlocks.BAMBOO_THATCH_RUG,
+                        BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG);
     }
 }

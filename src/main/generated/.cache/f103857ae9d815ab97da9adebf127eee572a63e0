@@ -1,22 +1,22 @@
-// 1.21	2024-10-20T19:31:14.713373	Blocks For Builders/Tags for minecraft:block
+// 1.21	2024-10-21T13:41:13.8071133	Blocks For Builders/Tags for minecraft:block
+2ca196d36adec26aecf7b1939331a4f877584e2e data\minecraft\tags\block\wooden_slabs.json
 f5828ebfb85f9578d8ef7875129aaca4c5d31d2e data\minecraft\tags\block\wooden_doors.json
-65b678894b73a8d43b38ede8a1ae3975ce3839c5 data\minecraft\tags\block\wooden_slabs.json
 22e7f916cbeab17ccd0d93ad3547d8f4a5d571a7 data\minecraft\tags\block\planks.json
 4904ef0e8594395a1e1d19d3f7cefa1d9c31de3a data\minecraft\tags\block\wooden_buttons.json
 b0a7643656d5c5d2a888a29c66a60f652bb2ec4d data\minecraft\tags\block\logs_that_burn.json
 8ccaa510b80f50fd0ed58863ca06c9226f56e46d data\minecraft\tags\block\standing_signs.json
-206eb8dc9d5cecc343226896076ae430aa13a5b9 data\minecraft\tags\block\wooden_stairs.json
+1b36b7db42663d7b8addc5cb7d1d9a2515fb77b0 data\minecraft\tags\block\wooden_stairs.json
 6fd08f47413095be8e07cdc8eaadda9017e07adf data\minecraft\tags\block\leaves.json
 f1b9aed8b8a8c36ab246bb1dba21aaab86f015a9 data\minecraft\tags\block\trapdoors.json
-29a0bd92a7051cc22ad530b5339f64bb2634fe66 data\minecraft\tags\block\stairs.json
+0cb8e3dcede0137554248cd22549acbf5b9882cb data\minecraft\tags\block\stairs.json
 313492c85ea0ccb718486d247bbcb42e71ba8ddd data\minecraft\tags\block\walls.json
 e6c8f12b0f04c94c88366c3a7ab8dac84e53dc0c data\minecraft\tags\block\fence_gates.json
-edaaf91cea19b1bf9e3a79d17ebb9a5f2ce56a81 data\minecraft\tags\block\inside_step_sound_blocks.json
+d296a119fe78f0339d7a935f21fc5abc6ff7bfd6 data\minecraft\tags\block\inside_step_sound_blocks.json
 f1b9aed8b8a8c36ab246bb1dba21aaab86f015a9 data\minecraft\tags\block\wooden_trapdoors.json
 d859a6ffad4f8225a59104199c8921802f4bdead data\minecraft\tags\block\wall_signs.json
-5e23067429927189e1bf46fb5995c73c7c186d38 data\minecraft\tags\block\slabs.json
+937545ea97dcb40983f6e1e193ac6abc8c39ffec data\minecraft\tags\block\slabs.json
 77dbb44fdd086ca170f108eb34f6b46ebe329db9 data\minecraft\tags\block\mineable\pickaxe.json
-737bec799431817ba05bfd452ba876938561f22c data\minecraft\tags\block\mineable\axe.json
+b2e0b59dd728e8878a271b2af4afc029423b4ac3 data\minecraft\tags\block\mineable\axe.json
 aac909db4eca0ca3a04fb42c4907e3341c82b05b data\minecraft\tags\block\fences.json
 a195fd5e2394ec455179b4558772b0384db89e28 data\minecraft\tags\block\wall_hanging_signs.json
 f5828ebfb85f9578d8ef7875129aaca4c5d31d2e data\minecraft\tags\block\doors.json

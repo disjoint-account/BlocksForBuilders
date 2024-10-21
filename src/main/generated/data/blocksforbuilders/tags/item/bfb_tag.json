@@ -146,6 +146,10 @@
     "blocksforbuilders:grimstone_tiles",
     "blocksforbuilders:grimstone_tile_stairs",
     "blocksforbuilders:grimstone_tile_slab",
-    "blocksforbuilders:grimstone_tile_wall"
+    "blocksforbuilders:grimstone_tile_wall",
+    "blocksforbuilders:bamboo_thatch",
+    "blocksforbuilders:bamboo_thatch_stairs",
+    "blocksforbuilders:bamboo_thatch_slab",
+    "blocksforbuilders:bamboo_thatch_rug"
   ]
 }

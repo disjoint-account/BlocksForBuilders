@@ -350,6 +350,18 @@ public class BlocksForBuildersBlocks {
     public static final Block GRIMSTONE_TILE_WALL = registerBlock("grimstone_tile_wall",
             new WallBlock(AbstractBlock.Settings.copy(DEEPSLATE_TILE_WALL).mapColor(MapColor.TERRACOTTA_PURPLE).sounds(BlockSoundGroup.DEEPSLATE)));
 
+    public static final Block BAMBOO_MOSAIC_RUG = registerBlock("bamboo_mosaic_rug",
+            new CarpetBlock(AbstractBlock.Settings.copy(BAMBOO_MOSAIC)));
+    public static final Block BAMBOO_THATCH = registerBlock("bamboo_thatch",
+            new PillarBlock(AbstractBlock.Settings.copy(BAMBOO_MOSAIC)));
+    public static final Block BAMBOO_THATCH_STAIRS = registerBlock("bamboo_thatch_stairs",
+            new StairsBlock(BAMBOO_THATCH.getDefaultState(), AbstractBlock.Settings.copy(BAMBOO_MOSAIC)));
+    public static final Block BAMBOO_THATCH_SLAB = registerBlock("bamboo_thatch_slab",
+            new DirectionalSlab(AbstractBlock.Settings.copy(BAMBOO_MOSAIC)));
+    public static final Block BAMBOO_THATCH_RUG = registerBlock("bamboo_thatch_rug",
+            new DirectionalCarpet(AbstractBlock.Settings.copy(BAMBOO_MOSAIC)));
+
+
     private static Block registerBlock(String name, Block block) {
         return registerBlock(name, true, block);
     }

@@ -139,6 +139,11 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS);
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB);
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL);
+                        entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH);
+                        entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB);
+                        entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG);
+                        entries.add(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG);
                         entries.add(BlocksForBuildersBlocks.HAY_STAIRS);
                         entries.add(BlocksForBuildersBlocks.HAY_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);

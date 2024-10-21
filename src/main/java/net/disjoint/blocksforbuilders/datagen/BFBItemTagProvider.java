@@ -134,6 +134,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB.asItem())
@@ -147,6 +148,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS.asItem())
@@ -200,13 +202,15 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB.asItem())
-                .add(BlocksForBuildersBlocks.WILLOW_SLAB.asItem());
+                .add(BlocksForBuildersBlocks.WILLOW_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS.asItem())
-                .add(BlocksForBuildersBlocks.WILLOW_STAIRS.asItem());
+                .add(BlocksForBuildersBlocks.WILLOW_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR.asItem())
@@ -361,6 +365,10 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GRIMSTONE_TILES.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB.asItem())
-                .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL.asItem());
+                .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL.asItem())
+                .add(BlocksForBuildersBlocks.BAMBOO_THATCH.asItem())
+                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG.asItem());
     }
 }

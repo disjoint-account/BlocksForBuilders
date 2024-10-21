@@ -259,6 +259,17 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
 
         offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.HAY_STAIRS, Blocks.HAY_BLOCK);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.HAY_SLAB, Blocks.HAY_BLOCK);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_THATCH, 9)
+                .pattern("##")
+                .pattern("##")
+                .input('#', Blocks.STRIPPED_BAMBOO_BLOCK)
+                .criterion(hasItem(Blocks.STRIPPED_BAMBOO_BLOCK), conditionsFromItem(Blocks.STRIPPED_BAMBOO_BLOCK))
+                .offerTo(exporter);
+        offerStairsRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS, BlocksForBuildersBlocks.BAMBOO_THATCH);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB, BlocksForBuildersBlocks.BAMBOO_THATCH);
+        offerAltCarpetRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_THATCH_RUG, BlocksForBuildersBlocks.BAMBOO_THATCH);
+        offerAltCarpetRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG, Blocks.BAMBOO_MOSAIC);
     }
 
     public static void offerSignRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -444,6 +455,13 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 4)
                 .input('#', input)
                 .pattern("##")
+                .pattern("##")
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+    public static void offerAltCarpetRecipe(RecipeExporter exporter, RecipeCategory Category, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(Category, output, 3)
+                .input('#', input)
                 .pattern("##")
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
