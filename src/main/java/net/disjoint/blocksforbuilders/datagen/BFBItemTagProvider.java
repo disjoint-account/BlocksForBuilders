@@ -369,6 +369,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB.asItem())
-                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG.asItem());
+                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG.asItem())
+                .add(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG.asItem());
     }
 }
