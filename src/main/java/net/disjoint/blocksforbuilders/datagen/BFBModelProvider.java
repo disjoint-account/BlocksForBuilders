@@ -46,7 +46,7 @@ public class BFBModelProvider extends FabricModelProvider {
         willowTexturePool.pressurePlate(BlocksForBuildersBlocks.WILLOW_PRESSURE_PLATE);
         willowTexturePool.button(BlocksForBuildersBlocks.WILLOW_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.WILLOW_DOOR);
-        blockStateModelGenerator.registerTrapdoor(BlocksForBuildersBlocks.WILLOW_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.WILLOW_TRAPDOOR);
 
         blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG).log(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG).wood(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD);
         blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG).log(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG).wood(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD);
@@ -59,7 +59,7 @@ public class BFBModelProvider extends FabricModelProvider {
         greenJungleTexturePool.pressurePlate(BlocksForBuildersBlocks.GREEN_JUNGLE_PRESSURE_PLATE);
         greenJungleTexturePool.button(BlocksForBuildersBlocks.GREEN_JUNGLE_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR);
-        blockStateModelGenerator.registerTrapdoor(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR);
 
         greenBambooTexturePool.stairs(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS);
         greenBambooTexturePool.slab(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB);
@@ -68,7 +68,7 @@ public class BFBModelProvider extends FabricModelProvider {
         greenBambooTexturePool.pressurePlate(BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE);
         greenBambooTexturePool.button(BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR);
-        blockStateModelGenerator.registerTrapdoor(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
 
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.RED_OAK_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerFlowerPotPlant(BlocksForBuildersBlocks.RED_OAK_SAPLING, BlocksForBuildersBlocks.POTTED_RED_OAK_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
