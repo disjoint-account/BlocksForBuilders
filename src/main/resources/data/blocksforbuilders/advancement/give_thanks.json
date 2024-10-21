@@ -4,37 +4,39 @@
       "id": "minecraft:pumpkin_pie"
     },
     "title": {
-      "translate": "advancements.blocksforbuilders.give_thanks.title"
+      "translate":"advancements.blocksforbuilders.give_thanks.title"
     },
     "description": {
-      "translate": "advancements.blocksforbuilders.give_thanks.description"
+      "translate":"advancements.blocksforbuilders.give_thanks.description"
     }
   },
   "parent": "blocksforbuilders:sweater_weather",
   "criteria": {
-    "eat_pie_in_forest": {
-      "trigger": "minecraft:consume_item",
+    "place_pie": {
+      "trigger": "minecraft:any_block_use",
       "conditions": {
-        "player": [
+        "location": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
+            "condition": "minecraft:location_check",
             "predicate": {
-              "location": {
-                "biomes": "blocksforbuilders:autumnal_forest"
-              }
+              "biomes": "blocksforbuilders:autumnal_forest"
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:pumpkin_pie"
+              ]
             }
           }
-        ],
-        "item": {
-          "items": "minecraft:pumpkin_pie"
-        }
+        ]
       }
     }
   },
   "requirements": [
     [
-      "eat_pie_in_forest"
+      "place_pie"
     ]
   ],
   "sends_telemetry_event": true
