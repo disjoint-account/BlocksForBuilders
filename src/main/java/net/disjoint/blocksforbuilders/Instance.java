@@ -29,6 +29,7 @@ public class Instance {
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES, 30, 60);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, 30, 60);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, 30, 60);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.BAMBOO_THATCH, 5, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF, 30, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.SPRUCE_BOOKSHELF, 30, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.JUNGLE_BOOKSHELF, 30, 20);
@@ -90,6 +91,9 @@ public class Instance {
             FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, 300);
             FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, 300);
             FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, 300);
+            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.BAMBOO_THATCH, 300);
+            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG, 75);
+            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG, 75);
         }
         addStrippables();
     }
