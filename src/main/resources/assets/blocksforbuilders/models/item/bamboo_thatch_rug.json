@@ -3,7 +3,7 @@
     "textures": {
         "bottom": "blocksforbuilders:block/bamboo_thatch_side",
         "top": "blocksforbuilders:block/bamboo_thatch_side_bottom",
-        "side": "blocksforbuilders:block/bamboo_thatch_side_right",
+        "side": "blocksforbuilders:block/bamboo_thatch_side_left",
         "left": "blocksforbuilders:block/bamboo_thatch_top",
         "right": "blocksforbuilders:block/bamboo_thatch_top"
     }
