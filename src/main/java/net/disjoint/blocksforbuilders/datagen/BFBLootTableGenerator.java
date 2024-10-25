@@ -200,7 +200,6 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG);
     }
     public LootTable.Builder bookshelfDrops(Block drop, Item item, float minDrops, float maxDrops) {
-        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
         return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
                 ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))));
     }

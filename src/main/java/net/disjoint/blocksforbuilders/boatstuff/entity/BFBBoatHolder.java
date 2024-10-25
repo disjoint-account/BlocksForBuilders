@@ -2,6 +2,8 @@ package net.disjoint.blocksforbuilders.boatstuff.entity;
 
 import net.disjoint.blocksforbuilders.boatstuff.registry.BFBBoatTypeRegistry;
 import net.disjoint.blocksforbuilders.boatstuff.util.BFBBoatType;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.vehicle.AbstractBoatEntity;
 import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Identifier;
@@ -34,7 +36,7 @@ public interface BFBBoatHolder {
         }
     }
 
-    default BoatEntity.Type getImpersonatedBoatType() {
-        return this.getBFBBoat().isRaft() ? BoatEntity.Type.BAMBOO : BoatEntity.Type.OAK;
+    default EntityType<? extends AbstractBoatEntity> getImpersonatedBoatType() {
+        return this.getBFBBoat().isRaft() ? EntityType.BAMBOO_RAFT : EntityType.OAK_BOAT;
     }
 }

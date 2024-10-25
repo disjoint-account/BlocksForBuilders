@@ -79,23 +79,25 @@ public class Instance {
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_SLAB, 0.85f);
         }
         {
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.SPRUCE_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.JUNGLE_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.DARK_OAK_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.ACACIA_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.MANGROVE_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.CHERRY_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.BAMBOO_THATCH, 300);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG, 75);
-            FuelRegistry.INSTANCE.add(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG, 75);
+            FuelRegistryEvents.BUILD.register((builder, context) -> {
+                        builder.add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.SPRUCE_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.JUNGLE_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.DARK_OAK_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.ACACIA_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.MANGROVE_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.CHERRY_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.BAMBOO_THATCH, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG, context.baseSmeltTime() / 2);
+                        builder.add(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG, context.baseSmeltTime() / 2);
+                    });
+                    addStrippables();
         }
-        addStrippables();
     }
 
     public static void addStrippables() {

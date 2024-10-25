@@ -23,9 +23,9 @@ public final class BFBBoatClient {
 
     private static EntityModelLayerRegistry.TexturedModelDataProvider getTexturedModelDataProvider(boolean raft, boolean chest) {
         if (raft) {
-            return chest ? ChestRaftEntityModel::getTexturedModelData : RaftEntityModel::getTexturedModelData;
+            return chest ? RaftEntityModel::getChestTexturedModelData : RaftEntityModel::getTexturedModelData;
         } else {
-            return chest ? ChestBoatEntityModel::getTexturedModelData : BoatEntityModel::getTexturedModelData;
+            return chest ? BoatEntityModel::getChestTexturedModelData : BoatEntityModel::getTexturedModelData;
         }
     }
 

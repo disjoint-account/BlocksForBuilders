@@ -6,6 +6,7 @@ import net.disjoint.blocksforbuilders.boatstuff.util.BFBBoatType;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.vehicle.AbstractBoatEntity;
 import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NbtCompound;
@@ -72,13 +73,11 @@ public class BFBBoatEntity extends BoatEntity implements BFBBoatHolder {
         }
     }
 
-    @Override
-    public void setVariant(BoatEntity.Type type) {
+    public void setVariant(EntityType<? extends AbstractBoatEntity> type) {
         return;
     }
 
-    @Override
-    public BoatEntity.Type getVariant() {
+    public EntityType<? extends AbstractBoatEntity> getVariant() {
         return this.getImpersonatedBoatType();
     }
 

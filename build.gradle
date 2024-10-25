@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.7-SNAPSHOT'
+	id 'fabric-loom' version '1.8-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -28,9 +28,9 @@ dependencies {
 
 	include(implementation(annotationProcessor("com.github.llamalad7.mixinextras:mixinextras-fabric:0.2.0-beta.5")))
 
-	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:11.0.0-alpha.1"
-	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:11.0.0-alpha.1"
-	modCompileOnly "com.terraformersmc.terraform-api:terraform-shapes-api-v1:11.0.0-alpha.1"
+	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:11.0.0"
+	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:11.0.0"
+	modCompileOnly "com.terraformersmc.terraform-api:terraform-shapes-api-v1:11.0.0"
 
 	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21-4.0.0.2'
 }

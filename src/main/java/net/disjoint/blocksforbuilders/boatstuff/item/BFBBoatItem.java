@@ -15,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.stat.Stats;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.HitResult;
@@ -45,12 +46,12 @@ public class BFBBoatItem extends Item {
         DispenserBlock.registerBehavior(item, new BFBBoatDispenserBehavior(boatKey, chest));
     }
 
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public ActionResult use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
 
         HitResult hitResult = Item.raycast(world, user, RaycastContext.FluidHandling.ANY);
         if (hitResult.getType() == HitResult.Type.MISS) {
-            return TypedActionResult.pass(stack);
+            return ActionResult.PASS;
         }
 
         Vec3d rotationVec = user.getRotationVec(1f);
@@ -62,7 +63,7 @@ public class BFBBoatItem extends Item {
             for (Entity entity : riders) {
                 Box box = entity.getBoundingBox().expand(entity.getTargetingMargin());
                 if (box.contains(eyePos)) {
-                    return TypedActionResult.pass(stack);
+                    return ActionResult.PASS;
                 }
             }
         }
@@ -89,7 +90,7 @@ public class BFBBoatItem extends Item {
             boatEntity.setYaw(user.getYaw());
 
             if (!world.isSpaceEmpty(boatEntity, boatEntity.getBoundingBox().expand(-0.1d))) {
-                return TypedActionResult.fail(stack);
+                return ActionResult.FAIL;
             }
 
             if (!world.isClient()) {
@@ -102,9 +103,9 @@ public class BFBBoatItem extends Item {
             }
 
             user.incrementStat(Stats.USED.getOrCreateStat(this));
-            return TypedActionResult.success(stack, world.isClient());
+            return ActionResult.SUCCESS;
         }
 
-        return TypedActionResult.pass(stack);
+        return ActionResult.PASS;
     }
 }
