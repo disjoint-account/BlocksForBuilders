@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "fallen_leaves",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:red_oak_leaves"
-    }
+    "#": "blocksforbuilders:red_oak_leaves"
   },
   "pattern": [
     "##"

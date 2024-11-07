@@ -3,12 +3,8 @@
   "category": "building",
   "group": "bookshelf",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:ghostwood_planks"
-    },
-    "X": {
-      "item": "minecraft:book"
-    }
+    "#": "blocksforbuilders:ghostwood_planks",
+    "X": "minecraft:book"
   },
   "pattern": [
     "###",

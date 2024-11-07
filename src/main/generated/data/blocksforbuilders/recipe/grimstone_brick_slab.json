@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:grimstone_bricks"
-    }
+    "#": "blocksforbuilders:grimstone_bricks"
   },
   "pattern": [
     "###"

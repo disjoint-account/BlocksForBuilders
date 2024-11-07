@@ -3,12 +3,8 @@
   "category": "building",
   "group": "bookshelf",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:willow_planks"
-    },
-    "X": {
-      "item": "minecraft:book"
-    }
+    "#": "blocksforbuilders:willow_planks",
+    "X": "minecraft:book"
   },
   "pattern": [
     "###",

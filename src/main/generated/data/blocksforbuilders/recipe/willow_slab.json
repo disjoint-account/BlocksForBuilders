@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_slab",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:willow_planks"
-    }
+    "#": "blocksforbuilders:willow_planks"
   },
   "pattern": [
     "###"

@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "chest_boat",
   "ingredients": [
-    {
-      "item": "minecraft:chest"
-    },
-    {
-      "item": "blocksforbuilders:green_jungle_boat"
-    }
+    "minecraft:chest",
+    "blocksforbuilders:green_jungle_boat"
   ],
   "result": {
     "count": 1,

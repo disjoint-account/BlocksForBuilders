@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_fence",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:willow_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
+    "#": "blocksforbuilders:willow_planks",
+    "X": "minecraft:stick"
   },
   "pattern": [
     "#X#",

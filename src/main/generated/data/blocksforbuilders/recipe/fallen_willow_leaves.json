@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "fallen_leaves",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:willow_leaves"
-    }
+    "#": "blocksforbuilders:willow_leaves"
   },
   "pattern": [
     "##"

@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_fence",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:green_bamboo_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
+    "#": "blocksforbuilders:green_bamboo_planks",
+    "X": "minecraft:stick"
   },
   "pattern": [
     "#X#",

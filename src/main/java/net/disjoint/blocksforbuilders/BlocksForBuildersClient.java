@@ -1,7 +1,6 @@
 package net.disjoint.blocksforbuilders;
 
-import net.disjoint.blocksforbuilders.boatstuff.entity.BFBBoatEntityRenderer;
-import net.disjoint.blocksforbuilders.boatstuff.registry.BoatTypes;
+import net.disjoint.blocksforbuilders.boatstuff.BFBEntityModelLayers;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
@@ -14,6 +13,8 @@ public class BlocksForBuildersClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        BFBEntityModelLayers.registerEntityModelLayers();
+
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.POTTED_GREEN_JUNGLE_SAPLING, RenderLayer.getCutout());
@@ -51,11 +52,6 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES, RenderLayer.getCutout());
-
-        EntityRendererRegistry.register(BlocksForBuilders.BOAT, context -> new BFBBoatEntityRenderer(context, false));
-        EntityRendererRegistry.register(BlocksForBuilders.CHEST_BOAT, context -> new BFBBoatEntityRenderer(context, true));
-
-        BoatTypes.registerBFBModelLayers();
     }
     {
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {

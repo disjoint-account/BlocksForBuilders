@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "fallen_leaves",
   "key": {
-    "#": {
-      "item": "minecraft:acacia_leaves"
-    }
+    "#": "minecraft:acacia_leaves"
   },
   "pattern": [
     "##"

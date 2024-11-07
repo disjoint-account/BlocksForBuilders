@@ -3,9 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    {
-      "tag": "blocksforbuilders:green_jungle_wood"
-    }
+    "#blocksforbuilders:green_jungle_wood"
   ],
   "result": {
     "count": 4,

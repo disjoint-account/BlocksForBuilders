@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "chest_boat",
   "ingredients": [
-    {
-      "item": "minecraft:chest"
-    },
-    {
-      "item": "blocksforbuilders:green_bamboo_raft"
-    }
+    "minecraft:chest",
+    "blocksforbuilders:green_bamboo_raft"
   ],
   "result": {
     "count": 1,

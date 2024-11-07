@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_pressure_plate",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:ghostwood_planks"
-    }
+    "#": "blocksforbuilders:ghostwood_planks"
   },
   "pattern": [
     "##"

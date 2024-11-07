@@ -13,10 +13,6 @@ group = project.maven_group
 repositories {
 	maven { url = "https://jitpack.io" }
 	maven { url = 'https://maven.minecraftforge.net/' }
-	maven {
-		name = 'TerraformersMC'
-		url = 'https://maven.terraformersmc.com/'
-	}
 }
 
 dependencies {
@@ -28,11 +24,7 @@ dependencies {
 
 	include(implementation(annotationProcessor("com.github.llamalad7.mixinextras:mixinextras-fabric:0.2.0-beta.5")))
 
-	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:11.0.0"
-	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:11.0.0"
-	modCompileOnly "com.terraformersmc.terraform-api:terraform-shapes-api-v1:11.0.0"
-
-	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21-4.0.0.2'
+	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21.3-4.2.0.0'
 }
 
 loom {

@@ -3,9 +3,7 @@
   "category": "building",
   "group": "planks",
   "key": {
-    "W": {
-      "item": "minecraft:bamboo_block"
-    }
+    "W": "minecraft:bamboo_block"
   },
   "pattern": [
     "WW",

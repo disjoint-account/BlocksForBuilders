@@ -240,6 +240,12 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_TRAPDOOR,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
 
+        getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
+                .add(BlocksForBuildersBlocks.GREEN_JUNGLE_HANGING_SIGN,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_HANGING_SIGN,
+                        BlocksForBuildersBlocks.GHOSTWOOD_HANGING_SIGN,
+                        BlocksForBuildersBlocks.WILLOW_HANGING_SIGN);
+
         getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_HANGING_SIGN,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_HANGING_SIGN,

@@ -3,12 +3,8 @@
   "category": "building",
   "group": "bookshelf",
   "key": {
-    "#": {
-      "item": "minecraft:jungle_planks"
-    },
-    "X": {
-      "item": "minecraft:book"
-    }
+    "#": "minecraft:jungle_planks",
+    "X": "minecraft:book"
   },
   "pattern": [
     "###",

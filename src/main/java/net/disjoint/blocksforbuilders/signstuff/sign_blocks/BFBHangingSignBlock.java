@@ -1,5 +1,6 @@
 package net.disjoint.blocksforbuilders.signstuff.sign_blocks;
 
+import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.signstuff.util.BFBHangingSign;
 import net.disjoint.blocksforbuilders.signstuff.util.BlockSettingsLock;
 import net.minecraft.block.AbstractBlock;
@@ -8,22 +9,20 @@ import net.minecraft.block.WoodType;
 import net.minecraft.util.Identifier;
 
 public class BFBHangingSignBlock extends HangingSignBlock implements BFBHangingSign {
-    private final Identifier texture;
-    private final Identifier guiTexture;
+    private final String texture;
 
-    public BFBHangingSignBlock(Identifier texture, Identifier guiTexture, AbstractBlock.Settings settings) {
-        super(WoodType.OAK, BlockSettingsLock.lock(settings));
+    public BFBHangingSignBlock(String texture, WoodType woodType, AbstractBlock.Settings settings) {
+        super(woodType, BlockSettingsLock.lock(settings));
         this.texture = texture;
-        this.guiTexture = guiTexture;
     }
 
     @Override
     public Identifier getTexture() {
-        return texture;
+        return Identifier.of(BlocksForBuilders.MOD_ID, "entity/signs/hanging/" + texture);
     }
 
     @Override
     public Identifier getGUITexture() {
-        return guiTexture;
+        return Identifier.of(BlocksForBuilders.MOD_ID, "textures/gui/hanging_signs/" + texture);
     }
 }

@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_sign",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:ghostwood_sign"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
+    "#": "blocksforbuilders:ghostwood_sign",
+    "X": "minecraft:stick"
   },
   "pattern": [
     "###",

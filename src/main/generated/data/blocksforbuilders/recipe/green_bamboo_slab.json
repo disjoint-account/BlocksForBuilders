@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_slab",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:green_bamboo_planks"
-    }
+    "#": "blocksforbuilders:green_bamboo_planks"
   },
   "pattern": [
     "###"

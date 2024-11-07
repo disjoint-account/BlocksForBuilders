@@ -3,9 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    {
-      "tag": "blocksforbuilders:ghostwood_wood"
-    }
+    "#blocksforbuilders:ghostwood_wood"
   ],
   "result": {
     "count": 4,

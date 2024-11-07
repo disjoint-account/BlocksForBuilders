@@ -3,12 +3,8 @@
   "category": "building",
   "group": "bookshelf",
   "key": {
-    "#": {
-      "item": "minecraft:warped_planks"
-    },
-    "X": {
-      "item": "minecraft:book"
-    }
+    "#": "minecraft:warped_planks",
+    "X": "minecraft:book"
   },
   "pattern": [
     "###",

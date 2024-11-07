@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "fallen_leaves",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:green_jungle_leaves"
-    }
+    "#": "blocksforbuilders:green_jungle_leaves"
   },
   "pattern": [
     "##"

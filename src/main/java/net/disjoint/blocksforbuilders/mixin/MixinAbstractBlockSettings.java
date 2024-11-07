@@ -11,19 +11,18 @@ package net.disjoint.blocksforbuilders.mixin;
 @Mixin(AbstractBlock.Settings.class)
 public class MixinAbstractBlockSettings implements BlockSettingsLock {
     @Unique
-    private boolean terraform$locked = false;
+    private boolean bfb$locked = false;
 
     @Inject(method = "sounds", at = @At("HEAD"), cancellable = true)
     private void bfbWood$preventSoundsOverride(CallbackInfoReturnable<AbstractBlock.Settings> cir) {
-        if (this.terraform$locked) {
-            //noinspection ConstantConditions
+        if (this.bfb$locked) {
             cir.setReturnValue((AbstractBlock.Settings) (Object) this);
-            this.terraform$locked = false;
+            this.bfb$locked = false;
         }
     }
 
     @Override
     public void bfb$lock() {
-        this.terraform$locked = true;
+        this.bfb$locked = true;
     }
 }

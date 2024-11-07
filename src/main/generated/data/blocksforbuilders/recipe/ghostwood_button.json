@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_button",
   "ingredients": [
-    {
-      "item": "blocksforbuilders:ghostwood_planks"
-    }
+    "blocksforbuilders:ghostwood_planks"
   ],
   "result": {
     "count": 1,

@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_sign",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:green_bamboo_sign"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
+    "#": "blocksforbuilders:green_bamboo_sign",
+    "X": "minecraft:stick"
   },
   "pattern": [
     "###",

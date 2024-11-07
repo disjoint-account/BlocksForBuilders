@@ -1,4 +1,4 @@
-// 1.21	2024-10-21T15:54:35.1745409	Blocks For Builders/Tags for minecraft:block
+// 1.21.3	2024-11-07T21:39:18.7650895	Blocks For Builders/Tags for minecraft:block
 f5828ebfb85f9578d8ef7875129aaca4c5d31d2e data\minecraft\tags\block\wooden_doors.json
 2ca196d36adec26aecf7b1939331a4f877584e2e data\minecraft\tags\block\wooden_slabs.json
 22e7f916cbeab17ccd0d93ad3547d8f4a5d571a7 data\minecraft\tags\block\planks.json
@@ -18,12 +18,12 @@ d859a6ffad4f8225a59104199c8921802f4bdead data\minecraft\tags\block\wall_signs.js
 77dbb44fdd086ca170f108eb34f6b46ebe329db9 data\minecraft\tags\block\mineable\pickaxe.json
 b2e0b59dd728e8878a271b2af4afc029423b4ac3 data\minecraft\tags\block\mineable\axe.json
 aac909db4eca0ca3a04fb42c4907e3341c82b05b data\minecraft\tags\block\fences.json
-a195fd5e2394ec455179b4558772b0384db89e28 data\minecraft\tags\block\wall_hanging_signs.json
+c74fb1703644665d4b65727bb39d6460fe568dd4 data\minecraft\tags\block\wall_hanging_signs.json
 f5828ebfb85f9578d8ef7875129aaca4c5d31d2e data\minecraft\tags\block\doors.json
 737bec799431817ba05bfd452ba876938561f22c data\minecraft\tags\block\enchantment_power_provider.json
 bb94954dd7ec381b62fdd91cd0750399d35c9dad data\minecraft\tags\block\wooden_fences.json
 8c532561103d1430cbbeb8a287daa2de29a43322 data\minecraft\tags\block\jungle_logs.json
-7ded2637c74d872cb5ecc6ce7007ddbe381456fe data\minecraft\tags\block\ceiling_hanging_signs.json
+ac79ca943cc7524d5091e76eb6106458e4f48405 data\minecraft\tags\block\ceiling_hanging_signs.json
 05196b2edeabe7eb85951379ec2ba08adb410134 data\minecraft\tags\block\saplings.json
 a15e914965517fd96df61df587f80b35172ceace data\minecraft\tags\block\mineable\hoe.json
 798651119ef60fe82d41e87426cf111e69d86a5e data\minecraft\tags\block\wooden_pressure_plates.json

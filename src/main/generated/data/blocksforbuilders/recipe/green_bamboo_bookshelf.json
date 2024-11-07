@@ -3,12 +3,8 @@
   "category": "building",
   "group": "bookshelf",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:green_bamboo_planks"
-    },
-    "X": {
-      "item": "minecraft:book"
-    }
+    "#": "blocksforbuilders:green_bamboo_planks",
+    "X": "minecraft:book"
   },
   "pattern": [
     "###",

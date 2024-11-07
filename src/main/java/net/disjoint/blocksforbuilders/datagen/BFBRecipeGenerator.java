@@ -115,7 +115,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerNetherSlabRecipe(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
                 offerNetherStairsRecipe(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
                 offerNetherWallRecipe(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
-                this.createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS)
                         .group("nether_bricks")
                         .pattern("BW")
                         .pattern("WB")
@@ -159,7 +159,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerFenceRecipe(BlocksForBuildersBlocks.GHOSTWOOD_FENCE, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.GHOSTWOOD_FENCE_GATE, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
                 offerHangingSignRecipe(BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
-                this.createShapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS, 4)
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS, 4)
                         .group("planks")
                         .input(BFBTags.Items.GHOSTWOOD_LOGS)
                         .criterion("has_ghostwood_tag", conditionsFromTag(BFBTags.Items.GHOSTWOOD_LOGS))
@@ -179,7 +179,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerFenceRecipe(BlocksForBuildersBlocks.WILLOW_FENCE, BlocksForBuildersBlocks.WILLOW_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.WILLOW_FENCE_GATE, BlocksForBuildersBlocks.WILLOW_PLANKS);
                 offerHangingSignRecipe(BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
-                this.createShapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
                         .group("planks")
                         .input(BFBTags.Items.WILLOW_LOGS)
                         .criterion("has_willow_tag", conditionsFromTag(BFBTags.Items.WILLOW_LOGS))
@@ -199,7 +199,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerFenceRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE_GATE, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                 offerHangingSignRecipe(BlocksForBuildersItems.GREEN_JUNGLE_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG);
-                this.createShapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS, 4)
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS, 4)
                         .group("planks")
                         .input(BFBTags.Items.GREEN_JUNGLE_LOGS)
                         .criterion("has_green_jungle_tag", conditionsFromTag(BFBTags.Items.GREEN_JUNGLE_LOGS))
@@ -219,7 +219,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerFenceRecipe(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
                 offerHangingSignRecipe(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM, Blocks.BAMBOO_BLOCK);
-                this.createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, 4)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, 4)
                         .group("planks")
                         .pattern("WW")
                         .pattern("WW")
@@ -232,7 +232,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
 
-                this.createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE, 3)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE, 3)
                         .pattern("BW")
                         .pattern("WB")
                         .input('B', Items.GUNPOWDER)
@@ -261,7 +261,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.HAY_STAIRS, Blocks.HAY_BLOCK);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.HAY_SLAB, Blocks.HAY_BLOCK);
 
-                this.createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_THATCH, 9)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_THATCH, 9)
                         .pattern("##")
                         .pattern("##")
                         .input('#', Blocks.STRIPPED_BAMBOO_BLOCK)
@@ -274,7 +274,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerSignRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.MISC, output, 3)
+                createShaped(RecipeCategory.MISC, output, 3)
                         .group("wooden_sign")
                         .input('#', input)
                         .input('X', Items.STICK)
@@ -286,7 +286,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerFenceRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.MISC, output, 3)
+                createShaped(RecipeCategory.MISC, output, 3)
                         .group("wooden_fence")
                         .input('#', input)
                         .input('X', Items.STICK)
@@ -297,7 +297,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerFenceGateRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.REDSTONE, output, 1)
+                createShaped(RecipeCategory.REDSTONE, output, 1)
                         .group("wooden_fence_gate")
                         .input('#', input)
                         .input('X', Items.STICK)
@@ -308,7 +308,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerNetherFenceGateRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.REDSTONE, output, 1)
+                createShaped(RecipeCategory.REDSTONE, output, 1)
                         .group("nether_fence_gate")
                         .input('#', input)
                         .input('X', Items.NETHER_BRICK)
@@ -320,7 +320,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerNetherFenceRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.MISC, output, 3)
+                createShaped(RecipeCategory.MISC, output, 3)
                         .group("nether_fence")
                         .input('#', input)
                         .input('X', Items.NETHER_BRICK)
@@ -332,7 +332,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerNetherSlabRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.BUILDING_BLOCKS, output, 6)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, output, 6)
                         .group("nether_brick_slab")
                         .input('#', input)
                         .pattern("###")
@@ -341,7 +341,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerNetherStairsRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.BUILDING_BLOCKS, output, 4)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, output, 4)
                         .group("nether_brick_stairs")
                         .input('#', input)
                         .pattern("  #")
@@ -352,7 +352,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerNetherWallRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.MISC, output, 6)
+                createShaped(RecipeCategory.MISC, output, 6)
                         .group("nether_brick_wall")
                         .input('#', input)
                         .pattern("###")
@@ -362,7 +362,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerStairsRecipe(RecipeCategory Category, ItemConvertible output, ItemConvertible input) {
-                this.createShaped(Category, output, 4)
+                createShaped(Category, output, 4)
                         .input('#', input)
                         .pattern("  #")
                         .pattern(" ##")
@@ -372,7 +372,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerWoodenStairsRecipe(RecipeCategory Category, ItemConvertible output, ItemConvertible input) {
-                this.createShaped(Category, output, 4)
+                createShaped(Category, output, 4)
                         .group("wooden_stairs")
                         .input('#', input)
                         .pattern("  #")
@@ -383,7 +383,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerWoodenSlabRecipe(RecipeCategory Category, ItemConvertible output, ItemConvertible input) {
-                this.createShaped(Category, output, 6)
+                createShaped(Category, output, 6)
                         .group("wooden_slab")
                         .input('#', input)
                         .pattern("###")
@@ -392,7 +392,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerDoorRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.REDSTONE, output, 3)
+                createShaped(RecipeCategory.REDSTONE, output, 3)
                         .group("wooden_door")
                         .input('#', input)
                         .pattern(" ##")
@@ -403,7 +403,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerTrapdoorRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.REDSTONE, output, 2)
+                createShaped(RecipeCategory.REDSTONE, output, 2)
                         .group("wooden_trapdoor")
                         .input('#', input)
                         .pattern("###")
@@ -413,7 +413,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerWoodenPressurePlateRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.REDSTONE, output, 1)
+                createShaped(RecipeCategory.REDSTONE, output, 1)
                         .group("wooden_pressure_plate")
                         .input('#', input)
                         .pattern("##")
@@ -422,7 +422,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerButtonRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShapeless(RecipeCategory.REDSTONE, output, 1)
+                createShapeless(RecipeCategory.REDSTONE, output, 1)
                         .input(input)
                         .group("wooden_button")
                         .criterion(hasItem(input), conditionsFromItem(input))
@@ -430,7 +430,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerWoodRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.BUILDING_BLOCKS, output, 3)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, output, 3)
                         .group("bark")
                         .input('#', input)
                         .pattern("##")
@@ -440,7 +440,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerChiseledRecipe(RecipeCategory Category, ItemConvertible output, ItemConvertible input) {
-                this.createShaped(Category, output, 1)
+                createShaped(Category, output, 1)
                         .group("chiseled_nether_bricks")
                         .input('#', input)
                         .pattern("#")
@@ -450,7 +450,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerBookshelfRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.BUILDING_BLOCKS, output, 1)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, output, 1)
                         .group("bookshelf")
                         .input('#', input)
                         .input('X', Items.BOOK)
@@ -462,7 +462,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerFallenLeavesRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.DECORATIONS, output, 3)
+                createShaped(RecipeCategory.DECORATIONS, output, 3)
                         .group("fallen_leaves")
                         .input('#', input)
                         .pattern("##")
@@ -471,7 +471,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerStoneRecipe(ItemConvertible output, ItemConvertible input) {
-                this.createShaped(RecipeCategory.BUILDING_BLOCKS, output, 4)
+                createShaped(RecipeCategory.BUILDING_BLOCKS, output, 4)
                         .input('#', input)
                         .pattern("##")
                         .pattern("##")
@@ -480,7 +480,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
             }
 
             private void offerAltCarpetRecipe(RecipeCategory Category, ItemConvertible output, ItemConvertible input) {
-                this.createShaped(Category, output, 3)
+                createShaped(Category, output, 3)
                         .input('#', input)
                         .pattern("##")
                         .criterion(hasItem(input), conditionsFromItem(input))

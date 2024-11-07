@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_stairs",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:ghostwood_planks"
-    }
+    "#": "blocksforbuilders:ghostwood_planks"
   },
   "pattern": [
     "  #",

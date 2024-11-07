@@ -1,4 +1,4 @@
-package net.disjoint.blocksforbuilders.model;
+package net.disjoint.blocksforbuilders.datagen;
 
 import com.google.gson.JsonElement;
 import net.minecraft.block.Block;
@@ -13,8 +13,8 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class BFBSignBlockStateModelGenerator extends BlockStateModelGenerator {
-    public BFBSignBlockStateModelGenerator(Consumer<BlockStateSupplier> blockStateCollector, BiConsumer<Identifier, Supplier<JsonElement>> modelCollector, Consumer<Item> simpleItemModelExemptionCollector) {
+public class BFBBlockstateModelGenerator extends BlockStateModelGenerator {
+    public BFBBlockstateModelGenerator(Consumer<BlockStateSupplier> blockStateCollector, BiConsumer<Identifier, Supplier<JsonElement>> modelCollector, Consumer<Item> simpleItemModelExemptionCollector) {
         super(blockStateCollector, modelCollector, simpleItemModelExemptionCollector);
     }
 

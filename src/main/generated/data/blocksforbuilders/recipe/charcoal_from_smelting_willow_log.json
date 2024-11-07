@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 0.1,
   "group": "charcoal",
-  "ingredient": {
-    "item": "blocksforbuilders:willow_log"
-  },
+  "ingredient": "blocksforbuilders:willow_log",
   "result": {
     "id": "minecraft:charcoal"
   }

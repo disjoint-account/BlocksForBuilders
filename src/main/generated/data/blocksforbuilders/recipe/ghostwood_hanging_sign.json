@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "hanging_sign",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:stripped_ghostwood_log"
-    },
-    "X": {
-      "item": "minecraft:chain"
-    }
+    "#": "blocksforbuilders:stripped_ghostwood_log",
+    "X": "minecraft:chain"
   },
   "pattern": [
     "X X",

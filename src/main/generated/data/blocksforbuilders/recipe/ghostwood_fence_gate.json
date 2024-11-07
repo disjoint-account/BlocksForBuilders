@@ -3,12 +3,8 @@
   "category": "redstone",
   "group": "wooden_fence_gate",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:ghostwood_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
+    "#": "blocksforbuilders:ghostwood_planks",
+    "X": "minecraft:stick"
   },
   "pattern": [
     "X#X",

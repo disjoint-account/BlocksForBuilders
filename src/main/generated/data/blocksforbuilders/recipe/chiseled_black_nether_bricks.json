@@ -3,9 +3,7 @@
   "category": "building",
   "group": "chiseled_nether_bricks",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:black_nether_brick_slab"
-    }
+    "#": "blocksforbuilders:black_nether_brick_slab"
   },
   "pattern": [
     "#",

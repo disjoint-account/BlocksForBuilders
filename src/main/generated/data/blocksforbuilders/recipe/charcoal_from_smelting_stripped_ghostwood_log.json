@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 0.1,
   "group": "charcoal",
-  "ingredient": {
-    "item": "blocksforbuilders:stripped_ghostwood_log"
-  },
+  "ingredient": "blocksforbuilders:stripped_ghostwood_log",
   "result": {
     "id": "minecraft:charcoal"
   }

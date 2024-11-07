@@ -17,16 +17,11 @@ import org.spongepowered.asm.mixin.injection.At;
 @Mixin(SignEditScreen.class)
 @Environment(EnvType.CLIENT)
 public class MixinSignEditScreen {
-    @WrapOperation(
-            method = "renderSignBackground",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/TexturedRenderLayers;getSignTextureId(Lnet/minecraft/block/WoodType;)Lnet/minecraft/client/util/SpriteIdentifier;")
-    )
-    @SuppressWarnings("unused")
+    @WrapOperation(method = "renderSignBackground",at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/TexturedRenderLayers;getSignTextureId(Lnet/minecraft/block/WoodType;)Lnet/minecraft/client/util/SpriteIdentifier;"))
     private SpriteIdentifier bfbWood$editSignTextureId(WoodType type, Operation<SpriteIdentifier> original, DrawContext drawContext, BlockState state) {
         if (state.getBlock() instanceof BFBSign signBlock) {
             return new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, signBlock.getTexture());
         }
-
         return original.call(type);
     }
 }

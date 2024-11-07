@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_door",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:green_jungle_planks"
-    }
+    "#": "blocksforbuilders:green_jungle_planks"
   },
   "pattern": [
     " ##",

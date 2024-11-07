@@ -3,9 +3,7 @@
   "category": "building",
   "group": "bark",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:stripped_willow_log"
-    }
+    "#": "blocksforbuilders:stripped_willow_log"
   },
   "pattern": [
     "##",

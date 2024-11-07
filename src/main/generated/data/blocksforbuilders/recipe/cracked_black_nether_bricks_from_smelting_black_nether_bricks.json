@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 0.1,
   "group": "cracked_black_nether_bricks",
-  "ingredient": {
-    "item": "blocksforbuilders:black_nether_bricks"
-  },
+  "ingredient": "blocksforbuilders:black_nether_bricks",
   "result": {
     "id": "blocksforbuilders:cracked_black_nether_bricks"
   }

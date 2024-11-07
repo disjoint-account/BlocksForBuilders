@@ -6,15 +6,11 @@
     "MixinHangingSignBlockEntityRenderer",
     "MixinHangingSignEditScreen",
     "MixinSignBlockEntityRenderer",
-    "MixinSignEditScreen",
-    "MixinBoatEntityRenderer"
+    "MixinHandledScreen"
   ],
   "mixins": [
     "MixinAbstractBlockSettings",
-    "MixinBlockEntityType",
-    "MixinBoatEntity",
-    "MixinEntityPredicate",
-    "MixinPumpkinPie"
+    "MixinBlockEntityType"
   ],
   "injectors": {
     "defaultRequire": 1

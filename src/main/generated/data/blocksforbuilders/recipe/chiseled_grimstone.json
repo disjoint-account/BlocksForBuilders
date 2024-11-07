@@ -3,9 +3,7 @@
   "category": "building",
   "group": "chiseled_nether_bricks",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:grimstone_slab"
-    }
+    "#": "blocksforbuilders:grimstone_slab"
   },
   "pattern": [
     "#",

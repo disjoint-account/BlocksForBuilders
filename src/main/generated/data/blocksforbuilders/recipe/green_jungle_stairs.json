@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_stairs",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:green_jungle_planks"
-    }
+    "#": "blocksforbuilders:green_jungle_planks"
   },
   "pattern": [
     "  #",

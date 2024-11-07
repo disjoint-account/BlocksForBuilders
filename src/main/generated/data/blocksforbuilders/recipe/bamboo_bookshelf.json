@@ -3,12 +3,8 @@
   "category": "building",
   "group": "bookshelf",
   "key": {
-    "#": {
-      "item": "minecraft:bamboo_planks"
-    },
-    "X": {
-      "item": "minecraft:book"
-    }
+    "#": "minecraft:bamboo_planks",
+    "X": "minecraft:book"
   },
   "pattern": [
     "###",

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blocksforbuilders:grimstone_bricks"
-  },
+  "ingredient": "blocksforbuilders:grimstone_bricks",
   "result": {
     "count": 1,
     "id": "blocksforbuilders:grimstone_tile_stairs"

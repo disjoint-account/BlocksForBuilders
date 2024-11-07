@@ -23,7 +23,7 @@ public class MixinHangingSignEditScreen {
     private Identifier texture;
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    private void terraformWood$initSignTextureId(SignBlockEntity signBlockEntity, boolean front, boolean filtered, CallbackInfo ci) {
+    private void bfbWood$initSignTextureId(SignBlockEntity signBlockEntity, boolean front, boolean filtered, CallbackInfo ci) {
         if (signBlockEntity.getCachedState().getBlock() instanceof BFBHangingSign signBlock) {
             Identifier guiTexture = signBlock.getGUITexture();
             this.texture = guiTexture.withSuffixedPath(".png");

@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "nether_fence",
   "key": {
-    "#": {
-      "item": "blocksforbuilders:black_nether_bricks"
-    },
-    "X": {
-      "item": "minecraft:nether_brick"
-    }
+    "#": "blocksforbuilders:black_nether_bricks",
+    "X": "minecraft:nether_brick"
   },
   "pattern": [
     "#X#",

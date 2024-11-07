@@ -3,9 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    {
-      "tag": "blocksforbuilders:willow_wood"
-    }
+    "#blocksforbuilders:willow_wood"
   ],
   "result": {
     "count": 4,
