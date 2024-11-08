@@ -1,5 +1,6 @@
 package net.disjoint.blocksforbuilders;
 
+import net.disjoint.blocksforbuilders.boatstuff.BFBBoatDispenserBehavior;
 import net.disjoint.blocksforbuilders.boatstuff.BFBEntityTypes;
 import net.disjoint.blocksforbuilders.world.gen.BlocksForBuildersWorldGen;
 import net.fabricmc.api.ModInitializer;
@@ -19,6 +20,7 @@ public class BlocksForBuilders implements ModInitializer {
 		BlocksForBuildersBlocks.registerModBlocks();
 		BlocksForBuildersItems.registerModItems();
 		BFBEntityTypes.registerEntityTypes();
+		BFBBoatDispenserBehavior.registerDefaults();
 		Instance.init();
 	}
 
