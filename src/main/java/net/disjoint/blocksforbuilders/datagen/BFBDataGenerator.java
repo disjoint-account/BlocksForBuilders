@@ -17,6 +17,7 @@ public class BFBDataGenerator implements DataGeneratorEntrypoint {
        pack.addProvider(BFBRecipeGenerator::new);
        pack.addProvider(BFBBlockTagProvider::new);
        pack.addProvider(BFBItemTagProvider::new);
+       pack.addProvider(BFBEntityTagProvider::new);
        pack.addProvider(BFBLootTableGenerator::new);
        pack.addProvider(BFBModelProvider::new);
     }
