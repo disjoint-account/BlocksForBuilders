@@ -1,38 +1,18 @@
 package net.disjoint.blocksforbuilders;
 
-import net.disjoint.blocksforbuilders.boatstuff.BFBEntityTypes;
-import net.disjoint.blocksforbuilders.boatstuff.renderers.*;
+import net.disjoint.blocksforbuilders.boatstuff.BFBEntityModelLayers;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.model.BoatEntityModel;
-import net.minecraft.client.render.entity.model.RaftEntityModel;
 import net.minecraft.world.biome.FoliageColors;
 
 public class BlocksForBuildersClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        EntityRendererRegistry.register(BFBEntityTypes.GHOSTWOOD_BOAT, GhostwoodBoatEntityRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(GhostwoodBoatEntityRenderer.GHOSTWOOD_BOAT, BoatEntityModel::getTexturedModelData);
-        EntityRendererRegistry.register(BFBEntityTypes.GHOSTWOOD_CHEST_BOAT, GhostwoodChestBoatEntityRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(GhostwoodChestBoatEntityRenderer.GHOSTWOOD_CHEST_BOAT, BoatEntityModel::getChestTexturedModelData);
-        EntityRendererRegistry.register(BFBEntityTypes.WILLOW_BOAT, WillowBoatEntityRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(WillowBoatEntityRenderer.WILLOW_BOAT, BoatEntityModel::getTexturedModelData);
-        EntityRendererRegistry.register(BFBEntityTypes.WILLOW_CHEST_BOAT, WillowChestBoatEntityRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(WillowChestBoatEntityRenderer.WILLOW_CHEST_BOAT, BoatEntityModel::getChestTexturedModelData);
-        EntityRendererRegistry.register(BFBEntityTypes.GREEN_JUNGLE_BOAT, GreenJungleBoatEntityRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(GreenJungleBoatEntityRenderer.GREEN_JUNGLE_BOAT, BoatEntityModel::getTexturedModelData);
-        EntityRendererRegistry.register(BFBEntityTypes.GREEN_JUNGLE_CHEST_BOAT, GreenJungleChestBoatEntityRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(GreenJungleChestBoatEntityRenderer.GREEN_JUNGLE_CHEST_BOAT, BoatEntityModel::getChestTexturedModelData);
-        EntityRendererRegistry.register(BFBEntityTypes.GREEN_BAMBOO_RAFT, GreenBambooRaftEntityRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(GreenBambooRaftEntityRenderer.GREEN_BAMBOO_RAFT, RaftEntityModel::getTexturedModelData);
-        EntityRendererRegistry.register(BFBEntityTypes.GREEN_BAMBOO_CHEST_RAFT, GreenBambooChestRaftEntityRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(GreenBambooChestRaftEntityRenderer.GREEN_BAMBOO_CHEST_RAFT, RaftEntityModel::getChestTexturedModelData);
+        BFBEntityModelLayers.registerEntityModelLayers();
 
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, RenderLayer.getCutout());
