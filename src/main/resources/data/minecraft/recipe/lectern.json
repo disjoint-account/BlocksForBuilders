@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "tag": "blocksforbuilders:bookshelves"
-    },
-    "S": {
-      "tag": "minecraft:wooden_slabs"
-    }
+    "B": "#blocksforbuilders:bookshelves",
+    "S": "#minecraft:wooden_slabs"
   },
   "pattern": [
     "SSS",

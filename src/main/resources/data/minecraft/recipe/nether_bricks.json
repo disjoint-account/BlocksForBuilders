@@ -3,9 +3,7 @@
   "category": "building",
   "group": "nether_bricks",
   "key": {
-    "#": {
-      "item": "minecraft:nether_brick"
-    }
+    "#": "minecraft:nether_brick"
   },
   "pattern": [
     "##",

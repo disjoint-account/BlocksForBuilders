@@ -3,9 +3,7 @@
   "category": "building",
   "group": "nether_brick_slab",
   "key": {
-    "#": {
-      "item": "minecraft:red_nether_bricks"
-    }
+    "#": "minecraft:red_nether_bricks"
   },
   "pattern": [
     "###"

@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "nether_brick_wall",
   "key": {
-    "#": {
-      "item": "minecraft:nether_bricks"
-    }
+    "#": "minecraft:nether_bricks"
   },
   "pattern": [
     "###",
