@@ -70,7 +70,7 @@ public class PieBlock extends Block {
         if (!player.canConsume(false)) {
             return ActionResult.PASS;
         } else {
-            player.getHungerManager().add(2, 0.1F);
+            player.getHungerManager().add(2, 0.3F);
             int i = (Integer)state.get(CHOMPS);
             world.emitGameEvent(player, GameEvent.EAT, pos);
             if (i < 3) {
