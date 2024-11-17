@@ -18,11 +18,6 @@ public class Instance {
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GHOSTWOOD_WOOD, 5, 5);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD, 5, 5);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES, 30, 60);
-            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.SCORCHWOOD_PLANKS, 5, 20);
-            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.SCORCHWOOD_LOG, 5, 5);
-            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG, 5, 5);
-            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.SCORCHWOOD_WOOD, 5, 5);
-            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_WOOD, 5, 5);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.WILLOW_PLANKS, 5, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.WILLOW_LOG, 5, 5);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG, 5, 5);
@@ -84,6 +79,7 @@ public class Instance {
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.ASHEN_CARPET, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_STAIRS, 0.85f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_SLAB, 0.85f);
         }

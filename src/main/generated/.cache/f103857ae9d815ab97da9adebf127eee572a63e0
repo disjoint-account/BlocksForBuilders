@@ -1,9 +1,9 @@
-// 1.21.3	2024-11-17T18:17:48.2637304	Blocks For Builders/Tags for minecraft:block
+// 1.21.3	2024-11-17T22:09:22.9672292	Blocks For Builders/Tags for minecraft:block
 b8258a6bbf183d3208916e1c84299e1c1380d366 data\minecraft\tags\block\wooden_doors.json
 df676f17195e1e3ead20109201c6ead5748d83b3 data\minecraft\tags\block\wooden_slabs.json
 01559027b97b186eef6d8203f63e69522a095b12 data\minecraft\tags\block\planks.json
 de7cca9efbeb3e2b8108947ef8df8964d5a13f67 data\minecraft\tags\block\wooden_buttons.json
-04f359f6bc83feaef55f49d16d50fcada0e1e3cd data\minecraft\tags\block\logs_that_burn.json
+b0a7643656d5c5d2a888a29c66a60f652bb2ec4d data\minecraft\tags\block\logs_that_burn.json
 28c493e11515531b1744b040989d4fcb54629e62 data\minecraft\tags\block\standing_signs.json
 337a81e6e3df27c4bf565a4208b9c9b34e097589 data\minecraft\tags\block\wooden_stairs.json
 25a592365fa86f4553f5810ff87765d690467038 data\minecraft\tags\block\leaves.json
@@ -11,7 +11,7 @@ de7cca9efbeb3e2b8108947ef8df8964d5a13f67 data\minecraft\tags\block\wooden_button
 0619c44578d80a42aee01fd5fb156ebe77f6207a data\minecraft\tags\block\stairs.json
 313492c85ea0ccb718486d247bbcb42e71ba8ddd data\minecraft\tags\block\walls.json
 4a7396a1fa864734f07d689153bf0a34a45482f9 data\minecraft\tags\block\fence_gates.json
-6f62b3957fc6e055955a7284a750b1fd855f8a34 data\minecraft\tags\block\inside_step_sound_blocks.json
+099a6532394ff507616cc6d203b3c8eb6134772f data\minecraft\tags\block\inside_step_sound_blocks.json
 91afa5ba6c0933b93edc4a29cb84dae2a5a19d4b data\minecraft\tags\block\wooden_trapdoors.json
 6118adb85900b0e9cf7133e06a08911b3aac5840 data\minecraft\tags\block\wall_signs.json
 66dd24436899bd8a2473188739420cc049f44aca data\minecraft\tags\block\slabs.json
@@ -19,11 +19,13 @@ de7cca9efbeb3e2b8108947ef8df8964d5a13f67 data\minecraft\tags\block\wooden_button
 1ee559d9a4a654827064fed6558b9f837b9df7b9 data\minecraft\tags\block\mineable\axe.json
 d6b7f2ca8e1e2a86ea187281b6e96d24931f9435 data\minecraft\tags\block\fences.json
 209a0ec8c78863c55149354cc4e006e4937f3850 data\minecraft\tags\block\wall_hanging_signs.json
+00fe6254c7b076470b0ba94f3606c7ea00151cc6 data\minecraft\tags\block\dirt.json
 b8258a6bbf183d3208916e1c84299e1c1380d366 data\minecraft\tags\block\doors.json
 5c88abc2a7cf413ef287fbe3dbf1eacad40660d1 data\minecraft\tags\block\enchantment_power_provider.json
+00fe6254c7b076470b0ba94f3606c7ea00151cc6 data\minecraft\tags\block\mineable\shovel.json
 64c93e5bdb50e645f612565d45519df4122b8263 data\minecraft\tags\block\wooden_fences.json
 8c532561103d1430cbbeb8a287daa2de29a43322 data\minecraft\tags\block\jungle_logs.json
 0721bc2a8c49127dab5861752b8f5b07dcb20ada data\minecraft\tags\block\ceiling_hanging_signs.json
 d1f98123a1821b5d733cf319d053296c4022f541 data\minecraft\tags\block\saplings.json
-2fb42a3293517fac6bde75e2ec9e610215a0f957 data\minecraft\tags\block\mineable\hoe.json
+60792a4ef2ecc5a65c59689cbff00b920e50bc69 data\minecraft\tags\block\mineable\hoe.json
 9fbf924e9e67dd312cc482d92c0fdea54126b0c6 data\minecraft\tags\block\wooden_pressure_plates.json

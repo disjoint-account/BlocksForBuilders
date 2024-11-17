@@ -1,4 +1,4 @@
-// 1.21.3	2024-11-17T18:17:48.2576967	Blocks For Builders/Block Loot Tables
+// 1.21.3	2024-11-17T22:09:22.9611722	Blocks For Builders/Block Loot Tables
 95af59d3db36c1345f542b5b56057010c33b4355 data\blocksforbuilders\loot_table\blocks\scorchwood_planks.json
 865dc5d98bd98c40bd9c87c3ad27cc751eb9581d data\blocksforbuilders\loot_table\blocks\orange_oak_leaves.json
 55e44000f2633a90a7c1d4b8e7cd550028dfdcd2 data\blocksforbuilders\loot_table\blocks\scorchwood_bookshelf.json
@@ -41,6 +41,7 @@ f212aa2100df9b252bf9d71a9941be7c6f35fa3d data\blocksforbuilders\loot_table\block
 02493adc8808607df0931c023f4f8e06cb0a2a1d data\blocksforbuilders\loot_table\blocks\potted_scorchwood_sapling.json
 bac74b94762d917a138d5f7147ef34d76973f16f data\blocksforbuilders\loot_table\blocks\quartz_brick_stairs.json
 1cff6156e821fbe3863f74db60c5b356f90bda8c data\blocksforbuilders\loot_table\blocks\grimstone_bricks.json
+001df52d9825b773c71216ea3ba62dfcf3719e22 data\blocksforbuilders\loot_table\blocks\ashen_dirt.json
 1d41e63ebd03f3b9cc697f68652ac1fc10d70ce2 data\blocksforbuilders\loot_table\blocks\green_jungle_leaves.json
 036a0883465ad9fb723050d5671bd4c8e9816d8d data\blocksforbuilders\loot_table\blocks\green_bamboo_door.json
 9f92ed80d1e97b49824cd9c160da3d84cfc5132a data\blocksforbuilders\loot_table\blocks\yellow_birch_leaves.json
@@ -52,6 +53,7 @@ bac74b94762d917a138d5f7147ef34d76973f16f data\blocksforbuilders\loot_table\block
 64623f611ac0bba5ed32f35f26ec7cf62c3c5bec data\blocksforbuilders\loot_table\blocks\black_nether_brick_slab.json
 71ef5bfc0509fed1185ae11787a21d282fed6275 data\blocksforbuilders\loot_table\blocks\polished_grimstone_stairs.json
 c0978d2192e7092b92fdc0957e7d284fc7f327e9 data\blocksforbuilders\loot_table\blocks\birch_bookshelf.json
+b171882376584ef8343acee2a49ebe6f23ab957d data\blocksforbuilders\loot_table\blocks\ashen_carpet.json
 7caff5f987f132eaf9aa597cc12bbaf26ab2b862 data\blocksforbuilders\loot_table\blocks\green_jungle_bookshelf.json
 a7fd7cc4f84266d23f6db0cc288636795d5383b0 data\blocksforbuilders\loot_table\blocks\fallen_pale_oak_leaves.json
 50a8cc47f472ffbaf4f957a123563fdf71fa3fb2 data\blocksforbuilders\loot_table\blocks\willow_sapling.json

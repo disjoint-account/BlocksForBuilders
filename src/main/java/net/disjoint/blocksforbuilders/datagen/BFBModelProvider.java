@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 
 import static net.disjoint.blocksforbuilders.datagen.BFBBlockstateModelGenerator.registerSign;
 
@@ -127,6 +128,12 @@ public class BFBModelProvider extends FabricModelProvider {
         grimstoneBricksTexturePool.wall(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL);
 
         blockStateModelGenerator.registerAxisRotated(BlocksForBuildersBlocks.BAMBOO_THATCH, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
+
+        Identifier identifier = TextureMap.getId(Blocks.DIRT);
+        Identifier identifier2 = TexturedModel.CUBE_BOTTOM_TOP.get(BlocksForBuildersBlocks.ASHEN_DIRT).textures((textures) -> textures.put(TextureKey.BOTTOM, identifier)).upload(BlocksForBuildersBlocks.ASHEN_DIRT, blockStateModelGenerator.modelCollector);
+        TextureMap textureMap = (new TextureMap()).put(TextureKey.BOTTOM, identifier).inherit(TextureKey.BOTTOM, TextureKey.PARTICLE).put(TextureKey.TOP, TextureMap.getSubId(Blocks.GRASS_BLOCK, "_top")).put(TextureKey.SIDE, TextureMap.getSubId(Blocks.GRASS_BLOCK, "_snow"));
+        BlockStateVariant blockStateVariant = BlockStateVariant.create().put(VariantSettings.MODEL, Models.CUBE_BOTTOM_TOP.upload(Blocks.GRASS_BLOCK, "_snow", textureMap, blockStateModelGenerator.modelCollector));
+        blockStateModelGenerator.registerTopSoil(BlocksForBuildersBlocks.ASHEN_DIRT, identifier2, blockStateVariant);
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {

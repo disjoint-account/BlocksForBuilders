@@ -62,6 +62,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES,
+                        BlocksForBuildersBlocks.ASHEN_CARPET,
                         BlocksForBuildersBlocks.HAY_STAIRS,
                         BlocksForBuildersBlocks.HAY_SLAB);
 
@@ -102,6 +103,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB,
                         BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
+
+        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
+                .add(BlocksForBuildersBlocks.ASHEN_DIRT);
 
         getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_HANGING_SIGN,
@@ -189,10 +193,6 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG,
                         BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD,
-                        BlocksForBuildersBlocks.SCORCHWOOD_LOG,
-                        BlocksForBuildersBlocks.SCORCHWOOD_WOOD,
-                        BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_WOOD,
                         BlocksForBuildersBlocks.WILLOW_LOG,
                         BlocksForBuildersBlocks.WILLOW_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG,
@@ -368,6 +368,10 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_RUG,
-                        BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG);
+                        BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG,
+                        BlocksForBuildersBlocks.ASHEN_CARPET);
+
+        getOrCreateTagBuilder(BlockTags.DIRT)
+                .add(BlocksForBuildersBlocks.ASHEN_DIRT);
     }
 }

@@ -31,6 +31,9 @@ public class BlocksForBuildersPlacedFeatures {
     public static final RegistryKey<PlacedFeature> LARGE_FALLEN_ORANGE_OAK_PLACED_KEY = registerKey("large_fallen_orange_oak_placed");
     public static final RegistryKey<PlacedFeature> LARGE_FALLEN_YELLOW_BIRCH_PLACED_KEY = registerKey("large_fallen_yellow_birch_placed");
 
+    public static final RegistryKey<PlacedFeature> SMALL_ASHEN_CARPET_PLACED_KEY = registerKey("small_ashen_carpet_placed");
+    public static final RegistryKey<PlacedFeature> LARGE_ASHEN_CARPET_PLACED_KEY = registerKey("large_ashen_carpet_placed");
+
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
@@ -81,6 +84,13 @@ public class BlocksForBuildersPlacedFeatures {
 
         register(context, LARGE_FALLEN_YELLOW_BIRCH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.FALLEN_YELLOW_BIRCH_KEY),
                 RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 8));
+
+
+
+        register(context, SMALL_ASHEN_CARPET_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.ASHEN_CARPET_KEY),
+                RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 4));
+        register(context, LARGE_ASHEN_CARPET_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.ASHEN_CARPET_KEY),
+                RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 8));
     }
 
 

@@ -40,6 +40,8 @@ public class BlocksForBuildersConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_ORANGE_OAK_KEY = registerKey("fallen_orange_oak");
     public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_YELLOW_BIRCH_KEY = registerKey("fallen_yellow_birch");
 
+    public static final RegistryKey<ConfiguredFeature<?,?>> ASHEN_CARPET_KEY = registerKey("ashen_carpet");
+
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         var placedFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
 
@@ -123,6 +125,10 @@ public class BlocksForBuildersConfiguredFeatures {
 
         register(context, FALLEN_YELLOW_BIRCH_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
+
+
+        register(context, ASHEN_CARPET_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.ASHEN_CARPET)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), BlocksForBuildersBlocks.ASHEN_DIRT)))));
     }
 
 

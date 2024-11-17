@@ -104,6 +104,9 @@ public class BFBBiomes {
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SCORCHWOOD_PLACED_KEY);
 
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SMALL_ASHEN_CARPET_PLACED_KEY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.LARGE_ASHEN_CARPET_PLACED_KEY);
+
         return new Biome.Builder()
                 .precipitation(false)
                 .temperature(2.0f)
@@ -113,10 +116,10 @@ public class BFBBiomes {
                 .effects((new BiomeEffects.Builder())
                         .waterColor(0x76889D)
                         .waterFogColor(556980)
-                        .skyColor(0xB0B0B0)
+                        .skyColor(0x818181)
                         .grassColor(0x778272)
                         .foliageColor(0x878D76)
-                        .fogColor(0x685F70)
+                        .fogColor(0x7A7A7A)
                         .build()).build();
     }
 }

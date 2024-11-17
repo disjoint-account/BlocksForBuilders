@@ -6,10 +6,10 @@
   ],
   "downfall": 0.0,
   "effects": {
-    "fog_color": 6840176,
+    "fog_color": 8026746,
     "foliage_color": 8883574,
     "grass_color": 7832178,
-    "sky_color": 12171705,
+    "sky_color": 8487297,
     "water_color": 7768221,
     "water_fog_color": 556980
   },
@@ -63,7 +63,9 @@
     ],
     [
       "minecraft:glow_lichen",
-      "blocksforbuilders:scorchwood_placed"
+      "blocksforbuilders:scorchwood_placed",
+      "blocksforbuilders:small_ashen_carpet_placed",
+      "blocksforbuilders:large_ashen_carpet_placed"
     ],
     [
       "minecraft:freeze_top_layer"

@@ -127,6 +127,8 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.ASHEN_DIRT);
+                        entries.add(BlocksForBuildersBlocks.ASHEN_CARPET);
                         entries.add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.SPRUCE_BOOKSHELF);
                         entries.add(BlocksForBuildersBlocks.JUNGLE_BOOKSHELF);

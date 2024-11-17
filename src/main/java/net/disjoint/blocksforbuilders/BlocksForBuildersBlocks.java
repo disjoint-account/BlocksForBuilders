@@ -14,6 +14,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
@@ -330,6 +331,10 @@ public class BlocksForBuildersBlocks {
     public static final Block BAMBOO_THATCH_RUG = registerBlock("bamboo_thatch_rug",
             DirectionalCarpet::new, AbstractBlock.Settings.copy(BAMBOO_MOSAIC));
 
+    public static final Block ASHEN_DIRT = registerBlock("ashen_dirt",
+            SnowyBlock::new, AbstractBlock.Settings.copy(DIRT).mapColor(MapColor.TERRACOTTA_GRAY));
+    public static final Block ASHEN_CARPET = registerBlock("ashen_carpet",
+            CarpetBlock::new, AbstractBlock.Settings.copy(MOSS_CARPET).sounds(BlockSoundGroup.GRASS).mapColor(MapColor.TERRACOTTA_BLACK));
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         return registerBlock(name, true, factory, settings);
