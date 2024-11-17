@@ -3,7 +3,7 @@
   "category": "building",
   "group": "bookshelf",
   "key": {
-    "#": "#minecraft:planks",
+    "#": "minecraft:oak_planks",
     "X": "minecraft:book"
   },
   "pattern": [

@@ -21,6 +21,7 @@ public class BFBOverworldRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BFBBiomes.AUTUMNAL_FOREST);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.TAIGA, BFBBiomes.SCORCHED_FOREST);
         });
     }
 }

@@ -2,13 +2,11 @@ package net.disjoint.blocksforbuilders.world.feature;
 
 import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.*;
 
@@ -20,6 +18,7 @@ public class BlocksForBuildersPlacedFeatures {
     public static final RegistryKey<PlacedFeature> YELLOW_BIRCH_PLACED_KEY = registerKey("yellow_birch_placed");
     public static final RegistryKey<PlacedFeature> GOLD_ACACIA_PLACED_KEY = registerKey("gold_acacia_placed");
     public static final RegistryKey<PlacedFeature> WILLOW_PLACED_KEY = registerKey("willow_placed");
+    public static final RegistryKey<PlacedFeature> SCORCHWOOD_PLACED_KEY = registerKey("scorchwood_placed");
 
     public static final RegistryKey<PlacedFeature> PUMPKIN_PLACED_KEY = registerKey("pumpkin_placed");
     public static final RegistryKey<PlacedFeature> SWEET_BERRY_PLACED_KEY = registerKey("sweet_berry_placed");
@@ -49,6 +48,9 @@ public class BlocksForBuildersPlacedFeatures {
 
         register(context, WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.WILLOW_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.25f, 1), BlocksForBuildersBlocks.WILLOW_SAPLING));
+
+        register(context, SCORCHWOOD_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.SCORCHWOOD_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(4, 0.5f, 8), BlocksForBuildersBlocks.SCORCHWOOD_SAPLING));
 
 
 

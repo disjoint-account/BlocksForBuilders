@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
@@ -14,7 +13,6 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -36,7 +34,9 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.MANGROVE_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.MANGROVE_BOOKSHELF, Items.BOOK, 3, 3));
         addDrop(BlocksForBuildersBlocks.CHERRY_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.CHERRY_BOOKSHELF, Items.BOOK, 3, 3));
         addDrop(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF, Items.BOOK, 3, 3));
+        addDrop(BlocksForBuildersBlocks.PALE_OAK_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.PALE_OAK_BOOKSHELF, Items.BOOK, 3, 3));
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, Items.BOOK, 3, 3));
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF, Items.BOOK, 3, 3));
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, Items.BOOK, 3, 3));
         addDrop(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, Items.BOOK, 3, 3));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, Items.BOOK, 3, 3));
@@ -72,6 +72,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES, Blocks.FLOWERING_AZALEA, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, Blocks.MANGROVE_PROPAGULE, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES, Blocks.CHERRY_SAPLING, 0.0f));
+        addDrop(BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES, Blocks.PALE_OAK_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, BlocksForBuildersBlocks.GHOSTWOOD_LEAVES, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, BlocksForBuildersBlocks.WILLOW_SAPLING, 0.0f));
@@ -100,6 +101,26 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_WOOD);
         addDrop(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
         addDrop(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD);
+
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_BUTTON);
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_DOOR, doorDrops(BlocksForBuildersBlocks.SCORCHWOOD_DOOR));
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_FENCE);
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_FENCE_GATE);
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_HANGING_SIGN, drops(BlocksForBuildersItems.SCORCHWOOD_HANGING_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_LOG);
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_PRESSURE_PLATE);
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING);
+        addDrop(BlocksForBuildersBlocks.POTTED_SCORCHWOOD_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING));
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_SIGN, drops(BlocksForBuildersItems.SCORCHWOOD_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_SLAB, slabDrops(BlocksForBuildersBlocks.SCORCHWOOD_SLAB));
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_STAIRS);
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.SCORCHWOOD_HANGING_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_WALL_SIGN, drops(BlocksForBuildersItems.SCORCHWOOD_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_WOOD);
+        addDrop(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG);
+        addDrop(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_WOOD);
 
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_BUTTON);
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR, doorDrops(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR));

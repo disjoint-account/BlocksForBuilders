@@ -1,14 +1,8 @@
 package net.disjoint.blocksforbuilders;
 
 import net.disjoint.blocksforbuilders.boatstuff.BFBEntityTypes;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockSetType;
-import net.minecraft.block.PressurePlateBlock;
-import net.minecraft.entity.EntityType;
 import net.minecraft.item.BoatItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.item.SignItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -25,6 +19,11 @@ public class BlocksForBuildersItems {
     public static final Item GHOSTWOOD_HANGING_SIGN_ITEM = registerItem("ghostwood_hanging_sign", settings ->  new SignItem(GHOSTWOOD_HANGING_SIGN, GHOSTWOOD_WALL_HANGING_SIGN, settings.maxCount(16)));
     public static final Item GHOSTWOOD_BOAT = registerItem("ghostwood_boat", (settings -> new BoatItem(BFBEntityTypes.GHOSTWOOD_BOAT, settings.maxCount(1))));
     public static final Item GHOSTWOOD_CHEST_BOAT = registerItem("ghostwood_chest_boat", (settings -> new BoatItem(BFBEntityTypes.GHOSTWOOD_CHEST_BOAT, settings.maxCount(1))));
+
+    public static final Item SCORCHWOOD_SIGN_ITEM = registerItem("scorchwood_sign", settings ->  new SignItem(SCORCHWOOD_SIGN, SCORCHWOOD_WALL_SIGN, settings.maxCount(16)));
+    public static final Item SCORCHWOOD_HANGING_SIGN_ITEM = registerItem("scorchwood_hanging_sign", settings ->  new SignItem(SCORCHWOOD_HANGING_SIGN, SCORCHWOOD_WALL_HANGING_SIGN, settings.maxCount(16)));
+    public static final Item SCORCHWOOD_BOAT = registerItem("scorchwood_boat", (settings -> new BoatItem(BFBEntityTypes.SCORCHWOOD_BOAT, settings.maxCount(1))));
+    public static final Item SCORCHWOOD_CHEST_BOAT = registerItem("scorchwood_chest_boat", (settings -> new BoatItem(BFBEntityTypes.SCORCHWOOD_CHEST_BOAT, settings.maxCount(1))));
 
     public static final Item WILLOW_SIGN_ITEM = registerItem("willow_sign", settings ->  new SignItem(WILLOW_SIGN, WILLOW_WALL_SIGN, settings.maxCount(16)));
     public static final Item WILLOW_HANGING_SIGN_ITEM = registerItem("willow_hanging_sign", settings ->  new SignItem(WILLOW_HANGING_SIGN, WILLOW_WALL_HANGING_SIGN, settings.maxCount(16)));
@@ -44,7 +43,6 @@ public class BlocksForBuildersItems {
     public static void registerModItems() {
         BlocksForBuilders.LOGGER.info("Registering items for " + BlocksForBuilders.MOD_ID);
         }
-
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
         return Registry.register(Registries.ITEM, Identifier.of(BlocksForBuilders.MOD_ID, name), function.apply(new Item.Settings().registryKey(keyOfItem(name))));
     }

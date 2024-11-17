@@ -16,6 +16,7 @@ public class BFBEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
             getOrCreateTagBuilder(EntityTypeTags.BOAT)
                     .add(BFBEntityTypes.GHOSTWOOD_BOAT,
+                            BFBEntityTypes.SCORCHWOOD_BOAT,
                             BFBEntityTypes.WILLOW_BOAT,
                             BFBEntityTypes.GREEN_JUNGLE_BOAT,
                             BFBEntityTypes.GREEN_BAMBOO_RAFT);

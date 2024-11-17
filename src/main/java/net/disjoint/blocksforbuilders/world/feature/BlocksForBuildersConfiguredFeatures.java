@@ -27,6 +27,7 @@ public class BlocksForBuildersConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> GOLD_ACACIA_KEY = registerKey("gold_acacia");
     public static final RegistryKey<ConfiguredFeature<?,?>> GOLD_ACACIA_SPAWN_KEY = registerKey("gold_acacia_spawn");
     public static final RegistryKey<ConfiguredFeature<?,?>> GHOSTWOOD_KEY = registerKey("ghostwood");
+    public static final RegistryKey<ConfiguredFeature<?,?>> SCORCHWOOD_KEY = registerKey("scorchwood");
     public static final RegistryKey<ConfiguredFeature<?,?>> WILLOW_KEY = registerKey("willow");
     public static final RegistryKey<ConfiguredFeature<?,?>> WILLOW_SPAWN_KEY = registerKey("willow_spawn");
     public static final RegistryKey<ConfiguredFeature<?,?>> ORANGE_OAK_KEY = registerKey("orange_oak");
@@ -99,7 +100,12 @@ public class BlocksForBuildersConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
-
+        register(context, SCORCHWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.SCORCHWOOD_LOG),
+                new StraightTrunkPlacer(4, 2, 2),
+                BlockStateProvider.of(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
+                new TwoLayersFeatureSize(0, 0, 0)).build());
 
         register(context, PUMPKIN_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,6,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks.PUMPKIN)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));

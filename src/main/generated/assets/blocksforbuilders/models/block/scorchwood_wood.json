@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blocksforbuilders:block/scorchwood_log",
+    "side": "blocksforbuilders:block/scorchwood_log"
+  }
+}

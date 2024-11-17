@@ -19,6 +19,7 @@ import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
 public class BFBBiomes {
     public static final RegistryKey<Biome> AUTUMNAL_FOREST = register("autumnal_forest");
+    public static final RegistryKey<Biome> SCORCHED_FOREST = register("scorched_forest");
 
     public static RegistryKey<Biome> register(String name) {
         return RegistryKey.of(RegistryKeys.BIOME, Identifier.of(BlocksForBuilders.MOD_ID, name));
@@ -26,6 +27,7 @@ public class BFBBiomes {
 
         public static void bootstrap(Registerable<Biome> context) {
             context.register(AUTUMNAL_FOREST, autumnalForest(context));
+            context.register(SCORCHED_FOREST, scorchedForest(context));
         }
 
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder) {
@@ -88,5 +90,33 @@ public class BFBBiomes {
                 .build()).build();
     }
 
+    public static Biome scorchedForest(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SCORCHWOOD_PLACED_KEY);
+
+        return new Biome.Builder()
+                .precipitation(false)
+                .temperature(2.0f)
+                .downfall(0.0f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0x76889D)
+                        .waterFogColor(556980)
+                        .skyColor(0xB0B0B0)
+                        .grassColor(0x778272)
+                        .foliageColor(0x878D76)
+                        .fogColor(0x685F70)
+                        .build()).build();
+    }
 }

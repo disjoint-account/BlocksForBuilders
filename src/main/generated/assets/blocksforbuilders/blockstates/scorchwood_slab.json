@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocksforbuilders:block/scorchwood_slab"
+    },
+    "type=double": {
+      "model": "blocksforbuilders:block/scorchwood_planks"
+    },
+    "type=top": {
+      "model": "blocksforbuilders:block/scorchwood_slab_top"
+    }
+  }
+}

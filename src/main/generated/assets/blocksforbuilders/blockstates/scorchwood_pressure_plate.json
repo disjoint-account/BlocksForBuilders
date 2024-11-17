@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "blocksforbuilders:block/scorchwood_pressure_plate"
+    },
+    "powered=true": {
+      "model": "blocksforbuilders:block/scorchwood_pressure_plate_down"
+    }
+  }
+}

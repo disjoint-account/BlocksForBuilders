@@ -22,6 +22,10 @@ public class BFBEntityModelLayers {
                 ctx -> new BoatEntityRenderer(ctx, registerBoatModelLayer("ghostwood")));
         registerEntityRenderer(BFBEntityTypes.GHOSTWOOD_CHEST_BOAT, registerChestBoatModelLayer("ghostwood"), BoatEntityModel::getChestTexturedModelData,
                 ctx -> new BoatEntityRenderer(ctx, registerChestBoatModelLayer("ghostwood")));
+        registerEntityRenderer(BFBEntityTypes.SCORCHWOOD_BOAT, registerBoatModelLayer("scorchwood"), BoatEntityModel::getTexturedModelData,
+                ctx -> new BoatEntityRenderer(ctx, registerBoatModelLayer("scorchwood")));
+        registerEntityRenderer(BFBEntityTypes.SCORCHWOOD_CHEST_BOAT, registerChestBoatModelLayer("scorchwood"), BoatEntityModel::getChestTexturedModelData,
+                ctx -> new BoatEntityRenderer(ctx, registerChestBoatModelLayer("scorchwood")));
         registerEntityRenderer(BFBEntityTypes.WILLOW_BOAT, registerBoatModelLayer("willow"), BoatEntityModel::getTexturedModelData,
                 ctx -> new BoatEntityRenderer(ctx, registerBoatModelLayer("willow")));
         registerEntityRenderer(BFBEntityTypes.WILLOW_CHEST_BOAT, registerChestBoatModelLayer("willow"), BoatEntityModel::getChestTexturedModelData,

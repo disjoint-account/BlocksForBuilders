@@ -22,10 +22,12 @@ import static net.minecraft.block.Blocks.*;
 
 public class BlocksForBuildersBlocks {
     public static final BlockSetType GHOSTWOOD_SET = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_set"));
+    public static final BlockSetType SCORCHWOOD_SET = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood_set"));
     public static final BlockSetType WILLOW_SET = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "willow_set"));
     public static final BlockSetType GREEN_JUNGLE_SET = BlockSetTypeBuilder.copyOf(BlockSetType.JUNGLE).register(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_set"));
     public static final BlockSetType GREEN_BAMBOO_SET = BlockSetTypeBuilder.copyOf(BlockSetType.BAMBOO).register(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_set"));
     public static final WoodType GHOSTWOOD = WoodTypeBuilder.copyOf(WoodType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood"), GHOSTWOOD_SET);
+    public static final WoodType SCORCHWOOD = WoodTypeBuilder.copyOf(WoodType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood"), SCORCHWOOD_SET);
     public static final WoodType WILLOW = WoodTypeBuilder.copyOf(WoodType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "willow"), WILLOW_SET);
     public static final WoodType GREEN_JUNGLE = WoodTypeBuilder.copyOf(WoodType.JUNGLE).register(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle"), GREEN_JUNGLE_SET);
     public static final WoodType GREEN_BAMBOO = WoodTypeBuilder.copyOf(WoodType.BAMBOO).register(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo"), GREEN_BAMBOO_SET);
@@ -91,7 +93,34 @@ public class BlocksForBuildersBlocks {
     public static final Block GHOSTWOOD_WALL_SIGN = registerSignBlock("ghostwood_wall_sign", settings -> new BFBWallSignBlock("ghostwood", GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
     public static final Block GHOSTWOOD_HANGING_SIGN = registerSignBlock("ghostwood_hanging_sign", settings -> new BFBHangingSignBlock("ghostwood", GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
     public static final Block GHOSTWOOD_WALL_HANGING_SIGN = registerSignBlock("ghostwood_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("ghostwood", GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
-  
+
+    public static final Block SCORCHWOOD_LOG = registerBlock("scorchwood_log",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.BLACK));
+    public static final Block STRIPPED_SCORCHWOOD_LOG = registerBlock("stripped_scorchwood_log",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.BLACK));
+    public static final Block SCORCHWOOD_WOOD = registerBlock("scorchwood_wood",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.BLACK));
+    public static final Block STRIPPED_SCORCHWOOD_WOOD = registerBlock("stripped_scorchwood_wood",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.BLACK));
+    public static final Block SCORCHWOOD_SAPLING = registerSaplingBlock("scorchwood_sapling", ScorchwoodSaplingGenerator.SCORCHWOOD, OAK_SAPLING);
+    public static final Block POTTED_SCORCHWOOD_SAPLING = registerFlowerPotBlock("potted_scorchwood_sapling", SCORCHWOOD_SAPLING, POTTED_OAK_SAPLING);
+    public static final Block SCORCHWOOD_PLANKS = registerBlock("scorchwood_planks",
+            Block::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.BLACK));
+    public static final Block SCORCHWOOD_STAIRS = registerStairsBlock("scorchwood_stairs", SCORCHWOOD_PLANKS);
+    public static final Block SCORCHWOOD_SLAB = registerBlock("scorchwood_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SLAB).mapColor(MapColor.BLACK));
+    public static final Block SCORCHWOOD_FENCE = registerBlock("scorchwood_fence",
+            FenceBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_FENCE).mapColor(MapColor.BLACK));
+    public static final Block SCORCHWOOD_FENCE_GATE = registerFenceGateBlock("scorchwood_fence_gate", WoodType.OAK, SCORCHWOOD_FENCE, MapColor.BLACK);
+    public static final Block SCORCHWOOD_BUTTON = registerButtonBlock("scorchwood_button", BlockSetType.OAK, 15, OAK_BUTTON);
+    public static final Block SCORCHWOOD_PRESSURE_PLATE = registerPressurePlateBlock("scorchwood_pressure_plate", BlockSetType.OAK, OAK_PRESSURE_PLATE);
+    public static final Block SCORCHWOOD_DOOR = registerDoorBlock("scorchwood_door",BlockSetType.OAK, OAK_DOOR);
+    public static final Block SCORCHWOOD_TRAPDOOR = registerTrapdoorBlock("scorchwood_trapdoor", BlockSetType.OAK, OAK_TRAPDOOR);
+    public static final Block SCORCHWOOD_SIGN = registerSignBlock("scorchwood_sign", settings -> new BFBSignBlock("scorchwood", SCORCHWOOD, settings), AbstractBlock.Settings.copy(Blocks.OAK_SIGN));
+    public static final Block SCORCHWOOD_WALL_SIGN = registerSignBlock("scorchwood_wall_sign", settings -> new BFBWallSignBlock("scorchwood", SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
+    public static final Block SCORCHWOOD_HANGING_SIGN = registerSignBlock("scorchwood_hanging_sign", settings -> new BFBHangingSignBlock("scorchwood", SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
+    public static final Block SCORCHWOOD_WALL_HANGING_SIGN = registerSignBlock("scorchwood_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("scorchwood", SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+
     public static final Block WILLOW_LOG = registerBlock("willow_log",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.DIRT_BROWN));
     public static final Block STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log",
@@ -185,6 +214,8 @@ public class BlocksForBuildersBlocks {
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(MANGROVE_LEAVES).nonOpaque());
     public static final Block FALLEN_CHERRY_LEAVES = registerBlock("fallen_cherry_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(CHERRY_LEAVES).nonOpaque());
+    public static final Block FALLEN_PALE_OAK_LEAVES = registerBlock("fallen_pale_oak_leaves",
+            FallenLeavesBlock::new, AbstractBlock.Settings.copy(CHERRY_LEAVES).nonOpaque());
    
     public static final Block BIRCH_BOOKSHELF = registerBlock("birch_bookshelf",
             Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_YELLOW));
@@ -206,10 +237,14 @@ public class BlocksForBuildersBlocks {
             Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PINK));
     public static final Block BAMBOO_BOOKSHELF = registerBlock("bamboo_bookshelf",
             Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_YELLOW));
+    public static final Block PALE_OAK_BOOKSHELF = registerBlock("pale_oak_bookshelf",
+            Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_YELLOW));
     public static final Block GREEN_JUNGLE_BOOKSHELF = registerBlock("green_jungle_bookshelf",
             Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.DARK_GREEN));
     public static final Block GHOSTWOOD_BOOKSHELF = registerBlock("ghostwood_bookshelf",
             Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.WHITE_GRAY));
+    public static final Block SCORCHWOOD_BOOKSHELF = registerBlock("scorchwood_bookshelf",
+            Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.BLACK));
     public static final Block WILLOW_BOOKSHELF = registerBlock("willow_bookshelf",
             Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_GREEN));
     public static final Block GREEN_BAMBOO_BOOKSHELF = registerBlock("green_bamboo_bookshelf",

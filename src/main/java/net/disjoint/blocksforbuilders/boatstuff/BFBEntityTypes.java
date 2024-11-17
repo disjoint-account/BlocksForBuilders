@@ -27,6 +27,10 @@ public class BFBEntityTypes {
             EntityType.Builder.create(getBoatFactory(() -> BlocksForBuildersItems.GHOSTWOOD_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
     public static final EntityType<ChestBoatEntity> GHOSTWOOD_CHEST_BOAT = register("ghostwood_chest_boat",
             EntityType.Builder.create(getChestBoatFactory(() -> BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
+    public static final EntityType<BoatEntity> SCORCHWOOD_BOAT = register("scorchwood_boat",
+            EntityType.Builder.create(getBoatFactory(() -> BlocksForBuildersItems.SCORCHWOOD_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
+    public static final EntityType<ChestBoatEntity> SCORCHWOOD_CHEST_BOAT = register("scorchwood_chest_boat",
+            EntityType.Builder.create(getChestBoatFactory(() -> BlocksForBuildersItems.SCORCHWOOD_CHEST_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
     public static final EntityType<BoatEntity> GREEN_JUNGLE_BOAT = register("green_jungle_boat",
             EntityType.Builder.create(getBoatFactory(() -> BlocksForBuildersItems.GREEN_JUNGLE_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
     public static final EntityType<ChestBoatEntity> GREEN_JUNGLE_CHEST_BOAT = register("green_jungle_chest_boat",

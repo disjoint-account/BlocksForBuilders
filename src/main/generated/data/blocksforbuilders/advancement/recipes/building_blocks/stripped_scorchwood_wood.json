@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_scorchwood_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:stripped_scorchwood_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "blocksforbuilders:stripped_scorchwood_wood"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_scorchwood_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blocksforbuilders:stripped_scorchwood_wood"
+    ]
+  }
+}

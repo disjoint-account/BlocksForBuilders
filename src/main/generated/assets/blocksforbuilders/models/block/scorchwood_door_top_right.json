@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "blocksforbuilders:block/scorchwood_door_bottom",
+    "top": "blocksforbuilders:block/scorchwood_door_top"
+  }
+}

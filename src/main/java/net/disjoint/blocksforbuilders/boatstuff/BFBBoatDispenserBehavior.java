@@ -10,6 +10,8 @@ public interface BFBBoatDispenserBehavior {
         DispenserBlock.registerBehavior(BlocksForBuildersItems.WILLOW_CHEST_BOAT, new BoatDispenserBehavior(BFBEntityTypes.WILLOW_CHEST_BOAT));
         DispenserBlock.registerBehavior(BlocksForBuildersItems.GHOSTWOOD_BOAT, new BoatDispenserBehavior(BFBEntityTypes.GHOSTWOOD_BOAT));
         DispenserBlock.registerBehavior(BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT, new BoatDispenserBehavior(BFBEntityTypes.GHOSTWOOD_CHEST_BOAT));
+        DispenserBlock.registerBehavior(BlocksForBuildersItems.SCORCHWOOD_BOAT, new BoatDispenserBehavior(BFBEntityTypes.SCORCHWOOD_BOAT));
+        DispenserBlock.registerBehavior(BlocksForBuildersItems.SCORCHWOOD_CHEST_BOAT, new BoatDispenserBehavior(BFBEntityTypes.SCORCHWOOD_CHEST_BOAT));
         DispenserBlock.registerBehavior(BlocksForBuildersItems.GREEN_JUNGLE_BOAT, new BoatDispenserBehavior(BFBEntityTypes.GREEN_JUNGLE_BOAT));
         DispenserBlock.registerBehavior(BlocksForBuildersItems.GREEN_JUNGLE_CHEST_BOAT, new BoatDispenserBehavior(BFBEntityTypes.GREEN_JUNGLE_CHEST_BOAT));
         DispenserBlock.registerBehavior(BlocksForBuildersItems.GREEN_BAMBOO_RAFT, new BoatDispenserBehavior(BFBEntityTypes.GREEN_BAMBOO_RAFT));

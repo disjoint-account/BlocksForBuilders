@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "bookshelf",
+  "key": {
+    "#": "minecraft:pale_oak_planks",
+    "X": "minecraft:book"
+  },
+  "pattern": [
+    "###",
+    "XXX",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocksforbuilders:pale_oak_bookshelf"
+  }
+}
