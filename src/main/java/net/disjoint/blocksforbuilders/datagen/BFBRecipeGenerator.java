@@ -62,11 +62,15 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING,
                         BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
 
+                List<ItemConvertible> MOSS_CARPETS = List.of(Items.MOSS_CARPET,
+                        Items.PALE_MOSS_CARPET);
+
                 List<ItemConvertible> BLACKNB = List.of(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
                 List<ItemConvertible> REDNB = List.of(Blocks.RED_NETHER_BRICKS);
 
                 offerSmelting(CHARCOAL_SMELTABLES, RecipeCategory.MISC, Items.CHARCOAL, 0.1f, 200, "charcoal");
                 offerSmelting(NON_SCORCHWOOD_SAPLINGS, RecipeCategory.MISC, BlocksForBuildersBlocks.SCORCHWOOD_SAPLING, 0.1f, 200, "scorchwood_sapling");
+                offerSmelting(MOSS_CARPETS, RecipeCategory.MISC, BlocksForBuildersBlocks.ASHEN_CARPET, 0.1f, 200, "ashen_carpet");
                 offerSmelting(BLACKNB, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_BLACK_NETHER_BRICKS, 0.1f, 200, "cracked_black_nether_bricks");
                 offerSmelting(REDNB, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_RED_NETHER_BRICKS, 0.1f, 200, "cracked_red_nether_bricks");
 
