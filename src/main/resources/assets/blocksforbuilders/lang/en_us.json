@@ -225,5 +225,9 @@
   "advancements.blocksforbuilders.didnt_this_have_a_different_name.description": "Craft Grimstone for the first time",
   "advancements.blocksforbuilders.we_have_doom_at_home.title": "We Have Doom at Home",
   "advancements.blocksforbuilders.we_have_doom_at_home.description": "Kill a Wither Skeleton on Chiseled Nether Bricks, a Magma Cube on Chiseled Red Nether Bricks, and a Ghast on Chiseled Black Nether Bricks",
+  "advancements.blocksforbuilders.scorched_earth.title": "Scorched Earth",
+  "advancements.blocksforbuilders.scorched_earth.description": "Enter the Scorched Forest Biome",
+  "advancements.blocksforbuilders.video_game_logic.title": "Video Game Logic",
+  "advancements.blocksforbuilders.video_game_logic.description": "Obtain a Scorchwood Sapling by baking any other kind of Sapling in a Furnace",
   "itemgroup.blocksforbuilders": "Blocks For Builders"
 }

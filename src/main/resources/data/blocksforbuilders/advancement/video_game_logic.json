@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:scorchwood_sapling"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.video_game_logic.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.video_game_logic.description"
+    }
+  },
+  "parent": "blocksforbuilders:scorched_earth",
+  "criteria": {
+    "has_scorchwood_sapling": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:scorchwood_sapling"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_scorchwood_sapling"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

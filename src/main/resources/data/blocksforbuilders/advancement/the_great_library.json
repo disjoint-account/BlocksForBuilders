@@ -156,6 +156,19 @@
         ]
       }
     },
+    "place_pale_oak_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:pale_oak_bookshelf"
+            }
+          }
+        ]
+      }
+    },
     "place_ghostwood_bookshelf": {
       "trigger": "minecraft:any_block_use",
       "conditions": {
@@ -164,6 +177,19 @@
             "condition": "minecraft:match_tool",
             "predicate": {
               "items": "blocksforbuilders:ghostwood_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_scorchwoodwood_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:scorchwood_bookshelf"
             }
           }
         ]
@@ -244,7 +270,13 @@
       "place_bamboo_bookshelf"
     ],
     [
+      "place_pale_oak_bookshelf"
+    ],
+    [
       "place_ghostwood_bookshelf"
+    ],
+    [
+      "place_scorchwood_bookshelf"
     ],
     [
       "place_willow_bookshelf"
