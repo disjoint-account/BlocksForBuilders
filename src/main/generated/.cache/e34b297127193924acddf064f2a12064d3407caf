@@ -1,4 +1,4 @@
-// 1.21.3	2024-11-17T22:29:17.089795	Blocks For Builders/Block Loot Tables
+// 1.21.3	2024-11-18T12:33:25.1288368	Blocks For Builders/Block Loot Tables
 95af59d3db36c1345f542b5b56057010c33b4355 data\blocksforbuilders\loot_table\blocks\scorchwood_planks.json
 865dc5d98bd98c40bd9c87c3ad27cc751eb9581d data\blocksforbuilders\loot_table\blocks\orange_oak_leaves.json
 55e44000f2633a90a7c1d4b8e7cd550028dfdcd2 data\blocksforbuilders\loot_table\blocks\scorchwood_bookshelf.json
@@ -41,7 +41,6 @@ f212aa2100df9b252bf9d71a9941be7c6f35fa3d data\blocksforbuilders\loot_table\block
 02493adc8808607df0931c023f4f8e06cb0a2a1d data\blocksforbuilders\loot_table\blocks\potted_scorchwood_sapling.json
 bac74b94762d917a138d5f7147ef34d76973f16f data\blocksforbuilders\loot_table\blocks\quartz_brick_stairs.json
 1cff6156e821fbe3863f74db60c5b356f90bda8c data\blocksforbuilders\loot_table\blocks\grimstone_bricks.json
-001df52d9825b773c71216ea3ba62dfcf3719e22 data\blocksforbuilders\loot_table\blocks\ashen_dirt.json
 1d41e63ebd03f3b9cc697f68652ac1fc10d70ce2 data\blocksforbuilders\loot_table\blocks\green_jungle_leaves.json
 036a0883465ad9fb723050d5671bd4c8e9816d8d data\blocksforbuilders\loot_table\blocks\green_bamboo_door.json
 9f92ed80d1e97b49824cd9c160da3d84cfc5132a data\blocksforbuilders\loot_table\blocks\yellow_birch_leaves.json
@@ -133,6 +132,7 @@ ad968b1c3bdc5c82549677e5717a50ffa5aa8d6e data\blocksforbuilders\loot_table\block
 a965b5737f74fd1ec6148996b221ef01ed2d30a8 data\blocksforbuilders\loot_table\blocks\fallen_dark_oak_leaves.json
 27d6451035e2aaca79c2e70601e7523eada528f1 data\minecraft\loot_table\blocks\bamboo_hanging_sign.json
 a389fd89c46b42cdec675a596dba5e22426fd54b data\blocksforbuilders\loot_table\blocks\fallen_mangrove_leaves.json
+8254384384be2497789b96abfe920cc57d13a665 data\blocksforbuilders\loot_table\blocks\scorched_dirt.json
 eae249cac6bca1e40fd49f8626126edd9d9a6ecb data\blocksforbuilders\loot_table\blocks\grimstone_brick_stairs.json
 ed64a07f4c2cc0a2463922d6883f74fb4686e0c5 data\blocksforbuilders\loot_table\blocks\willow_slab.json
 820df44693aa34d3e15d263bb9bfcadbb5101939 data\blocksforbuilders\loot_table\blocks\scorchwood_button.json

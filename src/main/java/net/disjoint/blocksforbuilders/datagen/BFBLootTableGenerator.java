@@ -219,7 +219,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG);
         addDrop(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG);
 
-        addDrop(BlocksForBuildersBlocks.ASHEN_DIRT, silkTouchAltDrops(BlocksForBuildersBlocks.ASHEN_DIRT, Blocks.DIRT, 1.0f, 1.0f));
+        addDrop(BlocksForBuildersBlocks.SCORCHED_DIRT, silkTouchAltDrops(BlocksForBuildersBlocks.SCORCHED_DIRT, Blocks.DIRT, 1.0f, 1.0f));
         addDrop(BlocksForBuildersBlocks.ASHEN_CARPET);
     }
     public LootTable.Builder bookshelfDrops(Block drop) {

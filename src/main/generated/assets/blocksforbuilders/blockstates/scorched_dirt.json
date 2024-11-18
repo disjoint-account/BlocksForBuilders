@@ -2,18 +2,18 @@
   "variants": {
     "snowy=false": [
       {
-        "model": "blocksforbuilders:block/ashen_dirt"
+        "model": "blocksforbuilders:block/scorched_dirt"
       },
       {
-        "model": "blocksforbuilders:block/ashen_dirt",
+        "model": "blocksforbuilders:block/scorched_dirt",
         "y": 90
       },
       {
-        "model": "blocksforbuilders:block/ashen_dirt",
+        "model": "blocksforbuilders:block/scorched_dirt",
         "y": 180
       },
       {
-        "model": "blocksforbuilders:block/ashen_dirt",
+        "model": "blocksforbuilders:block/scorched_dirt",
         "y": 270
       }
     ],

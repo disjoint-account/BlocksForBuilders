@@ -28,7 +28,7 @@
               },
               {
                 "type": "minecraft:matching_blocks",
-                "blocks": "blocksforbuilders:ashen_dirt",
+                "blocks": "blocksforbuilders:scorched_dirt",
                 "offset": [
                   0,
                   -1,

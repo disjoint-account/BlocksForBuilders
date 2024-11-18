@@ -6,13 +6,14 @@
     "MixinHandledScreen",
     "MixinHangingSignBlockEntityRenderer",
     "MixinHangingSignEditScreen",
-    "MixinPumpkinPie",
     "MixinSignBlockEntityRenderer"
   ],
   "mixins": [
     "MixinAbstractBlockSettings",
     "MixinBlockEntityType",
-    "MixinPumpkinPieFood"
+    "MixinPumpkinPieFood",
+    "MixinPumpkinPie",
+    "MixinTrunkPlacerTypeInvoker"
   ],
   "injectors": {
     "defaultRequire": 1

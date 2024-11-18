@@ -2,6 +2,7 @@ package net.disjoint.blocksforbuilders.world.feature;
 
 import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
+import net.disjoint.blocksforbuilders.world.feature.tree.custom.ScorchwoodTrunkPlacer;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -104,7 +105,7 @@ public class BlocksForBuildersConfiguredFeatures {
 
         register(context, SCORCHWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(BlocksForBuildersBlocks.SCORCHWOOD_LOG),
-                new StraightTrunkPlacer(4, 2, 2),
+                new ScorchwoodTrunkPlacer(7, 2, 0),
                 BlockStateProvider.of(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
                 new TwoLayersFeatureSize(0, 0, 0)).build());
@@ -128,7 +129,7 @@ public class BlocksForBuildersConfiguredFeatures {
 
 
         register(context, ASHEN_CARPET_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.ASHEN_CARPET)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), BlocksForBuildersBlocks.ASHEN_DIRT)))));
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.ASHEN_CARPET)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), BlocksForBuildersBlocks.SCORCHED_DIRT)))));
     }
 
 
