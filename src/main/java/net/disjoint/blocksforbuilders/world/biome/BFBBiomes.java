@@ -114,11 +114,11 @@ public class BFBBiomes {
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
                 .effects((new BiomeEffects.Builder())
-                        .waterColor(0x76889D)
-                        .waterFogColor(556980)
+                        .waterColor(0xA5A5A5)
+                        .waterFogColor(0x7F7F7F)
                         .skyColor(0x818181)
-                        .grassColor(0x778272)
-                        .foliageColor(0x878D76)
+                        .grassColor(0x86B783)
+                        .foliageColor(0x68A464)
                         .fogColor(0x7A7A7A)
                         .build()).build();
     }
