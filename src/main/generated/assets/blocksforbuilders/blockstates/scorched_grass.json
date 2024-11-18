@@ -2,18 +2,18 @@
   "variants": {
     "snowy=false": [
       {
-        "model": "blocksforbuilders:block/scorched_dirt"
+        "model": "blocksforbuilders:block/scorched_grass"
       },
       {
-        "model": "blocksforbuilders:block/scorched_dirt",
+        "model": "blocksforbuilders:block/scorched_grass",
         "y": 90
       },
       {
-        "model": "blocksforbuilders:block/scorched_dirt",
+        "model": "blocksforbuilders:block/scorched_grass",
         "y": 180
       },
       {
-        "model": "blocksforbuilders:block/scorched_dirt",
+        "model": "blocksforbuilders:block/scorched_grass",
         "y": 270
       }
     ],

@@ -108,7 +108,8 @@ public class BlocksForBuildersConfiguredFeatures {
                 new ScorchwoodTrunkPlacer(7, 2, 0),
                 BlockStateProvider.of(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
-                new TwoLayersFeatureSize(0, 0, 0)).build());
+                new TwoLayersFeatureSize(0, 0, 0))
+                .dirtProvider(BlockStateProvider.of(BlocksForBuildersBlocks.SCORCHED_GRASS)).forceDirt().build());
 
         register(context, PUMPKIN_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,6,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks.PUMPKIN)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
@@ -129,7 +130,7 @@ public class BlocksForBuildersConfiguredFeatures {
 
 
         register(context, ASHEN_CARPET_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.ASHEN_CARPET)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), BlocksForBuildersBlocks.SCORCHED_DIRT)))));
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.ASHEN_CARPET)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), BlocksForBuildersBlocks.SCORCHED_GRASS)))));
     }
 
 

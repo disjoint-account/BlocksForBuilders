@@ -28,7 +28,7 @@
               },
               {
                 "type": "minecraft:matching_blocks",
-                "blocks": "blocksforbuilders:scorched_dirt",
+                "blocks": "blocksforbuilders:scorched_grass",
                 "offset": [
                   0,
                   -1,

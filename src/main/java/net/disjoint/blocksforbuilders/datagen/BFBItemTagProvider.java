@@ -249,7 +249,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.WILLOW_TRAPDOOR.asItem());
 
         getOrCreateTagBuilder(ItemTags.DIRT)
-                .add(BlocksForBuildersBlocks.SCORCHED_DIRT.asItem());
+                .add(BlocksForBuildersBlocks.SCORCHED_GRASS.asItem());
 
         getOrCreateTagBuilder(BFBTags.Items.BFB_TAG)
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LOG.asItem())
@@ -425,7 +425,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG.asItem())
-                .add(BlocksForBuildersBlocks.SCORCHED_DIRT.asItem())
+                .add(BlocksForBuildersBlocks.SCORCHED_GRASS.asItem())
                 .add(BlocksForBuildersBlocks.ASHEN_CARPET.asItem());
     }
 }

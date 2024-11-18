@@ -105,7 +105,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
-                .add(BlocksForBuildersBlocks.SCORCHED_DIRT);
+                .add(BlocksForBuildersBlocks.SCORCHED_GRASS);
 
         getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_HANGING_SIGN,
@@ -372,6 +372,6 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.ASHEN_CARPET);
 
         getOrCreateTagBuilder(BlockTags.DIRT)
-                .add(BlocksForBuildersBlocks.SCORCHED_DIRT);
+                .add(BlocksForBuildersBlocks.SCORCHED_GRASS);
     }
 }

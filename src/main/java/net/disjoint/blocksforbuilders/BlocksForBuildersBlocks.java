@@ -331,7 +331,7 @@ public class BlocksForBuildersBlocks {
     public static final Block BAMBOO_THATCH_RUG = registerBlock("bamboo_thatch_rug",
             DirectionalCarpet::new, AbstractBlock.Settings.copy(BAMBOO_MOSAIC));
 
-    public static final Block SCORCHED_DIRT = registerBlock("scorched_dirt",
+    public static final Block SCORCHED_GRASS = registerBlock("scorched_grass",
             SnowyBlock::new, AbstractBlock.Settings.copy(DIRT).mapColor(MapColor.TERRACOTTA_GRAY));
     public static final Block ASHEN_CARPET = registerBlock("ashen_carpet",
             CarpetBlock::new, AbstractBlock.Settings.copy(MOSS_CARPET).sounds(BlockSoundGroup.GRASS).mapColor(MapColor.TERRACOTTA_BLACK));

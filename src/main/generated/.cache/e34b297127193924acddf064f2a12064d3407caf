@@ -1,4 +1,4 @@
-// 1.21.3	2024-11-18T16:07:43.3463912	Blocks For Builders/Block Loot Tables
+// 1.21.3	2024-11-18T16:25:07.7201099	Blocks For Builders/Block Loot Tables
 95af59d3db36c1345f542b5b56057010c33b4355 data\blocksforbuilders\loot_table\blocks\scorchwood_planks.json
 865dc5d98bd98c40bd9c87c3ad27cc751eb9581d data\blocksforbuilders\loot_table\blocks\orange_oak_leaves.json
 55e44000f2633a90a7c1d4b8e7cd550028dfdcd2 data\blocksforbuilders\loot_table\blocks\scorchwood_bookshelf.json
@@ -7,6 +7,7 @@ a45f3ad38554b1ff27dd35cbc1d37c58016f9202 data\blocksforbuilders\loot_table\block
 6845808140877cc912255d171b6103be03f27816 data\blocksforbuilders\loot_table\blocks\grimstone_tile_slab.json
 8c95398856eac8758dfcc77445fdb853a8f8b8d6 data\blocksforbuilders\loot_table\blocks\fallen_azalea_leaves.json
 2b7f8db2507372cb8b361cd7e2927765965cb21a data\blocksforbuilders\loot_table\blocks\stripped_scorchwood_wood.json
+08a9ebd510c8ac624b2f673e0a9571a14c56c32d data\blocksforbuilders\loot_table\blocks\scorched_grass.json
 a595b06b5f89a6a70c9b0c0c48d4f5b0fbdf8bc9 data\minecraft\loot_table\blocks\bamboo_sign.json
 839ac259b54d99ad11eae6dfc446e5c0162d8bc2 data\blocksforbuilders\loot_table\blocks\scorchwood_fence.json
 09c39f7094366dc89b0df703d74ec87aaa7a1a8e data\blocksforbuilders\loot_table\blocks\grimstone_tile_wall.json
@@ -132,7 +133,6 @@ ad968b1c3bdc5c82549677e5717a50ffa5aa8d6e data\blocksforbuilders\loot_table\block
 a965b5737f74fd1ec6148996b221ef01ed2d30a8 data\blocksforbuilders\loot_table\blocks\fallen_dark_oak_leaves.json
 27d6451035e2aaca79c2e70601e7523eada528f1 data\minecraft\loot_table\blocks\bamboo_hanging_sign.json
 a389fd89c46b42cdec675a596dba5e22426fd54b data\blocksforbuilders\loot_table\blocks\fallen_mangrove_leaves.json
-8254384384be2497789b96abfe920cc57d13a665 data\blocksforbuilders\loot_table\blocks\scorched_dirt.json
 eae249cac6bca1e40fd49f8626126edd9d9a6ecb data\blocksforbuilders\loot_table\blocks\grimstone_brick_stairs.json
 ed64a07f4c2cc0a2463922d6883f74fb4686e0c5 data\blocksforbuilders\loot_table\blocks\willow_slab.json
 820df44693aa34d3e15d263bb9bfcadbb5101939 data\blocksforbuilders\loot_table\blocks\scorchwood_button.json

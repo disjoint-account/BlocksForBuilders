@@ -10,7 +10,7 @@ import net.minecraft.world.gen.surfacebuilder.MaterialRules;
 public class BFBMaterialRules {
     private static final MaterialRules.MaterialRule DIRT = makeStateRule(Blocks.DIRT);
     private static final MaterialRules.MaterialRule PODZOL = makeStateRule(Blocks.PODZOL);
-    private static final MaterialRules.MaterialRule ASH = makeStateRule(BlocksForBuildersBlocks.SCORCHED_DIRT);
+    private static final MaterialRules.MaterialRule ASH = makeStateRule(BlocksForBuildersBlocks.SCORCHED_GRASS);
 
     public static MaterialRules.MaterialRule makeRules() {
         MaterialRules.MaterialCondition isAtOrAboveWaterLevel = MaterialRules.water(-1, 0);
