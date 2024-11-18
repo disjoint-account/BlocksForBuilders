@@ -3,6 +3,7 @@ package net.disjoint.blocksforbuilders;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -188,6 +189,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);
                         entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
+                        entries.add(Items.PUMPKIN_PIE);
                     }).build());
     public static void registerItemGroups() {
         BlocksForBuilders.LOGGER.info("Registering Item Groups for " + BlocksForBuilders.MOD_ID);
