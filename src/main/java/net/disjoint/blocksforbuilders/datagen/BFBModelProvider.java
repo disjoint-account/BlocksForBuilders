@@ -1,11 +1,13 @@
 package net.disjoint.blocksforbuilders.datagen;
 
+import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.BlocksForBuildersItems;
+import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.item.tint.ConstantTintSource;
 import net.minecraft.util.Identifier;
 
 import static net.disjoint.blocksforbuilders.datagen.BFBBlockstateModelGenerator.registerSign;
@@ -14,6 +16,8 @@ public class BFBModelProvider extends FabricModelProvider {
     public BFBModelProvider(FabricDataOutput output) {
         super(output);
     }
+    ConstantTintSource standardTint = new ConstantTintSource(-12012264);
+
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
@@ -30,7 +34,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.GHOSTWOOD_LOG).log(BlocksForBuildersBlocks.GHOSTWOOD_LOG).wood(BlocksForBuildersBlocks.GHOSTWOOD_WOOD);
         blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG).log(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG).wood(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerFlowerPotPlant(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING, BlocksForBuildersBlocks.POTTED_GHOSTWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING, BlocksForBuildersBlocks.POTTED_GHOSTWOOD_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         ghostwoodTexturePool.stairs(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS);
         ghostwoodTexturePool.slab(BlocksForBuildersBlocks.GHOSTWOOD_SLAB);
         ghostwoodTexturePool.fence(BlocksForBuildersBlocks.GHOSTWOOD_FENCE);
@@ -44,7 +48,7 @@ public class BFBModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.SCORCHWOOD_LOG).log(BlocksForBuildersBlocks.SCORCHWOOD_LOG).wood(BlocksForBuildersBlocks.SCORCHWOOD_WOOD);
         blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG).log(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG).wood(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_WOOD);
-        blockStateModelGenerator.registerFlowerPotPlant(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING, BlocksForBuildersBlocks.POTTED_SCORCHWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING, BlocksForBuildersBlocks.POTTED_SCORCHWOOD_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         scorchwoodTexturePool.stairs(BlocksForBuildersBlocks.SCORCHWOOD_STAIRS);
         scorchwoodTexturePool.slab(BlocksForBuildersBlocks.SCORCHWOOD_SLAB);
         scorchwoodTexturePool.fence(BlocksForBuildersBlocks.SCORCHWOOD_FENCE);
@@ -59,7 +63,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.WILLOW_LOG).log(BlocksForBuildersBlocks.WILLOW_LOG).wood(BlocksForBuildersBlocks.WILLOW_WOOD);
         blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG).log(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG).wood(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.WILLOW_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerFlowerPotPlant(BlocksForBuildersBlocks.WILLOW_SAPLING, BlocksForBuildersBlocks.POTTED_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(BlocksForBuildersBlocks.WILLOW_SAPLING, BlocksForBuildersBlocks.POTTED_WILLOW_SAPLING, BlockStateModelGenerator.CrossType.TINTED);
         willowTexturePool.stairs(BlocksForBuildersBlocks.WILLOW_STAIRS);
         willowTexturePool.slab(BlocksForBuildersBlocks.WILLOW_SLAB);
         willowTexturePool.fence(BlocksForBuildersBlocks.WILLOW_FENCE);
@@ -74,7 +78,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG).log(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG).wood(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD);
         blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG).log(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG).wood(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerFlowerPotPlant(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, BlocksForBuildersBlocks.POTTED_GREEN_JUNGLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, BlocksForBuildersBlocks.POTTED_GREEN_JUNGLE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         greenJungleTexturePool.stairs(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS);
         greenJungleTexturePool.slab(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB);
         greenJungleTexturePool.fence(BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE);
@@ -98,13 +102,13 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(Blocks.BAMBOO_BLOCK, BlocksForBuildersBlocks.GREEN_BAMBOO_HANGING_SIGN, BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_HANGING_SIGN);
 
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.RED_OAK_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerFlowerPotPlant(BlocksForBuildersBlocks.RED_OAK_SAPLING, BlocksForBuildersBlocks.POTTED_RED_OAK_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(BlocksForBuildersBlocks.RED_OAK_SAPLING, BlocksForBuildersBlocks.POTTED_RED_OAK_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerFlowerPotPlant(BlocksForBuildersBlocks.ORANGE_OAK_SAPLING, BlocksForBuildersBlocks.POTTED_ORANGE_OAK_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(BlocksForBuildersBlocks.ORANGE_OAK_SAPLING, BlocksForBuildersBlocks.POTTED_ORANGE_OAK_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerFlowerPotPlant(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, BlocksForBuildersBlocks.POTTED_GOLD_ACACIA_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, BlocksForBuildersBlocks.POTTED_GOLD_ACACIA_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerFlowerPotPlant(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, BlocksForBuildersBlocks.POTTED_YELLOW_BIRCH_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, BlocksForBuildersBlocks.POTTED_YELLOW_BIRCH_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
         blockStateModelGenerator.registerSimpleCubeAll(BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(BlocksForBuildersBlocks.CRACKED_BLACK_NETHER_BRICKS);
@@ -127,6 +131,14 @@ public class BFBModelProvider extends FabricModelProvider {
         grimstoneBricksTexturePool.slab(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB);
         grimstoneBricksTexturePool.wall(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL);
 
+        blockStateModelGenerator.registerTintedItemModel(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, Identifier.of(BlocksForBuilders.MOD_ID, "block/fallen_oak_leaves"), standardTint);
+        blockStateModelGenerator.registerTintedItemModel(BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES, Identifier.of(BlocksForBuilders.MOD_ID, "block/fallen_birch_leaves"), new ConstantTintSource(-8345771));
+        blockStateModelGenerator.registerTintedItemModel(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES, Identifier.of(BlocksForBuilders.MOD_ID, "block/fallen_spruce_leaves"), new  ConstantTintSource(-10380959));
+        blockStateModelGenerator.registerTintedItemModel(BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES, Identifier.of(BlocksForBuilders.MOD_ID, "block/fallen_jungle_leaves"), standardTint);
+        blockStateModelGenerator.registerTintedItemModel(BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES, Identifier.of(BlocksForBuilders.MOD_ID, "block/fallen_dark_oak_leaves"), standardTint);
+        blockStateModelGenerator.registerTintedItemModel(BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES, Identifier.of(BlocksForBuilders.MOD_ID, "block/fallen_acacia_leaves"), standardTint);
+        blockStateModelGenerator.registerTintedItemModel(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, Identifier.of(BlocksForBuilders.MOD_ID, "block/fallen_mangrove_leaves"), standardTint);
+
         blockStateModelGenerator.registerAxisRotated(BlocksForBuildersBlocks.BAMBOO_THATCH, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
 
         Identifier identifier = TextureMap.getId(Blocks.DIRT);
@@ -135,6 +147,7 @@ public class BFBModelProvider extends FabricModelProvider {
         BlockStateVariant blockStateVariant = BlockStateVariant.create().put(VariantSettings.MODEL, Models.CUBE_BOTTOM_TOP.upload(Blocks.GRASS_BLOCK, "_snow", textureMap, blockStateModelGenerator.modelCollector));
         blockStateModelGenerator.registerTopSoil(BlocksForBuildersBlocks.SCORCHED_GRASS, identifier2, blockStateVariant);
     }
+
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(BlocksForBuildersItems.GHOSTWOOD_BOAT, Models.GENERATED);
@@ -151,5 +164,10 @@ public class BFBModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(BlocksForBuildersItems.GREEN_BAMBOO_RAFT, Models.GENERATED);
         itemModelGenerator.register(BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT, Models.GENERATED);
+        itemModelGenerator.register(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL.asItem());
+        itemModelGenerator.register(BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE.asItem());
+        itemModelGenerator.register(BlocksForBuildersBlocks.QUARTZ_WALL.asItem());
+        itemModelGenerator.register(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL.asItem());
+        itemModelGenerator.register(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL.asItem());
     }
 }

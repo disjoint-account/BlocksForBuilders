@@ -59,72 +59,58 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         {
             ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
                 if (world == null || pos == null) {
-                    return FoliageColors.getDefaultColor();
+                    return FoliageColors.DEFAULT;
                 }
                 return BiomeColors.getFoliageColor(world, pos);
             }, BlocksForBuildersBlocks.FALLEN_OAK_LEAVES);
-
-            ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getDefaultColor(), BlocksForBuildersBlocks.FALLEN_OAK_LEAVES);
         }
         {
             ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
                 if (world == null || pos == null) {
-                    return FoliageColors.getBirchColor();
+                    return FoliageColors.BIRCH;
                 }
-                return FoliageColors.getBirchColor();
+                return FoliageColors.BIRCH;
             }, BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES);
-
-            ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getBirchColor(), BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES);
         }
         {
             ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
                 if (world == null || pos == null) {
-                    return FoliageColors.getSpruceColor();
+                    return FoliageColors.SPRUCE;
                 }
-                return FoliageColors.getSpruceColor();
+                return FoliageColors.SPRUCE;
             }, BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES);
-
-            ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getSpruceColor(), BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES);
         }
         {
             ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
                 if (world == null || pos == null) {
-                    return FoliageColors.getDefaultColor();
+                    return FoliageColors.DEFAULT;
                 }
                 return BiomeColors.getFoliageColor(world, pos);
             }, BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES);
-
-            ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getDefaultColor(), BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES);
         }
         {
             ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
                 if (world == null || pos == null) {
-                    return FoliageColors.getDefaultColor();
+                    return FoliageColors.DEFAULT;
                 }
                 return BiomeColors.getFoliageColor(world, pos);
             }, BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES);
-
-            ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getDefaultColor(), BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES);
         }
         {
             ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
                 if (world == null || pos == null) {
-                    return FoliageColors.getDefaultColor();
+                    return FoliageColors.DEFAULT;
                 }
                 return BiomeColors.getFoliageColor(world, pos);
             }, BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES);
-
-            ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getDefaultColor(), BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES);
         }
         {
             ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
                 if (world == null || pos == null) {
-                    return FoliageColors.getDefaultColor();
+                    return FoliageColors.DEFAULT;
                 }
                 return BiomeColors.getFoliageColor(world, pos);
             }, BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES);
-
-            ColorProviderRegistry.ITEM.register((stack, layer) -> FoliageColors.getDefaultColor(), BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES);
         }
     }
 }

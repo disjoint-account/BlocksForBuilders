@@ -43,19 +43,15 @@ public class BFBEntityModelLayers {
         EntityModelLayerRegistry.registerModelLayer(modelLayer, texturedModelDataProvider);
         EntityRendererRegistry.register(entityType, entityRendererFactory);
     }
-
     private static EntityModelLayer registerBoatModelLayer(String id) {
         return new EntityModelLayer(Identifier.of(BlocksForBuilders.MOD_ID, "boat/" + id), "main");
     }
-
     private static EntityModelLayer registerChestBoatModelLayer(String id) {
         return new EntityModelLayer(Identifier.of(BlocksForBuilders.MOD_ID, "chest_boat/" + id), "main");
     }
-
     private static EntityModelLayer registerRaftModelLayer(String id) {
         return new EntityModelLayer(Identifier.of(BlocksForBuilders.MOD_ID, "raft/" + id), "main");
     }
-
     private static EntityModelLayer registerChestRaftModelLayer(String id) {
         return new EntityModelLayer(Identifier.of(BlocksForBuilders.MOD_ID, "chest_raft/" + id), "main");
     }

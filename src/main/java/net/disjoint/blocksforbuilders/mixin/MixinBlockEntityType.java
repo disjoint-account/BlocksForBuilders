@@ -14,7 +14,6 @@ import net.minecraft.block.entity.BlockEntityType;
 
 @Mixin(BlockEntityType.class)
 public class MixinBlockEntityType {
-
     @Inject(method = "supports", at = @At("HEAD"), cancellable = true)
     private void bfbWood$signSupports(BlockState state, CallbackInfoReturnable<Boolean> cir) {
         Block block = state.getBlock();
@@ -31,5 +30,4 @@ public class MixinBlockEntityType {
             cir.setReturnValue(true);
         }
     }
-
 }
