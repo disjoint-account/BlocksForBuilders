@@ -74,7 +74,6 @@ public class ScorchwoodTrunkPlacer extends TrunkPlacer {
                 }
             }
         }
-
         return ImmutableList.of(new FoliagePlacer.TreeNode(startPos.up(height_), 0, false));
     }
 }
