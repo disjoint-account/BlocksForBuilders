@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocksforbuilders:block/maple_slab"
+    },
+    "type=double": {
+      "model": "blocksforbuilders:block/maple_planks"
+    },
+    "type=top": {
+      "model": "blocksforbuilders:block/maple_slab_top"
+    }
+  }
+}

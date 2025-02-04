@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "cracked_grimstone_bricks",
+  "ingredient": "blocksforbuilders:grimstone_bricks",
+  "result": {
+    "id": "blocksforbuilders:cracked_grimstone_bricks"
+  }
+}

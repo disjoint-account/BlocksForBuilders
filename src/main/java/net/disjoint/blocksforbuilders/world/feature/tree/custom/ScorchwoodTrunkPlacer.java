@@ -3,6 +3,7 @@ package net.disjoint.blocksforbuilders.world.feature.tree.custom;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBTrunkPlacerTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.PillarBlock;
@@ -37,43 +38,23 @@ public class ScorchwoodTrunkPlacer extends TrunkPlacer {
                                                  int height, BlockPos startPos, TreeFeatureConfig config) {
         setToDirt(world, replacer, random, startPos.down(), config);
 
-        int height_ = height + random.nextBetween(firstRandomHeight, firstRandomHeight + 3) +
+        int heightCap = height + random.nextBetween(firstRandomHeight, firstRandomHeight + 3) +
                 random.nextBetween(secondRandomHeight - 2, secondRandomHeight + 2);
 
-        for(int i = 0; i < height_; i++) {
+        for(int i = 0; i < heightCap; i++) {
             getAndSetState(world, replacer, random, startPos.up(i), config);
 
-            int branchHeight = height_ - 1;
-            if(i >= 8 && i % 2 == 0 && i < branchHeight && random.nextBoolean()) {
-                if(random.nextFloat() > 0.6f) {
-                    for(int x = 0; x < 2; x++) {
-                        Function<BlockState, BlockState> function = (state) -> (BlockState)state.withIfExists(PillarBlock.AXIS, Direction.NORTH.getAxis());
-                        getAndSetState(world, replacer, random, startPos.up(i).offset(Direction.NORTH, x), config, function);
-                    }
-                }
-
-                if(random.nextFloat() > 0.6f) {
-                    for(int x = 0; x < 2; x++) {
-                        Function<BlockState, BlockState> function = (state) -> (BlockState)state.withIfExists(PillarBlock.AXIS, Direction.SOUTH.getAxis());
-                        getAndSetState(world, replacer, random, startPos.up(i).offset(Direction.SOUTH, x), config, function);
-                    }
-                }
-
-                if(random.nextFloat() > 0.6f) {
-                    for(int x = 0; x < 2; x++) {
-                        Function<BlockState, BlockState> function = (state) -> (BlockState)state.withIfExists(PillarBlock.AXIS, Direction.EAST.getAxis());
-                        getAndSetState(world, replacer, random, startPos.up(i).offset(Direction.EAST, x), config, function);
-                    }
-                }
-
-                if(random.nextFloat() > 0.6f) {
-                    for(int x = 0; x < 2; x++) {
-                        Function<BlockState, BlockState> function = (state) -> (BlockState)state.withIfExists(PillarBlock.AXIS, Direction.WEST.getAxis());
-                        getAndSetState(world, replacer, random, startPos.up(i).offset(Direction.WEST, x), config, function);
+            int branchHeight = heightCap - 1;
+            for (Direction direction : Direction.Type.HORIZONTAL) {
+                BlockPos pos = startPos.up(i).offset(direction);
+                if(i >= 8 && i < branchHeight && random.nextBoolean()) {
+                    if(random.nextFloat() > 0.6f && !world.testBlockState(pos.up(), state -> state.isOf(BlocksForBuildersBlocks.SCORCHWOOD_LOG)) && !world.testBlockState(pos.down(), state -> state.isOf(BlocksForBuildersBlocks.SCORCHWOOD_LOG))) {
+                        Function<BlockState, BlockState> function = (state) -> (BlockState)state.withIfExists(PillarBlock.AXIS, direction.getAxis());
+                        getAndSetState(world, replacer, random, pos, config, function);
                     }
                 }
             }
         }
-        return ImmutableList.of(new FoliagePlacer.TreeNode(startPos.up(height_), 0, false));
+        return ImmutableList.of(new FoliagePlacer.TreeNode(startPos.up(heightCap), 0, false));
     }
 }

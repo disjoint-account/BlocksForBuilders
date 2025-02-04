@@ -2,6 +2,7 @@ package net.disjoint.blocksforbuilders.world.feature;
 
 import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
+import net.disjoint.blocksforbuilders.world.feature.tree.custom.PalmTrunkPlacer;
 import net.disjoint.blocksforbuilders.world.feature.tree.custom.ScorchwoodTrunkPlacer;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
@@ -24,20 +25,22 @@ import java.util.List;
 
 public class BlocksForBuildersConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> GREEN_JUNGLE_KEY = registerKey("green_jungle");
-    public static final RegistryKey<ConfiguredFeature<?,?>> RED_OAK_KEY = registerKey("red_oak");
+    public static final RegistryKey<ConfiguredFeature<?,?>> MAPLE_KEY = registerKey("maple");
     public static final RegistryKey<ConfiguredFeature<?,?>> GOLD_ACACIA_KEY = registerKey("gold_acacia");
     public static final RegistryKey<ConfiguredFeature<?,?>> GOLD_ACACIA_SPAWN_KEY = registerKey("gold_acacia_spawn");
     public static final RegistryKey<ConfiguredFeature<?,?>> GHOSTWOOD_KEY = registerKey("ghostwood");
     public static final RegistryKey<ConfiguredFeature<?,?>> SCORCHWOOD_KEY = registerKey("scorchwood");
     public static final RegistryKey<ConfiguredFeature<?,?>> WILLOW_KEY = registerKey("willow");
     public static final RegistryKey<ConfiguredFeature<?,?>> WILLOW_SPAWN_KEY = registerKey("willow_spawn");
+    public static final RegistryKey<ConfiguredFeature<?,?>> PALM_KEY = registerKey("palm");
+    public static final RegistryKey<ConfiguredFeature<?,?>> PALM_SPAWN_KEY = registerKey("palm_spawn");
     public static final RegistryKey<ConfiguredFeature<?,?>> ORANGE_OAK_KEY = registerKey("orange_oak");
     public static final RegistryKey<ConfiguredFeature<?,?>> YELLOW_BIRCH_KEY = registerKey("yellow_birch");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> PUMPKIN_KEY = registerKey("pumpkin");
     public static final RegistryKey<ConfiguredFeature<?,?>> SWEET_BERRY_KEY = registerKey("sweet_berry");
 
-    public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_RED_OAK_KEY = registerKey("fallen_red_oak");
+    public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_MAPLE_KEY = registerKey("fallen_maple");
     public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_ORANGE_OAK_KEY = registerKey("fallen_orange_oak");
     public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_YELLOW_BIRCH_KEY = registerKey("fallen_yellow_birch");
 
@@ -53,10 +56,10 @@ public class BlocksForBuildersConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
-        register(context, RED_OAK_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(Blocks.OAK_LOG),
+        register(context, MAPLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.MAPLE_LOG),
                 new StraightTrunkPlacer(4, 2, 2),
-                BlockStateProvider.of(BlocksForBuildersBlocks.RED_OAK_LEAVES),
+                BlockStateProvider.of(BlocksForBuildersBlocks.MAPLE_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
@@ -111,16 +114,25 @@ public class BlocksForBuildersConfiguredFeatures {
                 new TwoLayersFeatureSize(0, 0, 0))
                 .dirtProvider(BlockStateProvider.of(BlocksForBuildersBlocks.SCORCHED_GRASS)).forceDirt().build());
 
+        register(context, PALM_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.PALM_LOG),
+                new PalmTrunkPlacer(4, 4, 4),
+                BlockStateProvider.of(BlocksForBuildersBlocks.PALM_LEAVES),
+                new AcaciaFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0)),
+                new TwoLayersFeatureSize(0, 0, 0)).build());
+
+        register(context, PALM_SPAWN_KEY, Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.PALM_PLACED_KEY),
+                        0.1f)), placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.PALM_PLACED_KEY)));
+
         register(context, PUMPKIN_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,6,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks.PUMPKIN)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
 
         register(context, SWEET_BERRY_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,3,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks.SWEET_BERRY_BUSH)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
 
-
-
-        register(context, FALLEN_RED_OAK_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
+        register(context, FALLEN_MAPLE_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
 
         register(context, FALLEN_ORANGE_OAK_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));

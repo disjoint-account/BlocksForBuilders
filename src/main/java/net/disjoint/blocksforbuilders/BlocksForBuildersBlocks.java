@@ -4,6 +4,7 @@ import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBHangingSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallHangingSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallSignBlock;
+import net.disjoint.blocksforbuilders.world.feature.tree.AltSoilSaplingBlock;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBSaplingGenerators;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
@@ -14,6 +15,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
@@ -25,11 +28,15 @@ public class BlocksForBuildersBlocks {
     public static final BlockSetType GHOSTWOOD_SET = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_set"));
     public static final BlockSetType SCORCHWOOD_SET = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood_set"));
     public static final BlockSetType WILLOW_SET = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "willow_set"));
+    public static final BlockSetType PALM_SET = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "palm_set"));
+    public static final BlockSetType MAPLE_SET = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "maple_set"));
     public static final BlockSetType GREEN_JUNGLE_SET = BlockSetTypeBuilder.copyOf(BlockSetType.JUNGLE).register(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_set"));
     public static final BlockSetType GREEN_BAMBOO_SET = BlockSetTypeBuilder.copyOf(BlockSetType.BAMBOO).register(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_set"));
     public static final WoodType GHOSTWOOD = WoodTypeBuilder.copyOf(WoodType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood"), GHOSTWOOD_SET);
     public static final WoodType SCORCHWOOD = WoodTypeBuilder.copyOf(WoodType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood"), SCORCHWOOD_SET);
     public static final WoodType WILLOW = WoodTypeBuilder.copyOf(WoodType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "willow"), WILLOW_SET);
+    public static final WoodType PALM = WoodTypeBuilder.copyOf(WoodType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "palm"), PALM_SET);
+    public static final WoodType MAPLE = WoodTypeBuilder.copyOf(WoodType.OAK).register(Identifier.of(BlocksForBuilders.MOD_ID, "maple"), MAPLE_SET);
     public static final WoodType GREEN_JUNGLE = WoodTypeBuilder.copyOf(WoodType.JUNGLE).register(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle"), GREEN_JUNGLE_SET);
     public static final WoodType GREEN_BAMBOO = WoodTypeBuilder.copyOf(WoodType.BAMBOO).register(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo"), GREEN_BAMBOO_SET);
 
@@ -152,7 +159,68 @@ public class BlocksForBuildersBlocks {
     public static final Block WILLOW_WALL_SIGN = registerSignBlock("willow_wall_sign", settings -> new BFBWallSignBlock("willow", WILLOW, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
     public static final Block WILLOW_HANGING_SIGN = registerSignBlock("willow_hanging_sign", settings -> new BFBHangingSignBlock("willow", WILLOW, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
     public static final Block WILLOW_WALL_HANGING_SIGN = registerSignBlock("willow_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("willow", WILLOW, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
-    
+
+    public static final Block PALM_LOG = registerBlock("palm_log",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block PALM_WOOD = registerBlock("palm_wood",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block PALM_LEAVES = registerBlock("palm_leaves",
+            LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block FALLEN_PALM_LEAVES = registerBlock("fallen_palm_leaves",
+            FallenLeavesBlock::new, AbstractBlock.Settings.copy(PALM_LEAVES).mapColor(MapColor.TERRACOTTA_ORANGE).nonOpaque());
+    public static final Block PALM_SAPLING = registerAltSaplingBlock("palm_sapling", BFBSaplingGenerators.PALM, BlockTags.SAND, OAK_SAPLING);
+    public static final Block POTTED_PALM_SAPLING = registerFlowerPotBlock("potted_palm_sapling", PALM_SAPLING, POTTED_OAK_SAPLING);
+    public static final Block PALM_PLANKS = registerBlock("palm_planks",
+            Block::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block PALM_STAIRS = registerStairsBlock("palm_stairs", PALM_PLANKS);
+    public static final Block PALM_SLAB = registerBlock("palm_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SLAB).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block PALM_FENCE = registerBlock("palm_fence",
+            FenceBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_FENCE).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block PALM_FENCE_GATE = registerFenceGateBlock("palm_fence_gate", WoodType.OAK, PALM_FENCE, MapColor.TERRACOTTA_ORANGE);
+    public static final Block PALM_BUTTON = registerButtonBlock("palm_button", BlockSetType.OAK, 15, OAK_BUTTON);
+    public static final Block PALM_PRESSURE_PLATE = registerPressurePlateBlock("palm_pressure_plate", BlockSetType.OAK, OAK_PRESSURE_PLATE);
+    public static final Block PALM_DOOR = registerDoorBlock("palm_door",BlockSetType.OAK, OAK_DOOR);
+    public static final Block PALM_TRAPDOOR = registerTrapdoorBlock("palm_trapdoor", BlockSetType.OAK, OAK_TRAPDOOR);
+    public static final Block PALM_SIGN = registerSignBlock("palm_sign", settings -> new BFBSignBlock("palm", PALM, settings), AbstractBlock.Settings.copy(OAK_SIGN));
+    public static final Block PALM_WALL_SIGN = registerSignBlock("palm_wall_sign", settings -> new BFBWallSignBlock("palm", PALM, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
+    public static final Block PALM_HANGING_SIGN = registerSignBlock("palm_hanging_sign", settings -> new BFBHangingSignBlock("palm", PALM, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
+    public static final Block PALM_WALL_HANGING_SIGN = registerSignBlock("palm_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("palm", PALM, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+
+    public static final Block MAPLE_LOG = registerBlock("maple_log",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block STRIPPED_MAPLE_LOG = registerBlock("stripped_maple_log",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block MAPLE_WOOD = registerBlock("maple_wood",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block STRIPPED_MAPLE_WOOD = registerBlock("stripped_maple_wood",
+            PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block MAPLE_LEAVES = registerBlock("maple_leaves",
+            LeavesBlock::new, AbstractBlock.Settings.copy(OAK_LEAVES).mapColor(MapColor.DARK_RED));
+    public static final Block FALLEN_MAPLE_LEAVES = registerBlock("fallen_maple_leaves",
+            FallenLeavesBlock::new, AbstractBlock.Settings.copy(MAPLE_LEAVES).mapColor(MapColor.DARK_RED).nonOpaque());
+    public static final Block MAPLE_SAPLING = registerSaplingBlock("maple_sapling", BFBSaplingGenerators.MAPLE, OAK_SAPLING);
+    public static final Block POTTED_MAPLE_SAPLING = registerFlowerPotBlock("potted_maple_sapling", MAPLE_SAPLING, POTTED_OAK_SAPLING);public static final Block MAPLE_PLANKS = registerBlock("maple_planks",
+            Block::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block MAPLE_STAIRS = registerStairsBlock("maple_stairs", MAPLE_PLANKS);
+    public static final Block MAPLE_SLAB = registerBlock("maple_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SLAB).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block MAPLE_FENCE = registerBlock("maple_fence",
+            FenceBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_FENCE).mapColor(MapColor.TERRACOTTA_ORANGE));
+    public static final Block MAPLE_FENCE_GATE = registerFenceGateBlock("maple_fence_gate", WoodType.OAK, MAPLE_FENCE, MapColor.TERRACOTTA_ORANGE);
+    public static final Block MAPLE_BUTTON = registerButtonBlock("maple_button", BlockSetType.OAK, 15, OAK_BUTTON);
+    public static final Block MAPLE_PRESSURE_PLATE = registerPressurePlateBlock("maple_pressure_plate", BlockSetType.OAK, OAK_PRESSURE_PLATE);
+    public static final Block MAPLE_DOOR = registerDoorBlock("maple_door",BlockSetType.OAK, OAK_DOOR);
+    public static final Block MAPLE_TRAPDOOR = registerTrapdoorBlock("maple_trapdoor", BlockSetType.OAK, OAK_TRAPDOOR);
+    public static final Block MAPLE_SIGN = registerSignBlock("maple_sign", settings -> new BFBSignBlock("maple", MAPLE, settings), AbstractBlock.Settings.copy(OAK_SIGN));
+    public static final Block MAPLE_WALL_SIGN = registerSignBlock("maple_wall_sign", settings -> new BFBWallSignBlock("maple", MAPLE, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
+    public static final Block MAPLE_HANGING_SIGN = registerSignBlock("maple_hanging_sign", settings -> new BFBHangingSignBlock("maple", MAPLE, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
+    public static final Block MAPLE_WALL_HANGING_SIGN = registerSignBlock("maple_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("maple", MAPLE, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+
     public static final Block GREEN_BAMBOO_PLANKS = registerBlock("green_bamboo_planks",
             Block::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).mapColor(MapColor.DARK_GREEN));
     public static final Block GREEN_BAMBOO_STAIRS = registerStairsBlock("green_bamboo_stairs", GREEN_BAMBOO_PLANKS);
@@ -169,13 +237,7 @@ public class BlocksForBuildersBlocks {
     public static final Block GREEN_BAMBOO_WALL_SIGN = registerSignBlock("green_bamboo_wall_sign", settings -> new BFBWallSignBlock("green_bamboo", GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(BAMBOO_WALL_SIGN));
     public static final Block GREEN_BAMBOO_HANGING_SIGN = registerSignBlock("green_bamboo_hanging_sign", settings -> new BFBHangingSignBlock("green_bamboo", GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(BAMBOO_HANGING_SIGN));
     public static final Block GREEN_BAMBOO_WALL_HANGING_SIGN = registerSignBlock("green_bamboo_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("green_bamboo", GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(BAMBOO_WALL_HANGING_SIGN));
-  
-    public static final Block RED_OAK_LEAVES = registerBlock("red_oak_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(OAK_LEAVES).mapColor(MapColor.DARK_RED));
-    public static final Block FALLEN_RED_OAK_LEAVES = registerBlock("fallen_red_oak_leaves",
-            FallenLeavesBlock::new, AbstractBlock.Settings.copy(RED_OAK_LEAVES).mapColor(MapColor.DARK_RED).nonOpaque());
-    public static final Block RED_OAK_SAPLING = registerSaplingBlock("red_oak_sapling", BFBSaplingGenerators.RED_OAK, OAK_SAPLING);
-    public static final Block POTTED_RED_OAK_SAPLING = registerFlowerPotBlock("potted_red_oak_sapling", RED_OAK_SAPLING, POTTED_OAK_SAPLING);
+
     public static final Block GOLD_ACACIA_LEAVES = registerBlock("gold_acacia_leaves",
             LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW));
     public static final Block FALLEN_GOLD_ACACIA_LEAVES = registerBlock("fallen_gold_acacia_leaves",
@@ -248,6 +310,10 @@ public class BlocksForBuildersBlocks {
             Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.BLACK));
     public static final Block WILLOW_BOOKSHELF = registerBlock("willow_bookshelf",
             Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_GREEN));
+    public static final Block PALM_BOOKSHELF = registerBlock("palm_bookshelf",
+            Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_GREEN));
+    public static final Block MAPLE_BOOKSHELF = registerBlock("maple_bookshelf",
+            Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_GREEN));
     public static final Block GREEN_BAMBOO_BOOKSHELF = registerBlock("green_bamboo_bookshelf",
             Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.DARK_GREEN));
    
@@ -308,6 +374,8 @@ public class BlocksForBuildersBlocks {
             WallBlock::new, AbstractBlock.Settings.copy(POLISHED_DEEPSLATE_WALL).mapColor(MapColor.TERRACOTTA_PURPLE));
     public static final Block GRIMSTONE_BRICKS = registerBlock("grimstone_bricks",
             Block::new, AbstractBlock.Settings.copy(DEEPSLATE_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE));
+    public static final Block CRACKED_GRIMSTONE_BRICKS = registerBlock("cracked_grimstone_bricks",
+            Block::new, AbstractBlock.Settings.copy(CRACKED_DEEPSLATE_BRICKS).mapColor(MapColor.TERRACOTTA_PURPLE));
     public static final Block GRIMSTONE_BRICK_STAIRS = registerStairsBlock("grimstone_brick_stairs", GRIMSTONE_BRICKS);
     public static final Block GRIMSTONE_BRICK_SLAB = registerBlock("grimstone_brick_slab",
             SlabBlock::new, AbstractBlock.Settings.copy(DEEPSLATE_BRICK_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE));
@@ -315,6 +383,8 @@ public class BlocksForBuildersBlocks {
             WallBlock::new, AbstractBlock.Settings.copy(DEEPSLATE_BRICK_WALL).mapColor(MapColor.TERRACOTTA_PURPLE));
     public static final Block GRIMSTONE_TILES = registerBlock("grimstone_tiles",
             DirectionalBlock::new, AbstractBlock.Settings.copy(DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE));
+    public static final Block CRACKED_GRIMSTONE_TILES = registerBlock("cracked_grimstone_tiles",
+            DirectionalBlock::new, AbstractBlock.Settings.copy(CRACKED_DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE));
     public static final Block GRIMSTONE_TILE_STAIRS = registerStairsBlock("grimstone_tile_stairs", GRIMSTONE_TILES);
     public static final Block GRIMSTONE_TILE_SLAB = registerBlock("grimstone_tile_slab",
             DirectionalSlab::new, AbstractBlock.Settings.copy(DEEPSLATE_TILE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE));
@@ -374,6 +444,9 @@ public class BlocksForBuildersBlocks {
     }
     private static Block registerSaplingBlock(String name, SaplingGenerator generator, Block base) {
         return registerBlock(name, settings -> new SaplingBlock(generator, settings), AbstractBlock.Settings.copy(base));
+    }
+    private static Block registerAltSaplingBlock(String name, SaplingGenerator generator, TagKey<Block> ground, Block base) {
+        return registerBlock(name, settings -> new AltSoilSaplingBlock(generator, settings, ground), AbstractBlock.Settings.copy(base));
     }
     private static void registerBlockItem(String name, Block block) {
         Identifier id = Identifier.of(BlocksForBuilders.MOD_ID, name);

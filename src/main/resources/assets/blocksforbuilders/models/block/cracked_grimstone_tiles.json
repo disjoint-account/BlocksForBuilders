@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blocksforbuilders:block/cracked_grimstone_tiles_top",
+    "side": "blocksforbuilders:block/cracked_grimstone_tiles"
+  }
+}

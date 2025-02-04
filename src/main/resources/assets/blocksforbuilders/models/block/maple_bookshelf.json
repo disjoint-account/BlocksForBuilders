@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blocksforbuilders:block/maple_planks",
+    "side": "blocksforbuilders:block/maple_bookshelf"
+  }
+}

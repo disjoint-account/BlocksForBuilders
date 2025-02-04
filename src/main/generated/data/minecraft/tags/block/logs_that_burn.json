@@ -11,6 +11,14 @@
     "blocksforbuilders:willow_log",
     "blocksforbuilders:willow_wood",
     "blocksforbuilders:stripped_willow_log",
-    "blocksforbuilders:stripped_willow_wood"
+    "blocksforbuilders:stripped_willow_wood",
+    "blocksforbuilders:palm_log",
+    "blocksforbuilders:palm_wood",
+    "blocksforbuilders:stripped_palm_log",
+    "blocksforbuilders:stripped_palm_wood",
+    "blocksforbuilders:maple_log",
+    "blocksforbuilders:maple_wood",
+    "blocksforbuilders:stripped_maple_log",
+    "blocksforbuilders:stripped_maple_wood"
   ]
 }

@@ -30,6 +30,16 @@ public class BlocksForBuildersItems {
     public static final Item WILLOW_BOAT = registerItem("willow_boat", (settings -> new BoatItem(BFBEntityTypes.WILLOW_BOAT, settings.maxCount(1))));
     public static final Item WILLOW_CHEST_BOAT = registerItem("willow_chest_boat", (settings -> new BoatItem(BFBEntityTypes.WILLOW_CHEST_BOAT, settings.maxCount(1))));
 
+    public static final Item PALM_SIGN_ITEM = registerItem("palm_sign", settings ->  new SignItem(PALM_SIGN, PALM_WALL_SIGN, settings.maxCount(16)));
+    public static final Item PALM_HANGING_SIGN_ITEM = registerItem("palm_hanging_sign", settings ->  new SignItem(PALM_HANGING_SIGN, PALM_WALL_HANGING_SIGN, settings.maxCount(16)));
+    public static final Item PALM_RAFT = registerItem("palm_raft", (settings -> new BoatItem(BFBEntityTypes.PALM_RAFT, settings.maxCount(1))));
+    public static final Item PALM_CHEST_RAFT = registerItem("palm_chest_raft", (settings -> new BoatItem(BFBEntityTypes.PALM_CHEST_RAFT, settings.maxCount(1))));
+
+    public static final Item MAPLE_SIGN_ITEM = registerItem("maple_sign", settings ->  new SignItem(MAPLE_SIGN, MAPLE_WALL_SIGN, settings.maxCount(16)));
+    public static final Item MAPLE_HANGING_SIGN_ITEM = registerItem("maple_hanging_sign", settings ->  new SignItem(MAPLE_HANGING_SIGN, MAPLE_WALL_HANGING_SIGN, settings.maxCount(16)));
+    public static final Item MAPLE_BOAT = registerItem("maple_boat", (settings -> new BoatItem(BFBEntityTypes.MAPLE_BOAT, settings.maxCount(1))));
+    public static final Item MAPLE_CHEST_BOAT = registerItem("maple_chest_boat", (settings -> new BoatItem(BFBEntityTypes.MAPLE_CHEST_BOAT, settings.maxCount(1))));
+
     public static final Item GREEN_JUNGLE_SIGN_ITEM = registerItem("green_jungle_sign", settings ->  new SignItem(GREEN_JUNGLE_SIGN, GREEN_JUNGLE_WALL_SIGN, settings.maxCount(16)));
     public static final Item GREEN_JUNGLE_HANGING_SIGN_ITEM = registerItem("green_jungle_hanging_sign", settings ->  new SignItem(GREEN_JUNGLE_HANGING_SIGN, GREEN_JUNGLE_WALL_HANGING_SIGN, settings.maxCount(16)));
     public static final Item GREEN_JUNGLE_BOAT = registerItem("green_jungle_boat", (settings -> new BoatItem(BFBEntityTypes.GREEN_JUNGLE_BOAT, settings.maxCount(1))));

@@ -23,6 +23,14 @@ public class BFBEntityTypes {
             EntityType.Builder.create(getBoatFactory(() -> BlocksForBuildersItems.WILLOW_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
     public static final EntityType<ChestBoatEntity> WILLOW_CHEST_BOAT = register("willow_chest_boat",
             EntityType.Builder.create(getChestBoatFactory(() -> BlocksForBuildersItems.WILLOW_CHEST_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
+    public static final EntityType<RaftEntity> PALM_RAFT = register("palm_raft",
+            EntityType.Builder.create(getRaftFactory(() -> BlocksForBuildersItems.PALM_RAFT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
+    public static final EntityType<ChestRaftEntity> PALM_CHEST_RAFT = register("palm_chest_raft",
+            EntityType.Builder.create(getChestRaftFactory(() -> BlocksForBuildersItems.PALM_CHEST_RAFT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
+    public static final EntityType<BoatEntity> MAPLE_BOAT = register("maple_boat",
+            EntityType.Builder.create(getBoatFactory(() -> BlocksForBuildersItems.MAPLE_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
+    public static final EntityType<ChestBoatEntity> MAPLE_CHEST_BOAT = register("maple_chest_boat",
+            EntityType.Builder.create(getChestBoatFactory(() -> BlocksForBuildersItems.MAPLE_CHEST_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
     public static final EntityType<BoatEntity> GHOSTWOOD_BOAT = register("ghostwood_boat",
             EntityType.Builder.create(getBoatFactory(() -> BlocksForBuildersItems.GHOSTWOOD_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
     public static final EntityType<ChestBoatEntity> GHOSTWOOD_CHEST_BOAT = register("ghostwood_chest_boat",

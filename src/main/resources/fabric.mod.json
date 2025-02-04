@@ -9,6 +9,7 @@
     "disjoint"
   ],
   "contact": {
+    "homepage": "https://modrinth.com/mod/blocksforbuilders",
     "sources": "https://github.com/disjoint-account/BlocksForBuilders",
     "issues": "https://github.com/disjoint-account/BlocksForBuilders/issues"
   },

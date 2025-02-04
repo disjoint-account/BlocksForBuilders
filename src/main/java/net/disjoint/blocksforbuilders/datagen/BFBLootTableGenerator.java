@@ -38,6 +38,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF));
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF));
         addDrop(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.WILLOW_BOOKSHELF));
+        addDrop(BlocksForBuildersBlocks.PALM_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.WILLOW_BOOKSHELF));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF));
 
         addDrop(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE);
@@ -75,7 +76,8 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, BlocksForBuildersBlocks.GHOSTWOOD_LEAVES, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, BlocksForBuildersBlocks.WILLOW_SAPLING, 0.0f));
-        addDrop(BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_RED_OAK_LEAVES, BlocksForBuildersBlocks.RED_OAK_SAPLING, 0.0f));
+        addDrop(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, BlocksForBuildersBlocks.PALM_SAPLING, 0.0f));
+        addDrop(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES, BlocksForBuildersBlocks.ORANGE_OAK_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.0f));
@@ -163,6 +165,48 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
         addDrop(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD);
 
+        addDrop(BlocksForBuildersBlocks.PALM_BUTTON);
+        addDrop(BlocksForBuildersBlocks.PALM_DOOR, doorDrops(BlocksForBuildersBlocks.PALM_DOOR));
+        addDrop(BlocksForBuildersBlocks.PALM_FENCE);
+        addDrop(BlocksForBuildersBlocks.PALM_FENCE_GATE);
+        addDrop(BlocksForBuildersBlocks.PALM_HANGING_SIGN, drops(BlocksForBuildersItems.PALM_HANGING_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.PALM_LEAVES, leavesDrops(BlocksForBuildersBlocks.PALM_LEAVES, BlocksForBuildersBlocks.PALM_SAPLING, 0.05f));
+        addDrop(BlocksForBuildersBlocks.PALM_LOG);
+        addDrop(BlocksForBuildersBlocks.PALM_PLANKS);
+        addDrop(BlocksForBuildersBlocks.PALM_PRESSURE_PLATE);
+        addDrop(BlocksForBuildersBlocks.PALM_SAPLING);
+        addDrop(BlocksForBuildersBlocks.POTTED_PALM_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.PALM_SAPLING));
+        addDrop(BlocksForBuildersBlocks.PALM_SIGN, drops(BlocksForBuildersItems.PALM_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.PALM_SLAB, slabDrops(BlocksForBuildersBlocks.PALM_SLAB));
+        addDrop(BlocksForBuildersBlocks.PALM_STAIRS);
+        addDrop(BlocksForBuildersBlocks.PALM_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.PALM_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.PALM_HANGING_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.PALM_WALL_SIGN, drops(BlocksForBuildersItems.PALM_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.PALM_WOOD);
+        addDrop(BlocksForBuildersBlocks.STRIPPED_PALM_LOG);
+        addDrop(BlocksForBuildersBlocks.STRIPPED_PALM_WOOD);
+
+        addDrop(BlocksForBuildersBlocks.MAPLE_BUTTON);
+        addDrop(BlocksForBuildersBlocks.MAPLE_DOOR, doorDrops(BlocksForBuildersBlocks.MAPLE_DOOR));
+        addDrop(BlocksForBuildersBlocks.MAPLE_FENCE);
+        addDrop(BlocksForBuildersBlocks.MAPLE_FENCE_GATE);
+        addDrop(BlocksForBuildersBlocks.MAPLE_HANGING_SIGN, drops(BlocksForBuildersItems.MAPLE_HANGING_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.MAPLE_LEAVES, leavesDrops(BlocksForBuildersBlocks.MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_SAPLING, 0.05f));
+        addDrop(BlocksForBuildersBlocks.MAPLE_LOG);
+        addDrop(BlocksForBuildersBlocks.MAPLE_PLANKS);
+        addDrop(BlocksForBuildersBlocks.MAPLE_PRESSURE_PLATE);
+        addDrop(BlocksForBuildersBlocks.MAPLE_SAPLING);
+        addDrop(BlocksForBuildersBlocks.POTTED_MAPLE_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.MAPLE_SAPLING));
+        addDrop(BlocksForBuildersBlocks.MAPLE_SIGN, drops(BlocksForBuildersItems.MAPLE_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.MAPLE_SLAB, slabDrops(BlocksForBuildersBlocks.MAPLE_SLAB));
+        addDrop(BlocksForBuildersBlocks.MAPLE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.MAPLE_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.MAPLE_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.MAPLE_HANGING_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.MAPLE_WALL_SIGN, drops(BlocksForBuildersItems.MAPLE_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.MAPLE_WOOD);
+        addDrop(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG);
+        addDrop(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD);
+
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON);
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR, doorDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE);
@@ -177,9 +221,6 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_SIGN, drops(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM));
 
-        addDrop(BlocksForBuildersBlocks.RED_OAK_LEAVES, oakLeavesDrops(BlocksForBuildersBlocks.RED_OAK_LEAVES, BlocksForBuildersBlocks.RED_OAK_SAPLING, 0.05f));
-        addDrop(BlocksForBuildersBlocks.RED_OAK_SAPLING);
-        addDrop(BlocksForBuildersBlocks.POTTED_RED_OAK_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.RED_OAK_SAPLING));
         addDrop(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, leavesDrops(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 0.05f));
         addDrop(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING);
         addDrop(BlocksForBuildersBlocks.POTTED_GOLD_ACACIA_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING));
@@ -200,10 +241,12 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB, slabDrops(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB));
         addDrop(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL);
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
+        addDrop(BlocksForBuildersBlocks.CRACKED_GRIMSTONE_BRICKS);
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS);
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB));
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL);
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILES);
+        addDrop(BlocksForBuildersBlocks.CRACKED_GRIMSTONE_TILES);
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS);
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, slabDrops(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB));
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL);

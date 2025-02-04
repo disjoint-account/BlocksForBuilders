@@ -30,6 +30,14 @@ public class BFBEntityModelLayers {
                 ctx -> new BoatEntityRenderer(ctx, registerBoatModelLayer("willow")));
         registerEntityRenderer(BFBEntityTypes.WILLOW_CHEST_BOAT, registerChestBoatModelLayer("willow"), BoatEntityModel::getChestTexturedModelData,
                 ctx -> new BoatEntityRenderer(ctx, registerChestBoatModelLayer("willow")));
+        registerEntityRenderer(BFBEntityTypes.PALM_RAFT, registerRaftModelLayer("palm"), RaftEntityModel::getTexturedModelData,
+                ctx -> new BoatEntityRenderer(ctx, registerRaftModelLayer("palm")));
+        registerEntityRenderer(BFBEntityTypes.PALM_CHEST_RAFT, registerChestRaftModelLayer("palm"), RaftEntityModel::getChestTexturedModelData,
+                ctx -> new BoatEntityRenderer(ctx, registerChestRaftModelLayer("palm")));
+        registerEntityRenderer(BFBEntityTypes.MAPLE_BOAT, registerBoatModelLayer("maple"), BoatEntityModel::getTexturedModelData,
+                ctx -> new BoatEntityRenderer(ctx, registerBoatModelLayer("maple")));
+        registerEntityRenderer(BFBEntityTypes.MAPLE_CHEST_BOAT, registerChestBoatModelLayer("maple"), BoatEntityModel::getChestTexturedModelData,
+                ctx -> new BoatEntityRenderer(ctx, registerChestBoatModelLayer("maple")));
         registerEntityRenderer(BFBEntityTypes.GREEN_JUNGLE_BOAT, registerBoatModelLayer("green_jungle"), BoatEntityModel::getTexturedModelData,
                 ctx -> new BoatEntityRenderer(ctx, registerBoatModelLayer("green_jungle")));
         registerEntityRenderer(BFBEntityTypes.GREEN_JUNGLE_CHEST_BOAT, registerChestBoatModelLayer("green_jungle"), BoatEntityModel::getChestTexturedModelData,

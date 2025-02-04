@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "blocksforbuilders:palm_placed",
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": "blocksforbuilders:palm_placed"
+      }
+    ]
+  }
+}

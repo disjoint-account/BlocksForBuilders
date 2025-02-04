@@ -1,5 +1,6 @@
 package net.disjoint.blocksforbuilders.datagen;
 
+import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.minecraft.registry.RegistryKeys;
@@ -21,6 +22,6 @@ public class BFBWorldGenerator extends FabricDynamicRegistryProvider {
 
     @Override
     public String getName() {
-        return "blocksforbuilders";
+        return BlocksForBuilders.MOD_ID;
     }
 }

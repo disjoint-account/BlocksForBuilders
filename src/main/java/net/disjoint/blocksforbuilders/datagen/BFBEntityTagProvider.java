@@ -18,6 +18,8 @@ public class BFBEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
                     .add(BFBEntityTypes.GHOSTWOOD_BOAT,
                             BFBEntityTypes.SCORCHWOOD_BOAT,
                             BFBEntityTypes.WILLOW_BOAT,
+                            BFBEntityTypes.PALM_RAFT,
+                            BFBEntityTypes.MAPLE_BOAT,
                             BFBEntityTypes.GREEN_JUNGLE_BOAT,
                             BFBEntityTypes.GREEN_BAMBOO_RAFT);
     }

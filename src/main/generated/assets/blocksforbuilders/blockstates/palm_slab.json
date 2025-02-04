@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocksforbuilders:block/palm_slab"
+    },
+    "type=double": {
+      "model": "blocksforbuilders:block/palm_planks"
+    },
+    "type=top": {
+      "model": "blocksforbuilders:block/palm_slab_top"
+    }
+  }
+}
