@@ -23,6 +23,14 @@
     "blocksforbuilders:maple_log",
     "blocksforbuilders:maple_wood",
     "blocksforbuilders:stripped_maple_log",
-    "blocksforbuilders:stripped_maple_wood"
+    "blocksforbuilders:stripped_maple_wood",
+    "blocksforbuilders:beech_log",
+    "blocksforbuilders:beech_wood",
+    "blocksforbuilders:stripped_beech_log",
+    "blocksforbuilders:stripped_beech_wood",
+    "blocksforbuilders:pine_log",
+    "blocksforbuilders:pine_wood",
+    "blocksforbuilders:stripped_pine_log",
+    "blocksforbuilders:stripped_pine_wood"
   ]
 }

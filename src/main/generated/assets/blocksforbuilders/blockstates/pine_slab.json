@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocksforbuilders:block/pine_slab"
+    },
+    "type=double": {
+      "model": "blocksforbuilders:block/pine_planks"
+    },
+    "type=top": {
+      "model": "blocksforbuilders:block/pine_slab_top"
+    }
+  }
+}

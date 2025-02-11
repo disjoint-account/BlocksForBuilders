@@ -11,14 +11,14 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
+import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
+import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
@@ -34,14 +34,16 @@ public class BlocksForBuildersConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> WILLOW_SPAWN_KEY = registerKey("willow_spawn");
     public static final RegistryKey<ConfiguredFeature<?,?>> PALM_KEY = registerKey("palm");
     public static final RegistryKey<ConfiguredFeature<?,?>> PALM_SPAWN_KEY = registerKey("palm_spawn");
-    public static final RegistryKey<ConfiguredFeature<?,?>> ORANGE_OAK_KEY = registerKey("orange_oak");
+    public static final RegistryKey<ConfiguredFeature<?,?>> BEECH_KEY = registerKey("beech");
+    public static final RegistryKey<ConfiguredFeature<?,?>> PINE_KEY = registerKey("pine");
+    public static final RegistryKey<ConfiguredFeature<?,?>> MEGA_PINE_KEY = registerKey("mega_pine");
     public static final RegistryKey<ConfiguredFeature<?,?>> YELLOW_BIRCH_KEY = registerKey("yellow_birch");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> PUMPKIN_KEY = registerKey("pumpkin");
     public static final RegistryKey<ConfiguredFeature<?,?>> SWEET_BERRY_KEY = registerKey("sweet_berry");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_MAPLE_KEY = registerKey("fallen_maple");
-    public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_ORANGE_OAK_KEY = registerKey("fallen_orange_oak");
+    public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_BEECH_KEY = registerKey("fallen_beech");
     public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_YELLOW_BIRCH_KEY = registerKey("fallen_yellow_birch");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> ASHEN_CARPET_KEY = registerKey("ashen_carpet");
@@ -56,13 +58,6 @@ public class BlocksForBuildersConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
-        register(context, MAPLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(BlocksForBuildersBlocks.MAPLE_LOG),
-                new StraightTrunkPlacer(4, 2, 2),
-                BlockStateProvider.of(BlocksForBuildersBlocks.MAPLE_LEAVES),
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)).build());
-
         register(context, GOLD_ACACIA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(Blocks.ACACIA_LOG),
                 new ForkingTrunkPlacer(4, 5, 2),
@@ -73,13 +68,6 @@ public class BlocksForBuildersConfiguredFeatures {
         register(context, GOLD_ACACIA_SPAWN_KEY, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.GOLD_ACACIA_PLACED_KEY),
                         0.05f)), placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.GOLD_ACACIA_PLACED_KEY)));
-
-        register(context, ORANGE_OAK_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(Blocks.OAK_LOG),
-                new StraightTrunkPlacer(4, 2, 2),
-                BlockStateProvider.of(BlocksForBuildersBlocks.ORANGE_OAK_LEAVES),
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)).build());
 
         register(context, YELLOW_BIRCH_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(Blocks.BIRCH_LOG),
@@ -125,6 +113,34 @@ public class BlocksForBuildersConfiguredFeatures {
                 new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.PALM_PLACED_KEY),
                         0.1f)), placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.PALM_PLACED_KEY)));
 
+        register(context, MAPLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.MAPLE_LOG),
+                new StraightTrunkPlacer(4, 2, 2),
+                BlockStateProvider.of(BlocksForBuildersBlocks.MAPLE_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, BEECH_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.BEECH_LOG),
+                new StraightTrunkPlacer(4, 2, 2),
+                BlockStateProvider.of(BlocksForBuildersBlocks.BEECH_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, PINE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.PINE_LOG),
+                new StraightTrunkPlacer(5, 2, 1),
+                BlockStateProvider.of(BlocksForBuildersBlocks.PINE_LEAVES),
+                new SpruceFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), UniformIntProvider.create(1, 2)),
+                new TwoLayersFeatureSize(2, 0, 2)).build());
+
+        register(context, MEGA_PINE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.PINE_LOG),
+                new GiantTrunkPlacer(13, 2, 14),
+                BlockStateProvider.of(BlocksForBuildersBlocks.PINE_LEAVES),
+                new MegaPineFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), UniformIntProvider.create(13, 17)),
+                new TwoLayersFeatureSize(1, 1, 2)).build());
+
         register(context, PUMPKIN_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,6,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks.PUMPKIN)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
 
@@ -134,8 +150,8 @@ public class BlocksForBuildersConfiguredFeatures {
         register(context, FALLEN_MAPLE_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
 
-        register(context, FALLEN_ORANGE_OAK_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
+        register(context, FALLEN_BEECH_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
 
         register(context, FALLEN_YELLOW_BIRCH_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));

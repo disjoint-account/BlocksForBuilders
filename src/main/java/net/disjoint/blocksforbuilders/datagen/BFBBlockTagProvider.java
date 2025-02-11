@@ -33,6 +33,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_BOOKSHELF,
                         BlocksForBuildersBlocks.PALM_BOOKSHELF,
                         BlocksForBuildersBlocks.MAPLE_BOOKSHELF,
+                        BlocksForBuildersBlocks.BEECH_BOOKSHELF,
+                        BlocksForBuildersBlocks.PINE_BOOKSHELF,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF,
                         BlocksForBuildersBlocks.BAMBOO_THATCH,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_RUG,
@@ -45,7 +47,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.PALM_LEAVES,
                         BlocksForBuildersBlocks.MAPLE_LEAVES,
                         BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES,
-                        BlocksForBuildersBlocks.ORANGE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.BEECH_LEAVES,
+                        BlocksForBuildersBlocks.PINE_LEAVES,
                         BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_OAK_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES,
@@ -64,7 +67,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_PALM_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_PINE_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.ASHEN_CARPET,
                         BlocksForBuildersBlocks.HAY_STAIRS,
@@ -120,7 +124,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.SCORCHWOOD_HANGING_SIGN,
                         BlocksForBuildersBlocks.WILLOW_HANGING_SIGN,
                         BlocksForBuildersBlocks.PALM_HANGING_SIGN,
-                        BlocksForBuildersBlocks.MAPLE_HANGING_SIGN);
+                        BlocksForBuildersBlocks.MAPLE_HANGING_SIGN,
+                        BlocksForBuildersBlocks.BEECH_HANGING_SIGN,
+                        BlocksForBuildersBlocks.PINE_HANGING_SIGN);
 
         getOrCreateTagBuilder(BlockTags.DOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR,
@@ -129,6 +135,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_DOOR,
                         BlocksForBuildersBlocks.PALM_DOOR,
                         BlocksForBuildersBlocks.MAPLE_DOOR,
+                        BlocksForBuildersBlocks.BEECH_DOOR,
+                        BlocksForBuildersBlocks.PINE_DOOR,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR);
 
         getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
@@ -149,6 +157,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_BOOKSHELF,
                         BlocksForBuildersBlocks.PALM_BOOKSHELF,
                         BlocksForBuildersBlocks.MAPLE_BOOKSHELF,
+                        BlocksForBuildersBlocks.BEECH_BOOKSHELF,
+                        BlocksForBuildersBlocks.PINE_BOOKSHELF,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF);
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
@@ -158,6 +168,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_FENCE_GATE,
                         BlocksForBuildersBlocks.PALM_FENCE_GATE,
                         BlocksForBuildersBlocks.MAPLE_FENCE_GATE,
+                        BlocksForBuildersBlocks.BEECH_FENCE_GATE,
+                        BlocksForBuildersBlocks.PINE_FENCE_GATE,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE_GATE,
                         BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE_GATE);
@@ -169,6 +181,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_FENCE,
                         BlocksForBuildersBlocks.PALM_FENCE,
                         BlocksForBuildersBlocks.MAPLE_FENCE,
+                        BlocksForBuildersBlocks.BEECH_FENCE,
+                        BlocksForBuildersBlocks.PINE_FENCE,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE,
                         BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE);
@@ -179,9 +193,10 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_LEAVES,
                         BlocksForBuildersBlocks.PALM_LEAVES,
                         BlocksForBuildersBlocks.MAPLE_LEAVES,
+                        BlocksForBuildersBlocks.BEECH_LEAVES,
+                        BlocksForBuildersBlocks.PINE_LEAVES,
                         BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES,
-                        BlocksForBuildersBlocks.ORANGE_OAK_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_OAK_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES,
@@ -199,7 +214,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_PALM_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_PINE_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
@@ -222,7 +238,15 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.MAPLE_LOG,
                         BlocksForBuildersBlocks.MAPLE_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD);
+                        BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD,
+                        BlocksForBuildersBlocks.BEECH_LOG,
+                        BlocksForBuildersBlocks.BEECH_WOOD,
+                        BlocksForBuildersBlocks.STRIPPED_BEECH_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD,
+                        BlocksForBuildersBlocks.PINE_LOG,
+                        BlocksForBuildersBlocks.PINE_WOOD,
+                        BlocksForBuildersBlocks.STRIPPED_PINE_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_PINE_WOOD);
 
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS,
@@ -231,6 +255,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_PLANKS,
                         BlocksForBuildersBlocks.PALM_PLANKS,
                         BlocksForBuildersBlocks.MAPLE_PLANKS,
+                        BlocksForBuildersBlocks.BEECH_PLANKS,
+                        BlocksForBuildersBlocks.PINE_PLANKS,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
 
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
@@ -240,8 +266,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_SAPLING,
                         BlocksForBuildersBlocks.PALM_SAPLING,
                         BlocksForBuildersBlocks.MAPLE_SAPLING,
+                        BlocksForBuildersBlocks.BEECH_SAPLING,
+                        BlocksForBuildersBlocks.PINE_SAPLING,
                         BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING,
-                        BlocksForBuildersBlocks.ORANGE_OAK_SAPLING,
                         BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
 
         getOrCreateTagBuilder(BlockTags.SLABS)
@@ -251,6 +278,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_SLAB,
                         BlocksForBuildersBlocks.PALM_SLAB,
                         BlocksForBuildersBlocks.MAPLE_SLAB,
+                        BlocksForBuildersBlocks.BEECH_SLAB,
+                        BlocksForBuildersBlocks.PINE_SLAB,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_SLAB,
@@ -268,6 +297,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_STAIRS,
                         BlocksForBuildersBlocks.PALM_STAIRS,
                         BlocksForBuildersBlocks.MAPLE_STAIRS,
+                        BlocksForBuildersBlocks.BEECH_STAIRS,
+                        BlocksForBuildersBlocks.PINE_STAIRS,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS,
                         BlocksForBuildersBlocks.GRIMSTONE_STAIRS,
@@ -286,6 +317,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_SIGN,
                         BlocksForBuildersBlocks.PALM_SIGN,
                         BlocksForBuildersBlocks.MAPLE_SIGN,
+                        BlocksForBuildersBlocks.BEECH_SIGN,
+                        BlocksForBuildersBlocks.PINE_SIGN,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_SIGN);
 
         getOrCreateTagBuilder(BlockTags.TRAPDOORS)
@@ -295,6 +328,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_TRAPDOOR,
                         BlocksForBuildersBlocks.PALM_TRAPDOOR,
                         BlocksForBuildersBlocks.MAPLE_TRAPDOOR,
+                        BlocksForBuildersBlocks.BEECH_TRAPDOOR,
+                        BlocksForBuildersBlocks.PINE_TRAPDOOR,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
 
         getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
@@ -304,7 +339,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.SCORCHWOOD_HANGING_SIGN,
                         BlocksForBuildersBlocks.WILLOW_HANGING_SIGN,
                         BlocksForBuildersBlocks.PALM_HANGING_SIGN,
-                        BlocksForBuildersBlocks.MAPLE_HANGING_SIGN);
+                        BlocksForBuildersBlocks.MAPLE_HANGING_SIGN,
+                        BlocksForBuildersBlocks.BEECH_HANGING_SIGN,
+                        BlocksForBuildersBlocks.PINE_HANGING_SIGN);
 
         getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_HANGING_SIGN,
@@ -313,7 +350,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.SCORCHWOOD_WALL_HANGING_SIGN,
                         BlocksForBuildersBlocks.WILLOW_WALL_HANGING_SIGN,
                         BlocksForBuildersBlocks.PALM_WALL_HANGING_SIGN,
-                        BlocksForBuildersBlocks.MAPLE_WALL_HANGING_SIGN);
+                        BlocksForBuildersBlocks.MAPLE_WALL_HANGING_SIGN,
+                        BlocksForBuildersBlocks.BEECH_WALL_HANGING_SIGN,
+                        BlocksForBuildersBlocks.PINE_WALL_HANGING_SIGN);
 
         getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_SIGN,
@@ -322,6 +361,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_WALL_SIGN,
                         BlocksForBuildersBlocks.PALM_WALL_SIGN,
                         BlocksForBuildersBlocks.MAPLE_WALL_SIGN,
+                        BlocksForBuildersBlocks.BEECH_WALL_SIGN,
+                        BlocksForBuildersBlocks.PINE_WALL_SIGN,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_SIGN);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
@@ -341,6 +382,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_BUTTON,
                         BlocksForBuildersBlocks.PALM_BUTTON,
                         BlocksForBuildersBlocks.MAPLE_BUTTON,
+                        BlocksForBuildersBlocks.BEECH_BUTTON,
+                        BlocksForBuildersBlocks.PINE_BUTTON,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
@@ -350,6 +393,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_DOOR,
                         BlocksForBuildersBlocks.PALM_DOOR,
                         BlocksForBuildersBlocks.MAPLE_DOOR,
+                        BlocksForBuildersBlocks.BEECH_DOOR,
+                        BlocksForBuildersBlocks.PINE_DOOR,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
@@ -359,6 +404,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_FENCE,
                         BlocksForBuildersBlocks.PALM_FENCE,
                         BlocksForBuildersBlocks.MAPLE_FENCE,
+                        BlocksForBuildersBlocks.BEECH_FENCE,
+                        BlocksForBuildersBlocks.PINE_FENCE,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
@@ -368,6 +415,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_PRESSURE_PLATE,
                         BlocksForBuildersBlocks.PALM_PRESSURE_PLATE,
                         BlocksForBuildersBlocks.MAPLE_PRESSURE_PLATE,
+                        BlocksForBuildersBlocks.BEECH_PRESSURE_PLATE,
+                        BlocksForBuildersBlocks.PINE_PRESSURE_PLATE,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
@@ -377,6 +426,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_SLAB,
                         BlocksForBuildersBlocks.PALM_SLAB,
                         BlocksForBuildersBlocks.MAPLE_SLAB,
+                        BlocksForBuildersBlocks.BEECH_SLAB,
+                        BlocksForBuildersBlocks.PINE_SLAB,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB);
 
@@ -387,6 +438,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_STAIRS,
                         BlocksForBuildersBlocks.PALM_STAIRS,
                         BlocksForBuildersBlocks.MAPLE_STAIRS,
+                        BlocksForBuildersBlocks.BEECH_STAIRS,
+                        BlocksForBuildersBlocks.PINE_STAIRS,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS);
 
@@ -397,6 +450,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.WILLOW_TRAPDOOR,
                         BlocksForBuildersBlocks.PALM_TRAPDOOR,
                         BlocksForBuildersBlocks.MAPLE_TRAPDOOR,
+                        BlocksForBuildersBlocks.BEECH_TRAPDOOR,
+                        BlocksForBuildersBlocks.PINE_TRAPDOOR,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
 
         getOrCreateTagBuilder(BlockTags.JUNGLE_LOGS)
@@ -411,7 +466,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_PALM_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES,
-                        BlocksForBuildersBlocks.FALLEN_ORANGE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES,
+                        BlocksForBuildersBlocks.FALLEN_PINE_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_OAK_LEAVES,

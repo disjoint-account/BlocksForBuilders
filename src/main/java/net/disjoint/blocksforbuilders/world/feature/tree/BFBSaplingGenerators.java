@@ -20,8 +20,10 @@ public class BFBSaplingGenerators {
             Optional.empty(), Optional.of(BlocksForBuildersConfiguredFeatures.GREEN_JUNGLE_KEY), Optional.empty());
     public static final SaplingGenerator MAPLE = new SaplingGenerator(BlocksForBuilders.MOD_ID + ":maple",
             Optional.empty(), Optional.of(BlocksForBuildersConfiguredFeatures.MAPLE_KEY), Optional.empty());
-    public static final SaplingGenerator ORANGE_OAK = new SaplingGenerator(BlocksForBuilders.MOD_ID + ":orange_oak",
-            Optional.empty(), Optional.of(BlocksForBuildersConfiguredFeatures.ORANGE_OAK_KEY), Optional.empty());
+    public static final SaplingGenerator BEECH = new SaplingGenerator(BlocksForBuilders.MOD_ID + ":beech",
+            Optional.empty(), Optional.of(BlocksForBuildersConfiguredFeatures.BEECH_KEY), Optional.empty());
+    public static final SaplingGenerator PINE = new SaplingGenerator(BlocksForBuilders.MOD_ID + ":pine",
+            Optional.of(BlocksForBuildersConfiguredFeatures.MEGA_PINE_KEY), Optional.of(BlocksForBuildersConfiguredFeatures.PINE_KEY), Optional.empty());
     public static final SaplingGenerator GOLD_ACACIA = new SaplingGenerator(BlocksForBuilders.MOD_ID + ":gold_acacia",
             Optional.empty(), Optional.of(BlocksForBuildersConfiguredFeatures.GOLD_ACACIA_KEY), Optional.empty());
     public static final SaplingGenerator YELLOW_BIRCH = new SaplingGenerator(BlocksForBuilders.MOD_ID + ":yellow_birch",

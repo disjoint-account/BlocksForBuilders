@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_beech_sign": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:beech_sign"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "blocksforbuilders:beech_sign"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_beech_sign"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blocksforbuilders:beech_sign"
+    ]
+  }
+}

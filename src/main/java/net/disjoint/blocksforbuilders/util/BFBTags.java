@@ -23,6 +23,8 @@ public class BFBTags {
         public static final TagKey<Item> WILLOW_LOGS = createTag("willow_wood");
         public static final TagKey<Item> PALM_LOGS = createTag("palm_wood");
         public static final TagKey<Item> MAPLE_LOGS = createTag("maple_wood");
+        public static final TagKey<Item> BEECH_LOGS = createTag("beech_wood");
+        public static final TagKey<Item> PINE_LOGS = createTag("beech_wood");
         public static final TagKey<Item> BFB_TAG = createTag("bfb_tag");
 
         private static TagKey<Item> createTag(String name) {

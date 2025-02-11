@@ -14,7 +14,7 @@ import java.util.List;
 
 public class BlocksForBuildersPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
-    public static final RegistryKey<PlacedFeature> ORANGE_OAK_PLACED_KEY = registerKey("orange_oak_placed");
+    public static final RegistryKey<PlacedFeature> BEECH_PLACED_KEY = registerKey("beech_placed");
     public static final RegistryKey<PlacedFeature> YELLOW_BIRCH_PLACED_KEY = registerKey("yellow_birch_placed");
     public static final RegistryKey<PlacedFeature> GOLD_ACACIA_PLACED_KEY = registerKey("gold_acacia_placed");
     public static final RegistryKey<PlacedFeature> WILLOW_PLACED_KEY = registerKey("willow_placed");
@@ -25,11 +25,11 @@ public class BlocksForBuildersPlacedFeatures {
     public static final RegistryKey<PlacedFeature> SWEET_BERRY_PLACED_KEY = registerKey("sweet_berry_placed");
 
     public static final RegistryKey<PlacedFeature> SMALL_FALLEN_MAPLE_PLACED_KEY = registerKey("small_fallen_maple_placed");
-    public static final RegistryKey<PlacedFeature> SMALL_FALLEN_ORANGE_OAK_PLACED_KEY = registerKey("small_fallen_orange_oak_placed");
+    public static final RegistryKey<PlacedFeature> SMALL_FALLEN_BEECH_PLACED_KEY = registerKey("small_fallen_beech_placed");
     public static final RegistryKey<PlacedFeature> SMALL_FALLEN_YELLOW_BIRCH_PLACED_KEY = registerKey("small_fallen_yellow_birch_placed");
 
     public static final RegistryKey<PlacedFeature> LARGE_FALLEN_MAPLE_PLACED_KEY = registerKey("large_fallen_maple_placed");
-    public static final RegistryKey<PlacedFeature> LARGE_FALLEN_ORANGE_OAK_PLACED_KEY = registerKey("large_fallen_orange_oak_placed");
+    public static final RegistryKey<PlacedFeature> LARGE_FALLEN_BEECH_PLACED_KEY = registerKey("large_fallen_beech_placed");
     public static final RegistryKey<PlacedFeature> LARGE_FALLEN_YELLOW_BIRCH_PLACED_KEY = registerKey("large_fallen_yellow_birch_placed");
 
     public static final RegistryKey<PlacedFeature> SMALL_ASHEN_CARPET_PLACED_KEY = registerKey("small_ashen_carpet_placed");
@@ -41,8 +41,8 @@ public class BlocksForBuildersPlacedFeatures {
         register(context, MAPLE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.MAPLE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(2, 0.5f, 6), BlocksForBuildersBlocks.MAPLE_SAPLING));
 
-        register(context, ORANGE_OAK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.ORANGE_OAK_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(2, 0.5f, 6), BlocksForBuildersBlocks.ORANGE_OAK_SAPLING));
+        register(context, BEECH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.BEECH_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(2, 0.5f, 6), BlocksForBuildersBlocks.BEECH_SAPLING));
 
         register(context, YELLOW_BIRCH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.YELLOW_BIRCH_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1), BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING));
@@ -72,7 +72,7 @@ public class BlocksForBuildersPlacedFeatures {
         register(context, SMALL_FALLEN_MAPLE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.FALLEN_MAPLE_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 4));
 
-        register(context, SMALL_FALLEN_ORANGE_OAK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.FALLEN_ORANGE_OAK_KEY),
+        register(context, SMALL_FALLEN_BEECH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.FALLEN_BEECH_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 4));
 
         register(context, SMALL_FALLEN_YELLOW_BIRCH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.FALLEN_YELLOW_BIRCH_KEY),
@@ -83,7 +83,7 @@ public class BlocksForBuildersPlacedFeatures {
         register(context, LARGE_FALLEN_MAPLE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.FALLEN_MAPLE_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 8));
 
-        register(context, LARGE_FALLEN_ORANGE_OAK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.FALLEN_ORANGE_OAK_KEY),
+        register(context, LARGE_FALLEN_BEECH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.FALLEN_BEECH_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 8));
 
         register(context, LARGE_FALLEN_YELLOW_BIRCH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.FALLEN_YELLOW_BIRCH_KEY),
