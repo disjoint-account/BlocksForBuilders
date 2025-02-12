@@ -53,6 +53,11 @@ public class BFBEntityModelLayers {
         registerEntityRenderer(BFBEntityTypes.PINE_CHEST_BOAT, registerChestBoatModelLayer("pine"), BoatEntityModel::getChestTexturedModelData,
                 ctx -> new BoatEntityRenderer(ctx, registerChestBoatModelLayer("pine")));
 
+        registerEntityRenderer(BFBEntityTypes.CEDAR_BOAT, registerBoatModelLayer("cedar"), BoatEntityModel::getTexturedModelData,
+                ctx -> new BoatEntityRenderer(ctx, registerBoatModelLayer("cedar")));
+        registerEntityRenderer(BFBEntityTypes.CEDAR_CHEST_BOAT, registerChestBoatModelLayer("cedar"), BoatEntityModel::getChestTexturedModelData,
+                ctx -> new BoatEntityRenderer(ctx, registerChestBoatModelLayer("cedar")));
+
         registerEntityRenderer(BFBEntityTypes.GREEN_JUNGLE_BOAT, registerBoatModelLayer("green_jungle"), BoatEntityModel::getTexturedModelData,
                 ctx -> new BoatEntityRenderer(ctx, registerBoatModelLayer("green_jungle")));
         registerEntityRenderer(BFBEntityTypes.GREEN_JUNGLE_CHEST_BOAT, registerChestBoatModelLayer("green_jungle"), BoatEntityModel::getChestTexturedModelData,

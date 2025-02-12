@@ -1,5 +1,6 @@
 package net.disjoint.blocksforbuilders.world.feature;
 
+import com.google.common.collect.ImmutableList;
 import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.world.feature.tree.custom.PalmTrunkPlacer;
@@ -17,14 +18,19 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.treedecorator.CocoaTreeDecorator;
+import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
+import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
+import net.minecraft.world.gen.trunk.MegaJungleTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
 
 public class BlocksForBuildersConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> GREEN_JUNGLE_KEY = registerKey("green_jungle");
+    public static final RegistryKey<ConfiguredFeature<?,?>> MEGA_GREEN_JUNGLE_KEY = registerKey("mega_green_jungle");
     public static final RegistryKey<ConfiguredFeature<?,?>> MAPLE_KEY = registerKey("maple");
     public static final RegistryKey<ConfiguredFeature<?,?>> GOLD_ACACIA_KEY = registerKey("gold_acacia");
     public static final RegistryKey<ConfiguredFeature<?,?>> GOLD_ACACIA_SPAWN_KEY = registerKey("gold_acacia_spawn");
@@ -37,6 +43,8 @@ public class BlocksForBuildersConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> BEECH_KEY = registerKey("beech");
     public static final RegistryKey<ConfiguredFeature<?,?>> PINE_KEY = registerKey("pine");
     public static final RegistryKey<ConfiguredFeature<?,?>> MEGA_PINE_KEY = registerKey("mega_pine");
+    public static final RegistryKey<ConfiguredFeature<?,?>> CEDAR_KEY = registerKey("cedar");
+    public static final RegistryKey<ConfiguredFeature<?,?>> MEGA_CEDAR_KEY = registerKey("mega_cedar");
     public static final RegistryKey<ConfiguredFeature<?,?>> YELLOW_BIRCH_KEY = registerKey("yellow_birch");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> PUMPKIN_KEY = registerKey("pumpkin");
@@ -53,10 +61,19 @@ public class BlocksForBuildersConfiguredFeatures {
 
         register(context, GREEN_JUNGLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG),
-                new StraightTrunkPlacer(5, 6, 3),
+                new StraightTrunkPlacer(4, 8, 0),
                 BlockStateProvider.of(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)).build());
+                new TwoLayersFeatureSize(1, 0, 1))
+                .decorators(ImmutableList.of(new CocoaTreeDecorator(0.2F), TrunkVineTreeDecorator.INSTANCE, new LeavesVineTreeDecorator(0.25F))).build());
+
+        register(context, MEGA_GREEN_JUNGLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG),
+                new MegaJungleTrunkPlacer(10, 2, 19),
+                BlockStateProvider.of(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES),
+                new JungleFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 2),
+                new TwoLayersFeatureSize(1, 1, 2))
+                .decorators(ImmutableList.of(TrunkVineTreeDecorator.INSTANCE, new LeavesVineTreeDecorator(0.25F))).build());
 
         register(context, GOLD_ACACIA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(Blocks.ACACIA_LOG),
@@ -138,6 +155,20 @@ public class BlocksForBuildersConfiguredFeatures {
                 BlockStateProvider.of(BlocksForBuildersBlocks.PINE_LOG),
                 new GiantTrunkPlacer(13, 2, 14),
                 BlockStateProvider.of(BlocksForBuildersBlocks.PINE_LEAVES),
+                new MegaPineFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), UniformIntProvider.create(13, 17)),
+                new TwoLayersFeatureSize(1, 1, 2)).build());
+
+        register(context, CEDAR_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.CEDAR_LOG),
+                new StraightTrunkPlacer(5, 2, 1),
+                BlockStateProvider.of(BlocksForBuildersBlocks.CEDAR_LEAVES),
+                new SpruceFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), UniformIntProvider.create(1, 2)),
+                new TwoLayersFeatureSize(2, 0, 2)).build());
+
+        register(context, MEGA_CEDAR_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlocksForBuildersBlocks.CEDAR_LOG),
+                new GiantTrunkPlacer(13, 2, 14),
+                BlockStateProvider.of(BlocksForBuildersBlocks.CEDAR_LEAVES),
                 new MegaPineFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), UniformIntProvider.create(13, 17)),
                 new TwoLayersFeatureSize(1, 1, 2)).build());
 

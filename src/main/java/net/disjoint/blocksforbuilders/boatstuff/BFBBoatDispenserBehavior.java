@@ -16,6 +16,8 @@ public interface BFBBoatDispenserBehavior {
         DispenserBlock.registerBehavior(BlocksForBuildersItems.BEECH_CHEST_BOAT, new BoatDispenserBehavior(BFBEntityTypes.BEECH_CHEST_BOAT));
         DispenserBlock.registerBehavior(BlocksForBuildersItems.PINE_BOAT, new BoatDispenserBehavior(BFBEntityTypes.PINE_BOAT));
         DispenserBlock.registerBehavior(BlocksForBuildersItems.PINE_CHEST_BOAT, new BoatDispenserBehavior(BFBEntityTypes.PINE_CHEST_BOAT));
+        DispenserBlock.registerBehavior(BlocksForBuildersItems.CEDAR_BOAT, new BoatDispenserBehavior(BFBEntityTypes.CEDAR_BOAT));
+        DispenserBlock.registerBehavior(BlocksForBuildersItems.CEDAR_CHEST_BOAT, new BoatDispenserBehavior(BFBEntityTypes.CEDAR_CHEST_BOAT));
         DispenserBlock.registerBehavior(BlocksForBuildersItems.GHOSTWOOD_BOAT, new BoatDispenserBehavior(BFBEntityTypes.GHOSTWOOD_BOAT));
         DispenserBlock.registerBehavior(BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT, new BoatDispenserBehavior(BFBEntityTypes.GHOSTWOOD_CHEST_BOAT));
         DispenserBlock.registerBehavior(BlocksForBuildersItems.SCORCHWOOD_BOAT, new BoatDispenserBehavior(BFBEntityTypes.SCORCHWOOD_BOAT));

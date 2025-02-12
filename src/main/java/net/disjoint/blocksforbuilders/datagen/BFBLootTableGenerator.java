@@ -42,6 +42,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.MAPLE_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.MAPLE_BOOKSHELF));
         addDrop(BlocksForBuildersBlocks.BEECH_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.BEECH_BOOKSHELF));
         addDrop(BlocksForBuildersBlocks.PINE_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.PINE_BOOKSHELF));
+        addDrop(BlocksForBuildersBlocks.CEDAR_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.CEDAR_BOOKSHELF));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF));
 
         addDrop(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE);
@@ -83,6 +84,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, BlocksForBuildersBlocks.BEECH_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_PINE_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_PINE_LEAVES, BlocksForBuildersBlocks.PINE_SAPLING, 0.0f));
+        addDrop(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES, BlocksForBuildersBlocks.CEDAR_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 0.0f));
         addDrop(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.0f));
 
@@ -252,6 +254,27 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.PINE_WOOD);
         addDrop(BlocksForBuildersBlocks.STRIPPED_PINE_LOG);
         addDrop(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD);
+
+        addDrop(BlocksForBuildersBlocks.CEDAR_BUTTON);
+        addDrop(BlocksForBuildersBlocks.CEDAR_DOOR, doorDrops(BlocksForBuildersBlocks.CEDAR_DOOR));
+        addDrop(BlocksForBuildersBlocks.CEDAR_FENCE);
+        addDrop(BlocksForBuildersBlocks.CEDAR_FENCE_GATE);
+        addDrop(BlocksForBuildersBlocks.CEDAR_HANGING_SIGN, drops(BlocksForBuildersItems.CEDAR_HANGING_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.CEDAR_LEAVES, leavesDrops(BlocksForBuildersBlocks.CEDAR_LEAVES, BlocksForBuildersBlocks.CEDAR_SAPLING, 0.05f));
+        addDrop(BlocksForBuildersBlocks.CEDAR_LOG);
+        addDrop(BlocksForBuildersBlocks.CEDAR_PLANKS);
+        addDrop(BlocksForBuildersBlocks.CEDAR_PRESSURE_PLATE);
+        addDrop(BlocksForBuildersBlocks.CEDAR_SAPLING);
+        addDrop(BlocksForBuildersBlocks.POTTED_CEDAR_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.CEDAR_SAPLING));
+        addDrop(BlocksForBuildersBlocks.CEDAR_SIGN, drops(BlocksForBuildersItems.CEDAR_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.CEDAR_SLAB, slabDrops(BlocksForBuildersBlocks.CEDAR_SLAB));
+        addDrop(BlocksForBuildersBlocks.CEDAR_STAIRS);
+        addDrop(BlocksForBuildersBlocks.CEDAR_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.CEDAR_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.CEDAR_HANGING_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.CEDAR_WALL_SIGN, drops(BlocksForBuildersItems.CEDAR_SIGN_ITEM));
+        addDrop(BlocksForBuildersBlocks.CEDAR_WOOD);
+        addDrop(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
+        addDrop(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD);
 
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON);
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR, doorDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR));

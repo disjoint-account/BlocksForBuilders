@@ -22,6 +22,7 @@ public class BFBEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
                             BFBEntityTypes.MAPLE_BOAT,
                             BFBEntityTypes.BEECH_BOAT,
                             BFBEntityTypes.PINE_BOAT,
+                            BFBEntityTypes.CEDAR_BOAT,
                             BFBEntityTypes.GREEN_JUNGLE_BOAT,
                             BFBEntityTypes.GREEN_BAMBOO_RAFT);
     }

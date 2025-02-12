@@ -55,6 +55,13 @@ public class Instance {
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD, 5, 5);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.PINE_LEAVES, 30, 60);
 
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.CEDAR_PLANKS, 5, 20);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.CEDAR_LOG, 5, 5);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG, 5, 5);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.CEDAR_WOOD, 5, 5);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD, 5, 5);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.CEDAR_LEAVES, 30, 60);
+
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, 5, 20);
 
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, 30, 60);
@@ -79,6 +86,7 @@ public class Instance {
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.MAPLE_BOOKSHELF, 30, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.BEECH_BOOKSHELF, 30, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.PINE_BOOKSHELF, 30, 20);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.CEDAR_BOOKSHELF, 30, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, 30, 20);
         }
         {
@@ -105,6 +113,9 @@ public class Instance {
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.PINE_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.PINE_SAPLING, 0.30f);
 
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.CEDAR_LEAVES, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.CEDAR_SAPLING, 0.30f);
+
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.30f);
 
@@ -125,6 +136,7 @@ public class Instance {
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_PINE_LEAVES, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES, 0.30f);
@@ -152,6 +164,7 @@ public class Instance {
                         builder.add(BlocksForBuildersBlocks.MAPLE_BOOKSHELF, 60000 / context.baseSmeltTime());
                         builder.add(BlocksForBuildersBlocks.BEECH_BOOKSHELF, 60000 / context.baseSmeltTime());
                         builder.add(BlocksForBuildersBlocks.PINE_BOOKSHELF, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.CEDAR_BOOKSHELF, 60000 / context.baseSmeltTime());
                         builder.add(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, 60000 / context.baseSmeltTime());
                         builder.add(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF, 60000 / context.baseSmeltTime());
                         builder.add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, 60000 / context.baseSmeltTime());
@@ -182,6 +195,8 @@ public class Instance {
         StrippableBlockRegistry.register(BlocksForBuildersBlocks.BEECH_WOOD, BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD);
         StrippableBlockRegistry.register(BlocksForBuildersBlocks.PINE_LOG, BlocksForBuildersBlocks.STRIPPED_PINE_LOG);
         StrippableBlockRegistry.register(BlocksForBuildersBlocks.PINE_WOOD, BlocksForBuildersBlocks.STRIPPED_PINE_WOOD);
+        StrippableBlockRegistry.register(BlocksForBuildersBlocks.CEDAR_LOG, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
+        StrippableBlockRegistry.register(BlocksForBuildersBlocks.CEDAR_WOOD, BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD);
 
         }
     }

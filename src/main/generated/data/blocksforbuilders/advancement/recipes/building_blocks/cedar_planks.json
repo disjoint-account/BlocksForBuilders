@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cedar_tag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#blocksforbuilders:cedar_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "blocksforbuilders:cedar_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cedar_tag"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blocksforbuilders:cedar_planks"
+    ]
+  }
+}

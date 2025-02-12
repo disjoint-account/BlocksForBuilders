@@ -57,7 +57,11 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         BlocksForBuildersBlocks.PINE_LOG,
                         BlocksForBuildersBlocks.PINE_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_PINE_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_PINE_WOOD);
+                        BlocksForBuildersBlocks.STRIPPED_PINE_WOOD,
+                        BlocksForBuildersBlocks.CEDAR_LOG,
+                        BlocksForBuildersBlocks.CEDAR_WOOD,
+                        BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD);
 
                 List<ItemConvertible> NON_SCORCHWOOD_SAPLINGS = List.of(Items.OAK_SAPLING,
                         Items.BIRCH_SAPLING,
@@ -77,6 +81,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         BlocksForBuildersBlocks.MAPLE_SAPLING,
                         BlocksForBuildersBlocks.BEECH_SAPLING,
                         BlocksForBuildersBlocks.PINE_SAPLING,
+                        BlocksForBuildersBlocks.CEDAR_SAPLING,
                         BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING,
                         BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
 
@@ -163,6 +168,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerBookshelfRecipe(BlocksForBuildersBlocks.MAPLE_BOOKSHELF, BlocksForBuildersBlocks.MAPLE_PLANKS);
                 offerBookshelfRecipe(BlocksForBuildersBlocks.BEECH_BOOKSHELF, BlocksForBuildersBlocks.BEECH_PLANKS);
                 offerBookshelfRecipe(BlocksForBuildersBlocks.PINE_BOOKSHELF, BlocksForBuildersBlocks.PINE_PLANKS);
+                offerBookshelfRecipe(BlocksForBuildersBlocks.CEDAR_BOOKSHELF, BlocksForBuildersBlocks.CEDAR_PLANKS);
                 offerBookshelfRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                 offerBookshelfRecipe(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
 
@@ -208,6 +214,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_LEAVES);
                 offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, BlocksForBuildersBlocks.BEECH_LEAVES);
                 offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_PINE_LEAVES, BlocksForBuildersBlocks.PINE_LEAVES);
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES, BlocksForBuildersBlocks.CEDAR_LEAVES);
                 offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
                 offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
 
@@ -350,6 +357,26 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.PINE_TRAPDOOR, BlocksForBuildersBlocks.PINE_PLANKS);
                 offerWoodRecipe(BlocksForBuildersBlocks.PINE_WOOD, BlocksForBuildersBlocks.PINE_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD, BlocksForBuildersBlocks.STRIPPED_PINE_LOG);
+
+                offerBoatRecipe(BlocksForBuildersItems.CEDAR_BOAT, BlocksForBuildersBlocks.CEDAR_PLANKS);
+                offerButtonRecipe(BlocksForBuildersBlocks.CEDAR_BUTTON, BlocksForBuildersBlocks.CEDAR_PLANKS);
+                offerChestBoatRecipe(BlocksForBuildersItems.CEDAR_CHEST_BOAT, BlocksForBuildersItems.CEDAR_BOAT);
+                offerDoorRecipe(BlocksForBuildersBlocks.CEDAR_DOOR, BlocksForBuildersBlocks.CEDAR_PLANKS);
+                offerFenceRecipe(BlocksForBuildersBlocks.CEDAR_FENCE, BlocksForBuildersBlocks.CEDAR_PLANKS);
+                offerFenceGateRecipe(BlocksForBuildersBlocks.CEDAR_FENCE_GATE, BlocksForBuildersBlocks.CEDAR_PLANKS);
+                offerHangingSignRecipe(BlocksForBuildersItems.CEDAR_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CEDAR_PLANKS, 4)
+                        .group("planks")
+                        .input(BFBTags.Items.CEDAR_LOGS)
+                        .criterion("has_cedar_tag", conditionsFromTag(BFBTags.Items.CEDAR_LOGS))
+                        .offerTo(exporter);
+                offerWoodenPressurePlateRecipe(BlocksForBuildersBlocks.CEDAR_PRESSURE_PLATE, BlocksForBuildersBlocks.CEDAR_PLANKS);
+                offerSignRecipe(BlocksForBuildersItems.CEDAR_SIGN_ITEM, BlocksForBuildersBlocks.CEDAR_SIGN);
+                offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CEDAR_SLAB, BlocksForBuildersBlocks.CEDAR_PLANKS);
+                offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CEDAR_STAIRS, BlocksForBuildersBlocks.CEDAR_PLANKS);
+                offerTrapdoorRecipe(BlocksForBuildersBlocks.CEDAR_TRAPDOOR, BlocksForBuildersBlocks.CEDAR_PLANKS);
+                offerWoodRecipe(BlocksForBuildersBlocks.CEDAR_WOOD, BlocksForBuildersBlocks.CEDAR_LOG);
+                offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
 
                 offerBoatRecipe(BlocksForBuildersItems.GREEN_JUNGLE_BOAT, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_BUTTON, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);

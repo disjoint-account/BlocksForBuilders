@@ -44,6 +44,11 @@ public class BFBEntityTypes {
     public static final EntityType<ChestBoatEntity> PINE_CHEST_BOAT = register("pine_chest_boat",
             EntityType.Builder.create(getChestBoatFactory(() -> BlocksForBuildersItems.PINE_CHEST_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
 
+    public static final EntityType<BoatEntity> CEDAR_BOAT = register("cedar_boat",
+            EntityType.Builder.create(getBoatFactory(() -> BlocksForBuildersItems.CEDAR_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
+    public static final EntityType<ChestBoatEntity> CEDAR_CHEST_BOAT = register("cedar_chest_boat",
+            EntityType.Builder.create(getChestBoatFactory(() -> BlocksForBuildersItems.CEDAR_CHEST_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
+
     public static final EntityType<BoatEntity> GHOSTWOOD_BOAT = register("ghostwood_boat",
             EntityType.Builder.create(getBoatFactory(() -> BlocksForBuildersItems.GHOSTWOOD_BOAT), SpawnGroup.MISC).dropsNothing().dimensions(1.375f, 0.5625f).eyeHeight(0.5625f).maxTrackingRange(10));
     public static final EntityType<ChestBoatEntity> GHOSTWOOD_CHEST_BOAT = register("ghostwood_chest_boat",

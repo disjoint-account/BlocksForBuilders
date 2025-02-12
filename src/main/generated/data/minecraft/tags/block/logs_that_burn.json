@@ -27,6 +27,10 @@
     "blocksforbuilders:pine_log",
     "blocksforbuilders:pine_wood",
     "blocksforbuilders:stripped_pine_log",
-    "blocksforbuilders:stripped_pine_wood"
+    "blocksforbuilders:stripped_pine_wood",
+    "blocksforbuilders:cedar_log",
+    "blocksforbuilders:cedar_wood",
+    "blocksforbuilders:stripped_cedar_log",
+    "blocksforbuilders:stripped_cedar_wood"
   ]
 }

@@ -39,6 +39,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_BOOKSHELF.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_BOOKSHELF.asItem())
                 .add(BlocksForBuildersBlocks.PINE_BOOKSHELF.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_BOOKSHELF.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF.asItem());
 
         getOrCreateTagBuilder(BFBTags.Items.GHOSTWOOD_LOGS)
@@ -83,6 +84,12 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.STRIPPED_PINE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD.asItem());
 
+        getOrCreateTagBuilder(BFBTags.Items.CEDAR_LOGS)
+                .add(BlocksForBuildersBlocks.CEDAR_LOG.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_WOOD.asItem())
+                .add(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG.asItem())
+                .add(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD.asItem());
+
         getOrCreateTagBuilder(BFBTags.Items.GREEN_JUNGLE_LOGS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD.asItem())
@@ -98,6 +105,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersItems.MAPLE_BOAT)
                 .add(BlocksForBuildersItems.BEECH_BOAT)
                 .add(BlocksForBuildersItems.PINE_BOAT)
+                .add(BlocksForBuildersItems.CEDAR_BOAT)
                 .add(BlocksForBuildersItems.GREEN_BAMBOO_RAFT);
 
         getOrCreateTagBuilder(ItemTags.CHEST_BOATS)
@@ -109,6 +117,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersItems.MAPLE_CHEST_BOAT)
                 .add(BlocksForBuildersItems.BEECH_CHEST_BOAT)
                 .add(BlocksForBuildersItems.PINE_CHEST_BOAT)
+                .add(BlocksForBuildersItems.CEDAR_CHEST_BOAT)
                 .add(BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT);
 
         getOrCreateTagBuilder(ItemTags.DOORS)
@@ -120,6 +129,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.PINE_DOOR.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR.asItem());
 
         getOrCreateTagBuilder(ItemTags.FENCES)
@@ -131,6 +141,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.PINE_FENCE.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE.asItem());
@@ -144,7 +155,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersItems.PALM_HANGING_SIGN_ITEM)
                 .add(BlocksForBuildersItems.MAPLE_HANGING_SIGN_ITEM)
                 .add(BlocksForBuildersItems.BEECH_HANGING_SIGN_ITEM)
-                .add(BlocksForBuildersItems.PINE_HANGING_SIGN_ITEM);
+                .add(BlocksForBuildersItems.PINE_HANGING_SIGN_ITEM)
+                .add(BlocksForBuildersItems.CEDAR_HANGING_SIGN_ITEM);
 
         getOrCreateTagBuilder(ItemTags.LEAVES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES.asItem())
@@ -154,6 +166,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.PINE_LEAVES.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES.asItem());
 
@@ -189,7 +202,11 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PINE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.PINE_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_PINE_LOG.asItem())
-                .add(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD.asItem());
+                .add(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_LOG.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_WOOD.asItem())
+                .add(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG.asItem())
+                .add(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD.asItem());
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS.asItem())
@@ -200,6 +217,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_PLANKS.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_PLANKS.asItem())
                 .add(BlocksForBuildersBlocks.PINE_PLANKS.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_PLANKS.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS.asItem());
 
         getOrCreateTagBuilder(ItemTags.SAPLINGS)
@@ -211,6 +229,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.PINE_SAPLING.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING.asItem());
 
@@ -223,6 +242,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersItems.MAPLE_SIGN_ITEM)
                 .add(BlocksForBuildersItems.BEECH_SIGN_ITEM)
                 .add(BlocksForBuildersItems.PINE_SIGN_ITEM)
+                .add(BlocksForBuildersItems.CEDAR_SIGN_ITEM)
                 .add(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM);
 
         getOrCreateTagBuilder(ItemTags.SLABS)
@@ -234,6 +254,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.PINE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_SLAB.asItem())
@@ -253,6 +274,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.PINE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_STAIRS.asItem())
@@ -271,6 +293,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.PINE_TRAPDOOR.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR.asItem());
@@ -294,7 +317,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PALM_BUTTON.asItem())
                 .add(BlocksForBuildersBlocks.MAPLE_BUTTON.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_BUTTON.asItem())
-                .add(BlocksForBuildersBlocks.PINE_BUTTON.asItem());
+                .add(BlocksForBuildersBlocks.PINE_BUTTON.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_BUTTON.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_DOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR.asItem())
@@ -305,7 +329,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PALM_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.MAPLE_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_DOOR.asItem())
-                .add(BlocksForBuildersBlocks.PINE_DOOR.asItem());
+                .add(BlocksForBuildersBlocks.PINE_DOOR.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_DOOR.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_FENCES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE.asItem())
@@ -316,7 +341,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PALM_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.MAPLE_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_FENCE.asItem())
-                .add(BlocksForBuildersBlocks.PINE_FENCE.asItem());
+                .add(BlocksForBuildersBlocks.PINE_FENCE.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_FENCE.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_PRESSURE_PLATES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_PRESSURE_PLATE.asItem())
@@ -327,7 +353,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PALM_PRESSURE_PLATE.asItem())
                 .add(BlocksForBuildersBlocks.MAPLE_PRESSURE_PLATE.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_PRESSURE_PLATE.asItem())
-                .add(BlocksForBuildersBlocks.PINE_PRESSURE_PLATE.asItem());
+                .add(BlocksForBuildersBlocks.PINE_PRESSURE_PLATE.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_PRESSURE_PLATE.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB.asItem())
@@ -339,6 +366,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.PINE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
@@ -351,6 +379,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.PINE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
@@ -362,7 +391,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PALM_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.MAPLE_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_TRAPDOOR.asItem())
-                .add(BlocksForBuildersBlocks.PINE_TRAPDOOR.asItem());
+                .add(BlocksForBuildersBlocks.PINE_TRAPDOOR.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_TRAPDOOR.asItem());
 
         getOrCreateTagBuilder(ItemTags.DIRT)
                 .add(BlocksForBuildersBlocks.SCORCHED_GRASS.asItem());
@@ -506,6 +536,26 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersItems.PINE_HANGING_SIGN_ITEM)
                 .add(BlocksForBuildersItems.PINE_BOAT)
                 .add(BlocksForBuildersItems.PINE_CHEST_BOAT)
+                .add(BlocksForBuildersBlocks.CEDAR_LOG.asItem())
+                .add(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_WOOD.asItem())
+                .add(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_LEAVES.asItem())
+                .add(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_SAPLING.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_PLANKS.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_FENCE.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_FENCE_GATE.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_BUTTON.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_PRESSURE_PLATE.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_DOOR.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_TRAPDOOR.asItem())
+                .add(BlocksForBuildersItems.CEDAR_SIGN_ITEM)
+                .add(BlocksForBuildersItems.CEDAR_HANGING_SIGN_ITEM)
+                .add(BlocksForBuildersItems.CEDAR_BOAT)
+                .add(BlocksForBuildersItems.CEDAR_CHEST_BOAT)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD.asItem())
@@ -575,6 +625,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_BOOKSHELF.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_BOOKSHELF.asItem())
                 .add(BlocksForBuildersBlocks.PINE_BOOKSHELF.asItem())
+                .add(BlocksForBuildersBlocks.CEDAR_BOOKSHELF.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF.asItem())
                 .add(BlocksForBuildersBlocks.HAY_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.HAY_SLAB.asItem())

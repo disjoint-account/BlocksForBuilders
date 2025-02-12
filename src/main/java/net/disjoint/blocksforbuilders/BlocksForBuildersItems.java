@@ -50,6 +50,11 @@ public class BlocksForBuildersItems {
     public static final Item PINE_BOAT = registerItem("pine_boat", (settings -> new BoatItem(BFBEntityTypes.PINE_BOAT, settings.maxCount(1))));
     public static final Item PINE_CHEST_BOAT = registerItem("pine_chest_boat", (settings -> new BoatItem(BFBEntityTypes.PINE_CHEST_BOAT, settings.maxCount(1))));
 
+    public static final Item CEDAR_SIGN_ITEM = registerItem("cedar_sign", settings ->  new SignItem(CEDAR_SIGN, CEDAR_WALL_SIGN, settings.maxCount(16)));
+    public static final Item CEDAR_HANGING_SIGN_ITEM = registerItem("cedar_hanging_sign", settings ->  new SignItem(CEDAR_HANGING_SIGN, CEDAR_WALL_HANGING_SIGN, settings.maxCount(16)));
+    public static final Item CEDAR_BOAT = registerItem("cedar_boat", (settings -> new BoatItem(BFBEntityTypes.CEDAR_BOAT, settings.maxCount(1))));
+    public static final Item CEDAR_CHEST_BOAT = registerItem("cedar_chest_boat", (settings -> new BoatItem(BFBEntityTypes.CEDAR_CHEST_BOAT, settings.maxCount(1))));
+
     public static final Item GREEN_JUNGLE_SIGN_ITEM = registerItem("green_jungle_sign", settings ->  new SignItem(GREEN_JUNGLE_SIGN, GREEN_JUNGLE_WALL_SIGN, settings.maxCount(16)));
     public static final Item GREEN_JUNGLE_HANGING_SIGN_ITEM = registerItem("green_jungle_hanging_sign", settings ->  new SignItem(GREEN_JUNGLE_HANGING_SIGN, GREEN_JUNGLE_WALL_HANGING_SIGN, settings.maxCount(16)));
     public static final Item GREEN_JUNGLE_BOAT = registerItem("green_jungle_boat", (settings -> new BoatItem(BFBEntityTypes.GREEN_JUNGLE_BOAT, settings.maxCount(1))));
