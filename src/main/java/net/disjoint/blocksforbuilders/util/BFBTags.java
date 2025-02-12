@@ -35,6 +35,7 @@ public class BFBTags {
 
     public static class Biomes {
         public static final TagKey<Biome> SPAWNS_RUSTY_WOLF = createTag("spawns_rusty_wolf");
+        public static final TagKey<Biome> SPAWNS_WOODS_WOLF = createTag("spawns_woods_wolf");
 
         private static TagKey<Biome> createTag(String name) {
             return TagKey.of(RegistryKeys.BIOME, Identifier.of(BlocksForBuilders.MOD_ID, name));

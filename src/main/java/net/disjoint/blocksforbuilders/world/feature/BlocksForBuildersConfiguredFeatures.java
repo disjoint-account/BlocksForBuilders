@@ -6,6 +6,7 @@ import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.world.feature.tree.custom.PalmTrunkPlacer;
 import net.disjoint.blocksforbuilders.world.feature.tree.custom.ScorchwoodTrunkPlacer;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -18,6 +19,7 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.PredicatedStateProvider;
 import net.minecraft.world.gen.treedecorator.CocoaTreeDecorator;
 import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
 import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
@@ -48,13 +50,16 @@ public class BlocksForBuildersConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> YELLOW_BIRCH_KEY = registerKey("yellow_birch");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> PUMPKIN_KEY = registerKey("pumpkin");
-    public static final RegistryKey<ConfiguredFeature<?,?>> SWEET_BERRY_KEY = registerKey("sweet_berry");
+    public static final RegistryKey<ConfiguredFeature<?,?>> SWEET_BERRY_PATCH_KEY = registerKey("sweet_berry_patch");
+    public static final RegistryKey<ConfiguredFeature<?,?>> SWEET_BERRY_SINGLE_KEY = registerKey("sweet_berry_single");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_MAPLE_KEY = registerKey("fallen_maple");
     public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_BEECH_KEY = registerKey("fallen_beech");
     public static final RegistryKey<ConfiguredFeature<?,?>> FALLEN_YELLOW_BIRCH_KEY = registerKey("fallen_yellow_birch");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> ASHEN_CARPET_KEY = registerKey("ashen_carpet");
+
+    public static final RegistryKey<ConfiguredFeature<?,?>> COARSE_DIRT_KEY = registerKey("coarse_dirt");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         var placedFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
@@ -175,8 +180,11 @@ public class BlocksForBuildersConfiguredFeatures {
         register(context, PUMPKIN_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,6,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks.PUMPKIN)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
 
-        register(context, SWEET_BERRY_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,3,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks.SWEET_BERRY_BUSH)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
+        register(context, SWEET_BERRY_PATCH_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,3,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks.SWEET_BERRY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 3))), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
+
+        register(context, SWEET_BERRY_SINGLE_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,0,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(Blocks.SWEET_BERRY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 3))), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
 
         register(context, FALLEN_MAPLE_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
@@ -187,9 +195,11 @@ public class BlocksForBuildersConfiguredFeatures {
         register(context, FALLEN_YELLOW_BIRCH_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), Blocks.PODZOL)))));
 
-
         register(context, ASHEN_CARPET_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32,4,1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.ASHEN_CARPET)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(), BlocksForBuildersBlocks.SCORCHED_GRASS)))));
+
+        register(context, COARSE_DIRT_KEY, Feature.DISK, new DiskFeatureConfig(PredicatedStateProvider.of(Blocks.COARSE_DIRT),
+                        BlockPredicate.matchingBlocks(List.of(Blocks.PODZOL, Blocks.DIRT)), UniformIntProvider.create(2, 3), 1));
     }
 
 

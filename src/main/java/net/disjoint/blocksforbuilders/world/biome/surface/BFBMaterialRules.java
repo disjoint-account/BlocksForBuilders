@@ -17,10 +17,12 @@ public class BFBMaterialRules {
         MaterialRules.MaterialCondition isAboveSeaLevel = MaterialRules.aboveY(YOffset.fixed(59), 0);
         MaterialRules.MaterialCondition isInAutumnalForest = MaterialRules.biome(BFBBiomes.AUTUMNAL_FOREST);
         MaterialRules.MaterialCondition isInScorchedForest = MaterialRules.biome(BFBBiomes.SCORCHED_FOREST);
+        MaterialRules.MaterialCondition isInAlpineForest = MaterialRules.biome(BFBBiomes.ALPINE_FOREST);
 
         MaterialRules.MaterialRule podzolSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, PODZOL), DIRT);
         MaterialRules.MaterialRule podzolSurface1 = MaterialRules.sequence(MaterialRules.condition(isAboveSeaLevel, podzolSurface));
         MaterialRules.MaterialRule podzolSurface2 = MaterialRules.sequence(MaterialRules.condition(isInAutumnalForest, podzolSurface1));
+        MaterialRules.MaterialRule podzolSurface3 = MaterialRules.sequence(MaterialRules.condition(isInAlpineForest, podzolSurface1));
 
         MaterialRules.MaterialRule ashSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, ASH), DIRT);
         MaterialRules.MaterialRule ashSurface1 = MaterialRules.sequence(MaterialRules.condition(isAboveSeaLevel, ashSurface));
@@ -28,7 +30,8 @@ public class BFBMaterialRules {
 
         return MaterialRules.sequence(
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, podzolSurface2),
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, ashSurface2)
+                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, ashSurface2),
+                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, podzolSurface3)
         );
     }
 

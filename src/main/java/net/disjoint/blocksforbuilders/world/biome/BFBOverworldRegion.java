@@ -22,6 +22,8 @@ public class BFBOverworldRegion extends Region {
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BFBBiomes.AUTUMNAL_FOREST);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.TAIGA, BFBBiomes.SCORCHED_FOREST);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BFBBiomes.ALPINE_FOREST);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA, BFBBiomes.ALPINE_FOREST);
         });
     }
 }

@@ -20,6 +20,7 @@ import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 public class BFBBiomes {
     public static final RegistryKey<Biome> AUTUMNAL_FOREST = register("autumnal_forest");
     public static final RegistryKey<Biome> SCORCHED_FOREST = register("scorched_forest");
+    public static final RegistryKey<Biome> ALPINE_FOREST = register("alpine_forest");
 
     public static RegistryKey<Biome> register(String name) {
         return RegistryKey.of(RegistryKeys.BIOME, Identifier.of(BlocksForBuilders.MOD_ID, name));
@@ -28,6 +29,7 @@ public class BFBBiomes {
     public static void bootstrap(Registerable<Biome> context) {
         context.register(AUTUMNAL_FOREST, autumnalForest(context));
         context.register(SCORCHED_FOREST, scorchedForest(context));
+        context.register(ALPINE_FOREST, alpineForest(context));
     }
 
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder) {
@@ -62,7 +64,7 @@ public class BFBBiomes {
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.YELLOW_BIRCH_PLACED_KEY);
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.PUMPKIN_PLACED_KEY);
-        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SWEET_BERRY_PLACED_KEY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SWEET_BERRY_PATCH_PLACED_KEY);
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SMALL_FALLEN_MAPLE_PLACED_KEY);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SMALL_FALLEN_BEECH_PLACED_KEY);
@@ -120,6 +122,56 @@ public class BFBBiomes {
                         .grassColor(0x86B783)
                         .foliageColor(0x68A464)
                         .fogColor(0x7A7A7A)
+                        .build()).build();
+    }
+
+    public static Biome alpineForest(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 8, 4, 4));
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.RABBIT, 4, 2, 3));
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.FOX, 8, 2, 4));
+
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+
+        biomeBuilder.feature(GenerationStep.Feature.LOCAL_MODIFICATIONS, BlocksForBuildersPlacedFeatures.COARSE_DIRT_PLACED_KEY);
+
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.PINE_PLACED_KEY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.MEGA_PINE_PLACED_KEY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.CEDAR_PLACED_KEY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.MEGA_CEDAR_PLACED_KEY);
+
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SWEET_BERRY_SINGLE_PLACED_KEY);
+
+        DefaultBiomeFeatures.addDefaultFlowers(biomeBuilder);
+        DefaultBiomeFeatures.addGiantTaigaGrass(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .temperature(0.5f)
+                .downfall(0.8f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0x3F76E4)
+                        .waterFogColor(329011)
+                        .skyColor(0x79a6ff)
+                        .grassColor(0x86B783)
+                        .foliageColor(0x68A464)
+                        .fogColor(12638463)
+                        .music(MusicType.createIngameMusic(SoundEvents.MUSIC_OVERWORLD_OLD_GROWTH_TAIGA))
                         .build()).build();
     }
 }
