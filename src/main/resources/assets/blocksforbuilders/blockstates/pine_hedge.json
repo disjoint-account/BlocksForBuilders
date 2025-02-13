@@ -1,0 +1,142 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "blocksforbuilders:block/pine_hedge_central"
+      },
+      "when":
+      {
+        "tall": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "blocksforbuilders:block/pine_hedge_central_tall"
+      },
+      "when":
+      {
+        "tall": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "blocksforbuilders:block/pine_hedge_north"
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "true"
+          },
+          {
+            "tall": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "blocksforbuilders:block/pine_hedge_north_tall"
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "true"
+          },
+          {
+            "tall": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "blocksforbuilders:block/pine_hedge_east"
+      },
+      "when": {
+        "AND": [
+          {
+            "east": "true"
+          },
+          {
+            "tall": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "blocksforbuilders:block/pine_hedge_east_tall"
+      },
+      "when": {
+        "AND": [
+          {
+            "east": "true"
+          },
+          {
+            "tall": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "blocksforbuilders:block/pine_hedge_south"
+      },
+      "when": {
+        "AND": [
+          {
+            "south": "true"
+          },
+          {
+            "tall": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "blocksforbuilders:block/pine_hedge_south_tall"
+      },
+      "when": {
+        "AND": [
+          {
+            "south": "true"
+          },
+          {
+            "tall": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "blocksforbuilders:block/pine_hedge_west"
+      },
+      "when": {
+        "AND": [
+          {
+            "west": "true"
+          },
+          {
+            "tall": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "blocksforbuilders:block/pine_hedge_west_tall"
+      },
+      "when": {
+        "AND": [
+          {
+            "west": "true"
+          },
+          {
+            "tall": "true"
+          }
+        ]
+      }
+    }
+  ]
+}

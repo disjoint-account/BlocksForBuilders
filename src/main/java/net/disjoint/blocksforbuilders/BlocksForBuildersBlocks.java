@@ -58,6 +58,8 @@ public class BlocksForBuildersBlocks {
             LeavesBlock::new, AbstractBlock.Settings.copy(JUNGLE_LEAVES).mapColor(MapColor.LIME));
     public static final Block FALLEN_GREEN_JUNGLE_LEAVES = registerBlock("fallen_green_jungle_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(GREEN_JUNGLE_LEAVES).mapColor(MapColor.LIME).nonOpaque());
+    public static final Block GREEN_JUNGLE_HEDGE = registerBlock("green_jungle_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(GREEN_JUNGLE_LEAVES));
     public static final Block GREEN_JUNGLE_SAPLING = registerSaplingBlock("green_jungle_sapling", BFBSaplingGenerators.GREEN_JUNGLE, JUNGLE_SAPLING);
     public static final Block POTTED_GREEN_JUNGLE_SAPLING = registerFlowerPotBlock("potted_green_jungle_sapling", GREEN_JUNGLE_SAPLING, POTTED_JUNGLE_SAPLING);
     public static final Block GREEN_JUNGLE_PLANKS = registerBlock("green_jungle_planks",
@@ -89,6 +91,8 @@ public class BlocksForBuildersBlocks {
             LeavesBlock::new, AbstractBlock.Settings.copy(AZALEA_LEAVES).mapColor(MapColor.DULL_PINK));
     public static final Block FALLEN_GHOSTWOOD_LEAVES = registerBlock("fallen_ghostwood_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(GHOSTWOOD_LEAVES).mapColor(MapColor.DULL_PINK).nonOpaque());
+    public static final Block GHOSTWOOD_HEDGE = registerBlock("ghostwood_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(GHOSTWOOD_LEAVES));
     public static final Block GHOSTWOOD_SAPLING = registerSaplingBlock("ghostwood_sapling", BFBSaplingGenerators.GHOSTWOOD, OAK_SAPLING);
     public static final Block POTTED_GHOSTWOOD_SAPLING = registerFlowerPotBlock("potted_ghostwood_sapling", GHOSTWOOD_SAPLING, POTTED_OAK_SAPLING);
     public static final Block GHOSTWOOD_PLANKS = registerBlock("ghostwood_planks",
@@ -147,6 +151,8 @@ public class BlocksForBuildersBlocks {
             LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.PALE_GREEN));
     public static final Block FALLEN_WILLOW_LEAVES = registerBlock("fallen_willow_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(WILLOW_LEAVES).mapColor(MapColor.PALE_GREEN).nonOpaque());
+    public static final Block WILLOW_HEDGE = registerBlock("willow_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(WILLOW_LEAVES));
     public static final Block WILLOW_SAPLING = registerSaplingBlock("willow_sapling", BFBSaplingGenerators.WILLOW, OAK_SAPLING);
     public static final Block POTTED_WILLOW_SAPLING = registerFlowerPotBlock("potted_willow_sapling", WILLOW_SAPLING, POTTED_OAK_SAPLING);
     public static final Block WILLOW_PLANKS = registerBlock("willow_planks",
@@ -178,6 +184,8 @@ public class BlocksForBuildersBlocks {
             LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.PALE_YELLOW));
     public static final Block FALLEN_PALM_LEAVES = registerBlock("fallen_palm_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(PALM_LEAVES).mapColor(MapColor.PALE_YELLOW).nonOpaque());
+    public static final Block PALM_HEDGE = registerBlock("palm_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(PALM_LEAVES));
     public static final Block PALM_SAPLING = registerAltSaplingBlock("palm_sapling", BFBSaplingGenerators.PALM, BlockTags.SAND, OAK_SAPLING);
     public static final Block POTTED_PALM_SAPLING = registerFlowerPotBlock("potted_palm_sapling", PALM_SAPLING, POTTED_OAK_SAPLING);
     public static final Block PALM_PLANKS = registerBlock("palm_planks",
@@ -209,6 +217,8 @@ public class BlocksForBuildersBlocks {
             LeavesBlock::new, AbstractBlock.Settings.copy(OAK_LEAVES).mapColor(MapColor.DARK_RED));
     public static final Block FALLEN_MAPLE_LEAVES = registerBlock("fallen_maple_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(MAPLE_LEAVES).mapColor(MapColor.DARK_RED).nonOpaque());
+    public static final Block MAPLE_HEDGE = registerBlock("maple_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(MAPLE_LEAVES));
     public static final Block MAPLE_SAPLING = registerSaplingBlock("maple_sapling", BFBSaplingGenerators.MAPLE, OAK_SAPLING);
     public static final Block POTTED_MAPLE_SAPLING = registerFlowerPotBlock("potted_maple_sapling", MAPLE_SAPLING, POTTED_OAK_SAPLING);
     public static final Block MAPLE_PLANKS = registerBlock("maple_planks",
@@ -240,6 +250,8 @@ public class BlocksForBuildersBlocks {
             LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.ORANGE));
     public static final Block FALLEN_BEECH_LEAVES = registerBlock("fallen_beech_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(BEECH_LEAVES).mapColor(MapColor.ORANGE).nonOpaque());
+    public static final Block BEECH_HEDGE = registerBlock("beech_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(BEECH_LEAVES));
     public static final Block BEECH_SAPLING = registerSaplingBlock("beech_sapling", BFBSaplingGenerators.BEECH, OAK_SAPLING);
     public static final Block POTTED_BEECH_SAPLING = registerFlowerPotBlock("potted_beech_sapling", BEECH_SAPLING, POTTED_OAK_SAPLING);
     public static final Block BEECH_PLANKS = registerBlock("beech_planks",
@@ -271,6 +283,8 @@ public class BlocksForBuildersBlocks {
             LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.TERRACOTTA_BROWN));
     public static final Block FALLEN_PINE_LEAVES = registerBlock("fallen_pine_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(PINE_LEAVES).mapColor(MapColor.TERRACOTTA_BROWN).nonOpaque());
+    public static final Block PINE_HEDGE = registerBlock("pine_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(PINE_LEAVES));
     public static final Block PINE_SAPLING = registerSaplingBlock("pine_sapling", BFBSaplingGenerators.PINE, OAK_SAPLING);
     public static final Block POTTED_PINE_SAPLING = registerFlowerPotBlock("potted_pine_sapling", PINE_SAPLING, POTTED_OAK_SAPLING);
     public static final Block PINE_PLANKS = registerBlock("pine_planks",
@@ -302,6 +316,8 @@ public class BlocksForBuildersBlocks {
             LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.OAK_TAN));
     public static final Block FALLEN_CEDAR_LEAVES = registerBlock("fallen_cedar_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(CEDAR_LEAVES).mapColor(MapColor.OAK_TAN).nonOpaque());
+    public static final Block CEDAR_HEDGE = registerBlock("cedar_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(CEDAR_LEAVES));
     public static final Block CEDAR_SAPLING = registerSaplingBlock("cedar_sapling", BFBSaplingGenerators.CEDAR, OAK_SAPLING);
     public static final Block POTTED_CEDAR_SAPLING = registerFlowerPotBlock("potted_cedar_sapling", CEDAR_SAPLING, POTTED_OAK_SAPLING);
     public static final Block CEDAR_PLANKS = registerBlock("cedar_planks",
@@ -342,12 +358,16 @@ public class BlocksForBuildersBlocks {
             LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW));
     public static final Block FALLEN_GOLD_ACACIA_LEAVES = registerBlock("fallen_gold_acacia_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(GOLD_ACACIA_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW).nonOpaque());
+    public static final Block GOLD_ACACIA_HEDGE = registerBlock("gold_acacia_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(GOLD_ACACIA_LEAVES));
     public static final Block GOLD_ACACIA_SAPLING = registerSaplingBlock("gold_acacia_sapling", BFBSaplingGenerators.GOLD_ACACIA, ACACIA_SAPLING);
     public static final Block POTTED_GOLD_ACACIA_SAPLING = registerFlowerPotBlock("potted_gold_acacia_sapling", GOLD_ACACIA_SAPLING, POTTED_ACACIA_SAPLING);
     public static final Block YELLOW_BIRCH_LEAVES = registerBlock("yellow_birch_leaves",
             LeavesBlock::new, AbstractBlock.Settings.copy(BIRCH_LEAVES).mapColor(MapColor.YELLOW));
     public static final Block FALLEN_YELLOW_BIRCH_LEAVES = registerBlock("fallen_yellow_birch_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(YELLOW_BIRCH_LEAVES).mapColor(MapColor.YELLOW).nonOpaque());
+    public static final Block YELLOW_BIRCH_HEDGE = registerBlock("yellow_birch_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(YELLOW_BIRCH_LEAVES));
     public static final Block YELLOW_BIRCH_SAPLING = registerSaplingBlock("yellow_birch_sapling", BFBSaplingGenerators.YELLOW_BIRCH, BIRCH_SAPLING);
     public static final Block POTTED_YELLOW_BIRCH_SAPLING = registerFlowerPotBlock("potted_yellow_birch_sapling", YELLOW_BIRCH_SAPLING, POTTED_BIRCH_SAPLING);
 
@@ -373,6 +393,29 @@ public class BlocksForBuildersBlocks {
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(CHERRY_LEAVES).nonOpaque());
     public static final Block FALLEN_PALE_OAK_LEAVES = registerBlock("fallen_pale_oak_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(PALE_OAK_LEAVES).nonOpaque());
+
+    public static final Block OAK_HEDGE = registerBlock("oak_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(OAK_LEAVES));
+    public static final Block BIRCH_HEDGE = registerBlock("birch_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(BIRCH_LEAVES));
+    public static final Block SPRUCE_HEDGE = registerBlock("spruce_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(SPRUCE_LEAVES));
+    public static final Block JUNGLE_HEDGE = registerBlock("jungle_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(JUNGLE_LEAVES));
+    public static final Block ACACIA_HEDGE = registerBlock("acacia_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(ACACIA_LEAVES));
+    public static final Block DARK_OAK_HEDGE = registerBlock("dark_oak_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(DARK_OAK_LEAVES));
+    public static final Block AZALEA_HEDGE = registerBlock("azalea_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(AZALEA_LEAVES));
+    public static final Block FLOWERING_AZALEA_HEDGE = registerBlock("flowering_azalea_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
+    public static final Block MANGROVE_HEDGE = registerBlock("mangrove_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(MANGROVE_LEAVES));
+    public static final Block CHERRY_HEDGE = registerBlock("cherry_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(CHERRY_LEAVES));
+    public static final Block PALE_OAK_HEDGE = registerBlock("pale_oak_hedge",
+            HedgeBlock::new, AbstractBlock.Settings.copy(PALE_OAK_LEAVES));
    
     public static final Block BIRCH_BOOKSHELF = registerBlock("birch_bookshelf",
             Block::new, AbstractBlock.Settings.copy(BOOKSHELF).mapColor(MapColor.PALE_YELLOW));

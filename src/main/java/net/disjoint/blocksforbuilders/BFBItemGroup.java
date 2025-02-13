@@ -20,6 +20,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD);
                         entries.add(BlocksForBuildersBlocks.WILLOW_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_HEDGE);
                         entries.add(BlocksForBuildersBlocks.WILLOW_SAPLING);
                         entries.add(BlocksForBuildersBlocks.WILLOW_PLANKS);
                         entries.add(BlocksForBuildersBlocks.WILLOW_STAIRS);
@@ -40,6 +41,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.STRIPPED_PALM_WOOD);
                         entries.add(BlocksForBuildersBlocks.PALM_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.PALM_HEDGE);
                         entries.add(BlocksForBuildersBlocks.PALM_SAPLING);
                         entries.add(BlocksForBuildersBlocks.PALM_PLANKS);
                         entries.add(BlocksForBuildersBlocks.PALM_STAIRS);
@@ -60,6 +62,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD);
                         entries.add(BlocksForBuildersBlocks.MAPLE_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.MAPLE_HEDGE);
                         entries.add(BlocksForBuildersBlocks.MAPLE_SAPLING);
                         entries.add(BlocksForBuildersBlocks.MAPLE_PLANKS);
                         entries.add(BlocksForBuildersBlocks.MAPLE_STAIRS);
@@ -80,6 +83,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD);
                         entries.add(BlocksForBuildersBlocks.BEECH_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.BEECH_HEDGE);
                         entries.add(BlocksForBuildersBlocks.BEECH_SAPLING);
                         entries.add(BlocksForBuildersBlocks.BEECH_PLANKS);
                         entries.add(BlocksForBuildersBlocks.BEECH_STAIRS);
@@ -100,6 +104,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD);
                         entries.add(BlocksForBuildersBlocks.PINE_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_PINE_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.PINE_HEDGE);
                         entries.add(BlocksForBuildersBlocks.PINE_SAPLING);
                         entries.add(BlocksForBuildersBlocks.PINE_PLANKS);
                         entries.add(BlocksForBuildersBlocks.PINE_STAIRS);
@@ -120,6 +125,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD);
                         entries.add(BlocksForBuildersBlocks.CEDAR_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.CEDAR_HEDGE);
                         entries.add(BlocksForBuildersBlocks.CEDAR_SAPLING);
                         entries.add(BlocksForBuildersBlocks.CEDAR_PLANKS);
                         entries.add(BlocksForBuildersBlocks.CEDAR_STAIRS);
@@ -140,6 +146,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD);
                         entries.add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_HEDGE);
                         entries.add(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING);
                         entries.add(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
                         entries.add(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS);
@@ -178,6 +185,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_HEDGE);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS);
@@ -207,9 +215,11 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT);
                         entries.add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.GOLD_ACACIA_HEDGE);
                         entries.add(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING);
                         entries.add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.YELLOW_BIRCH_HEDGE);
                         entries.add(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
                         entries.add(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES);
@@ -222,6 +232,17 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES);
+                        entries.add(BlocksForBuildersBlocks.OAK_HEDGE);
+                        entries.add(BlocksForBuildersBlocks.BIRCH_HEDGE);
+                        entries.add(BlocksForBuildersBlocks.SPRUCE_HEDGE);
+                        entries.add(BlocksForBuildersBlocks.JUNGLE_HEDGE);
+                        entries.add(BlocksForBuildersBlocks.DARK_OAK_HEDGE);
+                        entries.add(BlocksForBuildersBlocks.ACACIA_HEDGE);
+                        entries.add(BlocksForBuildersBlocks.AZALEA_HEDGE);
+                        entries.add(BlocksForBuildersBlocks.FLOWERING_AZALEA_HEDGE);
+                        entries.add(BlocksForBuildersBlocks.MANGROVE_HEDGE);
+                        entries.add(BlocksForBuildersBlocks.CHERRY_HEDGE);
+                        entries.add(BlocksForBuildersBlocks.PALE_OAK_HEDGE);
                         entries.add(BlocksForBuildersBlocks.SCORCHED_GRASS);
                         entries.add(BlocksForBuildersBlocks.ASHEN_CARPET);
                         entries.add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF);

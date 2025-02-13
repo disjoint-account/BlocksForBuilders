@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "hedges",
+  "key": {
+    "#": "blocksforbuilders:gold_acacia_leaves"
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "blocksforbuilders:gold_acacia_hedge"
+  }
+}

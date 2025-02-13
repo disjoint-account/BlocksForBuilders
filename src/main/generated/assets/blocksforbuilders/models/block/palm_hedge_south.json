@@ -1,0 +1,6 @@
+{
+  "parent": "blocksforbuilders:block/hedge_south",
+  "textures": {
+    "all": "blocksforbuilders:block/palm_leaves"
+  }
+}

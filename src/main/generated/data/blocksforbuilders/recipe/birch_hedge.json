@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "hedges",
+  "key": {
+    "#": "minecraft:birch_leaves"
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "blocksforbuilders:birch_hedge"
+  }
+}

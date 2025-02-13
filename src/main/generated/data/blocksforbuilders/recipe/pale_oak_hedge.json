@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "hedges",
+  "key": {
+    "#": "minecraft:pale_oak_leaves"
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "blocksforbuilders:pale_oak_hedge"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "blocksforbuilders:block/fallen_leaves",
+  "textures": {
+    "all": "minecraft:block/pale_oak_leaves"
+  }
+}

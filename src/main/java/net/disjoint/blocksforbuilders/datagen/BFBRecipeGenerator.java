@@ -207,17 +207,21 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, Blocks.MANGROVE_LEAVES);
                 offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES, Blocks.CHERRY_LEAVES);
                 offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES, Blocks.PALE_OAK_LEAVES);
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, BlocksForBuildersBlocks.GHOSTWOOD_LEAVES);
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, BlocksForBuildersBlocks.WILLOW_LEAVES);
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, BlocksForBuildersBlocks.PALM_LEAVES);
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES);
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_LEAVES);
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, BlocksForBuildersBlocks.BEECH_LEAVES);
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_PINE_LEAVES, BlocksForBuildersBlocks.PINE_LEAVES);
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES, BlocksForBuildersBlocks.CEDAR_LEAVES);
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
 
+                offerHedgeRecipe(BlocksForBuildersBlocks.OAK_HEDGE, Blocks.OAK_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.BIRCH_HEDGE, Blocks.BIRCH_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.SPRUCE_HEDGE, Blocks.SPRUCE_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.JUNGLE_HEDGE, Blocks.JUNGLE_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.ACACIA_HEDGE, Blocks.ACACIA_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.DARK_OAK_HEDGE, Blocks.DARK_OAK_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.AZALEA_HEDGE, Blocks.AZALEA_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.FLOWERING_AZALEA_HEDGE, Blocks.FLOWERING_AZALEA_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.MANGROVE_HEDGE, Blocks.MANGROVE_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.CHERRY_HEDGE, Blocks.CHERRY_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.PALE_OAK_HEDGE, Blocks.PALE_OAK_LEAVES);
+
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, BlocksForBuildersBlocks.GHOSTWOOD_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.GHOSTWOOD_HEDGE, BlocksForBuildersBlocks.GHOSTWOOD_LEAVES);
                 offerBoatRecipe(BlocksForBuildersItems.GHOSTWOOD_BOAT, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.GHOSTWOOD_BUTTON, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
                 offerChestBoatRecipe(BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT, BlocksForBuildersItems.GHOSTWOOD_BOAT);
@@ -258,6 +262,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodRecipe(BlocksForBuildersBlocks.SCORCHWOOD_WOOD, BlocksForBuildersBlocks.SCORCHWOOD_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_WOOD, BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG);
 
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, BlocksForBuildersBlocks.WILLOW_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.WILLOW_HEDGE, BlocksForBuildersBlocks.WILLOW_LEAVES);
                 offerBoatRecipe(BlocksForBuildersItems.WILLOW_BOAT, BlocksForBuildersBlocks.WILLOW_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.WILLOW_BUTTON, BlocksForBuildersBlocks.WILLOW_PLANKS);
                 offerChestBoatRecipe(BlocksForBuildersItems.WILLOW_CHEST_BOAT, BlocksForBuildersItems.WILLOW_BOAT);
@@ -278,6 +284,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodRecipe(BlocksForBuildersBlocks.WILLOW_WOOD, BlocksForBuildersBlocks.WILLOW_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD, BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
 
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, BlocksForBuildersBlocks.PALM_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.PALM_HEDGE, BlocksForBuildersBlocks.PALM_LEAVES);
                 offerBoatRecipe(BlocksForBuildersItems.PALM_RAFT, BlocksForBuildersBlocks.PALM_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.PALM_BUTTON, BlocksForBuildersBlocks.PALM_PLANKS);
                 offerChestBoatRecipe(BlocksForBuildersItems.PALM_CHEST_RAFT, BlocksForBuildersItems.PALM_RAFT);
@@ -298,6 +306,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodRecipe(BlocksForBuildersBlocks.PALM_WOOD, BlocksForBuildersBlocks.PALM_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_PALM_WOOD, BlocksForBuildersBlocks.STRIPPED_PALM_LOG);
 
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.MAPLE_HEDGE, BlocksForBuildersBlocks.MAPLE_LEAVES);
                 offerBoatRecipe(BlocksForBuildersItems.MAPLE_BOAT, BlocksForBuildersBlocks.MAPLE_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.MAPLE_BUTTON, BlocksForBuildersBlocks.MAPLE_PLANKS);
                 offerChestBoatRecipe(BlocksForBuildersItems.MAPLE_CHEST_BOAT, BlocksForBuildersItems.MAPLE_BOAT);
@@ -318,6 +328,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodRecipe(BlocksForBuildersBlocks.MAPLE_WOOD, BlocksForBuildersBlocks.MAPLE_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD, BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG);
 
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, BlocksForBuildersBlocks.BEECH_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.BEECH_HEDGE, BlocksForBuildersBlocks.BEECH_LEAVES);
                 offerBoatRecipe(BlocksForBuildersItems.BEECH_BOAT, BlocksForBuildersBlocks.BEECH_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.BEECH_BUTTON, BlocksForBuildersBlocks.BEECH_PLANKS);
                 offerChestBoatRecipe(BlocksForBuildersItems.BEECH_CHEST_BOAT, BlocksForBuildersItems.BEECH_BOAT);
@@ -338,6 +350,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodRecipe(BlocksForBuildersBlocks.BEECH_WOOD, BlocksForBuildersBlocks.BEECH_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD, BlocksForBuildersBlocks.STRIPPED_BEECH_LOG);
 
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_PINE_LEAVES, BlocksForBuildersBlocks.PINE_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.PINE_HEDGE, BlocksForBuildersBlocks.PINE_LEAVES);
                 offerBoatRecipe(BlocksForBuildersItems.PINE_BOAT, BlocksForBuildersBlocks.PINE_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.PINE_BUTTON, BlocksForBuildersBlocks.PINE_PLANKS);
                 offerChestBoatRecipe(BlocksForBuildersItems.PINE_CHEST_BOAT, BlocksForBuildersItems.PINE_BOAT);
@@ -358,6 +372,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodRecipe(BlocksForBuildersBlocks.PINE_WOOD, BlocksForBuildersBlocks.PINE_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD, BlocksForBuildersBlocks.STRIPPED_PINE_LOG);
 
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES, BlocksForBuildersBlocks.CEDAR_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.CEDAR_HEDGE, BlocksForBuildersBlocks.CEDAR_LEAVES);
                 offerBoatRecipe(BlocksForBuildersItems.CEDAR_BOAT, BlocksForBuildersBlocks.CEDAR_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.CEDAR_BUTTON, BlocksForBuildersBlocks.CEDAR_PLANKS);
                 offerChestBoatRecipe(BlocksForBuildersItems.CEDAR_CHEST_BOAT, BlocksForBuildersItems.CEDAR_BOAT);
@@ -378,6 +394,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodRecipe(BlocksForBuildersBlocks.CEDAR_WOOD, BlocksForBuildersBlocks.CEDAR_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
 
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_HEDGE, BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES);
                 offerBoatRecipe(BlocksForBuildersItems.GREEN_JUNGLE_BOAT, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_BUTTON, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                 offerChestBoatRecipe(BlocksForBuildersItems.GREEN_JUNGLE_CHEST_BOAT, BlocksForBuildersItems.GREEN_JUNGLE_BOAT);
@@ -417,6 +435,12 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.GOLD_ACACIA_HEDGE, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
+
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.YELLOW_BIRCH_HEDGE, BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE, 3)
                         .pattern("BW")
@@ -652,6 +676,16 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         .group("fallen_leaves")
                         .input('#', input)
                         .pattern("##")
+                        .criterion(hasItem(input), conditionsFromItem(input))
+                        .offerTo(exporter);
+            }
+
+            private void offerHedgeRecipe(ItemConvertible output, ItemConvertible input) {
+                createShaped(RecipeCategory.DECORATIONS, output, 6)
+                        .group("hedges")
+                        .input('#', input)
+                        .pattern("###")
+                        .pattern("###")
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .offerTo(exporter);
             }
