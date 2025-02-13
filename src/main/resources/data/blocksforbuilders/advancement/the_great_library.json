@@ -182,7 +182,7 @@
         ]
       }
     },
-    "place_scorchwoodwood_bookshelf": {
+    "place_scorchwood_bookshelf": {
       "trigger": "minecraft:any_block_use",
       "conditions": {
         "location": [
@@ -229,6 +229,71 @@
             "condition": "minecraft:match_tool",
             "predicate": {
               "items": "blocksforbuilders:green_bamboo_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_palm_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:palm_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_maple_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:maple_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_beech_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:beech_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_pine_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:pine_bookshelf"
+            }
+          }
+        ]
+      }
+    },
+    "place_cedar_bookshelf": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:cedar_bookshelf"
             }
           }
         ]
@@ -286,6 +351,21 @@
     ],
     [
       "place_green_bamboo_bookshelf"
+    ],
+    [
+      "place_palm_bookshelf"
+    ],
+    [
+      "place_maple_bookshelf"
+    ],
+    [
+      "place_beech_bookshelf"
+    ],
+    [
+      "place_pine_bookshelf"
+    ],
+    [
+      "place_cedar_bookshelf"
     ]
   ],
   "sends_telemetry_event": true

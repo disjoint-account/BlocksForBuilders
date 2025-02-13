@@ -208,6 +208,10 @@ public class HedgeBlock extends Block implements Waterloggable {
         return neighborState.isIn(BlockTags.WALLS) || neighborState.isIn(BlockTags.FENCES) || neighborState.isIn(BlockTags.FENCE_GATES) || Block.isFaceFullSquare(neighborState.getCollisionShape(world, pos.offset(direction)), direction.getOpposite());
     }
 
+    protected FluidState getFluidState(BlockState state) {
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+    }
+
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(NORTH, EAST, SOUTH, WEST, TALL, WATERLOGGED);
     }

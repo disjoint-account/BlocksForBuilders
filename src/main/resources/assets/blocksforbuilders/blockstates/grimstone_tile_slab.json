@@ -6,7 +6,7 @@
       "uvlock": false
     },
     "facing=east,type=double": {
-      "model": "blocksforbuilders:block/grimstone_tiles_horizontal",
+      "model": "blocksforbuilders:block/grimstone_tiles",
       "x": 90,
       "y": 270,
       "uvlock": false
@@ -22,7 +22,7 @@
       "uvlock": false
     },
     "facing=north,type=double": {
-      "model": "blocksforbuilders:block/grimstone_tiles_horizontal",
+      "model": "blocksforbuilders:block/grimstone_tiles",
       "x": 90,
       "y": 180,
       "uvlock": false
@@ -38,7 +38,7 @@
       "uvlock": false
     },
     "facing=south,type=double": {
-      "model": "blocksforbuilders:block/grimstone_tiles_horizontal",
+      "model": "blocksforbuilders:block/grimstone_tiles",
       "x": 90,
       "uvlock": false
     },
@@ -52,7 +52,7 @@
       "uvlock": false
     },
     "facing=west,type=double": {
-      "model": "blocksforbuilders:block/grimstone_tiles_horizontal",
+      "model": "blocksforbuilders:block/grimstone_tiles",
       "x": 90,
       "y": 90,
       "uvlock": false
