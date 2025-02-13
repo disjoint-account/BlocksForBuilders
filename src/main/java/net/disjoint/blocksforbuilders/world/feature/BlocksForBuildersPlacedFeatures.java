@@ -40,6 +40,9 @@ public class BlocksForBuildersPlacedFeatures {
     public static final RegistryKey<PlacedFeature> SMALL_ASHEN_CARPET_PLACED_KEY = registerKey("small_ashen_carpet_placed");
     public static final RegistryKey<PlacedFeature> LARGE_ASHEN_CARPET_PLACED_KEY = registerKey("large_ashen_carpet_placed");
 
+    public static final RegistryKey<PlacedFeature> SMALL_MOSS_CARPET_PLACED_KEY = registerKey("small_moss_carpet_placed");
+    public static final RegistryKey<PlacedFeature> LARGE_MOSS_CARPET_PLACED_KEY = registerKey("large_moss_carpet_placed");
+
     public static final RegistryKey<PlacedFeature> COARSE_DIRT_PLACED_KEY = registerKey("coarse_dirt_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
@@ -116,6 +119,13 @@ public class BlocksForBuildersPlacedFeatures {
         register(context, SMALL_ASHEN_CARPET_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.ASHEN_CARPET_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 4));
         register(context, LARGE_ASHEN_CARPET_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.ASHEN_CARPET_KEY),
+                RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 8));
+
+
+
+        register(context, SMALL_MOSS_CARPET_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.MOSS_CARPET_KEY),
+                RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 4));
+        register(context, LARGE_MOSS_CARPET_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.MOSS_CARPET_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.5f, 8));
 
 

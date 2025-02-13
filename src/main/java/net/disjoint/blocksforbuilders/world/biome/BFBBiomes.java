@@ -153,6 +153,9 @@ public class BFBBiomes {
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SWEET_BERRY_SINGLE_PLACED_KEY);
 
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SMALL_MOSS_CARPET_PLACED_KEY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.LARGE_MOSS_CARPET_PLACED_KEY);
+
         DefaultBiomeFeatures.addDefaultFlowers(biomeBuilder);
         DefaultBiomeFeatures.addGiantTaigaGrass(biomeBuilder);
         DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
