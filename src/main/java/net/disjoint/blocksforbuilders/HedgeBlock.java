@@ -152,7 +152,7 @@ public class HedgeBlock extends Block implements Waterloggable {
 
     protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
         if (!requirements(state, world, pos)) {
-            tickView.scheduleBlockTick(pos, this, 1);
+            tickView.scheduleBlockTick(pos, this, 0);
         }
         if (state.get(WATERLOGGED)) {
             tickView.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));

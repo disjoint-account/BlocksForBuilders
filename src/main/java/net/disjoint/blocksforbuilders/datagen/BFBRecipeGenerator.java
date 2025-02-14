@@ -149,6 +149,22 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS, 2);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL, Blocks.SMOOTH_QUARTZ, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SANDSTONE_BRICKS, Blocks.SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS, Blocks.SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB, Blocks.SANDSTONE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL, Blocks.SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SANDSTONE_BRICKS, Blocks.CUT_SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS, Blocks.CUT_SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB, Blocks.CUT_SANDSTONE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL, Blocks.CUT_SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS, Blocks.RED_SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS, Blocks.RED_SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB, Blocks.RED_SANDSTONE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL, Blocks.RED_SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS, Blocks.CUT_RED_SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS, Blocks.CUT_RED_SANDSTONE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB, Blocks.CUT_RED_SANDSTONE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL, Blocks.CUT_RED_SANDSTONE, 1);
 
                 offerBookshelfRecipe(BlocksForBuildersBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);
                 offerBookshelfRecipe(BlocksForBuildersBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
@@ -467,6 +483,15 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.GRIMSTONE_TILES);
 
                 offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
+
+                offerStoneRecipe(BlocksForBuildersBlocks.SANDSTONE_BRICKS, Blocks.CUT_SANDSTONE);
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS, BlocksForBuildersBlocks.SANDSTONE_BRICKS);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB, BlocksForBuildersBlocks.SANDSTONE_BRICKS);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL, BlocksForBuildersBlocks.SANDSTONE_BRICKS);
+                offerStoneRecipe(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS, Blocks.CUT_RED_SANDSTONE);
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS, BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB, BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL, BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
 
                 offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.HAY_STAIRS, Blocks.HAY_BLOCK);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.HAY_SLAB, Blocks.HAY_BLOCK);

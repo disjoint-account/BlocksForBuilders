@@ -1,6 +1,6 @@
 // 1.21.4	-999999999-01-01T00:00:00	Blocks For Builders/Tags for minecraft:item
 4b53821b0f64bf13d8d8b327b6b197da406bf2c4 data/blocksforbuilders/tags/item/beech_wood.json
-d606f9f483927de2ed2d2dc0474f363d0b1b5136 data/blocksforbuilders/tags/item/bfb_tag.json
+f79e71850cc7e796c6e08de67531b98cca7d3079 data/blocksforbuilders/tags/item/bfb_tag.json
 be174ee99a28a9c956a8b6ab567a2f81cb1645eb data/blocksforbuilders/tags/item/bookshelves.json
 63514e6e6d49ce2e0509b1e571f7ba042381150d data/blocksforbuilders/tags/item/cedar_wood.json
 3ed21ebb72505c3f3801880862aa8067df4e63b3 data/blocksforbuilders/tags/item/ghostwood_wood.json
@@ -21,10 +21,10 @@ b6e7487f42a86bdf9a0288a260c518eb4076d725 data/minecraft/tags/item/hanging_signs.
 ff116a8c68d9f96e72bc740bca0fe99445f22631 data/minecraft/tags/item/planks.json
 576ec8ae186a956faa2079c0703b9cf18dd68414 data/minecraft/tags/item/saplings.json
 8427b3258789ba7e0db279d56e319c84ae82b4b1 data/minecraft/tags/item/signs.json
-bcc705b4acddff296e5321b21e6a034389ff98d1 data/minecraft/tags/item/slabs.json
-f70276adfcf8e9a17cdbc2103788e28833341336 data/minecraft/tags/item/stairs.json
+5adbe2ae3f4b04ecb51bef563a180a752f29827a data/minecraft/tags/item/slabs.json
+8c57aab13caf22a8343d8c90bbd4775e429a7d74 data/minecraft/tags/item/stairs.json
 9ddc792532693aaca09c823eb88fa7d18582ae92 data/minecraft/tags/item/trapdoors.json
-313492c85ea0ccb718486d247bbcb42e71ba8ddd data/minecraft/tags/item/walls.json
+d6f0495e15bab4327e08f4b7cece26be4c16e36a data/minecraft/tags/item/walls.json
 9375222a217992ef229611cb709b0a13ace46050 data/minecraft/tags/item/wooden_buttons.json
 29cd53d1b6b27629e33ae205b7525d77de312f95 data/minecraft/tags/item/wooden_doors.json
 7a154689d6a17c810683edc4e5e12a501183f521 data/minecraft/tags/item/wooden_fences.json

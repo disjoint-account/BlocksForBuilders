@@ -119,6 +119,14 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL,
                         BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS,
+                        BlocksForBuildersBlocks.SANDSTONE_BRICKS,
+                        BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS,
+                        BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB,
+                        BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL,
+                        BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS,
+                        BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS,
+                        BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB,
+                        BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICKS,
                         BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS,
                         BlocksForBuildersBlocks.CRACKED_BLACK_NETHER_BRICKS,
@@ -346,6 +354,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB,
                         BlocksForBuildersBlocks.HAY_SLAB,
+                        BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB,
+                        BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
 
@@ -367,6 +377,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS,
                         BlocksForBuildersBlocks.HAY_STAIRS,
                         BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS,
+                        BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS,
+                        BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);
 
@@ -435,6 +447,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL,
                         BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL,
+                        BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL,
+                        BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL,
                         BlocksForBuildersBlocks.QUARTZ_WALL,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_WALL,

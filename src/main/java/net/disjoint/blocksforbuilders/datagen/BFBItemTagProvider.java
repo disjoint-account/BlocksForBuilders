@@ -262,6 +262,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.HAY_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB.asItem());
 
@@ -283,6 +285,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.HAY_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS.asItem());
 
@@ -303,6 +307,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL.asItem())
+                .add(BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL.asItem())
+                .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_WALL.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL.asItem())
@@ -651,6 +657,14 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.HAY_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.HAY_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.SANDSTONE_BRICKS.asItem())
+                .add(BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL.asItem())
+                .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS.asItem())
+                .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS.asItem())
                 .add(BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS.asItem())
                 .add(BlocksForBuildersBlocks.CRACKED_BLACK_NETHER_BRICKS.asItem())

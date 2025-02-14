@@ -293,6 +293,14 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.HAY_STAIRS);
                         entries.add(BlocksForBuildersBlocks.HAY_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.SANDSTONE_BRICKS);
+                        entries.add(BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB);
+                        entries.add(BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL);
+                        entries.add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
+                        entries.add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB);
+                        entries.add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL);
                         entries.add(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS);
                         entries.add(BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS);
                         entries.add(BlocksForBuildersBlocks.CRACKED_BLACK_NETHER_BRICKS);
