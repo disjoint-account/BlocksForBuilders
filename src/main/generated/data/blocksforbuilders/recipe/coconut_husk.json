@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#blocksforbuilders:coconuts"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocksforbuilders:coconut_husk"
+  }
+}

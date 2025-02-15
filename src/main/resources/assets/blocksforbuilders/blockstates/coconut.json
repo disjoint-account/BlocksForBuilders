@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "blocksforbuilders:block/coconut"
+    },
+    "hanging=true": {
+      "model": "blocksforbuilders:block/coconut",
+      "x": 180,
+      "uvlock": false
+    }
+  }
+}

@@ -68,6 +68,7 @@ public class Instance {
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, 30, 60);
 
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.BAMBOO_THATCH, 5, 20);
+            FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.COCONUT_THATCH, 5, 20);
 
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF, 30, 20);
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.SPRUCE_BOOKSHELF, 30, 20);
@@ -102,7 +103,10 @@ public class Instance {
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.WILLOW_SAPLING, 0.30f);
 
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.PALM_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.PALM_SAPLING, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.COCONUT, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.STRIPPED_COCONUT, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT_FIBER, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT_HUSK, 0.30f);
 
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.MAPLE_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.MAPLE_SAPLING, 0.30f);
@@ -171,8 +175,15 @@ public class Instance {
                         builder.add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, 60000 / context.baseSmeltTime());
 
                         builder.add(BlocksForBuildersBlocks.BAMBOO_THATCH, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS, context.baseSmeltTime() / 2);
+                        builder.add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB, context.baseSmeltTime() / 2);
                         builder.add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG, context.baseSmeltTime() / 2);
                         builder.add(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG, context.baseSmeltTime() / 2);
+
+                        builder.add(BlocksForBuildersBlocks.COCONUT_THATCH, 60000 / context.baseSmeltTime());
+                        builder.add(BlocksForBuildersBlocks.COCONUT_THATCH_STAIRS, context.baseSmeltTime() / 2);
+                        builder.add(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB, context.baseSmeltTime() / 2);
+                        builder.add(BlocksForBuildersBlocks.COCONUT_THATCH_RUG, context.baseSmeltTime() / 2);
                     });
                     addStrippables();
         }

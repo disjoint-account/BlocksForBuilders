@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_coconut_tag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#blocksforbuilders:coconuts"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "blocksforbuilders:coconut_husk"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_coconut_tag"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blocksforbuilders:coconut_husk"
+    ]
+  }
+}

@@ -4,7 +4,7 @@
   "cookingtime": 200,
   "experience": 0.1,
   "group": "scorchwood_sapling",
-  "ingredient": "blocksforbuilders:palm_sapling",
+  "ingredient": "blocksforbuilders:coconut",
   "result": {
     "id": "blocksforbuilders:scorchwood_sapling"
   }

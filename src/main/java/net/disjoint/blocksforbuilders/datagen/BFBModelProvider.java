@@ -98,7 +98,6 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.PALM_LEAVES, TexturedModel.LEAVES);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, BlocksForBuildersBlocks.PALM_LEAVES);
         registerHedgeModels(blockStateModelGenerator, BlocksForBuildersBlocks.PALM_HEDGE, BlocksForBuildersBlocks.PALM_LEAVES);
-        blockStateModelGenerator.registerFlowerPotPlantAndItem(BlocksForBuildersBlocks.PALM_SAPLING, BlocksForBuildersBlocks.POTTED_PALM_SAPLING, BlockStateModelGenerator.CrossType.TINTED);
         palmTexturePool.stairs(BlocksForBuildersBlocks.PALM_STAIRS);
         palmTexturePool.slab(BlocksForBuildersBlocks.PALM_SLAB);
         palmTexturePool.fence(BlocksForBuildersBlocks.PALM_FENCE);
@@ -288,6 +287,7 @@ public class BFBModelProvider extends FabricModelProvider {
         registerHedgeModels(blockStateModelGenerator, BlocksForBuildersBlocks.PALE_OAK_HEDGE, Blocks.PALE_OAK_LEAVES);
 
         blockStateModelGenerator.registerAxisRotated(BlocksForBuildersBlocks.BAMBOO_THATCH, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
+        blockStateModelGenerator.registerAxisRotated(BlocksForBuildersBlocks.COCONUT_THATCH, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
 
         Identifier identifier = TextureMap.getId(Blocks.DIRT);
         Identifier identifier2 = TexturedModel.CUBE_BOTTOM_TOP.get(BlocksForBuildersBlocks.SCORCHED_GRASS).textures((textures) -> textures.put(TextureKey.BOTTOM, identifier)).upload(BlocksForBuildersBlocks.SCORCHED_GRASS, blockStateModelGenerator.modelCollector);
@@ -333,6 +333,11 @@ public class BFBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(BlocksForBuildersBlocks.QUARTZ_WALL.asItem());
         itemModelGenerator.register(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL.asItem());
         itemModelGenerator.register(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL.asItem());
+
+        itemModelGenerator.register(BlocksForBuildersBlocks.COCONUT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(BlocksForBuildersItems.STRIPPED_COCONUT, Models.GENERATED);
+        itemModelGenerator.register(BlocksForBuildersItems.COCONUT_HUSK, Models.GENERATED);
+        itemModelGenerator.register(BlocksForBuildersItems.COCONUT_FIBER, Models.GENERATED);
     }
 
     public static void registerSign(BlockStateModelGenerator blockStateModelGenerator, Block particleBlock, Block signBlock, Block wallSignBlock) {

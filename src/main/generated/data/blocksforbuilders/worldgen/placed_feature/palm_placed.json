@@ -36,9 +36,12 @@
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "blocksforbuilders:palm_sapling",
+          "Name": "blocksforbuilders:coconut",
           "Properties": {
-            "stage": "0"
+            "hanging": "false",
+            "has_milk": "true",
+            "stage": "0",
+            "waterlogged": "false"
           }
         }
       }

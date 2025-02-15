@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "blocksforbuilders:block/palm_sapling"
+    "layer0": "blocksforbuilders:item/coconut_husk"
   }
 }

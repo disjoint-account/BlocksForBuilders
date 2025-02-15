@@ -1,0 +1,10 @@
+{
+    "parent": "blocksforbuilders:block/pillar_stairs",
+    "textures": {
+      "bottom": "blocksforbuilders:block/coconut_thatch_side_left",
+      "top": "blocksforbuilders:block/coconut_thatch_side_left",
+      "left": "blocksforbuilders:block/coconut_thatch_side_right",
+      "right": "blocksforbuilders:block/coconut_thatch_side_left",
+      "end": "blocksforbuilders:block/coconut_thatch_top"
+    }
+  }

@@ -13,7 +13,9 @@
     "MixinBlockEntityType",
     "MixinPumpkinPie",
     "MixinPumpkinPieFood",
-    "MixinTrunkPlacerTypeInvoker"
+    "MixinPumpkinPieFood",
+    "MixinTrunkPlacerTypeInvoker",
+    "MixinShearsDispenserBehavior"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -64,7 +64,10 @@
     "blocksforbuilders:stripped_palm_wood",
     "blocksforbuilders:palm_leaves",
     "blocksforbuilders:fallen_palm_leaves",
-    "blocksforbuilders:palm_sapling",
+    "blocksforbuilders:coconut",
+    "blocksforbuilders:stripped_coconut",
+    "blocksforbuilders:coconut_husk",
+    "blocksforbuilders:coconut_fiber",
     "blocksforbuilders:palm_planks",
     "blocksforbuilders:palm_stairs",
     "blocksforbuilders:palm_slab",
@@ -303,6 +306,10 @@
     "blocksforbuilders:bamboo_thatch_slab",
     "blocksforbuilders:bamboo_thatch_rug",
     "blocksforbuilders:bamboo_mosaic_rug",
+    "blocksforbuilders:coconut_thatch",
+    "blocksforbuilders:coconut_thatch_stairs",
+    "blocksforbuilders:coconut_thatch_slab",
+    "blocksforbuilders:coconut_thatch_rug",
     "blocksforbuilders:scorched_grass",
     "blocksforbuilders:ashen_carpet"
   ]

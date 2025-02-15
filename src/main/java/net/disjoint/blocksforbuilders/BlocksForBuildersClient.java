@@ -35,8 +35,6 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.WILLOW_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.PALM_HEDGE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.PALM_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.POTTED_PALM_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.PALM_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.PALM_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.MAPLE_DOOR, RenderLayer.getCutout());

@@ -61,7 +61,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         BlocksForBuildersBlocks.CEDAR_LOG,
                         BlocksForBuildersBlocks.CEDAR_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD);
+                        BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD,
+                        BlocksForBuildersItems.COCONUT_HUSK);
 
                 List<ItemConvertible> NON_SCORCHWOOD_SAPLINGS = List.of(Items.OAK_SAPLING,
                         Items.BIRCH_SAPLING,
@@ -75,7 +76,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         Items.CHERRY_SAPLING,
                         Items.PALE_OAK_SAPLING,
                         BlocksForBuildersBlocks.WILLOW_SAPLING,
-                        BlocksForBuildersBlocks.PALM_SAPLING,
+                        BlocksForBuildersBlocks.COCONUT,
+                        BlocksForBuildersItems.STRIPPED_COCONUT,
                         BlocksForBuildersBlocks.GHOSTWOOD_SAPLING,
                         BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING,
                         BlocksForBuildersBlocks.MAPLE_SAPLING,
@@ -506,6 +508,42 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB, BlocksForBuildersBlocks.BAMBOO_THATCH);
                 offerAltCarpetRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_THATCH_RUG, BlocksForBuildersBlocks.BAMBOO_THATCH);
                 offerAltCarpetRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG, Blocks.BAMBOO_MOSAIC);
+
+                createShapeless(RecipeCategory.MISC, BlocksForBuildersItems.COCONUT_HUSK, 1)
+                        .input(BFBTags.Items.COCONUTS)
+                        .criterion("has_coconut_tag", conditionsFromTag(BFBTags.Items.COCONUTS))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.MISC, Items.BONE_MEAL, 1)
+                        .group("bonemeal")
+                        .input(BlocksForBuildersItems.COCONUT_HUSK)
+                        .criterion(hasItem(BlocksForBuildersItems.COCONUT_HUSK), conditionsFromItem(BlocksForBuildersItems.COCONUT_HUSK))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.MISC, Items.BROWN_DYE, 1)
+                        .group("brown_dye")
+                        .input(BlocksForBuildersItems.COCONUT_FIBER)
+                        .criterion(hasItem(BlocksForBuildersItems.COCONUT_FIBER), conditionsFromItem(BlocksForBuildersItems.COCONUT_FIBER))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, Items.STRING, 3)
+                        .pattern("###")
+                        .input('#', BlocksForBuildersItems.COCONUT_FIBER)
+                        .criterion(hasItem(BlocksForBuildersItems.COCONUT_FIBER), conditionsFromItem(BlocksForBuildersItems.COCONUT_FIBER))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.TOOLS, Items.BUNDLE, 1)
+                        .pattern("-")
+                        .pattern("#")
+                        .input('-', Items.STRING)
+                        .input('#', BlocksForBuildersItems.COCONUT_FIBER)
+                        .criterion(hasItem(BlocksForBuildersItems.COCONUT_FIBER), conditionsFromItem(BlocksForBuildersItems.COCONUT_FIBER))
+                        .offerTo(exporter);
+
+                offerCompactingRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.COCONUT_THATCH, BlocksForBuildersItems.COCONUT_FIBER);
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.COCONUT_THATCH_STAIRS, BlocksForBuildersBlocks.COCONUT_THATCH);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.COCONUT_THATCH_SLAB, BlocksForBuildersBlocks.COCONUT_THATCH);
+                offerAltCarpetRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.COCONUT_THATCH_RUG, BlocksForBuildersBlocks.COCONUT_THATCH);
             }
 
             private void offerSignRecipe(ItemConvertible output, ItemConvertible input) {

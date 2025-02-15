@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blocksforbuilders:block/coconut_thatch_top",
+    "side": "blocksforbuilders:block/coconut_thatch_side"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bonemeal",
+  "ingredients": [
+    "blocksforbuilders:coconut_husk"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:bone_meal"
+  }
+}

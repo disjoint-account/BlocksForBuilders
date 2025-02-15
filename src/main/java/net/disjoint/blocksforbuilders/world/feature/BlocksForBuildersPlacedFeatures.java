@@ -64,7 +64,7 @@ public class BlocksForBuildersPlacedFeatures {
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.25f, 1), BlocksForBuildersBlocks.WILLOW_SAPLING));
 
         register(context, PALM_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.PALM_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.25f, 1), BlocksForBuildersBlocks.PALM_SAPLING));
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.25f, 1), BlocksForBuildersBlocks.COCONUT));
 
         register(context, SCORCHWOOD_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.SCORCHWOOD_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(4, 0.5f, 8), BlocksForBuildersBlocks.SCORCHWOOD_SAPLING));

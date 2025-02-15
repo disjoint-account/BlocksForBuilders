@@ -39,6 +39,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF,
                         BlocksForBuildersBlocks.BAMBOO_THATCH,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_RUG,
+                        BlocksForBuildersBlocks.COCONUT_THATCH,
+                        BlocksForBuildersBlocks.COCONUT_THATCH_RUG,
                         BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG);
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
@@ -329,7 +331,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GHOSTWOOD_SAPLING,
                         BlocksForBuildersBlocks.SCORCHWOOD_SAPLING,
                         BlocksForBuildersBlocks.WILLOW_SAPLING,
-                        BlocksForBuildersBlocks.PALM_SAPLING,
+                        BlocksForBuildersBlocks.COCONUT,
+                        BlocksForBuildersBlocks.STRIPPED_COCONUT,
                         BlocksForBuildersBlocks.MAPLE_SAPLING,
                         BlocksForBuildersBlocks.BEECH_SAPLING,
                         BlocksForBuildersBlocks.PINE_SAPLING,
@@ -349,6 +352,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.CEDAR_SLAB,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB,
+                        BlocksForBuildersBlocks.COCONUT_THATCH_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_SLAB,
                         BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB,
@@ -371,6 +375,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.CEDAR_STAIRS,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS,
+                        BlocksForBuildersBlocks.COCONUT_THATCH_STAIRS,
                         BlocksForBuildersBlocks.GRIMSTONE_STAIRS,
                         BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS,
                         BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS,
@@ -533,8 +538,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.BEECH_SLAB,
                         BlocksForBuildersBlocks.PINE_SLAB,
                         BlocksForBuildersBlocks.CEDAR_SLAB,
-                        BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB,
-                        BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB);
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS,
@@ -591,6 +595,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_RUG,
                         BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG,
+                        BlocksForBuildersBlocks.COCONUT_THATCH_RUG,
                         BlocksForBuildersBlocks.ASHEN_CARPET);
 
         getOrCreateTagBuilder(BlockTags.DIRT)

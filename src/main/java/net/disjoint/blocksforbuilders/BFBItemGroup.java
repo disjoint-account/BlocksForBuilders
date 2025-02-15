@@ -42,7 +42,10 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.PALM_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES);
                         entries.add(BlocksForBuildersBlocks.PALM_HEDGE);
-                        entries.add(BlocksForBuildersBlocks.PALM_SAPLING);
+                        entries.add(BlocksForBuildersBlocks.COCONUT);
+                        entries.add(BlocksForBuildersItems.STRIPPED_COCONUT);
+                        entries.add(BlocksForBuildersItems.COCONUT_HUSK);
+                        entries.add(BlocksForBuildersItems.COCONUT_FIBER);
                         entries.add(BlocksForBuildersBlocks.PALM_PLANKS);
                         entries.add(BlocksForBuildersBlocks.PALM_STAIRS);
                         entries.add(BlocksForBuildersBlocks.PALM_SLAB);
@@ -290,6 +293,10 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB);
                         entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG);
                         entries.add(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG);
+                        entries.add(BlocksForBuildersBlocks.COCONUT_THATCH);
+                        entries.add(BlocksForBuildersBlocks.COCONUT_THATCH_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB);
+                        entries.add(BlocksForBuildersBlocks.COCONUT_THATCH_RUG);
                         entries.add(BlocksForBuildersBlocks.HAY_STAIRS);
                         entries.add(BlocksForBuildersBlocks.HAY_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);

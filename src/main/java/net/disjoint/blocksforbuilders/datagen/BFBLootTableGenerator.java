@@ -184,14 +184,14 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.PALM_FENCE);
         addDrop(BlocksForBuildersBlocks.PALM_FENCE_GATE);
         addDrop(BlocksForBuildersBlocks.PALM_HANGING_SIGN, drops(BlocksForBuildersItems.PALM_HANGING_SIGN_ITEM));
-        addDrop(BlocksForBuildersBlocks.PALM_LEAVES, leavesDrops(BlocksForBuildersBlocks.PALM_LEAVES, BlocksForBuildersBlocks.PALM_SAPLING, 0.05f));
-        addDrop(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, BlocksForBuildersBlocks.PALM_SAPLING, 0.0f));
+        addDrop(BlocksForBuildersBlocks.PALM_LEAVES, leavesDrops(BlocksForBuildersBlocks.PALM_LEAVES, BlocksForBuildersBlocks.COCONUT, 0.05f));
+        addDrop(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, BlocksForBuildersBlocks.COCONUT, 0.0f));
         addDrop(BlocksForBuildersBlocks.PALM_HEDGE);
         addDrop(BlocksForBuildersBlocks.PALM_LOG);
         addDrop(BlocksForBuildersBlocks.PALM_PLANKS);
         addDrop(BlocksForBuildersBlocks.PALM_PRESSURE_PLATE);
-        addDrop(BlocksForBuildersBlocks.PALM_SAPLING);
-        addDrop(BlocksForBuildersBlocks.POTTED_PALM_SAPLING, pottedPlantDrops(BlocksForBuildersBlocks.PALM_SAPLING));
+        addDrop(BlocksForBuildersBlocks.COCONUT);
+        addDrop(BlocksForBuildersBlocks.STRIPPED_COCONUT, drops(BlocksForBuildersItems.STRIPPED_COCONUT));
         addDrop(BlocksForBuildersBlocks.PALM_SIGN, drops(BlocksForBuildersItems.PALM_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.PALM_SLAB, slabDrops(BlocksForBuildersBlocks.PALM_SLAB));
         addDrop(BlocksForBuildersBlocks.PALM_STAIRS);
@@ -358,6 +358,11 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB, slabDrops(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB));
         addDrop(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG);
         addDrop(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG);
+
+        addDrop(BlocksForBuildersBlocks.COCONUT_THATCH);
+        addDrop(BlocksForBuildersBlocks.COCONUT_THATCH_STAIRS);
+        addDrop(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB, slabDrops(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB));
+        addDrop(BlocksForBuildersBlocks.COCONUT_THATCH_RUG);
 
         addDrop(BlocksForBuildersBlocks.SCORCHED_GRASS, silkTouchAltDrops(BlocksForBuildersBlocks.SCORCHED_GRASS, Blocks.DIRT, 1.0f, 1.0f));
         addDrop(BlocksForBuildersBlocks.ASHEN_CARPET);

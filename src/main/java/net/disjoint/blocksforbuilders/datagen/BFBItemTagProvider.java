@@ -225,7 +225,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_SAPLING.asItem())
-                .add(BlocksForBuildersBlocks.PALM_SAPLING.asItem())
+                .add(BlocksForBuildersBlocks.COCONUT.asItem())
+                .add(BlocksForBuildersItems.STRIPPED_COCONUT)
                 .add(BlocksForBuildersBlocks.MAPLE_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.PINE_SAPLING.asItem())
@@ -257,6 +258,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.CEDAR_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB.asItem())
@@ -279,6 +281,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.CEDAR_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.COCONUT_THATCH_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_STAIRS.asItem())
@@ -372,8 +375,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.PINE_SLAB.asItem())
-                .add(BlocksForBuildersBlocks.CEDAR_SLAB.asItem())
-                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB.asItem());
+                .add(BlocksForBuildersBlocks.CEDAR_SLAB.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS.asItem())
@@ -385,8 +387,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.MAPLE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.PINE_STAIRS.asItem())
-                .add(BlocksForBuildersBlocks.CEDAR_STAIRS.asItem())
-                .add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS.asItem());
+                .add(BlocksForBuildersBlocks.CEDAR_STAIRS.asItem());
 
         getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR.asItem())
@@ -402,6 +403,10 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.DIRT)
                 .add(BlocksForBuildersBlocks.SCORCHED_GRASS.asItem());
+
+        getOrCreateTagBuilder(BFBTags.Items.COCONUTS)
+                .add(BlocksForBuildersBlocks.COCONUT.asItem())
+                .add(BlocksForBuildersItems.STRIPPED_COCONUT);
 
         getOrCreateTagBuilder(BFBTags.Items.BFB_TAG)
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LOG.asItem())
@@ -468,7 +473,10 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.STRIPPED_PALM_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.PALM_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES.asItem())
-                .add(BlocksForBuildersBlocks.PALM_SAPLING.asItem())
+                .add(BlocksForBuildersBlocks.COCONUT.asItem())
+                .add(BlocksForBuildersItems.STRIPPED_COCONUT)
+                .add(BlocksForBuildersItems.COCONUT_HUSK)
+                .add(BlocksForBuildersItems.COCONUT_FIBER)
                 .add(BlocksForBuildersBlocks.PALM_PLANKS.asItem())
                 .add(BlocksForBuildersBlocks.PALM_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.PALM_SLAB.asItem())
@@ -707,6 +715,10 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG.asItem())
                 .add(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG.asItem())
+                .add(BlocksForBuildersBlocks.COCONUT_THATCH.asItem())
+                .add(BlocksForBuildersBlocks.COCONUT_THATCH_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.COCONUT_THATCH_RUG.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHED_GRASS.asItem())
                 .add(BlocksForBuildersBlocks.ASHEN_CARPET.asItem());
     }

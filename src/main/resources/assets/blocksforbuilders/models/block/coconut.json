@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "#all",
+    "all": "blocksforbuilders:block/coconut",
+    "top": "blocksforbuilders:block/coconut_top"
+  },
+  "elements": [
+    {   "from": [ 5, 0, 5 ],
+      "to": [ 11, 7, 11 ],
+      "faces": {
+        "down":  { "texture": "#all", "cullface": "down" },
+        "up":    { "texture": "#top" },
+        "north": { "texture": "#all" },
+        "south": { "texture": "#all" },
+        "west":  { "texture": "#all" },
+        "east":  { "texture": "#all" }
+      }
+    }
+  ]
+}

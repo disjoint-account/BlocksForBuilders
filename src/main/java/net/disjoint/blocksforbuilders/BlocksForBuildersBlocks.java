@@ -4,19 +4,17 @@ import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBHangingSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallHangingSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallSignBlock;
-import net.disjoint.blocksforbuilders.world.feature.tree.AltSoilSaplingBlock;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBSaplingGenerators;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
@@ -181,13 +179,13 @@ public class BlocksForBuildersBlocks {
     public static final Block STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.PALE_YELLOW));
     public static final Block PALM_LEAVES = registerBlock("palm_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.PALE_YELLOW));
+            PalmLeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.PALE_YELLOW));
     public static final Block FALLEN_PALM_LEAVES = registerBlock("fallen_palm_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(PALM_LEAVES).mapColor(MapColor.PALE_YELLOW).nonOpaque());
     public static final Block PALM_HEDGE = registerBlock("palm_hedge",
             HedgeBlock::new, AbstractBlock.Settings.copy(PALM_LEAVES));
-    public static final Block PALM_SAPLING = registerAltSaplingBlock("palm_sapling", BFBSaplingGenerators.PALM, BlockTags.SAND, OAK_SAPLING);
-    public static final Block POTTED_PALM_SAPLING = registerFlowerPotBlock("potted_palm_sapling", PALM_SAPLING, POTTED_OAK_SAPLING);
+    public static final Block COCONUT = registerCoconutBlock("coconut", BFBSaplingGenerators.PALM, MapColor.DIRT_BROWN);
+    public static final Block STRIPPED_COCONUT = registerCoconutBlock("stripped_coconut", BFBSaplingGenerators.PALM, MapColor.PALE_YELLOW, false);
     public static final Block PALM_PLANKS = registerBlock("palm_planks",
             Block::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.PALE_YELLOW));
     public static final Block PALM_STAIRS = registerStairsBlock("palm_stairs", PALM_PLANKS);
@@ -552,12 +550,20 @@ public class BlocksForBuildersBlocks {
     public static final Block BAMBOO_MOSAIC_RUG = registerBlock("bamboo_mosaic_rug",
             CarpetBlock::new, AbstractBlock.Settings.copy(BAMBOO_MOSAIC));
     public static final Block BAMBOO_THATCH = registerBlock("bamboo_thatch",
-            PillarBlock::new, AbstractBlock.Settings.copy(BAMBOO_MOSAIC));
+            PillarBlock::new, AbstractBlock.Settings.copy(HAY_BLOCK));
     public static final Block BAMBOO_THATCH_STAIRS = registerStairsBlock("bamboo_thatch_stairs", BAMBOO_THATCH);
     public static final Block BAMBOO_THATCH_SLAB = registerBlock("bamboo_thatch_slab",
-            DirectionalSlab::new, AbstractBlock.Settings.copy(BAMBOO_MOSAIC));
+            DirectionalSlab::new, AbstractBlock.Settings.copy(BAMBOO_THATCH));
     public static final Block BAMBOO_THATCH_RUG = registerBlock("bamboo_thatch_rug",
-            DirectionalCarpet::new, AbstractBlock.Settings.copy(BAMBOO_MOSAIC));
+            DirectionalCarpet::new, AbstractBlock.Settings.copy(BAMBOO_THATCH));
+
+    public static final Block COCONUT_THATCH = registerBlock("coconut_thatch",
+            PillarBlock::new, AbstractBlock.Settings.copy(HAY_BLOCK));
+    public static final Block COCONUT_THATCH_STAIRS = registerStairsBlock("coconut_thatch_stairs", COCONUT_THATCH);
+    public static final Block COCONUT_THATCH_SLAB = registerBlock("coconut_thatch_slab",
+            DirectionalSlab::new, AbstractBlock.Settings.copy(COCONUT_THATCH));
+    public static final Block COCONUT_THATCH_RUG = registerBlock("coconut_thatch_rug",
+            DirectionalCarpet::new, AbstractBlock.Settings.copy(COCONUT_THATCH));
 
     public static final Block SCORCHED_GRASS = registerBlock("scorched_grass",
             SnowyBlock::new, AbstractBlock.Settings.copy(DIRT).mapColor(MapColor.TERRACOTTA_GRAY));
@@ -603,8 +609,11 @@ public class BlocksForBuildersBlocks {
     private static Block registerSaplingBlock(String name, SaplingGenerator generator, Block base) {
         return registerBlock(name, settings -> new SaplingBlock(generator, settings), AbstractBlock.Settings.copy(base));
     }
-    private static Block registerAltSaplingBlock(String name, SaplingGenerator generator, TagKey<Block> ground, Block base) {
-        return registerBlock(name, settings -> new AltSoilSaplingBlock(generator, settings, ground), AbstractBlock.Settings.copy(base));
+    private static Block registerCoconutBlock(String name, SaplingGenerator generator, MapColor mapColor) {
+        return registerCoconutBlock(name, generator, mapColor, true);
+    }
+    private static Block registerCoconutBlock(String name, SaplingGenerator generator, MapColor mapColor, boolean item) {
+        return registerBlock(name, item,settings -> new CoconutBlock(generator, settings), AbstractBlock.Settings.create().mapColor(mapColor).ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY));
     }
     private static void registerBlockItem(String name, Block block) {
         Identifier id = Identifier.of(BlocksForBuilders.MOD_ID, name);

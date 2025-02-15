@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "blocksforbuilders:block/stripped_coconut"
+    },
+    "hanging=true": {
+      "model": "blocksforbuilders:block/stripped_coconut",
+      "x": 180,
+      "uvlock": false
+    }
+  }
+}

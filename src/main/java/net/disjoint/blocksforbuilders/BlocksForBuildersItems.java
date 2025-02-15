@@ -1,6 +1,8 @@
 package net.disjoint.blocksforbuilders;
 
 import net.disjoint.blocksforbuilders.boatstuff.BFBEntityTypes;
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.BoatItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
@@ -30,6 +32,9 @@ public class BlocksForBuildersItems {
     public static final Item WILLOW_BOAT = registerItem("willow_boat", (settings -> new BoatItem(BFBEntityTypes.WILLOW_BOAT, settings.maxCount(1))));
     public static final Item WILLOW_CHEST_BOAT = registerItem("willow_chest_boat", (settings -> new BoatItem(BFBEntityTypes.WILLOW_CHEST_BOAT, settings.maxCount(1))));
 
+    public static final Item STRIPPED_COCONUT = registerItem("stripped_coconut", settings -> new BlockItem(BlocksForBuildersBlocks.STRIPPED_COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
+    public static final Item COCONUT_FIBER = registerItem("coconut_fiber", settings ->  new Item(settings.maxCount(64)));
+    public static final Item COCONUT_HUSK = registerItem("coconut_husk", settings ->  new Item(settings.maxCount(64)));
     public static final Item PALM_SIGN_ITEM = registerItem("palm_sign", settings ->  new SignItem(PALM_SIGN, PALM_WALL_SIGN, settings.maxCount(16)));
     public static final Item PALM_HANGING_SIGN_ITEM = registerItem("palm_hanging_sign", settings ->  new SignItem(PALM_HANGING_SIGN, PALM_WALL_HANGING_SIGN, settings.maxCount(16)));
     public static final Item PALM_RAFT = registerItem("palm_raft", (settings -> new BoatItem(BFBEntityTypes.PALM_RAFT, settings.maxCount(1))));

@@ -5,6 +5,7 @@ import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.world.feature.tree.custom.PalmTrunkPlacer;
 import net.disjoint.blocksforbuilders.world.feature.tree.custom.ScorchwoodTrunkPlacer;
+import net.disjoint.blocksforbuilders.world.feature.tree.decorators.CoconutTreeDecorator;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.registry.Registerable;
@@ -132,7 +133,8 @@ public class BlocksForBuildersConfiguredFeatures {
                 new PalmTrunkPlacer(4, 4, 4),
                 BlockStateProvider.of(BlocksForBuildersBlocks.PALM_LEAVES),
                 new AcaciaFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0)),
-                new TwoLayersFeatureSize(0, 0, 0)).build());
+                new TwoLayersFeatureSize(0, 0, 0))
+                .decorators(List.of(new CoconutTreeDecorator(1.0f))).build());
 
         register(context, PALM_SPAWN_KEY, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.PALM_PLACED_KEY),
