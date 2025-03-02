@@ -43,11 +43,6 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES);
                         entries.add(BlocksForBuildersBlocks.PALM_HEDGE);
                         entries.add(BlocksForBuildersItems.COCONUT);
-                        entries.add(BlocksForBuildersItems.SHEARED_COCONUT);
-                        entries.add(BlocksForBuildersItems.MILKED_COCONUT);
-                        entries.add(BlocksForBuildersItems.SHEARED_MILKED_COCONUT);
-                        entries.add(BlocksForBuildersItems.COCONUT_HUSK);
-                        entries.add(BlocksForBuildersItems.COCONUT_FIBER);
                         entries.add(BlocksForBuildersBlocks.PALM_PLANKS);
                         entries.add(BlocksForBuildersBlocks.PALM_STAIRS);
                         entries.add(BlocksForBuildersBlocks.PALM_SLAB);
@@ -328,6 +323,11 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);
                         entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
+                        entries.add(BlocksForBuildersItems.SHEARED_COCONUT);
+                        entries.add(BlocksForBuildersItems.MILKED_COCONUT);
+                        entries.add(BlocksForBuildersItems.SHEARED_MILKED_COCONUT);
+                        entries.add(BlocksForBuildersItems.COCONUT_HUSK);
+                        entries.add(BlocksForBuildersItems.COCONUT_FIBER);
                         entries.add(Items.PUMPKIN_PIE);
                     }).build());
     public static void registerItemGroups() {
