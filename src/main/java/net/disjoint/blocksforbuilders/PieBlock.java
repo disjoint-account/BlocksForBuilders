@@ -43,7 +43,7 @@ public class PieBlock extends Block {
 
     public PieBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(CHOMPS, Integer.valueOf(0)));
+        this.setDefaultState(this.stateManager.getDefaultState().with(CHOMPS, 0));
     }
 
     @Override

@@ -24,10 +24,10 @@ public class MixinShearsDispenserBehavior {
             cancellable = true)
     private static void tryShearBlock(ServerWorld world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         BlockState blockState = world.getBlockState(pos);
-        if (blockState.isOf(BlocksForBuildersBlocks.COCONUT)) {
+        if (blockState.isOf(BlocksForBuildersBlocks.COCONUT) && blockState.get(HAS_FIBER)) {
             world.playSound(null, pos, SoundEvents.ENTITY_SHEEP_SHEAR, SoundCategory.BLOCKS, 1.0F, 1.0F);
             dropStack(world, pos, new ItemStack(BlocksForBuildersItems.COCONUT_FIBER, 3));
-            world.setBlockState(pos, BlocksForBuildersBlocks.STRIPPED_COCONUT.getDefaultState().with(HANGING, blockState.get(HANGING)).with(HAS_MILK, blockState.get(HAS_MILK)).with(WATERLOGGED, blockState.get(WATERLOGGED)).with(STAGE, blockState.get(STAGE)));
+            world.setBlockState(pos, blockState.with(HAS_FIBER, false));
             world.emitGameEvent(null, GameEvent.SHEAR, pos);
             cir.setReturnValue(true);
         }

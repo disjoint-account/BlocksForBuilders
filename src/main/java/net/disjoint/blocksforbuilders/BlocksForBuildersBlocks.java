@@ -185,7 +185,6 @@ public class BlocksForBuildersBlocks {
     public static final Block PALM_HEDGE = registerBlock("palm_hedge",
             HedgeBlock::new, AbstractBlock.Settings.copy(PALM_LEAVES));
     public static final Block COCONUT = registerCoconutBlock("coconut", BFBSaplingGenerators.PALM, MapColor.DIRT_BROWN);
-    public static final Block STRIPPED_COCONUT = registerCoconutBlock("stripped_coconut", BFBSaplingGenerators.PALM, MapColor.PALE_YELLOW, false);
     public static final Block PALM_PLANKS = registerBlock("palm_planks",
             Block::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.PALE_YELLOW));
     public static final Block PALM_STAIRS = registerStairsBlock("palm_stairs", PALM_PLANKS);
@@ -610,10 +609,7 @@ public class BlocksForBuildersBlocks {
         return registerBlock(name, settings -> new SaplingBlock(generator, settings), AbstractBlock.Settings.copy(base));
     }
     private static Block registerCoconutBlock(String name, SaplingGenerator generator, MapColor mapColor) {
-        return registerCoconutBlock(name, generator, mapColor, true);
-    }
-    private static Block registerCoconutBlock(String name, SaplingGenerator generator, MapColor mapColor, boolean item) {
-        return registerBlock(name, item,settings -> new CoconutBlock(generator, settings), AbstractBlock.Settings.create().mapColor(mapColor).ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY));
+        return registerBlock(name, false,settings -> new CoconutBlock(generator, settings), AbstractBlock.Settings.create().mapColor(mapColor).ticksRandomly().breakInstantly().sounds(BlockSoundGroup.BONE).pistonBehavior(PistonBehavior.DESTROY));
     }
     private static void registerBlockItem(String name, Block block) {
         Identifier id = Identifier.of(BlocksForBuilders.MOD_ID, name);

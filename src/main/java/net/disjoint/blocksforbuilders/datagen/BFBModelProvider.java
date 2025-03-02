@@ -334,8 +334,10 @@ public class BFBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL.asItem());
         itemModelGenerator.register(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL.asItem());
 
-        itemModelGenerator.register(BlocksForBuildersBlocks.COCONUT.asItem(), Models.GENERATED);
-        itemModelGenerator.register(BlocksForBuildersItems.STRIPPED_COCONUT, Models.GENERATED);
+        itemModelGenerator.register(BlocksForBuildersItems.COCONUT, Models.GENERATED);
+        itemModelGenerator.register(BlocksForBuildersItems.SHEARED_COCONUT, Models.GENERATED);
+        itemModelGenerator.register(BlocksForBuildersItems.MILKED_COCONUT, Models.GENERATED);
+        itemModelGenerator.register(BlocksForBuildersItems.SHEARED_MILKED_COCONUT, Models.GENERATED);
         itemModelGenerator.register(BlocksForBuildersItems.COCONUT_HUSK, Models.GENERATED);
         itemModelGenerator.register(BlocksForBuildersItems.COCONUT_FIBER, Models.GENERATED);
     }

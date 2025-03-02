@@ -4,8 +4,10 @@
     "blocksforbuilders:ghostwood_sapling",
     "blocksforbuilders:scorchwood_sapling",
     "blocksforbuilders:willow_sapling",
-    "blocksforbuilders:coconut",
-    "blocksforbuilders:stripped_coconut",
+    {
+      "id": "#blocksforbuilders:coconuts",
+      "required": false
+    },
     "blocksforbuilders:maple_sapling",
     "blocksforbuilders:beech_sapling",
     "blocksforbuilders:pine_sapling",

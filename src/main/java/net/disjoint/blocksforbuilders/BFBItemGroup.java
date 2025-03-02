@@ -42,8 +42,10 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.PALM_LEAVES);
                         entries.add(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES);
                         entries.add(BlocksForBuildersBlocks.PALM_HEDGE);
-                        entries.add(BlocksForBuildersBlocks.COCONUT);
-                        entries.add(BlocksForBuildersItems.STRIPPED_COCONUT);
+                        entries.add(BlocksForBuildersItems.COCONUT);
+                        entries.add(BlocksForBuildersItems.SHEARED_COCONUT);
+                        entries.add(BlocksForBuildersItems.MILKED_COCONUT);
+                        entries.add(BlocksForBuildersItems.SHEARED_MILKED_COCONUT);
                         entries.add(BlocksForBuildersItems.COCONUT_HUSK);
                         entries.add(BlocksForBuildersItems.COCONUT_FIBER);
                         entries.add(BlocksForBuildersBlocks.PALM_PLANKS);

@@ -2,8 +2,8 @@
   "parent": "minecraft:block/block",
   "textures": {
     "particle": "#all",
-    "all": "blocksforbuilders:block/stripped_coconut",
-    "top": "blocksforbuilders:block/stripped_coconut_top"
+    "all": "blocksforbuilders:block/coconut",
+    "top": "blocksforbuilders:block/sheared_coconut_top"
   },
   "elements": [
     {   "from": [ 5, 0, 5 ],

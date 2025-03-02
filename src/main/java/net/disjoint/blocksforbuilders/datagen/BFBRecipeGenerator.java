@@ -76,8 +76,10 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         Items.CHERRY_SAPLING,
                         Items.PALE_OAK_SAPLING,
                         BlocksForBuildersBlocks.WILLOW_SAPLING,
-                        BlocksForBuildersBlocks.COCONUT,
-                        BlocksForBuildersItems.STRIPPED_COCONUT,
+                        BlocksForBuildersItems.COCONUT,
+                        BlocksForBuildersItems.MILKED_COCONUT,
+                        BlocksForBuildersItems.SHEARED_COCONUT,
+                        BlocksForBuildersItems.SHEARED_MILKED_COCONUT,
                         BlocksForBuildersBlocks.GHOSTWOOD_SAPLING,
                         BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING,
                         BlocksForBuildersBlocks.MAPLE_SAPLING,
@@ -509,7 +511,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerAltCarpetRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_THATCH_RUG, BlocksForBuildersBlocks.BAMBOO_THATCH);
                 offerAltCarpetRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG, Blocks.BAMBOO_MOSAIC);
 
-                createShapeless(RecipeCategory.MISC, BlocksForBuildersItems.COCONUT_HUSK, 1)
+                createShapeless(RecipeCategory.MISC, BlocksForBuildersItems.COCONUT_HUSK, 2)
                         .input(BFBTags.Items.COCONUTS)
                         .criterion("has_coconut_tag", conditionsFromTag(BFBTags.Items.COCONUTS))
                         .offerTo(exporter);

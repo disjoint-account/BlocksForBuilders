@@ -1,0 +1,73 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "blocksforbuilders:coconut",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "has_milk": "true",
+                    "has_fiber": "true"
+                  }
+                }
+              ],
+              "name": "blocksforbuilders:coconut"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "blocksforbuilders:coconut",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "has_milk": "false",
+                    "has_fiber": "true"
+                  }
+                }
+              ],
+              "name": "blocksforbuilders:milked_coconut"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "blocksforbuilders:coconut",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "has_milk": "true",
+                    "has_fiber": "false"
+                  }
+                }
+              ],
+              "name": "blocksforbuilders:sheared_coconut"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "blocksforbuilders:coconut",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "has_milk": "false",
+                    "has_fiber": "false"
+                  }
+                }
+              ],
+              "name": "blocksforbuilders:sheared_milked_coconut"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "blocksforbuilders:blocks/coconut"
+}

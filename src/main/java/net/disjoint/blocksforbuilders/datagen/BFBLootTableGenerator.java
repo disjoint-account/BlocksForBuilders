@@ -190,8 +190,6 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.PALM_LOG);
         addDrop(BlocksForBuildersBlocks.PALM_PLANKS);
         addDrop(BlocksForBuildersBlocks.PALM_PRESSURE_PLATE);
-        addDrop(BlocksForBuildersBlocks.COCONUT);
-        addDrop(BlocksForBuildersBlocks.STRIPPED_COCONUT, drops(BlocksForBuildersItems.STRIPPED_COCONUT));
         addDrop(BlocksForBuildersBlocks.PALM_SIGN, drops(BlocksForBuildersItems.PALM_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.PALM_SLAB, slabDrops(BlocksForBuildersBlocks.PALM_SLAB));
         addDrop(BlocksForBuildersBlocks.PALM_STAIRS);

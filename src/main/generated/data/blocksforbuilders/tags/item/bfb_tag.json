@@ -64,8 +64,10 @@
     "blocksforbuilders:stripped_palm_wood",
     "blocksforbuilders:palm_leaves",
     "blocksforbuilders:fallen_palm_leaves",
-    "blocksforbuilders:coconut",
-    "blocksforbuilders:stripped_coconut",
+    {
+      "id": "#blocksforbuilders:coconuts",
+      "required": false
+    },
     "blocksforbuilders:coconut_husk",
     "blocksforbuilders:coconut_fiber",
     "blocksforbuilders:palm_planks",

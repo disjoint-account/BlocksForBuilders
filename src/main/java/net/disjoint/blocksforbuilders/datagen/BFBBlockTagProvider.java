@@ -332,7 +332,6 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.SCORCHWOOD_SAPLING,
                         BlocksForBuildersBlocks.WILLOW_SAPLING,
                         BlocksForBuildersBlocks.COCONUT,
-                        BlocksForBuildersBlocks.STRIPPED_COCONUT,
                         BlocksForBuildersBlocks.MAPLE_SAPLING,
                         BlocksForBuildersBlocks.BEECH_SAPLING,
                         BlocksForBuildersBlocks.PINE_SAPLING,

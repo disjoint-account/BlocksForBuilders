@@ -39,6 +39,7 @@
           "Name": "blocksforbuilders:coconut",
           "Properties": {
             "hanging": "false",
+            "has_fiber": "true",
             "has_milk": "true",
             "stage": "0",
             "waterlogged": "false"

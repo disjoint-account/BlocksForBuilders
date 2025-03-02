@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stripped_coconut": {
+    "has_milked_coconut": {
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:stripped_coconut"
+            "items": "blocksforbuilders:milked_coconut"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:scorchwood_sapling_from_smelting_stripped_coconut"
+        "recipe": "minecraft:scorchwood_sapling_from_smelting_milked_coconut"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_stripped_coconut"
+      "has_milked_coconut"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:scorchwood_sapling_from_smelting_stripped_coconut"
+      "minecraft:scorchwood_sapling_from_smelting_milked_coconut"
     ]
   }
 }

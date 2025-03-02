@@ -1,12 +1,11 @@
 package net.disjoint.blocksforbuilders;
 
 import net.minecraft.block.*;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.server.world.ServerWorld;
@@ -24,6 +23,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.tick.ScheduledTickView;
@@ -33,12 +33,13 @@ public class CoconutBlock extends SaplingBlock implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final BooleanProperty HANGING = BooleanProperty.of("hanging");
     public static final BooleanProperty HAS_MILK = BooleanProperty.of("has_milk");
+    public static final BooleanProperty HAS_FIBER = BooleanProperty.of("has_fiber");
     private final VoxelShape UP_SHAPE = Block.createCuboidShape(5, 9, 5, 11, 16, 11);
     private final VoxelShape DOWN_SHAPE = Block.createCuboidShape(5, 0, 5, 11, 7, 11);
 
     public CoconutBlock(SaplingGenerator generator, Settings settings) {
         super(generator, settings);
-        this.setDefaultState(this.getStateManager().getDefaultState().with(HANGING, false).with(HAS_MILK, true).with(WATERLOGGED, false).with(STAGE, 0));
+        this.setDefaultState(this.getStateManager().getDefaultState().with(HANGING, false).with(HAS_MILK, true).with(HAS_FIBER, true).with(WATERLOGGED, false).with(STAGE, 0));
     }
 
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
@@ -66,12 +67,15 @@ public class CoconutBlock extends SaplingBlock implements Waterloggable {
         World world = ctx.getWorld();
         BlockPos pos = ctx.getBlockPos();
         FluidState state = world.getFluidState(pos);
+        ItemStack itemStack = ctx.getStack();
+        boolean milk = itemStack.isOf(BlocksForBuildersItems.COCONUT) || itemStack.isOf(BlocksForBuildersItems.SHEARED_COCONUT);
+        boolean fiber = itemStack.isOf(BlocksForBuildersItems.COCONUT) || itemStack.isOf(BlocksForBuildersItems.MILKED_COCONUT);
         boolean bl = state.isIn(FluidTags.WATER) && state.getLevel() == 8;
         for (Direction direction : ctx.getPlacementDirections()) {
             if (direction == Direction.UP || !Block.isFaceFullSquare(world.getBlockState(pos.down()).getCollisionShape(world, pos.down()), Direction.UP)) {
-                return this.getDefaultState().with(WATERLOGGED, bl).with(HANGING, true);
+                return this.getDefaultState().with(WATERLOGGED, bl).with(HANGING, true).with(HAS_MILK, milk).with(HAS_FIBER, fiber);
             }
-            else return this.getDefaultState().with(WATERLOGGED, bl).with(HANGING, false);
+            else return this.getDefaultState().with(WATERLOGGED, bl).with(HANGING, false).with(HAS_MILK, milk).with(HAS_FIBER, fiber);
         }
         return null;
     }
@@ -90,9 +94,9 @@ public class CoconutBlock extends SaplingBlock implements Waterloggable {
             }
             return ActionResult.SUCCESS;
         }
-        if (itemStack.isOf(Items.SHEARS) && state.isOf(BlocksForBuildersBlocks.COCONUT)) {
+        if (itemStack.isOf(Items.SHEARS) && state.get(HAS_FIBER)) {
             dropStack(world, pos, new ItemStack(BlocksForBuildersItems.COCONUT_FIBER, 3));
-            world.setBlockState(pos, BlocksForBuildersBlocks.STRIPPED_COCONUT.getDefaultState().with(HANGING, state.get(HANGING)).with(HAS_MILK, state.get(HAS_MILK)).with(WATERLOGGED, state.get(WATERLOGGED)).with(STAGE, state.get(STAGE)));
+            world.setBlockState(pos, state.with(HAS_FIBER, false));
             world.playSound(null, pos, SoundEvents.ENTITY_SHEEP_SHEAR, SoundCategory.BLOCKS, 1.0F, 1.0F);
             if (creative) {
                 itemStack.damage(1, player);
@@ -148,6 +152,6 @@ public class CoconutBlock extends SaplingBlock implements Waterloggable {
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(HANGING, HAS_MILK, WATERLOGGED, STAGE);
+        builder.add(HANGING, HAS_MILK, HAS_FIBER, WATERLOGGED, STAGE);
     }
 }

@@ -32,7 +32,10 @@ public class BlocksForBuildersItems {
     public static final Item WILLOW_BOAT = registerItem("willow_boat", (settings -> new BoatItem(BFBEntityTypes.WILLOW_BOAT, settings.maxCount(1))));
     public static final Item WILLOW_CHEST_BOAT = registerItem("willow_chest_boat", (settings -> new BoatItem(BFBEntityTypes.WILLOW_CHEST_BOAT, settings.maxCount(1))));
 
-    public static final Item STRIPPED_COCONUT = registerItem("stripped_coconut", settings -> new BlockItem(BlocksForBuildersBlocks.STRIPPED_COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
+    public static final Item COCONUT = registerItem("coconut", settings -> new BlockItem(BlocksForBuildersBlocks.COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
+    public static final Item SHEARED_COCONUT = registerItem("sheared_coconut", settings -> new BlockItem(BlocksForBuildersBlocks.COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
+    public static final Item MILKED_COCONUT = registerItem("milked_coconut", settings -> new BlockItem(BlocksForBuildersBlocks.COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
+    public static final Item SHEARED_MILKED_COCONUT = registerItem("sheared_milked_coconut", settings -> new BlockItem(BlocksForBuildersBlocks.COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
     public static final Item COCONUT_FIBER = registerItem("coconut_fiber", settings ->  new Item(settings.maxCount(64)));
     public static final Item COCONUT_HUSK = registerItem("coconut_husk", settings ->  new Item(settings.maxCount(64)));
     public static final Item PALM_SIGN_ITEM = registerItem("palm_sign", settings ->  new SignItem(PALM_SIGN, PALM_WALL_SIGN, settings.maxCount(16)));

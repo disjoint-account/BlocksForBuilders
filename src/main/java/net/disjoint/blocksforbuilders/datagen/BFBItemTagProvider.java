@@ -225,8 +225,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_SAPLING.asItem())
-                .add(BlocksForBuildersBlocks.COCONUT.asItem())
-                .add(BlocksForBuildersItems.STRIPPED_COCONUT)
+                .addOptionalTag(BFBTags.Items.COCONUTS)
                 .add(BlocksForBuildersBlocks.MAPLE_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.PINE_SAPLING.asItem())
@@ -405,8 +404,10 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.SCORCHED_GRASS.asItem());
 
         getOrCreateTagBuilder(BFBTags.Items.COCONUTS)
-                .add(BlocksForBuildersBlocks.COCONUT.asItem())
-                .add(BlocksForBuildersItems.STRIPPED_COCONUT);
+                .add(BlocksForBuildersItems.COCONUT)
+                .add(BlocksForBuildersItems.MILKED_COCONUT)
+                .add(BlocksForBuildersItems.SHEARED_COCONUT)
+                .add(BlocksForBuildersItems.SHEARED_MILKED_COCONUT);
 
         getOrCreateTagBuilder(BFBTags.Items.BFB_TAG)
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LOG.asItem())
@@ -473,8 +474,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.STRIPPED_PALM_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.PALM_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES.asItem())
-                .add(BlocksForBuildersBlocks.COCONUT.asItem())
-                .add(BlocksForBuildersItems.STRIPPED_COCONUT)
+                .addOptionalTag(BFBTags.Items.COCONUTS)
                 .add(BlocksForBuildersItems.COCONUT_HUSK)
                 .add(BlocksForBuildersItems.COCONUT_FIBER)
                 .add(BlocksForBuildersBlocks.PALM_PLANKS.asItem())

@@ -1,10 +1,34 @@
 {
   "variants": {
-    "hanging=false": {
+    "hanging=false,has_fiber=true,has_milk=true": {
       "model": "blocksforbuilders:block/coconut"
     },
-    "hanging=true": {
+    "hanging=true,has_fiber=true,has_milk=true": {
       "model": "blocksforbuilders:block/coconut",
+      "x": 180,
+      "uvlock": false
+    },
+    "hanging=false,has_fiber=true,has_milk=false": {
+      "model": "blocksforbuilders:block/coconut_milked"
+    },
+    "hanging=true,has_fiber=true,has_milk=false": {
+      "model": "blocksforbuilders:block/coconut_milked",
+      "x": 180,
+      "uvlock": false
+    },
+    "hanging=false,has_fiber=false,has_milk=true": {
+      "model": "blocksforbuilders:block/coconut_sheared"
+    },
+    "hanging=true,has_fiber=false,has_milk=true": {
+      "model": "blocksforbuilders:block/coconut_sheared",
+      "x": 180,
+      "uvlock": false
+    },
+    "hanging=false,has_fiber=false,has_milk=false": {
+      "model": "blocksforbuilders:block/coconut_milked_sheared"
+    },
+    "hanging=true,has_fiber=false,has_milk=false": {
+      "model": "blocksforbuilders:block/coconut_milked_sheared",
       "x": 180,
       "uvlock": false
     }

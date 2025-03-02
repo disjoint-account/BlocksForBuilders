@@ -21,13 +21,13 @@ public class BlocksForBuilders implements ModInitializer {
 		BFBItemGroup.registerItemGroups();
 		BlocksForBuildersBlocks.registerModBlocks();
 		BlocksForBuildersItems.registerModItems();
+		BFBAliases.registerAliases();
 		BFBEntityTypes.registerEntityTypes();
 		BFBTrunkPlacerTypes.register();
 		BFBTreeDecoratorType.register();
 		BFBBoatDispenserBehavior.registerDefaults();
 		Instance.init();
 	}
-
 }
 
 
