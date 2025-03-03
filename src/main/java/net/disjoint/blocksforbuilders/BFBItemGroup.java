@@ -285,6 +285,17 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS);
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB);
                         entries.add(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL);
+                        entries.add(BlocksForBuildersBlocks.ANTIGORITE);
+                        entries.add(BlocksForBuildersBlocks.ANTIGORITE_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.ANTIGORITE_SLAB);
+                        entries.add(BlocksForBuildersBlocks.ANTIGORITE_WALL);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_ANTIGORITE);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_GRANITE_WALL);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_DIORITE_WALL);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL);
                         entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH);
                         entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS);
                         entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB);

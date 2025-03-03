@@ -133,6 +133,14 @@ public class CoconutBlock extends SaplingBlock implements Waterloggable {
         if (world.getLightLevel(pos.up()) >= 9 && random.nextInt(7) == 0 && conditionsForGrowth(state, world, pos)) {
             this.generate(world, pos, state, random);
         }
+        if (state.get(HANGING) && world.getBlockState(pos.up()).isOf(BlocksForBuildersBlocks.PALM_LEAVES)) {
+            if (!state.get(HAS_MILK) && random.nextDouble() < 0.1) {
+                world.setBlockState(pos, state.with(HAS_MILK, true));
+            }
+            if (!state.get(HAS_FIBER) && random.nextDouble() < 0.1) {
+                world.setBlockState(pos, state.with(HAS_FIBER, true));
+            }
+        }
     }
 
     @Override
@@ -143,6 +151,20 @@ public class CoconutBlock extends SaplingBlock implements Waterloggable {
     @Override
     public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
         return (double)world.random.nextFloat() < 0.45 && conditionsForGrowth(state, world, pos);
+    }
+
+    @Override
+    protected ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {
+        boolean milk = state.get(HAS_MILK);
+        boolean fiber = state.get(HAS_FIBER);
+        if (milk && fiber) {
+            return new ItemStack(BlocksForBuildersItems.COCONUT);
+        } else if (!milk && fiber) {
+            return new ItemStack(BlocksForBuildersItems.EMPTY_COCONUT);
+        } else if (milk) {
+            return new ItemStack(BlocksForBuildersItems.SHEARED_COCONUT);
+        }
+        else return new ItemStack(BlocksForBuildersItems.SHEARED_EMPTY_COCONUT);
     }
 
     protected FluidState getFluidState(BlockState state) {

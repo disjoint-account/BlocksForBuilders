@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "blocksforbuilders:block/polished_antigorite",
+    "side": "blocksforbuilders:block/polished_antigorite",
+    "top": "blocksforbuilders:block/polished_antigorite"
+  }
+}

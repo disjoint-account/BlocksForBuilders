@@ -184,7 +184,6 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.PALM_FENCE);
         addDrop(BlocksForBuildersBlocks.PALM_FENCE_GATE);
         addDrop(BlocksForBuildersBlocks.PALM_HANGING_SIGN, drops(BlocksForBuildersItems.PALM_HANGING_SIGN_ITEM));
-        addDrop(BlocksForBuildersBlocks.PALM_LEAVES, leavesDrops(BlocksForBuildersBlocks.PALM_LEAVES, BlocksForBuildersBlocks.COCONUT, 0.05f));
         addDrop(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, leavesDrops(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, BlocksForBuildersBlocks.COCONUT, 0.0f));
         addDrop(BlocksForBuildersBlocks.PALM_HEDGE);
         addDrop(BlocksForBuildersBlocks.PALM_LOG);
@@ -336,6 +335,19 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS);
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, slabDrops(BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB));
         addDrop(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL);
+
+        addDrop(BlocksForBuildersBlocks.ANTIGORITE);
+        addDrop(BlocksForBuildersBlocks.ANTIGORITE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.ANTIGORITE_SLAB, slabDrops(BlocksForBuildersBlocks.ANTIGORITE_SLAB));
+        addDrop(BlocksForBuildersBlocks.ANTIGORITE_WALL);
+        addDrop(BlocksForBuildersBlocks.POLISHED_ANTIGORITE);
+        addDrop(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB, slabDrops(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB));
+        addDrop(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL);
+
+        addDrop(BlocksForBuildersBlocks.POLISHED_GRANITE_WALL);
+        addDrop(BlocksForBuildersBlocks.POLISHED_DIORITE_WALL);
+        addDrop(BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL);
 
         addDrop(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
 

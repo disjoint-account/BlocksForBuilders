@@ -497,7 +497,7 @@ public class BlocksForBuildersBlocks {
             WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_QUARTZ).mapColor(MapColor.OFF_WHITE));
 
     public static final Block GRIMSTONE = registerBlock("grimstone",
-            Block::new, AbstractBlock.Settings.copy(COBBLED_DEEPSLATE));
+            Block::new, AbstractBlock.Settings.copy(COBBLED_DEEPSLATE).mapColor(MapColor.TERRACOTTA_PURPLE));
     public static final Block GRIMSTONE_STAIRS = registerStairsBlock("grimstone_stairs", GRIMSTONE);
     public static final Block GRIMSTONE_SLAB = registerBlock("grimstone_slab",
             SlabBlock::new, AbstractBlock.Settings.copy(COBBLED_DEEPSLATE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE));
@@ -530,6 +530,28 @@ public class BlocksForBuildersBlocks {
             DirectionalSlab::new, AbstractBlock.Settings.copy(DEEPSLATE_TILE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE));
     public static final Block GRIMSTONE_TILE_WALL = registerBlock("grimstone_tile_wall",
             WallBlock::new, AbstractBlock.Settings.copy(DEEPSLATE_TILE_WALL).mapColor(MapColor.TERRACOTTA_PURPLE));
+
+    public static final Block ANTIGORITE = registerBlock("antigorite",
+            Block::new, AbstractBlock.Settings.copy(ANDESITE).mapColor(MapColor.GREEN));
+    public static final Block ANTIGORITE_STAIRS = registerStairsBlock("antigorite_stairs", ANTIGORITE);
+    public static final Block ANTIGORITE_SLAB = registerBlock("antigorite_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(ANDESITE_SLAB).mapColor(MapColor.GREEN));
+    public static final Block ANTIGORITE_WALL = registerBlock("antigorite_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(ANDESITE_WALL).mapColor(MapColor.GREEN));
+    public static final Block POLISHED_ANTIGORITE = registerBlock("polished_antigorite",
+            Block::new, AbstractBlock.Settings.copy(POLISHED_ANDESITE).mapColor(MapColor.GREEN));
+    public static final Block POLISHED_ANTIGORITE_STAIRS = registerStairsBlock("polished_antigorite_stairs", POLISHED_ANTIGORITE);
+    public static final Block POLISHED_ANTIGORITE_SLAB = registerBlock("polished_antigorite_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_ANDESITE_SLAB).mapColor(MapColor.GREEN));
+    public static final Block POLISHED_ANTIGORITE_WALL = registerBlock("polished_antigorite_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(POLISHED_ANDESITE).mapColor(MapColor.GREEN));
+
+    public static final Block POLISHED_GRANITE_WALL = registerBlock("polished_granite_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(POLISHED_GRANITE));
+    public static final Block POLISHED_DIORITE_WALL = registerBlock("polished_diorite_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(POLISHED_DIORITE));
+    public static final Block POLISHED_ANDESITE_WALL = registerBlock("polished_andesite_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(POLISHED_ANDESITE));
 
     public static final Block SANDSTONE_BRICKS = registerBlock("sandstone_bricks",
             Block::new, AbstractBlock.Settings.copy(CUT_SANDSTONE));

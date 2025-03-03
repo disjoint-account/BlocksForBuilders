@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "blocksforbuilders:antigorite",
+  "result": {
+    "count": 1,
+    "id": "blocksforbuilders:polished_antigorite_stairs"
+  }
+}

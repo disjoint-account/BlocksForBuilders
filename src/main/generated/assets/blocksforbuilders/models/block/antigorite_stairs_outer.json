@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "blocksforbuilders:block/antigorite",
+    "side": "blocksforbuilders:block/antigorite",
+    "top": "blocksforbuilders:block/antigorite"
+  }
+}

@@ -1,5 +1,6 @@
 package net.disjoint.blocksforbuilders.datagen;
 
+import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.BlocksForBuildersItems;
 import net.disjoint.blocksforbuilders.util.BFBTags;
@@ -12,6 +13,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -142,16 +144,37 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE_TILES, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, BlocksForBuildersBlocks.GRIMSTONE_TILES, 2);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.GRIMSTONE_TILES, 1);
+
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.ANTIGORITE_STAIRS, BlocksForBuildersBlocks.ANTIGORITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.ANTIGORITE_SLAB, BlocksForBuildersBlocks.ANTIGORITE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.ANTIGORITE_WALL, BlocksForBuildersBlocks.ANTIGORITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANTIGORITE, BlocksForBuildersBlocks.ANTIGORITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_STAIRS, BlocksForBuildersBlocks.ANTIGORITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB, BlocksForBuildersBlocks.ANTIGORITE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL, BlocksForBuildersBlocks.ANTIGORITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_STAIRS, BlocksForBuildersBlocks.POLISHED_ANTIGORITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB, BlocksForBuildersBlocks.POLISHED_ANTIGORITE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL, BlocksForBuildersBlocks.POLISHED_ANTIGORITE, 1);
+
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRANITE_WALL, Blocks.GRANITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_DIORITE_WALL, Blocks.DIORITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL, Blocks.ANDESITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE, 1);
+
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS, 2);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS, BlocksForBuildersBlocks.BLACK_NETHER_BRICKS, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICKS, 1);
+
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_WALL, Blocks.QUARTZ_BLOCK, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS, 2);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL, Blocks.SMOOTH_QUARTZ, 1);
+
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_SANDSTONE_WALL, Blocks.SMOOTH_SANDSTONE, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_RED_SANDSTONE_WALL, Blocks.SMOOTH_RED_SANDSTONE, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS, Blocks.SANDSTONE, 1);
@@ -495,6 +518,34 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE_TILES);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, BlocksForBuildersBlocks.GRIMSTONE_TILES);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.GRIMSTONE_TILES);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.ANTIGORITE, 2)
+                        .group("antigorite")
+                        .pattern("BW")
+                        .pattern("WB")
+                        .input('B', Items.IRON_INGOT)
+                        .input('W', Items.COBBLESTONE)
+                        .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                        .offerTo(exporter, String.valueOf(Identifier.of(BlocksForBuilders.MOD_ID, "antigorite_from_iron")));
+                createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.ANTIGORITE, 2)
+                        .group("antigorite")
+                        .pattern("BW")
+                        .pattern("WB")
+                        .input('B', Items.COPPER_INGOT)
+                        .input('W', Items.COBBLESTONE)
+                        .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                        .offerTo(exporter, String.valueOf(Identifier.of(BlocksForBuilders.MOD_ID, "antigorite_from_copper")));
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.ANTIGORITE_STAIRS, BlocksForBuildersBlocks.ANTIGORITE);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.ANTIGORITE_SLAB, BlocksForBuildersBlocks.ANTIGORITE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.ANTIGORITE_WALL, BlocksForBuildersBlocks.ANTIGORITE);
+                offerStoneRecipe(BlocksForBuildersBlocks.POLISHED_ANTIGORITE, BlocksForBuildersBlocks.ANTIGORITE);
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_STAIRS, BlocksForBuildersBlocks.POLISHED_ANTIGORITE);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB, BlocksForBuildersBlocks.POLISHED_ANTIGORITE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL, BlocksForBuildersBlocks.POLISHED_ANTIGORITE);
+
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE);
 
                 offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
 

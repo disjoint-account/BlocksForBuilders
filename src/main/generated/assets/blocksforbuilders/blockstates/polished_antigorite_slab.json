@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocksforbuilders:block/polished_antigorite_slab"
+    },
+    "type=double": {
+      "model": "blocksforbuilders:block/polished_antigorite"
+    },
+    "type=top": {
+      "model": "blocksforbuilders:block/polished_antigorite_slab_top"
+    }
+  }
+}
