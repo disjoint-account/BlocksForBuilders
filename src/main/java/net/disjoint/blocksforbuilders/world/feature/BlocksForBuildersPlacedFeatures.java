@@ -7,6 +7,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.*;
 
@@ -44,6 +45,21 @@ public class BlocksForBuildersPlacedFeatures {
     public static final RegistryKey<PlacedFeature> LARGE_MOSS_CARPET_PLACED_KEY = registerKey("large_moss_carpet_placed");
 
     public static final RegistryKey<PlacedFeature> COARSE_DIRT_PLACED_KEY = registerKey("coarse_dirt_placed");
+
+    public static final RegistryKey<PlacedFeature> ORE_ANTIGORITE_UPPER = registerKey("ore_antigorite_upper");
+    public static final RegistryKey<PlacedFeature> ORE_ANTIGORITE_LOWER = registerKey("ore_antigorite_lower");
+
+    private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
+        return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());
+    }
+
+    private static List<PlacementModifier> modifiersWithCount(int count, PlacementModifier heightModifier) {
+        return modifiers(CountPlacementModifier.of(count), heightModifier);
+    }
+
+    private static List<PlacementModifier> modifiersWithRarity(int chance, PlacementModifier heightModifier) {
+        return modifiers(RarityFilterPlacementModifier.of(chance), heightModifier);
+    }
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -132,6 +148,11 @@ public class BlocksForBuildersPlacedFeatures {
 
         register(context, COARSE_DIRT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.COARSE_DIRT_KEY),
                 RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of(), PlacedFeatures.createCountExtraModifier(1, 0.2f, 2));
+
+        PlacedFeatures.register(context, ORE_ANTIGORITE_UPPER, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.ORE_ANTIGORITE),
+                modifiersWithRarity(6, HeightRangePlacementModifier.uniform(YOffset.fixed(64), YOffset.fixed(128))));
+        PlacedFeatures.register(context, ORE_ANTIGORITE_LOWER, configuredFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersConfiguredFeatures.ORE_ANTIGORITE),
+                modifiersWithCount(2, HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(60))));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

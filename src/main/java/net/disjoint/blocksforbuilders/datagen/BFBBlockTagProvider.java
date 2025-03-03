@@ -631,5 +631,11 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.DIRT)
                 .add(BlocksForBuildersBlocks.SCORCHED_GRASS);
+
+        getOrCreateTagBuilder(BlockTags.BASE_STONE_OVERWORLD)
+                .add(BlocksForBuildersBlocks.ANTIGORITE);
+
+        getOrCreateTagBuilder(BlockTags.STONE_ORE_REPLACEABLES)
+                .add(BlocksForBuildersBlocks.ANTIGORITE);
     }
 }

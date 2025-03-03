@@ -12,6 +12,8 @@ import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.RuleTest;
+import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
@@ -65,8 +67,11 @@ public class BlocksForBuildersConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?,?>> COARSE_DIRT_KEY = registerKey("coarse_dirt");
 
+    public static final RegistryKey<ConfiguredFeature<?,?>> ORE_ANTIGORITE = registerKey("antigorite");
+
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         var placedFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
+        RuleTest ruleTest = new TagMatchRuleTest(BlockTags.BASE_STONE_OVERWORLD);
 
         register(context, GREEN_JUNGLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG),
@@ -208,6 +213,8 @@ public class BlocksForBuildersConfiguredFeatures {
 
         register(context, COARSE_DIRT_KEY, Feature.DISK, new DiskFeatureConfig(PredicatedStateProvider.of(Blocks.COARSE_DIRT),
                         BlockPredicate.matchingBlocks(List.of(Blocks.PODZOL, Blocks.DIRT)), UniformIntProvider.create(2, 3), 1));
+
+        ConfiguredFeatures.register(context, ORE_ANTIGORITE, Feature.ORE, new OreFeatureConfig(ruleTest, BlocksForBuildersBlocks.ANTIGORITE.getDefaultState(), 64));
     }
 
 
