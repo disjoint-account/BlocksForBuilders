@@ -33,7 +33,7 @@
                   }
                 }
               ],
-              "name": "blocksforbuilders:milked_coconut"
+              "name": "blocksforbuilders:empty_coconut"
             },
             {
               "type": "minecraft:item",
@@ -61,7 +61,7 @@
                   }
                 }
               ],
-              "name": "blocksforbuilders:sheared_milked_coconut"
+              "name": "blocksforbuilders:sheared_empty_coconut"
             }
           ]
         }

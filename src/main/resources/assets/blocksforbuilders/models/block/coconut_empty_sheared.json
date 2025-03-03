@@ -2,8 +2,8 @@
   "parent": "minecraft:block/block",
   "textures": {
     "particle": "#all",
-    "all": "blocksforbuilders:block/milked_coconut",
-    "top": "blocksforbuilders:block/milked_coconut_top"
+    "all": "blocksforbuilders:block/empty_coconut",
+    "top": "blocksforbuilders:block/empty_sheared_coconut_top"
   },
   "elements": [
     {   "from": [ 5, 0, 5 ],

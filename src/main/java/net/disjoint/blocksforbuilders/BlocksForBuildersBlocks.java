@@ -546,6 +546,17 @@ public class BlocksForBuildersBlocks {
     public static final Block RED_SANDSTONE_BRICK_WALL = registerBlock("red_sandstone_brick_wall",
             WallBlock::new, AbstractBlock.Settings.copy(RED_SANDSTONE_WALL));
 
+    public static final Block SMOOTH_SANDSTONE_WALL = registerBlock("smooth_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_SANDSTONE));
+    public static final Block CUT_SANDSTONE_STAIRS = registerStairsBlock("cut_sandstone_stairs", CUT_SANDSTONE);
+    public static final Block CUT_SANDSTONE_WALL = registerBlock("cut_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(CUT_SANDSTONE));
+    public static final Block SMOOTH_RED_SANDSTONE_WALL = registerBlock("smooth_red_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_RED_SANDSTONE));
+    public static final Block CUT_RED_SANDSTONE_STAIRS = registerStairsBlock("cut_red_sandstone_stairs", CUT_RED_SANDSTONE);
+    public static final Block CUT_RED_SANDSTONE_WALL = registerBlock("cut_red_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(CUT_RED_SANDSTONE));
+
     public static final Block BAMBOO_MOSAIC_RUG = registerBlock("bamboo_mosaic_rug",
             CarpetBlock::new, AbstractBlock.Settings.copy(BAMBOO_MOSAIC));
     public static final Block BAMBOO_THATCH = registerBlock("bamboo_thatch",

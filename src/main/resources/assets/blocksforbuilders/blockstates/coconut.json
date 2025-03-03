@@ -9,10 +9,10 @@
       "uvlock": false
     },
     "hanging=false,has_fiber=true,has_milk=false": {
-      "model": "blocksforbuilders:block/coconut_milked"
+      "model": "blocksforbuilders:block/coconut_empty"
     },
     "hanging=true,has_fiber=true,has_milk=false": {
-      "model": "blocksforbuilders:block/coconut_milked",
+      "model": "blocksforbuilders:block/coconut_empty",
       "x": 180,
       "uvlock": false
     },
@@ -25,10 +25,10 @@
       "uvlock": false
     },
     "hanging=false,has_fiber=false,has_milk=false": {
-      "model": "blocksforbuilders:block/coconut_milked_sheared"
+      "model": "blocksforbuilders:block/coconut_empty_sheared"
     },
     "hanging=true,has_fiber=false,has_milk=false": {
-      "model": "blocksforbuilders:block/coconut_milked_sheared",
+      "model": "blocksforbuilders:block/coconut_empty_sheared",
       "x": 180,
       "uvlock": false
     }

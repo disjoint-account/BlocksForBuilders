@@ -4,7 +4,7 @@
   "cookingtime": 200,
   "experience": 0.1,
   "group": "scorchwood_sapling",
-  "ingredient": "blocksforbuilders:sheared_milked_coconut",
+  "ingredient": "blocksforbuilders:sheared_empty_coconut",
   "result": {
     "id": "blocksforbuilders:scorchwood_sapling"
   }

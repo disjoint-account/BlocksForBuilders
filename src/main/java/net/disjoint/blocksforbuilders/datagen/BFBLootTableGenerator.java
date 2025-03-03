@@ -339,6 +339,13 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
 
+        addDrop(BlocksForBuildersBlocks.SMOOTH_SANDSTONE_WALL);
+        addDrop(BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.CUT_SANDSTONE_WALL);
+        addDrop(BlocksForBuildersBlocks.SMOOTH_RED_SANDSTONE_WALL);
+        addDrop(BlocksForBuildersBlocks.CUT_RED_SANDSTONE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.CUT_RED_SANDSTONE_WALL);
+
         addDrop(BlocksForBuildersBlocks.SANDSTONE_BRICKS);
         addDrop(BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS);
         addDrop(BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB));

@@ -1,8 +1,8 @@
 {
   "values": [
     "blocksforbuilders:coconut",
-    "blocksforbuilders:milked_coconut",
+    "blocksforbuilders:empty_coconut",
     "blocksforbuilders:sheared_coconut",
-    "blocksforbuilders:sheared_milked_coconut"
+    "blocksforbuilders:sheared_empty_coconut"
   ]
 }

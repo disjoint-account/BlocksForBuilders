@@ -34,8 +34,8 @@ public class BlocksForBuildersItems {
 
     public static final Item COCONUT = registerItem("coconut", settings -> new BlockItem(BlocksForBuildersBlocks.COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
     public static final Item SHEARED_COCONUT = registerItem("sheared_coconut", settings -> new BlockItem(BlocksForBuildersBlocks.COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
-    public static final Item MILKED_COCONUT = registerItem("milked_coconut", settings -> new BlockItem(BlocksForBuildersBlocks.COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
-    public static final Item SHEARED_MILKED_COCONUT = registerItem("sheared_milked_coconut", settings -> new BlockItem(BlocksForBuildersBlocks.COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
+    public static final Item EMPTY_COCONUT = registerItem("empty_coconut", settings -> new BlockItem(BlocksForBuildersBlocks.COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
+    public static final Item SHEARED_EMPTY_COCONUT = registerItem("sheared_empty_coconut", settings -> new BlockItem(BlocksForBuildersBlocks.COCONUT, settings.maxCount(64).food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.3F).build())));
     public static final Item COCONUT_FIBER = registerItem("coconut_fiber", settings ->  new Item(settings.maxCount(64)));
     public static final Item COCONUT_HUSK = registerItem("coconut_husk", settings ->  new Item(settings.maxCount(64)));
     public static final Item PALM_SIGN_ITEM = registerItem("palm_sign", settings ->  new SignItem(PALM_SIGN, PALM_WALL_SIGN, settings.maxCount(16)));

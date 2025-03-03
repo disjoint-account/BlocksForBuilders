@@ -1,7 +1,6 @@
 package net.disjoint.blocksforbuilders;
 
 import net.minecraft.block.*;
-import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -23,7 +22,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.tick.ScheduledTickView;
@@ -69,7 +67,7 @@ public class CoconutBlock extends SaplingBlock implements Waterloggable {
         FluidState state = world.getFluidState(pos);
         ItemStack itemStack = ctx.getStack();
         boolean milk = itemStack.isOf(BlocksForBuildersItems.COCONUT) || itemStack.isOf(BlocksForBuildersItems.SHEARED_COCONUT);
-        boolean fiber = itemStack.isOf(BlocksForBuildersItems.COCONUT) || itemStack.isOf(BlocksForBuildersItems.MILKED_COCONUT);
+        boolean fiber = itemStack.isOf(BlocksForBuildersItems.COCONUT) || itemStack.isOf(BlocksForBuildersItems.EMPTY_COCONUT);
         boolean bl = state.isIn(FluidTags.WATER) && state.getLevel() == 8;
         for (Direction direction : ctx.getPlacementDirections()) {
             if (direction == Direction.UP || !Block.isFaceFullSquare(world.getBlockState(pos.down()).getCollisionShape(world, pos.down()), Direction.UP)) {

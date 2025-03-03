@@ -255,6 +255,13 @@ public class BFBModelProvider extends FabricModelProvider {
         grimstoneBricksTexturePool.slab(BlocksForBuildersBlocks.GRIMSTONE_BRICK_SLAB);
         grimstoneBricksTexturePool.wall(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL);
 
+        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_SANDSTONE_WALL, Identifier.ofVanilla("block/sandstone_top"));
+        registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS, Blocks.CUT_SANDSTONE, Identifier.ofVanilla("block/sandstone_top"));
+        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_SANDSTONE_WALL, Blocks.CUT_SANDSTONE);
+        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_RED_SANDSTONE_WALL, Identifier.ofVanilla("block/red_sandstone_top"));
+        registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_RED_SANDSTONE_STAIRS, Blocks.CUT_RED_SANDSTONE, Identifier.ofVanilla("block/red_sandstone_top"));
+        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_RED_SANDSTONE_WALL, Blocks.CUT_RED_SANDSTONE);
+
         sandstoneBricksTexturePool.stairs(BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS);
         sandstoneBricksTexturePool.slab(BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB);
         sandstoneBricksTexturePool.wall(BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL);
@@ -336,8 +343,8 @@ public class BFBModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(BlocksForBuildersItems.COCONUT, Models.GENERATED);
         itemModelGenerator.register(BlocksForBuildersItems.SHEARED_COCONUT, Models.GENERATED);
-        itemModelGenerator.register(BlocksForBuildersItems.MILKED_COCONUT, Models.GENERATED);
-        itemModelGenerator.register(BlocksForBuildersItems.SHEARED_MILKED_COCONUT, Models.GENERATED);
+        itemModelGenerator.register(BlocksForBuildersItems.EMPTY_COCONUT, Models.GENERATED);
+        itemModelGenerator.register(BlocksForBuildersItems.SHEARED_EMPTY_COCONUT, Models.GENERATED);
         itemModelGenerator.register(BlocksForBuildersItems.COCONUT_HUSK, Models.GENERATED);
         itemModelGenerator.register(BlocksForBuildersItems.COCONUT_FIBER, Models.GENERATED);
     }
@@ -391,7 +398,36 @@ public class BFBModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerTintedItemModel(block, identifier, tint);
         }
         else blockStateModelGenerator.registerItemModel(block.asItem(), identifier);
+    }
 
+    public static void registerParityStairs(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
+        registerParityStairs(blockStateModelGenerator, block, getId(textureSource), getId(textureSource));
+    }
+
+    public static void registerParityStairs(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource, Identifier endSource) {
+        registerParityStairs(blockStateModelGenerator, block, getId(textureSource), endSource);
+    }
+
+    public static void registerParityStairs(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource, Identifier endSource) {
+        Optional<String> variant = Optional.empty();
+        Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "stairs")), variant, TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, new TextureMap().put(TextureKey.TOP, endSource).put(TextureKey.SIDE, textureSource).put(TextureKey.BOTTOM, endSource), blockStateModelGenerator.modelCollector);
+        Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "inner_stairs")), variant, TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, "_inner", new TextureMap().put(TextureKey.TOP, endSource).put(TextureKey.SIDE, textureSource).put(TextureKey.BOTTOM, endSource), blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "outer_stairs")), variant, TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, "_outer", new TextureMap().put(TextureKey.TOP, endSource).put(TextureKey.SIDE, textureSource).put(TextureKey.BOTTOM, endSource), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createStairsBlockState(block, identifier1, identifier, identifier2));
+    }
+
+    public static void registerParityWall(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
+        registerParityWall(blockStateModelGenerator, block, getId(textureSource));
+    }
+
+    public static void registerParityWall(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource) {
+        Optional<String> variant = Optional.empty();
+        Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_post")), variant, TextureKey.WALL).upload(block, "_post", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
+        Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_side")), variant, TextureKey.WALL).upload(block, "_side", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_side_tall")), variant, TextureKey.WALL).upload(block, "_side_tall", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createWallBlockState(block, identifier, identifier1, identifier2));
+        Identifier identifier3 = new Model(Optional.of(Identifier.ofVanilla("block/" + "wall_inventory")), variant, TextureKey.WALL).upload(block, "_inventory", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.registerItemModel(block.asItem(), identifier3);
     }
 
     public static Identifier getId(Block block) {

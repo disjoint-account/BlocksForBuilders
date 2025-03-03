@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_milked_coconut": {
+    "has_cut_red_sandstone": {
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:milked_coconut"
+            "items": "minecraft:cut_red_sandstone"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:scorchwood_sapling_from_smelting_milked_coconut"
+        "recipe": "blocksforbuilders:cut_red_sandstone_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_milked_coconut"
+      "has_cut_red_sandstone"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:scorchwood_sapling_from_smelting_milked_coconut"
+      "blocksforbuilders:cut_red_sandstone_wall"
     ]
   }
 }

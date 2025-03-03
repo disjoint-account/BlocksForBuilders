@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "blocksforbuilders:item/milked_coconut"
+    "layer0": "blocksforbuilders:item/empty_coconut"
   }
 }

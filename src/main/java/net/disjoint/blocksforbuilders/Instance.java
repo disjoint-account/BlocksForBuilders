@@ -104,9 +104,9 @@ public class Instance {
 
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.PALM_LEAVES, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.MILKED_COCONUT, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.EMPTY_COCONUT, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.SHEARED_COCONUT, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.SHEARED_MILKED_COCONUT, 0.30f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.SHEARED_EMPTY_COCONUT, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT_FIBER, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT_HUSK, 0.30f);
 
