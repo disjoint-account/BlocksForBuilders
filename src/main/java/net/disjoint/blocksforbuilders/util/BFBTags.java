@@ -10,6 +10,8 @@ import net.minecraft.world.biome.Biome;
 
 public class BFBTags {
     public static class Blocks {
+        public static final TagKey<Block> AUTUMNAL_FOREST_BLOCKS = createTag("autumnal_forest_blocks");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(BlocksForBuilders.MOD_ID, name));
         }

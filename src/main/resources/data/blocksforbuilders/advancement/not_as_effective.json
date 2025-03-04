@@ -1,7 +1,7 @@
 {
   "display": {
+    "frame": "challenge",
     "icon": {
-      "frame": "challenge",
       "id": "blocksforbuilders:hay_slab",
       "count": 1
     },

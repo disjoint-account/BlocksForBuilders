@@ -24,6 +24,7 @@
     }
   },
   "display": {
+    "frame": "goal",
     "description": {
       "translate": "advancements.blocksforbuilders.fall_guy.description"
     },
