@@ -1,6 +1,0 @@
-{
-  "parent": "blocksforbuilders:block/hedge_south",
-  "textures": {
-    "all": "minecraft:block/spruce_leaves"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "blocksforbuilders:block/hedge_east_tall",
-  "textures": {
-    "all": "minecraft:block/oak_leaves"
-  }
-}

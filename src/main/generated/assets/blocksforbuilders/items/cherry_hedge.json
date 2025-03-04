@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "blocksforbuilders:block/cherry_hedge_inventory"
+    "model": "blocksforbuilders:block/cherry_hedge_straight"
   }
 }

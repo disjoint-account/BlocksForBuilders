@@ -1,0 +1,6 @@
+{
+  "parent": "blocksforbuilders:block/hedge_corner_tall",
+  "textures": {
+    "all": "minecraft:block/mangrove_leaves"
+  }
+}

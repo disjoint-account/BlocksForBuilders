@@ -1,6 +1,0 @@
-{
-  "parent": "blocksforbuilders:block/hedge_west",
-  "textures": {
-    "all": "minecraft:block/birch_leaves"
-  }
-}

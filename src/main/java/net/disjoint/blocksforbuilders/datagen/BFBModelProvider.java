@@ -395,17 +395,18 @@ public class BFBModelProvider extends FabricModelProvider {
 
     public static void registerHedgeModels(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource, ConstantTintSource tint) {
         Optional<String> variant = Optional.empty();
-        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_central")), variant, TextureKey.ALL).upload(block, "_central", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_central_tall")), variant, TextureKey.ALL).upload(block, "_central_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_north")), variant, TextureKey.ALL).upload(block, "_north", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_north_tall")), variant, TextureKey.ALL).upload(block, "_north_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_east")), variant, TextureKey.ALL).upload(block, "_east", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_east_tall")), variant, TextureKey.ALL).upload(block, "_east_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_south")), variant, TextureKey.ALL).upload(block, "_south", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_south_tall")), variant, TextureKey.ALL).upload(block, "_south_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_west")), variant, TextureKey.ALL).upload(block, "_west", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_west_tall")), variant, TextureKey.ALL).upload(block, "_west_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        Identifier identifier = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_inventory")), variant, TextureKey.ALL).upload(block, "_inventory", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_post")), variant, TextureKey.ALL).upload(block, "_post", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_post_tall")), variant, TextureKey.ALL).upload(block, "_post_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_single")), variant, TextureKey.ALL).upload(block, "_single", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_single_tall")), variant, TextureKey.ALL).upload(block, "_single_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        Identifier identifier = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_straight")), variant, TextureKey.ALL).upload(block, "_straight", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_straight_tall")), variant, TextureKey.ALL).upload(block, "_straight_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_corner")), variant, TextureKey.ALL).upload(block, "_corner", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_corner_tall")), variant, TextureKey.ALL).upload(block, "_corner_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_t_shape")), variant, TextureKey.ALL).upload(block, "_t_shape", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_t_shape_tall")), variant, TextureKey.ALL).upload(block, "_t_shape_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_cross")), variant, TextureKey.ALL).upload(block, "_cross", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "hedge_cross_tall")), variant, TextureKey.ALL).upload(block, "_cross_tall", TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
         if (tint != null) {
             blockStateModelGenerator.registerTintedItemModel(block, identifier, tint);
         }

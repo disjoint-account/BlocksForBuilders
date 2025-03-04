@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "blocksforbuilders:block/ghostwood_hedge_inventory"
+    "model": "blocksforbuilders:block/ghostwood_hedge_straight"
   }
 }

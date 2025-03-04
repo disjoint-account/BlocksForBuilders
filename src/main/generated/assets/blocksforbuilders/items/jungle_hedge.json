@@ -1,7 +1,7 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "blocksforbuilders:block/jungle_hedge_inventory",
+    "model": "blocksforbuilders:block/jungle_hedge_straight",
     "tints": [
       {
         "type": "minecraft:constant",

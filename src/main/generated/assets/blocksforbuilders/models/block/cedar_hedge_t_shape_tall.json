@@ -1,0 +1,6 @@
+{
+  "parent": "blocksforbuilders:block/hedge_t_shape_tall",
+  "textures": {
+    "all": "blocksforbuilders:block/cedar_leaves"
+  }
+}

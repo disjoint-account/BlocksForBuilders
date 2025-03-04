@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "blocksforbuilders:block/azalea_hedge_inventory"
+    "model": "blocksforbuilders:block/azalea_hedge_straight"
   }
 }

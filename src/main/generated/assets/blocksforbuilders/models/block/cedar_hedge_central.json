@@ -1,6 +1,0 @@
-{
-  "parent": "blocksforbuilders:block/hedge_central",
-  "textures": {
-    "all": "blocksforbuilders:block/cedar_leaves"
-  }
-}

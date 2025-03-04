@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "blocksforbuilders:block/maple_hedge_inventory"
+    "model": "blocksforbuilders:block/maple_hedge_straight"
   }
 }

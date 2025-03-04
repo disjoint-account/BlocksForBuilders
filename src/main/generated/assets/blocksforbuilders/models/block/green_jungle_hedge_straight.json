@@ -1,0 +1,6 @@
+{
+  "parent": "blocksforbuilders:block/hedge_straight",
+  "textures": {
+    "all": "blocksforbuilders:block/green_jungle_leaves"
+  }
+}

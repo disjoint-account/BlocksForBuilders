@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "blocksforbuilders:block/gold_acacia_hedge_inventory"
+    "model": "blocksforbuilders:block/gold_acacia_hedge_straight"
   }
 }

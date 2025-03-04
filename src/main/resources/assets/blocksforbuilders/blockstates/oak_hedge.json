@@ -1,142 +1,140 @@
 {
-  "multipart": [
-    {
-      "apply": {
-        "model": "blocksforbuilders:block/oak_hedge_central"
-      },
-      "when":
-      {
-        "tall": "false"
-      }
+  "variants": {
+    "north=false,east=false,south=false,west=false,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_post"
     },
-    {
-      "apply": {
-        "model": "blocksforbuilders:block/oak_hedge_central_tall"
-      },
-      "when":
-      {
-        "tall": "true"
-      }
+    "north=false,east=false,south=false,west=false,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_post_tall"
     },
-    {
-      "apply": {
-        "model": "blocksforbuilders:block/oak_hedge_north"
-      },
-      "when": {
-        "AND": [
-          {
-            "north": "true"
-          },
-          {
-            "tall": "false"
-          }
-        ]
-      }
+    "north=true,east=false,south=false,west=false,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_single"
     },
-    {
-      "apply": {
-        "model": "blocksforbuilders:block/oak_hedge_north_tall"
-      },
-      "when": {
-        "AND": [
-          {
-            "north": "true"
-          },
-          {
-            "tall": "true"
-          }
-        ]
-      }
+    "north=true,east=false,south=false,west=false,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_single_tall"
     },
-    {
-      "apply": {
-        "model": "blocksforbuilders:block/oak_hedge_east"
-      },
-      "when": {
-        "AND": [
-          {
-            "east": "true"
-          },
-          {
-            "tall": "false"
-          }
-        ]
-      }
+    "north=false,east=true,south=false,west=false,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_single",
+      "y": 90,
+      "uvlock": true
     },
-    {
-      "apply": {
-        "model": "blocksforbuilders:block/oak_hedge_east_tall"
-      },
-      "when": {
-        "AND": [
-          {
-            "east": "true"
-          },
-          {
-            "tall": "true"
-          }
-        ]
-      }
+    "north=false,east=true,south=false,west=false,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_single_tall",
+      "y": 90,
+      "uvlock": true
     },
-    {
-      "apply": {
-        "model": "blocksforbuilders:block/oak_hedge_south"
-      },
-      "when": {
-        "AND": [
-          {
-            "south": "true"
-          },
-          {
-            "tall": "false"
-          }
-        ]
-      }
+    "north=false,east=false,south=true,west=false,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_single",
+      "y": 180,
+      "uvlock": true
     },
-    {
-      "apply": {
-        "model": "blocksforbuilders:block/oak_hedge_south_tall"
-      },
-      "when": {
-        "AND": [
-          {
-            "south": "true"
-          },
-          {
-            "tall": "true"
-          }
-        ]
-      }
+    "north=false,east=false,south=true,west=false,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_single_tall",
+      "y": 180,
+      "uvlock": true
     },
-    {
-      "apply": {
-        "model": "blocksforbuilders:block/oak_hedge_west"
-      },
-      "when": {
-        "AND": [
-          {
-            "west": "true"
-          },
-          {
-            "tall": "false"
-          }
-        ]
-      }
+    "north=false,east=false,south=false,west=true,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_single",
+      "y": 270,
+      "uvlock": true
     },
-    {
-      "apply": {
-        "model": "blocksforbuilders:block/oak_hedge_west_tall"
-      },
-      "when": {
-        "AND": [
-          {
-            "west": "true"
-          },
-          {
-            "tall": "true"
-          }
-        ]
-      }
+    "north=false,east=false,south=false,west=true,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_single_tall",
+      "y": 270,
+      "uvlock": true
+    },
+    "north=true,east=true,south=false,west=false,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_corner"
+    },
+    "north=true,east=true,south=false,west=false,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_corner_tall"
+    },
+    "north=false,east=true,south=true,west=false,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_corner",
+      "y": 90,
+      "uvlock": true
+    },
+    "north=false,east=true,south=true,west=false,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_corner_tall",
+      "y": 90,
+      "uvlock": true
+    },
+    "north=false,east=false,south=true,west=true,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_corner",
+      "y": 180,
+      "uvlock": true
+    },
+    "north=false,east=false,south=true,west=true,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_corner_tall",
+      "y": 180,
+      "uvlock": true
+    },
+    "north=true,east=false,south=false,west=true,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_corner",
+      "y": 270,
+      "uvlock": true
+    },
+    "north=true,east=false,south=false,west=true,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_corner_tall",
+      "y": 270,
+      "uvlock": true
+    },
+    "north=true,east=false,south=true,west=false,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_straight"
+    },
+    "north=true,east=false,south=true,west=false,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_straight_tall"
+    },
+    "north=false,east=true,south=false,west=true,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_straight",
+      "y": 90,
+      "uvlock": true
+    },
+    "north=false,east=true,south=false,west=true,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_straight_tall",
+      "y": 90,
+      "uvlock": true
+    },
+    "north=true,east=true,south=true,west=false,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_t_shape"
+    },
+    "north=true,east=true,south=true,west=false,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_t_shape_tall"
+    },
+    "north=false,east=true,south=true,west=true,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_t_shape",
+      "y": 90,
+      "uvlock": true
+    },
+    "north=false,east=true,south=true,west=true,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_t_shape_tall",
+      "y": 90,
+      "uvlock": true
+    },
+    "north=true,east=false,south=true,west=true,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_t_shape",
+      "y": 180,
+      "uvlock": true
+    },
+    "north=true,east=false,south=true,west=true,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_t_shape_tall",
+      "y": 180,
+      "uvlock": true
+    },
+    "north=true,east=true,south=false,west=true,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_t_shape",
+      "y": 270,
+      "uvlock": true
+    },
+    "north=true,east=true,south=false,west=true,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_t_shape_tall",
+      "y": 270,
+      "uvlock": true
+    },
+    "north=true,east=true,south=true,west=true,tall=false": {
+      "model": "blocksforbuilders:block/oak_hedge_cross"
+    },
+    "north=true,east=true,south=true,west=true,tall=true": {
+      "model": "blocksforbuilders:block/oak_hedge_cross_tall"
     }
-  ]
+  }
 }
