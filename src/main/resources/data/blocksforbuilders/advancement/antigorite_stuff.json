@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:antigorite"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.antigorite_stuff.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.antigorite_stuff.description"
+    }
+  },
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "has_antigorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:antigorite"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_antigorite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

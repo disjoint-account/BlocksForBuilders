@@ -1,0 +1,44 @@
+{
+  "parent": "blocksforbuilders:didnt_this_have_a_different_name",
+  "criteria": {
+    "has_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:cracked_grimstone_bricks"
+          }
+        ]
+      }
+    },
+    "has_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:cracked_grimstone_tiles"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.blocksforbuilders.better_late_than_never.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "blocksforbuilders:cracked_grimstone_bricks"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.better_late_than_never.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_bricks",
+      "has_tiles"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

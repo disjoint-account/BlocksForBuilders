@@ -1,0 +1,44 @@
+{
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "has_sandstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:sandstone_bricks"
+          }
+        ]
+      }
+    },
+    "has_red_sandstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:red_sandstone_bricks"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.blocksforbuilders.this_wasnt_in_vanilla.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "blocksforbuilders:sandstone_bricks"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.this_wasnt_in_vanilla.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_sandstone",
+      "has_red_sandstone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

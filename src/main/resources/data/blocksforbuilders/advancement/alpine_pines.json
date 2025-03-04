@@ -1,0 +1,39 @@
+{
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "in_alpine_forest": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "blocksforbuilders:alpine_forest"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.blocksforbuilders.alpine_pines.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "blocksforbuilders:cedar_leaves"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.alpine_pines.title"
+    }
+  },
+  "requirements": [
+    [
+      "in_alpine_forest"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

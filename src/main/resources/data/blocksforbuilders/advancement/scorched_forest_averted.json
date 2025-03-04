@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:scorchwood_log"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.scorched_forest_averted.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.scorched_forest_averted.description"
+    },
+    "frame": "challenge"
+  },
+  "parent": "blocksforbuilders:alpine_pines",
+  "criteria": {
+    "kill_blaze": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:blaze",
+              "location": {
+                "biomes": "blocksforbuilders:alpine_forest"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill_blaze"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

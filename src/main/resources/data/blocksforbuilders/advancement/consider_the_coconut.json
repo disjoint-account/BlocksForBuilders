@@ -1,0 +1,189 @@
+{
+  "display": {
+    "frame": "goal",
+    "icon": {
+      "id": "blocksforbuilders:coconut_husk"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.consider_the_coconut.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.consider_the_coconut.description"
+    }
+  },
+  "parent": "blocksforbuilders:you_exist",
+  "criteria": {
+    "has_coconut": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:coconut"
+          }
+        ]
+      }
+    },
+    "has_empty_coconut": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:empty_coconut"
+          }
+        ]
+      }
+    },
+    "has_sheared_coconut": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:sheared_coconut"
+          }
+        ]
+      }
+    },
+    "has_empty_sheared_coconut": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:sheared_empty_coconut"
+          }
+        ]
+      }
+    },
+    "has_fiber": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:coconut_fiber"
+          }
+        ]
+      }
+    },
+    "has_milk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:milk_bucket"
+          }
+        ]
+      }
+    },
+    "has_husk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:coconut_husk"
+          }
+        ]
+      }
+    },
+    "has_string": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:string"
+          }
+        ]
+      }
+    },
+    "has_dye": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brown_dye"
+          }
+        ]
+      }
+    },
+    "has_charcoal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:charcoal"
+          }
+        ]
+      }
+    },
+    "has_bone_meal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bone_meal"
+          }
+        ]
+      }
+    },
+    "has_thatch": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:coconut_thatch"
+          }
+        ]
+      }
+    },
+    "has_bundle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bundle"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_coconut"
+    ],
+    [
+      "has_empty_coconut"
+    ],
+    [
+      "has_sheared_coconut"
+    ],
+    [
+      "has_empty_sheared_coconut"
+    ],
+    [
+      "has_fiber"
+    ],
+    [
+      "has_milk"
+    ],
+    [
+      "has_husk"
+    ],
+    [
+      "has_string"
+    ],
+    [
+      "has_dye"
+    ],
+    [
+      "has_charcoal"
+    ],
+    [
+      "has_bone_meal"
+    ],
+    [
+      "has_thatch"
+    ],
+    [
+      "has_bundle"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

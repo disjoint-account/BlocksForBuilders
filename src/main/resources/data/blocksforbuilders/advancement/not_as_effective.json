@@ -1,6 +1,7 @@
 {
   "display": {
     "icon": {
+      "frame": "challenge",
       "id": "blocksforbuilders:hay_slab",
       "count": 1
     },
@@ -40,5 +41,8 @@
       "fall_onto_hay_slab"
     ]
   ],
+  "rewards": {
+    "experience": 100
+  },
   "sends_telemetry_event": true
 }

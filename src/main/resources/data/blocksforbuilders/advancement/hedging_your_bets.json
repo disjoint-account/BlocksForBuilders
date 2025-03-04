@@ -1,0 +1,293 @@
+{
+  "display": {
+    "frame": "goal",
+    "icon": {
+      "id": "blocksforbuilders:cherry_hedge"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.hedging_your_bets.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.hedging_your_bets.description"
+    }
+  },
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "has_oak_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:oak_hedge"
+          }
+        ]
+      }
+    },
+    "has_birch_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:birch_hedge"
+          }
+        ]
+      }
+    },
+    "has_spruce_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:spruce_hedge"
+          }
+        ]
+      }
+    },
+    "has_jungle_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:jungle_hedge"
+          }
+        ]
+      }
+    },
+    "has_acacia_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:acacia_hedge"
+          }
+        ]
+      }
+    },
+    "has_dark_oak_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:dark_oak_hedge"
+          }
+        ]
+      }
+    },
+    "has_azalea_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:azalea_hedge"
+          }
+        ]
+      }
+    },
+    "has_flowering_azalea_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:flowering_azalea_hedge"
+          }
+        ]
+      }
+    },
+    "has_mangrove_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:mangrove_hedge"
+          }
+        ]
+      }
+    },
+    "has_cherry_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:cherry_hedge"
+          }
+        ]
+      }
+    },
+    "has_pale_oak_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:birch_hedge"
+          }
+        ]
+      }
+    },
+    "has_ghostwood_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:ghostwood_hedge"
+          }
+        ]
+      }
+    },
+    "has_green_jungle_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:green_jungle_hedge"
+          }
+        ]
+      }
+    },
+    "has_willow_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:willow_hedge"
+          }
+        ]
+      }
+    },
+    "has_maple_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:maple_hedge"
+          }
+        ]
+      }
+    },
+    "has_beech_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:beech_hedge"
+          }
+        ]
+      }
+    },
+    "has_palm_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:palm_hedge"
+          }
+        ]
+      }
+    },
+    "has_pine_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:pine_hedge"
+          }
+        ]
+      }
+    },
+    "has_cedar_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:cedar_hedge"
+          }
+        ]
+      }
+    },
+    "has_gold_acacia_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:gold_acacia_hedge"
+          }
+        ]
+      }
+    },
+    "has_yellow_birch_hedge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:yellow_birch_hedge"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_oak_hedge"
+    ],
+    [
+      "has_birch_hedge"
+    ],
+    [
+      "has_spruce_hedge"
+    ],
+    [
+      "has_jungle_hedge"
+    ],
+    [
+      "has_acacia_hedge"
+    ],
+    [
+      "has_dark_oak_hedge"
+    ],
+    [
+      "has_azalea_hedge"
+    ],
+    [
+      "has_flowering_azalea_hedge"
+    ],
+    [
+      "has_mangrove_hedge"
+    ],
+    [
+      "has_cherry_hedge"
+    ],
+    [
+      "has_pale_oak_hedge"
+    ],
+    [
+      "has_ghostwood_hedge"
+    ],
+    [
+      "has_green_jungle_hedge"
+    ],
+    [
+      "has_willow_hedge"
+    ],
+    [
+      "has_palm_hedge"
+    ],
+    [
+      "has_maple_hedge"
+    ],
+    [
+      "has_beech_hedge"
+    ],
+    [
+      "has_pine_hedge"
+    ],
+    [
+      "has_cedar_hedge"
+    ],
+    [
+      "has_gold_acacia_hedge"
+    ],
+    [
+      "has_yellow_birch_hedge"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

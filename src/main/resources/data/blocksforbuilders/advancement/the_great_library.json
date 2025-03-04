@@ -1,5 +1,6 @@
 {
   "display": {
+    "frame": "goal",
     "icon": {
       "id": "minecraft:bookshelf",
       "count": 1

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:palm_raft"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.and_in_cream.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.and_in_cream.description"
+    }
+  },
+  "parent": "blocksforbuilders:now_in_green",
+  "criteria": {
+    "get_palm_raft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:palm_raft"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_palm_raft"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

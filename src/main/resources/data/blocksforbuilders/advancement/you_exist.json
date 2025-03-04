@@ -1,0 +1,90 @@
+{
+  "parent": "blocksforbuilders:you_think",
+  "criteria": {
+    "milk_coconut": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "blocksforbuilders:coconut"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "minecraft:bucket"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    },
+    "shear_coconut": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "blocksforbuilders:coconut"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "minecraft:shears"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    },
+    "has_fiber": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:coconut_fiber"
+          }
+        ]
+      }
+    },
+    "has_milk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:milk_bucket"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.blocksforbuilders.you_exist.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:milk_bucket"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.you_exist.title"
+    }
+  },
+  "requirements": [
+    [
+      "milk_coconut",
+      "shear_coconut"
+    ],
+    [
+      "has_milk",
+      "has_fiber"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,55 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:beech_log"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.were_these_always_here.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.were_these_always_here.description"
+    }
+  },
+  "parent": "blocksforbuilders:sweater_weather",
+  "criteria": {
+    "has_maple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "blocksforbuilders:autumnal_forest"
+          }
+        },
+        "items": [
+          {
+            "items": "blocksforbuilders:maple_log"
+          }
+        ]
+      }
+    },
+    "has_beech": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "blocksforbuilders:autumnal_forest"
+          }
+        },
+        "items": [
+          {
+            "items": "blocksforbuilders:beech_log"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_maple"
+    ],
+    [
+      "has_beech"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

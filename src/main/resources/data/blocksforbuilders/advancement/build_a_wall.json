@@ -1,0 +1,71 @@
+{
+  "display": {
+    "icon": {
+      "id": "blocksforbuilders:polished_andesite_wall"
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.build_a_wall.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.build_a_wall.description"
+    }
+  },
+  "parent": "blocksforbuilders:antigorite_stuff",
+  "criteria": {
+    "has_antigorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:polished_antigorite_wall"
+          }
+        ]
+      }
+    },
+    "has_andesite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:polished_andesite_wall"
+          }
+        ]
+      }
+    },
+    "has_diorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:polished_diorite_wall"
+          }
+        ]
+      }
+    },
+    "has_granite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:polished_granite_wall"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_antigorite"
+    ],
+    [
+      "has_andesite"
+    ],
+    [
+      "has_diorite"
+    ],
+    [
+      "has_granite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
