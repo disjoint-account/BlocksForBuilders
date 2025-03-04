@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "blocksforbuilders:item/quartz_brick_wall"
+    "model": "blocksforbuilders:block/quartz_brick_wall_inventory"
   }
 }

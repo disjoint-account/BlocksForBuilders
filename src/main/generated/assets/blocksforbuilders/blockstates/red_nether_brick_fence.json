@@ -2,12 +2,12 @@
   "multipart": [
     {
       "apply": {
-        "model": "blocksforbuilders:block/red_nether_brick_fence_post"
+        "model": "blocksforbuilders:block/red_nether_brick_fence_side"
       }
     },
     {
       "apply": {
-        "model": "blocksforbuilders:block/red_nether_brick_fence_side",
+        "model": "blocksforbuilders:block/red_nether_brick_fence_post",
         "uvlock": true
       },
       "when": {
@@ -16,7 +16,7 @@
     },
     {
       "apply": {
-        "model": "blocksforbuilders:block/red_nether_brick_fence_side",
+        "model": "blocksforbuilders:block/red_nether_brick_fence_post",
         "uvlock": true,
         "y": 90
       },
@@ -26,7 +26,7 @@
     },
     {
       "apply": {
-        "model": "blocksforbuilders:block/red_nether_brick_fence_side",
+        "model": "blocksforbuilders:block/red_nether_brick_fence_post",
         "uvlock": true,
         "y": 180
       },
@@ -36,7 +36,7 @@
     },
     {
       "apply": {
-        "model": "blocksforbuilders:block/red_nether_brick_fence_side",
+        "model": "blocksforbuilders:block/red_nether_brick_fence_post",
         "uvlock": true,
         "y": 270
       },

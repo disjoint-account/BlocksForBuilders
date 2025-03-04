@@ -243,6 +243,13 @@ public class BFBModelProvider extends FabricModelProvider {
         blackNetherBricksTexturePool.wall(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL);
         blockStateModelGenerator.registerSimpleCubeAll(BlocksForBuildersBlocks.CHISELED_RED_NETHER_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(BlocksForBuildersBlocks.CRACKED_RED_NETHER_BRICKS);
+        registerParityFence(blockStateModelGenerator, BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE, Blocks.RED_NETHER_BRICKS);
+        registerParityFenceGate(blockStateModelGenerator, BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE_GATE, Blocks.RED_NETHER_BRICKS);
+        registerParityFenceGate(blockStateModelGenerator, BlocksForBuildersBlocks.NETHER_BRICK_FENCE_GATE, Blocks.NETHER_BRICKS);
+
+        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.QUARTZ_WALL, Identifier.ofVanilla("block/" + "quartz_block_side"));
+        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS);
+        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL, Identifier.ofVanilla("block/" + "quartz_block_bottom"));
 
         grimstoneTexturePool.stairs(BlocksForBuildersBlocks.GRIMSTONE_STAIRS);
         grimstoneTexturePool.slab(BlocksForBuildersBlocks.GRIMSTONE_SLAB);
@@ -266,6 +273,8 @@ public class BFBModelProvider extends FabricModelProvider {
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE);
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE);
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE);
+
+        registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
 
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_SANDSTONE_WALL, Identifier.ofVanilla("block/sandstone_top"));
         registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS, Blocks.CUT_SANDSTONE, Identifier.ofVanilla("block/sandstone_top"));
@@ -350,10 +359,6 @@ public class BFBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT, Models.GENERATED);
 
         itemModelGenerator.register(BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL.asItem());
-        itemModelGenerator.register(BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE.asItem());
-        itemModelGenerator.register(BlocksForBuildersBlocks.QUARTZ_WALL.asItem());
-        itemModelGenerator.register(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL.asItem());
-        itemModelGenerator.register(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL.asItem());
 
         itemModelGenerator.register(BlocksForBuildersItems.COCONUT, Models.GENERATED);
         itemModelGenerator.register(BlocksForBuildersItems.SHEARED_COCONUT, Models.GENERATED);
@@ -443,6 +448,32 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createWallBlockState(block, identifier, identifier1, identifier2));
         Identifier identifier3 = new Model(Optional.of(Identifier.ofVanilla("block/" + "wall_inventory")), variant, TextureKey.WALL).upload(block, "_inventory", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.registerItemModel(block.asItem(), identifier3);
+    }
+
+    public static void registerParityFence(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
+        registerParityFence(blockStateModelGenerator, block, getId(textureSource));
+    }
+
+    public static void registerParityFence(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource) {
+        Optional<String> variant = Optional.empty();
+        Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "fence_post")), variant, TextureKey.TEXTURE).upload(block, "_post", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
+        Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "fence_side")), variant, TextureKey.TEXTURE).upload(block, "_side", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createFenceBlockState(block, identifier1, identifier));
+        Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "fence_inventory")), variant, TextureKey.TEXTURE).upload(block, "_inventory", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.registerItemModel(block.asItem(), identifier2);
+    }
+
+    public static void registerParityFenceGate(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
+        registerParityFenceGate(blockStateModelGenerator, block, getId(textureSource));
+    }
+
+    public static void registerParityFenceGate(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource) {
+        Optional<String> variant = Optional.empty();
+        Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_fence_gate")), variant, TextureKey.TEXTURE).upload(block, new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
+        Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_fence_gate_open")), variant, TextureKey.TEXTURE).upload(block, "_open", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_fence_gate_wall")), variant, TextureKey.TEXTURE).upload(block, "_wall", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
+        Identifier identifier3 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_fence_gate_wall_open")), variant, TextureKey.TEXTURE).upload(block, "_wall_open", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createFenceGateBlockState(block, identifier1, identifier, identifier3, identifier2, true));
     }
 
     public static Identifier getId(Block block) {
