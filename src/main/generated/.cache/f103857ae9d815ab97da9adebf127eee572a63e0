@@ -12,7 +12,7 @@ f1f718e44d660e43fce39108d32b80197ac41b24 data/minecraft/tags/block/leaves.json
 07ec377ad35282cda879470ea2baeb1037b5a94f data/minecraft/tags/block/logs_that_burn.json
 f55513e2781fdc6bbe15578e30abd3fb03ed3385 data/minecraft/tags/block/mineable/axe.json
 caa5ac6dfb8a3ff81c28380484bc05e3042cac82 data/minecraft/tags/block/mineable/hoe.json
-a8aff01c2276d3818d048f1361dd4048e45c003b data/minecraft/tags/block/mineable/pickaxe.json
+910626bd0a77f905b8036b3b01330c9e9bf5cb34 data/minecraft/tags/block/mineable/pickaxe.json
 ef8c9bfe20b1a47fdd1de41e3ad8933a63b97da9 data/minecraft/tags/block/mineable/shovel.json
 ff116a8c68d9f96e72bc740bca0fe99445f22631 data/minecraft/tags/block/planks.json
 aa31a4b18ecd49a393265b1d5ac3487189cc3f47 data/minecraft/tags/block/saplings.json

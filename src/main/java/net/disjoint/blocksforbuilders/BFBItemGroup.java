@@ -315,10 +315,12 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.CUT_RED_SANDSTONE_STAIRS);
                         entries.add(BlocksForBuildersBlocks.CUT_RED_SANDSTONE_WALL);
                         entries.add(BlocksForBuildersBlocks.SANDSTONE_BRICKS);
+                        entries.add(BlocksForBuildersBlocks.CRACKED_SANDSTONE_BRICKS);
                         entries.add(BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS);
                         entries.add(BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB);
                         entries.add(BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL);
                         entries.add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
+                        entries.add(BlocksForBuildersBlocks.CRACKED_RED_SANDSTONE_BRICKS);
                         entries.add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS);
                         entries.add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB);
                         entries.add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL);

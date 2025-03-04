@@ -555,12 +555,16 @@ public class BlocksForBuildersBlocks {
 
     public static final Block SANDSTONE_BRICKS = registerBlock("sandstone_bricks",
             Block::new, AbstractBlock.Settings.copy(CUT_SANDSTONE));
+    public static final Block CRACKED_SANDSTONE_BRICKS = registerBlock("cracked_sandstone_bricks",
+            Block::new, AbstractBlock.Settings.copy(CUT_SANDSTONE));
     public static final Block SANDSTONE_BRICK_STAIRS = registerStairsBlock("sandstone_brick_stairs", SANDSTONE_STAIRS);
     public static final Block SANDSTONE_BRICK_SLAB = registerBlock("sandstone_brick_slab",
             SlabBlock::new, AbstractBlock.Settings.copy(CUT_SANDSTONE_SLAB));
     public static final Block SANDSTONE_BRICK_WALL = registerBlock("sandstone_brick_wall",
             WallBlock::new, AbstractBlock.Settings.copy(SANDSTONE_WALL));
     public static final Block RED_SANDSTONE_BRICKS = registerBlock("red_sandstone_bricks",
+            Block::new, AbstractBlock.Settings.copy(CUT_RED_SANDSTONE));
+    public static final Block CRACKED_RED_SANDSTONE_BRICKS = registerBlock("cracked_red_sandstone_bricks",
             Block::new, AbstractBlock.Settings.copy(CUT_RED_SANDSTONE));
     public static final Block RED_SANDSTONE_BRICK_STAIRS = registerStairsBlock("red_sandstone_brick_stairs", RED_SANDSTONE_STAIRS);
     public static final Block RED_SANDSTONE_BRICK_SLAB = registerBlock("red_sandstone_brick_slab",

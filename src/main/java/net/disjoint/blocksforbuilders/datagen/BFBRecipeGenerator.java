@@ -98,6 +98,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 List<ItemConvertible> REDNB = List.of(Blocks.RED_NETHER_BRICKS);
                 List<ItemConvertible> GSBRICKS = List.of(BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
                 List<ItemConvertible> GSTILES = List.of(BlocksForBuildersBlocks.GRIMSTONE_TILES);
+                List<ItemConvertible> SANDBRICKS = List.of(BlocksForBuildersBlocks.SANDSTONE_BRICKS);
+                List<ItemConvertible> REDSANDBRICKS = List.of(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
 
                 offerSmelting(CHARCOAL_SMELTABLES, RecipeCategory.MISC, Items.CHARCOAL, 0.1f, 200, "charcoal");
                 offerSmelting(NON_SCORCHWOOD_SAPLINGS, RecipeCategory.MISC, BlocksForBuildersBlocks.SCORCHWOOD_SAPLING, 0.1f, 200, "scorchwood_sapling");
@@ -106,6 +108,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerSmelting(REDNB, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_RED_NETHER_BRICKS, 0.1f, 200, "cracked_red_nether_bricks");
                 offerSmelting(GSBRICKS, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_GRIMSTONE_BRICKS, 0.1f, 200, "cracked_grimstone_bricks");
                 offerSmelting(GSTILES, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_GRIMSTONE_TILES, 0.1f, 200, "cracked_grimstone_tiles");
+                offerSmelting(SANDBRICKS, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_SANDSTONE_BRICKS, 0.1f, 200, "cracked_sandstone_bricks");
+                offerSmelting(REDSANDBRICKS, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_RED_SANDSTONE_BRICKS, 0.1f, 200, "cracked_red_sandstone_bricks");
 
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_SLAB, BlocksForBuildersBlocks.GRIMSTONE, 2);
