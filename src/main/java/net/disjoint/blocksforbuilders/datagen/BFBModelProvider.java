@@ -458,7 +458,7 @@ public class BFBModelProvider extends FabricModelProvider {
         Optional<String> variant = Optional.empty();
         Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "fence_post")), variant, TextureKey.TEXTURE).upload(block, "_post", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
         Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "fence_side")), variant, TextureKey.TEXTURE).upload(block, "_side", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createFenceBlockState(block, identifier1, identifier));
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createFenceBlockState(block, identifier, identifier1));
         Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "fence_inventory")), variant, TextureKey.TEXTURE).upload(block, "_inventory", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.registerItemModel(block.asItem(), identifier2);
     }
