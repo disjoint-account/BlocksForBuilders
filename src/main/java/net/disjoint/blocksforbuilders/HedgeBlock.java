@@ -36,11 +36,11 @@ public class HedgeBlock extends Block implements Waterloggable {
     private static final VoxelShape EAST_COLLISION_SHAPE;
     private static final VoxelShape SOUTH_COLLISION_SHAPE;
     private static final VoxelShape WEST_COLLISION_SHAPE;
-    private static final BooleanProperty NORTH = BooleanProperty.of("north");
-    private static final BooleanProperty EAST = BooleanProperty.of("east");
-    private static final BooleanProperty SOUTH = BooleanProperty.of("south");
-    private static final BooleanProperty WEST = BooleanProperty.of("west");
-    private static final BooleanProperty TALL = BooleanProperty.of("tall");
+    public static final BooleanProperty NORTH = BooleanProperty.of("north");
+    public static final BooleanProperty EAST = BooleanProperty.of("east");
+    public static final BooleanProperty SOUTH = BooleanProperty.of("south");
+    public static final BooleanProperty WEST = BooleanProperty.of("west");
+    public static final BooleanProperty TALL = BooleanProperty.of("tall");
     private static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     public HedgeBlock(Settings settings) {

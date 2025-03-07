@@ -1,0 +1,140 @@
+{
+  "variants": {
+    "east=false,north=false,south=false,tall=false,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_post"
+    },
+    "east=false,north=false,south=false,tall=false,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_single",
+      "uvlock": true,
+      "y": 270
+    },
+    "east=false,north=false,south=false,tall=true,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_post_tall"
+    },
+    "east=false,north=false,south=false,tall=true,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_single_tall",
+      "uvlock": true,
+      "y": 270
+    },
+    "east=false,north=false,south=true,tall=false,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_single",
+      "uvlock": true,
+      "y": 180
+    },
+    "east=false,north=false,south=true,tall=false,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_corner",
+      "uvlock": true,
+      "y": 180
+    },
+    "east=false,north=false,south=true,tall=true,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_single_tall",
+      "uvlock": true,
+      "y": 180
+    },
+    "east=false,north=false,south=true,tall=true,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_corner_tall",
+      "uvlock": true,
+      "y": 180
+    },
+    "east=false,north=true,south=false,tall=false,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_single"
+    },
+    "east=false,north=true,south=false,tall=false,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_corner",
+      "uvlock": true,
+      "y": 270
+    },
+    "east=false,north=true,south=false,tall=true,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_single_tall"
+    },
+    "east=false,north=true,south=false,tall=true,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_corner_tall",
+      "uvlock": true,
+      "y": 270
+    },
+    "east=false,north=true,south=true,tall=false,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_straight"
+    },
+    "east=false,north=true,south=true,tall=false,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_t_shape",
+      "uvlock": true,
+      "y": 180
+    },
+    "east=false,north=true,south=true,tall=true,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_straight_tall"
+    },
+    "east=false,north=true,south=true,tall=true,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_t_shape_tall",
+      "uvlock": true,
+      "y": 180
+    },
+    "east=true,north=false,south=false,tall=false,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_single",
+      "uvlock": true,
+      "y": 90
+    },
+    "east=true,north=false,south=false,tall=false,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_straight",
+      "uvlock": true,
+      "y": 90
+    },
+    "east=true,north=false,south=false,tall=true,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_single_tall",
+      "uvlock": true,
+      "y": 90
+    },
+    "east=true,north=false,south=false,tall=true,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_straight_tall",
+      "uvlock": true,
+      "y": 90
+    },
+    "east=true,north=false,south=true,tall=false,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_corner",
+      "uvlock": true,
+      "y": 90
+    },
+    "east=true,north=false,south=true,tall=false,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_t_shape",
+      "uvlock": true,
+      "y": 90
+    },
+    "east=true,north=false,south=true,tall=true,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_corner_tall",
+      "uvlock": true,
+      "y": 90
+    },
+    "east=true,north=false,south=true,tall=true,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_t_shape_tall",
+      "uvlock": true,
+      "y": 90
+    },
+    "east=true,north=true,south=false,tall=false,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_corner"
+    },
+    "east=true,north=true,south=false,tall=false,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_t_shape",
+      "uvlock": true,
+      "y": 270
+    },
+    "east=true,north=true,south=false,tall=true,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_corner_tall"
+    },
+    "east=true,north=true,south=false,tall=true,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_t_shape_tall",
+      "uvlock": true,
+      "y": 270
+    },
+    "east=true,north=true,south=true,tall=false,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_t_shape"
+    },
+    "east=true,north=true,south=true,tall=false,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_cross"
+    },
+    "east=true,north=true,south=true,tall=true,west=false": {
+      "model": "blocksforbuilders:block/mangrove_hedge_t_shape_tall"
+    },
+    "east=true,north=true,south=true,tall=true,west=true": {
+      "model": "blocksforbuilders:block/mangrove_hedge_cross_tall"
+    }
+  }
+}
