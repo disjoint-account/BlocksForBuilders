@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "blocksforbuilders:block/grimstone_tiles",
+      "uvlock": false,
+      "x": 180
+    },
+    "facing=east": {
+      "model": "blocksforbuilders:block/grimstone_tiles",
+      "uvlock": false,
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "blocksforbuilders:block/grimstone_tiles",
+      "uvlock": false,
+      "x": 90
+    },
+    "facing=south": {
+      "model": "blocksforbuilders:block/grimstone_tiles",
+      "uvlock": false,
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "blocksforbuilders:block/grimstone_tiles"
+    },
+    "facing=west": {
+      "model": "blocksforbuilders:block/grimstone_tiles",
+      "uvlock": false,
+      "x": 90,
+      "y": 270
+    }
+  }
+}

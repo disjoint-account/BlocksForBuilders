@@ -1,0 +1,58 @@
+{
+  "variants": {
+    "facing=east,type=bottom": {
+      "model": "blocksforbuilders:block/quartz_brick_slab",
+      "uvlock": false,
+      "y": 270
+    },
+    "facing=east,type=double": {
+      "model": "minecraft:block/quartz_bricks",
+      "uvlock": false,
+      "y": 270
+    },
+    "facing=east,type=top": {
+      "model": "blocksforbuilders:block/quartz_brick_slab_top",
+      "uvlock": false,
+      "y": 270
+    },
+    "facing=north,type=bottom": {
+      "model": "blocksforbuilders:block/quartz_brick_slab",
+      "uvlock": false,
+      "y": 180
+    },
+    "facing=north,type=double": {
+      "model": "minecraft:block/quartz_bricks",
+      "uvlock": false,
+      "y": 180
+    },
+    "facing=north,type=top": {
+      "model": "blocksforbuilders:block/quartz_brick_slab_top",
+      "uvlock": false,
+      "y": 180
+    },
+    "facing=south,type=bottom": {
+      "model": "blocksforbuilders:block/quartz_brick_slab"
+    },
+    "facing=south,type=double": {
+      "model": "minecraft:block/quartz_bricks"
+    },
+    "facing=south,type=top": {
+      "model": "blocksforbuilders:block/quartz_brick_slab_top"
+    },
+    "facing=west,type=bottom": {
+      "model": "blocksforbuilders:block/quartz_brick_slab",
+      "uvlock": false,
+      "y": 90
+    },
+    "facing=west,type=double": {
+      "model": "minecraft:block/quartz_bricks",
+      "uvlock": false,
+      "y": 90
+    },
+    "facing=west,type=top": {
+      "model": "blocksforbuilders:block/quartz_brick_slab_top",
+      "uvlock": false,
+      "y": 90
+    }
+  }
+}

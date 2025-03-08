@@ -342,9 +342,9 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);
                         entries.add(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
-                        entries.add(BlocksForBuildersItems.SHEARED_COCONUT);
+                        entries.add(BlocksForBuildersItems.STRIPPED_COCONUT);
                         entries.add(BlocksForBuildersItems.EMPTY_COCONUT);
-                        entries.add(BlocksForBuildersItems.SHEARED_EMPTY_COCONUT);
+                        entries.add(BlocksForBuildersItems.STRIPPED_EMPTY_COCONUT);
                         entries.add(BlocksForBuildersItems.COCONUT_HUSK);
                         entries.add(BlocksForBuildersItems.COCONUT_FIBER);
                         entries.add(Items.PUMPKIN_PIE);

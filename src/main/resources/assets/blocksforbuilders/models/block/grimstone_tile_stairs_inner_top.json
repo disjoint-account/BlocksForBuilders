@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "blocksforbuilders:block/grimstone_tiles_left",
-    "side": "blocksforbuilders:block/grimstone_tiles_down",
-    "top": "blocksforbuilders:block/grimstone_tiles_left"
-  }
-}

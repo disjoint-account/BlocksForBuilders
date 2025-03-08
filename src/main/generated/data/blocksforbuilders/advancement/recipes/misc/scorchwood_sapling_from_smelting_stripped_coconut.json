@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_coconut": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:stripped_coconut"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:scorchwood_sapling_from_smelting_stripped_coconut"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_coconut"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:scorchwood_sapling_from_smelting_stripped_coconut"
+    ]
+  }
+}

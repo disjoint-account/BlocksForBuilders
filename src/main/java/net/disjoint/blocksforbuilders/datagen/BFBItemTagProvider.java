@@ -421,8 +421,8 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(BFBTags.Items.COCONUTS)
                 .add(BlocksForBuildersItems.COCONUT)
                 .add(BlocksForBuildersItems.EMPTY_COCONUT)
-                .add(BlocksForBuildersItems.SHEARED_COCONUT)
-                .add(BlocksForBuildersItems.SHEARED_EMPTY_COCONUT);
+                .add(BlocksForBuildersItems.STRIPPED_COCONUT)
+                .add(BlocksForBuildersItems.STRIPPED_EMPTY_COCONUT);
 
         getOrCreateTagBuilder(BFBTags.Items.BFB_TAG)
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LOG.asItem())

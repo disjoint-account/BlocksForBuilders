@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "blocksforbuilders:block/bamboo_thatch_rug"
+    "model": "blocksforbuilders:block/bamboo_thatch_rug_inventory"
   }
 }

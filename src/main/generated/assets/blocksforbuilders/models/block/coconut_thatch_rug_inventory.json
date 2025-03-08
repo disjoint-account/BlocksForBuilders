@@ -1,0 +1,10 @@
+{
+  "parent": "blocksforbuilders:block/pillar_carpet",
+  "textures": {
+    "back": "blocksforbuilders:block/coconut_thatch_top",
+    "bottom": "blocksforbuilders:block/coconut_thatch_side_bottom",
+    "front": "blocksforbuilders:block/coconut_thatch_top",
+    "side": "blocksforbuilders:block/coconut_thatch_side_right",
+    "top": "blocksforbuilders:block/coconut_thatch_side_bottom"
+  }
+}

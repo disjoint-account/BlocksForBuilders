@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "blocksforbuilders:block/quartz_brick_stairs_east",
-    "top": "blocksforbuilders:block/quartz_brick_stairs_outer_right",
-    "side": "minecraft:block/quartz_bricks"
-  }
-}

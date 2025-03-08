@@ -1,0 +1,11 @@
+{
+  "parent": "blocksforbuilders:block/pillar_stairs_outer",
+  "textures": {
+    "back": "blocksforbuilders:block/bamboo_thatch_top",
+    "bottom": "blocksforbuilders:block/bamboo_thatch_side",
+    "end": "blocksforbuilders:block/bamboo_thatch_side_right",
+    "front": "blocksforbuilders:block/bamboo_thatch_top",
+    "side": "blocksforbuilders:block/bamboo_thatch_side_left",
+    "top": "blocksforbuilders:block/bamboo_thatch_side_bottom"
+  }
+}

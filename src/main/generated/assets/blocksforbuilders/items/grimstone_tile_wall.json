@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "blocksforbuilders:item/grimstone_tile_wall"
+    "model": "blocksforbuilders:block/grimstone_tile_wall_inventory"
   }
 }

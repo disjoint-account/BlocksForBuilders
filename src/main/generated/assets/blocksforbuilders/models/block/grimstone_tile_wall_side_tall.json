@@ -1,0 +1,7 @@
+{
+  "parent": "blocksforbuilders:block/pillar_wall_side_tall",
+  "textures": {
+    "end": "blocksforbuilders:block/grimstone_tiles_top",
+    "wall": "blocksforbuilders:block/grimstone_tiles"
+  }
+}

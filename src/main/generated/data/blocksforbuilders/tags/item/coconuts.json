@@ -2,7 +2,7 @@
   "values": [
     "blocksforbuilders:coconut",
     "blocksforbuilders:empty_coconut",
-    "blocksforbuilders:sheared_coconut",
-    "blocksforbuilders:sheared_empty_coconut"
+    "blocksforbuilders:stripped_coconut",
+    "blocksforbuilders:stripped_empty_coconut"
   ]
 }

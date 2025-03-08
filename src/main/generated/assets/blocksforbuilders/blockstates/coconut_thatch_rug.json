@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "blocksforbuilders:block/coconut_thatch_rug",
+      "uvlock": false,
+      "y": 180
+    },
+    "facing=north": {
+      "model": "blocksforbuilders:block/coconut_thatch_rug",
+      "uvlock": false,
+      "y": 90
+    },
+    "facing=south": {
+      "model": "blocksforbuilders:block/coconut_thatch_rug",
+      "uvlock": false,
+      "y": 270
+    },
+    "facing=west": {
+      "model": "blocksforbuilders:block/coconut_thatch_rug"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "blocksforbuilders:block/hay_slab"
+    "model": "blocksforbuilders:block/hay_slab_inventory"
   }
 }

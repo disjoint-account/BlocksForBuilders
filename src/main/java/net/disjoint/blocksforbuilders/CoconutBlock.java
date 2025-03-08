@@ -66,7 +66,7 @@ public class CoconutBlock extends SaplingBlock implements Waterloggable {
         BlockPos pos = ctx.getBlockPos();
         FluidState state = world.getFluidState(pos);
         ItemStack itemStack = ctx.getStack();
-        boolean milk = itemStack.isOf(BlocksForBuildersItems.COCONUT) || itemStack.isOf(BlocksForBuildersItems.SHEARED_COCONUT);
+        boolean milk = itemStack.isOf(BlocksForBuildersItems.COCONUT) || itemStack.isOf(BlocksForBuildersItems.STRIPPED_COCONUT);
         boolean fiber = itemStack.isOf(BlocksForBuildersItems.COCONUT) || itemStack.isOf(BlocksForBuildersItems.EMPTY_COCONUT);
         boolean bl = state.isIn(FluidTags.WATER) && state.getLevel() == 8;
         for (Direction direction : ctx.getPlacementDirections()) {
@@ -162,9 +162,9 @@ public class CoconutBlock extends SaplingBlock implements Waterloggable {
         } else if (!milk && fiber) {
             return new ItemStack(BlocksForBuildersItems.EMPTY_COCONUT);
         } else if (milk) {
-            return new ItemStack(BlocksForBuildersItems.SHEARED_COCONUT);
+            return new ItemStack(BlocksForBuildersItems.STRIPPED_COCONUT);
         }
-        else return new ItemStack(BlocksForBuildersItems.SHEARED_EMPTY_COCONUT);
+        else return new ItemStack(BlocksForBuildersItems.STRIPPED_EMPTY_COCONUT);
     }
 
     protected FluidState getFluidState(BlockState state) {

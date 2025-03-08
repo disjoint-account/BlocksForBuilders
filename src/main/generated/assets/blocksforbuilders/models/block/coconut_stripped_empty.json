@@ -1,0 +1,7 @@
+{
+  "parent": "blocksforbuilders:block/coconut_template",
+  "textures": {
+    "side": "blocksforbuilders:block/coconut_empty",
+    "top": "blocksforbuilders:block/coconut_empty_stripped_top"
+  }
+}
