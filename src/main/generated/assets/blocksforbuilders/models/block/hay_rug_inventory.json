@@ -1,0 +1,10 @@
+{
+  "parent": "blocksforbuilders:block/pillar_carpet",
+  "textures": {
+    "back": "minecraft:block/hay_block_top",
+    "bottom": "blocksforbuilders:block/hay_block_side_bottom",
+    "front": "minecraft:block/hay_block_top",
+    "side": "blocksforbuilders:block/hay_block_side_left",
+    "top": "blocksforbuilders:block/hay_block_side_bottom"
+  }
+}

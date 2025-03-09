@@ -1,9 +1,9 @@
 {
   "parent": "blocksforbuilders:block/pillar_slab",
   "textures": {
-    "back": "blocksforbuilders:block/grimstone_tiles_top",
+    "back": "blocksforbuilders:block/grimstone_tiles_top_down",
     "bottom": "blocksforbuilders:block/grimstone_tiles_down",
-    "front": "blocksforbuilders:block/grimstone_tiles_top",
+    "front": "blocksforbuilders:block/grimstone_tiles_top_down",
     "side": "blocksforbuilders:block/grimstone_tiles_right",
     "top": "blocksforbuilders:block/grimstone_tiles_down"
   }

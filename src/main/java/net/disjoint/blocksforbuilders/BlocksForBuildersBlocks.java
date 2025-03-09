@@ -459,7 +459,9 @@ public class BlocksForBuildersBlocks {
    
     public static final Block HAY_STAIRS = registerStairsBlock("hay_stairs", HAY_BLOCK);
     public static final Block HAY_SLAB = registerBlock("hay_slab",
-            DirectionalSlab::new, AbstractBlock.Settings.copy(HAY_BLOCK).mapColor(MapColor.YELLOW));
+            PillarSlab::new, AbstractBlock.Settings.copy(HAY_BLOCK).mapColor(MapColor.YELLOW));
+    public static final Block HAY_RUG = registerBlock("hay_rug",
+            DirectionalCarpet::new, AbstractBlock.Settings.copy(HAY_BLOCK).mapColor(MapColor.YELLOW));
    
     public static final Block SMOOTH_STONE_STAIRS = registerStairsBlock("smooth_stone_stairs", SMOOTH_STONE);
   
@@ -527,7 +529,7 @@ public class BlocksForBuildersBlocks {
             DirectionalBlock::new, AbstractBlock.Settings.copy(CRACKED_DEEPSLATE_TILES).mapColor(MapColor.TERRACOTTA_PURPLE));
     public static final Block GRIMSTONE_TILE_STAIRS = registerStairsBlock("grimstone_tile_stairs", GRIMSTONE_TILES);
     public static final Block GRIMSTONE_TILE_SLAB = registerBlock("grimstone_tile_slab",
-            DirectionalSlab::new, AbstractBlock.Settings.copy(DEEPSLATE_TILE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE));
+            PillarSlab::new, AbstractBlock.Settings.copy(DEEPSLATE_TILE_SLAB).mapColor(MapColor.TERRACOTTA_PURPLE));
     public static final Block GRIMSTONE_TILE_WALL = registerBlock("grimstone_tile_wall",
             WallBlock::new, AbstractBlock.Settings.copy(DEEPSLATE_TILE_WALL).mapColor(MapColor.TERRACOTTA_PURPLE));
 
@@ -589,7 +591,7 @@ public class BlocksForBuildersBlocks {
             PillarBlock::new, AbstractBlock.Settings.copy(HAY_BLOCK));
     public static final Block BAMBOO_THATCH_STAIRS = registerStairsBlock("bamboo_thatch_stairs", BAMBOO_THATCH);
     public static final Block BAMBOO_THATCH_SLAB = registerBlock("bamboo_thatch_slab",
-            DirectionalSlab::new, AbstractBlock.Settings.copy(BAMBOO_THATCH));
+            PillarSlab::new, AbstractBlock.Settings.copy(BAMBOO_THATCH));
     public static final Block BAMBOO_THATCH_RUG = registerBlock("bamboo_thatch_rug",
             DirectionalCarpet::new, AbstractBlock.Settings.copy(BAMBOO_THATCH));
 
@@ -597,7 +599,7 @@ public class BlocksForBuildersBlocks {
             PillarBlock::new, AbstractBlock.Settings.copy(HAY_BLOCK));
     public static final Block COCONUT_THATCH_STAIRS = registerStairsBlock("coconut_thatch_stairs", COCONUT_THATCH);
     public static final Block COCONUT_THATCH_SLAB = registerBlock("coconut_thatch_slab",
-            DirectionalSlab::new, AbstractBlock.Settings.copy(COCONUT_THATCH));
+            PillarSlab::new, AbstractBlock.Settings.copy(COCONUT_THATCH));
     public static final Block COCONUT_THATCH_RUG = registerBlock("coconut_thatch_rug",
             DirectionalCarpet::new, AbstractBlock.Settings.copy(COCONUT_THATCH));
 

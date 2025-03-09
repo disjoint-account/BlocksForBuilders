@@ -4,7 +4,7 @@
     "back": "blocksforbuilders:block/coconut_thatch_side_left",
     "bottom": "blocksforbuilders:block/coconut_thatch_side_left",
     "front": "blocksforbuilders:block/coconut_thatch_side_right",
-    "side": "blocksforbuilders:block/coconut_thatch_top",
+    "side": "blocksforbuilders:block/coconut_thatch_top_bottom",
     "top": "blocksforbuilders:block/coconut_thatch_side_left"
   }
 }

@@ -329,6 +329,7 @@ public class BFBModelProvider extends FabricModelProvider {
 
         registerPillarStairs(blockStateModelGenerator, BlocksForBuildersBlocks.HAY_STAIRS, Blocks.HAY_BLOCK, false);
         registerPillarSlab(blockStateModelGenerator, BlocksForBuildersBlocks.HAY_SLAB, Blocks.HAY_BLOCK, true);
+        registerPillarCarpet(blockStateModelGenerator, BlocksForBuildersBlocks.HAY_RUG, Blocks.HAY_BLOCK, false);
 
         blockStateModelGenerator.registerAxisRotated(BlocksForBuildersBlocks.BAMBOO_THATCH, TexturedModel.CUBE_COLUMN, TexturedModel.CUBE_COLUMN_HORIZONTAL);
         registerPillarStairs(blockStateModelGenerator, BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS, BlocksForBuildersBlocks.BAMBOO_THATCH, false);
@@ -500,7 +501,7 @@ public class BFBModelProvider extends FabricModelProvider {
 
     public static void registerAltCarpet(BlockStateModelGenerator blockStateModelGenerator, Block block, String textureSource) {
         Identifier parent = Identifier.ofVanilla("block/" + "carpet");
-        Identifier identifier = new Model(Optional.of(parent), Optional.empty(), TextureKey.WOOL).upload(block, new TextureMap().put(TextureKey.WOOL, Identifier.of(textureSource)), blockStateModelGenerator.modelCollector);;
+        Identifier identifier = new Model(Optional.of(parent), Optional.empty(), TextureKey.WOOL).upload(block, new TextureMap().put(TextureKey.WOOL, Identifier.of(textureSource)), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, identifier));
     }
 
@@ -650,24 +651,31 @@ public class BFBModelProvider extends FabricModelProvider {
         Identifier leftTexture;
         Identifier rightTexture;
         Identifier bottomTexture;
+        Identifier topDownTexture;
         if (side) {
             bottomTexture = Identifier.of(rootTexture + "_side_bottom");
             leftTexture = Identifier.of(rootTexture + "_side_left");
             rightTexture = Identifier.of(rootTexture + "_side_right");
+            topDownTexture = Identifier.of(rootTexture + "_top_bottom");
         }
         else {
             leftTexture = Identifier.of(rootTexture + "_left");
             rightTexture = Identifier.of(rootTexture + "_right");
             bottomTexture = Identifier.of(rootTexture + "_down");
+            topDownTexture = Identifier.of(rootTexture + "_top_down");
         }
         Identifier horizontalModel = Identifier.of(baseId + "_horizontal");
         Identifier slab = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, new TextureMap()
-                .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.SIDE, topTexture).put(TextureKey.FRONT, rightTexture).put(TextureKey.BACK, leftTexture), blockStateModelGenerator.modelCollector);
+                .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.SIDE, topDownTexture).put(TextureKey.FRONT, rightTexture).put(TextureKey.BACK, leftTexture), blockStateModelGenerator.modelCollector);
         Identifier topSlab = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab_top")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_top", new TextureMap()
-                .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.SIDE, topTexture).put(TextureKey.FRONT, rightTexture).put(TextureKey.BACK, leftTexture), blockStateModelGenerator.modelCollector);
+                .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.SIDE, topDownTexture).put(TextureKey.FRONT, rightTexture).put(TextureKey.BACK, leftTexture), blockStateModelGenerator.modelCollector);
+        Identifier yAxisSlab = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_y_axis", new TextureMap()
+                .put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, topTexture).put(TextureKey.SIDE, baseId).put(TextureKey.FRONT, baseId).put(TextureKey.BACK, baseId), blockStateModelGenerator.modelCollector);
+        Identifier yAxisTopSlab = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab_top")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_y_axis_top", new TextureMap()
+                .put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, topTexture).put(TextureKey.SIDE, bottomTexture).put(TextureKey.FRONT, bottomTexture).put(TextureKey.BACK, bottomTexture), blockStateModelGenerator.modelCollector);
         Identifier inventory = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_inventory", new TextureMap()
-                .put(TextureKey.TOP, bottomTexture).put(TextureKey.BOTTOM, bottomTexture).put(TextureKey.SIDE, rightTexture).put(TextureKey.FRONT, topTexture).put(TextureKey.BACK, topTexture), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createPillarSlabBlockState(block, slab, topSlab, horizontalModel));
+                .put(TextureKey.TOP, bottomTexture).put(TextureKey.BOTTOM, bottomTexture).put(TextureKey.SIDE, rightTexture).put(TextureKey.FRONT, topDownTexture).put(TextureKey.BACK, topDownTexture), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createPillarSlabBlockState(block, slab, topSlab, yAxisSlab, yAxisTopSlab, horizontalModel));
         blockStateModelGenerator.registerItemModel(block.asItem(), inventory);
     }
 
@@ -732,7 +740,7 @@ public class BFBModelProvider extends FabricModelProvider {
         Identifier carpet = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_carpet")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, new TextureMap()
                 .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.SIDE, topTexture).put(TextureKey.FRONT, rightTexture).put(TextureKey.BACK, leftTexture), blockStateModelGenerator.modelCollector);
         Identifier inventory = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_carpet")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_inventory", new TextureMap()
-                .put(TextureKey.TOP, bottomTexture).put(TextureKey.BOTTOM, bottomTexture).put(TextureKey.SIDE, rightTexture).put(TextureKey.FRONT, topTexture).put(TextureKey.BACK, topTexture), blockStateModelGenerator.modelCollector);
+                .put(TextureKey.TOP, bottomTexture).put(TextureKey.BOTTOM, bottomTexture).put(TextureKey.SIDE, leftTexture).put(TextureKey.FRONT, topTexture).put(TextureKey.BACK, topTexture), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createPillarCarpetBlockState(block, carpet));
         blockStateModelGenerator.registerItemModel(block.asItem(), inventory);
     }

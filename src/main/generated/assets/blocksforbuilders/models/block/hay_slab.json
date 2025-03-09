@@ -4,7 +4,7 @@
     "back": "blocksforbuilders:block/hay_block_side_left",
     "bottom": "blocksforbuilders:block/hay_block_side_left",
     "front": "blocksforbuilders:block/hay_block_side_right",
-    "side": "minecraft:block/hay_block_top",
+    "side": "blocksforbuilders:block/hay_block_top_bottom",
     "top": "blocksforbuilders:block/hay_block_side_left"
   }
 }

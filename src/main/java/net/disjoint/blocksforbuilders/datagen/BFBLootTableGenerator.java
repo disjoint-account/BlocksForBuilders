@@ -371,6 +371,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(BlocksForBuildersBlocks.HAY_STAIRS);
         addDrop(BlocksForBuildersBlocks.HAY_SLAB, slabDrops(BlocksForBuildersBlocks.HAY_SLAB));
+        addDrop(BlocksForBuildersBlocks.HAY_RUG);
 
         addDrop(BlocksForBuildersBlocks.BAMBOO_THATCH);
         addDrop(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS);

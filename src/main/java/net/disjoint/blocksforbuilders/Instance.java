@@ -153,6 +153,7 @@ public class Instance {
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.ASHEN_CARPET, 0.30f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_STAIRS, 0.85f);
             CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_SLAB, 0.85f);
+            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_RUG, 0.85f);
         }
         {
             FuelRegistryEvents.BUILD.register((builder, context) -> {

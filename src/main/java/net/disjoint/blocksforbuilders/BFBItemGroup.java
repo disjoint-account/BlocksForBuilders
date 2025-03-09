@@ -296,6 +296,9 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.POLISHED_GRANITE_WALL);
                         entries.add(BlocksForBuildersBlocks.POLISHED_DIORITE_WALL);
                         entries.add(BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL);
+                        entries.add(BlocksForBuildersBlocks.HAY_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.HAY_SLAB);
+                        entries.add(BlocksForBuildersBlocks.HAY_RUG);
                         entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH);
                         entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH_STAIRS);
                         entries.add(BlocksForBuildersBlocks.BAMBOO_THATCH_SLAB);
@@ -305,8 +308,6 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.COCONUT_THATCH_STAIRS);
                         entries.add(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB);
                         entries.add(BlocksForBuildersBlocks.COCONUT_THATCH_RUG);
-                        entries.add(BlocksForBuildersBlocks.HAY_STAIRS);
-                        entries.add(BlocksForBuildersBlocks.HAY_SLAB);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_SANDSTONE_WALL);
                         entries.add(BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS);

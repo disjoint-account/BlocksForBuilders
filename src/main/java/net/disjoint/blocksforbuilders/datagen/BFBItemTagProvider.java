@@ -679,6 +679,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF.asItem())
                 .add(BlocksForBuildersBlocks.HAY_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.HAY_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.HAY_RUG.asItem())
                 .add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.SMOOTH_SANDSTONE_WALL.asItem())
                 .add(BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS.asItem())

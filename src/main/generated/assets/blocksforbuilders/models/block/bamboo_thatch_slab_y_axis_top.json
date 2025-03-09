@@ -1,0 +1,10 @@
+{
+  "parent": "blocksforbuilders:block/pillar_slab_top",
+  "textures": {
+    "back": "blocksforbuilders:block/bamboo_thatch_side_bottom",
+    "bottom": "blocksforbuilders:block/bamboo_thatch_top",
+    "front": "blocksforbuilders:block/bamboo_thatch_side_bottom",
+    "side": "blocksforbuilders:block/bamboo_thatch_side_bottom",
+    "top": "blocksforbuilders:block/bamboo_thatch_top"
+  }
+}

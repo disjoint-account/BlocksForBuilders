@@ -1,63 +1,89 @@
 {
   "variants": {
-    "facing=east,type=bottom": {
-      "model": "blocksforbuilders:block/bamboo_thatch_slab",
+    "facing=down,type=bottom": {
+      "model": "blocksforbuilders:block/bamboo_thatch_slab_y_axis_top",
       "uvlock": false,
+      "x": 180
+    },
+    "facing=down,type=double": {
+      "model": "blocksforbuilders:block/bamboo_thatch_horizontal",
+      "uvlock": false,
+      "x": 180,
       "y": 180
+    },
+    "facing=down,type=top": {
+      "model": "blocksforbuilders:block/bamboo_thatch_slab_y_axis",
+      "uvlock": false,
+      "x": 180
+    },
+    "facing=east,type=bottom": {
+      "model": "blocksforbuilders:block/bamboo_thatch_slab"
     },
     "facing=east,type=double": {
       "model": "blocksforbuilders:block/bamboo_thatch_horizontal",
       "uvlock": false,
-      "x": 90,
-      "y": 270
+      "x": 270,
+      "y": 90
     },
     "facing=east,type=top": {
-      "model": "blocksforbuilders:block/bamboo_thatch_slab_top",
-      "uvlock": false,
-      "y": 180
+      "model": "blocksforbuilders:block/bamboo_thatch_slab_top"
     },
     "facing=north,type=bottom": {
       "model": "blocksforbuilders:block/bamboo_thatch_slab",
       "uvlock": false,
-      "y": 90
+      "y": 270
     },
     "facing=north,type=double": {
       "model": "blocksforbuilders:block/bamboo_thatch_horizontal",
       "uvlock": false,
-      "x": 90,
-      "y": 180
+      "x": 270
     },
     "facing=north,type=top": {
       "model": "blocksforbuilders:block/bamboo_thatch_slab_top",
       "uvlock": false,
-      "y": 90
+      "y": 270
     },
     "facing=south,type=bottom": {
       "model": "blocksforbuilders:block/bamboo_thatch_slab",
       "uvlock": false,
-      "y": 270
+      "y": 90
     },
     "facing=south,type=double": {
       "model": "blocksforbuilders:block/bamboo_thatch_horizontal",
       "uvlock": false,
-      "x": 90
+      "x": 270
     },
     "facing=south,type=top": {
       "model": "blocksforbuilders:block/bamboo_thatch_slab_top",
       "uvlock": false,
-      "y": 270
+      "y": 90
+    },
+    "facing=up,type=bottom": {
+      "model": "blocksforbuilders:block/bamboo_thatch_slab_y_axis"
+    },
+    "facing=up,type=double": {
+      "model": "blocksforbuilders:block/bamboo_thatch_horizontal",
+      "uvlock": false,
+      "y": 180
+    },
+    "facing=up,type=top": {
+      "model": "blocksforbuilders:block/bamboo_thatch_slab_y_axis_top"
     },
     "facing=west,type=bottom": {
-      "model": "blocksforbuilders:block/bamboo_thatch_slab"
+      "model": "blocksforbuilders:block/bamboo_thatch_slab",
+      "uvlock": false,
+      "y": 180
     },
     "facing=west,type=double": {
       "model": "blocksforbuilders:block/bamboo_thatch_horizontal",
       "uvlock": false,
-      "x": 90,
+      "x": 270,
       "y": 90
     },
     "facing=west,type=top": {
-      "model": "blocksforbuilders:block/bamboo_thatch_slab_top"
+      "model": "blocksforbuilders:block/bamboo_thatch_slab_top",
+      "uvlock": false,
+      "y": 180
     }
   }
 }

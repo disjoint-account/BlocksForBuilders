@@ -98,7 +98,8 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GOLD_ACACIA_HEDGE,
                         BlocksForBuildersBlocks.ASHEN_CARPET,
                         BlocksForBuildersBlocks.HAY_STAIRS,
-                        BlocksForBuildersBlocks.HAY_SLAB);
+                        BlocksForBuildersBlocks.HAY_SLAB,
+                        BlocksForBuildersBlocks.HAY_RUG);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(BlocksForBuildersBlocks.GRIMSTONE,
@@ -626,6 +627,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES,
                         BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES,
+                        BlocksForBuildersBlocks.HAY_RUG,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_RUG,
                         BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG,
                         BlocksForBuildersBlocks.COCONUT_THATCH_RUG,

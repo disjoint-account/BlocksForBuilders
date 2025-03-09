@@ -2,6 +2,7 @@ package net.disjoint.blocksforbuilders;
 
 import net.disjoint.blocksforbuilders.boatstuff.BFBBoatDispenserBehavior;
 import net.disjoint.blocksforbuilders.boatstuff.BFBEntityTypes;
+import net.disjoint.blocksforbuilders.villagers.BFBVillagerTrades;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBTreeDecoratorType;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBTrunkPlacerTypes;
 import net.disjoint.blocksforbuilders.world.gen.BlocksForBuildersWorldGen;
@@ -26,6 +27,7 @@ public class BlocksForBuilders implements ModInitializer {
 		BFBTrunkPlacerTypes.register();
 		BFBTreeDecoratorType.register();
 		BFBBoatDispenserBehavior.registerDefaults();
+		BFBVillagerTrades.registerTrades();
 		Instance.init();
 	}
 }
