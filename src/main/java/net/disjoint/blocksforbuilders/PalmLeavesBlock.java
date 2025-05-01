@@ -1,14 +1,15 @@
 package net.disjoint.blocksforbuilders;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.UntintedParticleLeavesBlock;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 
-public class PalmLeavesBlock extends LeavesBlock {
-    public PalmLeavesBlock(Settings settings) {
-        super(settings);
+public class PalmLeavesBlock extends UntintedParticleLeavesBlock {
+    public PalmLeavesBlock(Settings settings, float leafParticleChance, ParticleEffect particleEffect) {
+        super(leafParticleChance, particleEffect, settings);
     }
 
     private boolean canGrowCoconuts(BlockState state) {

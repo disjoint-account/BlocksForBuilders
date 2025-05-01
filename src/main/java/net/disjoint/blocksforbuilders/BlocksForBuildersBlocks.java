@@ -4,6 +4,7 @@ import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBHangingSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallHangingSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallSignBlock;
+import net.disjoint.blocksforbuilders.util.BFBParticleTypes;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBSaplingGenerators;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
@@ -11,6 +12,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -52,8 +54,7 @@ public class BlocksForBuildersBlocks {
             PillarBlock::new, AbstractBlock.Settings.copy(JUNGLE_LOG).mapColor(MapColor.DARK_GREEN));
     public static final Block STRIPPED_GREEN_JUNGLE_WOOD = registerBlock("stripped_green_jungle_wood",
             PillarBlock::new, AbstractBlock.Settings.copy(JUNGLE_LOG).mapColor(MapColor.DARK_GREEN));
-    public static final Block GREEN_JUNGLE_LEAVES = registerBlock("green_jungle_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(JUNGLE_LEAVES).mapColor(MapColor.LIME));
+    public static final Block GREEN_JUNGLE_LEAVES = registerLeafBlock("green_jungle_leaves", 0.01f, BFBParticleTypes.GREEN_JUNGLE_LEAVES, JUNGLE_LEAVES, MapColor.LIME);
     public static final Block FALLEN_GREEN_JUNGLE_LEAVES = registerBlock("fallen_green_jungle_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(GREEN_JUNGLE_LEAVES).mapColor(MapColor.LIME).nonOpaque());
     public static final Block GREEN_JUNGLE_HEDGE = registerBlock("green_jungle_hedge",
@@ -85,8 +86,7 @@ public class BlocksForBuildersBlocks {
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.WHITE_GRAY));
     public static final Block STRIPPED_GHOSTWOOD_WOOD = registerBlock("stripped_ghostwood_wood",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.WHITE_GRAY));
-    public static final Block GHOSTWOOD_LEAVES = registerBlock("ghostwood_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(AZALEA_LEAVES).mapColor(MapColor.DULL_PINK));
+    public static final Block GHOSTWOOD_LEAVES = registerLeafBlock("ghostwood_leaves", 0.01f, BFBParticleTypes.GHOSTWOOD_LEAVES, Blocks.AZALEA_LEAVES, MapColor.DULL_PINK);
     public static final Block FALLEN_GHOSTWOOD_LEAVES = registerBlock("fallen_ghostwood_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(GHOSTWOOD_LEAVES).mapColor(MapColor.DULL_PINK).nonOpaque());
     public static final Block GHOSTWOOD_HEDGE = registerBlock("ghostwood_hedge",
@@ -145,8 +145,7 @@ public class BlocksForBuildersBlocks {
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.DIRT_BROWN));
     public static final Block STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.LICHEN_GREEN));
-    public static final Block WILLOW_LEAVES = registerBlock("willow_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.PALE_GREEN));
+    public static final Block WILLOW_LEAVES = registerLeafBlock("willow_leaves", 0.01f, BFBParticleTypes.WILLOW_LEAVES, Blocks.OAK_LEAVES, MapColor.PALE_GREEN);
     public static final Block FALLEN_WILLOW_LEAVES = registerBlock("fallen_willow_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(WILLOW_LEAVES).mapColor(MapColor.PALE_GREEN).nonOpaque());
     public static final Block WILLOW_HEDGE = registerBlock("willow_hedge",
@@ -179,9 +178,9 @@ public class BlocksForBuildersBlocks {
     public static final Block STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.PALE_YELLOW));
     public static final Block PALM_LEAVES = registerBlock("palm_leaves",
-            PalmLeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.PALE_YELLOW));
+            settings -> new PalmLeavesBlock(settings, 0.01f, BFBParticleTypes.PALM_LEAVES), AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.get(1)));
     public static final Block FALLEN_PALM_LEAVES = registerBlock("fallen_palm_leaves",
-            FallenLeavesBlock::new, AbstractBlock.Settings.copy(PALM_LEAVES).mapColor(MapColor.PALE_YELLOW).nonOpaque());
+            FallenLeavesBlock::new, AbstractBlock.Settings.copy(PALM_LEAVES).mapColor(MapColor.get(1)).nonOpaque());
     public static final Block PALM_HEDGE = registerBlock("palm_hedge",
             HedgeBlock::new, AbstractBlock.Settings.copy(PALM_LEAVES));
     public static final Block COCONUT = registerCoconutBlock("coconut", MapColor.DIRT_BROWN);
@@ -210,8 +209,7 @@ public class BlocksForBuildersBlocks {
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_RED));
     public static final Block STRIPPED_MAPLE_WOOD = registerBlock("stripped_maple_wood",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.RAW_IRON_PINK));
-    public static final Block MAPLE_LEAVES = registerBlock("maple_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(OAK_LEAVES).mapColor(MapColor.DARK_RED));
+    public static final Block MAPLE_LEAVES = registerLeafBlock("maple_leaves", 0.1f, BFBParticleTypes.MAPLE_LEAVES, Blocks.OAK_LEAVES, MapColor.DARK_RED);
     public static final Block FALLEN_MAPLE_LEAVES = registerBlock("fallen_maple_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(MAPLE_LEAVES).mapColor(MapColor.DARK_RED).nonOpaque());
     public static final Block MAPLE_HEDGE = registerBlock("maple_hedge",
@@ -243,8 +241,7 @@ public class BlocksForBuildersBlocks {
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_WHITE));
     public static final Block STRIPPED_BEECH_WOOD = registerBlock("stripped_beech_wood",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.ORANGE));
-    public static final Block BEECH_LEAVES = registerBlock("beech_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.ORANGE));
+    public static final Block BEECH_LEAVES = registerLeafBlock("beech_leaves", 0.1f, BFBParticleTypes.BEECH_LEAVES, Blocks.OAK_LEAVES, MapColor.ORANGE);
     public static final Block FALLEN_BEECH_LEAVES = registerBlock("fallen_beech_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(BEECH_LEAVES).mapColor(MapColor.ORANGE).nonOpaque());
     public static final Block BEECH_HEDGE = registerBlock("beech_hedge",
@@ -276,10 +273,9 @@ public class BlocksForBuildersBlocks {
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_RED));
     public static final Block STRIPPED_PINE_WOOD = registerBlock("stripped_pine_wood",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_BROWN));
-    public static final Block PINE_LEAVES = registerBlock("pine_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block PINE_LEAVES = registerLeafBlock("pine_leaves", 0.01f, BFBParticleTypes.PINE_LEAVES, Blocks.SPRUCE_LEAVES, MapColor.TERRACOTTA_GREEN);
     public static final Block FALLEN_PINE_LEAVES = registerBlock("fallen_pine_leaves",
-            FallenLeavesBlock::new, AbstractBlock.Settings.copy(PINE_LEAVES).mapColor(MapColor.TERRACOTTA_BROWN).nonOpaque());
+            FallenLeavesBlock::new, AbstractBlock.Settings.copy(PINE_LEAVES).mapColor(MapColor.TERRACOTTA_GREEN).nonOpaque());
     public static final Block PINE_HEDGE = registerBlock("pine_hedge",
             HedgeBlock::new, AbstractBlock.Settings.copy(PINE_LEAVES));
     public static final Block PINE_SAPLING = registerSaplingBlock("pine_sapling", BFBSaplingGenerators.PINE, OAK_SAPLING);
@@ -309,8 +305,7 @@ public class BlocksForBuildersBlocks {
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.LIGHT_GRAY));
     public static final Block STRIPPED_CEDAR_WOOD = registerBlock("stripped_cedar_wood",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.OAK_TAN));
-    public static final Block CEDAR_LEAVES = registerBlock("cedar_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.OAK_TAN));
+    public static final Block CEDAR_LEAVES = registerLeafBlock("cedar_leaves", 0.01f, BFBParticleTypes.CEDAR_LEAVES, Blocks.OAK_LEAVES, MapColor.get(7));
     public static final Block FALLEN_CEDAR_LEAVES = registerBlock("fallen_cedar_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(CEDAR_LEAVES).mapColor(MapColor.OAK_TAN).nonOpaque());
     public static final Block CEDAR_HEDGE = registerBlock("cedar_hedge",
@@ -351,16 +346,14 @@ public class BlocksForBuildersBlocks {
     public static final Block GREEN_BAMBOO_HANGING_SIGN = registerSignBlock("green_bamboo_hanging_sign", settings -> new BFBHangingSignBlock("green_bamboo", GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(BAMBOO_HANGING_SIGN));
     public static final Block GREEN_BAMBOO_WALL_HANGING_SIGN = registerSignBlock("green_bamboo_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("green_bamboo", GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(BAMBOO_WALL_HANGING_SIGN));
 
-    public static final Block GOLD_ACACIA_LEAVES = registerBlock("gold_acacia_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW));
+    public static final Block GOLD_ACACIA_LEAVES = registerLeafBlock("gold_acacia_leaves", 0.02f, BFBParticleTypes.GOLD_ACACIA_LEAVES, Blocks.ACACIA_LEAVES, MapColor.TERRACOTTA_YELLOW);
     public static final Block FALLEN_GOLD_ACACIA_LEAVES = registerBlock("fallen_gold_acacia_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(GOLD_ACACIA_LEAVES).mapColor(MapColor.TERRACOTTA_YELLOW).nonOpaque());
     public static final Block GOLD_ACACIA_HEDGE = registerBlock("gold_acacia_hedge",
             HedgeBlock::new, AbstractBlock.Settings.copy(GOLD_ACACIA_LEAVES));
     public static final Block GOLD_ACACIA_SAPLING = registerSaplingBlock("gold_acacia_sapling", BFBSaplingGenerators.GOLD_ACACIA, ACACIA_SAPLING);
     public static final Block POTTED_GOLD_ACACIA_SAPLING = registerFlowerPotBlock("potted_gold_acacia_sapling", GOLD_ACACIA_SAPLING, POTTED_ACACIA_SAPLING);
-    public static final Block YELLOW_BIRCH_LEAVES = registerBlock("yellow_birch_leaves",
-            LeavesBlock::new, AbstractBlock.Settings.copy(BIRCH_LEAVES).mapColor(MapColor.YELLOW));
+    public static final Block YELLOW_BIRCH_LEAVES = registerLeafBlock("yellow_birch_leaves", 0.1f, BFBParticleTypes.YELLOW_BIRCH_LEAVES, BIRCH_LEAVES, MapColor.YELLOW);
     public static final Block FALLEN_YELLOW_BIRCH_LEAVES = registerBlock("fallen_yellow_birch_leaves",
             FallenLeavesBlock::new, AbstractBlock.Settings.copy(YELLOW_BIRCH_LEAVES).mapColor(MapColor.YELLOW).nonOpaque());
     public static final Block YELLOW_BIRCH_HEDGE = registerBlock("yellow_birch_hedge",
@@ -604,7 +597,7 @@ public class BlocksForBuildersBlocks {
             DirectionalCarpet::new, AbstractBlock.Settings.copy(COCONUT_THATCH));
 
     public static final Block SCORCHED_GRASS = registerBlock("scorched_grass",
-            SnowyBlock::new, AbstractBlock.Settings.copy(DIRT).mapColor(MapColor.TERRACOTTA_GRAY));
+            Block::new, AbstractBlock.Settings.copy(DIRT).mapColor(MapColor.TERRACOTTA_GRAY));
     public static final Block ASHEN_CARPET = registerBlock("ashen_carpet",
             CarpetBlock::new, AbstractBlock.Settings.copy(MOSS_CARPET).sounds(BlockSoundGroup.GRASS).mapColor(MapColor.TERRACOTTA_BLACK));
 
@@ -618,6 +611,9 @@ public class BlocksForBuildersBlocks {
     }
     private static RegistryKey<Block> keyOf(String name) {
         return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(BlocksForBuilders.MOD_ID, name));
+    }
+    private static Block registerLeafBlock(String name, float particleChance, ParticleEffect particleEffect, Block base, MapColor mapColor) {
+        return registerBlock(name, settings -> new UntintedParticleLeavesBlock(particleChance, particleEffect, settings), AbstractBlock.Settings.copy(base).mapColor(mapColor));
     }
     private static Block registerStairsBlock(String name, Block base) {
         return registerBlock(name, settings -> new StairsBlock(base.getDefaultState(), settings), AbstractBlock.Settings.copy(base));

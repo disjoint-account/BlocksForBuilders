@@ -10,10 +10,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.data.*;
 import net.minecraft.client.render.item.tint.ConstantTintSource;
+import net.minecraft.client.render.model.json.ModelVariant;
+import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-
+import net.minecraft.util.collection.Pool;
 import java.util.Optional;
 
 import static net.minecraft.client.data.BlockStateModelGenerator.createSingletonBlockState;
@@ -46,8 +48,8 @@ public class BFBModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool sandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.SANDSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool redSandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
 
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.GHOSTWOOD_LOG).log(BlocksForBuildersBlocks.GHOSTWOOD_LOG).wood(BlocksForBuildersBlocks.GHOSTWOOD_WOOD);
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG).log(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG).wood(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.GHOSTWOOD_LOG).log(BlocksForBuildersBlocks.GHOSTWOOD_LOG).wood(BlocksForBuildersBlocks.GHOSTWOOD_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG).log(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG).wood(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES, TexturedModel.LEAVES);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, BlocksForBuildersBlocks.GHOSTWOOD_LEAVES);
         registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.GHOSTWOOD_HEDGE, BlocksForBuildersBlocks.GHOSTWOOD_LEAVES);
@@ -64,8 +66,8 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG, BlocksForBuildersBlocks.GHOSTWOOD_HANGING_SIGN, BlocksForBuildersBlocks.GHOSTWOOD_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
 
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.SCORCHWOOD_LOG).log(BlocksForBuildersBlocks.SCORCHWOOD_LOG).wood(BlocksForBuildersBlocks.SCORCHWOOD_WOOD);
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG).log(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG).wood(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.SCORCHWOOD_LOG).log(BlocksForBuildersBlocks.SCORCHWOOD_LOG).wood(BlocksForBuildersBlocks.SCORCHWOOD_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG).log(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG).wood(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_WOOD);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING, BlocksForBuildersBlocks.POTTED_SCORCHWOOD_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         scorchwoodTexturePool.stairs(BlocksForBuildersBlocks.SCORCHWOOD_STAIRS);
         scorchwoodTexturePool.slab(BlocksForBuildersBlocks.SCORCHWOOD_SLAB);
@@ -79,8 +81,8 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG, BlocksForBuildersBlocks.SCORCHWOOD_HANGING_SIGN, BlocksForBuildersBlocks.SCORCHWOOD_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
 
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.WILLOW_LOG).log(BlocksForBuildersBlocks.WILLOW_LOG).wood(BlocksForBuildersBlocks.WILLOW_WOOD);
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG).log(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG).wood(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.WILLOW_LOG).log(BlocksForBuildersBlocks.WILLOW_LOG).wood(BlocksForBuildersBlocks.WILLOW_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG).log(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG).wood(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.WILLOW_LEAVES, TexturedModel.LEAVES);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, BlocksForBuildersBlocks.WILLOW_LEAVES);
         registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.WILLOW_HEDGE, BlocksForBuildersBlocks.WILLOW_LEAVES);
@@ -97,8 +99,8 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG, BlocksForBuildersBlocks.WILLOW_HANGING_SIGN, BlocksForBuildersBlocks.WILLOW_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.WILLOW_BOOKSHELF, BlocksForBuildersBlocks.WILLOW_PLANKS);
 
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.PALM_LOG).log(BlocksForBuildersBlocks.PALM_LOG).wood(BlocksForBuildersBlocks.PALM_WOOD);
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_PALM_LOG).log(BlocksForBuildersBlocks.STRIPPED_PALM_LOG).wood(BlocksForBuildersBlocks.STRIPPED_PALM_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.PALM_LOG).log(BlocksForBuildersBlocks.PALM_LOG).wood(BlocksForBuildersBlocks.PALM_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_PALM_LOG).log(BlocksForBuildersBlocks.STRIPPED_PALM_LOG).wood(BlocksForBuildersBlocks.STRIPPED_PALM_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.PALM_LEAVES, TexturedModel.LEAVES);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, BlocksForBuildersBlocks.PALM_LEAVES);
         registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.PALM_HEDGE, BlocksForBuildersBlocks.PALM_LEAVES);
@@ -115,8 +117,8 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_PALM_LOG, BlocksForBuildersBlocks.PALM_HANGING_SIGN, BlocksForBuildersBlocks.PALM_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.PALM_BOOKSHELF, BlocksForBuildersBlocks.PALM_PLANKS);
 
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.MAPLE_LOG).log(BlocksForBuildersBlocks.MAPLE_LOG).wood(BlocksForBuildersBlocks.MAPLE_WOOD);
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG).log(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG).wood(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.MAPLE_LOG).log(BlocksForBuildersBlocks.MAPLE_LOG).wood(BlocksForBuildersBlocks.MAPLE_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG).log(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG).wood(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.MAPLE_LEAVES, TexturedModel.LEAVES);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_LEAVES);
         registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.MAPLE_HEDGE, BlocksForBuildersBlocks.MAPLE_LEAVES);
@@ -133,8 +135,8 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG, BlocksForBuildersBlocks.MAPLE_HANGING_SIGN, BlocksForBuildersBlocks.MAPLE_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.MAPLE_BOOKSHELF, BlocksForBuildersBlocks.MAPLE_PLANKS);
 
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.BEECH_LOG).log(BlocksForBuildersBlocks.BEECH_LOG).wood(BlocksForBuildersBlocks.BEECH_WOOD);
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG).log(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG).wood(BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.BEECH_LOG).log(BlocksForBuildersBlocks.BEECH_LOG).wood(BlocksForBuildersBlocks.BEECH_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG).log(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG).wood(BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.BEECH_LEAVES, TexturedModel.LEAVES);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, BlocksForBuildersBlocks.BEECH_LEAVES);
         registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.BEECH_HEDGE, BlocksForBuildersBlocks.BEECH_LEAVES);
@@ -151,8 +153,8 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG, BlocksForBuildersBlocks.BEECH_HANGING_SIGN, BlocksForBuildersBlocks.BEECH_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.BEECH_BOOKSHELF, BlocksForBuildersBlocks.BEECH_PLANKS);
 
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.PINE_LOG).log(BlocksForBuildersBlocks.PINE_LOG).wood(BlocksForBuildersBlocks.PINE_WOOD);
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_PINE_LOG).log(BlocksForBuildersBlocks.STRIPPED_PINE_LOG).wood(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.PINE_LOG).log(BlocksForBuildersBlocks.PINE_LOG).wood(BlocksForBuildersBlocks.PINE_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_PINE_LOG).log(BlocksForBuildersBlocks.STRIPPED_PINE_LOG).wood(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.PINE_LEAVES, TexturedModel.LEAVES);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_PINE_LEAVES, BlocksForBuildersBlocks.PINE_LEAVES);
         registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.PINE_HEDGE, BlocksForBuildersBlocks.PINE_LEAVES);
@@ -169,8 +171,8 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_PINE_LOG, BlocksForBuildersBlocks.PINE_HANGING_SIGN, BlocksForBuildersBlocks.PINE_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.PINE_BOOKSHELF, BlocksForBuildersBlocks.PINE_PLANKS);
 
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.CEDAR_LOG).log(BlocksForBuildersBlocks.CEDAR_LOG).wood(BlocksForBuildersBlocks.CEDAR_WOOD);
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG).log(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG).wood(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.CEDAR_LOG).log(BlocksForBuildersBlocks.CEDAR_LOG).wood(BlocksForBuildersBlocks.CEDAR_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG).log(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG).wood(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.CEDAR_LEAVES, TexturedModel.LEAVES);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES, BlocksForBuildersBlocks.CEDAR_LEAVES);
         registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.CEDAR_HEDGE, BlocksForBuildersBlocks.CEDAR_LEAVES);
@@ -187,8 +189,8 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG, BlocksForBuildersBlocks.CEDAR_HANGING_SIGN, BlocksForBuildersBlocks.CEDAR_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.CEDAR_BOOKSHELF, BlocksForBuildersBlocks.CEDAR_PLANKS);
 
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG).log(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG).wood(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD);
-        blockStateModelGenerator.registerLog(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG).log(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG).wood(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG).log(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG).wood(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD);
+        blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG).log(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG).wood(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD);
         blockStateModelGenerator.registerSingleton(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES, TexturedModel.LEAVES);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES);
         registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.GREEN_JUNGLE_HEDGE, BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES);
@@ -342,11 +344,7 @@ public class BFBModelProvider extends FabricModelProvider {
         registerPillarSlab(blockStateModelGenerator, BlocksForBuildersBlocks.COCONUT_THATCH_SLAB, BlocksForBuildersBlocks.COCONUT_THATCH, true);
         registerPillarCarpet(blockStateModelGenerator, BlocksForBuildersBlocks.COCONUT_THATCH_RUG, BlocksForBuildersBlocks.COCONUT_THATCH, false);
 
-        Identifier identifier = TextureMap.getId(Blocks.DIRT);
-        Identifier identifier2 = TexturedModel.CUBE_BOTTOM_TOP.get(BlocksForBuildersBlocks.SCORCHED_GRASS).textures((textures) -> textures.put(TextureKey.BOTTOM, identifier)).upload(BlocksForBuildersBlocks.SCORCHED_GRASS, blockStateModelGenerator.modelCollector);
-        TextureMap textureMap = (new TextureMap()).put(TextureKey.BOTTOM, identifier).inherit(TextureKey.BOTTOM, TextureKey.PARTICLE).put(TextureKey.TOP, TextureMap.getSubId(Blocks.GRASS_BLOCK, "_top")).put(TextureKey.SIDE, TextureMap.getSubId(Blocks.GRASS_BLOCK, "_snow"));
-        BlockStateVariant blockStateVariant = BlockStateVariant.create().put(VariantSettings.MODEL, Models.CUBE_BOTTOM_TOP.upload(Blocks.GRASS_BLOCK, "_snow", textureMap, blockStateModelGenerator.modelCollector));
-        blockStateModelGenerator.registerTopSoil(BlocksForBuildersBlocks.SCORCHED_GRASS, identifier2, blockStateVariant);
+        registerGrassLike(blockStateModelGenerator, BlocksForBuildersBlocks.SCORCHED_GRASS);
         registerAltCarpet(blockStateModelGenerator, BlocksForBuildersBlocks.ASHEN_CARPET);
 
         registerPie(blockStateModelGenerator, PumpkinPie.PUMPKIN_PIE);
@@ -390,8 +388,8 @@ public class BFBModelProvider extends FabricModelProvider {
 
     public static void registerSign(BlockStateModelGenerator blockStateModelGenerator, Block particleBlock, Block signBlock, Block wallSignBlock) {
         Identifier identifier = Models.PARTICLE.upload(signBlock, TextureMap.particle(particleBlock), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(signBlock, identifier));
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(wallSignBlock, identifier));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(signBlock, createWeightedVariant(identifier)));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(wallSignBlock, createWeightedVariant(identifier)));
         blockStateModelGenerator.registerItemModel(signBlock.asItem());
     }
 
@@ -402,16 +400,23 @@ public class BFBModelProvider extends FabricModelProvider {
     public static void registerFallenLeaves(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource, ConstantTintSource tint) {
         Identifier parent = Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "fallen_leaves");
         Identifier identifier = new Model(Optional.of(parent), Optional.empty(), TextureKey.ALL).upload(block, TextureMap.all(textureSource), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, identifier));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(identifier)));
         if (tint != null) {
             blockStateModelGenerator.registerTintedItemModel(block, identifier, tint);
         }
     }
 
+    public static void registerGrassLike(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        Identifier parent = Identifier.ofVanilla("block/" + "cube_bottom_top");
+        Identifier identifier = new Model(Optional.of(parent), Optional.empty(), TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.TOP).upload(block,
+        new TextureMap().put(TextureKey.BOTTOM, getId(Blocks.DIRT)).put(TextureKey.SIDE, Identifier.of(getId(block) + "_side")).put(TextureKey.TOP, getId(block)), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(identifier)));
+    }
+
     public static void registerBookshelf(BlockStateModelGenerator blockStateModelGenerator, Block block, Block planks) {
         Identifier parent = Identifier.ofVanilla("block/" + "cube_column");
         Identifier identifier = new Model(Optional.of(parent), Optional.empty(), TextureKey.SIDE, TextureKey.END).upload(block, new TextureMap().put(TextureKey.SIDE, getId(block)).put(TextureKey.END, getId(planks)).put(TextureKey.PARTICLE, getId(block)), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, identifier));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(identifier)));
     }
 
     public static void registerHedge(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
@@ -435,8 +440,8 @@ public class BFBModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerTintedItemModel(block, straightId, tint);
         }
         else blockStateModelGenerator.registerItemModel(block.asItem(), straightId);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createHedgeBlockState(block, postId, singleId, cornerId, straightId, tShapeId, crossId,
-                tallPostId, tallSingleId, tallCornerId, tallStraightId, tallTShapeId, talLCrossId));
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createHedgeBlockState(block, createWeightedVariant(postId), createWeightedVariant(singleId), createWeightedVariant(cornerId), createWeightedVariant(straightId), createWeightedVariant(tShapeId),
+                createWeightedVariant(crossId), createWeightedVariant(tallPostId), createWeightedVariant(tallSingleId), createWeightedVariant(tallCornerId), createWeightedVariant(tallStraightId), createWeightedVariant(tallTShapeId), createWeightedVariant(talLCrossId)));
     }
 
     public static void registerParityStairs(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
@@ -451,7 +456,7 @@ public class BFBModelProvider extends FabricModelProvider {
         Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "stairs")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, new TextureMap().put(TextureKey.TOP, endSource).put(TextureKey.SIDE, textureSource).put(TextureKey.BOTTOM, endSource), blockStateModelGenerator.modelCollector);
         Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "inner_stairs")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, "_inner", new TextureMap().put(TextureKey.TOP, endSource).put(TextureKey.SIDE, textureSource).put(TextureKey.BOTTOM, endSource), blockStateModelGenerator.modelCollector);
         Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "outer_stairs")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, "_outer", new TextureMap().put(TextureKey.TOP, endSource).put(TextureKey.SIDE, textureSource).put(TextureKey.BOTTOM, endSource), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createStairsBlockState(block, identifier1, identifier, identifier2));
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createStairsBlockState(block, createWeightedVariant(identifier1), createWeightedVariant(identifier), createWeightedVariant(identifier2)));
     }
 
     public static void registerParityWall(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
@@ -462,7 +467,7 @@ public class BFBModelProvider extends FabricModelProvider {
         Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_post")), Optional.empty(), TextureKey.WALL).upload(block, "_post", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
         Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_side")), Optional.empty(), TextureKey.WALL).upload(block, "_side", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
         Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_side_tall")), Optional.empty(), TextureKey.WALL).upload(block, "_side_tall", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createWallBlockState(block, identifier, identifier1, identifier2));
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createWallBlockState(block, createWeightedVariant(identifier), createWeightedVariant(identifier1), createWeightedVariant(identifier2)));
         Identifier identifier3 = new Model(Optional.of(Identifier.ofVanilla("block/" + "wall_inventory")), Optional.empty(), TextureKey.WALL).upload(block, "_inventory", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.registerItemModel(block.asItem(), identifier3);
     }
@@ -474,7 +479,7 @@ public class BFBModelProvider extends FabricModelProvider {
     public static void registerParityFence(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource) {
         Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "fence_post")), Optional.empty(), TextureKey.TEXTURE).upload(block, "_post", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
         Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "fence_side")), Optional.empty(), TextureKey.TEXTURE).upload(block, "_side", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createFenceBlockState(block, identifier, identifier1));
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createFenceBlockState(block, createWeightedVariant(identifier), createWeightedVariant(identifier1)));
         Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "fence_inventory")), Optional.empty(), TextureKey.TEXTURE).upload(block, "_inventory", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.registerItemModel(block.asItem(), identifier2);
     }
@@ -488,7 +493,7 @@ public class BFBModelProvider extends FabricModelProvider {
         Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_fence_gate_open")), Optional.empty(), TextureKey.TEXTURE).upload(block, "_open", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
         Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_fence_gate_wall")), Optional.empty(), TextureKey.TEXTURE).upload(block, "_wall", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
         Identifier identifier3 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_fence_gate_wall_open")), Optional.empty(), TextureKey.TEXTURE).upload(block, "_wall_open", new TextureMap().put(TextureKey.TEXTURE, textureSource), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createFenceGateBlockState(block, identifier1, identifier, identifier3, identifier2, true));
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createFenceGateBlockState(block, createWeightedVariant(identifier1), createWeightedVariant(identifier), createWeightedVariant(identifier3), createWeightedVariant(identifier2), true));
     }
 
     public static void registerAltCarpet(BlockStateModelGenerator blockStateModelGenerator, Block block) {
@@ -502,7 +507,7 @@ public class BFBModelProvider extends FabricModelProvider {
     public static void registerAltCarpet(BlockStateModelGenerator blockStateModelGenerator, Block block, String textureSource) {
         Identifier parent = Identifier.ofVanilla("block/" + "carpet");
         Identifier identifier = new Model(Optional.of(parent), Optional.empty(), TextureKey.WOOL).upload(block, new TextureMap().put(TextureKey.WOOL, Identifier.of(textureSource)), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, identifier));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(identifier)));
     }
 
     public static void registerDirectionalBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
@@ -518,7 +523,7 @@ public class BFBModelProvider extends FabricModelProvider {
                 .put(TextureKey.SIDE, Identifier.of(textureSource)).put(TextureKey.END, Identifier.of(textureSource + "_top")), blockStateModelGenerator.modelCollector);
         new Model(Optional.of(Identifier.ofVanilla("block/" + "cube_column_horizontal")), Optional.empty(), TextureKey.SIDE, TextureKey.END).upload(block, "_horizontal", new TextureMap()
                 .put(TextureKey.SIDE, Identifier.of(textureSource)).put(TextureKey.END, Identifier.of(textureSource + "_top")), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createDirectionalBlockState(block, model));
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createDirectionalBlockState(block, createWeightedVariant(model)));
     }
 
     public static void registerDirectionalStairs(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource, boolean plural) {
@@ -554,7 +559,8 @@ public class BFBModelProvider extends FabricModelProvider {
                 .put(TextureKey.TOP, Identifier.of(rootTexture + "_outer_left")).put(TextureKey.BOTTOM, east).put(TextureKey.SIDE, baseTexture), blockStateModelGenerator.modelCollector);
         Identifier outerRight = new Model(Optional.of(Identifier.ofVanilla("block/" + "outer_stairs")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE).upload(block, "_outer_right", new TextureMap()
                 .put(TextureKey.TOP, Identifier.of(rootTexture + "_outer_right")).put(TextureKey.BOTTOM, east).put(TextureKey.SIDE, baseTexture), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createDirectionalStairsBlockState(block, straight, innerLeft, innerRight, outerLeft, outerRight));
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createDirectionalStairsBlockState(block,
+                createWeightedVariant(straight), createWeightedVariant(innerLeft), createWeightedVariant(innerRight), createWeightedVariant(outerLeft), createWeightedVariant(outerRight)));
     }
 
     public static void registerDirectionalSlab(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource, boolean plural) {
@@ -586,7 +592,7 @@ public class BFBModelProvider extends FabricModelProvider {
                 .put(TextureKey.TOP, baseTexture).put(TextureKey.BOTTOM, baseTexture).put(TextureKey.SIDE, topTexture).put(TextureKey.FRONT, topTexture).put(TextureKey.BACK, topTexture), blockStateModelGenerator.modelCollector);
         Identifier inventory = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_inventory", new TextureMap()
                 .put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, baseTexture).put(TextureKey.SIDE, baseTexture).put(TextureKey.FRONT, baseTexture).put(TextureKey.BACK, baseTexture), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createDirectionalSlabBlockState(block, slab, topSlab, baseTexture));
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createDirectionalSlabBlockState(block, createWeightedVariant(slab), createWeightedVariant(topSlab), createWeightedVariant(baseTexture)));
         blockStateModelGenerator.registerItemModel(block.asItem(), inventory);
     }
 
@@ -619,15 +625,16 @@ public class BFBModelProvider extends FabricModelProvider {
         Identifier rightTexture = Identifier.of(rootTexture + "_side_right");
         Identifier straight = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_stairs")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.END, TextureKey.FRONT, TextureKey.BACK).upload(block, new TextureMap()
                 .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.END, topTexture).put(TextureKey.FRONT, rightTexture).put(TextureKey.BACK, leftTexture), blockStateModelGenerator.modelCollector);
-        Identifier inner_left = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_stairs_inner")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.FRONT, TextureKey.BACK, TextureKey.END, TextureKey.SIDE).upload(block, "inner_left", new TextureMap()
+        Identifier innerLeft = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_stairs_inner")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.FRONT, TextureKey.BACK, TextureKey.END, TextureKey.SIDE).upload(block, "inner_left", new TextureMap()
                 .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.FRONT, rightTexture).put(TextureKey.BACK, leftTexture).put(TextureKey.END, topTexture).put(TextureKey.SIDE, topTexture), blockStateModelGenerator.modelCollector);
-        Identifier inner_right = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_stairs_inner")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.FRONT, TextureKey.BACK, TextureKey.END, TextureKey.SIDE).upload(block, "inner_right", new TextureMap()
+        Identifier innerRight = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_stairs_inner")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.FRONT, TextureKey.BACK, TextureKey.END, TextureKey.SIDE).upload(block, "inner_right", new TextureMap()
                 .put(TextureKey.TOP, bottomTexture).put(TextureKey.BOTTOM, sideTexture).put(TextureKey.FRONT, topTexture).put(TextureKey.BACK, topTexture).put(TextureKey.END, rightTexture).put(TextureKey.SIDE, leftTexture), blockStateModelGenerator.modelCollector);
-        Identifier outer_left = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_stairs_outer")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.FRONT, TextureKey.BACK, TextureKey.END, TextureKey.SIDE).upload(block, "outer_left", new TextureMap()
+        Identifier outerLeft = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_stairs_outer")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.FRONT, TextureKey.BACK, TextureKey.END, TextureKey.SIDE).upload(block, "outer_left", new TextureMap()
                 .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.FRONT, rightTexture).put(TextureKey.BACK, leftTexture).put(TextureKey.END, topTexture).put(TextureKey.SIDE, topTexture), blockStateModelGenerator.modelCollector);
-        Identifier outer_right = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_stairs_outer")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.FRONT, TextureKey.BACK, TextureKey.END, TextureKey.SIDE).upload(block, "outer_right", new TextureMap()
+        Identifier outerRight = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_stairs_outer")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.FRONT, TextureKey.BACK, TextureKey.END, TextureKey.SIDE).upload(block, "outer_right", new TextureMap()
                 .put(TextureKey.TOP, bottomTexture).put(TextureKey.BOTTOM, sideTexture).put(TextureKey.FRONT, topTexture).put(TextureKey.BACK, topTexture).put(TextureKey.END, rightTexture).put(TextureKey.SIDE, leftTexture), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createDirectionalStairsBlockState(block, straight, inner_left, inner_right, outer_left, outer_right));
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createDirectionalStairsBlockState(block,
+                createWeightedVariant(straight), createWeightedVariant(innerLeft), createWeightedVariant(innerRight), createWeightedVariant(outerLeft), createWeightedVariant(outerRight)));
     }
 
     public static void registerPillarSlab(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource, boolean side) {
@@ -675,7 +682,8 @@ public class BFBModelProvider extends FabricModelProvider {
                 .put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, topTexture).put(TextureKey.SIDE, bottomTexture).put(TextureKey.FRONT, bottomTexture).put(TextureKey.BACK, bottomTexture), blockStateModelGenerator.modelCollector);
         Identifier inventory = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_inventory", new TextureMap()
                 .put(TextureKey.TOP, bottomTexture).put(TextureKey.BOTTOM, bottomTexture).put(TextureKey.SIDE, rightTexture).put(TextureKey.FRONT, topDownTexture).put(TextureKey.BACK, topDownTexture), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createPillarSlabBlockState(block, slab, topSlab, yAxisSlab, yAxisTopSlab, horizontalModel));
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createPillarSlabBlockState(block,
+                createWeightedVariant(slab), createWeightedVariant(topSlab), createWeightedVariant(yAxisSlab), createWeightedVariant(yAxisTopSlab), createWeightedVariant(horizontalModel)));
         blockStateModelGenerator.registerItemModel(block.asItem(), inventory);
     }
 
@@ -709,7 +717,7 @@ public class BFBModelProvider extends FabricModelProvider {
                 .put(TextureKey.WALL, baseId).put(TextureKey.END, topTexture), blockStateModelGenerator.modelCollector);
         Identifier inventory = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_wall_inventory")), Optional.empty(), TextureKey.WALL, TextureKey.END).upload(block, "_inventory", new TextureMap()
                 .put(TextureKey.WALL, baseId).put(TextureKey.END, topTexture), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(createWallBlockState(block, post, side, tallSide));
+        blockStateModelGenerator.blockStateCollector.accept(createWallBlockState(block, createWeightedVariant(post), createWeightedVariant(side), createWeightedVariant(tallSide)));
         blockStateModelGenerator.registerItemModel(block.asItem(), inventory);
     }
 
@@ -741,7 +749,7 @@ public class BFBModelProvider extends FabricModelProvider {
                 .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.SIDE, topTexture).put(TextureKey.FRONT, rightTexture).put(TextureKey.BACK, leftTexture), blockStateModelGenerator.modelCollector);
         Identifier inventory = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_carpet")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_inventory", new TextureMap()
                 .put(TextureKey.TOP, bottomTexture).put(TextureKey.BOTTOM, bottomTexture).put(TextureKey.SIDE, leftTexture).put(TextureKey.FRONT, topTexture).put(TextureKey.BACK, topTexture), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createPillarCarpetBlockState(block, carpet));
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createPillarCarpetBlockState(block, createWeightedVariant(carpet)));
         blockStateModelGenerator.registerItemModel(block.asItem(), inventory);
     }
 
@@ -775,7 +783,8 @@ public class BFBModelProvider extends FabricModelProvider {
                 .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.SIDE, baseId), blockStateModelGenerator.modelCollector);
         Identifier outerTop = new Model(Optional.of(Identifier.ofVanilla("block/" + "stairs_outer")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE).upload(block, "_outer_top", new TextureMap()
                 .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.SIDE, downTexture), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createGrimstoneStyleStairsBlockState(block, straight, straightTop, inner, innerTop, outer, outerTop));
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createGrimstoneStyleStairsBlockState(block,
+                createWeightedVariant(straight), createWeightedVariant(straightTop), createWeightedVariant(inner), createWeightedVariant(innerTop), createWeightedVariant(outer), createWeightedVariant(outerTop)));
     }
 
     private static void registerPie(BlockStateModelGenerator blockStateModelGenerator, Block block) {
@@ -788,7 +797,8 @@ public class BFBModelProvider extends FabricModelProvider {
                 .put(TextureKey.TOP, Identifier.of(root + "_top")).put(TextureKey.BOTTOM, Identifier.of(root + "_bottom")).put(TextureKey.SIDE, Identifier.of(root + "_side")).put(TextureKey.INSIDE, Identifier.of(root + "_inside")), blockStateModelGenerator.modelCollector);
         Identifier threeBites = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pie_template_slice_3")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.INSIDE).upload(block, "_slice_3", new TextureMap()
                 .put(TextureKey.TOP, Identifier.of(root + "_top")).put(TextureKey.BOTTOM, Identifier.of(root + "_bottom")).put(TextureKey.SIDE, Identifier.of(root + "_side")).put(TextureKey.INSIDE, Identifier.of(root + "_inside")), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createPieBlockState(block, full, oneBite, twoBites, threeBites));
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createPieBlockState(block,
+                createWeightedVariant(full), createWeightedVariant(oneBite), createWeightedVariant(twoBites), createWeightedVariant(threeBites)));
     }
 
     private static void registerCoconut(BlockStateModelGenerator blockStateModelGenerator, Block block, Item item, Item emptyItem, Item strippedItem, Item strippedEmptyItem) {
@@ -801,7 +811,8 @@ public class BFBModelProvider extends FabricModelProvider {
                 .put(TextureKey.TOP, Identifier.of(root + "_empty_top")).put(TextureKey.SIDE, Identifier.of(root + "_empty")), blockStateModelGenerator.modelCollector);
         Identifier emptySheared = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "coconut_template")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE).upload(block, "_stripped_empty", new TextureMap()
                 .put(TextureKey.TOP, Identifier.of(root + "_empty_stripped_top")).put(TextureKey.SIDE, Identifier.of(root + "_empty")), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createCoconutBlockState(block, base, stripped, empty, emptySheared));
+        blockStateModelGenerator.blockStateCollector.accept(BFBBlockStateSuppliers.createCoconutBlockState(block,
+                createWeightedVariant(base), createWeightedVariant(stripped), createWeightedVariant(empty), createWeightedVariant(emptySheared)));
         Identifier sprite = blockStateModelGenerator.uploadItemModel(item);
         blockStateModelGenerator.registerItemModel(item, sprite);
         Identifier emptySprite = blockStateModelGenerator.uploadItemModel(emptyItem);
@@ -819,5 +830,17 @@ public class BFBModelProvider extends FabricModelProvider {
 
     private static String bfbTexture(String string) {
         return String.valueOf(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + string));
+    }
+
+    public static ModelVariant createModelVariant(Identifier id) {
+        return new ModelVariant(id);
+    }
+
+    public static WeightedVariant createWeightedVariant(ModelVariant variant) {
+        return new WeightedVariant(Pool.of(variant));
+    }
+
+    public static WeightedVariant createWeightedVariant(Identifier id) {
+        return createWeightedVariant(createModelVariant(id));
     }
 }

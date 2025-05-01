@@ -13,15 +13,15 @@ public class BFBVillagerTrades {
         TradeOfferHelper.registerWanderingTraderOffers(1, (factories) -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 5),
+                    new ItemStack(BlocksForBuildersBlocks.WILLOW_SAPLING, 1), 3, 0, 0f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 5),
                     new ItemStack(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING, 1), 3, 0, 0f
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 5),
                     new ItemStack(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.WILLOW_SAPLING, 1), 3, 0, 0f
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 5),
