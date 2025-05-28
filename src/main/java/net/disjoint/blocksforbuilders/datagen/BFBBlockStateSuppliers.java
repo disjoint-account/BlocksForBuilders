@@ -212,13 +212,13 @@ public class BFBBlockStateSuppliers {
     public static VariantsBlockModelDefinitionCreator createCoconutBlockState(Block block, WeightedVariant identifier, WeightedVariant strippedId, WeightedVariant emptyId, WeightedVariant strippedEmptyId) {
         return VariantsBlockModelDefinitionCreator.of(block).with(BlockStateVariantMap.models(CoconutBlock.HANGING, CoconutBlock.HAS_FIBER, CoconutBlock.HAS_MILK)
                                 .register(false, true, true, identifier)
-                                .register(true, true, true, identifier.apply(ROTATE_Y_180))
+                                .register(true, true, true, identifier.apply(ROTATE_X_180))
                                 .register(false, true, false, emptyId)
-                                .register(true, true, false, emptyId.apply(ROTATE_Y_180))
+                                .register(true, true, false, emptyId.apply(ROTATE_X_180))
                                 .register(false, false, true, strippedId)
-                                .register(true, false, true, strippedId.apply(ROTATE_Y_180))
+                                .register(true, false, true, strippedId.apply(ROTATE_X_180))
                                 .register(false, false, false, strippedEmptyId)
-                                .register(true, false, false, strippedEmptyId.apply(ROTATE_Y_180)));
+                                .register(true, false, false, strippedEmptyId.apply(ROTATE_X_180)));
     }
 
 }

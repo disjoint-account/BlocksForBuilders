@@ -409,7 +409,7 @@ public class BFBModelProvider extends FabricModelProvider {
     public static void registerGrassLike(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         Identifier parent = Identifier.ofVanilla("block/" + "cube_bottom_top");
         Identifier identifier = new Model(Optional.of(parent), Optional.empty(), TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.TOP).upload(block,
-        new TextureMap().put(TextureKey.BOTTOM, getId(Blocks.DIRT)).put(TextureKey.SIDE, Identifier.of(getId(block) + "_side")).put(TextureKey.TOP, getId(block)), blockStateModelGenerator.modelCollector);
+        new TextureMap().put(TextureKey.BOTTOM, getId(Blocks.DIRT)).put(TextureKey.SIDE, Identifier.of(getId(block) + "_side")).put(TextureKey.TOP, Identifier.of(getId(block) + "_top")), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(identifier)));
     }
 
@@ -655,17 +655,20 @@ public class BFBModelProvider extends FabricModelProvider {
         int i = baseTextureName.length();
         Identifier rootTexture = Identifier.of(bfbTexture(baseTextureName.substring(0, i)));
         Identifier topTexture = Identifier.of(baseId + "_top");
+        Identifier sideTexture;
         Identifier leftTexture;
         Identifier rightTexture;
         Identifier bottomTexture;
         Identifier topDownTexture;
         if (side) {
+            sideTexture = Identifier.of(baseId + "_side");
             bottomTexture = Identifier.of(rootTexture + "_side_bottom");
             leftTexture = Identifier.of(rootTexture + "_side_left");
             rightTexture = Identifier.of(rootTexture + "_side_right");
             topDownTexture = Identifier.of(rootTexture + "_top_bottom");
         }
         else {
+            sideTexture = baseId;
             leftTexture = Identifier.of(rootTexture + "_left");
             rightTexture = Identifier.of(rootTexture + "_right");
             bottomTexture = Identifier.of(rootTexture + "_down");
@@ -677,7 +680,7 @@ public class BFBModelProvider extends FabricModelProvider {
         Identifier topSlab = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab_top")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_top", new TextureMap()
                 .put(TextureKey.TOP, leftTexture).put(TextureKey.BOTTOM, leftTexture).put(TextureKey.SIDE, topDownTexture).put(TextureKey.FRONT, rightTexture).put(TextureKey.BACK, leftTexture), blockStateModelGenerator.modelCollector);
         Identifier yAxisSlab = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_y_axis", new TextureMap()
-                .put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, topTexture).put(TextureKey.SIDE, baseId).put(TextureKey.FRONT, baseId).put(TextureKey.BACK, baseId), blockStateModelGenerator.modelCollector);
+                .put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, topTexture).put(TextureKey.SIDE, sideTexture).put(TextureKey.FRONT, sideTexture).put(TextureKey.BACK, sideTexture), blockStateModelGenerator.modelCollector);
         Identifier yAxisTopSlab = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab_top")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_y_axis_top", new TextureMap()
                 .put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, topTexture).put(TextureKey.SIDE, bottomTexture).put(TextureKey.FRONT, bottomTexture).put(TextureKey.BACK, bottomTexture), blockStateModelGenerator.modelCollector);
         Identifier inventory = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_slab")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK).upload(block, "_inventory", new TextureMap()

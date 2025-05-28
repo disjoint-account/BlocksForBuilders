@@ -1,60 +1,32 @@
 package net.disjoint.blocksforbuilders.villagers;
 
+import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.BlocksForBuildersItems;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.village.TradeOffer;
-import net.minecraft.village.TradedItem;
+import net.minecraft.util.Identifier;
+import net.minecraft.village.TradeOffers.Factory;
+import net.minecraft.village.TradeOffers.SellItemFactory;
+
+import java.util.ArrayList;
 
 public class BFBVillagerTrades {
     public static void registerTrades() {
-        TradeOfferHelper.registerWanderingTraderOffers(1, (factories) -> {
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.WILLOW_SAPLING, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersItems.COCONUT, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.MAPLE_SAPLING, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.BEECH_SAPLING, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.PINE_SAPLING, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.CEDAR_SAPLING, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 1), 3, 0, 0f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 1), 3, 0, 0f
-            ));
+        TradeOfferHelper.registerWanderingTraderOffers((consumer)-> {
+            ArrayList<Factory> trades = new ArrayList<>();
+
+            trades.add(new SellItemFactory(BlocksForBuildersBlocks.WILLOW_SAPLING, 5, 1, 3, 0));
+            trades.add(new SellItemFactory(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING, 5, 1, 3, 0));
+            trades.add(new SellItemFactory(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, 5, 1, 3, 0));
+            trades.add(new SellItemFactory(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING, 5, 1, 3, 0));
+            trades.add(new SellItemFactory(BlocksForBuildersItems.COCONUT, 5, 1, 3, 0));
+            trades.add(new SellItemFactory(BlocksForBuildersBlocks.MAPLE_SAPLING, 5, 1, 3, 0));
+            trades.add(new SellItemFactory(BlocksForBuildersBlocks.BEECH_SAPLING, 5, 1, 3, 0));
+            trades.add(new SellItemFactory(BlocksForBuildersBlocks.PINE_SAPLING, 5, 1, 3, 0));
+            trades.add(new SellItemFactory(BlocksForBuildersBlocks.CEDAR_SAPLING, 5, 1, 3, 0));
+            trades.add(new SellItemFactory(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 5, 1, 3, 0));
+            trades.add(new SellItemFactory(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 5, 1, 3, 0));
+            consumer.pool(Identifier.of(BlocksForBuilders.MOD_ID), 1, trades);
         });
     }
 }

@@ -1,24 +1,7 @@
 {
   "variants": {
-    "snowy=false": [
-      {
-        "model": "blocksforbuilders:block/scorched_grass"
-      },
-      {
-        "model": "blocksforbuilders:block/scorched_grass",
-        "y": 90
-      },
-      {
-        "model": "blocksforbuilders:block/scorched_grass",
-        "y": 180
-      },
-      {
-        "model": "blocksforbuilders:block/scorched_grass",
-        "y": 270
-      }
-    ],
-    "snowy=true": {
-      "model": "minecraft:block/grass_block_snow"
+    "": {
+      "model": "blocksforbuilders:block/scorched_grass"
     }
   }
 }

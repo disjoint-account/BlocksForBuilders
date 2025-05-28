@@ -14,22 +14,18 @@
     },
     "hanging=true,has_fiber=false,has_milk=false": {
       "model": "blocksforbuilders:block/coconut_stripped_empty",
-      "uvlock": false,
       "x": 180
     },
     "hanging=true,has_fiber=false,has_milk=true": {
       "model": "blocksforbuilders:block/coconut_stripped",
-      "uvlock": false,
       "x": 180
     },
     "hanging=true,has_fiber=true,has_milk=false": {
       "model": "blocksforbuilders:block/coconut_empty",
-      "uvlock": false,
       "x": 180
     },
     "hanging=true,has_fiber=true,has_milk=true": {
       "model": "blocksforbuilders:block/coconut",
-      "uvlock": false,
       "x": 180
     }
   }

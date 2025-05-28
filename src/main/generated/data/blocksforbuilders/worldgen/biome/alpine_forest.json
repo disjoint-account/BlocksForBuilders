@@ -92,8 +92,9 @@
       "minecraft:red_mushroom_old_growth",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
+      "minecraft:patch_pumpkin",
       "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin"
+      "minecraft:patch_firefly_bush_near_water"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -146,7 +147,7 @@
         "type": "minecraft:rabbit",
         "maxCount": 3,
         "minCount": 2,
-        "weight": 4
+        "weight": 8
       },
       {
         "type": "minecraft:fox",

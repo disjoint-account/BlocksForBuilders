@@ -2,23 +2,19 @@
   "variants": {
     "facing=down": {
       "model": "blocksforbuilders:block/cracked_grimstone_tiles",
-      "uvlock": false,
       "x": 180
     },
     "facing=east": {
       "model": "blocksforbuilders:block/cracked_grimstone_tiles",
-      "uvlock": false,
       "x": 90,
       "y": 90
     },
     "facing=north": {
       "model": "blocksforbuilders:block/cracked_grimstone_tiles",
-      "uvlock": false,
       "x": 90
     },
     "facing=south": {
       "model": "blocksforbuilders:block/cracked_grimstone_tiles",
-      "uvlock": false,
       "x": 90,
       "y": 180
     },
@@ -27,7 +23,6 @@
     },
     "facing=west": {
       "model": "blocksforbuilders:block/cracked_grimstone_tiles",
-      "uvlock": false,
       "x": 90,
       "y": 270
     }

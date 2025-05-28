@@ -32,22 +32,22 @@
         ]
       }
     },
-    "has_sheared_coconut": {
+    "has_stripped_coconut": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:sheared_coconut"
+            "items": "blocksforbuilders:stripped_coconut"
           }
         ]
       }
     },
-    "has_empty_sheared_coconut": {
+    "has_empty_stripped_coconut": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:sheared_empty_coconut"
+            "items": "blocksforbuilders:stripped_empty_coconut"
           }
         ]
       }
@@ -57,8 +57,8 @@
     [
       "has_coconut",
       "has_empty_coconut",
-      "has_sheared_coconut",
-      "has_empty_sheared_coconut"
+      "has_stripped_coconut",
+      "has_empty_stripped_coconut"
     ]
   ],
   "sends_telemetry_event": true

@@ -47,7 +47,7 @@
                   }
                 }
               ],
-              "name": "blocksforbuilders:sheared_coconut"
+              "name": "blocksforbuilders:stripped_coconut"
             },
             {
               "type": "minecraft:item",
@@ -61,7 +61,7 @@
                   }
                 }
               ],
-              "name": "blocksforbuilders:sheared_empty_coconut"
+              "name": "blocksforbuilders:stripped_empty_coconut"
             }
           ]
         }

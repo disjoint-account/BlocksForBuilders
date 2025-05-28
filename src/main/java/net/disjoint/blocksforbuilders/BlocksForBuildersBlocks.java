@@ -4,7 +4,7 @@ import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBHangingSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallHangingSignBlock;
 import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallSignBlock;
-import net.disjoint.blocksforbuilders.util.BFBParticleTypes;
+import net.disjoint.blocksforbuilders.util.particles.BFBParticleTypes;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBSaplingGenerators;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;

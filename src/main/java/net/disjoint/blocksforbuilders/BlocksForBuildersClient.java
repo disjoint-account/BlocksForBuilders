@@ -1,8 +1,11 @@
 package net.disjoint.blocksforbuilders;
 
 import net.disjoint.blocksforbuilders.boatstuff.BFBEntityModelLayers;
+import net.disjoint.blocksforbuilders.util.particles.BFBLeavesParticle;
+import net.disjoint.blocksforbuilders.util.particles.BFBParticleTypes;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.client.color.world.BiomeColors;
@@ -91,6 +94,17 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.MANGROVE_HEDGE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.CHERRY_HEDGE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlocksForBuildersBlocks.PALE_OAK_HEDGE, RenderLayer.getCutout());
+
+        ParticleFactoryRegistry.getInstance().register(BFBParticleTypes.GHOSTWOOD_LEAVES, BFBLeavesParticle.GhostwoodLeavesFactory::new);
+        ParticleFactoryRegistry.getInstance().register(BFBParticleTypes.GREEN_JUNGLE_LEAVES, BFBLeavesParticle.GreenJungleLeavesFactory::new);
+        ParticleFactoryRegistry.getInstance().register(BFBParticleTypes.WILLOW_LEAVES, BFBLeavesParticle.WillowLeavesFactory::new);
+        ParticleFactoryRegistry.getInstance().register(BFBParticleTypes.PALM_LEAVES, BFBLeavesParticle.PalmLeavesFactory::new);
+        ParticleFactoryRegistry.getInstance().register(BFBParticleTypes.MAPLE_LEAVES, BFBLeavesParticle.MapleLeavesFactory::new);
+        ParticleFactoryRegistry.getInstance().register(BFBParticleTypes.BEECH_LEAVES, BFBLeavesParticle.BeechLeavesFactory::new);
+        ParticleFactoryRegistry.getInstance().register(BFBParticleTypes.PINE_LEAVES, BFBLeavesParticle.PineLeavesFactory::new);
+        ParticleFactoryRegistry.getInstance().register(BFBParticleTypes.CEDAR_LEAVES, BFBLeavesParticle.CedarLeavesFactory::new);
+        ParticleFactoryRegistry.getInstance().register(BFBParticleTypes.GOLD_ACACIA_LEAVES, BFBLeavesParticle.GoldAcaciaLeavesFactory::new);
+        ParticleFactoryRegistry.getInstance().register(BFBParticleTypes.YELLOW_BIRCH_LEAVES, BFBLeavesParticle.YellowBirchLeavesFactory::new);
     }
 
     static {

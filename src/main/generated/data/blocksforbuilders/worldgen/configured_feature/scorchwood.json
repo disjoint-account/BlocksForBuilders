@@ -5,10 +5,7 @@
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "blocksforbuilders:scorched_grass",
-        "Properties": {
-          "snowy": "false"
-        }
+        "Name": "blocksforbuilders:scorched_grass"
       }
     },
     "foliage_placer": {

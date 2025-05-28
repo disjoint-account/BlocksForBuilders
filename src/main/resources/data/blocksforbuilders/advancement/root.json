@@ -13,7 +13,7 @@
   },
     "display": {
       "announce_to_chat": false,
-      "background": "blocksforbuilders:textures/block/willow_planks.png",
+      "background": "blocksforbuilders:block/willow_planks",
       "description": {
         "translate": "advancements.blocksforbuilders.root.description"
       },

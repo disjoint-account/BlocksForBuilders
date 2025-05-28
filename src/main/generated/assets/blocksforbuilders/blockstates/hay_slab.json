@@ -2,18 +2,15 @@
   "variants": {
     "facing=down,type=bottom": {
       "model": "blocksforbuilders:block/hay_slab_y_axis_top",
-      "uvlock": false,
       "x": 180
     },
     "facing=down,type=double": {
       "model": "minecraft:block/hay_block_horizontal",
-      "uvlock": false,
       "x": 180,
       "y": 180
     },
     "facing=down,type=top": {
       "model": "blocksforbuilders:block/hay_slab_y_axis",
-      "uvlock": false,
       "x": 180
     },
     "facing=east,type=bottom": {
@@ -21,7 +18,6 @@
     },
     "facing=east,type=double": {
       "model": "minecraft:block/hay_block_horizontal",
-      "uvlock": false,
       "x": 270,
       "y": 90
     },
@@ -30,32 +26,26 @@
     },
     "facing=north,type=bottom": {
       "model": "blocksforbuilders:block/hay_slab",
-      "uvlock": false,
       "y": 270
     },
     "facing=north,type=double": {
       "model": "minecraft:block/hay_block_horizontal",
-      "uvlock": false,
       "x": 270
     },
     "facing=north,type=top": {
       "model": "blocksforbuilders:block/hay_slab_top",
-      "uvlock": false,
       "y": 270
     },
     "facing=south,type=bottom": {
       "model": "blocksforbuilders:block/hay_slab",
-      "uvlock": false,
       "y": 90
     },
     "facing=south,type=double": {
       "model": "minecraft:block/hay_block_horizontal",
-      "uvlock": false,
       "x": 270
     },
     "facing=south,type=top": {
       "model": "blocksforbuilders:block/hay_slab_top",
-      "uvlock": false,
       "y": 90
     },
     "facing=up,type=bottom": {
@@ -63,7 +53,6 @@
     },
     "facing=up,type=double": {
       "model": "minecraft:block/hay_block_horizontal",
-      "uvlock": false,
       "y": 180
     },
     "facing=up,type=top": {
@@ -71,18 +60,15 @@
     },
     "facing=west,type=bottom": {
       "model": "blocksforbuilders:block/hay_slab",
-      "uvlock": false,
       "y": 180
     },
     "facing=west,type=double": {
       "model": "minecraft:block/hay_block_horizontal",
-      "uvlock": false,
       "x": 270,
       "y": 90
     },
     "facing=west,type=top": {
       "model": "blocksforbuilders:block/hay_slab_top",
-      "uvlock": false,
       "y": 180
     }
   }
