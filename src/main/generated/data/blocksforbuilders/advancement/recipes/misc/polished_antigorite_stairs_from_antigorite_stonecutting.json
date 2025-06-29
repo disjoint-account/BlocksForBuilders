@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:polished_antigorite_stairs_from_antigorite_stonecutting"
+        "recipe": "blocksforbuilders:polished_antigorite_stairs_from_antigorite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:polished_antigorite_stairs_from_antigorite_stonecutting"
+      "blocksforbuilders:polished_antigorite_stairs_from_antigorite_stonecutting"
     ]
   }
 }

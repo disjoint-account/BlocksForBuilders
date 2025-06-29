@@ -18,7 +18,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(BFBTags.Items.BOOKSHELVES)
+        valueLookupBuilder(BFBTags.Items.BOOKSHELVES)
                 .add(Items.BOOKSHELF)
                 .add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF.asItem())
                 .add(BlocksForBuildersBlocks.SPRUCE_BOOKSHELF.asItem())
@@ -42,61 +42,61 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.CEDAR_BOOKSHELF.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF.asItem());
 
-        getOrCreateTagBuilder(BFBTags.Items.GHOSTWOOD_LOGS)
+        valueLookupBuilder(BFBTags.Items.GHOSTWOOD_LOGS)
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LOG.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD.asItem());
 
-        getOrCreateTagBuilder(BFBTags.Items.SCORCHWOOD_LOGS)
+        valueLookupBuilder(BFBTags.Items.SCORCHWOOD_LOGS)
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_LOG.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_WOOD.asItem());
 
-        getOrCreateTagBuilder(BFBTags.Items.WILLOW_LOGS)
+        valueLookupBuilder(BFBTags.Items.WILLOW_LOGS)
                 .add(BlocksForBuildersBlocks.WILLOW_LOG.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD.asItem());
 
-        getOrCreateTagBuilder(BFBTags.Items.PALM_LOGS)
+        valueLookupBuilder(BFBTags.Items.PALM_LOGS)
                 .add(BlocksForBuildersBlocks.PALM_LOG.asItem())
                 .add(BlocksForBuildersBlocks.PALM_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_PALM_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_PALM_WOOD.asItem());
 
-        getOrCreateTagBuilder(BFBTags.Items.MAPLE_LOGS)
+        valueLookupBuilder(BFBTags.Items.MAPLE_LOGS)
                 .add(BlocksForBuildersBlocks.MAPLE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.MAPLE_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD.asItem());
 
-        getOrCreateTagBuilder(BFBTags.Items.BEECH_LOGS)
+        valueLookupBuilder(BFBTags.Items.BEECH_LOGS)
                 .add(BlocksForBuildersBlocks.BEECH_LOG.asItem())
                 .add(BlocksForBuildersBlocks.BEECH_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD.asItem());
 
-        getOrCreateTagBuilder(BFBTags.Items.PINE_LOGS)
+        valueLookupBuilder(BFBTags.Items.PINE_LOGS)
                 .add(BlocksForBuildersBlocks.PINE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.PINE_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_PINE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD.asItem());
 
-        getOrCreateTagBuilder(BFBTags.Items.CEDAR_LOGS)
+        valueLookupBuilder(BFBTags.Items.CEDAR_LOGS)
                 .add(BlocksForBuildersBlocks.CEDAR_LOG.asItem())
                 .add(BlocksForBuildersBlocks.CEDAR_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD.asItem());
 
-        getOrCreateTagBuilder(BFBTags.Items.GREEN_JUNGLE_LOGS)
+        valueLookupBuilder(BFBTags.Items.GREEN_JUNGLE_LOGS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD.asItem());
 
-        getOrCreateTagBuilder(ItemTags.BOATS)
+        valueLookupBuilder(ItemTags.BOATS)
                 .add(BlocksForBuildersItems.GREEN_JUNGLE_BOAT)
                 .add(BlocksForBuildersItems.GHOSTWOOD_BOAT)
                 .add(BlocksForBuildersItems.SCORCHWOOD_BOAT)
@@ -108,7 +108,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersItems.CEDAR_BOAT)
                 .add(BlocksForBuildersItems.GREEN_BAMBOO_RAFT);
 
-        getOrCreateTagBuilder(ItemTags.CHEST_BOATS)
+        valueLookupBuilder(ItemTags.CHEST_BOATS)
                 .add(BlocksForBuildersItems.GREEN_JUNGLE_CHEST_BOAT)
                 .add(BlocksForBuildersItems.GHOSTWOOD_CHEST_BOAT)
                 .add(BlocksForBuildersItems.SCORCHWOOD_CHEST_BOAT)
@@ -120,7 +120,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersItems.CEDAR_CHEST_BOAT)
                 .add(BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT);
 
-        getOrCreateTagBuilder(ItemTags.DOORS)
+        valueLookupBuilder(ItemTags.DOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_DOOR.asItem())
@@ -132,7 +132,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.CEDAR_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR.asItem());
 
-        getOrCreateTagBuilder(ItemTags.FENCES)
+        valueLookupBuilder(ItemTags.FENCES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_FENCE.asItem())
@@ -146,7 +146,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.RED_NETHER_BRICK_FENCE.asItem());
 
-        getOrCreateTagBuilder(ItemTags.HANGING_SIGNS)
+        valueLookupBuilder(ItemTags.HANGING_SIGNS)
                 .add(BlocksForBuildersItems.GREEN_JUNGLE_HANGING_SIGN_ITEM)
                 .add(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM)
                 .add(BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM)
@@ -158,7 +158,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersItems.PINE_HANGING_SIGN_ITEM)
                 .add(BlocksForBuildersItems.CEDAR_HANGING_SIGN_ITEM);
 
-        getOrCreateTagBuilder(ItemTags.LEAVES)
+        valueLookupBuilder(ItemTags.LEAVES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_LEAVES.asItem())
@@ -170,7 +170,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES.asItem())
                 .add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES.asItem());
 
-        getOrCreateTagBuilder(ItemTags.LOGS)
+        valueLookupBuilder(ItemTags.LOGS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG.asItem())
@@ -208,7 +208,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD.asItem());
 
-        getOrCreateTagBuilder(ItemTags.PLANKS)
+        valueLookupBuilder(ItemTags.PLANKS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_PLANKS.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_PLANKS.asItem())
@@ -220,7 +220,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.CEDAR_PLANKS.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS.asItem());
 
-        getOrCreateTagBuilder(ItemTags.SAPLINGS)
+        valueLookupBuilder(ItemTags.SAPLINGS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING.asItem())
@@ -233,7 +233,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING.asItem())
                 .add(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING.asItem());
 
-        getOrCreateTagBuilder(ItemTags.SIGNS)
+        valueLookupBuilder(ItemTags.SIGNS)
                 .add(BlocksForBuildersItems.GREEN_JUNGLE_SIGN_ITEM)
                 .add(BlocksForBuildersItems.GHOSTWOOD_SIGN_ITEM)
                 .add(BlocksForBuildersItems.SCORCHWOOD_SIGN_ITEM)
@@ -245,7 +245,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersItems.CEDAR_SIGN_ITEM)
                 .add(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM);
 
-        getOrCreateTagBuilder(ItemTags.SLABS)
+        valueLookupBuilder(ItemTags.SLABS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_SLAB.asItem())
@@ -270,7 +270,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB.asItem());
 
-        getOrCreateTagBuilder(ItemTags.STAIRS)
+        valueLookupBuilder(ItemTags.STAIRS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_STAIRS.asItem())
@@ -298,7 +298,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS.asItem());
 
-        getOrCreateTagBuilder(ItemTags.TRAPDOORS)
+        valueLookupBuilder(ItemTags.TRAPDOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.WILLOW_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.PALM_TRAPDOOR.asItem())
@@ -310,7 +310,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR.asItem());
 
-        getOrCreateTagBuilder(ItemTags.WALLS)
+        valueLookupBuilder(ItemTags.WALLS)
                 .add(BlocksForBuildersBlocks.GRIMSTONE_WALL.asItem())
                 .add(BlocksForBuildersBlocks.POLISHED_GRIMSTONE_WALL.asItem())
                 .add(BlocksForBuildersBlocks.GRIMSTONE_BRICK_WALL.asItem())
@@ -331,7 +331,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL.asItem());
 
-        getOrCreateTagBuilder(ItemTags.WOODEN_BUTTONS)
+        valueLookupBuilder(ItemTags.WOODEN_BUTTONS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_BUTTON.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_BUTTON.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_BUTTON.asItem())
@@ -343,7 +343,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PINE_BUTTON.asItem())
                 .add(BlocksForBuildersBlocks.CEDAR_BUTTON.asItem());
 
-        getOrCreateTagBuilder(ItemTags.WOODEN_DOORS)
+        valueLookupBuilder(ItemTags.WOODEN_DOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_DOOR.asItem())
@@ -355,7 +355,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PINE_DOOR.asItem())
                 .add(BlocksForBuildersBlocks.CEDAR_DOOR.asItem());
 
-        getOrCreateTagBuilder(ItemTags.WOODEN_FENCES)
+        valueLookupBuilder(ItemTags.WOODEN_FENCES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_FENCE.asItem())
@@ -367,7 +367,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PINE_FENCE.asItem())
                 .add(BlocksForBuildersBlocks.CEDAR_FENCE.asItem());
 
-        getOrCreateTagBuilder(ItemTags.WOODEN_PRESSURE_PLATES)
+        valueLookupBuilder(ItemTags.WOODEN_PRESSURE_PLATES)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_PRESSURE_PLATE.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_PRESSURE_PLATE.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_PRESSURE_PLATE.asItem())
@@ -379,7 +379,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PINE_PRESSURE_PLATE.asItem())
                 .add(BlocksForBuildersBlocks.CEDAR_PRESSURE_PLATE.asItem());
 
-        getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
+        valueLookupBuilder(ItemTags.WOODEN_SLABS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_SLAB.asItem())
@@ -391,7 +391,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PINE_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.CEDAR_SLAB.asItem());
 
-        getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
+        valueLookupBuilder(ItemTags.WOODEN_STAIRS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_STAIRS.asItem())
@@ -403,7 +403,7 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PINE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.CEDAR_STAIRS.asItem());
 
-        getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
+        valueLookupBuilder(ItemTags.WOODEN_TRAPDOORS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.SCORCHWOOD_TRAPDOOR.asItem())
@@ -415,16 +415,16 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.PINE_TRAPDOOR.asItem())
                 .add(BlocksForBuildersBlocks.CEDAR_TRAPDOOR.asItem());
 
-        getOrCreateTagBuilder(ItemTags.DIRT)
+        valueLookupBuilder(ItemTags.DIRT)
                 .add(BlocksForBuildersBlocks.SCORCHED_GRASS.asItem());
 
-        getOrCreateTagBuilder(BFBTags.Items.COCONUTS)
+        valueLookupBuilder(BFBTags.Items.COCONUTS)
                 .add(BlocksForBuildersItems.COCONUT)
                 .add(BlocksForBuildersItems.EMPTY_COCONUT)
                 .add(BlocksForBuildersItems.STRIPPED_COCONUT)
                 .add(BlocksForBuildersItems.STRIPPED_EMPTY_COCONUT);
 
-        getOrCreateTagBuilder(BFBTags.Items.BFB_TAG)
+        valueLookupBuilder(BFBTags.Items.BFB_TAG)
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG.asItem())
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_WOOD.asItem())

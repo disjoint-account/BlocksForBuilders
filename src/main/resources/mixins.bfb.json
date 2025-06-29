@@ -3,14 +3,8 @@
   "package": "net.disjoint.blocksforbuilders.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "MixinAbstractSignBlockEntityRenderer",
-    "MixinHandledScreen",
-    "MixinHangingSignEditScreen",
-    "MixinSignBlockEntityRenderer"
   ],
   "mixins": [
-    "MixinAbstractBlockSettings",
-    "MixinBlockEntityType",
     "MixinPumpkinPie",
     "MixinPumpkinPieFood",
     "MixinShearsDispenserBehavior",

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cracked_red_nether_bricks_from_smelting_red_nether_bricks"
+        "recipe": "blocksforbuilders:cracked_red_nether_bricks_from_smelting_red_nether_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cracked_red_nether_bricks_from_smelting_red_nether_bricks"
+      "blocksforbuilders:cracked_red_nether_bricks_from_smelting_red_nether_bricks"
     ]
   }
 }

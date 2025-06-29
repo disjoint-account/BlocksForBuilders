@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:scorchwood_sapling_from_smelting_coconut"
+        "recipe": "blocksforbuilders:scorchwood_sapling_from_smelting_coconut"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:scorchwood_sapling_from_smelting_coconut"
+      "blocksforbuilders:scorchwood_sapling_from_smelting_coconut"
     ]
   }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:red_sandstone_brick_wall_from_cut_red_sandstone_stonecutting"
+        "recipe": "blocksforbuilders:red_sandstone_brick_wall_from_cut_red_sandstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:red_sandstone_brick_wall_from_cut_red_sandstone_stonecutting"
+      "blocksforbuilders:red_sandstone_brick_wall_from_cut_red_sandstone_stonecutting"
     ]
   }
 }

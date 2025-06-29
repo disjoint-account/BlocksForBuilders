@@ -1,4 +1,4 @@
-// 1.21.5	-999999999-01-01T00:00:00	Blocks For Builders/Block Loot Tables
+// 1.21.6	-999999999-01-01T00:00:00	Blocks For Builders/Block Loot Tables
 9fef39756956d686412cf2a89781cf2ab7981511 data/blocksforbuilders/loot_table/blocks/acacia_bookshelf.json
 13153538d3f5dde051e1599f4d79d61e66a9dc18 data/blocksforbuilders/loot_table/blocks/acacia_hedge.json
 3512d264d6383e91c21cadccef94a9c419648eff data/blocksforbuilders/loot_table/blocks/antigorite.json
@@ -316,9 +316,7 @@ eafcf9b52438bd829129df0eb4ca37dfc8bdef96 data/blocksforbuilders/loot_table/block
 330069e1528464e8aa668ff930c2d02e13716690 data/blocksforbuilders/loot_table/blocks/yellow_birch_hedge.json
 9f92ed80d1e97b49824cd9c160da3d84cfc5132a data/blocksforbuilders/loot_table/blocks/yellow_birch_leaves.json
 819877525f80c28469980015bcef3a76ac07d555 data/blocksforbuilders/loot_table/blocks/yellow_birch_sapling.json
-27d6451035e2aaca79c2e70601e7523eada528f1 data/minecraft/loot_table/blocks/bamboo_hanging_sign.json
-a595b06b5f89a6a70c9b0c0c48d4f5b0fbdf8bc9 data/minecraft/loot_table/blocks/bamboo_sign.json
 9199ca32e84e70166f7684c9a06b889107bb40d7 data/minecraft/loot_table/blocks/jungle_hanging_sign.json
 455d44cc7ce0e9bac7df5531b4cab562fb1dbfd6 data/minecraft/loot_table/blocks/jungle_sign.json
-79a0e1bb12ed86119a4d85526698889095e45cd9 data/minecraft/loot_table/blocks/oak_hanging_sign.json
-520d97bc3d8f0f35727964a94f369a55daf19e6f data/minecraft/loot_table/blocks/oak_sign.json
+27d6451035e2aaca79c2e70601e7523eada528f1 data/minecraft/loot_table/blocks/oak_hanging_sign.json
+a595b06b5f89a6a70c9b0c0c48d4f5b0fbdf8bc9 data/minecraft/loot_table/blocks/oak_sign.json

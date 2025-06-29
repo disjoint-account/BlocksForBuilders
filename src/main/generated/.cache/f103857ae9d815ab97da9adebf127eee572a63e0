@@ -1,4 +1,4 @@
-// 1.21.5	-999999999-01-01T00:00:00	Blocks For Builders/Tags for minecraft:block
+// 1.21.6	-999999999-01-01T00:00:00	Blocks For Builders/Tags for minecraft:block
 e912c54f2a72c8ad4f9b3304c23b61f949fbe90f data/minecraft/tags/block/base_stone_overworld.json
 ad74e0437d9d32efb9b85c98c225bde77cdada18 data/minecraft/tags/block/ceiling_hanging_signs.json
 ef8c9bfe20b1a47fdd1de41e3ad8933a63b97da9 data/minecraft/tags/block/dirt.json
@@ -21,7 +21,7 @@ f6e70fece4f3f07c18367d269a36a37f31d187b8 data/minecraft/tags/block/slabs.json
 8427b3258789ba7e0db279d56e319c84ae82b4b1 data/minecraft/tags/block/standing_signs.json
 e912c54f2a72c8ad4f9b3304c23b61f949fbe90f data/minecraft/tags/block/stone_ore_replaceables.json
 445e7eaff715b971f510fcbc6861ee77f0bf1bcc data/minecraft/tags/block/trapdoors.json
-1dfbc93002151266b01eb06c593e397a149405f4 data/minecraft/tags/block/wall_hanging_signs.json
+69c07a62eaffb0f65de2bd82d2fab3afe43de2cd data/minecraft/tags/block/wall_hanging_signs.json
 8712ebc93dc25503ec4383fb90ec3c56410a1938 data/minecraft/tags/block/wall_signs.json
 32b9dd9dcaafdd93886919af6d631bb9f3538ad0 data/minecraft/tags/block/walls.json
 f06ced54b5bcf8c3ad302a1711eda35999a71198 data/minecraft/tags/block/wooden_buttons.json

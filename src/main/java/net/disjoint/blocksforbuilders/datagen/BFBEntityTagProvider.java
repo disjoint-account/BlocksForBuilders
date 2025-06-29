@@ -14,7 +14,7 @@ public class BFBEntityTagProvider extends FabricTagProvider.EntityTypeTagProvide
     }
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-            getOrCreateTagBuilder(EntityTypeTags.BOAT)
+            valueLookupBuilder(EntityTypeTags.BOAT)
                     .add(BFBEntityTypes.GHOSTWOOD_BOAT,
                             BFBEntityTypes.SCORCHWOOD_BOAT,
                             BFBEntityTypes.WILLOW_BOAT,

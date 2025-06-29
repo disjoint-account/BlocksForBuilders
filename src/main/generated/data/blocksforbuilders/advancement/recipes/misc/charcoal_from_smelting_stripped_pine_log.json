@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:charcoal_from_smelting_stripped_pine_log"
+        "recipe": "blocksforbuilders:charcoal_from_smelting_stripped_pine_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:charcoal_from_smelting_stripped_pine_log"
+      "blocksforbuilders:charcoal_from_smelting_stripped_pine_log"
     ]
   }
 }

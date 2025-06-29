@@ -1,9 +1,6 @@
 package net.disjoint.blocksforbuilders;
 
-import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBHangingSignBlock;
-import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBSignBlock;
-import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallHangingSignBlock;
-import net.disjoint.blocksforbuilders.signstuff.sign_blocks.BFBWallSignBlock;
+import net.disjoint.blocksforbuilders.signstuff.SignBlockHelper;
 import net.disjoint.blocksforbuilders.util.particles.BFBParticleTypes;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBSaplingGenerators;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
@@ -73,10 +70,14 @@ public class BlocksForBuildersBlocks {
     public static final Block GREEN_JUNGLE_PRESSURE_PLATE = registerPressurePlateBlock("green_jungle_pressure_plate", GREEN_JUNGLE_SET, JUNGLE_PRESSURE_PLATE);
     public static final Block GREEN_JUNGLE_DOOR = registerDoorBlock("green_jungle_door", GREEN_JUNGLE_SET, JUNGLE_DOOR);
     public static final Block GREEN_JUNGLE_TRAPDOOR = registerTrapdoorBlock("green_jungle_trapdoor", GREEN_JUNGLE_SET, JUNGLE_TRAPDOOR);
-    public static final Block GREEN_JUNGLE_SIGN = registerSignBlock("green_jungle_sign", settings -> new BFBSignBlock("green_jungle", GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_SIGN));
-    public static final Block GREEN_JUNGLE_WALL_SIGN = registerSignBlock("green_jungle_wall_sign", settings -> new BFBWallSignBlock("green_jungle", GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_WALL_SIGN));
-    public static final Block GREEN_JUNGLE_HANGING_SIGN = registerSignBlock("green_jungle_hanging_sign", settings -> new BFBHangingSignBlock("green_jungle", GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_HANGING_SIGN));
-    public static final Block GREEN_JUNGLE_WALL_HANGING_SIGN = registerSignBlock("green_jungle_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("green_jungle", GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_WALL_HANGING_SIGN));
+    public static final Block GREEN_JUNGLE_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_sign"),
+            settings -> new SignBlock(GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_SIGN).mapColor(MapColor.DARK_GREEN));
+    public static final Block GREEN_JUNGLE_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_wall_sign"),
+            settings -> new WallSignBlock(GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_WALL_SIGN).mapColor(MapColor.DARK_GREEN));
+    public static final Block GREEN_JUNGLE_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_hanging_sign"),
+            settings -> new HangingSignBlock(GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_HANGING_SIGN).mapColor(MapColor.DARK_GREEN));
+    public static final Block GREEN_JUNGLE_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_wall_hanging_sign"),
+            settings -> new WallHangingSignBlock(GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_WALL_HANGING_SIGN).mapColor(MapColor.DARK_GREEN));
    
     public static final Block GHOSTWOOD_LOG = registerBlock("ghostwood_log",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.WHITE_GRAY));
@@ -105,10 +106,14 @@ public class BlocksForBuildersBlocks {
     public static final Block GHOSTWOOD_PRESSURE_PLATE = registerPressurePlateBlock("ghostwood_pressure_plate", GHOSTWOOD_SET, OAK_PRESSURE_PLATE);
     public static final Block GHOSTWOOD_DOOR = registerDoorBlock("ghostwood_door", GHOSTWOOD_SET, OAK_DOOR);
     public static final Block GHOSTWOOD_TRAPDOOR = registerTrapdoorBlock("ghostwood_trapdoor", GHOSTWOOD_SET, OAK_TRAPDOOR);
-    public static final Block GHOSTWOOD_SIGN = registerSignBlock("ghostwood_sign", settings -> new BFBSignBlock("ghostwood", GHOSTWOOD, settings), AbstractBlock.Settings.copy(Blocks.OAK_SIGN));
-    public static final Block GHOSTWOOD_WALL_SIGN = registerSignBlock("ghostwood_wall_sign", settings -> new BFBWallSignBlock("ghostwood", GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
-    public static final Block GHOSTWOOD_HANGING_SIGN = registerSignBlock("ghostwood_hanging_sign", settings -> new BFBHangingSignBlock("ghostwood", GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
-    public static final Block GHOSTWOOD_WALL_HANGING_SIGN = registerSignBlock("ghostwood_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("ghostwood", GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+    public static final Block GHOSTWOOD_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_sign"),
+            settings -> new SignBlock(GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.WHITE_GRAY));
+    public static final Block GHOSTWOOD_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_wall_sign"),
+            settings -> new WallSignBlock(GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.WHITE_GRAY));
+    public static final Block GHOSTWOOD_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_hanging_sign"),
+            settings -> new HangingSignBlock(GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.WHITE_GRAY));
+    public static final Block GHOSTWOOD_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_wall_hanging_sign"),
+            settings -> new WallHangingSignBlock(GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.WHITE_GRAY));
 
     public static final Block SCORCHWOOD_LOG = registerBlock("scorchwood_log",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.BLACK));
@@ -132,10 +137,14 @@ public class BlocksForBuildersBlocks {
     public static final Block SCORCHWOOD_PRESSURE_PLATE = registerPressurePlateBlock("scorchwood_pressure_plate", SCORCHWOOD_SET, OAK_PRESSURE_PLATE);
     public static final Block SCORCHWOOD_DOOR = registerDoorBlock("scorchwood_door", SCORCHWOOD_SET, OAK_DOOR);
     public static final Block SCORCHWOOD_TRAPDOOR = registerTrapdoorBlock("scorchwood_trapdoor", SCORCHWOOD_SET, OAK_TRAPDOOR);
-    public static final Block SCORCHWOOD_SIGN = registerSignBlock("scorchwood_sign", settings -> new BFBSignBlock("scorchwood", SCORCHWOOD, settings), AbstractBlock.Settings.copy(Blocks.OAK_SIGN));
-    public static final Block SCORCHWOOD_WALL_SIGN = registerSignBlock("scorchwood_wall_sign", settings -> new BFBWallSignBlock("scorchwood", SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
-    public static final Block SCORCHWOOD_HANGING_SIGN = registerSignBlock("scorchwood_hanging_sign", settings -> new BFBHangingSignBlock("scorchwood", SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
-    public static final Block SCORCHWOOD_WALL_HANGING_SIGN = registerSignBlock("scorchwood_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("scorchwood", SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+    public static final Block SCORCHWOOD_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood_sign"),
+            settings -> new SignBlock(SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.BLACK));
+    public static final Block SCORCHWOOD_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood_wall_sign"),
+            settings -> new WallSignBlock(SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.BLACK));
+    public static final Block SCORCHWOOD_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood_hanging_sign"),
+            settings -> new HangingSignBlock(SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.BLACK));
+    public static final Block SCORCHWOOD_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood_wall_hanging_sign"),
+            settings -> new WallHangingSignBlock(SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.BLACK));
 
     public static final Block WILLOW_LOG = registerBlock("willow_log",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.DIRT_BROWN));
@@ -164,10 +173,14 @@ public class BlocksForBuildersBlocks {
     public static final Block WILLOW_PRESSURE_PLATE = registerPressurePlateBlock("willow_pressure_plate", WILLOW_SET, OAK_PRESSURE_PLATE);
     public static final Block WILLOW_DOOR = registerDoorBlock("willow_door", WILLOW_SET, OAK_DOOR);
     public static final Block WILLOW_TRAPDOOR = registerTrapdoorBlock("willow_trapdoor", WILLOW_SET, OAK_TRAPDOOR);
-    public static final Block WILLOW_SIGN = registerSignBlock("willow_sign", settings -> new BFBSignBlock("willow", WILLOW, settings), AbstractBlock.Settings.copy(OAK_SIGN));
-    public static final Block WILLOW_WALL_SIGN = registerSignBlock("willow_wall_sign", settings -> new BFBWallSignBlock("willow", WILLOW, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
-    public static final Block WILLOW_HANGING_SIGN = registerSignBlock("willow_hanging_sign", settings -> new BFBHangingSignBlock("willow", WILLOW, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
-    public static final Block WILLOW_WALL_HANGING_SIGN = registerSignBlock("willow_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("willow", WILLOW, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+    public static final Block WILLOW_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "willow_sign"),
+            settings -> new SignBlock(WILLOW, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block WILLOW_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "willow_wall_sign"),
+            settings -> new WallSignBlock(WILLOW, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block WILLOW_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "willow_hanging_sign"),
+            settings -> new HangingSignBlock(WILLOW, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block WILLOW_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "willow_wall_hanging_sign"),
+            settings -> new WallHangingSignBlock(WILLOW, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.LICHEN_GREEN));
 
     public static final Block PALM_LOG = registerBlock("palm_log",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.PALE_YELLOW));
@@ -196,10 +209,14 @@ public class BlocksForBuildersBlocks {
     public static final Block PALM_PRESSURE_PLATE = registerPressurePlateBlock("palm_pressure_plate", PALM_SET, OAK_PRESSURE_PLATE);
     public static final Block PALM_DOOR = registerDoorBlock("palm_door", PALM_SET, OAK_DOOR);
     public static final Block PALM_TRAPDOOR = registerTrapdoorBlock("palm_trapdoor", PALM_SET, OAK_TRAPDOOR);
-    public static final Block PALM_SIGN = registerSignBlock("palm_sign", settings -> new BFBSignBlock("palm", PALM, settings), AbstractBlock.Settings.copy(OAK_SIGN));
-    public static final Block PALM_WALL_SIGN = registerSignBlock("palm_wall_sign", settings -> new BFBWallSignBlock("palm", PALM, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
-    public static final Block PALM_HANGING_SIGN = registerSignBlock("palm_hanging_sign", settings -> new BFBHangingSignBlock("palm", PALM, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
-    public static final Block PALM_WALL_HANGING_SIGN = registerSignBlock("palm_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("palm", PALM, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+    public static final Block PALM_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "palm_sign"),
+            settings -> new SignBlock(PALM, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.PALE_YELLOW));
+    public static final Block PALM_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "palm_wall_sign"),
+            settings -> new WallSignBlock(PALM, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.PALE_YELLOW));
+    public static final Block PALM_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "palm_hanging_sign"),
+            settings -> new HangingSignBlock(PALM, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.PALE_YELLOW));
+    public static final Block PALM_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "palm_wall_hanging_sign"),
+            settings -> new WallHangingSignBlock(PALM, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.PALE_YELLOW));
 
     public static final Block MAPLE_LOG = registerBlock("maple_log",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_RED));
@@ -228,10 +245,14 @@ public class BlocksForBuildersBlocks {
     public static final Block MAPLE_PRESSURE_PLATE = registerPressurePlateBlock("maple_pressure_plate", MAPLE_SET, OAK_PRESSURE_PLATE);
     public static final Block MAPLE_DOOR = registerDoorBlock("maple_door", MAPLE_SET, OAK_DOOR);
     public static final Block MAPLE_TRAPDOOR = registerTrapdoorBlock("maple_trapdoor", MAPLE_SET, OAK_TRAPDOOR);
-    public static final Block MAPLE_SIGN = registerSignBlock("maple_sign", settings -> new BFBSignBlock("maple", MAPLE, settings), AbstractBlock.Settings.copy(OAK_SIGN));
-    public static final Block MAPLE_WALL_SIGN = registerSignBlock("maple_wall_sign", settings -> new BFBWallSignBlock("maple", MAPLE, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
-    public static final Block MAPLE_HANGING_SIGN = registerSignBlock("maple_hanging_sign", settings -> new BFBHangingSignBlock("maple", MAPLE, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
-    public static final Block MAPLE_WALL_HANGING_SIGN = registerSignBlock("maple_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("maple", MAPLE, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+    public static final Block MAPLE_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "maple_sign"),
+            settings -> new SignBlock(MAPLE, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.RAW_IRON_PINK));
+    public static final Block MAPLE_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "maple_wall_sign"),
+            settings -> new WallSignBlock(MAPLE, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.RAW_IRON_PINK));
+    public static final Block MAPLE_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "maple_hanging_sign"),
+            settings -> new HangingSignBlock(MAPLE, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.RAW_IRON_PINK));
+    public static final Block MAPLE_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "maple_wall_hanging_sign"),
+            settings -> new WallHangingSignBlock(MAPLE, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.RAW_IRON_PINK));
 
     public static final Block BEECH_LOG = registerBlock("beech_log",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_WHITE));
@@ -260,10 +281,14 @@ public class BlocksForBuildersBlocks {
     public static final Block BEECH_PRESSURE_PLATE = registerPressurePlateBlock("beech_pressure_plate", BEECH_SET, OAK_PRESSURE_PLATE);
     public static final Block BEECH_DOOR = registerDoorBlock("beech_door", BEECH_SET, OAK_DOOR);
     public static final Block BEECH_TRAPDOOR = registerTrapdoorBlock("beech_trapdoor", BEECH_SET, OAK_TRAPDOOR);
-    public static final Block BEECH_SIGN = registerSignBlock("beech_sign", settings -> new BFBSignBlock("beech", BEECH, settings), AbstractBlock.Settings.copy(OAK_SIGN));
-    public static final Block BEECH_WALL_SIGN = registerSignBlock("beech_wall_sign", settings -> new BFBWallSignBlock("beech", BEECH, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
-    public static final Block BEECH_HANGING_SIGN = registerSignBlock("beech_hanging_sign", settings -> new BFBHangingSignBlock("beech", BEECH, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
-    public static final Block BEECH_WALL_HANGING_SIGN = registerSignBlock("beech_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("beech", BEECH, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+    public static final Block BEECH_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "beech_sign"),
+            settings -> new SignBlock(BEECH, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.ORANGE));
+    public static final Block BEECH_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "beech_wall_sign"),
+            settings -> new WallSignBlock(BEECH, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.ORANGE));
+    public static final Block BEECH_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "beech_hanging_sign"),
+            settings -> new HangingSignBlock(BEECH, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.ORANGE));
+    public static final Block BEECH_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "beech_wall_hanging_sign"),
+            settings -> new WallHangingSignBlock(BEECH, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.ORANGE));
 
     public static final Block PINE_LOG = registerBlock("pine_log",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.TERRACOTTA_RED));
@@ -292,10 +317,14 @@ public class BlocksForBuildersBlocks {
     public static final Block PINE_PRESSURE_PLATE = registerPressurePlateBlock("pine_pressure_plate", PINE_SET, OAK_PRESSURE_PLATE);
     public static final Block PINE_DOOR = registerDoorBlock("pine_door", PINE_SET, OAK_DOOR);
     public static final Block PINE_TRAPDOOR = registerTrapdoorBlock("pine_trapdoor", PINE_SET, OAK_TRAPDOOR);
-    public static final Block PINE_SIGN = registerSignBlock("pine_sign", settings -> new BFBSignBlock("pine", PINE, settings), AbstractBlock.Settings.copy(OAK_SIGN));
-    public static final Block PINE_WALL_SIGN = registerSignBlock("pine_wall_sign", settings -> new BFBWallSignBlock("pine", PINE, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
-    public static final Block PINE_HANGING_SIGN = registerSignBlock("pine_hanging_sign", settings -> new BFBHangingSignBlock("pine", PINE, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
-    public static final Block PINE_WALL_HANGING_SIGN = registerSignBlock("pine_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("pine", PINE, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+    public static final Block PINE_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "pine_sign"),
+            settings -> new SignBlock(PINE, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block PINE_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "pine_wall_sign"),
+            settings -> new WallSignBlock(PINE, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block PINE_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "pine_hanging_sign"),
+            settings -> new HangingSignBlock(PINE, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block PINE_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "pine_wall_hanging_sign"),
+            settings -> new WallHangingSignBlock(PINE, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_BROWN));
 
     public static final Block CEDAR_LOG = registerBlock("cedar_log",
             PillarBlock::new, AbstractBlock.Settings.copy(OAK_LOG).mapColor(MapColor.LIGHT_GRAY));
@@ -324,10 +353,14 @@ public class BlocksForBuildersBlocks {
     public static final Block CEDAR_PRESSURE_PLATE = registerPressurePlateBlock("cedar_pressure_plate", CEDAR_SET, OAK_PRESSURE_PLATE);
     public static final Block CEDAR_DOOR = registerDoorBlock("cedar_door", CEDAR_SET, OAK_DOOR);
     public static final Block CEDAR_TRAPDOOR = registerTrapdoorBlock("cedar_trapdoor", CEDAR_SET, OAK_TRAPDOOR);
-    public static final Block CEDAR_SIGN = registerSignBlock("cedar_sign", settings -> new BFBSignBlock("cedar", CEDAR, settings), AbstractBlock.Settings.copy(OAK_SIGN));
-    public static final Block CEDAR_WALL_SIGN = registerSignBlock("cedar_wall_sign", settings -> new BFBWallSignBlock("cedar", CEDAR, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN));
-    public static final Block CEDAR_HANGING_SIGN = registerSignBlock("cedar_hanging_sign", settings -> new BFBHangingSignBlock("cedar", CEDAR, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN));
-    public static final Block CEDAR_WALL_HANGING_SIGN = registerSignBlock("cedar_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("cedar", CEDAR, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN));
+    public static final Block CEDAR_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "cedar_sign"),
+            settings -> new SignBlock(CEDAR, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.OAK_TAN));
+    public static final Block CEDAR_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "cedar_wall_sign"),
+            settings -> new WallSignBlock(CEDAR, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.OAK_TAN));
+    public static final Block CEDAR_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "cedar_hanging_sign"),
+            settings -> new HangingSignBlock(CEDAR, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.OAK_TAN));
+    public static final Block CEDAR_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "cedar_wall_hanging_sign"),
+            settings -> new WallHangingSignBlock(CEDAR, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.OAK_TAN));
 
     public static final Block GREEN_BAMBOO_PLANKS = registerBlock("green_bamboo_planks",
             Block::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).mapColor(MapColor.DARK_GREEN));
@@ -341,10 +374,14 @@ public class BlocksForBuildersBlocks {
     public static final Block GREEN_BAMBOO_PRESSURE_PLATE = registerPressurePlateBlock("green_bamboo_pressure_plate", GREEN_BAMBOO_SET, BAMBOO_PRESSURE_PLATE);
     public static final Block GREEN_BAMBOO_DOOR = registerDoorBlock("green_bamboo_door", GREEN_BAMBOO_SET, BAMBOO_DOOR);
     public static final Block GREEN_BAMBOO_TRAPDOOR = registerTrapdoorBlock("green_bamboo_trapdoor", GREEN_BAMBOO_SET, BAMBOO_TRAPDOOR);
-    public static final Block GREEN_BAMBOO_SIGN = registerSignBlock("green_bamboo_sign", settings -> new BFBSignBlock("green_bamboo", GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(Blocks.BAMBOO_SIGN));
-    public static final Block GREEN_BAMBOO_WALL_SIGN = registerSignBlock("green_bamboo_wall_sign", settings -> new BFBWallSignBlock("green_bamboo", GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(BAMBOO_WALL_SIGN));
-    public static final Block GREEN_BAMBOO_HANGING_SIGN = registerSignBlock("green_bamboo_hanging_sign", settings -> new BFBHangingSignBlock("green_bamboo", GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(BAMBOO_HANGING_SIGN));
-    public static final Block GREEN_BAMBOO_WALL_HANGING_SIGN = registerSignBlock("green_bamboo_hanging_wall_sign", settings -> new BFBWallHangingSignBlock("green_bamboo", GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(BAMBOO_WALL_HANGING_SIGN));
+    public static final Block GREEN_BAMBOO_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_sign"),
+            settings -> new SignBlock(GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.DARK_GREEN));
+    public static final Block GREEN_BAMBOO_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_wall_sign"),
+            settings -> new WallSignBlock(GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.DARK_GREEN));
+    public static final Block GREEN_BAMBOO_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_hanging_sign"),
+            settings -> new HangingSignBlock(GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.DARK_GREEN));
+    public static final Block GREEN_BAMBOO_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_wall_hanging_sign"),
+            settings -> new WallHangingSignBlock(GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.DARK_GREEN));
 
     public static final Block GOLD_ACACIA_LEAVES = registerLeafBlock("gold_acacia_leaves", 0.02f, BFBParticleTypes.GOLD_ACACIA_LEAVES, Blocks.ACACIA_LEAVES, MapColor.TERRACOTTA_YELLOW);
     public static final Block FALLEN_GOLD_ACACIA_LEAVES = registerBlock("fallen_gold_acacia_leaves",
