@@ -655,10 +655,6 @@ public class BlocksForBuildersBlocks {
     private static Block registerStairsBlock(String name, Block base) {
         return registerBlock(name, settings -> new StairsBlock(base.getDefaultState(), settings), AbstractBlock.Settings.copy(base));
     }
-    private static Block registerSignBlock(String name, Function<AbstractBlock.Settings, Block> function,
-                                         AbstractBlock.Settings settings) {
-        return Registry.register(Registries.BLOCK, Identifier.of(BlocksForBuilders.MOD_ID, name), function.apply(settings.registryKey(keyOf(name))));
-    }
     private static Block registerDoorBlock(String name, BlockSetType woodType, Block base) {
         return registerBlock(name, settings -> new DoorBlock(woodType, settings), AbstractBlock.Settings.copy(base));
     }
