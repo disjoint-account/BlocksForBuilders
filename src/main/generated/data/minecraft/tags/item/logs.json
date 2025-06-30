@@ -1,5 +1,9 @@
 {
   "values": [
+    {
+      "id": "#blocksforbuilders:scorchwood_logs",
+      "required": false
+    },
     "blocksforbuilders:green_jungle_log",
     "blocksforbuilders:green_jungle_wood",
     "blocksforbuilders:stripped_green_jungle_log",

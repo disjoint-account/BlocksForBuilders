@@ -3,7 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    "#blocksforbuilders:cedar_wood"
+    "#blocksforbuilders:cedar_logs"
   ],
   "result": {
     "count": 4,

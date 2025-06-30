@@ -3,7 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    "#blocksforbuilders:beech_wood"
+    "#blocksforbuilders:beech_logs"
   ],
   "result": {
     "count": 4,

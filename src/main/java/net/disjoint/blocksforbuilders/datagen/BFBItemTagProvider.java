@@ -96,6 +96,19 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG.asItem())
                 .add(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD.asItem());
 
+        valueLookupBuilder(ItemTags.LOGS_THAT_BURN)
+                .addOptionalTag(BFBTags.Items.GHOSTWOOD_LOGS)
+                .addOptionalTag(BFBTags.Items.WILLOW_LOGS)
+                .addOptionalTag(BFBTags.Items.PALM_LOGS)
+                .addOptionalTag(BFBTags.Items.MAPLE_LOGS)
+                .addOptionalTag(BFBTags.Items.BEECH_LOGS)
+                .addOptionalTag(BFBTags.Items.PINE_LOGS)
+                .addOptionalTag(BFBTags.Items.CEDAR_LOGS)
+                .addOptionalTag(BFBTags.Items.GREEN_JUNGLE_LOGS);
+
+        valueLookupBuilder(ItemTags.LOGS)
+                .addOptionalTag(BFBTags.Items.SCORCHWOOD_LOGS);
+
         valueLookupBuilder(ItemTags.BOATS)
                 .add(BlocksForBuildersItems.GREEN_JUNGLE_BOAT)
                 .add(BlocksForBuildersItems.GHOSTWOOD_BOAT)

@@ -11,6 +11,15 @@ import net.minecraft.world.biome.Biome;
 public class BFBTags {
     public static class Blocks {
         public static final TagKey<Block> AUTUMNAL_FOREST_BLOCKS = createTag("autumnal_forest_blocks");
+        public static final TagKey<Block> GHOSTWOOD_LOGS = createTag("ghostwood_logs");
+        public static final TagKey<Block> SCORCHWOOD_LOGS = createTag("scorchwood_logs");
+        public static final TagKey<Block> GREEN_JUNGLE_LOGS = createTag("green_jungle_logs");
+        public static final TagKey<Block> WILLOW_LOGS = createTag("willow_logs");
+        public static final TagKey<Block> PALM_LOGS = createTag("palm_logs");
+        public static final TagKey<Block> MAPLE_LOGS = createTag("maple_logs");
+        public static final TagKey<Block> BEECH_LOGS = createTag("beech_logs");
+        public static final TagKey<Block> PINE_LOGS = createTag("pine_logs");
+        public static final TagKey<Block> CEDAR_LOGS = createTag("cedar_logs");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(BlocksForBuilders.MOD_ID, name));
@@ -19,15 +28,15 @@ public class BFBTags {
 
     public static class Items {
         public static final TagKey<Item> BOOKSHELVES = createTag("bookshelves");
-        public static final TagKey<Item> GHOSTWOOD_LOGS = createTag("ghostwood_wood");
-        public static final TagKey<Item> SCORCHWOOD_LOGS = createTag("scorchwood_wood");
-        public static final TagKey<Item> GREEN_JUNGLE_LOGS = createTag("green_jungle_wood");
-        public static final TagKey<Item> WILLOW_LOGS = createTag("willow_wood");
-        public static final TagKey<Item> PALM_LOGS = createTag("palm_wood");
-        public static final TagKey<Item> MAPLE_LOGS = createTag("maple_wood");
-        public static final TagKey<Item> BEECH_LOGS = createTag("beech_wood");
-        public static final TagKey<Item> PINE_LOGS = createTag("pine_wood");
-        public static final TagKey<Item> CEDAR_LOGS = createTag("cedar_wood");
+        public static final TagKey<Item> GHOSTWOOD_LOGS = createTag("ghostwood_logs");
+        public static final TagKey<Item> SCORCHWOOD_LOGS = createTag("scorchwood_logs");
+        public static final TagKey<Item> GREEN_JUNGLE_LOGS = createTag("green_jungle_logs");
+        public static final TagKey<Item> WILLOW_LOGS = createTag("willow_logs");
+        public static final TagKey<Item> PALM_LOGS = createTag("palm_logs");
+        public static final TagKey<Item> MAPLE_LOGS = createTag("maple_logs");
+        public static final TagKey<Item> BEECH_LOGS = createTag("beech_logs");
+        public static final TagKey<Item> PINE_LOGS = createTag("pine_logs");
+        public static final TagKey<Item> CEDAR_LOGS = createTag("cedar_logs");
         public static final TagKey<Item> COCONUTS = createTag("coconuts");
         public static final TagKey<Item> BFB_TAG = createTag("bfb_tag");
 

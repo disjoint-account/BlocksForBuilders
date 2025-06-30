@@ -1,6 +1,7 @@
 package net.disjoint.blocksforbuilders.datagen;
 
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
+import net.disjoint.blocksforbuilders.util.BFBTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -301,38 +302,71 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GOLD_ACACIA_HEDGE);
 
         valueLookupBuilder(BlockTags.LOGS_THAT_BURN)
-                .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG,
-                        BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD,
-                        BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD,
-                        BlocksForBuildersBlocks.GHOSTWOOD_LOG,
+                .addOptionalTag(BFBTags.Blocks.GHOSTWOOD_LOGS)
+                .addOptionalTag(BFBTags.Blocks.WILLOW_LOGS)
+                .addOptionalTag(BFBTags.Blocks.PALM_LOGS)
+                .addOptionalTag(BFBTags.Blocks.MAPLE_LOGS)
+                .addOptionalTag(BFBTags.Blocks.BEECH_LOGS)
+                .addOptionalTag(BFBTags.Blocks.PINE_LOGS)
+                .addOptionalTag(BFBTags.Blocks.CEDAR_LOGS)
+                .addOptionalTag(BFBTags.Blocks.GREEN_JUNGLE_LOGS);
+
+        valueLookupBuilder(BlockTags.LOGS)
+                .addOptionalTag(BFBTags.Blocks.SCORCHWOOD_LOGS);
+
+        valueLookupBuilder(BFBTags.Blocks.GHOSTWOOD_LOGS)
+                .add(BlocksForBuildersBlocks.GHOSTWOOD_LOG,
                         BlocksForBuildersBlocks.GHOSTWOOD_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD,
-                        BlocksForBuildersBlocks.WILLOW_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD);
+
+        valueLookupBuilder(BFBTags.Blocks.SCORCHWOOD_LOGS)
+                .add(BlocksForBuildersBlocks.SCORCHWOOD_LOG,
+                        BlocksForBuildersBlocks.SCORCHWOOD_WOOD,
+                        BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_WOOD);
+
+        valueLookupBuilder(BFBTags.Blocks.WILLOW_LOGS)
+                .add(BlocksForBuildersBlocks.WILLOW_LOG,
                         BlocksForBuildersBlocks.WILLOW_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD,
-                        BlocksForBuildersBlocks.PALM_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD);
+
+        valueLookupBuilder(BFBTags.Blocks.PALM_LOGS)
+                .add(BlocksForBuildersBlocks.PALM_LOG,
                         BlocksForBuildersBlocks.PALM_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_PALM_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_PALM_WOOD,
-                        BlocksForBuildersBlocks.MAPLE_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_PALM_WOOD);
+
+        valueLookupBuilder(BFBTags.Blocks.MAPLE_LOGS)
+                .add(BlocksForBuildersBlocks.MAPLE_LOG,
                         BlocksForBuildersBlocks.MAPLE_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD,
-                        BlocksForBuildersBlocks.BEECH_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD);
+
+        valueLookupBuilder(BFBTags.Blocks.BEECH_LOGS)
+                .add(BlocksForBuildersBlocks.BEECH_LOG,
                         BlocksForBuildersBlocks.BEECH_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_BEECH_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD,
-                        BlocksForBuildersBlocks.PINE_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD);
+
+        valueLookupBuilder(BFBTags.Blocks.PINE_LOGS)
+                .add(BlocksForBuildersBlocks.PINE_LOG,
                         BlocksForBuildersBlocks.PINE_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_PINE_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_PINE_WOOD,
-                        BlocksForBuildersBlocks.CEDAR_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_PINE_WOOD);
+
+        valueLookupBuilder(BFBTags.Blocks.CEDAR_LOGS)
+                .add(BlocksForBuildersBlocks.CEDAR_LOG,
                         BlocksForBuildersBlocks.CEDAR_WOOD,
                         BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG,
                         BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD);
+
+        valueLookupBuilder(BFBTags.Blocks.GREEN_JUNGLE_LOGS)
+                .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG,
+                        BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD,
+                        BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG,
+                        BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD);
 
         valueLookupBuilder(BlockTags.PLANKS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS,
@@ -600,10 +634,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
 
         valueLookupBuilder(BlockTags.JUNGLE_LOGS)
-                .add(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG,
-                        BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD,
-                        BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG,
-                        BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD);
+                .addOptionalTag(BFBTags.Blocks.GREEN_JUNGLE_LOGS);
 
         valueLookupBuilder(BlockTags.INSIDE_STEP_SOUND_BLOCKS)
                 .add(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES,
