@@ -309,6 +309,12 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB);
                         entries.add(BlocksForBuildersBlocks.COCONUT_THATCH_RUG);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_WALL);
+                        entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_BRICKS);
+                        entries.add(BlocksForBuildersBlocks.CRACKED_SMOOTH_STONE_BRICKS);
+                        entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_BRICK_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_BRICK_SLAB);
+                        entries.add(BlocksForBuildersBlocks.SMOOTH_STONE_BRICK_WALL);
                         entries.add(BlocksForBuildersBlocks.SMOOTH_SANDSTONE_WALL);
                         entries.add(BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS);
                         entries.add(BlocksForBuildersBlocks.CUT_SANDSTONE_WALL);

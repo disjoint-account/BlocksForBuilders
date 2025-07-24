@@ -494,7 +494,18 @@ public class BlocksForBuildersBlocks {
             DirectionalCarpet::new, AbstractBlock.Settings.copy(HAY_BLOCK).mapColor(MapColor.YELLOW));
    
     public static final Block SMOOTH_STONE_STAIRS = registerStairsBlock("smooth_stone_stairs", SMOOTH_STONE);
-  
+    public static final Block SMOOTH_STONE_WALL = registerBlock("smooth_stone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_STONE));
+    public static final Block SMOOTH_STONE_BRICKS = registerBlock("smooth_stone_bricks",
+            Block::new, AbstractBlock.Settings.copy(SMOOTH_STONE));
+    public static final Block CRACKED_SMOOTH_STONE_BRICKS = registerBlock("cracked_smooth_stone_bricks",
+            Block::new, AbstractBlock.Settings.copy(SMOOTH_STONE));
+    public static final Block SMOOTH_STONE_BRICK_STAIRS = registerStairsBlock("smooth_stone_brick_stairs", SMOOTH_STONE);
+    public static final Block SMOOTH_STONE_BRICK_SLAB = registerBlock("smooth_stone_brick_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(SMOOTH_STONE));
+    public static final Block SMOOTH_STONE_BRICK_WALL = registerBlock("smooth_stone_brick_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_STONE));
+
     public static final Block BLACK_NETHER_BRICKS = registerBlock("black_nether_bricks",
             Block::new, AbstractBlock.Settings.copy(NETHER_BRICKS).mapColor(MapColor.BLACK));
     public static final Block CHISELED_BLACK_NETHER_BRICKS = registerBlock("chiseled_black_nether_bricks",

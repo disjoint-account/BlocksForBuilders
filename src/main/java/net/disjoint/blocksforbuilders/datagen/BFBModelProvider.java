@@ -45,6 +45,7 @@ public class BFBModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool grimstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool antigoriteTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.ANTIGORITE);
         BlockStateModelGenerator.BlockTexturePool polishedAntigoriteTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.POLISHED_ANTIGORITE);
+        BlockStateModelGenerator.BlockTexturePool smoothStoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.SMOOTH_STONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool sandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.SANDSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool redSandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
 
@@ -288,6 +289,11 @@ public class BFBModelProvider extends FabricModelProvider {
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE);
 
         registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
+        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_STONE_WALL, Blocks.SMOOTH_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlocksForBuildersBlocks.CRACKED_SMOOTH_STONE_BRICKS);
+        smoothStoneBricksTexturePool.stairs(BlocksForBuildersBlocks.SMOOTH_STONE_BRICK_STAIRS);
+        smoothStoneBricksTexturePool.slab(BlocksForBuildersBlocks.SMOOTH_STONE_BRICK_SLAB);
+        smoothStoneBricksTexturePool.wall(BlocksForBuildersBlocks.SMOOTH_STONE_BRICK_WALL);
 
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_SANDSTONE_WALL, Identifier.ofVanilla("block/sandstone_top"));
         registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS, Blocks.CUT_SANDSTONE, Identifier.ofVanilla("block/sandstone_top"));
