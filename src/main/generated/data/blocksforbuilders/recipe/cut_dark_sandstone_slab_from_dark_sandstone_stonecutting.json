@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "blocksforbuilders:dark_sandstone",
+  "result": {
+    "count": 2,
+    "id": "blocksforbuilders:cut_dark_sandstone_slab"
+  }
+}

@@ -48,6 +48,7 @@ public class BFBModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool smoothStoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.SMOOTH_STONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool sandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.SANDSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool redSandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool darkSandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICKS);
 
         blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.GHOSTWOOD_LOG).log(BlocksForBuildersBlocks.GHOSTWOOD_LOG).wood(BlocksForBuildersBlocks.GHOSTWOOD_WOOD);
         blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG).log(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG).wood(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD);
@@ -275,7 +276,7 @@ public class BFBModelProvider extends FabricModelProvider {
         registerDirectionalBlock(blockStateModelGenerator, BlocksForBuildersBlocks.CRACKED_GRIMSTONE_TILES);
         registerGrimstoneStyleStairs(blockStateModelGenerator, BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE_TILES);
         registerPillarSlab(blockStateModelGenerator, BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, BlocksForBuildersBlocks.GRIMSTONE_TILES, false);
-        registerPillarWall(blockStateModelGenerator, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.GRIMSTONE_TILES, true);
+        registerPillarWall(blockStateModelGenerator, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.GRIMSTONE_TILES);
 
         antigoriteTexturePool.stairs(BlocksForBuildersBlocks.ANTIGORITE_STAIRS);
         antigoriteTexturePool.slab(BlocksForBuildersBlocks.ANTIGORITE_SLAB);
@@ -296,11 +297,11 @@ public class BFBModelProvider extends FabricModelProvider {
         smoothStoneBricksTexturePool.wall(BlocksForBuildersBlocks.SMOOTH_STONE_BRICK_WALL);
 
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_SANDSTONE_WALL, Identifier.ofVanilla("block/sandstone_top"));
-        registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS, Blocks.CUT_SANDSTONE, Identifier.ofVanilla("block/sandstone_top"));
-        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_SANDSTONE_WALL, Blocks.CUT_SANDSTONE);
+        registerManualStairs(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS, Identifier.ofVanilla("block/sandstone_top"), getId(Blocks.CUT_SANDSTONE), Identifier.ofVanilla("block/sandstone_top"));
+        registerPillarWall(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_SANDSTONE_WALL, Identifier.ofVanilla("block/sandstone_top"), getId(Blocks.CUT_SANDSTONE), Identifier.ofVanilla("block/sandstone_top"));
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_RED_SANDSTONE_WALL, Identifier.ofVanilla("block/red_sandstone_top"));
-        registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_RED_SANDSTONE_STAIRS, Blocks.CUT_RED_SANDSTONE, Identifier.ofVanilla("block/red_sandstone_top"));
-        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_RED_SANDSTONE_WALL, Blocks.CUT_RED_SANDSTONE);
+        registerManualStairs(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_RED_SANDSTONE_STAIRS, Identifier.ofVanilla("block/red_sandstone_top"), getId(Blocks.CUT_RED_SANDSTONE), Identifier.ofVanilla("block/red_sandstone_top"));
+        registerPillarWall(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_RED_SANDSTONE_WALL, Identifier.ofVanilla("block/red_sandstone_top"), getId(Blocks.CUT_RED_SANDSTONE), Identifier.ofVanilla("block/red_sandstone_top"));
 
         blockStateModelGenerator.registerSimpleCubeAll(BlocksForBuildersBlocks.CRACKED_SANDSTONE_BRICKS);
         sandstoneBricksTexturePool.stairs(BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS);
@@ -310,6 +311,25 @@ public class BFBModelProvider extends FabricModelProvider {
         redSandstoneBricksTexturePool.stairs(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS);
         redSandstoneBricksTexturePool.slab(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB);
         redSandstoneBricksTexturePool.wall(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL);
+
+        blockStateModelGenerator.registerSimpleCubeAll(BlocksForBuildersBlocks.DARK_SAND);
+        registerManualBottomTop(blockStateModelGenerator, BlocksForBuildersBlocks.DARK_SANDSTONE, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_bottom"));
+        registerManualStairs(blockStateModelGenerator, BlocksForBuildersBlocks.DARK_SANDSTONE_STAIRS, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_bottom"));
+        registerManualSlab(blockStateModelGenerator, BlocksForBuildersBlocks.DARK_SANDSTONE_SLAB, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_bottom"), getId(BlocksForBuildersBlocks.DARK_SANDSTONE));
+        registerPillarWall(blockStateModelGenerator, BlocksForBuildersBlocks.DARK_SANDSTONE_WALL, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_bottom"));
+        registerManualPillar(blockStateModelGenerator, BlocksForBuildersBlocks.CHISELED_DARK_SANDSTONE, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.CHISELED_DARK_SANDSTONE));
+        registerManualCubeAll(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"));
+        registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_STAIRS, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"));
+        registerParitySlab(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_SLAB, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE);
+        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_WALL, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"));
+        registerManualPillar(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_DARK_SANDSTONE, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE));
+        registerManualStairs(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_STAIRS, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"));
+        registerManualSlab(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_SLAB, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE));
+        registerPillarWall(blockStateModelGenerator, BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_WALL, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"));
+        blockStateModelGenerator.registerSimpleCubeAll(BlocksForBuildersBlocks.CRACKED_DARK_SANDSTONE_BRICKS);
+        darkSandstoneBricksTexturePool.stairs(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_STAIRS);
+        darkSandstoneBricksTexturePool.slab(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_SLAB);
+        darkSandstoneBricksTexturePool.wall(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_WALL);
 
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, Blocks.OAK_LEAVES, standardTint);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES, Blocks.BIRCH_LEAVES, new ConstantTintSource(-8345771));
@@ -450,32 +470,68 @@ public class BFBModelProvider extends FabricModelProvider {
                 createWeightedVariant(crossId), createWeightedVariant(tallPostId), createWeightedVariant(tallSingleId), createWeightedVariant(tallCornerId), createWeightedVariant(tallStraightId), createWeightedVariant(tallTShapeId), createWeightedVariant(talLCrossId)));
     }
 
+    public static void registerManualCubeAll(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource) {
+        Identifier model = new Model(Optional.of(Identifier.ofVanilla("block/" + "cube_all")), Optional.empty(), TextureKey.ALL).upload(block, new TextureMap()
+                .put(TextureKey.ALL, textureSource), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(model)));
+    }
+
+    public static void registerManualPillar(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier endTexture, Identifier sideTexture) {
+        Identifier model = new Model(Optional.of(Identifier.ofVanilla("block/" + "cube_column")), Optional.empty(), TextureKey.END, TextureKey.SIDE).upload(block, new TextureMap()
+                .put(TextureKey.END, endTexture).put(TextureKey.SIDE, sideTexture), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(model)));
+    }
+
+    public static void registerManualBottomTop(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier topTexture, Identifier sideTexture, Identifier bottomTexture) {
+        Identifier model = new Model(Optional.of(Identifier.ofVanilla("block/" + "cube_bottom_top")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, new TextureMap()
+                .put(TextureKey.TOP, topTexture).put(TextureKey.SIDE, sideTexture).put(TextureKey.BOTTOM, bottomTexture), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(model)));
+    }
+
     public static void registerParityStairs(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
-        registerParityStairs(blockStateModelGenerator, block, getId(textureSource), getId(textureSource));
+        registerManualStairs(blockStateModelGenerator, block, getId(textureSource), getId(textureSource), getId(textureSource));
     }
 
-    public static void registerParityStairs(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource, Identifier endSource) {
-        registerParityStairs(blockStateModelGenerator, block, getId(textureSource), endSource);
+    public static void registerParityStairs(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource) {
+        registerManualStairs(blockStateModelGenerator, block, textureSource, textureSource, textureSource);
     }
 
-    public static void registerParityStairs(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource, Identifier endSource) {
-        Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "stairs")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, new TextureMap().put(TextureKey.TOP, endSource).put(TextureKey.SIDE, textureSource).put(TextureKey.BOTTOM, endSource), blockStateModelGenerator.modelCollector);
-        Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "inner_stairs")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, "_inner", new TextureMap().put(TextureKey.TOP, endSource).put(TextureKey.SIDE, textureSource).put(TextureKey.BOTTOM, endSource), blockStateModelGenerator.modelCollector);
-        Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "outer_stairs")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, "_outer", new TextureMap().put(TextureKey.TOP, endSource).put(TextureKey.SIDE, textureSource).put(TextureKey.BOTTOM, endSource), blockStateModelGenerator.modelCollector);
+    public static void registerManualStairs(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier topTexture, Identifier sideTexture, Identifier bottomTexture) {
+        Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "stairs")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, new TextureMap().put(TextureKey.TOP, topTexture).put(TextureKey.SIDE, sideTexture).put(TextureKey.BOTTOM, bottomTexture), blockStateModelGenerator.modelCollector);
+        Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "inner_stairs")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, "_inner", new TextureMap().put(TextureKey.TOP, topTexture).put(TextureKey.SIDE, sideTexture).put(TextureKey.BOTTOM, bottomTexture), blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "outer_stairs")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, "_outer", new TextureMap().put(TextureKey.TOP, topTexture).put(TextureKey.SIDE, sideTexture).put(TextureKey.BOTTOM, bottomTexture), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createStairsBlockState(block, createWeightedVariant(identifier1), createWeightedVariant(identifier), createWeightedVariant(identifier2)));
+    }
+
+    public static void registerParitySlab(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
+        registerManualSlab(blockStateModelGenerator, block, getId(textureSource), getId(textureSource), getId(textureSource), getId(textureSource));
+    }
+
+    public static void registerParitySlab(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource, Block horizontalModel) {
+        registerManualSlab(blockStateModelGenerator, block, textureSource, textureSource, textureSource, getId(horizontalModel));
+    }
+
+    public static void registerManualSlab(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier topTexture, Identifier sideTexture, Identifier bottomTexture, Identifier blockModel) {
+        Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "slab")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, new TextureMap().put(TextureKey.TOP, topTexture).put(TextureKey.SIDE, sideTexture).put(TextureKey.BOTTOM, bottomTexture), blockStateModelGenerator.modelCollector);
+        Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "slab_top")), Optional.empty(), TextureKey.TOP, TextureKey.SIDE, TextureKey.BOTTOM).upload(block, "_inner", new TextureMap().put(TextureKey.TOP, topTexture).put(TextureKey.SIDE, sideTexture).put(TextureKey.BOTTOM, bottomTexture), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createSlabBlockState(block, createWeightedVariant(identifier), createWeightedVariant(identifier1), createWeightedVariant(blockModel)));
     }
 
     public static void registerParityWall(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
         registerParityWall(blockStateModelGenerator, block, getId(textureSource));
     }
 
-    public static void registerParityWall(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource) {
-        Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_post")), Optional.empty(), TextureKey.WALL).upload(block, "_post", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
-        Identifier identifier1 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_side")), Optional.empty(), TextureKey.WALL).upload(block, "_side", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
-        Identifier identifier2 = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_side_tall")), Optional.empty(), TextureKey.WALL).upload(block, "_side_tall", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createWallBlockState(block, createWeightedVariant(identifier), createWeightedVariant(identifier1), createWeightedVariant(identifier2)));
-        Identifier identifier3 = new Model(Optional.of(Identifier.ofVanilla("block/" + "wall_inventory")), Optional.empty(), TextureKey.WALL).upload(block, "_inventory", new TextureMap().put(TextureKey.WALL, textureSource), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.registerItemModel(block.asItem(), identifier3);
+    public static void registerParityWall(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureId) {
+        Identifier post = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_post")), Optional.empty(), TextureKey.WALL).upload(block, "_post", new TextureMap()
+                .put(TextureKey.WALL, textureId), blockStateModelGenerator.modelCollector);
+        Identifier side = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_side")), Optional.empty(), TextureKey.WALL).upload(block, "_side", new TextureMap()
+                .put(TextureKey.WALL, textureId), blockStateModelGenerator.modelCollector);
+        Identifier tallSide = new Model(Optional.of(Identifier.ofVanilla("block/" + "template_wall_side_tall")), Optional.empty(), TextureKey.WALL).upload(block, "_side_tall", new TextureMap()
+                .put(TextureKey.WALL, textureId), blockStateModelGenerator.modelCollector);
+        Identifier inventory = new Model(Optional.of(Identifier.ofVanilla("block/" + "wall_inventory")), Optional.empty(), TextureKey.WALL).upload(block, "_inventory", new TextureMap()
+                .put(TextureKey.WALL, textureId), blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(createWallBlockState(block, createWeightedVariant(post), createWeightedVariant(side), createWeightedVariant(tallSide)));
+        blockStateModelGenerator.registerItemModel(block.asItem(), inventory);
     }
 
     public static void registerParityFence(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
@@ -696,36 +752,19 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerItemModel(block.asItem(), inventory);
     }
 
-    public static void registerPillarWall(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource, boolean plural) {
-        registerPillarWall(blockStateModelGenerator, block, String.valueOf(getId(textureSource)), plural);
+    public static void registerPillarWall(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
+        registerPillarWall(blockStateModelGenerator, block, Identifier.of(getId(textureSource) + "_top"), getId(textureSource),  Identifier.of(getId(textureSource) + "_top"));
     }
 
-    public static void registerPillarWall(BlockStateModelGenerator blockStateModelGenerator, Block block, String textureSource, boolean plural) {
-        String baseTextureName;
-        Identifier baseId;
-        if (textureSource.contains("minecraft")) {
-            baseTextureName = textureSource.substring(16);
-            baseId = Identifier.ofVanilla("block/" + baseTextureName);
-        }
-        else {
-            baseTextureName = textureSource.substring(24);
-            baseId = Identifier.of(bfbTexture(baseTextureName));
-        }
-        int i = baseTextureName.length();
-        int j;
-        if (plural) {
-            j = i- 1;
-        }
-        else j = i;
-        Identifier topTexture = Identifier.of(baseId + "_top");
-        Identifier post = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_wall_post")), Optional.empty(), TextureKey.WALL, TextureKey.END).upload(block, "_post", new TextureMap()
-                .put(TextureKey.WALL, baseId).put(TextureKey.END, topTexture), blockStateModelGenerator.modelCollector);
-        Identifier side = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_wall_side")), Optional.empty(), TextureKey.WALL, TextureKey.END).upload(block, "_side", new TextureMap()
-                .put(TextureKey.WALL, baseId).put(TextureKey.END, topTexture), blockStateModelGenerator.modelCollector);
-        Identifier tallSide = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_wall_side_tall")), Optional.empty(), TextureKey.WALL, TextureKey.END).upload(block, "_side_tall", new TextureMap()
-                .put(TextureKey.WALL, baseId).put(TextureKey.END, topTexture), blockStateModelGenerator.modelCollector);
-        Identifier inventory = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_wall_inventory")), Optional.empty(), TextureKey.WALL, TextureKey.END).upload(block, "_inventory", new TextureMap()
-                .put(TextureKey.WALL, baseId).put(TextureKey.END, topTexture), blockStateModelGenerator.modelCollector);
+    public static void registerPillarWall(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier topTexture, Identifier sideTexture, Identifier bottomTexture) {
+        Identifier post = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_wall_post")), Optional.empty(), TextureKey.WALL, TextureKey.TOP, TextureKey.BOTTOM).upload(block, "_post", new TextureMap()
+                .put(TextureKey.WALL, sideTexture).put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, bottomTexture), blockStateModelGenerator.modelCollector);
+        Identifier side = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_wall_side")), Optional.empty(), TextureKey.WALL, TextureKey.TOP, TextureKey.BOTTOM).upload(block, "_side", new TextureMap()
+                .put(TextureKey.WALL, sideTexture).put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, bottomTexture), blockStateModelGenerator.modelCollector);
+        Identifier tallSide = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_wall_side_tall")), Optional.empty(), TextureKey.WALL, TextureKey.TOP, TextureKey.BOTTOM).upload(block, "_side_tall", new TextureMap()
+                .put(TextureKey.WALL, sideTexture).put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, bottomTexture), blockStateModelGenerator.modelCollector);
+        Identifier inventory = new Model(Optional.of(Identifier.of(BlocksForBuilders.MOD_ID, "block/" + "pillar_wall_inventory")), Optional.empty(), TextureKey.WALL, TextureKey.TOP, TextureKey.BOTTOM).upload(block, "_inventory", new TextureMap()
+                .put(TextureKey.WALL, sideTexture).put(TextureKey.TOP, topTexture).put(TextureKey.BOTTOM, bottomTexture), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(createWallBlockState(block, createWeightedVariant(post), createWeightedVariant(side), createWeightedVariant(tallSide)));
         blockStateModelGenerator.registerItemModel(block.asItem(), inventory);
     }

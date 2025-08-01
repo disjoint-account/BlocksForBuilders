@@ -375,6 +375,26 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB));
         addDrop(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL);
 
+        addDrop(BlocksForBuildersBlocks.DARK_SAND);
+        addDrop(BlocksForBuildersBlocks.DARK_SANDSTONE);
+        addDrop(BlocksForBuildersBlocks.DARK_SANDSTONE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.DARK_SANDSTONE_SLAB, slabDrops(BlocksForBuildersBlocks.DARK_SANDSTONE_SLAB));
+        addDrop(BlocksForBuildersBlocks.DARK_SANDSTONE_WALL);
+        addDrop(BlocksForBuildersBlocks.CHISELED_DARK_SANDSTONE);
+        addDrop(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE);
+        addDrop(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_SLAB, slabDrops(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_SLAB));
+        addDrop(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_WALL);
+        addDrop(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE);
+        addDrop(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_SLAB, slabDrops(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_SLAB));
+        addDrop(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_WALL);
+        addDrop(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICKS);
+        addDrop(BlocksForBuildersBlocks.CRACKED_DARK_SANDSTONE_BRICKS);
+        addDrop(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_STAIRS);
+        addDrop(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_SLAB));
+        addDrop(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_WALL);
+
         addDrop(BlocksForBuildersBlocks.HAY_STAIRS);
         addDrop(BlocksForBuildersBlocks.HAY_SLAB, slabDrops(BlocksForBuildersBlocks.HAY_SLAB));
         addDrop(BlocksForBuildersBlocks.HAY_RUG);

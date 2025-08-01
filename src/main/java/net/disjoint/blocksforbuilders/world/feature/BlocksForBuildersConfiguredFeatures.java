@@ -35,6 +35,8 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import java.util.List;
 
 public class BlocksForBuildersConfiguredFeatures {
+    public static final RegistryKey<ConfiguredFeature<?,?>> SCORCHWOOD_SAPLING_KEY = registerKey("scorchwood_sapling");
+
     public static final RegistryKey<ConfiguredFeature<?,?>> GREEN_JUNGLE_KEY = registerKey("green_jungle");
     public static final RegistryKey<ConfiguredFeature<?,?>> MEGA_GREEN_JUNGLE_KEY = registerKey("mega_green_jungle");
     public static final RegistryKey<ConfiguredFeature<?,?>> MAPLE_KEY = registerKey("maple");
@@ -72,6 +74,10 @@ public class BlocksForBuildersConfiguredFeatures {
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         var placedFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
         RuleTest ruleTest = new TagMatchRuleTest(BlockTags.BASE_STONE_OVERWORLD);
+
+        register(context, SCORCHWOOD_SAPLING_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32, 3, 1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(),
+                        BlocksForBuildersBlocks.SCORCHED_GRASS)))));
 
         register(context, GREEN_JUNGLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG),

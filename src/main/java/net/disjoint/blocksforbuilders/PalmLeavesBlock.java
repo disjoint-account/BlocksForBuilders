@@ -13,7 +13,7 @@ public class PalmLeavesBlock extends UntintedParticleLeavesBlock {
     }
 
     private boolean canGrowCoconuts(BlockState state) {
-        return state.get(DISTANCE) ==  1;
+        return state.get(DISTANCE) == 1;
     }
 
     @Override

@@ -156,6 +156,25 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS,
                         BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB,
                         BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL,
+                        BlocksForBuildersBlocks.DARK_SAND,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_STAIRS,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_SLAB,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_WALL,
+                        BlocksForBuildersBlocks.CHISELED_DARK_SANDSTONE,
+                        BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE,
+                        BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_STAIRS,
+                        BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_SLAB,
+                        BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_WALL,
+                        BlocksForBuildersBlocks.CUT_DARK_SANDSTONE,
+                        BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_STAIRS,
+                        BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_SLAB,
+                        BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_WALL,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_BRICKS,
+                        BlocksForBuildersBlocks.CRACKED_DARK_SANDSTONE_BRICKS,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_STAIRS,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_SLAB,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_WALL,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICKS,
                         BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS,
                         BlocksForBuildersBlocks.CRACKED_BLACK_NETHER_BRICKS,
@@ -422,6 +441,10 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.SMOOTH_STONE_BRICK_SLAB,
                         BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB,
                         BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_SLAB,
+                        BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_SLAB,
+                        BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_SLAB,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_SLAB,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB);
 
@@ -452,6 +475,10 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.CUT_RED_SANDSTONE_STAIRS,
                         BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS,
                         BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_STAIRS,
+                        BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_STAIRS,
+                        BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_STAIRS,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_STAIRS,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS);
 
@@ -533,6 +560,10 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.CUT_RED_SANDSTONE_WALL,
                         BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL,
                         BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_WALL,
+                        BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_WALL,
+                        BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_WALL,
+                        BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_WALL,
                         BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL,
                         BlocksForBuildersBlocks.QUARTZ_WALL,
                         BlocksForBuildersBlocks.QUARTZ_BRICK_WALL,
@@ -677,6 +708,9 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         valueLookupBuilder(BlockTags.DIRT)
                 .add(BlocksForBuildersBlocks.SCORCHED_GRASS);
+
+        valueLookupBuilder(BlockTags.SAND)
+                .add(BlocksForBuildersBlocks.DARK_SAND);
 
         valueLookupBuilder(BlockTags.BASE_STONE_OVERWORLD)
                 .add(BlocksForBuildersBlocks.ANTIGORITE);

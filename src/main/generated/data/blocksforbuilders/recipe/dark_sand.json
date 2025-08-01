@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:dirt",
+    "W": "minecraft:sand"
+  },
+  "pattern": [
+    "BW",
+    "WB"
+  ],
+  "result": {
+    "count": 4,
+    "id": "blocksforbuilders:dark_sand"
+  }
+}

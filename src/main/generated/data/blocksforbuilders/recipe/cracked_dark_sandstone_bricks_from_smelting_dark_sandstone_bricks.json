@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "cracked_dark_sandstone_bricks",
+  "ingredient": "blocksforbuilders:dark_sandstone_bricks",
+  "result": {
+    "id": "blocksforbuilders:cracked_dark_sandstone_bricks"
+  }
+}

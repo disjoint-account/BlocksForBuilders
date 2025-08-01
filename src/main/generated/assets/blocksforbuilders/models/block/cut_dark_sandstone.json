@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blocksforbuilders:block/dark_sandstone_top",
+    "side": "blocksforbuilders:block/cut_dark_sandstone"
+  }
+}

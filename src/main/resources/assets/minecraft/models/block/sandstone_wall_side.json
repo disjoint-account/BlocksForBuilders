@@ -1,0 +1,8 @@
+{
+  "parent": "blocksforbuilders:block/pillar_wall_side",
+  "textures": {
+    "bottom": "minecraft:block/sandstone_bottom",
+    "top": "minecraft:block/sandstone_top",
+    "wall": "minecraft:block/sandstone"
+  }
+}

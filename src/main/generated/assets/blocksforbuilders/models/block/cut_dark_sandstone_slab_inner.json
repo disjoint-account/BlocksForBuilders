@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "blocksforbuilders:block/dark_sandstone_top",
+    "side": "blocksforbuilders:block/cut_dark_sandstone",
+    "top": "blocksforbuilders:block/dark_sandstone_top"
+  }
+}

@@ -2,6 +2,7 @@ package net.disjoint.blocksforbuilders;
 
 import net.disjoint.blocksforbuilders.signstuff.SignBlockHelper;
 import net.disjoint.blocksforbuilders.util.particles.BFBParticleTypes;
+import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersConfiguredFeatures;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBSaplingGenerators;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
@@ -15,6 +16,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.ColorCode;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
@@ -596,6 +598,11 @@ public class BlocksForBuildersBlocks {
     public static final Block POLISHED_ANDESITE_WALL = registerBlock("polished_andesite_wall",
             WallBlock::new, AbstractBlock.Settings.copy(POLISHED_ANDESITE));
 
+    public static final Block SMOOTH_SANDSTONE_WALL = registerBlock("smooth_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_SANDSTONE));
+    public static final Block CUT_SANDSTONE_STAIRS = registerStairsBlock("cut_sandstone_stairs", CUT_SANDSTONE);
+    public static final Block CUT_SANDSTONE_WALL = registerBlock("cut_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(CUT_SANDSTONE));
     public static final Block SANDSTONE_BRICKS = registerBlock("sandstone_bricks",
             Block::new, AbstractBlock.Settings.copy(CUT_SANDSTONE));
     public static final Block CRACKED_SANDSTONE_BRICKS = registerBlock("cracked_sandstone_bricks",
@@ -605,6 +612,11 @@ public class BlocksForBuildersBlocks {
             SlabBlock::new, AbstractBlock.Settings.copy(CUT_SANDSTONE_SLAB));
     public static final Block SANDSTONE_BRICK_WALL = registerBlock("sandstone_brick_wall",
             WallBlock::new, AbstractBlock.Settings.copy(SANDSTONE_WALL));
+    public static final Block SMOOTH_RED_SANDSTONE_WALL = registerBlock("smooth_red_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_RED_SANDSTONE));
+    public static final Block CUT_RED_SANDSTONE_STAIRS = registerStairsBlock("cut_red_sandstone_stairs", CUT_RED_SANDSTONE);
+    public static final Block CUT_RED_SANDSTONE_WALL = registerBlock("cut_red_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(CUT_RED_SANDSTONE));
     public static final Block RED_SANDSTONE_BRICKS = registerBlock("red_sandstone_bricks",
             Block::new, AbstractBlock.Settings.copy(CUT_RED_SANDSTONE));
     public static final Block CRACKED_RED_SANDSTONE_BRICKS = registerBlock("cracked_red_sandstone_bricks",
@@ -615,16 +627,40 @@ public class BlocksForBuildersBlocks {
     public static final Block RED_SANDSTONE_BRICK_WALL = registerBlock("red_sandstone_brick_wall",
             WallBlock::new, AbstractBlock.Settings.copy(RED_SANDSTONE_WALL));
 
-    public static final Block SMOOTH_SANDSTONE_WALL = registerBlock("smooth_sandstone_wall",
-            WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_SANDSTONE));
-    public static final Block CUT_SANDSTONE_STAIRS = registerStairsBlock("cut_sandstone_stairs", CUT_SANDSTONE);
-    public static final Block CUT_SANDSTONE_WALL = registerBlock("cut_sandstone_wall",
-            WallBlock::new, AbstractBlock.Settings.copy(CUT_SANDSTONE));
-    public static final Block SMOOTH_RED_SANDSTONE_WALL = registerBlock("smooth_red_sandstone_wall",
-            WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_RED_SANDSTONE));
-    public static final Block CUT_RED_SANDSTONE_STAIRS = registerStairsBlock("cut_red_sandstone_stairs", CUT_RED_SANDSTONE);
-    public static final Block CUT_RED_SANDSTONE_WALL = registerBlock("cut_red_sandstone_wall",
-            WallBlock::new, AbstractBlock.Settings.copy(CUT_RED_SANDSTONE));
+    public static final Block DARK_SAND = registerBlock("dark_sand",settings -> new SandBlock(new ColorCode(14406560), settings),
+            AbstractBlock.Settings.copy(SAND).mapColor(MapColor.OAK_TAN));
+    public static final Block DARK_SANDSTONE = registerBlock("dark_sandstone",
+            Block::new, AbstractBlock.Settings.copy(SANDSTONE).mapColor(MapColor.OAK_TAN));
+    public static final Block DARK_SANDSTONE_STAIRS = registerStairsBlock("dark_sandstone_stairs", SANDSTONE_STAIRS, MapColor.OAK_TAN);
+    public static final Block DARK_SANDSTONE_SLAB = registerBlock("dark_sandstone_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(SANDSTONE_SLAB).mapColor(MapColor.OAK_TAN));
+    public static final Block DARK_SANDSTONE_WALL = registerBlock("dark_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(SANDSTONE_WALL).mapColor(MapColor.OAK_TAN));
+    public static final Block CHISELED_DARK_SANDSTONE = registerBlock("chiseled_dark_sandstone",
+            Block::new, AbstractBlock.Settings.copy(CHISELED_SANDSTONE).mapColor(MapColor.OAK_TAN));
+    public static final Block SMOOTH_DARK_SANDSTONE = registerBlock("smooth_dark_sandstone",
+            Block::new, AbstractBlock.Settings.copy(SMOOTH_SANDSTONE).mapColor(MapColor.OAK_TAN));
+    public static final Block SMOOTH_DARK_SANDSTONE_STAIRS = registerStairsBlock("smooth_dark_sandstone_stairs", SMOOTH_SANDSTONE_STAIRS, MapColor.OAK_TAN);
+    public static final Block SMOOTH_DARK_SANDSTONE_SLAB = registerBlock("smooth_dark_sandstone_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(SMOOTH_SANDSTONE_SLAB).mapColor(MapColor.OAK_TAN));
+    public static final Block SMOOTH_DARK_SANDSTONE_WALL = registerBlock("smooth_dark_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(BlocksForBuildersBlocks.SMOOTH_SANDSTONE_WALL).mapColor(MapColor.OAK_TAN));
+    public static final Block CUT_DARK_SANDSTONE = registerBlock("cut_dark_sandstone",
+            Block::new, AbstractBlock.Settings.copy(CUT_SANDSTONE).mapColor(MapColor.OAK_TAN));
+    public static final Block CUT_DARK_SANDSTONE_STAIRS = registerStairsBlock("cut_dark_sandstone_stairs", BlocksForBuildersBlocks.CUT_SANDSTONE_STAIRS, MapColor.OAK_TAN);
+    public static final Block CUT_DARK_SANDSTONE_SLAB = registerBlock("cut_dark_sandstone_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(CUT_SANDSTONE_SLAB).mapColor(MapColor.OAK_TAN));
+    public static final Block CUT_DARK_SANDSTONE_WALL = registerBlock("cut_dark_sandstone_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(BlocksForBuildersBlocks.CUT_SANDSTONE_WALL).mapColor(MapColor.OAK_TAN));
+    public static final Block DARK_SANDSTONE_BRICKS = registerBlock("dark_sandstone_bricks",
+            Block::new, AbstractBlock.Settings.copy(BlocksForBuildersBlocks.SANDSTONE_BRICKS).mapColor(MapColor.OAK_TAN));
+    public static final Block CRACKED_DARK_SANDSTONE_BRICKS = registerBlock("cracked_dark_sandstone_bricks",
+            Block::new, AbstractBlock.Settings.copy(BlocksForBuildersBlocks.CRACKED_SANDSTONE_BRICKS).mapColor(MapColor.OAK_TAN));
+    public static final Block DARK_SANDSTONE_BRICK_STAIRS = registerStairsBlock("dark_sandstone_brick_stairs", SANDSTONE_BRICK_STAIRS, MapColor.OAK_TAN);
+    public static final Block DARK_SANDSTONE_BRICK_SLAB = registerBlock("dark_sandstone_brick_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(SANDSTONE_BRICK_SLAB).mapColor(MapColor.OAK_TAN));
+    public static final Block DARK_SANDSTONE_BRICK_WALL = registerBlock("dark_sandstone_brick_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL).mapColor(MapColor.OAK_TAN));
 
     public static final Block BAMBOO_MOSAIC_RUG = registerBlock("bamboo_mosaic_rug",
             CarpetBlock::new, AbstractBlock.Settings.copy(BAMBOO_MOSAIC));
@@ -644,8 +680,8 @@ public class BlocksForBuildersBlocks {
     public static final Block COCONUT_THATCH_RUG = registerBlock("coconut_thatch_rug",
             DirectionalCarpet::new, AbstractBlock.Settings.copy(COCONUT_THATCH));
 
-    public static final Block SCORCHED_GRASS = registerBlock("scorched_grass",
-            Block::new, AbstractBlock.Settings.copy(DIRT).mapColor(MapColor.TERRACOTTA_GRAY));
+    public static final Block SCORCHED_GRASS = registerBlock("scorched_grass",settings -> new ScorchedGrassBlock(BlocksForBuildersConfiguredFeatures.SCORCHWOOD_SAPLING_KEY, settings),
+            AbstractBlock.Settings.copy(DIRT).mapColor(MapColor.TERRACOTTA_GRAY));
     public static final Block ASHEN_CARPET = registerBlock("ashen_carpet",
             CarpetBlock::new, AbstractBlock.Settings.copy(MOSS_CARPET).sounds(BlockSoundGroup.GRASS).mapColor(MapColor.TERRACOTTA_BLACK));
 
@@ -664,7 +700,10 @@ public class BlocksForBuildersBlocks {
         return registerBlock(name, settings -> new UntintedParticleLeavesBlock(particleChance, particleEffect, settings), AbstractBlock.Settings.copy(base).mapColor(mapColor));
     }
     private static Block registerStairsBlock(String name, Block base) {
-        return registerBlock(name, settings -> new StairsBlock(base.getDefaultState(), settings), AbstractBlock.Settings.copy(base));
+        return registerStairsBlock(name, base, base.getDefaultMapColor());
+    }
+    private static Block registerStairsBlock(String name, Block base, MapColor color) {
+        return registerBlock(name, settings -> new StairsBlock(base.getDefaultState(), settings), AbstractBlock.Settings.copy(base).mapColor(color));
     }
     private static Block registerDoorBlock(String name, BlockSetType woodType, Block base) {
         return registerBlock(name, settings -> new DoorBlock(woodType, settings), AbstractBlock.Settings.copy(base));

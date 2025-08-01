@@ -281,6 +281,10 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.SMOOTH_STONE_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.SANDSTONE_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB.asItem());
 
@@ -310,6 +314,10 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.CUT_RED_SANDSTONE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.SANDSTONE_BRICK_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_STAIRS.asItem());
 
@@ -343,6 +351,10 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.CUT_RED_SANDSTONE_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.SANDSTONE_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_WALL.asItem())
+                .add(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_WALL.asItem())
+                .add(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_WALL.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_WALL.asItem())
                 .add(BlocksForBuildersBlocks.QUARTZ_BRICK_WALL.asItem())
@@ -434,6 +446,9 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         valueLookupBuilder(ItemTags.DIRT)
                 .add(BlocksForBuildersBlocks.SCORCHED_GRASS.asItem());
+
+        valueLookupBuilder(ItemTags.SAND)
+                .add(BlocksForBuildersBlocks.DARK_SAND.asItem());
 
         valueLookupBuilder(BFBTags.Items.COCONUTS)
                 .add(BlocksForBuildersItems.COCONUT)
@@ -720,6 +735,25 @@ public class BFBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_STAIRS.asItem())
                 .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_SLAB.asItem())
                 .add(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SAND.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_WALL.asItem())
+                .add(BlocksForBuildersBlocks.CHISELED_DARK_SANDSTONE.asItem())
+                .add(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE.asItem())
+                .add(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE_WALL.asItem())
+                .add(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE.asItem())
+                .add(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.CUT_DARK_SANDSTONE_WALL.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICKS.asItem())
+                .add(BlocksForBuildersBlocks.CRACKED_DARK_SANDSTONE_BRICKS.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_STAIRS.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_SLAB.asItem())
+                .add(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICK_WALL.asItem())
                 .add(BlocksForBuildersBlocks.BLACK_NETHER_BRICKS.asItem())
                 .add(BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS.asItem())
                 .add(BlocksForBuildersBlocks.CRACKED_BLACK_NETHER_BRICKS.asItem())
