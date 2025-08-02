@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "blocksforbuilders:polished_light_tuff",
+  "result": {
+    "count": 2,
+    "id": "blocksforbuilders:light_tuff_brick_slab"
+  }
+}

@@ -598,6 +598,32 @@ public class BlocksForBuildersBlocks {
     public static final Block POLISHED_ANDESITE_WALL = registerBlock("polished_andesite_wall",
             WallBlock::new, AbstractBlock.Settings.copy(POLISHED_ANDESITE));
 
+    public static final Block LIGHT_TUFF = registerBlock("light_tuff",
+            Block::new, AbstractBlock.Settings.copy(TUFF).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block LIGHT_TUFF_STAIRS = registerStairsBlock("light_tuff_stairs", TUFF_STAIRS, MapColor.LICHEN_GREEN);
+    public static final Block LIGHT_TUFF_SLAB = registerBlock("light_tuff_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(TUFF_SLAB).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block LIGHT_TUFF_WALL = registerBlock("light_tuff_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(TUFF_WALL).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block CHISELED_LIGHT_TUFF = registerBlock("chiseled_light_tuff",
+            Block::new, AbstractBlock.Settings.copy(CHISELED_TUFF).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block POLISHED_LIGHT_TUFF = registerBlock("polished_light_tuff",
+            Block::new, AbstractBlock.Settings.copy(POLISHED_TUFF).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block POLISHED_LIGHT_TUFF_STAIRS = registerStairsBlock("polished_light_tuff_stairs", POLISHED_TUFF, MapColor.LICHEN_GREEN);
+    public static final Block POLISHED_LIGHT_TUFF_SLAB = registerBlock("polished_light_tuff_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(POLISHED_TUFF_SLAB).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block POLISHED_LIGHT_TUFF_WALL = registerBlock("polished_light_tuff_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(POLISHED_TUFF_WALL).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block LIGHT_TUFF_BRICKS = registerBlock("light_tuff_bricks",
+            Block::new, AbstractBlock.Settings.copy(TUFF_BRICKS).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block LIGHT_TUFF_BRICK_STAIRS = registerStairsBlock("light_tuff_brick_stairs", TUFF_BRICK_STAIRS, MapColor.LICHEN_GREEN);
+    public static final Block LIGHT_TUFF_BRICK_SLAB = registerBlock("light_tuff_brick_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(TUFF_BRICK_SLAB).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block LIGHT_TUFF_BRICK_WALL = registerBlock("light_tuff_brick_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(TUFF_BRICK_WALL).mapColor(MapColor.LICHEN_GREEN));
+    public static final Block CHISELED_LIGHT_TUFF_BRICKS = registerBlock("chiseled_light_tuff_bricks",
+            Block::new, AbstractBlock.Settings.copy(CHISELED_TUFF_BRICKS).mapColor(MapColor.LICHEN_GREEN));
+
     public static final Block SMOOTH_SANDSTONE_WALL = registerBlock("smooth_sandstone_wall",
             WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_SANDSTONE));
     public static final Block CUT_SANDSTONE_STAIRS = registerStairsBlock("cut_sandstone_stairs", CUT_SANDSTONE);

@@ -49,6 +49,9 @@ public class BFBModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool sandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.SANDSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool redSandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool darkSandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool lightTuffTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.LIGHT_TUFF);
+        BlockStateModelGenerator.BlockTexturePool polishedLightTuffTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF);
+        BlockStateModelGenerator.BlockTexturePool lightTuffBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS);
 
         blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.GHOSTWOOD_LOG).log(BlocksForBuildersBlocks.GHOSTWOOD_LOG).wood(BlocksForBuildersBlocks.GHOSTWOOD_WOOD);
         blockStateModelGenerator.createLogTexturePool(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG).log(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG).wood(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD);
@@ -285,6 +288,18 @@ public class BFBModelProvider extends FabricModelProvider {
         polishedAntigoriteTexturePool.slab(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB);
         polishedAntigoriteTexturePool.wall(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL);
 
+        lightTuffTexturePool.stairs(BlocksForBuildersBlocks.LIGHT_TUFF_STAIRS);
+        lightTuffTexturePool.slab(BlocksForBuildersBlocks.LIGHT_TUFF_SLAB);
+        lightTuffTexturePool.wall(BlocksForBuildersBlocks.LIGHT_TUFF_WALL);
+        registerManualPillar(blockStateModelGenerator, BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF);
+        polishedLightTuffTexturePool.stairs(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_STAIRS);
+        polishedLightTuffTexturePool.slab(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_SLAB);
+        polishedLightTuffTexturePool.wall(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_WALL);
+        lightTuffBricksTexturePool.stairs(BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_STAIRS);
+        lightTuffBricksTexturePool.slab(BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_SLAB);
+        lightTuffBricksTexturePool.wall(BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_WALL);
+        registerManualPillar(blockStateModelGenerator, BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF_BRICKS);
+
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE);
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE);
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE);
@@ -313,7 +328,7 @@ public class BFBModelProvider extends FabricModelProvider {
         redSandstoneBricksTexturePool.wall(BlocksForBuildersBlocks.RED_SANDSTONE_BRICK_WALL);
 
         blockStateModelGenerator.registerSimpleCubeAll(BlocksForBuildersBlocks.DARK_SAND);
-        registerManualBottomTop(blockStateModelGenerator, BlocksForBuildersBlocks.DARK_SANDSTONE, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_bottom"));
+        registerManualBottomTop(blockStateModelGenerator, BlocksForBuildersBlocks.DARK_SANDSTONE);
         registerManualStairs(blockStateModelGenerator, BlocksForBuildersBlocks.DARK_SANDSTONE_STAIRS, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_bottom"));
         registerManualSlab(blockStateModelGenerator, BlocksForBuildersBlocks.DARK_SANDSTONE_SLAB, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_bottom"), getId(BlocksForBuildersBlocks.DARK_SANDSTONE));
         registerPillarWall(blockStateModelGenerator, BlocksForBuildersBlocks.DARK_SANDSTONE_WALL, Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_top"), getId(BlocksForBuildersBlocks.DARK_SANDSTONE), Identifier.of(BlocksForBuilders.MOD_ID, "block/dark_sandstone_bottom"));
@@ -476,10 +491,18 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(model)));
     }
 
+    public static void registerManualPillar(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        registerManualPillar(blockStateModelGenerator, block, Identifier.of(getId(block) + "_top"), getId(block));
+    }
+
     public static void registerManualPillar(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier endTexture, Identifier sideTexture) {
         Identifier model = new Model(Optional.of(Identifier.ofVanilla("block/" + "cube_column")), Optional.empty(), TextureKey.END, TextureKey.SIDE).upload(block, new TextureMap()
                 .put(TextureKey.END, endTexture).put(TextureKey.SIDE, sideTexture), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(model)));
+    }
+
+    public static void registerManualBottomTop(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        registerManualBottomTop(blockStateModelGenerator, block, Identifier.of(getId(block) + "_top"), getId(block), Identifier.of(getId(block) + "_bottom"));
     }
 
     public static void registerManualBottomTop(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier topTexture, Identifier sideTexture, Identifier bottomTexture) {

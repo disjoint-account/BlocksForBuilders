@@ -345,6 +345,21 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB, slabDrops(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB));
         addDrop(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL);
 
+        addDrop(BlocksForBuildersBlocks.LIGHT_TUFF);
+        addDrop(BlocksForBuildersBlocks.LIGHT_TUFF_STAIRS);
+        addDrop(BlocksForBuildersBlocks.LIGHT_TUFF_SLAB, slabDrops(BlocksForBuildersBlocks.LIGHT_TUFF_SLAB));
+        addDrop(BlocksForBuildersBlocks.LIGHT_TUFF_WALL);
+        addDrop(BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF);
+        addDrop(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF);
+        addDrop(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_STAIRS);
+        addDrop(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_SLAB, slabDrops(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_SLAB));
+        addDrop(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_WALL);
+        addDrop(BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS);
+        addDrop(BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_STAIRS);
+        addDrop(BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_SLAB));
+        addDrop(BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_WALL);
+        addDrop(BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF_BRICKS);
+
         addDrop(BlocksForBuildersBlocks.POLISHED_GRANITE_WALL);
         addDrop(BlocksForBuildersBlocks.POLISHED_DIORITE_WALL);
         addDrop(BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL);

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocksforbuilders:block/polished_light_tuff_slab"
+    },
+    "type=double": {
+      "model": "blocksforbuilders:block/polished_light_tuff"
+    },
+    "type=top": {
+      "model": "blocksforbuilders:block/polished_light_tuff_slab_top"
+    }
+  }
+}

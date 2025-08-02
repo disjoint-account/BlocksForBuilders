@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": "minecraft:tuff",
+    "W": "minecraft:quartz"
+  },
+  "pattern": [
+    "BW",
+    "WB"
+  ],
+  "result": {
+    "count": 3,
+    "id": "blocksforbuilders:light_tuff"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "blocksforbuilders:light_tuff",
+  "result": {
+    "count": 1,
+    "id": "blocksforbuilders:light_tuff_stairs"
+  }
+}

@@ -166,6 +166,32 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB, BlocksForBuildersBlocks.POLISHED_ANTIGORITE, 2);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL, BlocksForBuildersBlocks.POLISHED_ANTIGORITE, 1);
 
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_STAIRS, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_SLAB, BlocksForBuildersBlocks.LIGHT_TUFF, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_WALL, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_STAIRS, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_SLAB, BlocksForBuildersBlocks.LIGHT_TUFF, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_WALL, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_STAIRS, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_SLAB, BlocksForBuildersBlocks.LIGHT_TUFF, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_WALL, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF_BRICKS, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_STAIRS, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_SLAB, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_WALL, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_STAIRS, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_SLAB, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_WALL, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF_BRICKS, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_STAIRS, BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_SLAB, BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_WALL, BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF_BRICKS, BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS, 1);
+
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRANITE_WALL, Blocks.GRANITE, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_DIORITE_WALL, Blocks.DIORITE, 1);
@@ -584,6 +610,27 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_STAIRS, BlocksForBuildersBlocks.POLISHED_ANTIGORITE);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB, BlocksForBuildersBlocks.POLISHED_ANTIGORITE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL, BlocksForBuildersBlocks.POLISHED_ANTIGORITE);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.LIGHT_TUFF, 3)
+                        .pattern("BW")
+                        .pattern("WB")
+                        .input('B', Items.TUFF)
+                        .input('W', Items.QUARTZ)
+                        .criterion(hasItem(Items.TUFF), conditionsFromItem(Items.QUARTZ))
+                        .offerTo(exporter);
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.LIGHT_TUFF_STAIRS, BlocksForBuildersBlocks.LIGHT_TUFF);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.LIGHT_TUFF_SLAB, BlocksForBuildersBlocks.LIGHT_TUFF);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.LIGHT_TUFF_WALL, BlocksForBuildersBlocks.LIGHT_TUFF);
+                offerChiseledRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF, BlocksForBuildersBlocks.LIGHT_TUFF_SLAB);
+                offerStoneRecipe(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF, BlocksForBuildersBlocks.LIGHT_TUFF);
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_STAIRS, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_SLAB, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF_WALL, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF);
+                offerStoneRecipe(BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS, BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF);
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_STAIRS, BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_SLAB, BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_WALL, BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS);
+                offerChiseledRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF_BRICKS, BlocksForBuildersBlocks.LIGHT_TUFF_BRICK_SLAB);
 
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE);

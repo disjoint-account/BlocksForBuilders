@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocksforbuilders:block/light_tuff_brick_slab"
+    },
+    "type=double": {
+      "model": "blocksforbuilders:block/light_tuff_bricks"
+    },
+    "type=top": {
+      "model": "blocksforbuilders:block/light_tuff_brick_slab_top"
+    }
+  }
+}

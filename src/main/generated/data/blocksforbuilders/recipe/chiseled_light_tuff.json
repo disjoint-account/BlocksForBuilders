@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "chiseled_nether_bricks",
+  "key": {
+    "#": "blocksforbuilders:light_tuff_slab"
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blocksforbuilders:chiseled_light_tuff"
+  }
+}
