@@ -344,6 +344,10 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_STAIRS);
         addDrop(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB, slabDrops(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB));
         addDrop(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL);
+        addDrop(BlocksForBuildersBlocks.ANTIGORITE_BRICKS);
+        addDrop(BlocksForBuildersBlocks.ANTIGORITE_BRICK_STAIRS);
+        addDrop(BlocksForBuildersBlocks.ANTIGORITE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.ANTIGORITE_BRICK_SLAB));
+        addDrop(BlocksForBuildersBlocks.ANTIGORITE_BRICK_WALL);
 
         addDrop(BlocksForBuildersBlocks.LIGHT_TUFF);
         addDrop(BlocksForBuildersBlocks.LIGHT_TUFF_STAIRS);
@@ -361,8 +365,20 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF_BRICKS);
 
         addDrop(BlocksForBuildersBlocks.POLISHED_GRANITE_WALL);
+        addDrop(BlocksForBuildersBlocks.GRANITE_BRICKS);
+        addDrop(BlocksForBuildersBlocks.GRANITE_BRICK_STAIRS);
+        addDrop(BlocksForBuildersBlocks.GRANITE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.GRANITE_BRICK_SLAB));
+        addDrop(BlocksForBuildersBlocks.GRANITE_BRICK_WALL);
         addDrop(BlocksForBuildersBlocks.POLISHED_DIORITE_WALL);
+        addDrop(BlocksForBuildersBlocks.DIORITE_BRICKS);
+        addDrop(BlocksForBuildersBlocks.DIORITE_BRICK_STAIRS);
+        addDrop(BlocksForBuildersBlocks.DIORITE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.DIORITE_BRICK_SLAB));
+        addDrop(BlocksForBuildersBlocks.DIORITE_BRICK_WALL);
         addDrop(BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL);
+        addDrop(BlocksForBuildersBlocks.ANDESITE_BRICKS);
+        addDrop(BlocksForBuildersBlocks.ANDESITE_BRICK_STAIRS);
+        addDrop(BlocksForBuildersBlocks.ANDESITE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.ANDESITE_BRICK_SLAB));
+        addDrop(BlocksForBuildersBlocks.ANDESITE_BRICK_WALL);
 
         addDrop(BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS);
         addDrop(BlocksForBuildersBlocks.SMOOTH_STONE_WALL);

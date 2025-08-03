@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blocksforbuilders:block/antigorite_brick_slab"
+    },
+    "type=double": {
+      "model": "blocksforbuilders:block/antigorite_bricks"
+    },
+    "type=top": {
+      "model": "blocksforbuilders:block/antigorite_brick_slab_top"
+    }
+  }
+}

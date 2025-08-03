@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "blocksforbuilders:diorite_bricks",
+  "result": {
+    "count": 1,
+    "id": "blocksforbuilders:diorite_brick_stairs"
+  }
+}

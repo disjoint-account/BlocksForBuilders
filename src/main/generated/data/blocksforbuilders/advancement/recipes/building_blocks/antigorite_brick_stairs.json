@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_antigorite_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blocksforbuilders:antigorite_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "blocksforbuilders:antigorite_brick_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_antigorite_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blocksforbuilders:antigorite_brick_stairs"
+    ]
+  }
+}

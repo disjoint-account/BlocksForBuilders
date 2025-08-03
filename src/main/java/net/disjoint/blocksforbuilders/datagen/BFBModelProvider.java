@@ -45,6 +45,10 @@ public class BFBModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool grimstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.GRIMSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool antigoriteTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.ANTIGORITE);
         BlockStateModelGenerator.BlockTexturePool polishedAntigoriteTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.POLISHED_ANTIGORITE);
+        BlockStateModelGenerator.BlockTexturePool antigoriteBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.ANTIGORITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool graniteBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.GRANITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool dioriteBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.DIORITE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool andesiteBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.ANDESITE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool smoothStoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.SMOOTH_STONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool sandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.SANDSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool redSandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
@@ -287,6 +291,9 @@ public class BFBModelProvider extends FabricModelProvider {
         polishedAntigoriteTexturePool.stairs(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_STAIRS);
         polishedAntigoriteTexturePool.slab(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_SLAB);
         polishedAntigoriteTexturePool.wall(BlocksForBuildersBlocks.POLISHED_ANTIGORITE_WALL);
+        antigoriteBricksTexturePool.stairs(BlocksForBuildersBlocks.ANTIGORITE_BRICK_STAIRS);
+        antigoriteBricksTexturePool.slab(BlocksForBuildersBlocks.ANTIGORITE_BRICK_SLAB);
+        antigoriteBricksTexturePool.wall(BlocksForBuildersBlocks.ANTIGORITE_BRICK_WALL);
 
         lightTuffTexturePool.stairs(BlocksForBuildersBlocks.LIGHT_TUFF_STAIRS);
         lightTuffTexturePool.slab(BlocksForBuildersBlocks.LIGHT_TUFF_SLAB);
@@ -301,8 +308,17 @@ public class BFBModelProvider extends FabricModelProvider {
         registerManualPillar(blockStateModelGenerator, BlocksForBuildersBlocks.CHISELED_LIGHT_TUFF_BRICKS);
 
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE);
+        graniteBricksTexturePool.stairs(BlocksForBuildersBlocks.GRANITE_BRICK_STAIRS);
+        graniteBricksTexturePool.slab(BlocksForBuildersBlocks.GRANITE_BRICK_SLAB);
+        graniteBricksTexturePool.wall(BlocksForBuildersBlocks.GRANITE_BRICK_WALL);
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE);
+        dioriteBricksTexturePool.stairs(BlocksForBuildersBlocks.DIORITE_BRICK_STAIRS);
+        dioriteBricksTexturePool.slab(BlocksForBuildersBlocks.DIORITE_BRICK_SLAB);
+        dioriteBricksTexturePool.wall(BlocksForBuildersBlocks.DIORITE_BRICK_WALL);
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE);
+        andesiteBricksTexturePool.stairs(BlocksForBuildersBlocks.ANDESITE_BRICK_STAIRS);
+        andesiteBricksTexturePool.slab(BlocksForBuildersBlocks.ANDESITE_BRICK_SLAB);
+        andesiteBricksTexturePool.wall(BlocksForBuildersBlocks.ANDESITE_BRICK_WALL);
 
         registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
         registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.SMOOTH_STONE_WALL, Blocks.SMOOTH_STONE);

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "blocksforbuilders:block/andesite_bricks",
+    "side": "blocksforbuilders:block/andesite_bricks",
+    "top": "blocksforbuilders:block/andesite_bricks"
+  }
+}
