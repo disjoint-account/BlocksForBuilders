@@ -53,6 +53,8 @@ public class BFBModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool sandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.SANDSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool redSandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.RED_SANDSTONE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool darkSandstoneBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool polishedCalciteTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.POLISHED_CALCITE);
+        BlockStateModelGenerator.BlockTexturePool calciteBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.CALCITE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool lightTuffTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.LIGHT_TUFF);
         BlockStateModelGenerator.BlockTexturePool polishedLightTuffTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.POLISHED_LIGHT_TUFF);
         BlockStateModelGenerator.BlockTexturePool lightTuffBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlocksForBuildersBlocks.LIGHT_TUFF_BRICKS);
@@ -284,6 +286,17 @@ public class BFBModelProvider extends FabricModelProvider {
         registerGrimstoneStyleStairs(blockStateModelGenerator, BlocksForBuildersBlocks.GRIMSTONE_TILE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE_TILES);
         registerPillarSlab(blockStateModelGenerator, BlocksForBuildersBlocks.GRIMSTONE_TILE_SLAB, BlocksForBuildersBlocks.GRIMSTONE_TILES, false);
         registerPillarWall(blockStateModelGenerator, BlocksForBuildersBlocks.GRIMSTONE_TILE_WALL, BlocksForBuildersBlocks.GRIMSTONE_TILES);
+
+        registerParityStairs(blockStateModelGenerator, BlocksForBuildersBlocks.CALCITE_STAIRS, Blocks.CALCITE);
+        registerParitySlab(blockStateModelGenerator, BlocksForBuildersBlocks.CALCITE_SLAB, Blocks.CALCITE);
+        registerParityWall(blockStateModelGenerator, BlocksForBuildersBlocks.CALCITE_WALL, Blocks.CALCITE);
+        polishedCalciteTexturePool.stairs(BlocksForBuildersBlocks.POLISHED_CALCITE_STAIRS);
+        polishedCalciteTexturePool.slab(BlocksForBuildersBlocks.POLISHED_CALCITE_SLAB);
+        polishedCalciteTexturePool.wall(BlocksForBuildersBlocks.POLISHED_CALCITE_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(BlocksForBuildersBlocks.CRACKED_CALCITE_BRICKS);
+        calciteBricksTexturePool.stairs(BlocksForBuildersBlocks.CALCITE_BRICK_STAIRS);
+        calciteBricksTexturePool.slab(BlocksForBuildersBlocks.CALCITE_BRICK_SLAB);
+        calciteBricksTexturePool.wall(BlocksForBuildersBlocks.CALCITE_BRICK_WALL);
 
         antigoriteTexturePool.stairs(BlocksForBuildersBlocks.ANTIGORITE_STAIRS);
         antigoriteTexturePool.slab(BlocksForBuildersBlocks.ANTIGORITE_SLAB);

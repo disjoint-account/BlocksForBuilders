@@ -103,6 +103,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 List<ItemConvertible> DARKSANDBRICKS = List.of(BlocksForBuildersBlocks.DARK_SANDSTONE_BRICKS);
                 List<ItemConvertible> DARKSANDSTONE = List.of(BlocksForBuildersBlocks.DARK_SANDSTONE);
                 List<ItemConvertible> SMOOTHSTONEBRICKS = List.of(BlocksForBuildersBlocks.SMOOTH_STONE_BRICKS);
+                List<ItemConvertible> CALCITEBRICKS = List.of(BlocksForBuildersBlocks.CALCITE_BRICKS);
 
                 offerSmelting(CHARCOAL_SMELTABLES, RecipeCategory.MISC, Items.CHARCOAL, 0.1f, 200, "charcoal");
                 offerSmelting(NON_SCORCHWOOD_SAPLINGS, RecipeCategory.MISC, BlocksForBuildersBlocks.SCORCHWOOD_SAPLING, 0.1f, 200, "scorchwood_sapling");
@@ -116,6 +117,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerSmelting(DARKSANDSTONE, RecipeCategory.MISC, BlocksForBuildersBlocks.SMOOTH_DARK_SANDSTONE, 0.1f, 200, "smooth_dark_sandstone");
                 offerSmelting(DARKSANDBRICKS, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_DARK_SANDSTONE_BRICKS, 0.1f, 200, "cracked_dark_sandstone_bricks");
                 offerSmelting(SMOOTHSTONEBRICKS, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_SMOOTH_STONE_BRICKS, 0.1f, 200, "cracked_smooth_stone_bricks");
+                offerSmelting(CALCITEBRICKS, RecipeCategory.MISC, BlocksForBuildersBlocks.CRACKED_CALCITE_BRICKS, 0.1f, 200, "cracked_calcite_bricks");
 
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.GRIMSTONE_SLAB, BlocksForBuildersBlocks.GRIMSTONE, 2);
@@ -176,6 +178,28 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.ANTIGORITE_BRICK_STAIRS, BlocksForBuildersBlocks.ANTIGORITE_BRICKS, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.ANTIGORITE_BRICK_SLAB, BlocksForBuildersBlocks.ANTIGORITE_BRICKS, 2);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.ANTIGORITE_BRICK_WALL, BlocksForBuildersBlocks.ANTIGORITE_BRICKS, 1);
+
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_STAIRS, Blocks.CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_SLAB, Blocks.CALCITE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_WALL, Blocks.CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_CALCITE, Blocks.CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_CALCITE_STAIRS, Blocks.CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_CALCITE_SLAB, Blocks.CALCITE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_CALCITE_WALL, Blocks.CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICKS, Blocks.CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICK_STAIRS, Blocks.CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICK_SLAB, Blocks.CALCITE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICK_WALL, Blocks.CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_CALCITE_STAIRS, BlocksForBuildersBlocks.POLISHED_CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_CALCITE_SLAB, BlocksForBuildersBlocks.POLISHED_CALCITE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.POLISHED_CALCITE_WALL, BlocksForBuildersBlocks.POLISHED_CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICKS, BlocksForBuildersBlocks.POLISHED_CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICK_STAIRS, BlocksForBuildersBlocks.POLISHED_CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICK_SLAB, BlocksForBuildersBlocks.POLISHED_CALCITE, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICK_WALL, BlocksForBuildersBlocks.POLISHED_CALCITE, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICK_STAIRS, BlocksForBuildersBlocks.CALCITE_BRICKS, 1);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICK_SLAB, BlocksForBuildersBlocks.CALCITE_BRICKS, 2);
+                offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.CALCITE_BRICK_WALL, BlocksForBuildersBlocks.CALCITE_BRICKS, 1);
 
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_STAIRS, BlocksForBuildersBlocks.LIGHT_TUFF, 1);
                 offerStonecuttingRecipe(RecipeCategory.MISC, BlocksForBuildersBlocks.LIGHT_TUFF_SLAB, BlocksForBuildersBlocks.LIGHT_TUFF, 2);
@@ -612,7 +636,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         .pattern("WB")
                         .input('B', Items.GUNPOWDER)
                         .input('W', Items.COBBLED_DEEPSLATE)
-                        .criterion(hasItem(Items.COBBLED_DEEPSLATE), conditionsFromItem(Items.COBBLED_DEEPSLATE))
+                        .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.COBBLED_DEEPSLATE))
                         .offerTo(exporter);
                 offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_STAIRS, BlocksForBuildersBlocks.GRIMSTONE);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE_SLAB, BlocksForBuildersBlocks.GRIMSTONE);
@@ -658,6 +682,25 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.ANTIGORITE_BRICK_STAIRS, BlocksForBuildersBlocks.ANTIGORITE_BRICKS);
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.ANTIGORITE_BRICK_SLAB, BlocksForBuildersBlocks.ANTIGORITE_BRICKS);
                 offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.ANTIGORITE_BRICK_WALL, BlocksForBuildersBlocks.ANTIGORITE_BRICKS);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.CALCITE, 3)
+                        .pattern("BW")
+                        .pattern("WB")
+                        .input('B', Items.BONE_MEAL)
+                        .input('W', Items.COBBLESTONE)
+                        .criterion(hasItem(Items.BONE_MEAL), conditionsFromItem(Items.COBBLESTONE))
+                        .offerTo(exporter);
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CALCITE_STAIRS, Blocks.CALCITE);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CALCITE_SLAB, Blocks.CALCITE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CALCITE_WALL, Blocks.CALCITE);
+                offerStoneRecipe(BlocksForBuildersBlocks.POLISHED_CALCITE, Blocks.CALCITE);
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_CALCITE_STAIRS, BlocksForBuildersBlocks.POLISHED_CALCITE);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_CALCITE_SLAB, BlocksForBuildersBlocks.POLISHED_CALCITE);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.POLISHED_CALCITE_WALL, BlocksForBuildersBlocks.POLISHED_CALCITE);
+                offerStoneRecipe(BlocksForBuildersBlocks.CALCITE_BRICKS, BlocksForBuildersBlocks.POLISHED_CALCITE);
+                offerStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CALCITE_BRICK_STAIRS, BlocksForBuildersBlocks.CALCITE_BRICKS);
+                offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CALCITE_BRICK_SLAB, BlocksForBuildersBlocks.CALCITE_BRICKS);
+                offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CALCITE_BRICK_WALL, BlocksForBuildersBlocks.CALCITE_BRICKS);
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.LIGHT_TUFF, 3)
                         .pattern("BW")

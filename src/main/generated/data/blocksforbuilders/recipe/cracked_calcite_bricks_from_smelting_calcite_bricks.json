@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "cracked_calcite_bricks",
+  "ingredient": "blocksforbuilders:calcite_bricks",
+  "result": {
+    "id": "blocksforbuilders:cracked_calcite_bricks"
+  }
+}

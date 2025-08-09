@@ -349,6 +349,19 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.ANTIGORITE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.ANTIGORITE_BRICK_SLAB));
         addDrop(BlocksForBuildersBlocks.ANTIGORITE_BRICK_WALL);
 
+        addDrop(BlocksForBuildersBlocks.CALCITE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.CALCITE_SLAB, slabDrops(BlocksForBuildersBlocks.CALCITE_SLAB));
+        addDrop(BlocksForBuildersBlocks.CALCITE_WALL);
+        addDrop(BlocksForBuildersBlocks.POLISHED_CALCITE);
+        addDrop(BlocksForBuildersBlocks.POLISHED_CALCITE_STAIRS);
+        addDrop(BlocksForBuildersBlocks.POLISHED_CALCITE_SLAB, slabDrops(BlocksForBuildersBlocks.POLISHED_CALCITE_SLAB));
+        addDrop(BlocksForBuildersBlocks.POLISHED_CALCITE_WALL);
+        addDrop(BlocksForBuildersBlocks.CALCITE_BRICKS);
+        addDrop(BlocksForBuildersBlocks.CRACKED_CALCITE_BRICKS);
+        addDrop(BlocksForBuildersBlocks.CALCITE_BRICK_STAIRS);
+        addDrop(BlocksForBuildersBlocks.CALCITE_BRICK_SLAB, slabDrops(BlocksForBuildersBlocks.CALCITE_BRICK_SLAB));
+        addDrop(BlocksForBuildersBlocks.CALCITE_BRICK_WALL);
+
         addDrop(BlocksForBuildersBlocks.LIGHT_TUFF);
         addDrop(BlocksForBuildersBlocks.LIGHT_TUFF_STAIRS);
         addDrop(BlocksForBuildersBlocks.LIGHT_TUFF_SLAB, slabDrops(BlocksForBuildersBlocks.LIGHT_TUFF_SLAB));

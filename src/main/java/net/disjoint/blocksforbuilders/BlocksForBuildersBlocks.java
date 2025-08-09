@@ -652,6 +652,28 @@ public class BlocksForBuildersBlocks {
     public static final Block CHISELED_LIGHT_TUFF_BRICKS = registerBlock("chiseled_light_tuff_bricks",
             Block::new, AbstractBlock.Settings.copy(CHISELED_TUFF_BRICKS).mapColor(MapColor.LICHEN_GREEN));
 
+    public static final Block CALCITE_STAIRS = registerStairsBlock("calcite_stairs", CALCITE);
+    public static final Block CALCITE_SLAB = registerBlock("calcite_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(CALCITE));
+    public static final Block CALCITE_WALL = registerBlock("calcite_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(CALCITE));
+    public static final Block POLISHED_CALCITE = registerBlock("polished_calcite",
+            Block::new, AbstractBlock.Settings.copy(CALCITE));
+    public static final Block POLISHED_CALCITE_STAIRS = registerStairsBlock("polished_calcite_stairs", CALCITE);
+    public static final Block POLISHED_CALCITE_SLAB = registerBlock("polished_calcite_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(CALCITE));
+    public static final Block POLISHED_CALCITE_WALL = registerBlock("polished_calcite_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(CALCITE));
+    public static final Block CALCITE_BRICKS = registerBlock("calcite_bricks",
+            Block::new, AbstractBlock.Settings.copy(CALCITE));
+    public static final Block CRACKED_CALCITE_BRICKS = registerBlock("cracked_calcite_bricks",
+            Block::new, AbstractBlock.Settings.copy(CALCITE));
+    public static final Block CALCITE_BRICK_STAIRS = registerStairsBlock("calcite_brick_stairs", CALCITE);
+    public static final Block CALCITE_BRICK_SLAB = registerBlock("calcite_brick_slab",
+            SlabBlock::new, AbstractBlock.Settings.copy(CALCITE));
+    public static final Block CALCITE_BRICK_WALL = registerBlock("calcite_brick_wall",
+            WallBlock::new, AbstractBlock.Settings.copy(CALCITE));
+
     public static final Block SMOOTH_SANDSTONE_WALL = registerBlock("smooth_sandstone_wall",
             WallBlock::new, AbstractBlock.Settings.copy(SMOOTH_SANDSTONE));
     public static final Block CUT_SANDSTONE_STAIRS = registerStairsBlock("cut_sandstone_stairs", CUT_SANDSTONE);

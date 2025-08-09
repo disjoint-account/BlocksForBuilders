@@ -312,6 +312,18 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.ANDESITE_BRICK_STAIRS);
                         entries.add(BlocksForBuildersBlocks.ANDESITE_BRICK_SLAB);
                         entries.add(BlocksForBuildersBlocks.ANDESITE_BRICK_WALL);
+                        entries.add(BlocksForBuildersBlocks.CALCITE_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.CALCITE_SLAB);
+                        entries.add(BlocksForBuildersBlocks.CALCITE_WALL);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_CALCITE);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_CALCITE_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_CALCITE_SLAB);
+                        entries.add(BlocksForBuildersBlocks.POLISHED_CALCITE_WALL);
+                        entries.add(BlocksForBuildersBlocks.CALCITE_BRICKS);
+                        entries.add(BlocksForBuildersBlocks.CRACKED_CALCITE_BRICKS);
+                        entries.add(BlocksForBuildersBlocks.CALCITE_BRICK_STAIRS);
+                        entries.add(BlocksForBuildersBlocks.CALCITE_BRICK_SLAB);
+                        entries.add(BlocksForBuildersBlocks.CALCITE_BRICK_WALL);
                         entries.add(BlocksForBuildersBlocks.LIGHT_TUFF);
                         entries.add(BlocksForBuildersBlocks.LIGHT_TUFF_STAIRS);
                         entries.add(BlocksForBuildersBlocks.LIGHT_TUFF_SLAB);
