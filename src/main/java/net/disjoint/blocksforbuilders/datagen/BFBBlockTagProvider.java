@@ -38,6 +38,16 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.PINE_BOOKSHELF,
                         BlocksForBuildersBlocks.CEDAR_BOOKSHELF,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF,
+                        BlocksForBuildersBlocks.GHOSTWOOD_SHELF,
+                        BlocksForBuildersBlocks.SCORCHWOOD_SHELF,
+                        BlocksForBuildersBlocks.WILLOW_SHELF,
+                        BlocksForBuildersBlocks.GREEN_JUNGLE_SHELF,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_SHELF,
+                        BlocksForBuildersBlocks.PALM_SHELF,
+                        BlocksForBuildersBlocks.BEECH_SHELF,
+                        BlocksForBuildersBlocks.MAPLE_SHELF,
+                        BlocksForBuildersBlocks.PINE_SHELF,
+                        BlocksForBuildersBlocks.CEDAR_SHELF,
                         BlocksForBuildersBlocks.BAMBOO_THATCH,
                         BlocksForBuildersBlocks.BAMBOO_THATCH_RUG,
                         BlocksForBuildersBlocks.COCONUT_THATCH,
@@ -709,6 +719,18 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.PINE_PRESSURE_PLATE,
                         BlocksForBuildersBlocks.CEDAR_PRESSURE_PLATE,
                         BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE);
+
+        valueLookupBuilder(BlockTags.WOODEN_SHELVES)
+                .add(BlocksForBuildersBlocks.GHOSTWOOD_SHELF,
+                        BlocksForBuildersBlocks.SCORCHWOOD_SHELF,
+                        BlocksForBuildersBlocks.WILLOW_SHELF,
+                        BlocksForBuildersBlocks.GREEN_JUNGLE_SHELF,
+                        BlocksForBuildersBlocks.GREEN_BAMBOO_SHELF,
+                        BlocksForBuildersBlocks.PALM_SHELF,
+                        BlocksForBuildersBlocks.BEECH_SHELF,
+                        BlocksForBuildersBlocks.MAPLE_SHELF,
+                        BlocksForBuildersBlocks.PINE_SHELF,
+                        BlocksForBuildersBlocks.CEDAR_SHELF);
 
         valueLookupBuilder(BlockTags.WOODEN_SLABS)
                 .add(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB,

@@ -73,6 +73,7 @@ public class BFBModelProvider extends FabricModelProvider {
         ghostwoodTexturePool.button(BlocksForBuildersBlocks.GHOSTWOOD_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.GHOSTWOOD_DOOR);
         blockStateModelGenerator.registerTrapdoor(BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR);
+        blockStateModelGenerator.registerShelf(BlocksForBuildersBlocks.GHOSTWOOD_SHELF, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS, BlocksForBuildersBlocks.GHOSTWOOD_SIGN, BlocksForBuildersBlocks.GHOSTWOOD_WALL_SIGN);
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG, BlocksForBuildersBlocks.GHOSTWOOD_HANGING_SIGN, BlocksForBuildersBlocks.GHOSTWOOD_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
@@ -88,6 +89,7 @@ public class BFBModelProvider extends FabricModelProvider {
         scorchwoodTexturePool.button(BlocksForBuildersBlocks.SCORCHWOOD_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.SCORCHWOOD_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.SCORCHWOOD_TRAPDOOR);
+        blockStateModelGenerator.registerShelf(BlocksForBuildersBlocks.SCORCHWOOD_SHELF, BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS, BlocksForBuildersBlocks.SCORCHWOOD_SIGN, BlocksForBuildersBlocks.SCORCHWOOD_WALL_SIGN);
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG, BlocksForBuildersBlocks.SCORCHWOOD_HANGING_SIGN, BlocksForBuildersBlocks.SCORCHWOOD_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
@@ -106,6 +108,7 @@ public class BFBModelProvider extends FabricModelProvider {
         willowTexturePool.button(BlocksForBuildersBlocks.WILLOW_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.WILLOW_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.WILLOW_TRAPDOOR);
+        blockStateModelGenerator.registerShelf(BlocksForBuildersBlocks.WILLOW_SHELF, BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.WILLOW_PLANKS, BlocksForBuildersBlocks.WILLOW_SIGN, BlocksForBuildersBlocks.WILLOW_WALL_SIGN);
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG, BlocksForBuildersBlocks.WILLOW_HANGING_SIGN, BlocksForBuildersBlocks.WILLOW_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.WILLOW_BOOKSHELF, BlocksForBuildersBlocks.WILLOW_PLANKS);
@@ -124,6 +127,7 @@ public class BFBModelProvider extends FabricModelProvider {
         palmTexturePool.button(BlocksForBuildersBlocks.PALM_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.PALM_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.PALM_TRAPDOOR);
+        blockStateModelGenerator.registerShelf(BlocksForBuildersBlocks.PALM_SHELF, BlocksForBuildersBlocks.STRIPPED_PALM_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.PALM_PLANKS, BlocksForBuildersBlocks.PALM_SIGN, BlocksForBuildersBlocks.PALM_WALL_SIGN);
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_PALM_LOG, BlocksForBuildersBlocks.PALM_HANGING_SIGN, BlocksForBuildersBlocks.PALM_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.PALM_BOOKSHELF, BlocksForBuildersBlocks.PALM_PLANKS);
@@ -142,6 +146,7 @@ public class BFBModelProvider extends FabricModelProvider {
         mapleTexturePool.button(BlocksForBuildersBlocks.MAPLE_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.MAPLE_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.MAPLE_TRAPDOOR);
+        blockStateModelGenerator.registerShelf(BlocksForBuildersBlocks.MAPLE_SHELF, BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.MAPLE_PLANKS, BlocksForBuildersBlocks.MAPLE_SIGN, BlocksForBuildersBlocks.MAPLE_WALL_SIGN);
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG, BlocksForBuildersBlocks.MAPLE_HANGING_SIGN, BlocksForBuildersBlocks.MAPLE_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.MAPLE_BOOKSHELF, BlocksForBuildersBlocks.MAPLE_PLANKS);
@@ -160,6 +165,7 @@ public class BFBModelProvider extends FabricModelProvider {
         beechTexturePool.button(BlocksForBuildersBlocks.BEECH_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.BEECH_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.BEECH_TRAPDOOR);
+        blockStateModelGenerator.registerShelf(BlocksForBuildersBlocks.BEECH_SHELF, BlocksForBuildersBlocks.STRIPPED_BEECH_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.BEECH_PLANKS, BlocksForBuildersBlocks.BEECH_SIGN, BlocksForBuildersBlocks.BEECH_WALL_SIGN);
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG, BlocksForBuildersBlocks.BEECH_HANGING_SIGN, BlocksForBuildersBlocks.BEECH_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.BEECH_BOOKSHELF, BlocksForBuildersBlocks.BEECH_PLANKS);
@@ -178,6 +184,7 @@ public class BFBModelProvider extends FabricModelProvider {
         pineTexturePool.button(BlocksForBuildersBlocks.PINE_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.PINE_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.PINE_TRAPDOOR);
+        blockStateModelGenerator.registerShelf(BlocksForBuildersBlocks.PINE_SHELF, BlocksForBuildersBlocks.STRIPPED_PINE_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.PINE_PLANKS, BlocksForBuildersBlocks.PINE_SIGN, BlocksForBuildersBlocks.PINE_WALL_SIGN);
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_PINE_LOG, BlocksForBuildersBlocks.PINE_HANGING_SIGN, BlocksForBuildersBlocks.PINE_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.PINE_BOOKSHELF, BlocksForBuildersBlocks.PINE_PLANKS);
@@ -196,6 +203,7 @@ public class BFBModelProvider extends FabricModelProvider {
         cedarTexturePool.button(BlocksForBuildersBlocks.CEDAR_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.CEDAR_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.CEDAR_TRAPDOOR);
+        blockStateModelGenerator.registerShelf(BlocksForBuildersBlocks.CEDAR_SHELF, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.CEDAR_PLANKS, BlocksForBuildersBlocks.CEDAR_SIGN, BlocksForBuildersBlocks.CEDAR_WALL_SIGN);
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG, BlocksForBuildersBlocks.CEDAR_HANGING_SIGN, BlocksForBuildersBlocks.CEDAR_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.CEDAR_BOOKSHELF, BlocksForBuildersBlocks.CEDAR_PLANKS);
@@ -214,6 +222,7 @@ public class BFBModelProvider extends FabricModelProvider {
         greenJungleTexturePool.button(BlocksForBuildersBlocks.GREEN_JUNGLE_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR);
+        blockStateModelGenerator.registerShelf(BlocksForBuildersBlocks.GREEN_JUNGLE_SHELF, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS, BlocksForBuildersBlocks.GREEN_JUNGLE_SIGN, BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_SIGN);
         blockStateModelGenerator.registerHangingSign(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG, BlocksForBuildersBlocks.GREEN_JUNGLE_HANGING_SIGN, BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
@@ -226,6 +235,7 @@ public class BFBModelProvider extends FabricModelProvider {
         greenBambooTexturePool.button(BlocksForBuildersBlocks.GREEN_BAMBOO_BUTTON);
         blockStateModelGenerator.registerDoor(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
+        blockStateModelGenerator.registerShelf(BlocksForBuildersBlocks.GREEN_BAMBOO_SHELF, Blocks.BAMBOO_BLOCK);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, BlocksForBuildersBlocks.GREEN_BAMBOO_SIGN, BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_SIGN);
         blockStateModelGenerator.registerHangingSign(Blocks.BAMBOO_BLOCK, BlocksForBuildersBlocks.GREEN_BAMBOO_HANGING_SIGN, BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);

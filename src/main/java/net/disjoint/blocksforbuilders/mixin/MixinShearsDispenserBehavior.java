@@ -22,7 +22,7 @@ public class MixinShearsDispenserBehavior {
     @Inject(method = "tryShearBlock",
             at = @At(value = "TAIL"),
             cancellable = true)
-    private static void tryShearBlock(ServerWorld world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
+    private static void tryShearBlock(ServerWorld world, ItemStack tool, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         BlockState blockState = world.getBlockState(pos);
         if (blockState.isOf(BlocksForBuildersBlocks.COCONUT) && blockState.get(HAS_FIBER)) {
             world.playSound(null, pos, SoundEvents.ENTITY_SHEEP_SHEAR, SoundCategory.BLOCKS, 1.0F, 1.0F);

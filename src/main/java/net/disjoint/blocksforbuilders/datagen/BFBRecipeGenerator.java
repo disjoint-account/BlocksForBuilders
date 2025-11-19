@@ -428,6 +428,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GHOSTWOOD_SLAB, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GHOSTWOOD_STAIRS, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
+                offerShelfRecipe(BlocksForBuildersBlocks.GHOSTWOOD_SHELF, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.GHOSTWOOD_WOOD, BlocksForBuildersBlocks.GHOSTWOOD_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_WOOD, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
 
@@ -448,6 +449,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.SCORCHWOOD_SLAB, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.SCORCHWOOD_STAIRS, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.SCORCHWOOD_TRAPDOOR, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
+                offerShelfRecipe(BlocksForBuildersBlocks.SCORCHWOOD_SHELF, BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.SCORCHWOOD_WOOD, BlocksForBuildersBlocks.SCORCHWOOD_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_WOOD, BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG);
 
@@ -470,6 +472,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.WILLOW_SLAB, BlocksForBuildersBlocks.WILLOW_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.WILLOW_STAIRS, BlocksForBuildersBlocks.WILLOW_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.WILLOW_TRAPDOOR, BlocksForBuildersBlocks.WILLOW_PLANKS);
+                offerShelfRecipe(BlocksForBuildersBlocks.WILLOW_SHELF, BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.WILLOW_WOOD, BlocksForBuildersBlocks.WILLOW_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_WILLOW_WOOD, BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
 
@@ -492,6 +495,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.PALM_SLAB, BlocksForBuildersBlocks.PALM_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.PALM_STAIRS, BlocksForBuildersBlocks.PALM_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.PALM_TRAPDOOR, BlocksForBuildersBlocks.PALM_PLANKS);
+                offerShelfRecipe(BlocksForBuildersBlocks.PALM_SHELF, BlocksForBuildersBlocks.STRIPPED_PALM_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.PALM_WOOD, BlocksForBuildersBlocks.PALM_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_PALM_WOOD, BlocksForBuildersBlocks.STRIPPED_PALM_LOG);
 
@@ -514,6 +518,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.MAPLE_SLAB, BlocksForBuildersBlocks.MAPLE_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.MAPLE_STAIRS, BlocksForBuildersBlocks.MAPLE_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.MAPLE_TRAPDOOR, BlocksForBuildersBlocks.MAPLE_PLANKS);
+                offerShelfRecipe(BlocksForBuildersBlocks.MAPLE_SHELF, BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.MAPLE_WOOD, BlocksForBuildersBlocks.MAPLE_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD, BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG);
 
@@ -536,6 +541,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BEECH_SLAB, BlocksForBuildersBlocks.BEECH_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BEECH_STAIRS, BlocksForBuildersBlocks.BEECH_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.BEECH_TRAPDOOR, BlocksForBuildersBlocks.BEECH_PLANKS);
+                offerShelfRecipe(BlocksForBuildersBlocks.BEECH_SHELF, BlocksForBuildersBlocks.STRIPPED_BEECH_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.BEECH_WOOD, BlocksForBuildersBlocks.BEECH_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD, BlocksForBuildersBlocks.STRIPPED_BEECH_LOG);
 
@@ -558,6 +564,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.PINE_SLAB, BlocksForBuildersBlocks.PINE_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.PINE_STAIRS, BlocksForBuildersBlocks.PINE_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.PINE_TRAPDOOR, BlocksForBuildersBlocks.PINE_PLANKS);
+                offerShelfRecipe(BlocksForBuildersBlocks.PINE_SHELF, BlocksForBuildersBlocks.STRIPPED_PINE_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.PINE_WOOD, BlocksForBuildersBlocks.PINE_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_PINE_WOOD, BlocksForBuildersBlocks.STRIPPED_PINE_LOG);
 
@@ -580,6 +587,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CEDAR_SLAB, BlocksForBuildersBlocks.CEDAR_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CEDAR_STAIRS, BlocksForBuildersBlocks.CEDAR_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.CEDAR_TRAPDOOR, BlocksForBuildersBlocks.CEDAR_PLANKS);
+                offerShelfRecipe(BlocksForBuildersBlocks.CEDAR_SHELF, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.CEDAR_WOOD, BlocksForBuildersBlocks.CEDAR_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
 
@@ -602,6 +610,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
+                offerShelfRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_SHELF, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD, BlocksForBuildersBlocks.GREEN_JUNGLE_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_WOOD, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG);
 
@@ -624,6 +633,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodenSlabRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
                 offerWoodenStairsRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
                 offerTrapdoorRecipe(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
+                offerShelfRecipe(BlocksForBuildersBlocks.GREEN_BAMBOO_SHELF, Blocks.BAMBOO_BLOCK);
 
                 offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
                 offerHedgeRecipe(BlocksForBuildersBlocks.GOLD_ACACIA_HEDGE, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);

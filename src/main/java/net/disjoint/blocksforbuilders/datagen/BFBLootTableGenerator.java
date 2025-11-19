@@ -107,6 +107,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_SLAB, slabDrops(BlocksForBuildersBlocks.GHOSTWOOD_SLAB));
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_STAIRS);
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.GHOSTWOOD_SHELF);
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_WALL_SIGN, drops(BlocksForBuildersItems.GHOSTWOOD_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GHOSTWOOD_WOOD);
@@ -127,6 +128,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.SCORCHWOOD_SLAB, slabDrops(BlocksForBuildersBlocks.SCORCHWOOD_SLAB));
         addDrop(BlocksForBuildersBlocks.SCORCHWOOD_STAIRS);
         addDrop(BlocksForBuildersBlocks.SCORCHWOOD_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.SCORCHWOOD_SHELF);
         addDrop(BlocksForBuildersBlocks.SCORCHWOOD_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.SCORCHWOOD_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.SCORCHWOOD_WALL_SIGN, drops(BlocksForBuildersItems.SCORCHWOOD_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.SCORCHWOOD_WOOD);
@@ -150,6 +152,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB, slabDrops(BlocksForBuildersBlocks.GREEN_JUNGLE_SLAB));
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_STAIRS);
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_SHELF);
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.GREEN_JUNGLE_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_SIGN, drops(BlocksForBuildersItems.GREEN_JUNGLE_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD);
@@ -173,6 +176,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.WILLOW_SLAB, slabDrops(BlocksForBuildersBlocks.WILLOW_SLAB));
         addDrop(BlocksForBuildersBlocks.WILLOW_STAIRS);
         addDrop(BlocksForBuildersBlocks.WILLOW_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.WILLOW_SHELF);
         addDrop(BlocksForBuildersBlocks.WILLOW_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.WILLOW_WALL_SIGN, drops(BlocksForBuildersItems.WILLOW_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.WILLOW_WOOD);
@@ -193,6 +197,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.PALM_SLAB, slabDrops(BlocksForBuildersBlocks.PALM_SLAB));
         addDrop(BlocksForBuildersBlocks.PALM_STAIRS);
         addDrop(BlocksForBuildersBlocks.PALM_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.PALM_SHELF);
         addDrop(BlocksForBuildersBlocks.PALM_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.PALM_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.PALM_WALL_SIGN, drops(BlocksForBuildersItems.PALM_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.PALM_WOOD);
@@ -216,6 +221,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.MAPLE_SLAB, slabDrops(BlocksForBuildersBlocks.MAPLE_SLAB));
         addDrop(BlocksForBuildersBlocks.MAPLE_STAIRS);
         addDrop(BlocksForBuildersBlocks.MAPLE_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.MAPLE_SHELF);
         addDrop(BlocksForBuildersBlocks.MAPLE_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.MAPLE_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.MAPLE_WALL_SIGN, drops(BlocksForBuildersItems.MAPLE_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.MAPLE_WOOD);
@@ -239,6 +245,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.BEECH_SLAB, slabDrops(BlocksForBuildersBlocks.BEECH_SLAB));
         addDrop(BlocksForBuildersBlocks.BEECH_STAIRS);
         addDrop(BlocksForBuildersBlocks.BEECH_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.BEECH_SHELF);
         addDrop(BlocksForBuildersBlocks.BEECH_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.BEECH_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.BEECH_WALL_SIGN, drops(BlocksForBuildersItems.BEECH_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.BEECH_WOOD);
@@ -262,6 +269,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.PINE_SLAB, slabDrops(BlocksForBuildersBlocks.PINE_SLAB));
         addDrop(BlocksForBuildersBlocks.PINE_STAIRS);
         addDrop(BlocksForBuildersBlocks.PINE_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.PINE_SHELF);
         addDrop(BlocksForBuildersBlocks.PINE_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.PINE_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.PINE_WALL_SIGN, drops(BlocksForBuildersItems.PINE_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.PINE_WOOD);
@@ -285,6 +293,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.CEDAR_SLAB, slabDrops(BlocksForBuildersBlocks.CEDAR_SLAB));
         addDrop(BlocksForBuildersBlocks.CEDAR_STAIRS);
         addDrop(BlocksForBuildersBlocks.CEDAR_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.CEDAR_SHELF);
         addDrop(BlocksForBuildersBlocks.CEDAR_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.CEDAR_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.CEDAR_WALL_SIGN, drops(BlocksForBuildersItems.CEDAR_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.CEDAR_WOOD);
@@ -302,6 +311,7 @@ public class BFBLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB, slabDrops(BlocksForBuildersBlocks.GREEN_BAMBOO_SLAB));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS);
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
+        addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_SHELF);
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_HANGING_SIGN, drops(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM));
         addDrop(BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_SIGN, drops(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM));
 

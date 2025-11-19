@@ -1,6 +1,6 @@
-// 1.21.8	-999999999-01-01T00:00:00	Blocks For Builders/Tags for minecraft:item
+// 1.21.9	-999999999-01-01T00:00:00	Blocks For Builders/Tags for minecraft:item
 4b53821b0f64bf13d8d8b327b6b197da406bf2c4 data/blocksforbuilders/tags/item/beech_logs.json
-2a3b84c1a8fafeaa3c992af79f4fd97d11815a64 data/blocksforbuilders/tags/item/bfb_tag.json
+3121d1841a1cf22de7b19e2c201f3cb01d471822 data/blocksforbuilders/tags/item/bfb_tag.json
 be174ee99a28a9c956a8b6ab567a2f81cb1645eb data/blocksforbuilders/tags/item/bookshelves.json
 63514e6e6d49ce2e0509b1e571f7ba042381150d data/blocksforbuilders/tags/item/cedar_logs.json
 1f3160fd0cbd3443451c35b37d079436270bcb62 data/blocksforbuilders/tags/item/coconuts.json
@@ -32,6 +32,7 @@ ff116a8c68d9f96e72bc740bca0fe99445f22631 data/minecraft/tags/item/planks.json
 29cd53d1b6b27629e33ae205b7525d77de312f95 data/minecraft/tags/item/wooden_doors.json
 7a154689d6a17c810683edc4e5e12a501183f521 data/minecraft/tags/item/wooden_fences.json
 b3789fd2af62e7408efb0c803dd62be6f5b5d50d data/minecraft/tags/item/wooden_pressure_plates.json
+698099b82469f432642c22677b58bb0a3c26b7f3 data/minecraft/tags/item/wooden_shelves.json
 730cc75d6f74068672171eb5391cd9725bf3899d data/minecraft/tags/item/wooden_slabs.json
 bb8a17409b83ac202edc2d4d5a88f37e68c97bf9 data/minecraft/tags/item/wooden_stairs.json
 3346f8243d9bbf905b46bd525da17e0ee0d4a455 data/minecraft/tags/item/wooden_trapdoors.json

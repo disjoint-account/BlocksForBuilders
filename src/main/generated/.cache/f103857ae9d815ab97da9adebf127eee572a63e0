@@ -1,4 +1,4 @@
-// 1.21.8	-999999999-01-01T00:00:00	Blocks For Builders/Tags for minecraft:block
+// 1.21.9	-999999999-01-01T00:00:00	Blocks For Builders/Tags for minecraft:block
 4b53821b0f64bf13d8d8b327b6b197da406bf2c4 data/blocksforbuilders/tags/block/beech_logs.json
 63514e6e6d49ce2e0509b1e571f7ba042381150d data/blocksforbuilders/tags/block/cedar_logs.json
 3ed21ebb72505c3f3801880862aa8067df4e63b3 data/blocksforbuilders/tags/block/ghostwood_logs.json
@@ -20,7 +20,7 @@ aeb252e8bcde411a56cc90544fcfc75c658ac8a0 data/minecraft/tags/block/enchantment_p
 f1f718e44d660e43fce39108d32b80197ac41b24 data/minecraft/tags/block/leaves.json
 4a2bce82b3413e716af8f3f9e45059808d40023e data/minecraft/tags/block/logs.json
 e0ca4e84ae517b4e0a6848826755a6a8912a016f data/minecraft/tags/block/logs_that_burn.json
-f55513e2781fdc6bbe15578e30abd3fb03ed3385 data/minecraft/tags/block/mineable/axe.json
+859311f0d9fd3920a56e93268ea5a83d08f268e6 data/minecraft/tags/block/mineable/axe.json
 aebb05e54a1bdc1c52900d410251d9e3201bffaf data/minecraft/tags/block/mineable/hoe.json
 daf568abde35c38b291b398c320c8839aac07997 data/minecraft/tags/block/mineable/pickaxe.json
 ef8c9bfe20b1a47fdd1de41e3ad8933a63b97da9 data/minecraft/tags/block/mineable/shovel.json
@@ -39,6 +39,7 @@ f06ced54b5bcf8c3ad302a1711eda35999a71198 data/minecraft/tags/block/wooden_button
 eb21fcab02a3898a4fcf3aca052b1840db7e9a11 data/minecraft/tags/block/wooden_doors.json
 a0f22ecf94c9ac676d1d24a4ce80d026f4691ada data/minecraft/tags/block/wooden_fences.json
 03ecb8925ca5e00e6d4c0af9e475eaa657f39eb9 data/minecraft/tags/block/wooden_pressure_plates.json
+4bed1bc666b63be9078205e4661487a8b52f7ac9 data/minecraft/tags/block/wooden_shelves.json
 4c200cbf3e2debc5c5651b2f280cad6c62d4712c data/minecraft/tags/block/wooden_slabs.json
 37339f18a29f0b8f83452a1de73a56bed7b887f5 data/minecraft/tags/block/wooden_stairs.json
 445e7eaff715b971f510fcbc6861ee77f0bf1bcc data/minecraft/tags/block/wooden_trapdoors.json

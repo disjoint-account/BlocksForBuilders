@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_shelf_unpowered",
+  "textures": {
+    "all": "blocksforbuilders:block/willow_shelf",
+    "particle": "blocksforbuilders:block/stripped_willow_log"
+  }
+}

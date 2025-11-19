@@ -31,6 +31,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.WILLOW_PRESSURE_PLATE);
                         entries.add(BlocksForBuildersBlocks.WILLOW_DOOR);
                         entries.add(BlocksForBuildersBlocks.WILLOW_TRAPDOOR);
+                        entries.add(BlocksForBuildersBlocks.WILLOW_SHELF);
                         entries.add(BlocksForBuildersItems.WILLOW_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.WILLOW_BOAT);
@@ -52,6 +53,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.PALM_PRESSURE_PLATE);
                         entries.add(BlocksForBuildersBlocks.PALM_DOOR);
                         entries.add(BlocksForBuildersBlocks.PALM_TRAPDOOR);
+                        entries.add(BlocksForBuildersBlocks.PALM_SHELF);
                         entries.add(BlocksForBuildersItems.PALM_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.PALM_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.PALM_RAFT);
@@ -73,6 +75,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.MAPLE_PRESSURE_PLATE);
                         entries.add(BlocksForBuildersBlocks.MAPLE_DOOR);
                         entries.add(BlocksForBuildersBlocks.MAPLE_TRAPDOOR);
+                        entries.add(BlocksForBuildersBlocks.MAPLE_SHELF);
                         entries.add(BlocksForBuildersItems.MAPLE_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.MAPLE_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.MAPLE_BOAT);
@@ -94,6 +97,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.BEECH_PRESSURE_PLATE);
                         entries.add(BlocksForBuildersBlocks.BEECH_DOOR);
                         entries.add(BlocksForBuildersBlocks.BEECH_TRAPDOOR);
+                        entries.add(BlocksForBuildersBlocks.BEECH_SHELF);
                         entries.add(BlocksForBuildersItems.BEECH_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.BEECH_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.BEECH_BOAT);
@@ -115,6 +119,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.PINE_PRESSURE_PLATE);
                         entries.add(BlocksForBuildersBlocks.PINE_DOOR);
                         entries.add(BlocksForBuildersBlocks.PINE_TRAPDOOR);
+                        entries.add(BlocksForBuildersBlocks.PINE_SHELF);
                         entries.add(BlocksForBuildersItems.PINE_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.PINE_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.PINE_BOAT);
@@ -136,6 +141,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.CEDAR_PRESSURE_PLATE);
                         entries.add(BlocksForBuildersBlocks.CEDAR_DOOR);
                         entries.add(BlocksForBuildersBlocks.CEDAR_TRAPDOOR);
+                        entries.add(BlocksForBuildersBlocks.CEDAR_SHELF);
                         entries.add(BlocksForBuildersItems.CEDAR_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.CEDAR_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.CEDAR_BOAT);
@@ -157,6 +163,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.GHOSTWOOD_PRESSURE_PLATE);
                         entries.add(BlocksForBuildersBlocks.GHOSTWOOD_DOOR);
                         entries.add(BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR);
+                        entries.add(BlocksForBuildersBlocks.GHOSTWOOD_SHELF);
                         entries.add(BlocksForBuildersItems.GHOSTWOOD_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.GHOSTWOOD_BOAT);
@@ -175,6 +182,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.SCORCHWOOD_PRESSURE_PLATE);
                         entries.add(BlocksForBuildersBlocks.SCORCHWOOD_DOOR);
                         entries.add(BlocksForBuildersBlocks.SCORCHWOOD_TRAPDOOR);
+                        entries.add(BlocksForBuildersBlocks.SCORCHWOOD_SHELF);
                         entries.add(BlocksForBuildersItems.SCORCHWOOD_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.SCORCHWOOD_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.SCORCHWOOD_BOAT);
@@ -196,6 +204,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_PRESSURE_PLATE);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR);
                         entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR);
+                        entries.add(BlocksForBuildersBlocks.GREEN_JUNGLE_SHELF);
                         entries.add(BlocksForBuildersItems.GREEN_JUNGLE_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.GREEN_JUNGLE_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.GREEN_JUNGLE_BOAT);
@@ -209,6 +218,7 @@ public class BFBItemGroup {
                         entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_PRESSURE_PLATE);
                         entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR);
                         entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
+                        entries.add(BlocksForBuildersBlocks.GREEN_BAMBOO_SHELF);
                         entries.add(BlocksForBuildersItems.GREEN_BAMBOO_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM);
                         entries.add(BlocksForBuildersItems.GREEN_BAMBOO_RAFT);
