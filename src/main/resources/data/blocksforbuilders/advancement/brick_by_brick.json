@@ -1,0 +1,213 @@
+{
+  "display": {
+    "frame": "goal",
+    "icon": {
+      "id": "blocksforbuilders:grimstone_bricks",
+      "count": 1
+    },
+    "title": {
+      "translate": "advancements.blocksforbuilders.brick_by_brick.title"
+    },
+    "description": {
+      "translate": "advancements.blocksforbuilders.brick_by_brick.description"
+    }
+  },
+  "parent": "blocksforbuilders:root",
+  "criteria": {
+    "place_grimstone_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:grimstone_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_antigorite_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:antigorite_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_granite_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:granite_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_diorite_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:diorite_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_andesite_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:andesite_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_calcite_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:calcite_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_light_tuff_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:light_tuff_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_smooth_stone_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:smooth_stone_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_sandstone_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:sandstone_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_red_sandstone_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:red_sandstone_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_dark_sandstone_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:dark_sandstone_bricks"
+            }
+          }
+        ]
+      }
+    },
+    "place_black_nether_bricks": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "blocksforbuilders:black_nether_bricks"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_grimstone_bricks"
+    ],
+    [
+      "place_antigorite_bricks"
+    ],
+    [
+      "place_granite_bricks"
+    ],
+    [
+      "place_diorite_bricks"
+    ],
+    [
+      "place_andesite_bricks"
+    ],
+    [
+      "place_calcite_bricks"
+    ],
+    [
+      "place_light_tuff_bricks"
+    ],
+    [
+      "place_smooth_stone_bricks"
+    ],
+    [
+      "place_sandstone_bricks"
+    ],
+    [
+      "place_red_sandstone_bricks"
+    ],
+    [
+      "place_dark_sandstone_bricks"
+    ],
+    [
+      "place_black_nether_bricks"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
