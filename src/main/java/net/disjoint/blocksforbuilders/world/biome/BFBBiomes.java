@@ -7,9 +7,10 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.MusicType;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.attribute.BackgroundMusic;
+import net.minecraft.world.attribute.EnvironmentAttributeMap;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
@@ -48,7 +49,7 @@ public class BFBBiomes {
         spawnBuilder.spawn(SpawnGroup.CREATURE, 5, new SpawnSettings.SpawnEntry(EntityType.FOX, 1, 4));
 
         DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
-        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+        DefaultBiomeFeatures.addCaveAndMonsters(spawnBuilder);
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
@@ -74,6 +75,10 @@ public class BFBBiomes {
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.LARGE_FALLEN_BEECH_PLACED_KEY);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.LARGE_FALLEN_YELLOW_BIRCH_PLACED_KEY);
 
+        EnvironmentAttributeMap environmentAttributeMap = EnvironmentAttributeMap.builder()
+                .with(EnvironmentAttributes.BACKGROUND_MUSIC_AUDIO, BackgroundMusic.DEFAULT)
+                .build();
+
 
         return new Biome.Builder()
                 .precipitation(true)
@@ -81,21 +86,18 @@ public class BFBBiomes {
                 .temperature(0.7f)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
+                .addEnvironmentAttributes(environmentAttributeMap)
                 .effects((new BiomeEffects.Builder())
                         .waterColor(0x3f76e4)
-                        .waterFogColor(329011)
-                        .skyColor(0x79a6ff)
                         .grassColor(0x79c05a)
                         .foliageColor(0xaea42a)
-                        .fogColor(12638463)
-                        .music(MusicType.createIngameMusic(SoundEvents.MUSIC_OVERWORLD_FOREST))
                 .build()).build();
     }
 
     public static Biome scorchedForest(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
-        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+        DefaultBiomeFeatures.addCaveAndMonsters(spawnBuilder);
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
@@ -109,19 +111,24 @@ public class BFBBiomes {
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SMALL_ASHEN_CARPET_PLACED_KEY);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.LARGE_ASHEN_CARPET_PLACED_KEY);
 
+        EnvironmentAttributeMap environmentAttributeMap = EnvironmentAttributeMap.builder()
+                .with(EnvironmentAttributes.SKY_COLOR_VISUAL, 0x818181)
+                .with(EnvironmentAttributes.FOG_COLOR_VISUAL, 0x7A7A7A)
+                .with(EnvironmentAttributes.WATER_FOG_COLOR_VISUAL, 0x7F7F7F)
+                .with(EnvironmentAttributes.BACKGROUND_MUSIC_AUDIO, BackgroundMusic.EMPTY)
+                .build();
+
         return new Biome.Builder()
                 .precipitation(false)
                 .temperature(2.0f)
                 .downfall(0.0f)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
+                .addEnvironmentAttributes(environmentAttributeMap)
                 .effects((new BiomeEffects.Builder())
                         .waterColor(0xA5A5A5)
-                        .waterFogColor(0x7F7F7F)
-                        .skyColor(0x818181)
                         .grassColor(0x86B783)
                         .foliageColor(0x68A464)
-                        .fogColor(0x7A7A7A)
                         .build()).build();
     }
 
@@ -133,7 +140,7 @@ public class BFBBiomes {
         spawnBuilder.spawn(SpawnGroup.CREATURE, 8, new SpawnSettings.SpawnEntry(EntityType.RABBIT, 2, 3));
         spawnBuilder.spawn(SpawnGroup.CREATURE, 8, new SpawnSettings.SpawnEntry(EntityType.FOX, 2, 4));
 
-        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+        DefaultBiomeFeatures.addCaveAndMonsters(spawnBuilder);
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
@@ -161,20 +168,21 @@ public class BFBBiomes {
         DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder, true);
 
+        EnvironmentAttributeMap environmentAttributeMap = EnvironmentAttributeMap.builder()
+                .with(EnvironmentAttributes.BACKGROUND_MUSIC_AUDIO, BackgroundMusic.DEFAULT)
+                .build();
+
         return new Biome.Builder()
                 .precipitation(true)
                 .temperature(0.5f)
                 .downfall(0.8f)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
+                .addEnvironmentAttributes(environmentAttributeMap)
                 .effects((new BiomeEffects.Builder())
                         .waterColor(0x3F76E4)
-                        .waterFogColor(329011)
-                        .skyColor(0x79a6ff)
                         .grassColor(0x86B783)
                         .foliageColor(0x68A464)
-                        .fogColor(12638463)
-                        .music(MusicType.createIngameMusic(SoundEvents.MUSIC_OVERWORLD_OLD_GROWTH_TAIGA))
                         .build()).build();
     }
 }
