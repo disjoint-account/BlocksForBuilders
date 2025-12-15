@@ -39,10 +39,10 @@
     "mixins.bfb.json"
   ],
   "depends": {
-    "terrablender": ">=4.3.0.0",
-    "fabricloader": ">=0.15.11",
+    "terrablender": ">=21.11.0.0",
+    "fabricloader": ">=0.16.0",
     "fabric": "*",
-    "minecraft": ">=1.21",
+    "minecraft": ">=1.21.11",
     "java": ">=21"
   },
   "suggests": {
