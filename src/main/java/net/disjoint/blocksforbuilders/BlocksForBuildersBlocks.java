@@ -75,11 +75,11 @@ public class BlocksForBuildersBlocks {
     public static final Block GREEN_JUNGLE_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_sign"),
             settings -> new SignBlock(GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_SIGN).mapColor(MapColor.DARK_GREEN));
     public static final Block GREEN_JUNGLE_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_wall_sign"),
-            settings -> new WallSignBlock(GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_WALL_SIGN).mapColor(MapColor.DARK_GREEN));
+            settings -> new WallSignBlock(GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_WALL_SIGN).mapColor(MapColor.DARK_GREEN).lootTable(GREEN_JUNGLE_SIGN.getLootTableKey()));
     public static final Block GREEN_JUNGLE_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_hanging_sign"),
             settings -> new HangingSignBlock(GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_HANGING_SIGN).mapColor(MapColor.DARK_GREEN));
     public static final Block GREEN_JUNGLE_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_jungle_wall_hanging_sign"),
-            settings -> new WallHangingSignBlock(GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_WALL_HANGING_SIGN).mapColor(MapColor.DARK_GREEN));
+            settings -> new WallHangingSignBlock(GREEN_JUNGLE, settings), AbstractBlock.Settings.copy(JUNGLE_WALL_HANGING_SIGN).mapColor(MapColor.DARK_GREEN).lootTable(GREEN_JUNGLE_HANGING_SIGN.getLootTableKey()));
     public static final Block GREEN_JUNGLE_SHELF = registerBlock("green_jungle_shelf",
             ShelfBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_SHELF).mapColor(MapColor.DARK_GREEN));
    
@@ -113,11 +113,11 @@ public class BlocksForBuildersBlocks {
     public static final Block GHOSTWOOD_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_sign"),
             settings -> new SignBlock(GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.WHITE_GRAY));
     public static final Block GHOSTWOOD_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_wall_sign"),
-            settings -> new WallSignBlock(GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.WHITE_GRAY));
+            settings -> new WallSignBlock(GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.WHITE_GRAY).lootTable(GHOSTWOOD_SIGN.getLootTableKey()));
     public static final Block GHOSTWOOD_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_hanging_sign"),
             settings -> new HangingSignBlock(GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.WHITE_GRAY));
     public static final Block GHOSTWOOD_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "ghostwood_wall_hanging_sign"),
-            settings -> new WallHangingSignBlock(GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.WHITE_GRAY));
+            settings -> new WallHangingSignBlock(GHOSTWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.WHITE_GRAY).lootTable(GHOSTWOOD_HANGING_SIGN.getLootTableKey()));
     public static final Block GHOSTWOOD_SHELF = registerBlock("ghostwood_shelf",
             ShelfBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SHELF).mapColor(MapColor.WHITE_GRAY));
 
@@ -146,11 +146,11 @@ public class BlocksForBuildersBlocks {
     public static final Block SCORCHWOOD_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood_sign"),
             settings -> new SignBlock(SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.BLACK));
     public static final Block SCORCHWOOD_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood_wall_sign"),
-            settings -> new WallSignBlock(SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.BLACK));
+            settings -> new WallSignBlock(SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.BLACK).lootTable(SCORCHWOOD_SIGN.getLootTableKey()));
     public static final Block SCORCHWOOD_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood_hanging_sign"),
             settings -> new HangingSignBlock(SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.BLACK));
     public static final Block SCORCHWOOD_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "scorchwood_wall_hanging_sign"),
-            settings -> new WallHangingSignBlock(SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.BLACK));
+            settings -> new WallHangingSignBlock(SCORCHWOOD, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.BLACK).lootTable(SCORCHWOOD_HANGING_SIGN.getLootTableKey()));
     public static final Block SCORCHWOOD_SHELF = registerBlock("scorchwood_shelf",
             ShelfBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SHELF).mapColor(MapColor.BLACK));
 
@@ -184,11 +184,11 @@ public class BlocksForBuildersBlocks {
     public static final Block WILLOW_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "willow_sign"),
             settings -> new SignBlock(WILLOW, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.LICHEN_GREEN));
     public static final Block WILLOW_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "willow_wall_sign"),
-            settings -> new WallSignBlock(WILLOW, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.LICHEN_GREEN));
+            settings -> new WallSignBlock(WILLOW, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.LICHEN_GREEN).lootTable(WILLOW_SIGN.getLootTableKey()));
     public static final Block WILLOW_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "willow_hanging_sign"),
             settings -> new HangingSignBlock(WILLOW, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.LICHEN_GREEN));
     public static final Block WILLOW_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "willow_wall_hanging_sign"),
-            settings -> new WallHangingSignBlock(WILLOW, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.LICHEN_GREEN));
+            settings -> new WallHangingSignBlock(WILLOW, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.LICHEN_GREEN).lootTable(WILLOW_HANGING_SIGN.getLootTableKey()));
     public static final Block WILLOW_SHELF = registerBlock("willow_shelf",
             ShelfBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SHELF).mapColor(MapColor.LICHEN_GREEN));
 
@@ -222,11 +222,11 @@ public class BlocksForBuildersBlocks {
     public static final Block PALM_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "palm_sign"),
             settings -> new SignBlock(PALM, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.PALE_YELLOW));
     public static final Block PALM_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "palm_wall_sign"),
-            settings -> new WallSignBlock(PALM, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.PALE_YELLOW));
+            settings -> new WallSignBlock(PALM, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.PALE_YELLOW).lootTable(PALM_SIGN.getLootTableKey()));
     public static final Block PALM_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "palm_hanging_sign"),
             settings -> new HangingSignBlock(PALM, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.PALE_YELLOW));
     public static final Block PALM_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "palm_wall_hanging_sign"),
-            settings -> new WallHangingSignBlock(PALM, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.PALE_YELLOW));
+            settings -> new WallHangingSignBlock(PALM, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.PALE_YELLOW).lootTable(PALM_HANGING_SIGN.getLootTableKey()));
     public static final Block PALM_SHELF = registerBlock("palm_shelf",
             ShelfBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SHELF).mapColor(MapColor.PALE_YELLOW));
 
@@ -260,11 +260,11 @@ public class BlocksForBuildersBlocks {
     public static final Block MAPLE_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "maple_sign"),
             settings -> new SignBlock(MAPLE, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.RAW_IRON_PINK));
     public static final Block MAPLE_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "maple_wall_sign"),
-            settings -> new WallSignBlock(MAPLE, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.RAW_IRON_PINK));
+            settings -> new WallSignBlock(MAPLE, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.RAW_IRON_PINK).lootTable(MAPLE_SIGN.getLootTableKey()));
     public static final Block MAPLE_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "maple_hanging_sign"),
             settings -> new HangingSignBlock(MAPLE, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.RAW_IRON_PINK));
     public static final Block MAPLE_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "maple_wall_hanging_sign"),
-            settings -> new WallHangingSignBlock(MAPLE, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.RAW_IRON_PINK));
+            settings -> new WallHangingSignBlock(MAPLE, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.RAW_IRON_PINK).lootTable(MAPLE_HANGING_SIGN.getLootTableKey()));
     public static final Block MAPLE_SHELF = registerBlock("maple_shelf",
             ShelfBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SHELF).mapColor(MapColor.RAW_IRON_PINK));
 
@@ -298,11 +298,11 @@ public class BlocksForBuildersBlocks {
     public static final Block BEECH_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "beech_sign"),
             settings -> new SignBlock(BEECH, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.ORANGE));
     public static final Block BEECH_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "beech_wall_sign"),
-            settings -> new WallSignBlock(BEECH, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.ORANGE));
+            settings -> new WallSignBlock(BEECH, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.ORANGE).lootTable(BEECH_SIGN.getLootTableKey()));
     public static final Block BEECH_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "beech_hanging_sign"),
             settings -> new HangingSignBlock(BEECH, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.ORANGE));
     public static final Block BEECH_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "beech_wall_hanging_sign"),
-            settings -> new WallHangingSignBlock(BEECH, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.ORANGE));
+            settings -> new WallHangingSignBlock(BEECH, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.ORANGE).lootTable(BEECH_HANGING_SIGN.getLootTableKey()));
     public static final Block BEECH_SHELF = registerBlock("beech_shelf",
             ShelfBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SHELF).mapColor(MapColor.ORANGE));
 
@@ -336,11 +336,11 @@ public class BlocksForBuildersBlocks {
     public static final Block PINE_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "pine_sign"),
             settings -> new SignBlock(PINE, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.TERRACOTTA_BROWN));
     public static final Block PINE_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "pine_wall_sign"),
-            settings -> new WallSignBlock(PINE, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.TERRACOTTA_BROWN));
+            settings -> new WallSignBlock(PINE, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.TERRACOTTA_BROWN).lootTable(PINE_SIGN.getLootTableKey()));
     public static final Block PINE_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "pine_hanging_sign"),
             settings -> new HangingSignBlock(PINE, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_BROWN));
     public static final Block PINE_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "pine_wall_hanging_sign"),
-            settings -> new WallHangingSignBlock(PINE, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_BROWN));
+            settings -> new WallHangingSignBlock(PINE, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.TERRACOTTA_BROWN).lootTable(PINE_HANGING_SIGN.getLootTableKey()));
     public static final Block PINE_SHELF = registerBlock("pine_shelf",
             ShelfBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SHELF).mapColor(MapColor.TERRACOTTA_BROWN));
 
@@ -374,11 +374,11 @@ public class BlocksForBuildersBlocks {
     public static final Block CEDAR_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "cedar_sign"),
             settings -> new SignBlock(CEDAR, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.OAK_TAN));
     public static final Block CEDAR_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "cedar_wall_sign"),
-            settings -> new WallSignBlock(CEDAR, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.OAK_TAN));
+            settings -> new WallSignBlock(CEDAR, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.OAK_TAN).lootTable(CEDAR_SIGN.getLootTableKey()));
     public static final Block CEDAR_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "cedar_hanging_sign"),
             settings -> new HangingSignBlock(CEDAR, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.OAK_TAN));
     public static final Block CEDAR_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "cedar_wall_hanging_sign"),
-            settings -> new WallHangingSignBlock(CEDAR, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.OAK_TAN));
+            settings -> new WallHangingSignBlock(CEDAR, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.OAK_TAN).lootTable(CEDAR_HANGING_SIGN.getLootTableKey()));
     public static final Block CEDAR_SHELF = registerBlock("cedar_shelf",
             ShelfBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_SHELF).mapColor(MapColor.OAK_TAN));
 
@@ -397,11 +397,11 @@ public class BlocksForBuildersBlocks {
     public static final Block GREEN_BAMBOO_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_sign"),
             settings -> new SignBlock(GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(OAK_SIGN).mapColor(MapColor.DARK_GREEN));
     public static final Block GREEN_BAMBOO_WALL_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_wall_sign"),
-            settings -> new WallSignBlock(GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.DARK_GREEN));
+            settings -> new WallSignBlock(GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(OAK_WALL_SIGN).mapColor(MapColor.DARK_GREEN).lootTable(GREEN_BAMBOO_SIGN.getLootTableKey()));
     public static final Block GREEN_BAMBOO_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_hanging_sign"),
             settings -> new HangingSignBlock(GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(OAK_HANGING_SIGN).mapColor(MapColor.DARK_GREEN));
     public static final Block GREEN_BAMBOO_WALL_HANGING_SIGN = SignBlockHelper.registerSignBlock(Identifier.of(BlocksForBuilders.MOD_ID, "green_bamboo_wall_hanging_sign"),
-            settings -> new WallHangingSignBlock(GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(OAK_WALL_HANGING_SIGN).mapColor(MapColor.DARK_GREEN));
+            settings -> new WallHangingSignBlock(GREEN_BAMBOO, settings), AbstractBlock.Settings.copy(BAMBOO_WALL_HANGING_SIGN).mapColor(MapColor.DARK_GREEN).lootTable(GREEN_BAMBOO_HANGING_SIGN.getLootTableKey()));
     public static final Block GREEN_BAMBOO_SHELF = registerBlock("green_bamboo_shelf",
             ShelfBlock::new, AbstractBlock.Settings.copy(BAMBOO_SHELF).mapColor(MapColor.DARK_GREEN));
 
@@ -830,6 +830,7 @@ public class BlocksForBuildersBlocks {
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
         Registry.register(Registries.ITEM, key, new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey().registryKey(key)));
     }
+
     public static void registerModBlocks() {
         BlocksForBuilders.LOGGER.info("Registering blocks for " + BlocksForBuilders.MOD_ID);
     }
