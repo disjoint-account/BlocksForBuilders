@@ -3,7 +3,6 @@ package net.disjoint.blocksforbuilders;
 import net.disjoint.blocksforbuilders.boatstuff.BFBBoatDispenserBehavior;
 import net.disjoint.blocksforbuilders.boatstuff.BFBEntityTypes;
 import net.disjoint.blocksforbuilders.util.particles.BFBParticleTypes;
-import net.disjoint.blocksforbuilders.villagers.BFBVillagerTrades;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBTreeDecoratorType;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBTrunkPlacerTypes;
 import net.disjoint.blocksforbuilders.world.gen.BlocksForBuildersWorldGen;
@@ -22,6 +21,7 @@ public class BlocksForBuilders implements ModInitializer {
 		BlocksForBuildersWorldGen.generateBlocksForBuildersWorldGen();
 		BFBItemGroup.registerItemGroups();
 		BlocksForBuildersBlocks.registerModBlocks();
+		PumpkinPie.registerPie();
 		BlocksForBuildersItems.registerModItems();
 		BFBBlockEntities.registerBlockEntities();
 		BFBAliases.registerAliases();
@@ -30,7 +30,6 @@ public class BlocksForBuilders implements ModInitializer {
 		BFBTreeDecoratorType.register();
 		BFBBoatDispenserBehavior.registerDefaults();
 		BFBParticleTypes.registerParticles();
-		BFBVillagerTrades.registerTrades();
 		Instance.init();
 	}
 }

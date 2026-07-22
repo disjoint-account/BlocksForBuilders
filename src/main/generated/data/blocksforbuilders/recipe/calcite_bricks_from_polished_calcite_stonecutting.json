@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "blocksforbuilders:polished_calcite",
   "result": {
-    "count": 1,
     "id": "blocksforbuilders:calcite_bricks"
   }
 }

@@ -1,34 +1,34 @@
 package net.disjoint.blocksforbuilders;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.UntintedParticleLeavesBlock;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.UntintedParticleLeavesBlock;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
 
 public class PalmLeavesBlock extends UntintedParticleLeavesBlock {
-    public PalmLeavesBlock(Settings settings, float leafParticleChance, ParticleEffect particleEffect) {
+    public PalmLeavesBlock(Properties settings, float leafParticleChance, ParticleOptions particleEffect) {
         super(leafParticleChance, particleEffect, settings);
     }
 
     private boolean canGrowCoconuts(BlockState state) {
-        return state.get(DISTANCE) == 1;
+        return state.getValue(DISTANCE) == 1;
     }
 
     @Override
-    protected boolean hasRandomTicks(BlockState state) {
-        return (state.get(DISTANCE) == 7 && !(Boolean)state.get(PERSISTENT)) || canGrowCoconuts(state);
+    protected boolean isRandomlyTicking(BlockState state) {
+        return (state.getValue(DISTANCE) == 7 && !(Boolean)state.getValue(PERSISTENT)) || canGrowCoconuts(state);
     }
 
     @Override
-    protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (this.shouldDecay(state)) {
-            dropStacks(state, world, pos);
+    protected void randomTick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+        if (this.decaying(state)) {
+            dropResources(state, world, pos);
             world.removeBlock(pos, false);
         }
-        if (canGrowCoconuts(state) && world.getBlockState(pos.down()).isAir() && random.nextDouble() < 0.1) {
-            world.setBlockState(pos.down(), BlocksForBuildersBlocks.COCONUT.getDefaultState().with(CoconutBlock.HANGING, true));
+        if (canGrowCoconuts(state) && world.getBlockState(pos.below()).isAir() && random.nextDouble() < 0.1) {
+            world.setBlockAndUpdate(pos.below(), BlocksForBuildersBlocks.COCONUT.defaultBlockState().setValue(CoconutBlock.HANGING, true));
         }
     }
 }

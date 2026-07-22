@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "blocksforbuilders:grimstone",
   "result": {
-    "count": 1,
     "id": "blocksforbuilders:grimstone_tiles"
   }
 }

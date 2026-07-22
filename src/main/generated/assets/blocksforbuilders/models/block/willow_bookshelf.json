@@ -2,6 +2,7 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "blocksforbuilders:block/willow_planks",
+    "particle": "blocksforbuilders:block/willow_planks",
     "side": "blocksforbuilders:block/willow_bookshelf"
   }
 }

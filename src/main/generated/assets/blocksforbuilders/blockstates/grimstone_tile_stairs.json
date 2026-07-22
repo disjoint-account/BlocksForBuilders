@@ -18,20 +18,20 @@
       "model": "blocksforbuilders:block/grimstone_tile_stairs"
     },
     "facing=east,half=top,shape=inner_left": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_inner_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_inner",
       "x": 180
     },
     "facing=east,half=top,shape=inner_right": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_inner_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_inner",
       "x": 180,
       "y": 90
     },
     "facing=east,half=top,shape=outer_left": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_outer_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_outer",
       "x": 180
     },
     "facing=east,half=top,shape=outer_right": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_outer_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_outer",
       "x": 180,
       "y": 90
     },
@@ -60,21 +60,21 @@
       "y": 270
     },
     "facing=north,half=top,shape=inner_left": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_inner_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_inner",
       "x": 180,
       "y": 270
     },
     "facing=north,half=top,shape=inner_right": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_inner_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_inner",
       "x": 180
     },
     "facing=north,half=top,shape=outer_left": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_outer_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_outer",
       "x": 180,
       "y": 270
     },
     "facing=north,half=top,shape=outer_right": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_outer_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_outer",
       "x": 180
     },
     "facing=north,half=top,shape=straight": {
@@ -101,22 +101,22 @@
       "y": 90
     },
     "facing=south,half=top,shape=inner_left": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_inner_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_inner",
       "x": 180,
       "y": 90
     },
     "facing=south,half=top,shape=inner_right": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_inner_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_inner",
       "x": 180,
       "y": 180
     },
     "facing=south,half=top,shape=outer_left": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_outer_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_outer",
       "x": 180,
       "y": 90
     },
     "facing=south,half=top,shape=outer_right": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_outer_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_outer",
       "x": 180,
       "y": 180
     },
@@ -146,22 +146,22 @@
       "y": 180
     },
     "facing=west,half=top,shape=inner_left": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_inner_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_inner",
       "x": 180,
       "y": 180
     },
     "facing=west,half=top,shape=inner_right": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_inner_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_inner",
       "x": 180,
       "y": 270
     },
     "facing=west,half=top,shape=outer_left": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_outer_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_outer",
       "x": 180,
       "y": 180
     },
     "facing=west,half=top,shape=outer_right": {
-      "model": "blocksforbuilders:block/grimstone_tile_stairs_outer_top",
+      "model": "blocksforbuilders:block/grimstone_tile_stairs_top_outer",
       "x": 180,
       "y": 270
     },

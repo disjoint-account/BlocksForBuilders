@@ -5,11 +5,11 @@ import com.mojang.serialization.MapCodec;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.CoconutBlock;
 import net.disjoint.blocksforbuilders.world.feature.tree.BFBTreeDecoratorType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.world.gen.treedecorator.TreeDecorator;
-import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator;
+import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType;
 import java.util.List;
 
 public class CoconutTreeDecorator extends TreeDecorator {
@@ -23,23 +23,23 @@ public class CoconutTreeDecorator extends TreeDecorator {
     }
 
     @Override
-    protected TreeDecoratorType<?> getType() {
+    protected TreeDecoratorType<?> type() {
         return BFBTreeDecoratorType.COCONUT;
     }
 
     @Override
-    public void generate(TreeDecorator.Generator generator) {
-        List<BlockPos> logsList = generator.getLogPositions();
+    public void place(TreeDecorator.Context generator) {
+        List<BlockPos> logsList = generator.logs();
         if (!logsList.isEmpty()) {
-            Random random = generator.getRandom();
+            RandomSource random = generator.random();
             if (!(random.nextFloat() >= this.probability)) {
                 BlockPos topTrunk = logsList.getLast();
-                BlockPos trunk = topTrunk.down();
-                for (Direction direction : Direction.Type.HORIZONTAL) {
+                BlockPos trunk = topTrunk.below();
+                for (Direction direction : Direction.Plane.HORIZONTAL) {
                     if (random.nextFloat() <= 0.25F) {
-                        BlockPos candidatePos = trunk.offset(direction);
-                        if (generator.isAir(candidatePos) && generator.matches(candidatePos.up(), state -> state.isOf(BlocksForBuildersBlocks.PALM_LEAVES))) {
-                            generator.replace(candidatePos, BlocksForBuildersBlocks.COCONUT.getDefaultState().with(CoconutBlock.HANGING, true));
+                        BlockPos candidatePos = trunk.relative(direction);
+                        if (generator.isAir(candidatePos) && generator.checkBlock(candidatePos.above(), state -> state.is(BlocksForBuildersBlocks.PALM_LEAVES))) {
+                            generator.setBlock(candidatePos, BlocksForBuildersBlocks.COCONUT.defaultBlockState().setValue(CoconutBlock.HANGING, true));
                         }
                     }
                 }

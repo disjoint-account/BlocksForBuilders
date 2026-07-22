@@ -1,12 +1,12 @@
 package net.disjoint.blocksforbuilders.util;
 
 import net.disjoint.blocksforbuilders.BlocksForBuilders;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Item;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.TagKey;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.biome.Biome;
 
 public class BFBTags {
     public static class Blocks {
@@ -22,7 +22,7 @@ public class BFBTags {
         public static final TagKey<Block> CEDAR_LOGS = createTag("cedar_logs");
 
         private static TagKey<Block> createTag(String name) {
-            return TagKey.of(RegistryKeys.BLOCK, Identifier.of(BlocksForBuilders.MOD_ID, name));
+            return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(BlocksForBuilders.MOD_ID, name));
         }
     }
 
@@ -41,7 +41,7 @@ public class BFBTags {
         public static final TagKey<Item> BFB_TAG = createTag("bfb_tag");
 
         private static TagKey<Item> createTag(String name) {
-            return TagKey.of(RegistryKeys.ITEM, Identifier.of(BlocksForBuilders.MOD_ID, name));
+            return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(BlocksForBuilders.MOD_ID, name));
         }
     }
 
@@ -50,7 +50,7 @@ public class BFBTags {
         public static final TagKey<Biome> SPAWNS_WOODS_WOLF = createTag("spawns_woods_wolf");
 
         private static TagKey<Biome> createTag(String name) {
-            return TagKey.of(RegistryKeys.BIOME, Identifier.of(BlocksForBuilders.MOD_ID, name));
+            return TagKey.create(Registries.BIOME, Identifier.fromNamespaceAndPath(BlocksForBuilders.MOD_ID, name));
         }
     }
 }

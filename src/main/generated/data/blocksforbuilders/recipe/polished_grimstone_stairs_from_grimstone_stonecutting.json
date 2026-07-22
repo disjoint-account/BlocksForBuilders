@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "blocksforbuilders:grimstone",
   "result": {
-    "count": 1,
     "id": "blocksforbuilders:polished_grimstone_stairs"
   }
 }

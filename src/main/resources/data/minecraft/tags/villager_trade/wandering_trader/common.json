@@ -1,0 +1,24 @@
+{
+  "values": [
+    "minecraft:wandering_trader/emerald_beech_sapling",
+    "minecraft:wandering_trader/emerald_beech_log",
+    "minecraft:wandering_trader/emerald_cedar_sapling",
+    "minecraft:wandering_trader/emerald_cedar_log",
+    "minecraft:wandering_trader/emerald_coconut",
+    "minecraft:wandering_trader/emerald_palm_log",
+    "minecraft:wandering_trader/emerald_ghostwood_sapling",
+    "minecraft:wandering_trader/emerald_ghostwood_log",
+    "minecraft:wandering_trader/emerald_gold_acacia_sapling",
+    "minecraft:wandering_trader/emerald_green_jungle_sapling",
+    "minecraft:wandering_trader/emerald_green_jungle_log",
+    "minecraft:wandering_trader/emerald_maple_sapling",
+    "minecraft:wandering_trader/emerald_maple_log",
+    "minecraft:wandering_trader/emerald_pine_sapling",
+    "minecraft:wandering_trader/emerald_pine_log",
+    "minecraft:wandering_trader/emerald_scorchwood_sapling",
+    "minecraft:wandering_trader/emerald_scorchwood_log",
+    "minecraft:wandering_trader/emerald_willow_sapling",
+    "minecraft:wandering_trader/emerald_willow_log",
+    "minecraft:wandering_trader/emerald_yellow_birch_sapling"
+    ]
+}

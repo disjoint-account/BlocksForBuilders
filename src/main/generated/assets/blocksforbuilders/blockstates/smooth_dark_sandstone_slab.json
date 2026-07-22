@@ -7,7 +7,7 @@
       "model": "blocksforbuilders:block/smooth_dark_sandstone"
     },
     "type=top": {
-      "model": "blocksforbuilders:block/smooth_dark_sandstone_slab_inner"
+      "model": "blocksforbuilders:block/smooth_dark_sandstone_slab_top"
     }
   }
 }

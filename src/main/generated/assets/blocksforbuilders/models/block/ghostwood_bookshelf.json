@@ -2,6 +2,7 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "blocksforbuilders:block/ghostwood_planks",
+    "particle": "blocksforbuilders:block/ghostwood_planks",
     "side": "blocksforbuilders:block/ghostwood_bookshelf"
   }
 }

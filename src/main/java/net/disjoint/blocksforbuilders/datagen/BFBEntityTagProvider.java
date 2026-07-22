@@ -1,19 +1,19 @@
 package net.disjoint.blocksforbuilders.datagen;
 
 import net.disjoint.blocksforbuilders.boatstuff.BFBEntityTypes;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.EntityTypeTags;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.EntityTypeTags;
 
 import java.util.concurrent.CompletableFuture;
 
-public class BFBEntityTagProvider extends FabricTagProvider.EntityTypeTagProvider {
-    public BFBEntityTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+public class BFBEntityTagProvider extends FabricTagsProvider.EntityTypeTagsProvider {
+    public BFBEntityTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+    protected void addTags(HolderLookup.Provider wrapperLookup) {
             valueLookupBuilder(EntityTypeTags.BOAT)
                     .add(BFBEntityTypes.GHOSTWOOD_BOAT,
                             BFBEntityTypes.SCORCHWOOD_BOAT,

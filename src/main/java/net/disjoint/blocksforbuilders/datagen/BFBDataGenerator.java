@@ -5,8 +5,8 @@ import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersConfiguredF
 import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.minecraft.registry.RegistryBuilder;
-import net.minecraft.registry.RegistryKeys;
+import net.minecraft.core.RegistrySetBuilder;
+import net.minecraft.core.registries.Registries;
 
 public class BFBDataGenerator implements DataGeneratorEntrypoint {
     @Override
@@ -23,9 +23,9 @@ public class BFBDataGenerator implements DataGeneratorEntrypoint {
     }
 
     @Override
-    public void buildRegistry(RegistryBuilder registryBuilder) {
-        registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, BlocksForBuildersConfiguredFeatures::bootstrap);
-        registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, BlocksForBuildersPlacedFeatures::bootstrap);
-        registryBuilder.addRegistry(RegistryKeys.BIOME, BFBBiomes::bootstrap);
+    public void buildRegistry(RegistrySetBuilder registryBuilder) {
+        registryBuilder.add(Registries.CONFIGURED_FEATURE, BlocksForBuildersConfiguredFeatures::bootstrap);
+        registryBuilder.add(Registries.PLACED_FEATURE, BlocksForBuildersPlacedFeatures::bootstrap);
+        registryBuilder.add(Registries.BIOME, BFBBiomes::bootstrap);
     }
 }

@@ -2,21 +2,21 @@ package net.disjoint.blocksforbuilders.datagen;
 
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.util.BFBTags;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
 
-public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-    public BFBBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+public class BFBBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
+    public BFBBlockTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        valueLookupBuilder(BlockTags.AXE_MINEABLE)
+    protected void addTags(HolderLookup.Provider wrapperLookup) {
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF,
                         BlocksForBuildersBlocks.SPRUCE_BOOKSHELF,
                         BlocksForBuildersBlocks.JUNGLE_BOOKSHELF,
@@ -54,7 +54,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.COCONUT_THATCH_RUG,
                         BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG);
 
-        valueLookupBuilder(BlockTags.HOE_MINEABLE)
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_HOE)
                 .add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES,
                         BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES,
                         BlocksForBuildersBlocks.WILLOW_LEAVES,
@@ -112,7 +112,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.HAY_SLAB,
                         BlocksForBuildersBlocks.HAY_RUG);
 
-        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(BlocksForBuildersBlocks.GRIMSTONE,
                         BlocksForBuildersBlocks.GRIMSTONE_STAIRS,
                         BlocksForBuildersBlocks.GRIMSTONE_SLAB,
@@ -246,7 +246,7 @@ public class BFBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         BlocksForBuildersBlocks.QUARTZ_BRICK_SLAB,
                         BlocksForBuildersBlocks.SMOOTH_QUARTZ_WALL);
 
-        valueLookupBuilder(BlockTags.SHOVEL_MINEABLE)
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(BlocksForBuildersBlocks.SCORCHED_GRASS);
 
         valueLookupBuilder(BlockTags.CEILING_HANGING_SIGNS)

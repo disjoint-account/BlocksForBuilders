@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "blocksforbuilders:block/grimstone_tiles_left",
+    "bottom": "blocksforbuilders:block/grimstone_tiles_top",
     "side": "blocksforbuilders:block/grimstone_tiles",
     "top": "blocksforbuilders:block/grimstone_tiles_left"
   }

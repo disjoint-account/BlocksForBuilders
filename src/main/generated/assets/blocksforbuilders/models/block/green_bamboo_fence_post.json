@@ -1,7 +1,6 @@
 {
-  "parent": "minecraft:block/custom_fence_post",
+  "parent": "minecraft:block/fence_post",
   "textures": {
-    "particle": "blocksforbuilders:block/green_bamboo_fence_particle",
-    "texture": "blocksforbuilders:block/green_bamboo_fence"
+    "texture": "blocksforbuilders:block/green_bamboo_planks"
   }
 }

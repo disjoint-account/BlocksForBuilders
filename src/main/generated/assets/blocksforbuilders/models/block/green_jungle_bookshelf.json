@@ -2,6 +2,7 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "blocksforbuilders:block/green_jungle_planks",
+    "particle": "blocksforbuilders:block/green_jungle_planks",
     "side": "blocksforbuilders:block/green_jungle_bookshelf"
   }
 }

@@ -2,10 +2,10 @@ package net.disjoint.blocksforbuilders.util.particles;
 
 import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
-import net.minecraft.particle.SimpleParticleType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.Identifier;
 
 public class BFBParticleTypes {
     public static final SimpleParticleType GHOSTWOOD_LEAVES = register("ghostwood_leaves", FabricParticleTypes.simple());
@@ -20,7 +20,7 @@ public class BFBParticleTypes {
     public static final SimpleParticleType YELLOW_BIRCH_LEAVES = register("yellow_birch_leaves", FabricParticleTypes.simple());
 
     private static SimpleParticleType register(String name, SimpleParticleType particleType) {
-        return Registry.register(Registries.PARTICLE_TYPE, Identifier.of(BlocksForBuilders.MOD_ID, name), particleType);
+        return Registry.register(BuiltInRegistries.PARTICLE_TYPE, Identifier.fromNamespaceAndPath(BlocksForBuilders.MOD_ID, name), particleType);
     }
 
     public static void registerParticles() {

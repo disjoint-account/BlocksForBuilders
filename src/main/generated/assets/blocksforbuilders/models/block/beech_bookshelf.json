@@ -2,6 +2,7 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "blocksforbuilders:block/beech_planks",
+    "particle": "blocksforbuilders:block/beech_planks",
     "side": "blocksforbuilders:block/beech_bookshelf"
   }
 }

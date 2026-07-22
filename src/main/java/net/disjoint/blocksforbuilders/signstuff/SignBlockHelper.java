@@ -2,13 +2,21 @@ package net.disjoint.blocksforbuilders.signstuff;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
-import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CeilingHangingSignBlock;
+import net.minecraft.world.level.block.SignBlock;
+import net.minecraft.world.level.block.StandingSignBlock;
+import net.minecraft.world.level.block.WallHangingSignBlock;
+import net.minecraft.world.level.block.WallSignBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -21,22 +29,22 @@ public class SignBlockHelper {
     private SignBlockHelper() {
     }
 
-    public static <T extends AbstractSignBlock> T registerSignBlock(RegistryKey<Block> key, T block) {
-        if (block instanceof SignBlock || block instanceof WallSignBlock) {
-            BlockEntityType.SIGN.addSupportedBlock(block);
-        } else if (block instanceof HangingSignBlock || block instanceof WallHangingSignBlock) {
-            BlockEntityType.HANGING_SIGN.addSupportedBlock(block);
+    public static <T extends SignBlock> T registerSignBlock(ResourceKey<Block> key, T block) {
+        if (block instanceof StandingSignBlock || block instanceof WallSignBlock) {
+            BlockEntityType.SIGN.addValidBlock(block);
+        } else if (block instanceof CeilingHangingSignBlock || block instanceof WallHangingSignBlock) {
+            BlockEntityType.HANGING_SIGN.addValidBlock(block);
         } else {
             throw new IllegalArgumentException("This method only accepts vanilla sign blocks and descendants!");
         }
 
-        return Registry.register(Registries.BLOCK, key, block);
+        return Registry.register(BuiltInRegistries.BLOCK, key, block);
     }
 
-    public static <T extends AbstractSignBlock> T registerSignBlock(Identifier id, Function<AbstractBlock.Settings, T> factory, AbstractBlock.Settings settings) {
-        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
+    public static <T extends SignBlock> T registerSignBlock(Identifier id, Function<BlockBehaviour.Properties, T> factory, BlockBehaviour.Properties settings) {
+        ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, id);
 
-        return registerSignBlock(key, factory.apply(settings.registryKey(key)));
+        return registerSignBlock(key, factory.apply(settings.setId(key)));
     }
 
     public static WoodType registerDefaultWoodType(Identifier typeId) {

@@ -7,7 +7,8 @@
     },
     {
       "apply": {
-        "model": "blocksforbuilders:block/green_bamboo_fence_side_north"
+        "model": "blocksforbuilders:block/green_bamboo_fence_side",
+        "uvlock": true
       },
       "when": {
         "north": "true"
@@ -15,7 +16,9 @@
     },
     {
       "apply": {
-        "model": "blocksforbuilders:block/green_bamboo_fence_side_east"
+        "model": "blocksforbuilders:block/green_bamboo_fence_side",
+        "uvlock": true,
+        "y": 90
       },
       "when": {
         "east": "true"
@@ -23,7 +26,9 @@
     },
     {
       "apply": {
-        "model": "blocksforbuilders:block/green_bamboo_fence_side_south"
+        "model": "blocksforbuilders:block/green_bamboo_fence_side",
+        "uvlock": true,
+        "y": 180
       },
       "when": {
         "south": "true"
@@ -31,7 +36,9 @@
     },
     {
       "apply": {
-        "model": "blocksforbuilders:block/green_bamboo_fence_side_west"
+        "model": "blocksforbuilders:block/green_bamboo_fence_side",
+        "uvlock": true,
+        "y": 270
       },
       "when": {
         "west": "true"

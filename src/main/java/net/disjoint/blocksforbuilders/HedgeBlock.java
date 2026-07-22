@@ -1,26 +1,29 @@
 package net.disjoint.blocksforbuilders;
 
-import net.minecraft.block.*;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.FluidTags;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldView;
-import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
 
-public class HedgeBlock extends Block implements Waterloggable {
+public class HedgeBlock extends Block implements SimpleWaterloggedBlock {
     private static final VoxelShape CENTRAL_SHAPE;
     private static final VoxelShape NORTH_SHAPE;
     private static final VoxelShape EAST_SHAPE;
@@ -36,23 +39,23 @@ public class HedgeBlock extends Block implements Waterloggable {
     private static final VoxelShape EAST_COLLISION_SHAPE;
     private static final VoxelShape SOUTH_COLLISION_SHAPE;
     private static final VoxelShape WEST_COLLISION_SHAPE;
-    public static final BooleanProperty NORTH = BooleanProperty.of("north");
-    public static final BooleanProperty EAST = BooleanProperty.of("east");
-    public static final BooleanProperty SOUTH = BooleanProperty.of("south");
-    public static final BooleanProperty WEST = BooleanProperty.of("west");
-    public static final BooleanProperty TALL = BooleanProperty.of("tall");
-    private static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
+    public static final BooleanProperty NORTH = BooleanProperty.create("north");
+    public static final BooleanProperty EAST = BooleanProperty.create("east");
+    public static final BooleanProperty SOUTH = BooleanProperty.create("south");
+    public static final BooleanProperty WEST = BooleanProperty.create("west");
+    public static final BooleanProperty TALL = BooleanProperty.create("tall");
+    private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public HedgeBlock(Settings settings) {
+    public HedgeBlock(Properties settings) {
         super(settings);
-        this.setDefaultState(this.getStateManager().getDefaultState().with(NORTH, false).with(EAST, false).with(SOUTH, false).with(WEST, false).with(TALL, false).with(WATERLOGGED, false));
+        this.registerDefaultState(this.getStateDefinition().any().setValue(NORTH, false).setValue(EAST, false).setValue(SOUTH, false).setValue(WEST, false).setValue(TALL, false).setValue(WATERLOGGED, false));
     }
 
-    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return getShapeForState(state);
     }
 
-    protected VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    protected VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return getCollisionShapeForState(state);
     }
 
@@ -62,52 +65,52 @@ public class HedgeBlock extends Block implements Waterloggable {
         VoxelShape eastShape;
         VoxelShape southShape;
         VoxelShape westShape;
-        if (!state.get(NORTH)) {
-            northShape = VoxelShapes.empty();
+        if (!state.getValue(NORTH)) {
+            northShape = Shapes.empty();
         }
         else {
-            if (state.get(TALL)) {
+            if (state.getValue(TALL)) {
                 northShape = NORTH_TALL_SHAPE;
             }
             else northShape = NORTH_SHAPE;
         }
 
-        if (!state.get(EAST)) {
-            eastShape = VoxelShapes.empty();
+        if (!state.getValue(EAST)) {
+            eastShape = Shapes.empty();
         }
         else {
-            if (state.get(TALL)) {
+            if (state.getValue(TALL)) {
                 eastShape = EAST_TALL_SHAPE;
             }
             else eastShape = EAST_SHAPE;
         }
 
-        if (!state.get(SOUTH)) {
-            southShape = VoxelShapes.empty();
+        if (!state.getValue(SOUTH)) {
+            southShape = Shapes.empty();
         }
         else {
-            if (state.get(TALL)) {
+            if (state.getValue(TALL)) {
                 southShape = SOUTH_TALL_SHAPE;
             }
             else southShape = SOUTH_SHAPE;
         }
 
-        if (!state.get(WEST)) {
-            westShape = VoxelShapes.empty();
+        if (!state.getValue(WEST)) {
+            westShape = Shapes.empty();
         }
         else {
-            if (state.get(TALL)) {
+            if (state.getValue(TALL)) {
                 westShape = WEST_TALL_SHAPE;
             }
             else westShape = WEST_SHAPE;
         }
 
-        if (state.get(TALL)) {
+        if (state.getValue(TALL)) {
             centralShape = CENTRAL_TALL_SHAPE;
         }
         else centralShape = CENTRAL_SHAPE;
 
-        return VoxelShapes.union(centralShape, northShape, eastShape, southShape, westShape);
+        return Shapes.or(centralShape, northShape, eastShape, southShape, westShape);
     }
 
     private static VoxelShape getCollisionShapeForState(BlockState state) {
@@ -116,77 +119,77 @@ public class HedgeBlock extends Block implements Waterloggable {
         VoxelShape eastShape;
         VoxelShape southShape;
         VoxelShape westShape;
-        if (!state.get(NORTH)) {
-            northShape = VoxelShapes.empty();
+        if (!state.getValue(NORTH)) {
+            northShape = Shapes.empty();
         }
         else northShape = NORTH_COLLISION_SHAPE;
 
-        if (!state.get(EAST)) {
-            eastShape = VoxelShapes.empty();
+        if (!state.getValue(EAST)) {
+            eastShape = Shapes.empty();
         }
         else eastShape = EAST_COLLISION_SHAPE;
 
-        if (!state.get(SOUTH)) {
-            southShape = VoxelShapes.empty();
+        if (!state.getValue(SOUTH)) {
+            southShape = Shapes.empty();
         }
         else southShape = SOUTH_COLLISION_SHAPE;
 
-        if (!state.get(WEST)) {
-            westShape = VoxelShapes.empty();
+        if (!state.getValue(WEST)) {
+            westShape = Shapes.empty();
         }
         else westShape = WEST_COLLISION_SHAPE;
 
         centralShape = CENTRAL_COLLISION_SHAPE;
 
-        return VoxelShapes.union(centralShape, northShape, eastShape, southShape, westShape);
+        return Shapes.or(centralShape, northShape, eastShape, southShape, westShape);
     }
 
 
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        World world = ctx.getWorld();
-        BlockPos pos = ctx.getBlockPos();
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        Level world = ctx.getLevel();
+        BlockPos pos = ctx.getClickedPos();
         FluidState state = world.getFluidState(pos);
-        boolean bl = state.isIn(FluidTags.WATER) && state.getLevel() == 8;
-        return updateState(this.getDefaultState().with(WATERLOGGED, bl), world, pos);
+        boolean bl = state.is(FluidTags.WATER) && state.getAmount() == 8;
+        return updateState(this.defaultBlockState().setValue(WATERLOGGED, bl), world, pos);
     }
 
-    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
+    protected BlockState updateShape(BlockState state, LevelReader world, ScheduledTickAccess tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, RandomSource random) {
         if (!requirements(state, world, pos)) {
-            tickView.scheduleBlockTick(pos, this, 0);
+            tickView.scheduleTick(pos, this, 0);
         }
-        if (state.get(WATERLOGGED)) {
-            tickView.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+        if (state.getValue(WATERLOGGED)) {
+            tickView.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
         }
-        return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
+        return super.updateShape(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
 
-    protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    protected void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         if (!requirements(state, world, pos)) {
-            world.setBlockState(pos, updateState(state, world, pos));
+            world.setBlockAndUpdate(pos, updateState(state, world, pos));
         }
     }
 
-    private boolean requirements(BlockState state, WorldView world, BlockPos pos) {
-        if (isValidNeighbor(world, pos, Direction.NORTH) != state.get(NORTH)) {
+    private boolean requirements(BlockState state, LevelReader world, BlockPos pos) {
+        if (isValidNeighbor(world, pos, Direction.NORTH) != state.getValue(NORTH)) {
             return false;
         }
-        if (isValidNeighbor(world, pos, Direction.EAST) != state.get(EAST)) {
+        if (isValidNeighbor(world, pos, Direction.EAST) != state.getValue(EAST)) {
             return false;
         }
-        if (isValidNeighbor(world, pos, Direction.SOUTH) != state.get(SOUTH)) {
+        if (isValidNeighbor(world, pos, Direction.SOUTH) != state.getValue(SOUTH)) {
             return false;
         }
-        if (isValidNeighbor(world, pos, Direction.WEST) != state.get(WEST)) {
+        if (isValidNeighbor(world, pos, Direction.WEST) != state.getValue(WEST)) {
             return false;
         }
-        if (isValidNeighbor(world, pos, Direction.UP) != state.get(TALL)) {
+        if (isValidNeighbor(world, pos, Direction.UP) != state.getValue(TALL)) {
             return false;
         }
         else return true;
     }
 
-    private BlockState updateState(BlockState state, WorldView world, BlockPos pos) {
-        if (state.isOf(this)) {
+    private BlockState updateState(BlockState state, LevelReader world, BlockPos pos) {
+        if (state.is(this)) {
             boolean north;
             boolean east;
             boolean south;
@@ -198,39 +201,39 @@ public class HedgeBlock extends Block implements Waterloggable {
             west = isValidNeighbor(world, pos, Direction.WEST);
             tall = isValidNeighbor(world, pos, Direction.UP);
 
-            return state.with(NORTH, north).with(EAST, east).with(SOUTH, south).with(WEST, west).with(TALL, tall);
+            return state.setValue(NORTH, north).setValue(EAST, east).setValue(SOUTH, south).setValue(WEST, west).setValue(TALL, tall);
         }
         return state;
     }
 
-    public boolean isValidNeighbor(WorldView world, BlockPos pos, Direction direction) {
-        BlockState neighborState = world.getBlockState(pos.offset(direction));
-        return neighborState.isIn(BlockTags.WALLS) || neighborState.isIn(BlockTags.FENCES) || neighborState.isIn(BlockTags.FENCE_GATES) || Block.isFaceFullSquare(neighborState.getCollisionShape(world, pos.offset(direction)), direction.getOpposite());
+    public boolean isValidNeighbor(LevelReader world, BlockPos pos, Direction direction) {
+        BlockState neighborState = world.getBlockState(pos.relative(direction));
+        return neighborState.is(BlockTags.WALLS) || neighborState.is(BlockTags.FENCES) || neighborState.is(BlockTags.FENCE_GATES) || Block.isFaceFull(neighborState.getCollisionShape(world, pos.relative(direction)), direction.getOpposite());
     }
 
     protected FluidState getFluidState(BlockState state) {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(NORTH, EAST, SOUTH, WEST, TALL, WATERLOGGED);
     }
 
     static {
-        CENTRAL_SHAPE = Block.createCuboidShape(5, 0, 5, 11, 14, 11);
-        NORTH_SHAPE = Block.createCuboidShape(5, 0, 0, 11, 14, 5);
-        EAST_SHAPE = Block.createCuboidShape(11, 0, 5, 16, 14, 11);
-        SOUTH_SHAPE = Block.createCuboidShape(5, 0, 11, 11, 14, 16);
-        WEST_SHAPE = Block.createCuboidShape(0, 0, 5, 5, 14, 11);
-        CENTRAL_TALL_SHAPE = Block.createCuboidShape(5, 0, 5, 11, 16, 11);
-        NORTH_TALL_SHAPE = Block.createCuboidShape(5, 0, 0, 11, 16, 5);
-        EAST_TALL_SHAPE = Block.createCuboidShape(11, 0, 5, 16, 16, 11);
-        SOUTH_TALL_SHAPE = Block.createCuboidShape(5, 0, 11, 11, 16, 16);
-        WEST_TALL_SHAPE = Block.createCuboidShape(0, 0, 5, 5, 16, 11);
-        CENTRAL_COLLISION_SHAPE = Block.createCuboidShape(5, 0, 5, 11, 24, 11);
-        NORTH_COLLISION_SHAPE = Block.createCuboidShape(5, 0, 0, 11, 24, 5);
-        EAST_COLLISION_SHAPE = Block.createCuboidShape(11, 0, 5, 16, 24, 11);
-        SOUTH_COLLISION_SHAPE = Block.createCuboidShape(5, 0, 11, 11, 24, 16);
-        WEST_COLLISION_SHAPE = Block.createCuboidShape(0, 0, 5, 5, 24, 11);
+        CENTRAL_SHAPE = Block.box(5, 0, 5, 11, 14, 11);
+        NORTH_SHAPE = Block.box(5, 0, 0, 11, 14, 5);
+        EAST_SHAPE = Block.box(11, 0, 5, 16, 14, 11);
+        SOUTH_SHAPE = Block.box(5, 0, 11, 11, 14, 16);
+        WEST_SHAPE = Block.box(0, 0, 5, 5, 14, 11);
+        CENTRAL_TALL_SHAPE = Block.box(5, 0, 5, 11, 16, 11);
+        NORTH_TALL_SHAPE = Block.box(5, 0, 0, 11, 16, 5);
+        EAST_TALL_SHAPE = Block.box(11, 0, 5, 16, 16, 11);
+        SOUTH_TALL_SHAPE = Block.box(5, 0, 11, 11, 16, 16);
+        WEST_TALL_SHAPE = Block.box(0, 0, 5, 5, 16, 11);
+        CENTRAL_COLLISION_SHAPE = Block.box(5, 0, 5, 11, 24, 11);
+        NORTH_COLLISION_SHAPE = Block.box(5, 0, 0, 11, 24, 5);
+        EAST_COLLISION_SHAPE = Block.box(11, 0, 5, 16, 24, 11);
+        SOUTH_COLLISION_SHAPE = Block.box(5, 0, 11, 11, 24, 16);
+        WEST_COLLISION_SHAPE = Block.box(0, 0, 5, 5, 24, 11);
     }
 }

@@ -2,6 +2,7 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "minecraft:block/warped_planks",
+    "particle": "minecraft:block/warped_planks",
     "side": "blocksforbuilders:block/warped_bookshelf"
   }
 }

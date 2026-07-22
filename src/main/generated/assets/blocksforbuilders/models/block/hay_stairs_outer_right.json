@@ -1,0 +1,11 @@
+{
+  "parent": "blocksforbuilders:block/pillar_stairs_outer",
+  "textures": {
+    "back": "blocksforbuilders:block/hay_block_side_right",
+    "bottom": "minecraft:block/hay_block_side",
+    "end": "minecraft:block/hay_block_top",
+    "front": "minecraft:block/hay_block_top",
+    "side": "blocksforbuilders:block/hay_block_side_left",
+    "top": "blocksforbuilders:block/hay_block_side_bottom"
+  }
+}

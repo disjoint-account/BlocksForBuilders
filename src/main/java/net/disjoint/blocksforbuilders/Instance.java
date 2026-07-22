@@ -1,6 +1,9 @@
 package net.disjoint.blocksforbuilders;
 
+import net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents;
 import net.fabricmc.fabric.api.registry.*;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.item.Items;
 
 public class Instance {
 
@@ -91,72 +94,72 @@ public class Instance {
             FlammableBlockRegistry.getDefaultInstance().add(BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, 30, 20);
         }
         {
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.GREEN_JUNGLE_SAPLING, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.GHOSTWOOD_SAPLING, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.SCORCHWOOD_SAPLING, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.WILLOW_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.WILLOW_SAPLING, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.WILLOW_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.WILLOW_SAPLING, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.PALM_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.EMPTY_COCONUT, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.STRIPPED_COCONUT, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.STRIPPED_EMPTY_COCONUT, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT_FIBER, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT_HUSK, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.PALM_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersItems.EMPTY_COCONUT, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersItems.STRIPPED_COCONUT, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersItems.STRIPPED_EMPTY_COCONUT, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT_FIBER, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersItems.COCONUT_HUSK, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.MAPLE_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.MAPLE_SAPLING, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.MAPLE_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.MAPLE_SAPLING, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.BEECH_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.BEECH_SAPLING, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.BEECH_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.BEECH_SAPLING, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.PINE_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.PINE_SAPLING, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.PINE_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.PINE_SAPLING, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.CEDAR_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.CEDAR_SAPLING, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.CEDAR_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.CEDAR_SAPLING, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_AZALEA_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_PINE_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_AZALEA_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_PINE_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, 0.30f);
 
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.ASHEN_CARPET, 0.30f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_STAIRS, 0.85f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_SLAB, 0.85f);
-            CompostingChanceRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_RUG, 0.85f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.ASHEN_CARPET, 0.30f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_STAIRS, 0.85f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_SLAB, 0.85f);
+            CompostableRegistry.INSTANCE.add(BlocksForBuildersBlocks.HAY_RUG, 0.85f);
         }
         {
-            FuelRegistryEvents.BUILD.register((builder, context) -> {
+            FuelValueEvents.BUILD.register((builder, context) -> {
                         builder.add(BlocksForBuildersBlocks.BIRCH_BOOKSHELF, 60000 / context.baseSmeltTime());
                         builder.add(BlocksForBuildersBlocks.SPRUCE_BOOKSHELF, 60000 / context.baseSmeltTime());
                         builder.add(BlocksForBuildersBlocks.JUNGLE_BOOKSHELF, 60000 / context.baseSmeltTime());
@@ -188,8 +191,17 @@ public class Instance {
                         builder.add(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB, context.baseSmeltTime() / 2);
                         builder.add(BlocksForBuildersBlocks.COCONUT_THATCH_RUG, context.baseSmeltTime() / 2);
                     });
-                    addStrippables();
         }
+        addStrippables();
+        unfoodify();
+    }
+
+    public static void unfoodify() {
+        DefaultItemComponentEvents.MODIFY.register((modifyContext) -> {
+            modifyContext.modify(Items.PUMPKIN_PIE, (builder) -> {
+                builder.set(DataComponents.FOOD, null).set(DataComponents.CONSUMABLE, null).build();
+            });
+        });
     }
 
     public static void addStrippables() {
@@ -212,5 +224,5 @@ public class Instance {
         StrippableBlockRegistry.register(BlocksForBuildersBlocks.CEDAR_LOG, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
         StrippableBlockRegistry.register(BlocksForBuildersBlocks.CEDAR_WOOD, BlocksForBuildersBlocks.STRIPPED_CEDAR_WOOD);
 
-        }
     }
+}

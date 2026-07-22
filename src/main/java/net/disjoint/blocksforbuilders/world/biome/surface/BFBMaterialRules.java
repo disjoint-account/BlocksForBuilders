@@ -2,40 +2,40 @@ package net.disjoint.blocksforbuilders.world.biome.surface;
 
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.world.biome.BFBBiomes;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.surfacebuilder.MaterialRules;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.SurfaceRules;
 
 public class BFBMaterialRules {
-    private static final MaterialRules.MaterialRule DIRT = makeStateRule(Blocks.DIRT);
-    private static final MaterialRules.MaterialRule PODZOL = makeStateRule(Blocks.PODZOL);
-    private static final MaterialRules.MaterialRule ASH = makeStateRule(BlocksForBuildersBlocks.SCORCHED_GRASS);
+    private static final SurfaceRules.RuleSource DIRT = makeStateRule(Blocks.DIRT);
+    private static final SurfaceRules.RuleSource PODZOL = makeStateRule(Blocks.PODZOL);
+    private static final SurfaceRules.RuleSource ASH = makeStateRule(BlocksForBuildersBlocks.SCORCHED_GRASS);
 
-    public static MaterialRules.MaterialRule makeRules() {
-        MaterialRules.MaterialCondition isAtOrAboveWaterLevel = MaterialRules.water(-1, 0);
-        MaterialRules.MaterialCondition isAboveSeaLevel = MaterialRules.aboveY(YOffset.fixed(59), 0);
-        MaterialRules.MaterialCondition isInAutumnalForest = MaterialRules.biome(BFBBiomes.AUTUMNAL_FOREST);
-        MaterialRules.MaterialCondition isInScorchedForest = MaterialRules.biome(BFBBiomes.SCORCHED_FOREST);
-        MaterialRules.MaterialCondition isInAlpineForest = MaterialRules.biome(BFBBiomes.ALPINE_FOREST);
+    public static SurfaceRules.RuleSource makeRules() {
+        SurfaceRules.ConditionSource isAtOrAboveWaterLevel = SurfaceRules.waterBlockCheck(-1, 0);
+        SurfaceRules.ConditionSource isAboveSeaLevel = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(59), 0);
+        SurfaceRules.ConditionSource isInAutumnalForest = SurfaceRules.isBiome(BFBBiomes.AUTUMNAL_FOREST);
+        SurfaceRules.ConditionSource isInScorchedForest = SurfaceRules.isBiome(BFBBiomes.SCORCHED_FOREST);
+        SurfaceRules.ConditionSource isInAlpineForest = SurfaceRules.isBiome(BFBBiomes.ALPINE_FOREST);
 
-        MaterialRules.MaterialRule podzolSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, PODZOL), DIRT);
-        MaterialRules.MaterialRule podzolSurface1 = MaterialRules.sequence(MaterialRules.condition(isAboveSeaLevel, podzolSurface));
-        MaterialRules.MaterialRule podzolSurface2 = MaterialRules.sequence(MaterialRules.condition(isInAutumnalForest, podzolSurface1));
-        MaterialRules.MaterialRule podzolSurface3 = MaterialRules.sequence(MaterialRules.condition(isInAlpineForest, podzolSurface1));
+        SurfaceRules.RuleSource podzolSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, PODZOL), DIRT);
+        SurfaceRules.RuleSource podzolSurface1 = SurfaceRules.sequence(SurfaceRules.ifTrue(isAboveSeaLevel, podzolSurface));
+        SurfaceRules.RuleSource podzolSurface2 = SurfaceRules.sequence(SurfaceRules.ifTrue(isInAutumnalForest, podzolSurface1));
+        SurfaceRules.RuleSource podzolSurface3 = SurfaceRules.sequence(SurfaceRules.ifTrue(isInAlpineForest, podzolSurface1));
 
-        MaterialRules.MaterialRule ashSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, ASH), DIRT);
-        MaterialRules.MaterialRule ashSurface1 = MaterialRules.sequence(MaterialRules.condition(isAboveSeaLevel, ashSurface));
-        MaterialRules.MaterialRule ashSurface2 = MaterialRules.sequence(MaterialRules.condition(isInScorchedForest, ashSurface1));
+        SurfaceRules.RuleSource ashSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, ASH), DIRT);
+        SurfaceRules.RuleSource ashSurface1 = SurfaceRules.sequence(SurfaceRules.ifTrue(isAboveSeaLevel, ashSurface));
+        SurfaceRules.RuleSource ashSurface2 = SurfaceRules.sequence(SurfaceRules.ifTrue(isInScorchedForest, ashSurface1));
 
-        return MaterialRules.sequence(
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, podzolSurface2),
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, ashSurface2),
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, podzolSurface3)
+        return SurfaceRules.sequence(
+                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, podzolSurface2),
+                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, ashSurface2),
+                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, podzolSurface3)
         );
     }
 
-    private static MaterialRules.MaterialRule makeStateRule(Block block) {
-        return MaterialRules.block(block.getDefaultState());
+    private static SurfaceRules.RuleSource makeStateRule(Block block) {
+        return SurfaceRules.state(block.defaultBlockState());
     }
 }

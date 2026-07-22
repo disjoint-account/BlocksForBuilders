@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "blocksforbuilders:black_nether_bricks",
   "result": {
-    "count": 1,
     "id": "blocksforbuilders:chiseled_black_nether_bricks"
   }
 }
