@@ -93,6 +93,11 @@ public class BFBEntityTypes {
         return Registry.register(BuiltInRegistries.ENTITY_TYPE, keyOf(id), type.build(keyOf(id)));
     }
 
+    public static ResourceKey<EntityType<?>> getResourceKey(EntityType<?> entityType) {
+        return BuiltInRegistries.ENTITY_TYPE.getResourceKey(entityType).get();
+    }
+
     public static void registerEntityTypes() {
+        BlocksForBuilders.LOGGER.info("Registering Boats for " + BlocksForBuilders.MOD_ID);
     }
 }

@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
-      "model": "blocksforbuilders:block/scorchwood_hanging_sign"
+    "facing=east": {
+      "model": "blocksforbuilders:block/scorchwood_wall_hanging_sign",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "blocksforbuilders:block/scorchwood_wall_hanging_sign",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "blocksforbuilders:block/scorchwood_wall_hanging_sign"
+    },
+    "facing=west": {
+      "model": "blocksforbuilders:block/scorchwood_wall_hanging_sign",
+      "y": 90
     }
   }
 }

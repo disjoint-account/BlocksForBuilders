@@ -857,6 +857,10 @@ public class BlocksForBuildersBlocks {
         Registry.register(BuiltInRegistries.ITEM, key, new BlockItem(block, new net.minecraft.world.item.Item.Properties().useBlockDescriptionPrefix().setId(key)));
     }
 
+    public static ResourceKey<Block> getResourceKey(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+    }
+
     public static void registerModBlocks() {
         BlocksForBuilders.LOGGER.info("Registering blocks for " + BlocksForBuilders.MOD_ID);
     }

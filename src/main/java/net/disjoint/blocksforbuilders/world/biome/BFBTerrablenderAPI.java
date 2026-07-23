@@ -11,7 +11,6 @@ public class BFBTerrablenderAPI implements TerraBlenderApi {
     @Override
     public void onTerraBlenderInitialized() {
         Regions.register(new BFBOverworldRegion(Identifier.fromNamespaceAndPath(BlocksForBuilders.MOD_ID, "overworld"), 2));
-
-        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, BlocksForBuilders.MOD_ID, BFBMaterialRules.makeRules());
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, BlocksForBuilders.MOD_ID, BFBMaterialRules::makeRules);
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_hanging_sign_rot_2",
+  "textures": {
+    "all": "blocksforbuilders:block/green_jungle_hanging_sign",
+    "particle": "blocksforbuilders:block/stripped_green_jungle_log"
+  }
+}

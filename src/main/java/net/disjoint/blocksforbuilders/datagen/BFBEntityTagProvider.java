@@ -14,16 +14,16 @@ public class BFBEntityTagProvider extends FabricTagsProvider.EntityTypeTagsProvi
     }
     @Override
     protected void addTags(HolderLookup.Provider wrapperLookup) {
-            valueLookupBuilder(EntityTypeTags.BOAT)
-                    .add(BFBEntityTypes.GHOSTWOOD_BOAT,
-                            BFBEntityTypes.SCORCHWOOD_BOAT,
-                            BFBEntityTypes.WILLOW_BOAT,
-                            BFBEntityTypes.PALM_RAFT,
-                            BFBEntityTypes.MAPLE_BOAT,
-                            BFBEntityTypes.BEECH_BOAT,
-                            BFBEntityTypes.PINE_BOAT,
-                            BFBEntityTypes.CEDAR_BOAT,
-                            BFBEntityTypes.GREEN_JUNGLE_BOAT,
-                            BFBEntityTypes.GREEN_BAMBOO_RAFT);
+            tag(EntityTypeTags.BOAT)
+                    .add(BFBEntityTypes.getResourceKey(BFBEntityTypes.GHOSTWOOD_BOAT))
+                            .add(BFBEntityTypes.getResourceKey(BFBEntityTypes.SCORCHWOOD_BOAT))
+                            .add(BFBEntityTypes.getResourceKey(BFBEntityTypes.WILLOW_BOAT))
+                            .add(BFBEntityTypes.getResourceKey(BFBEntityTypes.PALM_RAFT))
+                            .add(BFBEntityTypes.getResourceKey(BFBEntityTypes.MAPLE_BOAT))
+                            .add(BFBEntityTypes.getResourceKey(BFBEntityTypes.BEECH_BOAT))
+                            .add(BFBEntityTypes.getResourceKey(BFBEntityTypes.PINE_BOAT))
+                            .add(BFBEntityTypes.getResourceKey(BFBEntityTypes.CEDAR_BOAT))
+                            .add(BFBEntityTypes.getResourceKey(BFBEntityTypes.GREEN_JUNGLE_BOAT))
+                            .add(BFBEntityTypes.getResourceKey(BFBEntityTypes.GREEN_BAMBOO_RAFT));
     }
 }

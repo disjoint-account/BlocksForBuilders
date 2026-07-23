@@ -1,0 +1,36 @@
+{
+  "values": [
+    {
+      "id": "#blocksforbuilders:ghostwood_logs",
+      "required": false
+    },
+    {
+      "id": "#blocksforbuilders:willow_logs",
+      "required": false
+    },
+    {
+      "id": "#blocksforbuilders:palm_logs",
+      "required": false
+    },
+    {
+      "id": "#blocksforbuilders:maple_logs",
+      "required": false
+    },
+    {
+      "id": "#blocksforbuilders:beech_logs",
+      "required": false
+    },
+    {
+      "id": "#blocksforbuilders:pine_logs",
+      "required": false
+    },
+    {
+      "id": "#blocksforbuilders:cedar_logs",
+      "required": false
+    },
+    {
+      "id": "#blocksforbuilders:green_jungle_logs",
+      "required": false
+    }
+  ]
+}

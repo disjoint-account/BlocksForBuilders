@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "nether_fence",
   "key": {
     "#": "blocksforbuilders:black_nether_bricks",

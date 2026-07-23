@@ -2,6 +2,8 @@ package net.disjoint.blocksforbuilders.world.biome.surface;
 
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.world.biome.BFBBiomes;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -12,12 +14,16 @@ public class BFBMaterialRules {
     private static final SurfaceRules.RuleSource PODZOL = makeStateRule(Blocks.PODZOL);
     private static final SurfaceRules.RuleSource ASH = makeStateRule(BlocksForBuildersBlocks.SCORCHED_GRASS);
 
-    public static SurfaceRules.RuleSource makeRules() {
+    private static SurfaceRules.RuleSource makeStateRule(Block block) {
+        return SurfaceRules.state(block.defaultBlockState());
+    }
+
+    public static SurfaceRules.RuleSource makeRules(HolderGetter<Biome> biomes) {
         SurfaceRules.ConditionSource isAtOrAboveWaterLevel = SurfaceRules.waterBlockCheck(-1, 0);
         SurfaceRules.ConditionSource isAboveSeaLevel = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(59), 0);
-        SurfaceRules.ConditionSource isInAutumnalForest = SurfaceRules.isBiome(BFBBiomes.AUTUMNAL_FOREST);
-        SurfaceRules.ConditionSource isInScorchedForest = SurfaceRules.isBiome(BFBBiomes.SCORCHED_FOREST);
-        SurfaceRules.ConditionSource isInAlpineForest = SurfaceRules.isBiome(BFBBiomes.ALPINE_FOREST);
+        SurfaceRules.ConditionSource isInAutumnalForest = SurfaceRules.isBiome(biomes, BFBBiomes.AUTUMNAL_FOREST);
+        SurfaceRules.ConditionSource isInScorchedForest = SurfaceRules.isBiome(biomes, BFBBiomes.SCORCHED_FOREST);
+        SurfaceRules.ConditionSource isInAlpineForest = SurfaceRules.isBiome(biomes, BFBBiomes.ALPINE_FOREST);
 
         SurfaceRules.RuleSource podzolSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, PODZOL), DIRT);
         SurfaceRules.RuleSource podzolSurface1 = SurfaceRules.sequence(SurfaceRules.ifTrue(isAboveSeaLevel, podzolSurface));
@@ -33,9 +39,5 @@ public class BFBMaterialRules {
                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, ashSurface2),
                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, podzolSurface3)
         );
-    }
-
-    private static SurfaceRules.RuleSource makeStateRule(Block block) {
-        return SurfaceRules.state(block.defaultBlockState());
     }
 }

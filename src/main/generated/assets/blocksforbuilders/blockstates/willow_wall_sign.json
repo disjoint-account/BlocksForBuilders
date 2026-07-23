@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
-      "model": "blocksforbuilders:block/willow_sign"
+    "facing=east": {
+      "model": "blocksforbuilders:block/willow_wall_sign",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "blocksforbuilders:block/willow_wall_sign",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "blocksforbuilders:block/willow_wall_sign"
+    },
+    "facing=west": {
+      "model": "blocksforbuilders:block/willow_wall_sign",
+      "y": 90
     }
   }
 }

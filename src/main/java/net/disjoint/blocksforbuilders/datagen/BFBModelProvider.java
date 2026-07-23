@@ -1,5 +1,6 @@
 package net.disjoint.blocksforbuilders.datagen;
 
+import com.mojang.math.Quadrant;
 import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.BlocksForBuildersItems;
@@ -11,13 +12,19 @@ import net.minecraft.client.data.*;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.*;
+import net.minecraft.client.renderer.block.dispatch.VariantMutator;
 import net.minecraft.client.resources.model.sprite.Material;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
 import java.util.Optional;
 
 import static net.minecraft.client.data.models.BlockModelGenerators.createSimpleBlock;
@@ -78,7 +85,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrapdoor(BlocksForBuildersBlocks.GHOSTWOOD_TRAPDOOR);
         blockStateModelGenerator.createShelf(BlocksForBuildersBlocks.GHOSTWOOD_SHELF, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS, BlocksForBuildersBlocks.GHOSTWOOD_SIGN, BlocksForBuildersBlocks.GHOSTWOOD_WALL_SIGN);
-        blockStateModelGenerator.createHangingSign(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG, BlocksForBuildersBlocks.GHOSTWOOD_HANGING_SIGN, BlocksForBuildersBlocks.GHOSTWOOD_WALL_HANGING_SIGN);
+        registerHangingSign(blockStateModelGenerator, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG, BlocksForBuildersBlocks.GHOSTWOOD_HANGING_SIGN, BlocksForBuildersBlocks.GHOSTWOOD_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
 
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.SCORCHWOOD_LOG).logWithHorizontal(BlocksForBuildersBlocks.SCORCHWOOD_LOG).wood(BlocksForBuildersBlocks.SCORCHWOOD_WOOD);
@@ -94,7 +101,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createOrientableTrapdoor(BlocksForBuildersBlocks.SCORCHWOOD_TRAPDOOR);
         blockStateModelGenerator.createShelf(BlocksForBuildersBlocks.SCORCHWOOD_SHELF, BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS, BlocksForBuildersBlocks.SCORCHWOOD_SIGN, BlocksForBuildersBlocks.SCORCHWOOD_WALL_SIGN);
-        blockStateModelGenerator.createHangingSign(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG, BlocksForBuildersBlocks.SCORCHWOOD_HANGING_SIGN, BlocksForBuildersBlocks.SCORCHWOOD_WALL_HANGING_SIGN);
+        registerHangingSign(blockStateModelGenerator, BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG, BlocksForBuildersBlocks.SCORCHWOOD_HANGING_SIGN, BlocksForBuildersBlocks.SCORCHWOOD_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
 
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.WILLOW_LOG).logWithHorizontal(BlocksForBuildersBlocks.WILLOW_LOG).wood(BlocksForBuildersBlocks.WILLOW_WOOD);
@@ -113,7 +120,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createOrientableTrapdoor(BlocksForBuildersBlocks.WILLOW_TRAPDOOR);
         blockStateModelGenerator.createShelf(BlocksForBuildersBlocks.WILLOW_SHELF, BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.WILLOW_PLANKS, BlocksForBuildersBlocks.WILLOW_SIGN, BlocksForBuildersBlocks.WILLOW_WALL_SIGN);
-        blockStateModelGenerator.createHangingSign(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG, BlocksForBuildersBlocks.WILLOW_HANGING_SIGN, BlocksForBuildersBlocks.WILLOW_WALL_HANGING_SIGN);
+        registerHangingSign(blockStateModelGenerator, BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG, BlocksForBuildersBlocks.WILLOW_HANGING_SIGN, BlocksForBuildersBlocks.WILLOW_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.WILLOW_BOOKSHELF, BlocksForBuildersBlocks.WILLOW_PLANKS);
 
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.PALM_LOG).logWithHorizontal(BlocksForBuildersBlocks.PALM_LOG).wood(BlocksForBuildersBlocks.PALM_WOOD);
@@ -132,7 +139,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createOrientableTrapdoor(BlocksForBuildersBlocks.PALM_TRAPDOOR);
         blockStateModelGenerator.createShelf(BlocksForBuildersBlocks.PALM_SHELF, BlocksForBuildersBlocks.STRIPPED_PALM_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.PALM_PLANKS, BlocksForBuildersBlocks.PALM_SIGN, BlocksForBuildersBlocks.PALM_WALL_SIGN);
-        blockStateModelGenerator.createHangingSign(BlocksForBuildersBlocks.STRIPPED_PALM_LOG, BlocksForBuildersBlocks.PALM_HANGING_SIGN, BlocksForBuildersBlocks.PALM_WALL_HANGING_SIGN);
+        registerHangingSign(blockStateModelGenerator, BlocksForBuildersBlocks.STRIPPED_PALM_LOG, BlocksForBuildersBlocks.PALM_HANGING_SIGN, BlocksForBuildersBlocks.PALM_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.PALM_BOOKSHELF, BlocksForBuildersBlocks.PALM_PLANKS);
 
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.MAPLE_LOG).logWithHorizontal(BlocksForBuildersBlocks.MAPLE_LOG).wood(BlocksForBuildersBlocks.MAPLE_WOOD);
@@ -151,7 +158,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createOrientableTrapdoor(BlocksForBuildersBlocks.MAPLE_TRAPDOOR);
         blockStateModelGenerator.createShelf(BlocksForBuildersBlocks.MAPLE_SHELF, BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.MAPLE_PLANKS, BlocksForBuildersBlocks.MAPLE_SIGN, BlocksForBuildersBlocks.MAPLE_WALL_SIGN);
-        blockStateModelGenerator.createHangingSign(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG, BlocksForBuildersBlocks.MAPLE_HANGING_SIGN, BlocksForBuildersBlocks.MAPLE_WALL_HANGING_SIGN);
+        registerHangingSign(blockStateModelGenerator, BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG, BlocksForBuildersBlocks.MAPLE_HANGING_SIGN, BlocksForBuildersBlocks.MAPLE_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.MAPLE_BOOKSHELF, BlocksForBuildersBlocks.MAPLE_PLANKS);
 
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.BEECH_LOG).logWithHorizontal(BlocksForBuildersBlocks.BEECH_LOG).wood(BlocksForBuildersBlocks.BEECH_WOOD);
@@ -170,7 +177,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createOrientableTrapdoor(BlocksForBuildersBlocks.BEECH_TRAPDOOR);
         blockStateModelGenerator.createShelf(BlocksForBuildersBlocks.BEECH_SHELF, BlocksForBuildersBlocks.STRIPPED_BEECH_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.BEECH_PLANKS, BlocksForBuildersBlocks.BEECH_SIGN, BlocksForBuildersBlocks.BEECH_WALL_SIGN);
-        blockStateModelGenerator.createHangingSign(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG, BlocksForBuildersBlocks.BEECH_HANGING_SIGN, BlocksForBuildersBlocks.BEECH_WALL_HANGING_SIGN);
+        registerHangingSign(blockStateModelGenerator, BlocksForBuildersBlocks.STRIPPED_BEECH_LOG, BlocksForBuildersBlocks.BEECH_HANGING_SIGN, BlocksForBuildersBlocks.BEECH_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.BEECH_BOOKSHELF, BlocksForBuildersBlocks.BEECH_PLANKS);
 
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.PINE_LOG).logWithHorizontal(BlocksForBuildersBlocks.PINE_LOG).wood(BlocksForBuildersBlocks.PINE_WOOD);
@@ -189,7 +196,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createOrientableTrapdoor(BlocksForBuildersBlocks.PINE_TRAPDOOR);
         blockStateModelGenerator.createShelf(BlocksForBuildersBlocks.PINE_SHELF, BlocksForBuildersBlocks.STRIPPED_PINE_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.PINE_PLANKS, BlocksForBuildersBlocks.PINE_SIGN, BlocksForBuildersBlocks.PINE_WALL_SIGN);
-        blockStateModelGenerator.createHangingSign(BlocksForBuildersBlocks.STRIPPED_PINE_LOG, BlocksForBuildersBlocks.PINE_HANGING_SIGN, BlocksForBuildersBlocks.PINE_WALL_HANGING_SIGN);
+        registerHangingSign(blockStateModelGenerator, BlocksForBuildersBlocks.STRIPPED_PINE_LOG, BlocksForBuildersBlocks.PINE_HANGING_SIGN, BlocksForBuildersBlocks.PINE_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.PINE_BOOKSHELF, BlocksForBuildersBlocks.PINE_PLANKS);
 
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.CEDAR_LOG).logWithHorizontal(BlocksForBuildersBlocks.CEDAR_LOG).wood(BlocksForBuildersBlocks.CEDAR_WOOD);
@@ -208,7 +215,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createOrientableTrapdoor(BlocksForBuildersBlocks.CEDAR_TRAPDOOR);
         blockStateModelGenerator.createShelf(BlocksForBuildersBlocks.CEDAR_SHELF, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.CEDAR_PLANKS, BlocksForBuildersBlocks.CEDAR_SIGN, BlocksForBuildersBlocks.CEDAR_WALL_SIGN);
-        blockStateModelGenerator.createHangingSign(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG, BlocksForBuildersBlocks.CEDAR_HANGING_SIGN, BlocksForBuildersBlocks.CEDAR_WALL_HANGING_SIGN);
+        registerHangingSign(blockStateModelGenerator, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG, BlocksForBuildersBlocks.CEDAR_HANGING_SIGN, BlocksForBuildersBlocks.CEDAR_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.CEDAR_BOOKSHELF, BlocksForBuildersBlocks.CEDAR_PLANKS);
 
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG).logWithHorizontal(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG).wood(BlocksForBuildersBlocks.GREEN_JUNGLE_WOOD);
@@ -227,7 +234,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createOrientableTrapdoor(BlocksForBuildersBlocks.GREEN_JUNGLE_TRAPDOOR);
         blockStateModelGenerator.createShelf(BlocksForBuildersBlocks.GREEN_JUNGLE_SHELF, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS, BlocksForBuildersBlocks.GREEN_JUNGLE_SIGN, BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_SIGN);
-        blockStateModelGenerator.createHangingSign(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG, BlocksForBuildersBlocks.GREEN_JUNGLE_HANGING_SIGN, BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_HANGING_SIGN);
+        registerHangingSign(blockStateModelGenerator, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG, BlocksForBuildersBlocks.GREEN_JUNGLE_HANGING_SIGN, BlocksForBuildersBlocks.GREEN_JUNGLE_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
 
         greenBambooTexturePool.stairs(BlocksForBuildersBlocks.GREEN_BAMBOO_STAIRS);
@@ -240,7 +247,7 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createOrientableTrapdoor(BlocksForBuildersBlocks.GREEN_BAMBOO_TRAPDOOR);
         blockStateModelGenerator.createShelf(BlocksForBuildersBlocks.GREEN_BAMBOO_SHELF, Blocks.BAMBOO_BLOCK);
         registerSign(blockStateModelGenerator, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, BlocksForBuildersBlocks.GREEN_BAMBOO_SIGN, BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_SIGN);
-        blockStateModelGenerator.createHangingSign(Blocks.BAMBOO_BLOCK, BlocksForBuildersBlocks.GREEN_BAMBOO_HANGING_SIGN, BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_HANGING_SIGN);
+        registerHangingSign(blockStateModelGenerator, Blocks.BAMBOO_BLOCK, BlocksForBuildersBlocks.GREEN_BAMBOO_HANGING_SIGN, BlocksForBuildersBlocks.GREEN_BAMBOO_WALL_HANGING_SIGN);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.GREEN_BAMBOO_BOOKSHELF, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
 
         blockStateModelGenerator.createTrivialBlock(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES, TexturedModel.LEAVES);
@@ -471,11 +478,48 @@ public class BFBModelProvider extends FabricModelProvider {
 
     public static void registerSign(BlockModelGenerators blockStateModelGenerator, Block particleBlock, Block signBlock, Block wallSignBlock) {
         TextureMapping mapping = new TextureMapping()
+                .put(TextureSlot.ALL, materialify(getId(signBlock)))
                 .put(TextureSlot.PARTICLE, materialify(getId(particleBlock)));
-        MultiVariant identifier = BlockModelGenerators.plainVariant(ModelTemplates.PARTICLE_ONLY.create(signBlock, mapping, blockStateModelGenerator.modelOutput));
-        blockStateModelGenerator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(signBlock, identifier));
-        blockStateModelGenerator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(wallSignBlock, identifier));
+
+        MultiVariant rot0 = BlockModelGenerators.plainVariant(ModelTemplates.SIGN_ROT_0.create(ModelLocationUtils.getModelLocation(signBlock, "_rot_0"), mapping, blockStateModelGenerator.modelOutput));
+        MultiVariant rot1 = BlockModelGenerators.plainVariant(ModelTemplates.SIGN_ROT_1.create(ModelLocationUtils.getModelLocation(signBlock, "_rot_1"), mapping, blockStateModelGenerator.modelOutput));
+        MultiVariant rot2 = BlockModelGenerators.plainVariant(ModelTemplates.SIGN_ROT_2.create(ModelLocationUtils.getModelLocation(signBlock, "_rot_2"), mapping, blockStateModelGenerator.modelOutput));
+        MultiVariant rot3 = BlockModelGenerators.plainVariant(ModelTemplates.SIGN_ROT_3.create(ModelLocationUtils.getModelLocation(signBlock, "_rot_3"), mapping, blockStateModelGenerator.modelOutput));
+        blockStateModelGenerator.blockStateOutput.accept(BlockModelGenerators.createSign(signBlock, rot0, rot1, rot2, rot3));
+
+        MultiVariant wallModel = BlockModelGenerators.plainVariant(ModelTemplates.WALL_SIGN.create(wallSignBlock, mapping, blockStateModelGenerator.modelOutput));
+        blockStateModelGenerator.blockStateOutput.accept(MultiVariantGenerator.dispatch(wallSignBlock, wallModel).with(PropertyDispatch.modify(BlockStateProperties.HORIZONTAL_FACING)
+                .select(Direction.SOUTH, v -> v)
+                .select(Direction.WEST, VariantMutator.Y_ROT.withValue(Quadrant.R90))
+                .select(Direction.NORTH, VariantMutator.Y_ROT.withValue(Quadrant.R180))
+                .select(Direction.EAST, VariantMutator.Y_ROT.withValue(Quadrant.R270))));
+
         blockStateModelGenerator.registerSimpleFlatItemModel(signBlock.asItem());
+    }
+
+    public static void registerHangingSign(BlockModelGenerators blockStateModelGenerator, Block particleBlock, Block hangingSignBlock, Block wallHangingSignBlock) {
+        TextureMapping mapping = new TextureMapping()
+                .put(TextureSlot.ALL, materialify(getId(hangingSignBlock)))
+                .put(TextureSlot.PARTICLE, materialify(getId(particleBlock)));
+
+        blockStateModelGenerator.blockStateOutput.accept(BlockModelGenerators.createHangingSign(hangingSignBlock,
+                BlockModelGenerators.plainVariant(ModelTemplates.HANGING_SIGN_ROT_0.create(ModelLocationUtils.getModelLocation(hangingSignBlock, "_rot_0"), mapping, blockStateModelGenerator.modelOutput)),
+                BlockModelGenerators.plainVariant(ModelTemplates.HANGING_SIGN_ROT_1.create(ModelLocationUtils.getModelLocation(hangingSignBlock, "_rot_1"), mapping, blockStateModelGenerator.modelOutput)),
+                BlockModelGenerators.plainVariant(ModelTemplates.HANGING_SIGN_ROT_2.create(ModelLocationUtils.getModelLocation(hangingSignBlock, "_rot_2"), mapping, blockStateModelGenerator.modelOutput)),
+                BlockModelGenerators.plainVariant(ModelTemplates.HANGING_SIGN_ROT_3.create(ModelLocationUtils.getModelLocation(hangingSignBlock, "_rot_3"), mapping, blockStateModelGenerator.modelOutput)),
+                BlockModelGenerators.plainVariant(ModelTemplates.ATTACHED_HANGING_SIGN_ROT_0.create(ModelLocationUtils.getModelLocation(hangingSignBlock, "_attached_rot_0"), mapping, blockStateModelGenerator.modelOutput)),
+                BlockModelGenerators.plainVariant(ModelTemplates.ATTACHED_HANGING_SIGN_ROT_1.create(ModelLocationUtils.getModelLocation(hangingSignBlock, "_attached_rot_1"), mapping, blockStateModelGenerator.modelOutput)),
+                BlockModelGenerators.plainVariant(ModelTemplates.ATTACHED_HANGING_SIGN_ROT_2.create(ModelLocationUtils.getModelLocation(hangingSignBlock, "_attached_rot_2"), mapping, blockStateModelGenerator.modelOutput)),
+                BlockModelGenerators.plainVariant(ModelTemplates.ATTACHED_HANGING_SIGN_ROT_3.create(ModelLocationUtils.getModelLocation(hangingSignBlock, "_attached_rot_3"), mapping, blockStateModelGenerator.modelOutput))));
+
+        MultiVariant wallModel = BlockModelGenerators.plainVariant(ModelTemplates.WALL_HANGING_SIGN.create(ModelLocationUtils.getModelLocation(wallHangingSignBlock), mapping, blockStateModelGenerator.modelOutput));
+        blockStateModelGenerator.blockStateOutput.accept(MultiVariantGenerator.dispatch(wallHangingSignBlock, wallModel).with(PropertyDispatch.modify(BlockStateProperties.HORIZONTAL_FACING)
+                .select(Direction.SOUTH, v -> v)
+                .select(Direction.WEST, VariantMutator.Y_ROT.withValue(Quadrant.R90))
+                .select(Direction.NORTH, VariantMutator.Y_ROT.withValue(Quadrant.R180))
+                .select(Direction.EAST, VariantMutator.Y_ROT.withValue(Quadrant.R270))));
+
+        blockStateModelGenerator.registerSimpleFlatItemModel(hangingSignBlock.asItem());
     }
 
     public static void registerFallenLeaves(BlockModelGenerators blockStateModelGenerator, Block block, Block textureSource) {

@@ -75,7 +75,12 @@ public class BlocksForBuildersItems {
 
     public static void registerModItems() {
         BlocksForBuilders.LOGGER.info("Registering items for " + BlocksForBuilders.MOD_ID);
-        }
+    }
+
+    public static ResourceKey<Item> getResourceKey(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
+
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(BlocksForBuilders.MOD_ID, name), function.apply(new Item.Properties().setId(keyOfItem(name))));
     }

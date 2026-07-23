@@ -11,6 +11,7 @@ import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -94,7 +95,7 @@ public class BlocksForBuildersConfiguredFeatures {
                 context,
                 SCORCHWOOD_SAPLING_KEY,
                 Feature.SIMPLE_RANDOM_SELECTOR,
-                new SimpleRandomFeatureConfiguration(
+                new CompositeFeatureConfiguration(
                         HolderSet.direct(
                                 PlacementUtils.inlinePlaced(
                                         Feature.SIMPLE_BLOCK,
@@ -112,7 +113,8 @@ public class BlocksForBuildersConfiguredFeatures {
                 new StraightTrunkPlacer(4, 8, 0),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1))
+                new TwoLayersFeatureSize(1, 0, 1),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME)))
                 .decorators(ImmutableList.of(new CocoaDecorator(0.2F), TrunkVineDecorator.INSTANCE, new LeaveVineDecorator(0.25F))).build());
 
         register(context, MEGA_GREEN_JUNGLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
@@ -120,7 +122,8 @@ public class BlocksForBuildersConfiguredFeatures {
                 new MegaJungleTrunkPlacer(10, 2, 19),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.GREEN_JUNGLE_LEAVES),
                 new MegaJungleFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2),
-                new TwoLayersFeatureSize(1, 1, 2))
+                new TwoLayersFeatureSize(1, 1, 2),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME)))
                 .decorators(ImmutableList.of(TrunkVineDecorator.INSTANCE, new LeaveVineDecorator(0.25F))).build());
 
         register(context, GOLD_ACACIA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
@@ -128,7 +131,8 @@ public class BlocksForBuildersConfiguredFeatures {
                 new ForkingTrunkPlacer(4, 5, 2),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES),
                 new AcaciaFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0)),
-                new TwoLayersFeatureSize(1, 0, 1)).build());
+                new TwoLayersFeatureSize(1, 0, 1),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME))).build());
 
         register(context, GOLD_ACACIA_SPAWN_KEY, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.GOLD_ACACIA_PLACED_KEY),
@@ -139,14 +143,16 @@ public class BlocksForBuildersConfiguredFeatures {
                 new StraightTrunkPlacer(4, 4, 3),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)).build());
+                new TwoLayersFeatureSize(1, 0, 1),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME))).build());
 
         register(context, WILLOW_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(BlocksForBuildersBlocks.WILLOW_LOG),
                 new ForkingTrunkPlacer(4, 2, 1),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.WILLOW_LEAVES),
                 new CherryFoliagePlacer(ConstantInt.of(4), ConstantInt.of(1), ConstantInt.of(4), 0.0f, 0.0f, 1.0f, 0.75f),
-                new TwoLayersFeatureSize(1, 0, 1)).build());
+                new TwoLayersFeatureSize(1, 0, 1),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME))).build());
 
         register(context, WILLOW_SPAWN_KEY, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.WILLOW_PLACED_KEY),
@@ -157,23 +163,24 @@ public class BlocksForBuildersConfiguredFeatures {
                 new StraightTrunkPlacer(4, 2, 2),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)).build());
+                new TwoLayersFeatureSize(1, 0, 1),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME))).build());
 
         register(context, SCORCHWOOD_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(BlocksForBuildersBlocks.SCORCHWOOD_LOG),
                 new ScorchwoodTrunkPlacer(7, 2, 0),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES),
                 new BlobFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), 0),
-                new TwoLayersFeatureSize(0, 0, 0))
-                .belowTrunkProvider(BlockStateProvider.simple(BlocksForBuildersBlocks.SCORCHED_GRASS)).build());
+                new TwoLayersFeatureSize(0, 0, 0),
+                BlockStateProvider.simple(BlocksForBuildersBlocks.SCORCHED_GRASS)).build());
 
         register(context, PALM_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(BlocksForBuildersBlocks.PALM_LOG),
                 new PalmTrunkPlacer(4, 4, 4),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.PALM_LEAVES),
                 new AcaciaFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0)),
-                new TwoLayersFeatureSize(0, 0, 0))
-                .decorators(List.of(new CoconutTreeDecorator(1.0f))).build());
+                new TwoLayersFeatureSize(0, 0, 0),
+                BlockStateProvider.simple(Blocks.SAND)).decorators(List.of(new CoconutTreeDecorator(1.0f))).build());
 
         register(context, PALM_SPAWN_KEY, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(placedFeatureRegistryEntryLookup.getOrThrow(BlocksForBuildersPlacedFeatures.PALM_PLACED_KEY),
@@ -184,42 +191,48 @@ public class BlocksForBuildersConfiguredFeatures {
                 new StraightTrunkPlacer(4, 2, 2),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.MAPLE_LEAVES),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)).build());
+                new TwoLayersFeatureSize(1, 0, 1),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME))).build());
 
         register(context, BEECH_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(BlocksForBuildersBlocks.BEECH_LOG),
                 new StraightTrunkPlacer(4, 2, 2),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.BEECH_LEAVES),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)).build());
+                new TwoLayersFeatureSize(1, 0, 1),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME))).build());
 
         register(context, PINE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(BlocksForBuildersBlocks.PINE_LOG),
                 new StraightTrunkPlacer(5, 2, 1),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.PINE_LEAVES),
                 new SpruceFoliagePlacer(UniformInt.of(2, 3), UniformInt.of(0, 2), UniformInt.of(1, 2)),
-                new TwoLayersFeatureSize(2, 0, 2)).build());
+                new TwoLayersFeatureSize(2, 0, 2),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME))).build());
 
         register(context, MEGA_PINE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(BlocksForBuildersBlocks.PINE_LOG),
                 new GiantTrunkPlacer(13, 2, 14),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.PINE_LEAVES),
                 new MegaPineFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), UniformInt.of(13, 17)),
-                new TwoLayersFeatureSize(1, 1, 2)).build());
+                new TwoLayersFeatureSize(1, 1, 2),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME))).build());
 
         register(context, CEDAR_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(BlocksForBuildersBlocks.CEDAR_LOG),
                 new StraightTrunkPlacer(5, 2, 1),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.CEDAR_LEAVES),
                 new SpruceFoliagePlacer(UniformInt.of(2, 3), UniformInt.of(0, 2), UniformInt.of(1, 2)),
-                new TwoLayersFeatureSize(2, 0, 2)).build());
+                new TwoLayersFeatureSize(2, 0, 2),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME))).build());
 
         register(context, MEGA_CEDAR_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(BlocksForBuildersBlocks.CEDAR_LOG),
                 new GiantTrunkPlacer(13, 2, 14),
                 BlockStateProvider.simple(BlocksForBuildersBlocks.CEDAR_LEAVES),
                 new MegaPineFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), UniformInt.of(13, 17)),
-                new TwoLayersFeatureSize(1, 1, 2)).build());
+                new TwoLayersFeatureSize(1, 1, 2),
+                TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(context.lookup(Registries.BIOME))).build());
 
 
         register(context, PUMPKIN_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.PUMPKIN)));
@@ -251,6 +264,25 @@ public class BlocksForBuildersConfiguredFeatures {
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
+    }
+
+    private static TreeConfiguration.TreeConfigurationBuilder createStraightBlobTree(
+            final Block oakLog,
+            final Block oakLeaves,
+            final int baseHeight,
+            final int heightRandA,
+            final int heightRandB,
+            final int blobRadius,
+            final BlockStateProvider belowTrunkProvider
+    ) {
+        return new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(oakLog),
+                new StraightTrunkPlacer(baseHeight, heightRandA, heightRandB),
+                BlockStateProvider.simple(oakLeaves),
+                new BlobFoliagePlacer(ConstantInt.of(blobRadius), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1),
+                belowTrunkProvider
+        );
     }
 }
 

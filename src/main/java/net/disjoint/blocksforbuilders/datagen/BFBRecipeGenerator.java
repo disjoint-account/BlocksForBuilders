@@ -7,6 +7,7 @@ import net.disjoint.blocksforbuilders.util.BFBTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.world.item.crafting.CookingBookCategory;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -372,7 +373,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         .pattern("BW")
                         .pattern("WB")
                         .define('B', Items.NETHER_BRICK)
-                        .define('W', Items.BLACK_DYE)
+                        .define('W', Items.DYE.black())
                         .unlockedBy(getHasName(Items.NETHER_BRICK), has(Items.NETHER_BRICK))
                         .save(output);
                 offerChiseledRecipe(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS, BlocksForBuildersBlocks.BLACK_NETHER_BRICK_SLAB);
@@ -418,7 +419,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerDoorRecipe(BlocksForBuildersBlocks.GHOSTWOOD_DOOR, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
                 offerFenceRecipe(BlocksForBuildersBlocks.GHOSTWOOD_FENCE, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.GHOSTWOOD_FENCE_GATE, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
-                hangingSign(BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG);
+                hangingSignBuilder(BlocksForBuildersItems.GHOSTWOOD_HANGING_SIGN_ITEM, Ingredient.of(BlocksForBuildersBlocks.STRIPPED_GHOSTWOOD_LOG));
                 shapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS, 4)
                         .group("planks")
                         .requires(BFBTags.Items.GHOSTWOOD_LOGS)
@@ -439,7 +440,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerDoorRecipe(BlocksForBuildersBlocks.SCORCHWOOD_DOOR, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
                 offerFenceRecipe(BlocksForBuildersBlocks.SCORCHWOOD_FENCE, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.SCORCHWOOD_FENCE_GATE, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
-                hangingSign(BlocksForBuildersItems.SCORCHWOOD_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG);
+                hangingSignBuilder(BlocksForBuildersItems.SCORCHWOOD_HANGING_SIGN_ITEM, Ingredient.of(BlocksForBuildersBlocks.STRIPPED_SCORCHWOOD_LOG.asItem()));
                 shapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS, 4)
                         .group("planks")
                         .requires(BFBTags.Items.SCORCHWOOD_LOGS)
@@ -462,7 +463,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerDoorRecipe(BlocksForBuildersBlocks.WILLOW_DOOR, BlocksForBuildersBlocks.WILLOW_PLANKS);
                 offerFenceRecipe(BlocksForBuildersBlocks.WILLOW_FENCE, BlocksForBuildersBlocks.WILLOW_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.WILLOW_FENCE_GATE, BlocksForBuildersBlocks.WILLOW_PLANKS);
-                hangingSign(BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG);
+                hangingSignBuilder(BlocksForBuildersItems.WILLOW_HANGING_SIGN_ITEM, Ingredient.of(BlocksForBuildersBlocks.STRIPPED_WILLOW_LOG));
                 shapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.WILLOW_PLANKS, 4)
                         .group("planks")
                         .requires(BFBTags.Items.WILLOW_LOGS)
@@ -485,7 +486,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerDoorRecipe(BlocksForBuildersBlocks.PALM_DOOR, BlocksForBuildersBlocks.PALM_PLANKS);
                 offerFenceRecipe(BlocksForBuildersBlocks.PALM_FENCE, BlocksForBuildersBlocks.PALM_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.PALM_FENCE_GATE, BlocksForBuildersBlocks.PALM_PLANKS);
-                hangingSign(BlocksForBuildersItems.PALM_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_PALM_LOG);
+                hangingSignBuilder(BlocksForBuildersItems.PALM_HANGING_SIGN_ITEM, Ingredient.of(BlocksForBuildersBlocks.STRIPPED_PALM_LOG));
                 shapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.PALM_PLANKS, 4)
                         .group("planks")
                         .requires(BFBTags.Items.PALM_LOGS)
@@ -508,7 +509,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerDoorRecipe(BlocksForBuildersBlocks.MAPLE_DOOR, BlocksForBuildersBlocks.MAPLE_PLANKS);
                 offerFenceRecipe(BlocksForBuildersBlocks.MAPLE_FENCE, BlocksForBuildersBlocks.MAPLE_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.MAPLE_FENCE_GATE, BlocksForBuildersBlocks.MAPLE_PLANKS);
-                hangingSign(BlocksForBuildersItems.MAPLE_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG);
+                hangingSignBuilder(BlocksForBuildersItems.MAPLE_HANGING_SIGN_ITEM, Ingredient.of(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG));
                 shapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.MAPLE_PLANKS, 4)
                         .group("planks")
                         .requires(BFBTags.Items.MAPLE_LOGS)
@@ -531,7 +532,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerDoorRecipe(BlocksForBuildersBlocks.BEECH_DOOR, BlocksForBuildersBlocks.BEECH_PLANKS);
                 offerFenceRecipe(BlocksForBuildersBlocks.BEECH_FENCE, BlocksForBuildersBlocks.BEECH_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.BEECH_FENCE_GATE, BlocksForBuildersBlocks.BEECH_PLANKS);
-                hangingSign(BlocksForBuildersItems.BEECH_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_BEECH_LOG);
+                hangingSignBuilder(BlocksForBuildersItems.BEECH_HANGING_SIGN_ITEM, Ingredient.of(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG));
                 shapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.BEECH_PLANKS, 4)
                         .group("planks")
                         .requires(BFBTags.Items.BEECH_LOGS)
@@ -554,7 +555,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerDoorRecipe(BlocksForBuildersBlocks.PINE_DOOR, BlocksForBuildersBlocks.PINE_PLANKS);
                 offerFenceRecipe(BlocksForBuildersBlocks.PINE_FENCE, BlocksForBuildersBlocks.PINE_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.PINE_FENCE_GATE, BlocksForBuildersBlocks.PINE_PLANKS);
-                hangingSign(BlocksForBuildersItems.PINE_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_PINE_LOG);
+                hangingSignBuilder(BlocksForBuildersItems.PINE_HANGING_SIGN_ITEM, Ingredient.of(BlocksForBuildersBlocks.STRIPPED_PINE_LOG));
                 shapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.PINE_PLANKS, 4)
                         .group("planks")
                         .requires(BFBTags.Items.PINE_LOGS)
@@ -577,7 +578,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerDoorRecipe(BlocksForBuildersBlocks.CEDAR_DOOR, BlocksForBuildersBlocks.CEDAR_PLANKS);
                 offerFenceRecipe(BlocksForBuildersBlocks.CEDAR_FENCE, BlocksForBuildersBlocks.CEDAR_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.CEDAR_FENCE_GATE, BlocksForBuildersBlocks.CEDAR_PLANKS);
-                hangingSign(BlocksForBuildersItems.CEDAR_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG);
+                hangingSignBuilder(BlocksForBuildersItems.CEDAR_HANGING_SIGN_ITEM, Ingredient.of(BlocksForBuildersBlocks.STRIPPED_CEDAR_LOG));
                 shapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.CEDAR_PLANKS, 4)
                         .group("planks")
                         .requires(BFBTags.Items.CEDAR_LOGS)
@@ -600,7 +601,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerDoorRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_DOOR, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                 offerFenceRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.GREEN_JUNGLE_FENCE_GATE, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS);
-                hangingSign(BlocksForBuildersItems.GREEN_JUNGLE_HANGING_SIGN_ITEM, BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG);
+                hangingSignBuilder(BlocksForBuildersItems.GREEN_JUNGLE_HANGING_SIGN_ITEM, Ingredient.of(BlocksForBuildersBlocks.STRIPPED_GREEN_JUNGLE_LOG));
                 shapeless(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_JUNGLE_PLANKS, 4)
                         .group("planks")
                         .requires(BFBTags.Items.GREEN_JUNGLE_LOGS)
@@ -621,7 +622,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerDoorRecipe(BlocksForBuildersBlocks.GREEN_BAMBOO_DOOR, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
                 offerFenceRecipe(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
                 offerFenceGateRecipe(BlocksForBuildersBlocks.GREEN_BAMBOO_FENCE_GATE, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS);
-                hangingSign(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM, Blocks.BAMBOO_BLOCK);
+                hangingSignBuilder(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM, Ingredient.of(Blocks.BAMBOO_BLOCK));
                 shaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GREEN_BAMBOO_PLANKS, 4)
                         .group("planks")
                         .pattern("WW")
@@ -823,7 +824,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         .unlockedBy(getHasName(BlocksForBuildersItems.COCONUT_HUSK), has(BlocksForBuildersItems.COCONUT_HUSK))
                         .save(output);
 
-                shapeless(RecipeCategory.MISC, Items.BROWN_DYE, 1)
+                shapeless(RecipeCategory.MISC, Items.DYE.brown(), 1)
                         .group("brown_dye")
                         .requires(BlocksForBuildersItems.COCONUT_FIBER)
                         .unlockedBy(getHasName(BlocksForBuildersItems.COCONUT_FIBER), has(BlocksForBuildersItems.COCONUT_FIBER))

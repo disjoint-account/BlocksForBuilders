@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "fallen_leaves",
   "key": {
     "#": "blocksforbuilders:maple_leaves"
