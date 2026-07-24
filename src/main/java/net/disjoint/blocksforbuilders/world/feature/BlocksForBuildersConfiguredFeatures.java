@@ -11,6 +11,7 @@ import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
@@ -28,6 +29,8 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.CherryFoliagePl
 import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaJungleFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaPineFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedStateProvider;
+import net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator;
 import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.RandomOffsetPlacement;
@@ -89,6 +92,8 @@ public class BlocksForBuildersConfiguredFeatures {
         var placedFeatureRegistryEntryLookup = context.lookup(Registries.PLACED_FEATURE);
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
         RuleTest ruleTest = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
+        HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
+        BlockStateProvider belowTrunkProvider = TreeConfiguration.defaultPlaceBelowTreeTrunkProvider(biomes);
 
 
         FeatureUtils.register(
@@ -172,7 +177,10 @@ public class BlocksForBuildersConfiguredFeatures {
                 BlockStateProvider.simple(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES),
                 new BlobFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), 0),
                 new TwoLayersFeatureSize(0, 0, 0),
-                BlockStateProvider.simple(BlocksForBuildersBlocks.SCORCHED_GRASS)).build());
+                belowTrunkProvider)
+                .belowTrunkProvider(BlockStateProvider.simple(BlocksForBuildersBlocks.SCORCHED_GRASS))
+                .decorators(ImmutableList.of(
+                new AlterGroundDecorator(RuleBasedStateProvider.ifTrueThenProvide(BlockPredicate.matchesTag(BlockTags.BENEATH_TREE_PODZOL_REPLACEABLE), BlocksForBuildersBlocks.SCORCHED_GRASS)))).build());
 
         register(context, PALM_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(BlocksForBuildersBlocks.PALM_LOG),
