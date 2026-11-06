@@ -1,17 +1,19 @@
 package net.disjoint.blocksforbuilders;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.CarpetBlock;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
-import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import org.jspecify.annotations.NullMarked;
 
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.FACING;
 
+@NullMarked
 public class DirectionalCarpet extends CarpetBlock {
 
     public DirectionalCarpet(Properties settings) {
@@ -21,7 +23,9 @@ public class DirectionalCarpet extends CarpetBlock {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-        return super.getStateForPlacement(ctx).setValue(BlockStateProperties.HORIZONTAL_FACING, ctx.getHorizontalDirection().getOpposite());
+        BlockState stateForPlacement = super.getStateForPlacement(ctx);
+        assert stateForPlacement != null;
+        return stateForPlacement.setValue(BlockStateProperties.HORIZONTAL_FACING, ctx.getHorizontalDirection().getOpposite());
     }
 
     @Override

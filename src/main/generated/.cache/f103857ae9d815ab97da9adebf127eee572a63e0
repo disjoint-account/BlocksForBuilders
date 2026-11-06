@@ -39,6 +39,7 @@ e912c54f2a72c8ad4f9b3304c23b61f949fbe90f data/minecraft/tags/block/stone_ore_rep
 69c07a62eaffb0f65de2bd82d2fab3afe43de2cd data/minecraft/tags/block/wall_hanging_signs.json
 8712ebc93dc25503ec4383fb90ec3c56410a1938 data/minecraft/tags/block/wall_signs.json
 69e09e4c8ce7e2306f8fb941c6b2d6f7b683ebf0 data/minecraft/tags/block/walls.json
+9b8713cba583c7c8d535e553ad0b297168baced7 data/minecraft/tags/block/washed_away_by_fluids.json
 f06ced54b5bcf8c3ad302a1711eda35999a71198 data/minecraft/tags/block/wooden_buttons.json
 eb21fcab02a3898a4fcf3aca052b1840db7e9a11 data/minecraft/tags/block/wooden_doors.json
 a0f22ecf94c9ac676d1d24a4ce80d026f4691ada data/minecraft/tags/block/wooden_fences.json

@@ -809,6 +809,34 @@ public class BFBBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                         .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.COCONUT_THATCH_RUG))
                         .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.ASHEN_CARPET));
 
+        tag(BlockTags.WASHED_AWAY_BY_FLUIDS)
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_GHOSTWOOD_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_WILLOW_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_PALM_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_GREEN_JUNGLE_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_PINE_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_CEDAR_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_POPLAR_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_JUNGLE_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_ACACIA_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_DARK_OAK_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_AZALEA_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_FLOWERING_AZALEA_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_MANGROVE_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_CHERRY_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.FALLEN_PALE_OAK_LEAVES))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.HAY_RUG))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.BAMBOO_THATCH_RUG))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.BAMBOO_MOSAIC_RUG))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.COCONUT_THATCH_RUG))
+                .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.ASHEN_CARPET));
+
         tag(BlockTags.DIRT)
                 .add(BlocksForBuildersBlocks.getResourceKey(BlocksForBuildersBlocks.SCORCHED_GRASS));
 
