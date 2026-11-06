@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:polished_grimstone_slab_from_grimstone_stonecutting"
+        "recipes": "blocksforbuilders:polished_grimstone_slab_from_grimstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

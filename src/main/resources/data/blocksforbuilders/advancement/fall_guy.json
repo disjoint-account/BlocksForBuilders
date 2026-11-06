@@ -2,25 +2,23 @@
   "parent": "blocksforbuilders:sweater_weather",
   "criteria": {
     "fall_fifty_blocks_in_forest": {
+      "trigger": "minecraft:fall_from_height",
       "conditions": {
-        "distance": {
-          "y": {
-            "min": 50.0
-          }
-        },
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "stepping_on": {
-              "biomes": "blocksforbuilders:autumnal_forest"
-              }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "minecraft:dappled_forest"
             }
           }
-        ]
-      },
-      "trigger": "minecraft:fall_from_height"
+        },
+        "distance": {
+          "y": {
+            "min": 50
+          }
+        }
+      }
     }
   },
   "display": {
@@ -30,7 +28,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "blocksforbuilders:maple_leaves"
+      "id": "minecraft:red_poplar_leaves"
     },
     "title": {
       "translate": "advancements.blocksforbuilders.fall_guy.title"

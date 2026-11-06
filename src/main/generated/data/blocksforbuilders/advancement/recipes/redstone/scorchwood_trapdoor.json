@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:scorchwood_trapdoor"
+        "recipes": "blocksforbuilders:scorchwood_trapdoor"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

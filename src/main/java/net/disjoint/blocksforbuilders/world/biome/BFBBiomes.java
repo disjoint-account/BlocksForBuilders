@@ -2,7 +2,9 @@ package net.disjoint.blocksforbuilders.world.biome;
 
 import net.disjoint.blocksforbuilders.BlocksForBuilders;
 import net.disjoint.blocksforbuilders.world.feature.BlocksForBuildersPlacedFeatures;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.ARGB;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -14,7 +16,6 @@ import net.minecraft.world.attribute.EnvironmentAttributeMap;
 import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 
@@ -45,15 +46,14 @@ public class BFBBiomes {
     public static Biome autumnalForest(BootstrapContext<Biome> context) {
         net.minecraft.world.level.biome.MobSpawnSettings.Builder spawnBuilder = new net.minecraft.world.level.biome.MobSpawnSettings.Builder();
 
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 5, new MobSpawnSettings.SpawnerData(EntityTypes.WOLF, 2, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 5, new MobSpawnSettings.SpawnerData(EntityTypes.FOX, 1, 4));
+        spawnBuilder.addSpawn(EntityTypes.WOLF, MobCategory.CREATURE, 5, new UniformInt(2, 5)).addSpawn(EntityTypes.FOX, MobCategory.CREATURE, 5, new UniformInt(1, 4));
 
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE),
-                        context.lookup(Registries.CONFIGURED_CARVER));
+                        context.lookup(Registries.CARVER));
 
         globalOverworldGeneration(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
@@ -62,18 +62,18 @@ public class BFBBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.MAPLE_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.BEECH_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.YELLOW_BIRCH_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.POPLAR_PLACED_KEY);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.PUMPKIN_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SWEET_BERRY_PATCH_PLACED_KEY);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SMALL_FALLEN_MAPLE_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SMALL_FALLEN_BEECH_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SMALL_FALLEN_YELLOW_BIRCH_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.SMALL_FALLEN_POPLAR_PLACED_KEY);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.LARGE_FALLEN_MAPLE_PLACED_KEY);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.LARGE_FALLEN_BEECH_PLACED_KEY);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.LARGE_FALLEN_YELLOW_BIRCH_PLACED_KEY);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.LARGE_FALLEN_POPLAR_PLACED_KEY);
 
         EnvironmentAttributeMap environmentAttributeMap = EnvironmentAttributeMap.builder()
                 .set(EnvironmentAttributes.BACKGROUND_MUSIC, BackgroundMusic.OVERWORLD)
@@ -101,7 +101,7 @@ public class BFBBiomes {
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE),
-                        context.lookup(Registries.CONFIGURED_CARVER));
+                        context.lookup(Registries.CARVER));
 
         globalOverworldGeneration(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
@@ -112,9 +112,9 @@ public class BFBBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, BlocksForBuildersPlacedFeatures.LARGE_ASHEN_CARPET_PLACED_KEY);
 
         EnvironmentAttributeMap environmentAttributeMap = EnvironmentAttributeMap.builder()
-                .set(EnvironmentAttributes.SKY_COLOR, 0x818181)
-                .set(EnvironmentAttributes.FOG_COLOR, 0x7A7A7A)
-                .set(EnvironmentAttributes.WATER_FOG_COLOR, 0x7F7F7F)
+                .set(EnvironmentAttributes.SKY_COLOR, ARGB.vector3fFromRGB24(0x818181))
+                .set(EnvironmentAttributes.FOG_COLOR, ARGB.vector3fFromRGB24(0x7A7A7A))
+                .set(EnvironmentAttributes.WATER_FOG_COLOR, ARGB.vector3fFromRGB24(0x7F7F7F))
                 .set(EnvironmentAttributes.BACKGROUND_MUSIC, BackgroundMusic.EMPTY)
                 .build();
 
@@ -136,15 +136,13 @@ public class BFBBiomes {
         net.minecraft.world.level.biome.MobSpawnSettings.Builder spawnBuilder = new net.minecraft.world.level.biome.MobSpawnSettings.Builder();
 
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 8, new MobSpawnSettings.SpawnerData(EntityTypes.WOLF, 4, 4));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 8, new MobSpawnSettings.SpawnerData(EntityTypes.RABBIT, 2, 3));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, 8, new MobSpawnSettings.SpawnerData(EntityTypes.FOX, 2, 4));
+        spawnBuilder.addSpawn(EntityTypes.WOLF, MobCategory.CREATURE, 8, new ConstantInt(4)).addSpawn(EntityTypes.RABBIT, MobCategory.CREATURE, 8, new UniformInt(2, 3)).addSpawn(EntityTypes.FOX, MobCategory.CREATURE, 8, new UniformInt(2, 4));
 
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE),
-                        context.lookup(Registries.CONFIGURED_CARVER));
+                        context.lookup(Registries.CARVER));
 
         globalOverworldGeneration(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);

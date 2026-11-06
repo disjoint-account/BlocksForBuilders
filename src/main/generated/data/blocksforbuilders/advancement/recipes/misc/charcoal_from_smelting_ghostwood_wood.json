@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:charcoal_from_smelting_ghostwood_wood"
+        "recipes": "blocksforbuilders:charcoal_from_smelting_ghostwood_wood"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

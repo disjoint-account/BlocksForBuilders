@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:fallen_willow_leaves"
+        "recipes": "blocksforbuilders:fallen_willow_leaves"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

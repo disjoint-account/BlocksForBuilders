@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:scorchwood_sapling_from_smelting_birch_sapling"
+        "recipes": "blocksforbuilders:scorchwood_sapling_from_smelting_birch_sapling"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

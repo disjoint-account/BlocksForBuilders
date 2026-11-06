@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:beech_shelf"
+        "recipes": "blocksforbuilders:beech_shelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

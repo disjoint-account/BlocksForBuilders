@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "group": "fallen_leaves",
   "key": {
-    "#": "blocksforbuilders:maple_leaves"
+    "#": "minecraft:red_poplar_leaves"
   },
   "pattern": [
     "##"

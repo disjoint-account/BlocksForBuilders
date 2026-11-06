@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -33,6 +33,7 @@ public class BFBLootTableGenerator extends FabricBlockLootSubProvider {
         add(BlocksForBuildersBlocks.CHERRY_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.CHERRY_BOOKSHELF));
         add(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF));
         add(BlocksForBuildersBlocks.PALE_OAK_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.PALE_OAK_BOOKSHELF));
+        add(BlocksForBuildersBlocks.POPLAR_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.POPLAR_BOOKSHELF));
         add(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF));
         add(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF));
         add(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF, bookshelfDrops(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF));
@@ -208,7 +209,7 @@ public class BFBLootTableGenerator extends FabricBlockLootSubProvider {
         dropSelf(BlocksForBuildersBlocks.MAPLE_FENCE);
         dropSelf(BlocksForBuildersBlocks.MAPLE_FENCE_GATE);
         add(BlocksForBuildersBlocks.MAPLE_HANGING_SIGN, createSingleItemTable(BlocksForBuildersItems.MAPLE_HANGING_SIGN_ITEM));
-        add(BlocksForBuildersBlocks.MAPLE_LEAVES, createLeavesDrops(BlocksForBuildersBlocks.MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_SAPLING, 0.05f));
+        add(Blocks.RED_POPLAR_LEAVES, createLeavesDrops(Blocks.RED_POPLAR_LEAVES, BlocksForBuildersBlocks.MAPLE_SAPLING, 0.05f));
         add(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, createLeavesDrops(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_SAPLING, 0.0f));
         dropSelf(BlocksForBuildersBlocks.MAPLE_HEDGE);
         dropSelf(BlocksForBuildersBlocks.MAPLE_LOG);
@@ -232,7 +233,7 @@ public class BFBLootTableGenerator extends FabricBlockLootSubProvider {
         dropSelf(BlocksForBuildersBlocks.BEECH_FENCE);
         dropSelf(BlocksForBuildersBlocks.BEECH_FENCE_GATE);
         add(BlocksForBuildersBlocks.BEECH_HANGING_SIGN, createSingleItemTable(BlocksForBuildersItems.BEECH_HANGING_SIGN_ITEM));
-        add(BlocksForBuildersBlocks.BEECH_LEAVES, createLeavesDrops(BlocksForBuildersBlocks.BEECH_LEAVES, BlocksForBuildersBlocks.BEECH_SAPLING, 0.05f));
+        add(Blocks.ORANGE_POPLAR_LEAVES, createLeavesDrops(Blocks.ORANGE_POPLAR_LEAVES, BlocksForBuildersBlocks.BEECH_SAPLING, 0.05f));
         add(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, createLeavesDrops(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, BlocksForBuildersBlocks.BEECH_SAPLING, 0.0f));
         dropSelf(BlocksForBuildersBlocks.BEECH_HEDGE);
         dropSelf(BlocksForBuildersBlocks.BEECH_LOG);
@@ -319,11 +320,8 @@ public class BFBLootTableGenerator extends FabricBlockLootSubProvider {
         dropSelf(BlocksForBuildersBlocks.GOLD_ACACIA_HEDGE);
         dropSelf(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING);
         add(BlocksForBuildersBlocks.POTTED_GOLD_ACACIA_SAPLING, createPotFlowerItemTable(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING));
-        add(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, createLeavesDrops(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.05f));
-        add(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, createLeavesDrops(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, 0.0f));
-        dropSelf(BlocksForBuildersBlocks.YELLOW_BIRCH_HEDGE);
-        dropSelf(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
-        add(BlocksForBuildersBlocks.POTTED_YELLOW_BIRCH_SAPLING, createPotFlowerItemTable(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING));
+        add(BlocksForBuildersBlocks.FALLEN_POPLAR_LEAVES, createLeavesDrops(BlocksForBuildersBlocks.FALLEN_POPLAR_LEAVES, Blocks.POPLAR_SAPLING, 0.0f));
+        dropSelf(BlocksForBuildersBlocks.POPLAR_HEDGE);
 
         dropSelf(BlocksForBuildersBlocks.GRIMSTONE);
         dropSelf(BlocksForBuildersBlocks.GRIMSTONE_STAIRS);
@@ -463,21 +461,23 @@ public class BFBLootTableGenerator extends FabricBlockLootSubProvider {
         add(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB, createSlabItemTable(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB));
         dropSelf(BlocksForBuildersBlocks.COCONUT_THATCH_RUG);
 
-        add(BlocksForBuildersBlocks.SCORCHED_GRASS, silkTouchAltDrops(BlocksForBuildersBlocks.SCORCHED_GRASS, Blocks.DIRT, 1.0f, 1.0f));
+        add(BlocksForBuildersBlocks.HUMUS_GRASS, silkTouchAltDrops(BlocksForBuildersBlocks.HUMUS_GRASS, Blocks.DIRT, 1, 1));
+
+        add(BlocksForBuildersBlocks.SCORCHED_GRASS, silkTouchAltDrops(BlocksForBuildersBlocks.SCORCHED_GRASS, Blocks.DIRT, 1, 1));
         dropSelf(BlocksForBuildersBlocks.ASHEN_CARPET);
     }
     public LootTable.Builder bookshelfDrops(Block drop) {
         return this.createSilkTouchDispatchTable(drop, this.applyExplosionDecay(
                 drop,
                 LootItem.lootTableItem(Items.BOOK)
-                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 3.0F)))
+                        .apply(SetItemCountFunction.setCount(ContextIntProviders.between(3, 3)))
         ));
     }
-    public LootTable.Builder silkTouchAltDrops(Block block, Block drop, float minDrops, float maxDrops) {
+    public LootTable.Builder silkTouchAltDrops(Block block, Block drop, int minDrops, int maxDrops) {
         return this.createSilkTouchDispatchTable(block, this.applyExplosionDecay(
                 drop,
                 LootItem.lootTableItem(drop)
-                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
+                        .apply(SetItemCountFunction.setCount(ContextIntProviders.between(minDrops, maxDrops)))
         ));
     }
 }

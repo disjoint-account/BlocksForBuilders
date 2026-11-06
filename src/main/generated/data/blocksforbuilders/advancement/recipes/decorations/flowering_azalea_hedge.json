@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:flowering_azalea_hedge"
+        "recipes": "blocksforbuilders:flowering_azalea_hedge"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

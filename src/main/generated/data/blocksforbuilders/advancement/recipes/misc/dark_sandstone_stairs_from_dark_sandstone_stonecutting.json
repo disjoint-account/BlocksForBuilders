@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:dark_sandstone_stairs_from_dark_sandstone_stonecutting"
+        "recipes": "blocksforbuilders:dark_sandstone_stairs_from_dark_sandstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

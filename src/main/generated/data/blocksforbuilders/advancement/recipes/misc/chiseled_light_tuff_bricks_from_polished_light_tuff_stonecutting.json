@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:chiseled_light_tuff_bricks_from_polished_light_tuff_stonecutting"
+        "recipes": "blocksforbuilders:chiseled_light_tuff_bricks_from_polished_light_tuff_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

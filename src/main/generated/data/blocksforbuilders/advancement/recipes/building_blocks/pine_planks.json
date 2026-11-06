@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:pine_planks"
+        "recipes": "blocksforbuilders:pine_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

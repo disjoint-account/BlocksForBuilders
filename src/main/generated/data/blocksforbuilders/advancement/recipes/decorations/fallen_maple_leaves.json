@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_maple_leaves": {
+    "has_red_poplar_leaves": {
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:maple_leaves"
+            "items": "minecraft:red_poplar_leaves"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:fallen_maple_leaves"
+        "recipes": "blocksforbuilders:fallen_maple_leaves"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_maple_leaves"
+      "has_red_poplar_leaves"
     ]
   ],
   "rewards": {

@@ -2,46 +2,52 @@
   "parent": "blocksforbuilders:you_think",
   "criteria": {
     "milk_coconut": {
+      "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": "blocksforbuilders:coconut"
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": "blocksforbuilders:coconut"
+                }
+              }
+            },
+            {
+              "type": "minecraft:match_tool",
+              "predicate": {
+                "items": "minecraft:bucket"
               }
             }
-          },
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "minecraft:bucket"
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:item_used_on_block"
+          ]
+        }
+      }
     },
     "shear_coconut": {
+      "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": "blocksforbuilders:coconut"
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": "blocksforbuilders:coconut"
+                }
+              }
+            },
+            {
+              "type": "minecraft:match_tool",
+              "predicate": {
+                "items": "minecraft:shears"
               }
             }
-          },
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "minecraft:shears"
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:item_used_on_block"
+          ]
+        }
+      }
     },
     "has_fiber": {
       "trigger": "minecraft:inventory_changed",

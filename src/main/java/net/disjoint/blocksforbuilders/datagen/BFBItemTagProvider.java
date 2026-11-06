@@ -9,9 +9,11 @@ import net.minecraft.references.BlockItemIds;
 import net.minecraft.tags.BlockItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
+import org.jspecify.annotations.NullMarked;
 
 import java.util.concurrent.CompletableFuture;
 
+@NullMarked
 public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
     public BFBItemTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
@@ -32,6 +34,7 @@ public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.CHERRY_BOOKSHELF.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.PALE_OAK_BOOKSHELF.asItem()))
+                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.POPLAR_BOOKSHELF.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF.asItem()))
@@ -177,12 +180,9 @@ public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GHOSTWOOD_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.WILLOW_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.PALM_LEAVES.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.MAPLE_LEAVES.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.BEECH_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.PINE_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.CEDAR_LEAVES.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES.asItem()));
+                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES.asItem()));
 
         tag(ItemTags.LOGS)
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GREEN_JUNGLE_LOG.asItem()))
@@ -244,8 +244,7 @@ public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.BEECH_SAPLING.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.PINE_SAPLING.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.CEDAR_SAPLING.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING.asItem()));
+                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING.asItem()));
 
         tag(ItemTags.SIGNS)
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersItems.GREEN_JUNGLE_SIGN_ITEM))
@@ -490,6 +489,9 @@ public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
         tag(ItemTags.DIRT)
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.SCORCHED_GRASS.asItem()));
 
+        tag(BlockItemTags.GRASS_BLOCKS.item())
+                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.HUMUS_GRASS.asItem()));
+
         tag(ItemTags.SAND)
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.DARK_SAND.asItem()));
 
@@ -588,7 +590,6 @@ public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.MAPLE_WOOD.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.MAPLE_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.MAPLE_SAPLING.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.MAPLE_PLANKS.asItem()))
@@ -609,7 +610,6 @@ public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.BEECH_WOOD.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.BEECH_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.BEECH_SAPLING.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.BEECH_PLANKS.asItem()))
@@ -703,9 +703,7 @@ public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersItems.GREEN_BAMBOO_HANGING_SIGN_ITEM))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersItems.GREEN_BAMBOO_RAFT))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersItems.GREEN_BAMBOO_CHEST_RAFT))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING.asItem()))
+                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.FALLEN_POPLAR_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING.asItem()))
@@ -729,7 +727,7 @@ public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.PINE_HEDGE.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.CEDAR_HEDGE.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GOLD_ACACIA_HEDGE.asItem()))
-                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.YELLOW_BIRCH_HEDGE.asItem()))
+                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.POPLAR_HEDGE.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.OAK_HEDGE.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.BIRCH_HEDGE.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.SPRUCE_HEDGE.asItem()))
@@ -752,6 +750,7 @@ public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.CHERRY_BOOKSHELF.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.PALE_OAK_BOOKSHELF.asItem()))
+                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.POPLAR_BOOKSHELF.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GREEN_JUNGLE_BOOKSHELF.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF.asItem()))
@@ -906,6 +905,7 @@ public class BFBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.COCONUT_THATCH_STAIRS.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.COCONUT_THATCH_SLAB.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.COCONUT_THATCH_RUG.asItem()))
+                .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.HUMUS_GRASS.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.SCORCHED_GRASS.asItem()))
                 .add(BlocksForBuildersItems.getResourceKey(BlocksForBuildersBlocks.ASHEN_CARPET.asItem()));
     }

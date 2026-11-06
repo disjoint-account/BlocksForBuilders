@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:antigorite_stairs"
+        "recipes": "blocksforbuilders:antigorite_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

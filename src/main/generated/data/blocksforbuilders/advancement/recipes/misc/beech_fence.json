@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:beech_fence"
+        "recipes": "blocksforbuilders:beech_fence"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:scorchwood_planks"
+        "recipes": "blocksforbuilders:scorchwood_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

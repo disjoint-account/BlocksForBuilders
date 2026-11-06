@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:ghostwood_shelf"
+        "recipes": "blocksforbuilders:ghostwood_shelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

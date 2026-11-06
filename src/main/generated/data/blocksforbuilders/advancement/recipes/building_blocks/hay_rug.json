@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:hay_rug"
+        "recipes": "blocksforbuilders:hay_rug"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

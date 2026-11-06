@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:scorchwood_slab"
+        "recipes": "blocksforbuilders:scorchwood_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

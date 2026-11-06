@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:mangrove_hedge"
+        "recipes": "blocksforbuilders:mangrove_hedge"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

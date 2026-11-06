@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:black_nether_brick_fence"
+        "recipes": "blocksforbuilders:black_nether_brick_fence"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

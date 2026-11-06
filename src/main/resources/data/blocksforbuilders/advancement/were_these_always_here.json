@@ -16,8 +16,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": {
-          "location": {
-            "biomes": "blocksforbuilders:autumnal_forest"
+          "type": "minecraft:location_check",
+          "predicate": {
+            "biomes": "minecraft:dappled_forest"
           }
         },
         "items": [
@@ -31,13 +32,30 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": {
-          "location": {
-            "biomes": "blocksforbuilders:autumnal_forest"
+          "type": "minecraft:location_check",
+          "predicate": {
+            "biomes": "minecraft:dappled_forest"
           }
         },
         "items": [
           {
             "items": "blocksforbuilders:beech_log"
+          }
+        ]
+      }
+    },
+    "has_humus": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "biomes": "minecraft:dappled_forest"
+          }
+        },
+        "items": [
+          {
+            "items": "blocksforbuilders:humus_grass"
           }
         ]
       }
@@ -49,6 +67,9 @@
     ],
     [
       "has_beech"
+    ],
+    [
+      "has_humus"
     ]
   ],
   "sends_telemetry_event": true

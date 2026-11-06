@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:ghostwood_door"
+        "recipes": "blocksforbuilders:ghostwood_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

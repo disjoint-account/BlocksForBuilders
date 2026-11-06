@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:ghostwood_sign"
+        "recipes": "blocksforbuilders:ghostwood_sign"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

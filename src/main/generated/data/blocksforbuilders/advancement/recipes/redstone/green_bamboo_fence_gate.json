@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:green_bamboo_fence_gate"
+        "recipes": "blocksforbuilders:green_bamboo_fence_gate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

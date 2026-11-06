@@ -13,15 +13,15 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:lectern"
+        "recipes": "minecraft:lectern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_book"
+      "has_book",
+      "has_the_recipe"
     ]
   ],
   "rewards": {

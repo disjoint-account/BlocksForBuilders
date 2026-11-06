@@ -1,10 +1,12 @@
 package net.disjoint.blocksforbuilders;
 
+import net.minecraft.util.Prediction;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BonemealSource;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.grower.TreeGrower;
@@ -32,7 +34,10 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
+@NullMarked
 public class CoconutBlock extends SaplingBlock implements SimpleWaterloggedBlock {
     public static final IntegerProperty STAGE = BlockStateProperties.STAGE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -68,7 +73,7 @@ public class CoconutBlock extends SaplingBlock implements SimpleWaterloggedBlock
         return floor.is(BlockTags.SAND);
     }
 
-    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+    public @Nullable BlockState getStateForPlacement(BlockPlaceContext ctx) {
         Level world = ctx.getLevel();
         BlockPos pos = ctx.getClickedPos();
         FluidState state = world.getFluidState(pos);
@@ -90,7 +95,7 @@ public class CoconutBlock extends SaplingBlock implements SimpleWaterloggedBlock
         boolean creative = !player.isCreative();
         if (itemStack.is(Items.BUCKET)) {
             if (state.getValue(HAS_MILK)) {
-                player.getInventory().placeItemBackInInventory(new ItemStack(Items.MILK_BUCKET));
+                player.getInventory().placeItemBackInInventory(new ItemStack(Items.MILK_BUCKET), Prediction.SERVER_ONLY);
                 world.setBlockAndUpdate(pos, state.setValue(HAS_MILK, false));
                 world.playSound(null, pos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
                 if (creative) {
@@ -151,12 +156,12 @@ public class CoconutBlock extends SaplingBlock implements SimpleWaterloggedBlock
     }
 
     @Override
-    public boolean isValidBonemealTarget(LevelReader world, BlockPos pos, BlockState state) {
+    public boolean isValidBonemealTarget(LevelReader world, BlockPos pos, BlockState state, BonemealSource bonemealSource) {
         return conditionsForGrowth(state, world, pos);
     }
 
     @Override
-    public boolean isBonemealSuccess(Level world, RandomSource random, BlockPos pos, BlockState state) {
+    public boolean isBonemealSuccess(Level world, RandomSource random, BlockPos pos, BlockState state, BonemealSource bonemealSource) {
         return (double) world.getRandom().nextFloat() < 0.45 && conditionsForGrowth(state, world, pos);
     }
 

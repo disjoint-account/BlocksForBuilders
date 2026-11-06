@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:palm_trapdoor"
+        "recipes": "blocksforbuilders:palm_trapdoor"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

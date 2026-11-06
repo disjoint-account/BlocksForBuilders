@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:cedar_hedge"
+        "recipes": "blocksforbuilders:cedar_hedge"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

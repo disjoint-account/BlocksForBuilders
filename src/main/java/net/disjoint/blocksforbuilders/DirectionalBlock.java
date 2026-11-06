@@ -1,23 +1,19 @@
 package net.disjoint.blocksforbuilders;
 
-import com.mojang.serialization.MapCodec;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
-import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import org.jspecify.annotations.NullMarked;
+
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.FACING;
 
+@NullMarked
 public class DirectionalBlock extends Block {
-    public static final MapCodec<DirectionalBlock> CODEC = simpleCodec(DirectionalBlock::new);
-
-    @Override
-    public MapCodec<DirectionalBlock> codec() {
-        return CODEC;
-    }
 
     public DirectionalBlock(Properties settings) {
         super(settings);

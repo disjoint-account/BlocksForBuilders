@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_poplar_sapling": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:poplar_sapling"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "blocksforbuilders:scorchwood_sapling_from_smelting_poplar_sapling"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_poplar_sapling"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blocksforbuilders:scorchwood_sapling_from_smelting_poplar_sapling"
+    ]
+  }
+}

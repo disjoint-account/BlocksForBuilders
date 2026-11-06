@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:stripped_willow_wood"
+        "recipes": "blocksforbuilders:stripped_willow_wood"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

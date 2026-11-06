@@ -1,15 +1,18 @@
 package net.disjoint.blocksforbuilders;
 
+import net.minecraft.world.level.block.sounds.AmbientLeavesBlockSoundPlayer;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.UntintedParticleLeavesBlock;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
+import org.jspecify.annotations.NullMarked;
 
+@NullMarked
 public class PalmLeavesBlock extends UntintedParticleLeavesBlock {
     public PalmLeavesBlock(Properties settings, float leafParticleChance, ParticleOptions particleEffect) {
-        super(leafParticleChance, particleEffect, settings);
+        super(leafParticleChance, particleEffect, AmbientLeavesBlockSoundPlayer.noAmbientSound(), settings);
     }
 
     private boolean canGrowCoconuts(BlockState state) {

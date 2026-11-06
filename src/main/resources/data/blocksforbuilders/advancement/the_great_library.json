@@ -15,289 +15,210 @@
   "parent": "blocksforbuilders:root",
   "criteria": {
     "place_oak_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "minecraft:bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "minecraft:bookshelf"
+        }
       }
     },
     "place_birch_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:birch_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:birch_bookshelf"
+        }
       }
     },
     "place_spruce_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:spruce_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:spruce_bookshelf"
+        }
       }
     },
     "place_jungle_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:jungle_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:jungle_bookshelf"
+        }
       }
     },
     "place_acacia_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:acacia_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:acacia_bookshelf"
+        }
       }
     },
     "place_dark_oak_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:dark_oak_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:dark_oak_bookshelf"
+        }
       }
     },
     "place_crimson_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:crimson_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:crimson_bookshelf"
+        }
       }
     },
     "place_warped_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:warped_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:warped_bookshelf"
+        }
       }
     },
     "place_mangrove_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:mangrove_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:mangrove_bookshelf"
+        }
       }
     },
     "place_cherry_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:cherry_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:cherry_bookshelf"
+        }
       }
     },
     "place_bamboo_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:bamboo_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:bamboo_bookshelf"
+        }
       }
     },
     "place_pale_oak_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:pale_oak_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:pale_oak_bookshelf"
+        }
+      }
+    },
+    "place_poplar_bookshelf": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:poplar_bookshelf"
+        }
       }
     },
     "place_ghostwood_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:ghostwood_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:ghostwood_bookshelf"
+        }
       }
     },
     "place_scorchwood_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:scorchwood_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:scorchwood_bookshelf"
+        }
       }
     },
     "place_willow_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:willow_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:willow_bookshelf"
+        }
       }
     },
     "place_green_jungle_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:green_jungle_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:green_jungle_bookshelf"
+        }
       }
     },
     "place_green_bamboo_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:green_bamboo_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:green_bamboo_bookshelf"
+        }
       }
     },
     "place_palm_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:palm_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:palm_bookshelf"
+        }
       }
     },
     "place_maple_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:maple_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:maple_bookshelf"
+        }
       }
     },
     "place_beech_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:beech_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:beech_bookshelf"
+        }
       }
     },
     "place_pine_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:pine_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:pine_bookshelf"
+        }
       }
     },
     "place_cedar_bookshelf": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "blocksforbuilders:cedar_bookshelf"
-            }
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "blocksforbuilders:cedar_bookshelf"
+        }
       }
     }
   },
@@ -337,6 +258,9 @@
     ],
     [
       "place_pale_oak_bookshelf"
+    ],
+    [
+      "place_poplar_bookshelf"
     ],
     [
       "place_ghostwood_bookshelf"

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:warped_bookshelf"
+        "recipes": "blocksforbuilders:warped_bookshelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

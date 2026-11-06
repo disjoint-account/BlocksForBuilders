@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:fallen_jungle_leaves"
+        "recipes": "blocksforbuilders:fallen_jungle_leaves"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

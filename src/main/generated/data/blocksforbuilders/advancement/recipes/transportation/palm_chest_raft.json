@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:palm_chest_raft"
+        "recipes": "blocksforbuilders:palm_chest_raft"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

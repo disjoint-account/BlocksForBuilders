@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:scorchwood_pressure_plate"
+        "recipes": "blocksforbuilders:scorchwood_pressure_plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

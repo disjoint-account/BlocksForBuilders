@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:smooth_quartz_wall"
+        "recipes": "blocksforbuilders:smooth_quartz_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

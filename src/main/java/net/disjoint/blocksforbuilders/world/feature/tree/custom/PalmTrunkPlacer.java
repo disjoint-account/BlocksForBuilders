@@ -9,14 +9,16 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
+import org.jspecify.annotations.NullMarked;
 
 import java.util.List;
 import java.util.function.BiConsumer;
 
+@NullMarked
 public class PalmTrunkPlacer extends TrunkPlacer {
     public static final MapCodec<PalmTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(palmTrunkPlacerInstance ->
             trunkPlacerParts(palmTrunkPlacerInstance).apply(palmTrunkPlacerInstance, PalmTrunkPlacer::new));
@@ -32,7 +34,7 @@ public class PalmTrunkPlacer extends TrunkPlacer {
 
     @Override
     public List<FoliagePlacer.FoliageAttachment> placeTrunk(WorldGenLevel world, BiConsumer<BlockPos, BlockState> replacer, RandomSource random,
-                                                            int height, BlockPos startPos, TreeConfiguration config) {
+                                                            int height, BlockPos startPos, TreeFeature config) {
 
         int stage1Height = random.nextIntBetweenInclusive(baseHeight - 1, baseHeight + 2);
         int stage2Height = random.nextIntBetweenInclusive(heightRandA - 1, heightRandA + 2);

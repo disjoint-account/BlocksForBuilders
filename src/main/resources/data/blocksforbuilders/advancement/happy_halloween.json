@@ -2,31 +2,29 @@
   "parent": "blocksforbuilders:sweater_weather",
   "criteria": {
     "happy_halloween": {
+      "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": "blocksforbuilders:autumnal_forest",
-              "block": {
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:location_check",
+              "predicate": {
+                "biomes": "minecraft:dappled_forest",
                 "block": {
-                  "blocks": "minecraft:pumpkin"
+                  "blocks": "minecraft:carved_pumpkin"
                 }
-
+              }
+            },
+            {
+              "type": "minecraft:match_tool",
+              "predicate": {
+                "items": "minecraft:shears"
               }
             }
-          },
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": [
-                "minecraft:shears"
-              ]
-            }
-          }
-        ]
-      },
-      "trigger": "minecraft:item_used_on_block"
+          ]
+        }
+      }
     }
   },
   "display": {

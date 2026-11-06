@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:crimson_bookshelf"
+        "recipes": "blocksforbuilders:crimson_bookshelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

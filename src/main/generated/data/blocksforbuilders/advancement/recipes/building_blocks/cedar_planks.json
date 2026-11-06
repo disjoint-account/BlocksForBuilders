@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:cedar_planks"
+        "recipes": "blocksforbuilders:cedar_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

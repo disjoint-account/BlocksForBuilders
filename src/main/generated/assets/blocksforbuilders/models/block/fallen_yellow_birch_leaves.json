@@ -1,6 +1,0 @@
-{
-  "parent": "blocksforbuilders:block/fallen_leaves",
-  "textures": {
-    "all": "blocksforbuilders:block/yellow_birch_leaves"
-  }
-}

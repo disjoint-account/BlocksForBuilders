@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:ghostwood_hedge"
+        "recipes": "blocksforbuilders:ghostwood_hedge"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

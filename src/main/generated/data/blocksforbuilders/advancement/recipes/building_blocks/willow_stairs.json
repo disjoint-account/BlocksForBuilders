@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:willow_stairs"
+        "recipes": "blocksforbuilders:willow_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

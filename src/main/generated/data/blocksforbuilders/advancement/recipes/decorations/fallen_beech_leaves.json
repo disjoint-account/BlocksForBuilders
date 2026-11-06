@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_beech_leaves": {
+    "has_orange_poplar_leaves": {
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:beech_leaves"
+            "items": "minecraft:orange_poplar_leaves"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:fallen_beech_leaves"
+        "recipes": "blocksforbuilders:fallen_beech_leaves"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_beech_leaves"
+      "has_orange_poplar_leaves"
     ]
   ],
   "rewards": {

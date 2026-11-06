@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:willow_planks"
+        "recipes": "blocksforbuilders:willow_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:gold_acacia_hedge"
+        "recipes": "blocksforbuilders:gold_acacia_hedge"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

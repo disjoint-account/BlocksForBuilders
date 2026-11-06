@@ -11,15 +11,17 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
+import org.jspecify.annotations.NullMarked;
 
 import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 
+@NullMarked
 public class ScorchwoodTrunkPlacer extends TrunkPlacer {
     public static final MapCodec<ScorchwoodTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(scorchwoodTrunkPlacerInstance ->
             trunkPlacerParts(scorchwoodTrunkPlacerInstance).apply(scorchwoodTrunkPlacerInstance, ScorchwoodTrunkPlacer::new));
@@ -35,7 +37,7 @@ public class ScorchwoodTrunkPlacer extends TrunkPlacer {
 
     @Override
     public List<FoliagePlacer.FoliageAttachment> placeTrunk(WorldGenLevel world, BiConsumer<BlockPos, BlockState> replacer, RandomSource random,
-                                                            int height, BlockPos startPos, TreeConfiguration config) {
+                                                            int height, BlockPos startPos, TreeFeature config) {
 
         int heightCap = height + random.nextIntBetweenInclusive(heightRandA, heightRandA + 3) +
                 random.nextIntBetweenInclusive(heightRandB - 2, heightRandB + 2);

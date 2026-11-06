@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "bookshelf",
+  "key": {
+    "#": "minecraft:poplar_planks",
+    "X": "minecraft:book"
+  },
+  "pattern": [
+    "###",
+    "XXX",
+    "###"
+  ],
+  "result": {
+    "id": "blocksforbuilders:poplar_bookshelf"
+  }
+}

@@ -1,34 +1,29 @@
 package net.disjoint.blocksforbuilders;
 
-import com.mojang.serialization.MapCodec;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.pathfinder.PathComputationType;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.level.ScheduledTickAccess;
-import org.jspecify.annotations.NonNull;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jspecify.annotations.NullMarked;
 
+@NullMarked
 public class PieBlock extends Block {
     public static final IntegerProperty CHOMPS = IntegerProperty.create("chomps", 0, 3);
-    public static final MapCodec<PieBlock> CODEC = simpleCodec(PieBlock::new);
     public static final int MAX_CHOMPS = 3;
     public static final int DEFAULT_COMPARATOR_OUTPUT = getComparatorOutput(0);
     private static final VoxelShape HALF_PIE = Block.box(1.0, 0.0, 1.0, 15.0, 5.0, 8.0);
@@ -40,11 +35,6 @@ public class PieBlock extends Block {
             HALF_PIE,
             Block.box(8.0, 0.0, 1.0, 15.0, 5.0, 8.0)
     };
-
-    @Override
-    public MapCodec<PieBlock> codec() {
-        return CODEC;
-    }
 
     public PieBlock(BlockBehaviour.Properties settings) {
         super(settings);
@@ -79,7 +69,7 @@ public class PieBlock extends Block {
             int i = (Integer)state.getValue(CHOMPS);
             world.gameEvent(player, GameEvent.EAT, pos);
             if (i < 3) {
-                world.setBlock(pos, state.setValue(CHOMPS, Integer.valueOf(i + 1)), Block.UPDATE_ALL);
+                world.setBlock(pos, state.setValue(CHOMPS, i + 1), Block.UPDATE_ALL);
             } else {
                 world.removeBlock(pos, false);
                 world.gameEvent(player, GameEvent.BLOCK_DESTROY, pos);
@@ -117,7 +107,7 @@ public class PieBlock extends Block {
     }
 
     @Override
-    protected boolean hasAnalogOutputSignal(@NonNull BlockState state) {
+    protected boolean hasAnalogOutputSignal(BlockState state) {
         return true;
     }
 

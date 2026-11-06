@@ -1,0 +1,91 @@
+{
+  "feature": "blocksforbuilders:fallen_poplar",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 512
+    },
+    {
+      "type": "minecraft:offset",
+      "x": {
+        "type": "minecraft:trapezoid",
+        "max": 8,
+        "min": -8,
+        "plateau": 0
+      },
+      "y": {
+        "type": "minecraft:trapezoid",
+        "max": 3,
+        "min": -3,
+        "plateau": 0
+      },
+      "z": {
+        "type": "minecraft:trapezoid",
+        "max": 8,
+        "min": -8,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 1,
+            "weight": 1
+          },
+          {
+            "data": 9,
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_block_tag",
+            "tag": "minecraft:replaceable_by_mushrooms"
+          },
+          {
+            "type": "minecraft:matching_fluids",
+            "fluids": "minecraft:empty"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "minecraft:podzol",
+              "blocksforbuilders:humus_grass",
+              "minecraft:dirt",
+              "minecraft:grass_block",
+              "minecraft:coarse_dirt"
+            ],
+            "offset": [
+              0,
+              -1,
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

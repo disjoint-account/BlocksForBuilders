@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:green_bamboo_sign"
+        "recipes": "blocksforbuilders:green_bamboo_sign"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

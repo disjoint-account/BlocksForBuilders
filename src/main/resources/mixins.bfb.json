@@ -7,7 +7,8 @@
   "mixins": [
     "MixinPumpkinPie",
     "MixinShearsDispenserBehavior",
-    "MixinTrunkPlacerTypeInvoker"
+    "MixinTrunkPlacerTypeInvoker",
+    "MixinPoplarGrower"
   ],
   "injectors": {
     "defaultRequire": 1

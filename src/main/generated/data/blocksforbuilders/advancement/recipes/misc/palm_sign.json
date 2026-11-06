@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:palm_sign"
+        "recipes": "blocksforbuilders:palm_sign"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

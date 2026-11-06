@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:charcoal_from_smelting_pine_log"
+        "recipes": "blocksforbuilders:charcoal_from_smelting_pine_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

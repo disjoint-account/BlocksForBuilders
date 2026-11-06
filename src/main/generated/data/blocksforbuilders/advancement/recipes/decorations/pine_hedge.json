@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:pine_hedge"
+        "recipes": "blocksforbuilders:pine_hedge"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

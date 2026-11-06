@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:green_jungle_door"
+        "recipes": "blocksforbuilders:green_jungle_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:willow_hedge"
+        "recipes": "blocksforbuilders:willow_hedge"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

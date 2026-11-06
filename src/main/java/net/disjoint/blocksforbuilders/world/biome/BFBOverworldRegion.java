@@ -20,7 +20,7 @@ public class BFBOverworldRegion extends Region {
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
-            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.FOREST, BFBBiomes.AUTUMNAL_FOREST);
+            //modifiedVanillaOverworldBuilder.replaceBiome(Biomes.FOREST, BFBBiomes.AUTUMNAL_FOREST);
             modifiedVanillaOverworldBuilder.replaceBiome(Biomes.TAIGA, BFBBiomes.SCORCHED_FOREST);
             modifiedVanillaOverworldBuilder.replaceBiome(Biomes.OLD_GROWTH_PINE_TAIGA, BFBBiomes.ALPINE_FOREST);
             modifiedVanillaOverworldBuilder.replaceBiome(Biomes.OLD_GROWTH_SPRUCE_TAIGA, BFBBiomes.ALPINE_FOREST);

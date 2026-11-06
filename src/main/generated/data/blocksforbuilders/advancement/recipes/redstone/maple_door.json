@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:maple_door"
+        "recipes": "blocksforbuilders:maple_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

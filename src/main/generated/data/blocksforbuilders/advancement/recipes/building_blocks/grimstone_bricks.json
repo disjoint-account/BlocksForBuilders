@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:grimstone_bricks"
+        "recipes": "blocksforbuilders:grimstone_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

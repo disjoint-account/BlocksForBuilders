@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:fallen_azalea_leaves"
+        "recipes": "blocksforbuilders:fallen_azalea_leaves"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

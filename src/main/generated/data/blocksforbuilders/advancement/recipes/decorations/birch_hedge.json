@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:birch_hedge"
+        "recipes": "blocksforbuilders:birch_hedge"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

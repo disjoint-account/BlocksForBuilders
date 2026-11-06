@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:grimstone_wall"
+        "recipes": "blocksforbuilders:grimstone_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

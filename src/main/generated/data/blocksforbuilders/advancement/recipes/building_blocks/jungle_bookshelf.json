@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:jungle_bookshelf"
+        "recipes": "blocksforbuilders:jungle_bookshelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

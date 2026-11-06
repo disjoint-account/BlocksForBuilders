@@ -62,7 +62,7 @@ public class BFBItemGroup {
                         entries.accept(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG);
                         entries.accept(BlocksForBuildersBlocks.MAPLE_WOOD);
                         entries.accept(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD);
-                        entries.accept(BlocksForBuildersBlocks.MAPLE_LEAVES);
+                        entries.accept(Items.RED_POPLAR_LEAVES);
                         entries.accept(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES);
                         entries.accept(BlocksForBuildersBlocks.MAPLE_HEDGE);
                         entries.accept(BlocksForBuildersBlocks.MAPLE_SAPLING);
@@ -84,7 +84,7 @@ public class BFBItemGroup {
                         entries.accept(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG);
                         entries.accept(BlocksForBuildersBlocks.BEECH_WOOD);
                         entries.accept(BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD);
-                        entries.accept(BlocksForBuildersBlocks.BEECH_LEAVES);
+                        entries.accept(Items.ORANGE_POPLAR_LEAVES);
                         entries.accept(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES);
                         entries.accept(BlocksForBuildersBlocks.BEECH_HEDGE);
                         entries.accept(BlocksForBuildersBlocks.BEECH_SAPLING);
@@ -227,10 +227,8 @@ public class BFBItemGroup {
                         entries.accept(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES);
                         entries.accept(BlocksForBuildersBlocks.GOLD_ACACIA_HEDGE);
                         entries.accept(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING);
-                        entries.accept(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
-                        entries.accept(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES);
-                        entries.accept(BlocksForBuildersBlocks.YELLOW_BIRCH_HEDGE);
-                        entries.accept(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
+                        entries.accept(BlocksForBuildersBlocks.FALLEN_POPLAR_LEAVES);
+                        entries.accept(BlocksForBuildersBlocks.POPLAR_HEDGE);
                         entries.accept(BlocksForBuildersBlocks.FALLEN_OAK_LEAVES);
                         entries.accept(BlocksForBuildersBlocks.FALLEN_BIRCH_LEAVES);
                         entries.accept(BlocksForBuildersBlocks.FALLEN_SPRUCE_LEAVES);
@@ -253,6 +251,7 @@ public class BFBItemGroup {
                         entries.accept(BlocksForBuildersBlocks.MANGROVE_HEDGE);
                         entries.accept(BlocksForBuildersBlocks.CHERRY_HEDGE);
                         entries.accept(BlocksForBuildersBlocks.PALE_OAK_HEDGE);
+                        entries.accept(BlocksForBuildersBlocks.HUMUS_GRASS);
                         entries.accept(BlocksForBuildersBlocks.SCORCHED_GRASS);
                         entries.accept(BlocksForBuildersBlocks.ASHEN_CARPET);
                         entries.accept(BlocksForBuildersBlocks.BIRCH_BOOKSHELF);

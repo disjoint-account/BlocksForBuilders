@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:pine_stairs"
+        "recipes": "blocksforbuilders:pine_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

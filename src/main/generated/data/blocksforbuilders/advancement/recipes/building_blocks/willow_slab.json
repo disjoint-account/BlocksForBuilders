@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:willow_slab"
+        "recipes": "blocksforbuilders:willow_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

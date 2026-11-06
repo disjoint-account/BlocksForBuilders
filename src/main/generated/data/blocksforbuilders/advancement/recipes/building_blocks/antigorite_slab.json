@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:antigorite_slab"
+        "recipes": "blocksforbuilders:antigorite_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

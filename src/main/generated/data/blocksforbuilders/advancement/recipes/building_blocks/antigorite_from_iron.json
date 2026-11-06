@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:antigorite_from_iron"
+        "recipes": "blocksforbuilders:antigorite_from_iron"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

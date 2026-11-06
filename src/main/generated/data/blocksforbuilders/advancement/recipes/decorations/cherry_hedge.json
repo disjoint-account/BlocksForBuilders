@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:cherry_hedge"
+        "recipes": "blocksforbuilders:cherry_hedge"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

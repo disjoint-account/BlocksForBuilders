@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:pale_oak_bookshelf"
+        "recipes": "blocksforbuilders:pale_oak_bookshelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

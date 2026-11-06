@@ -35,16 +35,7 @@
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:would_survive",
-        "state": {
-          "Name": "blocksforbuilders:coconut",
-          "Properties": {
-            "hanging": "false",
-            "has_fiber": "true",
-            "has_milk": "true",
-            "stage": "0",
-            "waterlogged": "false"
-          }
-        }
+        "state": "blocksforbuilders:coconut"
       }
     }
   ]

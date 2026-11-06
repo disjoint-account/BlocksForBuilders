@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:charcoal_from_smelting_willow_log"
+        "recipes": "blocksforbuilders:charcoal_from_smelting_willow_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:light_tuff_bricks"
+        "recipes": "blocksforbuilders:light_tuff_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

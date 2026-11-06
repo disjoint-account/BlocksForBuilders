@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:bamboo_thatch"
+        "recipes": "blocksforbuilders:bamboo_thatch"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

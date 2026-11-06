@@ -16,12 +16,15 @@
     "kill_blaze": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "player": {},
         "entity": {
-          "minecraft:location": {
-            "biomes": "blocksforbuilders:alpine_forest"
-          },
-          "minecraft:entity_type": "minecraft:blaze"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "blocksforbuilders:alpine_forest"
+            },
+            "minecraft:entity_type": "minecraft:blaze"
+          }
         }
       }
     }

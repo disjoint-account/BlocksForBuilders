@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:string"
+        "recipes": "blocksforbuilders:string"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:cedar_trapdoor"
+        "recipes": "blocksforbuilders:cedar_trapdoor"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

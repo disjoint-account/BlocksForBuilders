@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:sandstone_brick_stairs"
+        "recipes": "blocksforbuilders:sandstone_brick_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

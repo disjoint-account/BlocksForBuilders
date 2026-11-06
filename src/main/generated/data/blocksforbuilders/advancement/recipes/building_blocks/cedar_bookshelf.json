@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:cedar_bookshelf"
+        "recipes": "blocksforbuilders:cedar_bookshelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

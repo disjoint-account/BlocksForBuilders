@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:beech_button"
+        "recipes": "blocksforbuilders:beech_button"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

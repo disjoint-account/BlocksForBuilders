@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:antigorite_wall_from_antigorite_stonecutting"
+        "recipes": "blocksforbuilders:antigorite_wall_from_antigorite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

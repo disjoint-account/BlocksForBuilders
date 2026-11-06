@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:light_tuff"
+        "recipes": "blocksforbuilders:light_tuff"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

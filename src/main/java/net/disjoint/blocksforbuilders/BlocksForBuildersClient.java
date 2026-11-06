@@ -19,12 +19,7 @@ public class BlocksForBuildersClient implements ClientModInitializer {
         ParticleProviderRegistry.getInstance().register(BFBParticleTypes.GREEN_JUNGLE_LEAVES, BFBLeavesParticle.GreenJungleLeavesFactory::new);
         ParticleProviderRegistry.getInstance().register(BFBParticleTypes.WILLOW_LEAVES, BFBLeavesParticle.WillowLeavesFactory::new);
         ParticleProviderRegistry.getInstance().register(BFBParticleTypes.PALM_LEAVES, BFBLeavesParticle.PalmLeavesFactory::new);
-        ParticleProviderRegistry.getInstance().register(BFBParticleTypes.MAPLE_LEAVES, BFBLeavesParticle.MapleLeavesFactory::new);
-        ParticleProviderRegistry.getInstance().register(BFBParticleTypes.BEECH_LEAVES, BFBLeavesParticle.BeechLeavesFactory::new);
-        ParticleProviderRegistry.getInstance().register(BFBParticleTypes.PINE_LEAVES, BFBLeavesParticle.PineLeavesFactory::new);
-        ParticleProviderRegistry.getInstance().register(BFBParticleTypes.CEDAR_LEAVES, BFBLeavesParticle.CedarLeavesFactory::new);
         ParticleProviderRegistry.getInstance().register(BFBParticleTypes.GOLD_ACACIA_LEAVES, BFBLeavesParticle.GoldAcaciaLeavesFactory::new);
-        ParticleProviderRegistry.getInstance().register(BFBParticleTypes.YELLOW_BIRCH_LEAVES, BFBLeavesParticle.YellowBirchLeavesFactory::new);
 
         BlockColorRegistry.register(List.of(BlockTintSources.foliage()),
                 BlocksForBuildersBlocks.FALLEN_OAK_LEAVES,

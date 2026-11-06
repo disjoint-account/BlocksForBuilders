@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:smooth_dark_sandstone_stairs"
+        "recipes": "blocksforbuilders:smooth_dark_sandstone_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

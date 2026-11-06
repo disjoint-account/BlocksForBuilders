@@ -16,12 +16,15 @@
     "kill_wither_skeleton": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "player": {},
         "entity": {
-          "minecraft:entity_type": "minecraft:wither_skeleton",
-          "minecraft:stepping_on": {
-            "block": {
-              "blocks": "minecraft:chiseled_nether_bricks"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wither_skeleton",
+            "minecraft:stepping_on": {
+              "block": {
+                "blocks": "minecraft:chiseled_nether_bricks"
+              }
             }
           }
         }
@@ -31,26 +34,37 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "player": {
-          "minecraft:stepping_on": {
-            "block": {
-              "blocks": "blocksforbuilders:chiseled_black_nether_bricks"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:stepping_on": {
+              "block": {
+                "blocks": "blocksforbuilders:chiseled_black_nether_bricks"
+              }
             }
           }
         },
         "entity": {
-          "minecraft:entity_type": "minecraft:ghast"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:ghast"
+          }
         }
       }
     },
     "kill_magma_cube": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "player": {},
         "entity": {
-          "minecraft:entity_type": "minecraft:magma_cube",
-          "minecraft:stepping_on": {
-            "block": {
-              "blocks": "blocksforbuilders:chiseled_red_nether_bricks"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:magma_cube",
+            "minecraft:stepping_on": {
+              "block": {
+                "blocks": "blocksforbuilders:chiseled_red_nether_bricks"
+              }
             }
           }
         }

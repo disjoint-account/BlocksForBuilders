@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:scorchwood_stairs"
+        "recipes": "blocksforbuilders:scorchwood_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

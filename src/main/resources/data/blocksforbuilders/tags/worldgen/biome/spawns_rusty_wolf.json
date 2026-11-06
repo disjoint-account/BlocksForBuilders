@@ -1,6 +1,7 @@
 {
   "values": [
     "#minecraft:is_jungle",
-    "blocksforbuilders:autumnal_forest"
+    "blocksforbuilders:autumnal_forest",
+    "minecraft:dappled_forest"
   ]
 }

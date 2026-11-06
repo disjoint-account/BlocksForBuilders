@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:pine_door"
+        "recipes": "blocksforbuilders:pine_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -17,22 +17,20 @@
     "fall_onto_hay_slab": {
       "trigger": "minecraft:used_totem",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "block": {
-                  "blocks": [
-                    "blocksforbuilders:hay_stairs",
-                    "blocksforbuilders:hay_slab"
-                  ]
-                }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:stepping_on": {
+              "block": {
+                "blocks": [
+                  "blocksforbuilders:hay_stairs",
+                  "blocksforbuilders:hay_slab"
+                ]
               }
             }
           }
-        ]
+        }
       }
     }
   },

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:spruce_bookshelf"
+        "recipes": "blocksforbuilders:spruce_bookshelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

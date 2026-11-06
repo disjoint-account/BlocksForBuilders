@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:polished_grimstone_stairs"
+        "recipes": "blocksforbuilders:polished_grimstone_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

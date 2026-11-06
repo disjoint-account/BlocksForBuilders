@@ -213,12 +213,12 @@
         ]
       }
     },
-    "has_yellow_birch_hedge": {
+    "has_poplar_hedge": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "blocksforbuilders:yellow_birch_hedge"
+            "items": "blocksforbuilders:poplar_hedge"
           }
         ]
       }
@@ -286,7 +286,7 @@
       "has_gold_acacia_hedge"
     ],
     [
-      "has_yellow_birch_hedge"
+      "has_poplar_hedge"
     ]
   ],
   "sends_telemetry_event": true

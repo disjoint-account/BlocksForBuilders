@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:green_jungle_shelf"
+        "recipes": "blocksforbuilders:green_jungle_shelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:red_sandstone_bricks"
+        "recipes": "blocksforbuilders:red_sandstone_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

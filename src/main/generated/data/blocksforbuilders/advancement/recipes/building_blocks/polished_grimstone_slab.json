@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:polished_grimstone_slab"
+        "recipes": "blocksforbuilders:polished_grimstone_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

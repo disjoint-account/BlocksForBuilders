@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:beech_sign"
+        "recipes": "blocksforbuilders:beech_sign"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

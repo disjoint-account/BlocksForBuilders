@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:palm_fence"
+        "recipes": "blocksforbuilders:palm_fence"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:scorchwood_shelf"
+        "recipes": "blocksforbuilders:scorchwood_shelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

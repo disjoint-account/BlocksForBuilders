@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:cedar_slab"
+        "recipes": "blocksforbuilders:cedar_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

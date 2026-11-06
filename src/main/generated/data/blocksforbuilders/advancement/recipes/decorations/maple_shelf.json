@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:maple_shelf"
+        "recipes": "blocksforbuilders:maple_shelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

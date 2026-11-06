@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:light_tuff_wall_from_light_tuff_stonecutting"
+        "recipes": "blocksforbuilders:light_tuff_wall_from_light_tuff_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

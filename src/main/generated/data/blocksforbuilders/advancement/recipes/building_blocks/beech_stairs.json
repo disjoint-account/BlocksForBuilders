@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:beech_stairs"
+        "recipes": "blocksforbuilders:beech_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:beech_door"
+        "recipes": "blocksforbuilders:beech_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

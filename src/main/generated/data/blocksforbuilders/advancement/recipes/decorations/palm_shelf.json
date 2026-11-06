@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:palm_shelf"
+        "recipes": "blocksforbuilders:palm_shelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

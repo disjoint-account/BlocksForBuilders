@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:mangrove_bookshelf"
+        "recipes": "blocksforbuilders:mangrove_bookshelf"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

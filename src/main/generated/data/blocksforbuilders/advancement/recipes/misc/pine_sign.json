@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:pine_sign"
+        "recipes": "blocksforbuilders:pine_sign"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

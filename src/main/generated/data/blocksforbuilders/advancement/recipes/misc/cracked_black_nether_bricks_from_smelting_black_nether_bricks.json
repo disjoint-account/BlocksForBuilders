@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:cracked_black_nether_bricks_from_smelting_black_nether_bricks"
+        "recipes": "blocksforbuilders:cracked_black_nether_bricks_from_smelting_black_nether_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

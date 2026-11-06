@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:palm_planks"
+        "recipes": "blocksforbuilders:palm_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

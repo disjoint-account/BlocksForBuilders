@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:cedar_sign"
+        "recipes": "blocksforbuilders:cedar_sign"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

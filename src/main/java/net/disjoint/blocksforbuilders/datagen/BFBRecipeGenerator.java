@@ -6,28 +6,32 @@ import net.disjoint.blocksforbuilders.BlocksForBuildersItems;
 import net.disjoint.blocksforbuilders.util.BFBTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.item.Items;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.Identifier;
+import org.jspecify.annotations.NullMarked;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+@NullMarked
 public class BFBRecipeGenerator extends FabricRecipeProvider {
     public BFBRecipeGenerator(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
-    protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput exporter) {
-        return new RecipeProvider(registries, exporter) {
+    protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, BootstrapContext<Recipe<?>> bootstrapContext, BootstrapContext<Advancement> bootstrapContext1) {
+        return new RecipeProvider(bootstrapContext, bootstrapContext1) {
             @Override
             public void buildRecipes() {
                 List<ItemLike> CHARCOAL_SMELTABLES = List.of(BlocksForBuildersBlocks.GHOSTWOOD_LOG,
@@ -79,6 +83,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         Items.MANGROVE_PROPAGULE,
                         Items.CHERRY_SAPLING,
                         Items.PALE_OAK_SAPLING,
+                        Blocks.POPLAR_SAPLING,
                         BlocksForBuildersBlocks.WILLOW_SAPLING,
                         BlocksForBuildersItems.COCONUT,
                         BlocksForBuildersItems.EMPTY_COCONUT,
@@ -90,8 +95,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                         BlocksForBuildersBlocks.BEECH_SAPLING,
                         BlocksForBuildersBlocks.PINE_SAPLING,
                         BlocksForBuildersBlocks.CEDAR_SAPLING,
-                        BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING,
-                        BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING);
+                        BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING);
 
                 List<ItemLike> MOSS_CARPETS = List.of(Items.MOSS_CARPET,
                         Items.PALE_MOSS_CARPET);
@@ -352,6 +356,7 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerBookshelfRecipe(BlocksForBuildersBlocks.CHERRY_BOOKSHELF, Blocks.CHERRY_PLANKS);
                 offerBookshelfRecipe(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF, Blocks.BAMBOO_PLANKS);
                 offerBookshelfRecipe(BlocksForBuildersBlocks.PALE_OAK_BOOKSHELF, Blocks.PALE_OAK_PLANKS);
+                offerBookshelfRecipe(BlocksForBuildersBlocks.POPLAR_BOOKSHELF, Blocks.POPLAR_PLANKS);
                 offerBookshelfRecipe(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF, BlocksForBuildersBlocks.GHOSTWOOD_PLANKS);
                 offerBookshelfRecipe(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF, BlocksForBuildersBlocks.SCORCHWOOD_PLANKS);
                 offerBookshelfRecipe(BlocksForBuildersBlocks.WILLOW_BOOKSHELF, BlocksForBuildersBlocks.WILLOW_PLANKS);
@@ -501,8 +506,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodRecipe(BlocksForBuildersBlocks.PALM_WOOD, BlocksForBuildersBlocks.PALM_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_PALM_WOOD, BlocksForBuildersBlocks.STRIPPED_PALM_LOG);
 
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_LEAVES);
-                offerHedgeRecipe(BlocksForBuildersBlocks.MAPLE_HEDGE, BlocksForBuildersBlocks.MAPLE_LEAVES);
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, Blocks.RED_POPLAR_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.MAPLE_HEDGE, Blocks.RED_POPLAR_LEAVES);
                 woodenBoat(BlocksForBuildersItems.MAPLE_BOAT, BlocksForBuildersBlocks.MAPLE_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.MAPLE_BUTTON, BlocksForBuildersBlocks.MAPLE_PLANKS);
                 chestBoat(BlocksForBuildersItems.MAPLE_CHEST_BOAT, BlocksForBuildersItems.MAPLE_BOAT);
@@ -524,8 +529,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerWoodRecipe(BlocksForBuildersBlocks.MAPLE_WOOD, BlocksForBuildersBlocks.MAPLE_LOG);
                 offerWoodRecipe(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD, BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG);
 
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, BlocksForBuildersBlocks.BEECH_LEAVES);
-                offerHedgeRecipe(BlocksForBuildersBlocks.BEECH_HEDGE, BlocksForBuildersBlocks.BEECH_LEAVES);
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, Blocks.ORANGE_POPLAR_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.BEECH_HEDGE, Blocks.ORANGE_POPLAR_LEAVES);
                 woodenBoat(BlocksForBuildersItems.BEECH_BOAT, BlocksForBuildersBlocks.BEECH_PLANKS);
                 offerButtonRecipe(BlocksForBuildersBlocks.BEECH_BUTTON, BlocksForBuildersBlocks.BEECH_PLANKS);
                 chestBoat(BlocksForBuildersItems.BEECH_CHEST_BOAT, BlocksForBuildersItems.BEECH_BOAT);
@@ -640,8 +645,8 @@ public class BFBRecipeGenerator extends FabricRecipeProvider {
                 offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
                 offerHedgeRecipe(BlocksForBuildersBlocks.GOLD_ACACIA_HEDGE, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
 
-                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
-                offerHedgeRecipe(BlocksForBuildersBlocks.YELLOW_BIRCH_HEDGE, BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
+                offerFallenLeavesRecipe(BlocksForBuildersBlocks.FALLEN_POPLAR_LEAVES, Blocks.YELLOW_POPLAR_LEAVES);
+                offerHedgeRecipe(BlocksForBuildersBlocks.POPLAR_HEDGE, Blocks.YELLOW_POPLAR_LEAVES);
 
                 shaped(RecipeCategory.BUILDING_BLOCKS, BlocksForBuildersBlocks.GRIMSTONE, 3)
                         .pattern("BW")

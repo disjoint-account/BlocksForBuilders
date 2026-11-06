@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:hay_slab"
+        "recipes": "blocksforbuilders:hay_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:polished_granite_wall"
+        "recipes": "blocksforbuilders:polished_granite_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

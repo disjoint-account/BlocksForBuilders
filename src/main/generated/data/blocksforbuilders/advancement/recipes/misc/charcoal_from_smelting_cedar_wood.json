@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:charcoal_from_smelting_cedar_wood"
+        "recipes": "blocksforbuilders:charcoal_from_smelting_cedar_wood"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

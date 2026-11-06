@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:bamboo_mosaic_rug"
+        "recipes": "blocksforbuilders:bamboo_mosaic_rug"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

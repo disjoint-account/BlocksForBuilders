@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:calcite"
+        "recipes": "blocksforbuilders:calcite"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

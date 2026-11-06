@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:ghostwood_planks"
+        "recipes": "blocksforbuilders:ghostwood_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

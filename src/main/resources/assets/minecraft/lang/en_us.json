@@ -1,3 +1,7 @@
 {
-  "block.minecraft.bookshelf": "Oak Bookshelf"
+  "block.minecraft.bookshelf": "Oak Bookshelf",
+  "block.minecraft.red_poplar_leaves": "Maple Leaves",
+  "block.minecraft.orange_poplar_leaves": "Beech Leaves",
+  "block.minecraft.yellow_poplar_leaves": "Poplar Leaves"
+
 }

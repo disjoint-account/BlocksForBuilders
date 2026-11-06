@@ -13,24 +13,17 @@
   "parent": "blocksforbuilders:sweater_weather",
   "criteria": {
     "place_pie": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": "blocksforbuilders:autumnal_forest"
-            }
-          },
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": [
-                "minecraft:pumpkin_pie"
-              ]
+        "location": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "biomes": "minecraft:dappled_forest",
+            "block": {
+              "blocks": "blocksforbuilders:pumpkin_pie"
             }
           }
-        ]
+        }
       }
     }
   },

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:ghostwood_fence"
+        "recipes": "blocksforbuilders:ghostwood_fence"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -8,7 +8,6 @@ import net.disjoint.blocksforbuilders.PumpkinPie;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.color.item.Constant;
-import net.minecraft.client.data.*;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
@@ -144,9 +143,8 @@ public class BFBModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.MAPLE_LOG).logWithHorizontal(BlocksForBuildersBlocks.MAPLE_LOG).wood(BlocksForBuildersBlocks.MAPLE_WOOD);
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG).logWithHorizontal(BlocksForBuildersBlocks.STRIPPED_MAPLE_LOG).wood(BlocksForBuildersBlocks.STRIPPED_MAPLE_WOOD);
-        blockStateModelGenerator.createTrivialBlock(BlocksForBuildersBlocks.MAPLE_LEAVES, TexturedModel.LEAVES);
-        registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, BlocksForBuildersBlocks.MAPLE_LEAVES);
-        registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.MAPLE_HEDGE, BlocksForBuildersBlocks.MAPLE_LEAVES);
+        registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_MAPLE_LEAVES, Blocks.RED_POPLAR_LEAVES);
+        registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.MAPLE_HEDGE, Blocks.RED_POPLAR_LEAVES);
         blockStateModelGenerator.createPlantWithDefaultItem(BlocksForBuildersBlocks.MAPLE_SAPLING, BlocksForBuildersBlocks.POTTED_MAPLE_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
         mapleTexturePool.stairs(BlocksForBuildersBlocks.MAPLE_STAIRS);
         mapleTexturePool.slab(BlocksForBuildersBlocks.MAPLE_SLAB);
@@ -163,9 +161,8 @@ public class BFBModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.BEECH_LOG).logWithHorizontal(BlocksForBuildersBlocks.BEECH_LOG).wood(BlocksForBuildersBlocks.BEECH_WOOD);
         blockStateModelGenerator.woodProvider(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG).logWithHorizontal(BlocksForBuildersBlocks.STRIPPED_BEECH_LOG).wood(BlocksForBuildersBlocks.STRIPPED_BEECH_WOOD);
-        blockStateModelGenerator.createTrivialBlock(BlocksForBuildersBlocks.BEECH_LEAVES, TexturedModel.LEAVES);
-        registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, BlocksForBuildersBlocks.BEECH_LEAVES);
-        registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.BEECH_HEDGE, BlocksForBuildersBlocks.BEECH_LEAVES);
+        registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_BEECH_LEAVES, Blocks.ORANGE_POPLAR_LEAVES);
+        registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.BEECH_HEDGE, Blocks.ORANGE_POPLAR_LEAVES);
         blockStateModelGenerator.createPlantWithDefaultItem(BlocksForBuildersBlocks.BEECH_SAPLING, BlocksForBuildersBlocks.POTTED_BEECH_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
         beechTexturePool.stairs(BlocksForBuildersBlocks.BEECH_STAIRS);
         beechTexturePool.slab(BlocksForBuildersBlocks.BEECH_SLAB);
@@ -254,10 +251,8 @@ public class BFBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createPlantWithDefaultItem(BlocksForBuildersBlocks.GOLD_ACACIA_SAPLING, BlocksForBuildersBlocks.POTTED_GOLD_ACACIA_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
         registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_GOLD_ACACIA_LEAVES, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
         registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.GOLD_ACACIA_HEDGE, BlocksForBuildersBlocks.GOLD_ACACIA_LEAVES);
-        blockStateModelGenerator.createTrivialBlock(BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.createPlantWithDefaultItem(BlocksForBuildersBlocks.YELLOW_BIRCH_SAPLING, BlocksForBuildersBlocks.POTTED_YELLOW_BIRCH_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
-        registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_YELLOW_BIRCH_LEAVES, BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
-        registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.YELLOW_BIRCH_HEDGE, BlocksForBuildersBlocks.YELLOW_BIRCH_LEAVES);
+        registerFallenLeaves(blockStateModelGenerator, BlocksForBuildersBlocks.FALLEN_POPLAR_LEAVES, Blocks.YELLOW_POPLAR_LEAVES);
+        registerHedge(blockStateModelGenerator, BlocksForBuildersBlocks.POPLAR_HEDGE, Blocks.YELLOW_POPLAR_LEAVES);
 
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
@@ -270,6 +265,7 @@ public class BFBModelProvider extends FabricModelProvider {
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.CHERRY_BOOKSHELF, Blocks.CHERRY_PLANKS);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.BAMBOO_BOOKSHELF, Blocks.BAMBOO_PLANKS);
         registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.PALE_OAK_BOOKSHELF, Blocks.PALE_OAK_PLANKS);
+        registerBookshelf(blockStateModelGenerator, BlocksForBuildersBlocks.POPLAR_BOOKSHELF, Blocks.POPLAR_PLANKS);
 
         blockStateModelGenerator.createTrivialCube(BlocksForBuildersBlocks.CHISELED_BLACK_NETHER_BRICKS);
         blockStateModelGenerator.createTrivialCube(BlocksForBuildersBlocks.CRACKED_BLACK_NETHER_BRICKS);
@@ -434,6 +430,8 @@ public class BFBModelProvider extends FabricModelProvider {
         registerPillarSlab(blockStateModelGenerator, BlocksForBuildersBlocks.COCONUT_THATCH_SLAB, BlocksForBuildersBlocks.COCONUT_THATCH, true);
         registerPillarCarpet(blockStateModelGenerator, BlocksForBuildersBlocks.COCONUT_THATCH_RUG, BlocksForBuildersBlocks.COCONUT_THATCH, false);
 
+        registerGrassLike(blockStateModelGenerator, BlocksForBuildersBlocks.HUMUS_GRASS, true);
+
         registerGrassLike(blockStateModelGenerator, BlocksForBuildersBlocks.SCORCHED_GRASS);
         registerAltCarpet(blockStateModelGenerator, BlocksForBuildersBlocks.ASHEN_CARPET);
 
@@ -538,13 +536,26 @@ public class BFBModelProvider extends FabricModelProvider {
     }
 
     public static void registerGrassLike(BlockModelGenerators blockStateModelGenerator, Block block) {
+        registerGrassLike(blockStateModelGenerator, block, false);
+    }
+
+    public static void registerGrassLike(BlockModelGenerators blockStateModelGenerator, Block block, boolean snowyVariant) {
         TextureMapping mapping = new TextureMapping()
                 .put(TextureSlot.BOTTOM,  TextureMapping.getBlockTexture(Blocks.DIRT))
                 .copyForced(TextureSlot.BOTTOM, TextureSlot.PARTICLE)
                 .put(TextureSlot.TOP, TextureMapping.getBlockTexture(block, "_top"))
                 .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(block, "_side"));
-        MultiVariant model = BlockModelGenerators.plainVariant(ModelTemplates.CUBE_BOTTOM_TOP.create(block, mapping, blockStateModelGenerator.modelOutput));
-        blockStateModelGenerator.blockStateOutput.accept(createSimpleBlock(block, model));
+
+        Identifier model = ModelTemplates.CUBE_BOTTOM_TOP.create(block, mapping, blockStateModelGenerator.modelOutput);
+        if (snowyVariant) {
+            Identifier snowyModel = ModelLocationUtils.getModelLocation(Blocks.GRASS_BLOCK, "_snow");
+
+            blockStateModelGenerator.createGrassLikeBlock(block, BlockModelGenerators.createRotatedVariants(BlockModelGenerators.plainModel(model)), BlockModelGenerators.plainVariant(snowyModel));
+        }
+        else {
+            MultiVariant variants = BlockModelGenerators.createRotatedVariants(BlockModelGenerators.plainModel(model));
+            blockStateModelGenerator.blockStateOutput.accept(createSimpleBlock(block, variants));
+        }
     }
 
     public static void registerBookshelf(BlockModelGenerators blockStateModelGenerator, Block block, Block planks) {
@@ -724,7 +735,6 @@ public class BFBModelProvider extends FabricModelProvider {
                 .put(TextureSlot.SIDE, materialify(textureSource))
                 .put(TextureSlot.END, materialify(textureSource.withSuffix("_top")));
         MultiVariant model = BlockModelGenerators.plainVariant(ModelTemplates.CUBE_COLUMN.create(block, mapping, blockStateModelGenerator.modelOutput));
-        MultiVariant identifier = BlockModelGenerators.plainVariant(ModelTemplates.CUBE_COLUMN_HORIZONTAL.create(block, mapping, blockStateModelGenerator.modelOutput));
         blockStateModelGenerator.blockStateOutput.accept(BFBBlockStateSuppliers.createDirectionalBlockState(block, model));
     }
 

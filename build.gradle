@@ -27,7 +27,7 @@ dependencies {
 
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.5.4")))
+	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.5.5")))
 
 	implementation "com.github.glitchfiend:TerraBlender-fabric:${project.terrablender_version}"
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:ghostwood_chest_boat"
+        "recipes": "blocksforbuilders:ghostwood_chest_boat"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

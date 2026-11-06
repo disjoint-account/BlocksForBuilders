@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "blocksforbuilders:chiseled_light_tuff"
+        "recipes": "blocksforbuilders:chiseled_light_tuff"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
