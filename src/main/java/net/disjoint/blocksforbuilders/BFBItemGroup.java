@@ -265,6 +265,7 @@ public class BFBItemGroup {
                         entries.accept(BlocksForBuildersBlocks.CHERRY_BOOKSHELF);
                         entries.accept(BlocksForBuildersBlocks.BAMBOO_BOOKSHELF);
                         entries.accept(BlocksForBuildersBlocks.PALE_OAK_BOOKSHELF);
+                        entries.accept(BlocksForBuildersBlocks.POPLAR_BOOKSHELF);
                         entries.accept(BlocksForBuildersBlocks.GHOSTWOOD_BOOKSHELF);
                         entries.accept(BlocksForBuildersBlocks.SCORCHWOOD_BOOKSHELF);
                         entries.accept(BlocksForBuildersBlocks.WILLOW_BOOKSHELF);

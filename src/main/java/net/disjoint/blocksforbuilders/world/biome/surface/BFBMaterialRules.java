@@ -3,6 +3,8 @@ package net.disjoint.blocksforbuilders.world.biome.surface;
 import net.disjoint.blocksforbuilders.BlocksForBuildersBlocks;
 import net.disjoint.blocksforbuilders.world.biome.BFBBiomes;
 import net.minecraft.core.HolderGetter;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -18,7 +20,8 @@ public class BFBMaterialRules {
 
     private static final MaterialCondition ON_FLOOR = MaterialRules.stoneDepthCheck(0, false, CaveSurface.FLOOR);
 
-    public static MaterialRule makeRules(HolderGetter<Biome> biomes) {
+    public static MaterialRule makeRules(RegistryAccess registryAccess) {
+        HolderGetter<Biome> biomes  = registryAccess.lookupOrThrow(Registries.BIOME);
         MaterialCondition isInAutumnalForest = MaterialRules.isBiome(biomes, BFBBiomes.AUTUMNAL_FOREST);
         MaterialCondition isInScorchedForest = MaterialRules.isBiome(biomes, BFBBiomes.SCORCHED_FOREST);
         MaterialCondition isInAlpineForest = MaterialRules.isBiome(biomes, BFBBiomes.ALPINE_FOREST);
